@@ -908,3 +908,11 @@
 .hex.expansion.empty .hex-inner {
   background: repeating-linear-gradient(135deg, var(--bg-sunken) 0 6px, color-mix(in srgb, var(--accent) 18%, var(--bg-sunken)) 6px 7px);
 }
+.hex-th {
+  font-size: calc(var(--step) * 0.08);
+  color: var(--text-dim);
+  line-height: 1.15;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,94 @@
+.rune-name {
+  display: inline-grid;
+  line-height: 1.25;
+  min-width: 0;
+}
+.rune-name .rn-en {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* official Thai name: smaller and muted under the English name */
+.rune-name .rn-th {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: var(--text-faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rune-tooltip {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  width: min(340px, calc(100vw - 16px));
+  max-height: calc(100vh - 16px);
+  overflow-y: auto;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.8rem 0.9rem;
+  pointer-events: none;
+  animation: tip-in 0.12s ease-out;
+}
+@keyframes tip-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+}
+
+.rune-card {
+  display: grid;
+  gap: 0.55rem;
+  font-size: 0.86rem;
+}
+.rc-head {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.rc-title {
+  display: grid;
+  min-width: 0;
+}
+.rc-title .rune-name {
+  font-weight: 600;
+  color: var(--text-strong);
+  font-size: 1rem;
+}
+.rc-kind {
+  font-size: 0.74rem;
+  color: var(--text-dim);
+}
+.rc-note {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+.rc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+.rc-tags .chip {
+  font-size: 0.7rem;
+}
+.rc-desc {
+  margin: 0;
+  white-space: pre-line;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+}
+.rc-section h4 {
+  margin: 0 0 0.2rem;
+  font-size: 0.78rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.rc-section .stat-lines {
+  font-size: 0.8rem;
+}

@@ -1,8 +1,11 @@
 import lines from '../data/th/lines.json'
 import descriptions from '../data/th/descriptions.json'
+import runeNames from '../data/th/rune-names.json'
 
 const LINES = lines as Record<string, string>
 const DESCRIPTIONS = descriptions as Record<string, string>
+// Official in-game Thai rune names only (never machine-translated) — see README.
+const RUNE_NAMES = runeNames as Record<string, string>
 
 // Keep in sync with toTemplate() in scripts/i18n-extract.mjs
 const TOKEN = /\[[\d.]+-[\d.]+\]|\d+(?:\.\d+)?/g
@@ -27,4 +30,9 @@ export function hasThLine(line: string): boolean {
 
 export function thDescription(text: string): string {
   return DESCRIPTIONS[text] ?? text
+}
+
+/** Official Thai name of a rune, if we have one. */
+export function runeNameTh(englishName: string): string | undefined {
+  return RUNE_NAMES[englishName] || undefined
 }

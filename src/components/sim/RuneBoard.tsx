@@ -1,6 +1,8 @@
 import { useDndContext, useDraggable, useDroppable } from '@dnd-kit/core'
 import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { GRADE_TH } from '../../i18n/labels'
+import { runeNameTh } from '../../i18n/translate'
+import { useRuneTips } from '../runeTips'
 import { adjacentSkills, focusKey, linksOf, newCell, runeOf, type BuildState, type CellRune, type Cells } from '../../lib/buildState'
 import { DIRS, LAYOUTS, hexCenter, hexKey, parseKey, type Hex } from '../../lib/hexBoard'
 import type { Selection } from './boardOps'
@@ -61,6 +63,7 @@ function Cell({
   const payload: DragPayload | undefined = cell && !ghost ? { kind: cell.kind, id: cell.id, from: key } : undefined
   const drag = useDraggable({ id: `cell:${key}`, data: payload, disabled: !payload })
   const { active } = useDndContext()
+  const tip = useRuneTips()
   const dragging = active?.data.current as DragPayload | undefined
   const can = accepts(target, dragging) && dragging?.from !== key
   const rune = runeOf(cell)
@@ -87,15 +90,17 @@ function Cell({
       className={cls}
       style={style}
       onClick={onClick}
-      title={rune ? `${rune.name} · Lv.${cell!.level}` : expansion ? "ช่องขยาย (ในเกมปลดล็อกด้วย Traum's Crystal)" : emptyLabel}
+      title={rune ? undefined : expansion ? "ช่องขยาย (ในเกมปลดล็อกด้วย Traum's Crystal)" : emptyLabel}
       {...(payload ? drag.listeners : {})}
       {...(payload ? drag.attributes : {})}
+      {...tip(rune && cell && !ghost ? { rune, level: cell.level, grade: cell.grade } : null)}
       aria-label={rune ? rune.name : emptyLabel}
     >
       <span className="hex-inner">
         {rune ? (
           <>
             <span className="hex-name">{compact ? abbreviate(rune.name) : rune.name}</span>
+            {!compact && runeNameTh(rune.name) && <span className="hex-th">{runeNameTh(rune.name)}</span>}
             <span className="hex-level mono">
               {compact ? cell!.level : `Lv.${cell!.level}`}
               {!compact && cell!.grade !== 'normal' && ` · ${GRADE_TH[cell!.grade]}`}

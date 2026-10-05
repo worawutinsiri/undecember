@@ -120,3 +120,6 @@
     box-shadow: var(--shadow);
   }
 }
+.rune-row-name .rune-name {
+  font-weight: 600;
+}

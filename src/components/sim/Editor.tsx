@@ -7,6 +7,7 @@ import { ALL_WHITE, DIR_TH, SLOT_CYCLE, SLOT_TH, connect, type SlotColor } from 
 import { gradeLines, runeLinesAt } from '../../lib/runeLevel'
 import { ItemCard } from '../ItemCard'
 import { RuneIcon } from '../RuneIcon'
+import { RuneName } from '../RuneName'
 import { StatLines } from '../StatLines'
 import { cellsOf, removeRune, withCells, type Selection } from './boardOps'
 
@@ -148,7 +149,9 @@ export function Editor({
       <header className="ed-head">
         <RuneIcon rune={rune} size={40} />
         <div className="ed-title">
-          <h3>{rune.name}</h3>
+          <h3>
+            <RuneName name={rune.name} />
+          </h3>
           <span className="faint">{cell.kind === 'skill' ? 'รูนสกิล' : 'รูนลิงก์'}</span>
         </div>
         <button className="btn" onClick={() => onOpenPicker(key)}>

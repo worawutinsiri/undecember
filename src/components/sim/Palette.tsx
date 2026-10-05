@@ -1,11 +1,15 @@
 import { useDraggable } from '@dnd-kit/core'
 import { useMemo, useState, type ReactNode } from 'react'
 import { LINK_RUNES, SKILL_RUNES, UNIQUES } from '../../data'
-import type { Rune, UniqueItem } from '../../data/types'
+import type { Rune, RuneColor, UniqueItem } from '../../data/types'
 import { CATEGORY_ORDER, gearTypeTh } from '../../i18n/labels'
-import { thDescription } from '../../i18n/translate'
+import { runeNameTh, thDescription } from '../../i18n/translate'
 import { checkLink } from '../../lib/damage'
+import { ColorFilter } from '../ColorFilter'
+import { matchesColor } from '../../lib/runeColor'
 import { RuneIcon } from '../RuneIcon'
+import { RuneName } from '../RuneName'
+import { useRuneTips } from '../runeTips'
 import type { DragPayload } from './dnd'
 
 type Tab = 'skill' | 'link' | 'item'
@@ -22,12 +26,24 @@ const TABS: { id: Tab; label: string }[] = [
 ]
 
 const runeMatches = (r: Rune, needle: string) =>
-  !needle || r.name.toLowerCase().includes(needle) || r.tags.some((t) => t.toLowerCase().includes(needle))
+  !needle || r.name.toLowerCase().includes(needle) || !!runeNameTh(r.name)?.includes(needle) || r.tags.some((t) => t.toLowerCase().includes(needle))
 
-function DraggableEntry({ payload, children, onAdd, dimmed }: { payload: DragPayload; children: ReactNode; onAdd: () => void; dimmed?: boolean }) {
+function DraggableEntry({
+  payload,
+  children,
+  onAdd,
+  dimmed,
+  tip = {},
+}: {
+  payload: DragPayload
+  children: ReactNode
+  onAdd: () => void
+  dimmed?: boolean
+  tip?: object
+}) {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({ id: `palette:${payload.kind}:${payload.id}`, data: payload })
   return (
-    <li className={`pal-entry ${isDragging ? 'dragging' : ''} ${dimmed ? 'dimmed' : ''}`}>
+    <li className={`pal-entry ${isDragging ? 'dragging' : ''} ${dimmed ? 'dimmed' : ''}`} {...tip}>
       <div ref={setNodeRef} className="pal-drag" {...listeners} {...attributes} aria-label={`ลาก ${payload.id}`}>
         {children}
       </div>
@@ -42,6 +58,8 @@ export function Palette({ skillTags, onAdd }: { skillTags: string[] | null; onAd
   const [tab, setTab] = useState<Tab>('skill')
   const [q, setQ] = useState('')
   const [compatibleOnly, setCompatibleOnly] = useState(true)
+  const [color, setColor] = useState<RuneColor | ''>('')
+  const tip = useRuneTips()
 
   const needle = q.trim().toLowerCase()
 
@@ -66,6 +84,7 @@ export function Palette({ skillTags, onAdd }: { skillTags: string[] | null; onAd
         ))}
       </div>
       <input type="search" placeholder="ค้นหา…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="ค้นหาในคลัง" />
+      {tab !== 'item' && <ColorFilter value={color} onChange={setColor} compact />}
       {tab === 'link' && skillTags && (
         <label className="check pal-compat">
           <input type="checkbox" checked={compatibleOnly} onChange={(e) => setCompatibleOnly(e.target.checked)} /> เฉพาะที่ลิงก์กับสกิลนี้ได้
@@ -75,23 +94,25 @@ export function Palette({ skillTags, onAdd }: { skillTags: string[] | null; onAd
 
       <ul className="pal-list">
         {tab === 'skill' &&
-          skills.map((r) => (
-            <DraggableEntry key={r.id} payload={{ kind: 'skill', id: r.id }} onAdd={() => onAdd({ kind: 'skill', id: r.id })}>
+          skills
+            .filter((r) => matchesColor(r.color, color))
+            .map((r) => (
+            <DraggableEntry key={r.id} payload={{ kind: 'skill', id: r.id }} onAdd={() => onAdd({ kind: 'skill', id: r.id })} tip={tip({ rune: r })}>
               <RuneIcon rune={r} size={28} />
               <span className="pal-text">
-                <span className="pal-name">{r.name}</span>
+                <RuneName name={r.name} className="pal-name" />
                 <span className="pal-sub faint">{r.tags.slice(0, 4).join(' · ')}</span>
               </span>
             </DraggableEntry>
           ))}
         {tab === 'link' &&
           links
-            .filter((l) => !compatibleOnly || !skillTags || l.ok)
+            .filter((l) => (!compatibleOnly || !skillTags || l.ok) && matchesColor(l.rune.color, color))
             .map(({ rune: r, ok }) => (
-              <DraggableEntry key={r.id} payload={{ kind: 'link', id: r.id }} onAdd={() => onAdd({ kind: 'link', id: r.id })} dimmed={!ok}>
+              <DraggableEntry key={r.id} payload={{ kind: 'link', id: r.id }} onAdd={() => onAdd({ kind: 'link', id: r.id })} dimmed={!ok} tip={tip({ rune: r })}>
                 <RuneIcon rune={r} size={28} />
                 <span className="pal-text">
-                  <span className="pal-name">{r.name}</span>
+                  <RuneName name={r.name} className="pal-name" />
                   <span className="pal-sub faint">{thDescription(r.description).split('\n')[0]}</span>
                 </span>
               </DraggableEntry>

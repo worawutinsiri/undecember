@@ -98,4 +98,7 @@ DPS    = hit × ศัตรู × คริ × ครั้งต่อวิ�
 ## แหล่งข้อมูลและสัญญาอนุญาต
 
 - ข้อมูลเกม © LINE Games / Needs Games: ชีท [Season Mode Changes](https://ud.floor.line.games/us/bbs/guide/stat)
+- ชื่อรูนภาษาไทย (`src/data/th/rune-names.json`): ใส่เฉพาะชื่อทางการที่ยืนยันได้เท่านั้น ห้ามใช้คำแปลเอง
+  - ตอนนี้มี 2 ชื่อ คือ Charged Shot และ Divine Punishment จาก[หน้า Google Play ภาษาไทยของ LINE Games](https://play.google.com/store/apps/details?id=com.linegames.udg&hl=th&gl=TH)
+  - เว็บ คู่มือ และชีททางการไม่มีฉบับภาษาไทย ชื่อไทยครบทุกตัวมีอยู่ในตัวเกมเท่านั้น
 - สีรูน, เกรดต่ำสุด และวิธีได้รับ: [nestula/BuildDecember](https://github.com/nestula/BuildDecember) (MIT, ไฟล์ LICENSE อยู่ใน `data-raw/buildDecember/`)

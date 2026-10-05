@@ -3,15 +3,17 @@ import { useSearchParams } from 'react-router-dom'
 import { LINK_RUNES, SKILL_RUNES } from '../data'
 import type { Rune, RuneColor, RuneKind } from '../data/types'
 import { RuneDetail } from '../components/RuneDetail'
+import { ColorFilter } from '../components/ColorFilter'
 import { RuneIcon } from '../components/RuneIcon'
+import { RuneName } from '../components/RuneName'
 import { TAG_TH } from '../i18n/labels'
-import { thDescription, thLine } from '../i18n/translate'
+import { runeNameTh, thDescription, thLine } from '../i18n/translate'
 import './RunesPage.css'
 
 const SEARCH_INDEX = new Map(
   [...SKILL_RUNES, ...LINK_RUNES].map((r) => [
     `${r.kind}:${r.id}`,
-    [r.name, r.description, thDescription(r.description), ...r.tags, ...r.lv45, ...r.lv45.map(thLine)].join('\n').toLowerCase(),
+    [r.name, runeNameTh(r.name) ?? '', r.description, thDescription(r.description), ...r.tags, ...r.lv45, ...r.lv45.map(thLine)].join('\n').toLowerCase(),
   ]),
 )
 
@@ -90,12 +92,7 @@ export function RunesPage() {
 
       <div className="toolbar">
         <input type="search" className="grow" placeholder="ค้นหาชื่อ คำอธิบาย หรือค่าสถานะ" value={q} onChange={(e) => set({ q: e.target.value })} aria-label="ค้นหารูน" />
-        <select value={color} onChange={(e) => set({ color: e.target.value })} aria-label="สีรูน">
-          <option value="">ทุกสี</option>
-          <option value="red">แดง (Strength)</option>
-          <option value="green">เขียว (Dexterity)</option>
-          <option value="blue">น้ำเงิน (Intelligence)</option>
-        </select>
+        <ColorFilter value={color} onChange={(c) => set({ color: c })} />
         <label className="check">
           <input type="checkbox" checked={changedOnly} onChange={(e) => set({ changed: e.target.checked ? '1' : '' })} /> เฉพาะที่ใหม่/เปลี่ยนสำคัญใน S12
         </label>
@@ -130,7 +127,7 @@ export function RunesPage() {
                     <RuneIcon rune={r} size={38} />
                     <span className="rune-row-text">
                       <span className="rune-row-name">
-                        {r.name}
+                        <RuneName name={r.name} />
                         {r.status === 'new' && <span className="mini new">ใหม่</span>}
                         {r.change === 'major' && <span className="mini changed">เปลี่ยน</span>}
                       </span>

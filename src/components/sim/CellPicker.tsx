@@ -1,14 +1,20 @@
 import { useMemo, useState } from 'react'
 import { LINK_RUNES, SKILL_RUNES } from '../../data'
-import type { Rune } from '../../data/types'
-import { thDescription } from '../../i18n/translate'
+import type { Rune, RuneColor } from '../../data/types'
+import { runeNameTh, thDescription } from '../../i18n/translate'
 import { adjacentSkills, duplicateSkill, runeOf, type Cells } from '../../lib/buildState'
 import { ALL_WHITE, DIR_TH, DIRS, SLOT_TH, connect, hexKey, neighbour, parseKey } from '../../lib/hexBoard'
+import { ColorFilter } from '../ColorFilter'
+import { matchesColor } from '../../lib/runeColor'
 import { RuneIcon } from '../RuneIcon'
+import { RuneName } from '../RuneName'
+import { useRuneTips } from '../runeTips'
 import type { Preview } from './RuneBoard'
 
 // Focus the search box with a mouse, but don't pop up the on-screen keyboard on touch devices.
 const FINE_POINTER = typeof window !== 'undefined' && !!window.matchMedia?.('(pointer: fine)').matches
+
+const nameMatches = (r: Rune, needle: string) => !needle || r.name.toLowerCase().includes(needle) || !!runeNameTh(r.name)?.includes(needle)
 
 interface Verdict {
   name: string
@@ -41,11 +47,13 @@ export function CellPicker({
   const [tab, setTab] = useState<'skill' | 'link'>(initialTab)
   const [q, setQ] = useState('')
   const [fitsOnly, setFitsOnly] = useState(true)
+  const [color, setColor] = useState<RuneColor | ''>('')
   const needle = q.trim().toLowerCase()
+  const tip = useRuneTips()
 
   // links: judged against every neighbouring skill
   const linkRows = useMemo(() => {
-    return LINK_RUNES.filter((r) => !needle || r.name.toLowerCase().includes(needle) || thDescription(r.description).includes(needle))
+    return LINK_RUNES.filter((r) => nameMatches(r, needle) || thDescription(r.description).includes(needle))
       .map((r) => {
         const verdicts: Verdict[] = skills.map((s) => ({ name: s.rune.name, ...connect(r, s.rune, s.cell.slots ?? ALL_WHITE, s.dirFromSkill) }))
         return { rune: r, verdicts, fits: verdicts.filter((v) => v.ok).length, onBoard: false }
@@ -66,7 +74,7 @@ export function CellPicker({
   )
   const skillRows = useMemo(() => {
     const slots = current?.kind === 'skill' ? (current.slots ?? ALL_WHITE) : ALL_WHITE
-    return SKILL_RUNES.filter((r) => !needle || r.name.toLowerCase().includes(needle) || r.tags.some((t) => t.toLowerCase().includes(needle)))
+    return SKILL_RUNES.filter((r) => nameMatches(r, needle) || r.tags.some((t) => t.toLowerCase().includes(needle)))
       .map((r) => {
         const verdicts: Verdict[] = neighbourLinks.map((l) => ({ name: l.rune.name, ...connect(l.rune, r, slots, l.dir) }))
         return { rune: r, verdicts, fits: verdicts.filter((v) => v.ok).length, onBoard: !!duplicateSkill(cells, r.id, cellKey) }
@@ -74,7 +82,8 @@ export function CellPicker({
       .sort((a, b) => Number(a.onBoard) - Number(b.onBoard) || b.fits - a.fits || a.rune.name.localeCompare(b.rune.name))
   }, [needle, neighbourLinks, current, cells, cellKey])
 
-  const rows = tab === 'link' ? linkRows : skillRows
+  const rows = (tab === 'link' ? linkRows : skillRows).filter((row) => matchesColor(row.rune.color, color))
+  const tipFor = (r: Rune) => tip({ rune: r })
   const pick = (r: Rune) => {
     onPreview(null)
     onPick(r.kind, r.id)
@@ -118,6 +127,7 @@ export function CellPicker({
       )}
 
       <input type="search" placeholder="ค้นหา…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="ค้นหารูน" autoFocus={FINE_POINTER} />
+      <ColorFilter value={color} onChange={setColor} compact />
       {tab === 'link' && skills.length > 0 && (
         <label className="check pal-compat">
           <input type="checkbox" checked={fitsOnly} onChange={(e) => setFitsOnly(e.target.checked)} /> เฉพาะที่ลิงก์กับสกิลข้างเคียงได้
@@ -130,13 +140,21 @@ export function CellPicker({
           <li key={r.id}>
             <button
               className={`cp-entry ${current?.id === r.id && current.kind === r.kind ? 'current' : ''} ${(verdicts.length && !fits) || onBoard ? 'dimmed' : ''}`}
-              onMouseEnter={() => onPreview({ key: cellKey, kind: r.kind, id: r.id })}
-              onFocus={() => onPreview({ key: cellKey, kind: r.kind, id: r.id })}
+              onMouseEnter={(e) => {
+                onPreview({ key: cellKey, kind: r.kind, id: r.id })
+                tipFor(r).onMouseEnter?.(e)
+              }}
+              onMouseLeave={() => tipFor(r).onMouseLeave?.()}
+              onFocus={(e) => {
+                onPreview({ key: cellKey, kind: r.kind, id: r.id })
+                tipFor(r).onFocus?.(e)
+              }}
+              onBlur={() => tipFor(r).onBlur?.()}
               onClick={() => pick(r)}
             >
               <RuneIcon rune={r} size={28} />
               <span className="pal-text">
-                <span className="pal-name">{r.name}</span>
+                <RuneName name={r.name} className="pal-name" />
                 {onBoard && <span className="pal-sub warn-text">อยู่บนกระดานแล้ว</span>}
                 <span className="pal-sub faint">{thDescription(r.description).split('\n')[0]}</span>
                 {verdicts.length > 0 && (

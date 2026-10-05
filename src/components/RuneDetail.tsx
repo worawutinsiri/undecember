@@ -6,6 +6,7 @@ import { AWAKENING_TH, COLOR_TH, GRADE_TH, HOW_TO_GET_TH, TAG_TH } from '../i18n
 import { thDescription } from '../i18n/translate'
 import { gradeLines, runeLinesAt } from '../lib/runeLevel'
 import { RuneIcon } from './RuneIcon'
+import { RuneName } from './RuneName'
 import { StatLines } from './StatLines'
 import './RuneDetail.css'
 
@@ -25,7 +26,9 @@ export function RuneDetail({ rune, showEnglish = false }: { rune: Rune; showEngl
       <header className="rd-head">
         <RuneIcon rune={rune} size={52} />
         <div>
-          <h2>{rune.name}</h2>
+          <h2>
+            <RuneName name={rune.name} />
+          </h2>
           <div className="rd-meta">
             <span className="chip">{rune.kind === 'skill' ? 'รูนสกิล' : 'รูนลิงก์'}</span>
             {rune.color && <span className={`chip color-${rune.color}`}>{COLOR_TH[rune.color]}</span>}
