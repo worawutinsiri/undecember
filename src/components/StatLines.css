@@ -1,0 +1,23 @@
+.stat-lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.15rem;
+  font-size: 0.88rem;
+}
+.stat-lines li {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.45;
+}
+.stat-lines .stat-en {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+}
+.stat-lines li.changed {
+  color: var(--warn);
+}
+.stat-lines li.added {
+  color: var(--ok);
+}

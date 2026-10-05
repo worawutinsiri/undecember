@@ -1,0 +1,3268 @@
+,Edited on Jul. 8 17:51 (UTC+9),,,,,,,,
+,,,,,,,,,
+,Link Rune,,Description,tag,Lv.1,Lv.45,Source,Origin,Verity
+,Additional Physical DMG,Before,"Can be linked with Skills that are Physical
+ Applies to Minions when linked to Summon Skill",Physical,"Resource Cost Increase 15%
++21-27 Physical DMG
+(Magic Effect) +18-22 Physical DMG
+(Rare Effect) +54-66 Physical DMG
+(Legendary Effect) +66-84 Physical DMG
+(Legendary Effect) 5% Physical DMG Amplification","Resource Cost Increase 15%
++192-223 Physical DMG
+(Magic Effect) +18-22 Physical DMG
+(Rare Effect) +54-66 Physical DMG
+(Legendary Effect) +66-84 Physical DMG
+(Legendary Effect) 5% Physical DMG Amplification",+[35-50]-[55-80] Physical DMG,[0.5-0.9]% Physical DMG Amplification per 1 Red Link Rune on linked Skill Rune,+[55-80]% Physical DMG
+,,After,"Can be linked with Skills that are Physical
+ Applies to Minions when linked to Summon Skill",Physical,"Resource Cost Increase 15%
++26-34 Physical DMG
+(Magic Effect) +18-22 Physical DMG
+(Rare Effect) +54-66 Physical DMG
+(Legendary Effect) +66-84 Physical DMG
+(Legendary Effect) 5% Physical DMG Amplification","Resource Cost Increase 15%
++210-244 Physical DMG
+(Magic Effect) +18-22 Physical DMG
+(Rare Effect) +54-66 Physical DMG
+(Legendary Effect) +66-84 Physical DMG
+(Legendary Effect) 5% Physical DMG Amplification",+[35-50]-[55-80] Physical DMG,[0.5-0.9]% Physical DMG Amplification per 1 Red Link Rune on linked Skill Rune,+[55-80]% Physical DMG
+,Additional Lightning DMG,Before,"Can be linked with Skills that are Lightning
+ Applies to Minions when linked to Summon Skill",Lightning,"Resource Cost Increase 20%
++6-50 Lightning DMG
++30% Lightning DMG
+(Magic Effect) +5-32 Lightning DMG
+(Rare Effect) +10-110 Lightning DMG
+(Legendary Effect) +10-140 Lightning DMG
+(Legendary Effect) 5% Lightning DMG Amplification","Resource Cost Increase 20%
++6-408 Lightning DMG
++80% Lightning DMG
+(Magic Effect) +5-32 Lightning DMG
+(Rare Effect) +10-110 Lightning DMG
+(Legendary Effect) +10-140 Lightning DMG
+(Legendary Effect) 5% Lightning DMG Amplification",+[1-5]-[100-155] Lightning DMG,[0.5-0.9]% Lightning DMG Amplification per 1 Blue Link Rune on linked Skill Rune,Additional Lightning DMG equal to [1.5-4]% of DMG on every hit
+,,After,"Can be linked with Skills that are Lightning
+ Applies to Minions when linked to Summon Skill",Lightning,"Resource Cost Increase 20%
++10-56 Lightning DMG
++30% Lightning DMG
+(Magic Effect) +5-32 Lightning DMG
+(Rare Effect) +10-110 Lightning DMG
+(Legendary Effect) +10-140 Lightning DMG
+(Legendary Effect) 5% Lightning DMG Amplification","Resource Cost Increase 20%
++10-443 Lightning DMG
++80% Lightning DMG
+(Magic Effect) +5-32 Lightning DMG
+(Rare Effect) +10-110 Lightning DMG
+(Legendary Effect) +10-140 Lightning DMG
+(Legendary Effect) 5% Lightning DMG Amplification",+[1-5]-[100-155] Lightning DMG,[0.5-0.9]% Lightning DMG Amplification per 1 Blue Link Rune on linked Skill Rune,Additional Lightning DMG equal to [1.5-4]% of DMG on every hit
+,Additional Fire DMG,Before,"Can be linked with Skills that are Fire
+ Applies to Minions when linked to Summon Skill",Fire,"Resource Cost Increase 20%
++23-37 Fire DMG
++30% Fire DMG
+(Magic Effect) +10-30 Fire DMG
+(Rare Effect) +40-80 Fire DMG
+(Legendary Effect) +50-100 Fire DMG
+(Legendary Effect) 5% Fire DMG Amplification","Resource Cost Increase 20%
++152-262 Fire DMG
++80% Fire DMG
+(Magic Effect) +10-30 Fire DMG
+(Rare Effect) +40-80 Fire DMG
+(Legendary Effect) +50-100 Fire DMG
+(Legendary Effect) 5% Fire DMG Amplification",+[35-50]-[55-80] Fire DMG,[0.5-0.9]% Fire DMG Amplification per 1 Red Link Rune on linked Skill Rune,Additional Fire DMG equal to [1.5-4]% of DMG on every hit
+,,After,"Can be linked with Skills that are Fire
+ Applies to Minions when linked to Summon Skill",Fire,"Resource Cost Increase 20%
++25-41 Fire DMG
++30% Fire DMG
+(Magic Effect) +10-30 Fire DMG
+(Rare Effect) +40-80 Fire DMG
+(Legendary Effect) +50-100 Fire DMG
+(Legendary Effect) 5% Fire DMG Amplification","Resource Cost Increase 20%
++167-287 Fire DMG
++80% Fire DMG
+(Magic Effect) +10-30 Fire DMG
+(Rare Effect) +40-80 Fire DMG
+(Legendary Effect) +50-100 Fire DMG
+(Legendary Effect) 5% Fire DMG Amplification",+[35-50]-[55-80] Fire DMG,[0.5-0.9]% Fire DMG Amplification per 1 Red Link Rune on linked Skill Rune,Additional Fire DMG equal to [1.5-4]% of DMG on every hit
+,Additional Cold DMG,Before,"Can be linked with Skills that are Cold
+ Applies to Minions when linked to Summon Skill",Cold,"Resource Cost Increase 20%
++30-34 Cold DMG
++30% Cold DMG
+(Magic Effect) +17-23 Cold DMG
+(Rare Effect) +55-65 Cold DMG
+(Legendary Effect) +70-80 Cold DMG
+(Legendary Effect) 5% Cold DMG Amplification","Resource Cost Increase 20%
++197-217 Cold DMG
++80% Cold DMG
+(Magic Effect) +17-23 Cold DMG
+(Rare Effect) +55-65 Cold DMG
+(Legendary Effect) +70-80 Cold DMG
+(Legendary Effect) 5% Cold DMG Amplification",+[35-50]-[55-80] Cold DMG,[0.5-0.9]% Cold DMG Amplification per 1 Blue Link Rune on linked Skill Rune,Additional Cold DMG equal to [1.5-4]% of DMG on every hit
+,,After,"Can be linked with Skills that are Cold
+ Applies to Minions when linked to Summon Skill",Cold,"Resource Cost Increase 20%
++31-35 Cold DMG
++30% Cold DMG
+(Magic Effect) +17-23 Cold DMG
+(Rare Effect) +55-65 Cold DMG
+(Legendary Effect) +70-80 Cold DMG
+(Legendary Effect) 5% Cold DMG Amplification","Resource Cost Increase 20%
++215-238 Cold DMG
++80% Cold DMG
+(Magic Effect) +17-23 Cold DMG
+(Rare Effect) +55-65 Cold DMG
+(Legendary Effect) +70-80 Cold DMG
+(Legendary Effect) 5% Cold DMG Amplification",+[35-50]-[55-80] Cold DMG,[0.5-0.9]% Cold DMG Amplification per 1 Blue Link Rune on linked Skill Rune,Additional Cold DMG equal to [1.5-4]% of DMG on every hit
+,Additional Poison DMG,Before,"Can be linked with Skills that are Poison
+ Applies to Minions when linked to Summon Skill",Poison,"Resource Cost Increase 20%
++27-36 Poison DMG
++30% Poison DMG
+(Magic Effect) +16-24 Poison DMG
+(Rare Effect) +32-88 Poison DMG
+(Legendary Effect) +54-96 Poison DMG
+(Legendary Effect) 5% Poison DMG Amplification","Resource Cost Increase 20%
++177-237 Poison DMG
++80% Poison DMG
+(Magic Effect) +16-24 Poison DMG
+(Rare Effect) +32-88 Poison DMG
+(Legendary Effect) +54-96 Poison DMG
+(Legendary Effect) 5% Poison DMG Amplification",+[35-50]-[55-80] Poison DMG,[0.5-0.9]% Poison DMG Amplification per 1 Green Link Rune on linked Skill Rune,Additional Poison DMG on DMG equal to [1.5-4]% of DMG on every hit
+,,After,"Can be linked with Skills that are Poison
+ Applies to Minions when linked to Summon Skill",Poison,"Resource Cost Increase 20%
++28-38 Poison DMG
++30% Poison DMG
+(Magic Effect) +16-24 Poison DMG
+(Rare Effect) +32-88 Poison DMG
+(Legendary Effect) +54-96 Poison DMG
+(Legendary Effect) 5% Poison DMG Amplification","Resource Cost Increase 20%
++195-260 Poison DMG
++80% Poison DMG
+(Magic Effect) +16-24 Poison DMG
+(Rare Effect) +32-88 Poison DMG
+(Legendary Effect) +54-96 Poison DMG
+(Legendary Effect) 5% Poison DMG Amplification",+[35-50]-[55-80] Poison DMG,[0.5-0.9]% Poison DMG Amplification per 1 Green Link Rune on linked Skill Rune,Additional Poison DMG on DMG equal to [1.5-4]% of DMG on every hit
+,Precision,Before,"Can be linked with Skills that are Strike
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 10%
++200 Hit Rate
+(Magic Effect) +10% Hit Rate
+(Magic Effect) 5% Hit Rate Amplification
+(Rare Effect) +25% Hit Rate
+(Rare Effect) 7.5% Hit Rate Amplification
+(Legendary Effect) +40% Hit Rate
+(Legendary Effect) 10% Hit Rate Amplification
+(Legendary Effect) 1% DMG per 300 Hit Rate (Max: 10%)","Resource Cost Increase 10%
++1048 Hit Rate
+(Magic Effect) +10% Hit Rate
+(Magic Effect) 5% Hit Rate Amplification
+(Rare Effect) +25% Hit Rate
+(Rare Effect) 7.5% Hit Rate Amplification
+(Legendary Effect) +40% Hit Rate
+(Legendary Effect) 10% Hit Rate Amplification
+(Legendary Effect) 1% DMG per 300 Hit Rate (Max: 10%)","+[7.5-10]% DMG per 500 Hit Rate (Max: 150%)
+ +1% Critical Rate per 250 Hit Rate (Max: 80%)","+[35-50]% Hit Rate
+ [5-10]% Hit Rate Amplification","+100% Hit Rate against enemies at Full HP
+ +100% Hit Rate against enemies at 20% or less HP
+ +[28-40]% Hit Rate"
+,,After,"Can be linked with Skills that are Strike
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 10%
++200 Hit Rate
+(Magic Effect) +10% Hit Rate
+(Magic Effect) 5% Hit Rate Amplification
+(Rare Effect) +25% Hit Rate
+(Rare Effect) 7.5% Hit Rate Amplification
+(Legendary Effect) +40% Hit Rate
+(Legendary Effect) 10% Hit Rate Amplification
+(Legendary Effect) 1% DMG Amplification per 300 Hit Rate (Max: 15%)","Resource Cost Increase 10%
++1048 Hit Rate
+(Magic Effect) +10% Hit Rate
+(Magic Effect) 5% Hit Rate Amplification
+(Rare Effect) +25% Hit Rate
+(Rare Effect) 7.5% Hit Rate Amplification
+(Legendary Effect) +40% Hit Rate
+(Legendary Effect) 10% Hit Rate Amplification
+(Legendary Effect) 1% DMG Amplification per 300 Hit Rate (Max: 15%)","+[7.5-10]% DMG per 500 Hit Rate (Max: 300%)
+ +1% Critical Rate per 250 Hit Rate (Max: 120%)","+[35-50]% Hit Rate
+ [5-10]% Hit Rate Amplification","+100% Hit Rate against enemies at Full HP
+ +100% Hit Rate against enemies at 20% or less HP
+ +[28-40]% Hit Rate"
+,Impact,Before,"Can be linked with Skills that are Melee, Strike (must include all)
+ Can be linked with Skills that satisfy any one of Attack, Spell
+ Applies to Minions when linked to Summon Skill","Attack, Spell, Melee, Strike","Resource Cost Increase 15%
++4 Stun Rate
++25% DMG against Crowd Controlled enemies
+Apply Stun as 10% Amplified DMG
+Min 2% Shock applied
+(Rare Effect) Apply Stun as 10% Amplified DMG
+(Rare Effect) Min 1.5% Shock applied
+(Legendary Effect) Apply Stun as 25% Amplified DMG
+(Legendary Effect) Min 3% Shock applied
+(Legendary Effect) +5 Crowd Control Rate","Resource Cost Increase 15%
++17 Stun Rate
++122.5% DMG against Crowd Controlled enemies
+Apply Stun as 46.4% Amplified DMG
+Min 7.2% Shock applied
+(Rare Effect) Apply Stun as 10% Amplified DMG
+(Rare Effect) Min 1.5% Shock applied
+(Legendary Effect) Apply Stun as 25% Amplified DMG
+(Legendary Effect) Min 3% Shock applied
+(Legendary Effect) +5 Crowd Control Rate","+[4-8] Crowd Control Rate
+ +[30-45]% DMG against Crowd Controlled enemies",[3.5-5]% DMG Amplification against Crowd Controlled enemies,-[10-5]% Resource Cost
+,,After,"Can be linked with Skills that are Melee, Strike (must include all)
+ Can be linked with Skills that satisfy any one of Attack, Spell
+ Applies to Minions when linked to Summon Skill","Attack, Spell, Melee, Strike","Resource Cost Increase 15%
++4 Crowd Control Rate
++25% DMG against Crowd Controlled enemies
+Min 2% Shock applied
+Apply Crowd Control as 10% Amplified DMG
+(Rare Effect) Apply Crowd Control as 10% Amplified DMG
+(Rare Effect) Min 1.5% Shock applied
+(Legendary Effect) Apply Crowd Control as 25% Amplified DMG
+(Legendary Effect) Min 3% Shock applied
+(Legendary Effect) +5 Crowd Control Rate","Resource Cost Increase 15%
++17 Crowd Control Rate
++122.5% DMG against Crowd Controlled enemies
+Min 7.2% Shock applied
+Apply Crowd Control as 46.4% Amplified DMG
+(Rare Effect) Apply Crowd Control as 10% Amplified DMG
+(Rare Effect) Min 1.5% Shock applied
+(Legendary Effect) Apply Crowd Control as 25% Amplified DMG
+(Legendary Effect) Min 3% Shock applied
+(Legendary Effect) +5 Crowd Control Rate","+[4-8] Crowd Control Rate
+ +[30-45]% DMG against Crowd Controlled enemies",[3.5-5]% DMG Amplification against Crowd Controlled enemies,-[10-5]% Resource Cost
+,Attack DMG Increase,Before,"Can be linked with Skills that are Attack
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT, Attack","Resource Cost Increase 15%
++24% DMG upon Attack
+(Magic Effect) +25% DMG upon Attack
+(Rare Effect) +60% DMG upon Attack
+(Legendary Effect) +100% DMG upon Attack
+(Legendary Effect) +100% Attack DMG for 2 s on kill","Resource Cost Increase 15%
++207% DMG upon Attack
+(Magic Effect) +25% DMG upon Attack
+(Rare Effect) +60% DMG upon Attack
+(Legendary Effect) +100% DMG upon Attack
+(Legendary Effect) +100% Attack DMG for 2 s on kill",[3.5-5]% DMG Amplification,+[55-80]% DMG upon Attack,"2% DMG Amplification if linked Skill Rune has 6 Red Link Runes
+ +[8-11]% DMG upon Attack per 1 Red Link Rune on linked Skill Rune"
+,,After,"Can be linked with Skills that are Attack
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT, Attack","Resource Cost Increase 15%
++26% DMG upon Attack
+(Magic Effect) +25% DMG upon Attack
+(Rare Effect) +60% DMG upon Attack
+(Legendary Effect) +100% DMG upon Attack
+(Legendary Effect) +100% Attack DMG for 2 s on kill","Resource Cost Increase 15%
++239% DMG upon Attack
+(Magic Effect) +25% DMG upon Attack
+(Rare Effect) +60% DMG upon Attack
+(Legendary Effect) +100% DMG upon Attack
+(Legendary Effect) +100% Attack DMG for 2 s on kill",[3.5-5]% DMG Amplification,+[55-80]% DMG upon Attack,"2% DMG Amplification if linked Skill Rune has 6 Red Link Runes
+ +[8-11]% DMG upon Attack per 1 Red Link Rune on linked Skill Rune"
+,Spell DMG Increase,Before,"Can be linked with Skills that are Spell
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT, Spell","Resource Cost Increase 15%
++24% DMG upon Spell
+(Magic Effect) +100% DMG upon Spell
+(Rare Effect) +150% DMG upon Spell
+(Legendary Effect) +200% DMG upon Spell","Resource Cost Increase 15%
++207% DMG upon Spell
+(Magic Effect) +100% DMG upon Spell
+(Rare Effect) +150% DMG upon Spell
+(Legendary Effect) +200% DMG upon Spell",+[55-80]% DMG upon Spell,-[10-5]% Resource Cost,[0.6-1]% DMG Amplification per 1 Blue Link Rune on linked Skill Rune
+,,After,"Can be linked with Skills that are Spell
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT, Spell","Resource Cost Increase 15%
++26% DMG upon Spell
+(Magic Effect) +100% DMG upon Spell
+(Rare Effect) +150% DMG upon Spell
+(Legendary Effect) +200% DMG upon Spell","Resource Cost Increase 15%
++239% DMG upon Spell
+(Magic Effect) +100% DMG upon Spell
+(Rare Effect) +150% DMG upon Spell
+(Legendary Effect) +200% DMG upon Spell",+[55-80]% DMG upon Spell,-[10-5]% Resource Cost,[0.6-1]% DMG Amplification per 1 Blue Link Rune on linked Skill Rune
+,Element Master,Before,"Can be linked with Skills that are any one of Fire, Cold, Lightning, Poison
+ Applies to Minions when linked to Summon Skill","Fire, Cold, Lightning, Poison","Resource Cost Increase 15%
++5% Element Penetration
++20% Element DMG
+(Rare Effect) +15% Element Penetration
+(Legendary Effect) +20% Element Penetration
+(Legendary Effect) 6% Element DMG Amplification","Resource Cost Increase 15%
++20% Element Penetration
++75% Element DMG
+(Rare Effect) +15% Element Penetration
+(Legendary Effect) +20% Element Penetration
+(Legendary Effect) 6% Element DMG Amplification",+[55-80]% Element DMG,"+[28-40]% Element DMG
+ 2% Element DMG Amplification if linked Skill Rune has 3 or more Blue Link Runes",+[1.9-2.8]% Element Penetration per 1 Blue Link Rune on linked Skill Rune
+,,After,"Can be linked with Skills that are any one of Fire, Cold, Lightning, Poison
+ Applies to Minions when linked to Summon Skill","Fire, Cold, Lightning, Poison","Resource Cost Increase 15%
++12% Element Penetration
++20% Element DMG
+(Rare Effect) +15% Element Penetration
+(Legendary Effect) +20% Element Penetration
+(Legendary Effect) 6% Element DMG Amplification","Resource Cost Increase 15%
++45% Element Penetration
++95% Element DMG
+(Rare Effect) +15% Element Penetration
+(Legendary Effect) +20% Element Penetration
+(Legendary Effect) 6% Element DMG Amplification",+[55-80]% Element DMG,"+[28-40]% Element DMG
+ 2% Element DMG Amplification if linked Skill Rune has 3 or more Blue Link Runes",+[1.9-2.8]% Element Penetration per 1 Blue Link Rune on linked Skill Rune
+,Realization,Before,"Can be linked with Skills that are Strike
+ Cannot be linked with Skills that are Totem, Sentry, Minion, Movement, Toggle
+ Rune cannot be awakened.",Strike,"Resource Cost Increase 15%
++20% DMG
+100% chance to gain Realization for 3 s on hit
+Realization Effect
+( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )
+(Magic Effect) +10% DMG
+(Magic Effect) +10% Realization Effect
+(Rare Effect) +20% DMG
+(Rare Effect) +20% Realization Effect
+(Legendary Effect) +30% DMG
+(Legendary Effect) +30% Realization Effect","Resource Cost Increase 15%
++117.5% DMG
+100% chance to gain Realization for 3 s on hit
+Realization Effect
+( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )
+(Magic Effect) +10% DMG
+(Magic Effect) +10% Realization Effect
+(Rare Effect) +20% DMG
+(Rare Effect) +20% Realization Effect
+(Legendary Effect) +30% DMG
+(Legendary Effect) +30% Realization Effect",-,-,-
+,,After,"Can be linked with Skills that are Strike
+ Cannot be linked with Skills that are Totem, Sentry, Minion, Movement, Toggle
+ Rune cannot be awakened.",Strike,"Resource Cost Increase 15%
++30% DMG
++10% Realization Effect
+100% chance to gain Realization for 3 s on hit
+Realization Effect
+( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )
++20% Enlightenment Effect for 5 s on Kill
+(Magic Effect) +10% DMG
+(Magic Effect) +10% Realization Effect
+(Rare Effect) +20% DMG
+(Rare Effect) +20% Realization Effect
+(Legendary Effect) +30% DMG
+(Legendary Effect) +30% Realization Effect","Resource Cost Increase 15%
++151.5% DMG
++30.8% Realization Effect
+100% chance to gain Realization for 3 s on hit
+Realization Effect
+( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )
++103% Enlightenment Effect for 5 s on Kill
+(Magic Effect) +10% DMG
+(Magic Effect) +10% Realization Effect
+(Rare Effect) +20% DMG
+(Rare Effect) +20% Realization Effect
+(Legendary Effect) +30% DMG
+(Legendary Effect) +30% Realization Effect",-,-,-
+,Ignite,Before,"Can be linked with Skills that are Fire, Strike (must include all)
+Applies to Minions when linked to Summon Skill","Fire, Strike","Resource Cost Increase 15%
++10% Burn DMG
+10% Burn DMG Amplification during Enhance Skill Effect
++10% Burn DMG Multiplier per 1 Fire Energy stack
+(Magic Effect) 1.5% Burn DMG Amplification
+(Magic Effect) +2.5% Burn Chance
+(Rare Effect) 5% Burn DMG Amplification
+(Rare Effect) +6.5% Burn Chance
+(Legendary Effect) 10% Burn DMG Amplification
+(Legendary Effect) +15% Burn Chance","Resource Cost Increase 15%
++51.7% Burn DMG
+43% Burn DMG Amplification during Enhance Skill Effect
++35% Burn DMG Multiplier per 1 Fire Energy stack
+(Magic Effect) 1.5% Burn DMG Amplification
+(Magic Effect) +2.5% Burn Chance
+(Rare Effect) 5% Burn DMG Amplification
+(Rare Effect) +6.5% Burn Chance
+(Legendary Effect) 10% Burn DMG Amplification
+(Legendary Effect) +15% Burn Chance","+[14-20] Burn Rate
++[35-50]% Burn DMG",+[3.5-5]% DoT Acceleration,[2.8-4]% DMG Amplification against Burning enemies
+,,After,"Can be linked with Skills that are Fire, Strike (must include all)
+Applies to Minions when linked to Summon Skill","Fire, Strike","Resource Cost Increase 15%
++10% Burn DMG
++10% Burn DMG Multiplier
+10% Burn DMG Amplification during Enhance Skill Effect
+(Magic Effect) 1.5% Burn DMG Amplification
+(Magic Effect) +2.5% Burn Chance
+(Rare Effect) 5% Burn DMG Amplification
+(Rare Effect) +6.5% Burn Chance
+(Legendary Effect) 10% Burn DMG Amplification
+(Legendary Effect) +15% Burn Chance","Resource Cost Increase 15%
++58% Burn DMG
++62% Burn DMG Multiplier
+43% Burn DMG Amplification during Enhance Skill Effect
+(Magic Effect) 1.5% Burn DMG Amplification
+(Magic Effect) +2.5% Burn Chance
+(Rare Effect) 5% Burn DMG Amplification
+(Rare Effect) +6.5% Burn Chance
+(Legendary Effect) 10% Burn DMG Amplification
+(Legendary Effect) +15% Burn Chance","+[14-20] Burn Rate
++[35-50]% Burn DMG",+[3.5-5]% DoT Acceleration,[2.8-4]% DMG Amplification against Burning enemies
+,Additional Lightning DMG,Before,"Can be linked with Skills that are Lightning
+ Applies to Minions when linked to Summon Skill",Lightning,"Resource Cost Increase 20%
++6-50 Lightning DMG
+(Magic Effect) +5-32 Lightning DMG
+(Rare Effect) +10-110 Lightning DMG
+(Legendary Effect) +10-140 Lightning DMG
+(Legendary Effect) 5% Lightning DMG Amplification","Resource Cost Increase 20%
++6-408 Lightning DMG
+(Magic Effect) +5-32 Lightning DMG
+(Rare Effect) +10-110 Lightning DMG
+(Legendary Effect) +10-140 Lightning DMG
+(Legendary Effect) 5% Lightning DMG Amplification",+[1-5]-[100-155] Lightning DMG,[0.5-0.9]% Lightning DMG Amplification per 1 Blue Link Rune on linked Skill Rune,+[55-80]% Lightning DMG
+,,After,"Can be linked with Skills that are Lightning
+ Applies to Minions when linked to Summon Skill",Lightning,"Resource Cost Increase 20%
++6-50 Lightning DMG
++30% Lightning DMG
+(Magic Effect) +5-32 Lightning DMG
+(Rare Effect) +10-110 Lightning DMG
+(Legendary Effect) +10-140 Lightning DMG
+(Legendary Effect) 5% Lightning DMG Amplification","Resource Cost Increase 20%
++6-408 Lightning DMG
++80% Lightning DMG
+(Magic Effect) +5-32 Lightning DMG
+(Rare Effect) +10-110 Lightning DMG
+(Legendary Effect) +10-140 Lightning DMG
+(Legendary Effect) 5% Lightning DMG Amplification",+[1-5]-[100-155] Lightning DMG,[0.5-0.9]% Lightning DMG Amplification per 1 Blue Link Rune on linked Skill Rune,Additional Lightning DMG equal to [1.5-4]% of DMG on every hit
+,Additional Fire DMG,Before,"Can be linked with Skills that are Fire
+ Applies to Minions when linked to Summon Skill",Fire,"Resource Cost Increase 20%
++23-37 Fire DMG
+(Magic Effect) +10-30 Fire DMG
+(Rare Effect) +40-80 Fire DMG
+(Legendary Effect) +50-100 Fire DMG
+(Legendary Effect) 5% Fire DMG Amplification","Resource Cost Increase 20%
++152-262 Fire DMG
+(Magic Effect) +10-30 Fire DMG
+(Rare Effect) +40-80 Fire DMG
+(Legendary Effect) +50-100 Fire DMG
+(Legendary Effect) 5% Fire DMG Amplification",+[35-50]-[55-80] Fire DMG,[0.5-0.9]% Fire DMG Amplification per 1 Red Link Rune on linked Skill Rune,+[55-80]% Fire DMG
+,,After,"Can be linked with Skills that are Fire
+ Applies to Minions when linked to Summon Skill",Fire,"Resource Cost Increase 20%
++23-37 Fire DMG
++30% Fire DMG
+(Magic Effect) +10-30 Fire DMG
+(Rare Effect) +40-80 Fire DMG
+(Legendary Effect) +50-100 Fire DMG
+(Legendary Effect) 5% Fire DMG Amplification","Resource Cost Increase 20%
++152-262 Fire DMG
++80% Fire DMG
+(Magic Effect) +10-30 Fire DMG
+(Rare Effect) +40-80 Fire DMG
+(Legendary Effect) +50-100 Fire DMG
+(Legendary Effect) 5% Fire DMG Amplification",+[35-50]-[55-80] Fire DMG,[0.5-0.9]% Fire DMG Amplification per 1 Red Link Rune on linked Skill Rune,Additional Fire DMG equal to [1.5-4]% of DMG on every hit
+,Additional Cold DMG,Before,"Can be linked with Skills that are Cold
+ Applies to Minions when linked to Summon Skill",Cold,"Resource Cost Increase 20%
++30-34 Cold DMG
+(Magic Effect) +17-23 Cold DMG
+(Rare Effect) +55-65 Cold DMG
+(Legendary Effect) +70-80 Cold DMG
+(Legendary Effect) 5% Cold DMG Amplification","Resource Cost Increase 20%
++197-217 Cold DMG
+(Magic Effect) +17-23 Cold DMG
+(Rare Effect) +55-65 Cold DMG
+(Legendary Effect) +70-80 Cold DMG
+(Legendary Effect) 5% Cold DMG Amplification",+[35-50]-[55-80] Cold DMG,[0.5-0.9]% Cold DMG Amplification per 1 Blue Link Rune on linked Skill Rune,+[55-80]% Cold DMG
+,,After,"Can be linked with Skills that are Cold
+ Applies to Minions when linked to Summon Skill",Cold,"Resource Cost Increase 20%
++30-34 Cold DMG
++30% Cold DMG
+(Magic Effect) +17-23 Cold DMG
+(Rare Effect) +55-65 Cold DMG
+(Legendary Effect) +70-80 Cold DMG
+(Legendary Effect) 5% Cold DMG Amplification","Resource Cost Increase 20%
++197-217 Cold DMG
++80% Cold DMG
+(Magic Effect) +17-23 Cold DMG
+(Rare Effect) +55-65 Cold DMG
+(Legendary Effect) +70-80 Cold DMG
+(Legendary Effect) 5% Cold DMG Amplification",+[35-50]-[55-80] Cold DMG,[0.5-0.9]% Cold DMG Amplification per 1 Blue Link Rune on linked Skill Rune,Additional Cold DMG equal to [1.5-4]% of DMG on every hit
+,Additional Poison DMG,Before,"Can be linked with Skills that are Poison
+ Applies to Minions when linked to Summon Skill",Poison,"Resource Cost Increase 20%
++27-36 Poison DMG
+(Magic Effect) +16-24 Poison DMG
+(Rare Effect) +32-88 Poison DMG
+(Legendary Effect) +54-96 Poison DMG
+(Legendary Effect) 5% Poison DMG Amplification","Resource Cost Increase 20%
++177-237 Poison DMG
+(Magic Effect) +16-24 Poison DMG
+(Rare Effect) +32-88 Poison DMG
+(Legendary Effect) +54-96 Poison DMG
+(Legendary Effect) 5% Poison DMG Amplification",+[35-50]-[55-80] Poison DMG,[0.5-0.9]% Poison DMG Amplification per 1 Green Link Rune on linked Skill Rune,+[55-80]% Poison DMG
+,,After,"Can be linked with Skills that are Poison
+ Applies to Minions when linked to Summon Skill",Poison,"Resource Cost Increase 20%
++27-36 Poison DMG
++30% Poison DMG
+(Magic Effect) +16-24 Poison DMG
+(Rare Effect) +32-88 Poison DMG
+(Legendary Effect) +54-96 Poison DMG
+(Legendary Effect) 5% Poison DMG Amplification","Resource Cost Increase 20%
++177-237 Poison DMG
++80% Poison DMG
+(Magic Effect) +16-24 Poison DMG
+(Rare Effect) +32-88 Poison DMG
+(Legendary Effect) +54-96 Poison DMG
+(Legendary Effect) 5% Poison DMG Amplification",+[35-50]-[55-80] Poison DMG,[0.5-0.9]% Poison DMG Amplification per 1 Green Link Rune on linked Skill Rune,Additional Poison DMG on DMG equal to [1.5-4]% of DMG on every hit
+,Endless Pain,Before,"Can be linked with Skills that are Physical, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Physical, Strike","Resource Cost Increase 20%
++20 Bleed Rate
++15% Bleed DMG
+(Magic Effect) 2% Physical DoT Amplification
+(Rare Effect) 5% Physical DoT Amplification
+(Legendary Effect) 10% Physical DoT Amplification
+(Legendary Effect) +5% Bleed Chance","Resource Cost Increase 20%
++51 Bleed Rate
++165% Bleed DMG
+(Magic Effect) 2% Physical DoT Amplification
+(Rare Effect) 5% Physical DoT Amplification
+(Legendary Effect) 10% Physical DoT Amplification
+(Legendary Effect) +5% Bleed Chance","+[14-20] Bleed Rate
++[35-50]% Bleed DMG",+[3.5-5]% DoT Acceleration,[2.1-3]% DMG Amplification
+,,After,"Can be linked with Skills that are Physical, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Physical, Strike","Resource Cost Increase 20%
++37 Bleed Rate
++15% Bleed DMG
+Gain Endless Pain Effect for 5 s every time Bleed is inflicted (Max Stacks: 3)
+Endless Pain Effect
+7% Bleed DMG Amplification
+(Magic Effect) 2% Physical DoT Amplification
+(Magic Effect) 2% Bleed DMG Amplification
+(Rare Effect) 5% Physical DoT Amplification
+(Rare Effect) 4% Bleed DMG Amplification
+(Legendary Effect) 10% Physical DoT Amplification
+(Legendary Effect) 6% Bleed DMG Amplification
+(Legendary Effect) +5% Bleed Chance","Resource Cost Increase 20%
++70 Bleed Rate
++165% Bleed DMG
+Gain Endless Pain Effect for 5 s every time Bleed is inflicted (Max Stacks: 3)
+Endless Pain Effect
+7% Bleed DMG Amplification
+(Magic Effect) 2% Physical DoT Amplification
+(Magic Effect) 2% Bleed DMG Amplification
+(Rare Effect) 5% Physical DoT Amplification
+(Rare Effect) 4% Bleed DMG Amplification
+(Legendary Effect) 10% Physical DoT Amplification
+(Legendary Effect) 6% Bleed DMG Amplification
+(Legendary Effect) +5% Bleed Chance","+[14-20] Bleed Rate
+[3-5.5]% Bleed DMG Amplification",+[3.5-5]% DoT Acceleration,Endless Pain Effect +[20-30]%
+,Bloodthirst,Before,"Can be linked with Skills that are Physical, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Physical, Strike","Resource Cost Increase 15%
+Cannot apply Bleed
++20% Critical Rate against Bleeding enemies
++10% Critical DMG against Bleeding enemies
+(Magic Effect) +10% Critical Rate against Bleeding enemies
+(Magic Effect) +15% DMG against Bleeding enemies
+(Rare Effect) +20% Critical Rate against Bleeding enemies
+(Rare Effect) +40% DMG against Bleeding enemies
+(Legendary Effect) +30% Critical Rate against Bleeding enemies
+(Legendary Effect) +50% DMG against Bleeding enemies
+(Legendary Effect) 7.5% DMG Amplification against Bleeding enemies","Resource Cost Increase 15%
+Cannot apply Bleed
++123.7% Critical Rate against Bleeding enemies
++56.7% Critical DMG against Bleeding enemies
+(Magic Effect) +10% Critical Rate against Bleeding enemies
+(Magic Effect) +15% DMG against Bleeding enemies
+(Rare Effect) +20% Critical Rate against Bleeding enemies
+(Rare Effect) +40% DMG against Bleeding enemies
+(Legendary Effect) +30% Critical Rate against Bleeding enemies
+(Legendary Effect) +50% DMG against Bleeding enemies
+(Legendary Effect) 7.5% DMG Amplification against Bleeding enemies","+[31-45]% Critical Rate against Bleeding enemies
++[10-15]% Critical DMG against Bleeding enemies","Change to can inflict Bleed
+-[35-25]% Critical DMG against Bleeding enemies","[2.8-4]% DMG Amplification against Bleeding enemies
+1.2% DMG Amplification if linked Skill Rune has 6 Red Link Runes"
+,,After,"Can be linked with Skills that are Physical, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Physical, Strike","Resource Cost Increase 15%
+Cannot apply Bleed
++20% Critical Rate against Bleeding enemies
++10% Critical DMG against Bleeding enemies
+(Magic Effect) +10% Critical Rate against Bleeding enemies
+(Magic Effect) +15% DMG against Bleeding enemies
+(Rare Effect) +20% Critical Rate against Bleeding enemies
+(Rare Effect) +40% DMG against Bleeding enemies
+(Legendary Effect) +30% Critical Rate against Bleeding enemies
+(Legendary Effect) +50% DMG against Bleeding enemies
+(Legendary Effect) 7.5% DMG Amplification against Bleeding enemies","Resource Cost Increase 15%
+Cannot apply Bleed
++123.7% Critical Rate against Bleeding enemies
++56.7% Critical DMG against Bleeding enemies
+(Magic Effect) +10% Critical Rate against Bleeding enemies
+(Magic Effect) +15% DMG against Bleeding enemies
+(Rare Effect) +20% Critical Rate against Bleeding enemies
+(Rare Effect) +40% DMG against Bleeding enemies
+(Legendary Effect) +30% Critical Rate against Bleeding enemies
+(Legendary Effect) +50% DMG against Bleeding enemies
+(Legendary Effect) 7.5% DMG Amplification against Bleeding enemies","+[31-45]% Critical Rate against Bleeding enemies
++[10-15]% Critical DMG against Bleeding enemies","Change to can inflict Bleed
+[4-7.5]% Bleed DMG Amplification",[4-5.2]% DMG Amplification against Bleeding enemies
+,Slaughter,Before,"Can be linked with Skills that are Strike
+ Cannot be linked with Persistence
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 15%
++10% Critical DMG
+(Magic Effect) +10% Strike DMG
+(Magic Effect) +10% Critical DMG
+(Rare Effect) +15% Strike DMG
+(Rare Effect) +20% Critical DMG
+(Legendary Effect) +20% Strike DMG
+(Legendary Effect) +30% Critical DMG","Resource Cost Increase 15%
++83% Critical DMG
+(Magic Effect) +10% Strike DMG
+(Magic Effect) +10% Critical DMG
+(Rare Effect) +15% Strike DMG
+(Rare Effect) +20% Critical DMG
+(Legendary Effect) +20% Strike DMG
+(Legendary Effect) +30% Critical DMG","+[10-15]% Critical DMG
++[35-50]% DMG against enemies affected by Status Effect",[0.5-0.9]% Strike DMG Amplification per 1 Green Link Rune on linked Skill Rune,"-[5-3]% Resource Cost
+Gain 1 Prepare Slaughter stack upon killing an enemy
+Gain 1 Prepare Slaughter stack upon hitting an Elite Monster (Cooldown: 1 s)
+Max Prepare Slaughter Stacks 20
+Prepare Slaughter Duration 5 s
+Gain Commence Slaughter for 0.5 s upon reaching max Prepare Slaughter stacks
+Deals double maximized DMG for duration of Commence Slaughter
+Cannot stack Prepare Slaughter during Commence Slaughter effect"
+,,After,"Can be linked with Skills that are Strike
+ Cannot be linked with Persistence
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 15%
++10% Critical DMG
+20% chance to gain Slaughter Effect for 5 s on hit (Max Stacks: 10)
+Slaughter Effect
++5% Critical DMG
+(Magic Effect) +25% Critical DMG
+(Rare Effect) +43% Critical DMG
+(Legendary Effect) +60% Critical DMG","Resource Cost Increase 15%
++83% Critical DMG
+20% chance to gain Slaughter Effect for 5 s on hit (Max Stacks: 10)
+Slaughter Effect
++5% Critical DMG
+(Magic Effect) +25% Critical DMG
+(Rare Effect) +43% Critical DMG
+(Legendary Effect) +60% Critical DMG","+[10-15]% Critical DMG
++[35-50]% DMG against enemies affected by Status Effect",[0.5-0.9]% Strike DMG Amplification per 1 Green Link Rune on linked Skill Rune,Slaughter Max Stacks +[3-5]
+,Lingering Chill,Before,"Can be linked with Skills that are Cold, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Cold, Strike","Resource Cost Increase 20%
++10 Chill Rate
++15% Chill Effect
++20% DMG against Chilled enemies
+(Magic Effect) 5% DMG Amplification against Chilled enemies
+(Rare Effect) 8% DMG Amplification against Chilled enemies
+(Rare Effect) +5% Chill Effect
+(Legendary Effect) 10% DMG Amplification against Chilled enemies
+(Legendary Effect) +10% Chill Effect
+(Legendary Effect) +5% Chill Chance","Resource Cost Increase 20%
++29 Chill Rate
++30.6% Chill Effect
++103.3% DMG against Chilled enemies
+(Magic Effect) 5% DMG Amplification against Chilled enemies
+(Rare Effect) 8% DMG Amplification against Chilled enemies
+(Rare Effect) +5% Chill Effect
+(Legendary Effect) 10% DMG Amplification against Chilled enemies
+(Legendary Effect) +10% Chill Effect
+(Legendary Effect) +5% Chill Chance",+[25-40]% Chill Effect,-[10-5]% Resource Cost,[3.5-5]% DMG Amplification against Chilled enemies
+,,After,"Can be linked with Skills that are Cold, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Cold, Strike","Resource Cost Increase 15%
++10 Chill Rate
++15% Chill Effect
++20% DMG against Chilled enemies
++20% Chill Duration
+Gain Lingering Chill Effect for 5 s every time Chill is afflicted (Max Stacks: 3)
+Lingering Chill Effect
+1.5% Cold DMG Amplification
+(Magic Effect) 5% DMG Amplification against Chilled enemies
+(Rare Effect) 8% DMG Amplification against Chilled enemies
+(Rare Effect) +5% Chill Effect
+(Legendary Effect) 10% DMG Amplification against Chilled enemies
+(Legendary Effect) +10% Chill Effect
+(Legendary Effect) +5% Chill Chance","Resource Cost Increase 15%
++40 Chill Rate
++30.6% Chill Effect
++103.3% DMG against Chilled enemies
++20% Chill Duration
+Gain Lingering Chill Effect for 5 s every time Chill is afflicted (Max Stacks: 3)
+Lingering Chill Effect
+1.5% Cold DMG Amplification
+(Magic Effect) 5% DMG Amplification against Chilled enemies
+(Rare Effect) 8% DMG Amplification against Chilled enemies
+(Rare Effect) +5% Chill Effect
+(Legendary Effect) 10% DMG Amplification against Chilled enemies
+(Legendary Effect) +10% Chill Effect
+(Legendary Effect) +5% Chill Chance","+[25-40]% Chill Effect
++[10-15]% Chill Chance",Lingering Chill Max Stacks +[1-2],[3.5-5]% DMG Amplification against Chilled enemies
+,Burning Flame,Before,"Can be linked with Skills that are Fire, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Fire, Strike","Resource Cost Increase 20%
++20 Burn Rate
++31% Burn DMG
+(Magic Effect) +30% Burn DMG
+(Rare Effect) +65% Burn DMG
+(Rare Effect) +5% Burn Chance
+(Legendary Effect) +100% Burn DMG
+(Legendary Effect) +8% Burn Chance
+(Legendary Effect) 4% Fire DMG Amplification","Resource Cost Increase 20%
++53 Burn Rate
++139% Burn DMG
+(Magic Effect) +30% Burn DMG
+(Rare Effect) +65% Burn DMG
+(Rare Effect) +5% Burn Chance
+(Legendary Effect) +100% Burn DMG
+(Legendary Effect) +8% Burn Chance
+(Legendary Effect) 4% Fire DMG Amplification","+[14-20] Burn Rate
++[35-50]% Fire DMG",[3.5-5]% Burn DMG Amplification,"[4-6]% Fire DMG Amplification
+-[20-14] Burn Rate"
+,,After,"Can be linked with Skills that are Fire, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Fire, Strike","Resource Cost Increase 20%
++37 Burn Rate
++31% Burn DMG
+Gain Burning Flame Effect for 5 s every time Burn is inflicted (Max Stacks: 3)
+Burning Flame Effect
+7% Burn DMG Amplification
+(Magic Effect) +30% Burn DMG
+(Rare Effect) +50% Burn DMG
+(Rare Effect) +5% Burn Chance
+(Legendary Effect) +75% Burn DMG
+(Legendary Effect) +8% Burn Chance
+(Legendary Effect) 4% Fire DMG Amplification","Resource Cost Increase 20%
++70 Burn Rate
++139% Burn DMG
+Gain Burning Flame Effect for 5 s every time Burn is inflicted (Max Stacks: 3)
+Burning Flame Effect
+7% Burn DMG Amplification
+(Magic Effect) +30% Burn DMG
+(Rare Effect) +50% Burn DMG
+(Rare Effect) +5% Burn Chance
+(Legendary Effect) +75% Burn DMG
+(Legendary Effect) +8% Burn Chance
+(Legendary Effect) 4% Fire DMG Amplification","+[14-20]% Burn DMG
+[3.5-5]% Burn DMG Amplification",+[3.5-5]% DoT Acceleration,Burning Flame Effect +[20-30]%
+,Frost Explosion,Before,"Can be linked with Skills that are Cold, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Cold, Strike","Resource Cost Increase 15%
+Cannot apply Chill
++13-16 Cold DMG against Chilled enemies
++10 Freeze Rate against Chilled Enemies
+(Magic Effect) +4-6 Cold DMG against Chilled enemies
+(Magic Effect) +5 Freeze Rate against Chilled Enemies
+(Rare Effect) +8-10 Cold DMG against Chilled enemies
+(Rare Effect) +5 Freeze Rate against Chilled Enemies
+(Legendary Effect) +16-20 Cold DMG against Chilled enemies
+(Legendary Effect) +5 Freeze Rate against Chilled Enemies
+(Legendary Effect) 7.5% DMG Amplification against Chilled enemies","Resource Cost Increase 15%
+Cannot apply Chill
++110-124 Cold DMG against Chilled enemies
++40 Freeze Rate against Chilled Enemies
+(Magic Effect) +4-6 Cold DMG against Chilled enemies
+(Magic Effect) +5 Freeze Rate against Chilled Enemies
+(Rare Effect) +8-10 Cold DMG against Chilled enemies
+(Rare Effect) +5 Freeze Rate against Chilled Enemies
+(Legendary Effect) +16-20 Cold DMG against Chilled enemies
+(Legendary Effect) +5 Freeze Rate against Chilled Enemies
+(Legendary Effect) 7.5% DMG Amplification against Chilled enemies",+[15-25] Freeze Rate against Chilled Enemies,"Change to can inflict Chill
+[3-5]% DMG Dampening against Chilled enemies","[2-3.5]% DMG Amplification against Chilled enemies
+1.5% Element DMG Amplification if linked Skill Rune has 5 or more Blue Link Runes"
+,,After,"Can be linked with Skills that are Cold, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Cold, Strike","Resource Cost Increase 15%
+Cannot apply Chill
++13-16 Cold DMG against Chilled enemies
++10 Freeze Rate against Chilled Enemies
+(Magic Effect) +4-6 Cold DMG against Chilled enemies
+(Magic Effect) +5 Freeze Rate against Chilled Enemies
+(Rare Effect) +8-10 Cold DMG against Chilled enemies
+(Rare Effect) +5 Freeze Rate against Chilled Enemies
+(Legendary Effect) +16-20 Cold DMG against Chilled enemies
+(Legendary Effect) +5 Freeze Rate against Chilled Enemies
+(Legendary Effect) 9% DMG Amplification against Chilled enemies","Resource Cost Increase 15%
+Cannot apply Chill
++110-124 Cold DMG against Chilled enemies
++40 Freeze Rate against Chilled Enemies
+(Magic Effect) +4-6 Cold DMG against Chilled enemies
+(Magic Effect) +5 Freeze Rate against Chilled Enemies
+(Rare Effect) +8-10 Cold DMG against Chilled enemies
+(Rare Effect) +5 Freeze Rate against Chilled Enemies
+(Legendary Effect) +16-20 Cold DMG against Chilled enemies
+(Legendary Effect) +5 Freeze Rate against Chilled Enemies
+(Legendary Effect) 9% DMG Amplification against Chilled enemies",[0.7-1.3]% Cold DMG Amplification per 1 Cold tag Link Rune on linked Skill Rune,"Change to can inflict Chill
+[3-5]% DMG Dampening against Chilled enemies",[3.5-5]% DMG Amplification against Chilled enemies
+,Fire Penetration,Before,"Can be linked with Skills that are Fire
+ Applies to Minions when linked to Summon Skill",Fire,"Resource Cost Increase 15%
++8 Fire Penetration
++12% Fire DMG
+(Magic Effect) +2 Fire Penetration
+(Rare Effect) +7 Fire Penetration
+(Legendary Effect) +16 Fire Penetration
+(Legendary Effect) +4% Max Fire Penetration
+(Legendary Effect) 2% chance to ignore Fire Resist on hit","Resource Cost Increase 15%
++20 Fire Penetration
++37% Fire DMG
+(Magic Effect) +2 Fire Penetration
+(Rare Effect) +7 Fire Penetration
+(Legendary Effect) +16 Fire Penetration
+(Legendary Effect) +4% Max Fire Penetration
+(Legendary Effect) 2% chance to ignore Fire Resist on hit","+[4-9] Fire Penetration
++2% Max Fire Penetration",+[55-80]% Fire DMG,+[3.5-5]% Fire Penetration per 1 Awakened Link Rune on linked Skill Rune
+,,After,"Can be linked with Skills that are Fire
+ Applies to Minions when linked to Summon Skill",Fire,"Resource Cost Increase 15%
++8 Fire Penetration
++12% Fire DMG
+Gain Fire Penetration Effect for 5 s every time Burn is inflicted (Max Stacks: 3)
+Fire Penetration Effect
++5 Fire Penetration
+(Magic Effect) +2 Fire Penetration
+(Rare Effect) +7 Fire Penetration
+(Legendary Effect) +16 Fire Penetration
+(Legendary Effect) +4% Max Fire Penetration
+(Legendary Effect) 2% chance to ignore Fire Resist on hit","Resource Cost Increase 15%
++20 Fire Penetration
++37% Fire DMG
+Gain Fire Penetration Effect for 5 s every time Burn is inflicted (Max Stacks: 3)
+Fire Penetration Effect
++5 Fire Penetration
+(Magic Effect) +2 Fire Penetration
+(Rare Effect) +7 Fire Penetration
+(Legendary Effect) +16 Fire Penetration
+(Legendary Effect) +4% Max Fire Penetration
+(Legendary Effect) 2% chance to ignore Fire Resist on hit","+[4-9] Fire Penetration
++2% Max Fire Penetration",+[55-80]% Fire DMG,+[3.5-5]% Fire Penetration per 1 Awakened Link Rune on linked Skill Rune
+,Cold Penetration,Before,"Can be linked with Skills that are Cold
+ Applies to Minions when linked to Summon Skill",Cold,"Resource Cost Increase 15%
++8 Cold Penetration
++12% Cold DMG
+(Magic Effect) +2 Cold Penetration
+(Rare Effect) +7 Cold Penetration
+(Legendary Effect) +16 Cold Penetration
+(Legendary Effect) +4% Max Cold Penetration
+(Legendary Effect) 2% chance to ignore Cold Resist on hit","Resource Cost Increase 15%
++20 Cold Penetration
++37% Cold DMG
+(Magic Effect) +2 Cold Penetration
+(Rare Effect) +7 Cold Penetration
+(Legendary Effect) +16 Cold Penetration
+(Legendary Effect) +4% Max Cold Penetration
+(Legendary Effect) 2% chance to ignore Cold Resist on hit","+[4-9] Cold Penetration
++2% Max Cold Penetration",+[55-80]% Cold DMG,+[2.5-4.6]% Cold Penetration per 1 Awakened Link Rune on linked Skill Rune
+,,After,"Can be linked with Skills that are Cold
+ Applies to Minions when linked to Summon Skill",Cold,"Resource Cost Increase 15%
++8 Cold Penetration
++12% Cold DMG
+Gain Cold Penetration Effect for 5 s every time Chill is inflicted (Max Stacks: 3)
+Cold Penetration Effect
++5 Cold Penetration
+(Magic Effect) +2 Cold Penetration
+(Rare Effect) +7 Cold Penetration
+(Legendary Effect) +16 Cold Penetration
+(Legendary Effect) +4% Max Cold Penetration
+(Legendary Effect) 2% chance to ignore Cold Resist on hit","Resource Cost Increase 15%
++20 Cold Penetration
++37% Cold DMG
+Gain Cold Penetration Effect for 5 s every time Chill is inflicted (Max Stacks: 3)
+Cold Penetration Effect
++5 Cold Penetration
+(Magic Effect) +2 Cold Penetration
+(Rare Effect) +7 Cold Penetration
+(Legendary Effect) +16 Cold Penetration
+(Legendary Effect) +4% Max Cold Penetration
+(Legendary Effect) 2% chance to ignore Cold Resist on hit","+[4-9] Cold Penetration
++2% Max Cold Penetration",+[55-80]% Cold DMG,+[2.5-4.6]% Cold Penetration per 1 Awakened Link Rune on linked Skill Rune
+,Lightning Penetration,Before,"Can be linked with Skills that are Lightning
+ Applies to Minions when linked to Summon Skill",Lightning,"Resource Cost Increase 15%
++8 Lightning Penetration
++12% Lightning DMG
+(Magic Effect) +2 Lightning Penetration
+(Rare Effect) +7 Lightning Penetration
+(Legendary Effect) +16 Lightning Penetration
+(Legendary Effect) +4% Max Lightning Penetration
+(Legendary Effect) 2% chance to ignore Lightning Resist on hit","Resource Cost Increase 15%
++20 Lightning Penetration
++37% Lightning DMG
+(Magic Effect) +2 Lightning Penetration
+(Rare Effect) +7 Lightning Penetration
+(Legendary Effect) +16 Lightning Penetration
+(Legendary Effect) +4% Max Lightning Penetration
+(Legendary Effect) 2% chance to ignore Lightning Resist on hit","+[4-9] Lightning Penetration
++2% Max Lightning Penetration",+[55-80]% Lightning DMG,+[2.5-4.6]% Lightning Penetration per 1 Awakened Link Rune on linked Skill Rune
+,,After,"Can be linked with Skills that are Lightning
+ Applies to Minions when linked to Summon Skill",Lightning,"Resource Cost Increase 15%
++8 Lightning Penetration
++12% Lightning DMG
+Gain Lightning Penetration Effect for 5 s every time Shock is inflicted (Max Stacks: 3)
+Lightning Penetration Effect
++5 Lightning Penetration
+(Magic Effect) +2 Lightning Penetration
+(Rare Effect) +7 Lightning Penetration
+(Legendary Effect) +16 Lightning Penetration
+(Legendary Effect) +4% Max Lightning Penetration
+(Legendary Effect) 2% chance to ignore Lightning Resist on hit","Resource Cost Increase 15%
++20 Lightning Penetration
++37% Lightning DMG
+Gain Lightning Penetration Effect for 5 s every time Shock is inflicted (Max Stacks: 3)
+Lightning Penetration Effect
++5 Lightning Penetration
+(Magic Effect) +2 Lightning Penetration
+(Rare Effect) +7 Lightning Penetration
+(Legendary Effect) +16 Lightning Penetration
+(Legendary Effect) +4% Max Lightning Penetration
+(Legendary Effect) 2% chance to ignore Lightning Resist on hit","+[4-9] Lightning Penetration
++2% Max Lightning Penetration",+[55-80]% Lightning DMG,+[2.5-4.6]% Lightning Penetration per 1 Awakened Link Rune on linked Skill Rune
+,Poison Penetration,Before,"Can be linked with Skills that are Poison
+ Applies to Minions when linked to Summon Skill",Poison,"Resource Cost Increase 15%
++8 Poison Penetration
++12% Poison DMG
+(Magic Effect) +2 Poison Penetration
+(Rare Effect) +7 Poison Penetration
+(Legendary Effect) +16 Poison Penetration
+(Legendary Effect) +4% Max Poison Penetration
+(Legendary Effect) 2% chance to ignore Poison Resist on hit","Resource Cost Increase 15%
++20 Poison Penetration
++37% Poison DMG
+(Magic Effect) +2 Poison Penetration
+(Rare Effect) +7 Poison Penetration
+(Legendary Effect) +16 Poison Penetration
+(Legendary Effect) +4% Max Poison Penetration
+(Legendary Effect) 2% chance to ignore Poison Resist on hit","+[4-9] Poison Penetration
++2% Max Poison Penetration",+[55-80]% Poison DMG,+[3.5-5]% Poison Penetration per 1 Awakened Link Rune on linked Skill Rune
+,,After,"Can be linked with Skills that are Poison
+ Applies to Minions when linked to Summon Skill",Poison,"Resource Cost Increase 15%
++8 Poison Penetration
++12% Poison DMG
+Gain Poison Penetration Effect for 5 s every time Venom is inflicted (Max Stacks: 3)
+Poison Penetration Effect
++5 Poison Penetration
+(Magic Effect) +2 Poison Penetration
+(Rare Effect) +7 Poison Penetration
+(Legendary Effect) +16 Poison Penetration
+(Legendary Effect) +4% Max Poison Penetration
+(Legendary Effect) 2% chance to ignore Poison Resist on hit","Resource Cost Increase 15%
++20 Poison Penetration
++37% Poison DMG
+Gain Poison Penetration Effect for 5 s every time Venom is inflicted (Max Stacks: 3)
+Poison Penetration Effect
++5 Poison Penetration
+(Magic Effect) +2 Poison Penetration
+(Rare Effect) +7 Poison Penetration
+(Legendary Effect) +16 Poison Penetration
+(Legendary Effect) +4% Max Poison Penetration
+(Legendary Effect) 2% chance to ignore Poison Resist on hit","+[4-9] Poison Penetration
++2% Max Poison Penetration",+[55-80]% Poison DMG,+[3.5-5]% Poison Penetration per 1 Awakened Link Rune on linked Skill Rune
+,Precision,Before,"Can be linked with Skills that are Strike
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 10%
++200 Hit Rate
+(Magic Effect) +20% Hit Rate
+(Rare Effect) +50% Hit Rate
+(Legendary Effect) +60% Hit Rate
+(Legendary Effect) +2% DMG per 150 Hit Rate (Max: 300%)","Resource Cost Increase 10%
++1242 Hit Rate
+(Magic Effect) +20% Hit Rate
+(Rare Effect) +50% Hit Rate
+(Legendary Effect) +60% Hit Rate
+(Legendary Effect) +2% DMG per 150 Hit Rate (Max: 300%)",+[5-10]% DMG per 500 Hit Rate (Max: 150%),"+[35-50]% Hit Rate
++1% Critical Rate per 250 Hit Rate (Max: 80%)","+100% Hit Rate against enemies at Full HP
++100% Hit Rate against enemies at 20% or less HP
++[28-40]% Hit Rate"
+,,After,"Can be linked with Skills that are Strike
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 10%
++200 Hit Rate
+(Magic Effect) +10% Hit Rate
+(Magic Effect) 5% Hit Rate Amplification
+(Rare Effect) +25% Hit Rate
+(Rare Effect) 7.5% Hit Rate Amplification
+(Legendary Effect) +40% Hit Rate
+(Legendary Effect) 10% Hit Rate Amplification
+(Legendary Effect) 1% DMG per 300 Hit Rate (Max: 10%)","Resource Cost Increase 10%
++1048 Hit Rate
+(Magic Effect) +10% Hit Rate
+(Magic Effect) 5% Hit Rate Amplification
+(Rare Effect) +25% Hit Rate
+(Rare Effect) 7.5% Hit Rate Amplification
+(Legendary Effect) +40% Hit Rate
+(Legendary Effect) 10% Hit Rate Amplification
+(Legendary Effect) 1% DMG per 300 Hit Rate (Max: 10%)","+[7.5-10]% DMG per 500 Hit Rate (Max: 150%)
++1% Critical Rate per 250 Hit Rate (Max: 80%)","+[35-50]% Hit Rate
+[5-10]% Hit Rate Amplification","+100% Hit Rate against enemies at Full HP
++100% Hit Rate against enemies at 20% or less HP
++[28-40]% Hit Rate"
+,Finishing Strike,Before,"Can be linked with Skills that are Strike
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 20%
++12% Strike DMG
+12% DMG Amplification against enemies at 20% or less HP
+Guaranteed Critical Hit against enemies at 20% or less HP
+(Rare Effect) 10% DMG Amplification against enemies at 40% or less HP
+(Legendary Effect) 15% DMG Amplification against enemies at 60% or less HP
+(Legendary Effect) Ignores Dodge Rate of enemies at 20% HP or less","Resource Cost Increase 20%
++87% Strike DMG
+41.2% DMG Amplification against enemies at 20% or less HP
+Guaranteed Critical Hit against enemies at 20% or less HP
+(Rare Effect) 10% DMG Amplification against enemies at 40% or less HP
+(Legendary Effect) 15% DMG Amplification against enemies at 60% or less HP
+(Legendary Effect) Ignores Dodge Rate of enemies at 20% HP or less",[3.5-5]% DMG Amplification against enemies at 60% or less HP,+[11-16]% DMG upon Attack per 1 Red Link Rune on linked Skill Rune,-[10-5]% Resource Cost
+,,After,"Can be linked with Skills that are Strike
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 20%
++12% Strike DMG
+12% DMG Amplification against enemies at 20% or less HP
+Guaranteed Critical Hit against enemies at 20% or less HP
+(Rare Effect) 10% DMG Amplification against enemies at 40% or less HP
+(Legendary Effect) 20% DMG Amplification against enemies at 40% or less HP
+(Legendary Effect) Ignores Dodge Rate of enemies at 20% HP or less","Resource Cost Increase 20%
++87% Strike DMG
+41.2% DMG Amplification against enemies at 20% or less HP
+Guaranteed Critical Hit against enemies at 20% or less HP
+(Rare Effect) 10% DMG Amplification against enemies at 40% or less HP
+(Legendary Effect) 20% DMG Amplification against enemies at 40% or less HP
+(Legendary Effect) Ignores Dodge Rate of enemies at 20% HP or less",[9-12]% DMG Amplification against enemies at 40% or less HP,Ignores Element Resist of enemies at 20% HP or less,Ignores Armor of enemies at 20% HP or less
+,Channeling Enhancement,Before,Can be linked with Skills that are Channel,Channel,"Resource Cost Increase 20%
++10% DMG when Channeling
+2% DMG Taken Dampening while Channeling
+1% DMG Amplification every 0.5 s on Focus
+Max Stacks 15
+(Magic Effect) +15% DMG when Channeling
+(Magic Effect) 2% DMG Taken Dampening while Channeling
+(Rare Effect) +30% DMG when Channeling
+(Rare Effect) 3.5% DMG Taken Dampening while Channeling
+(Legendary Effect) +60% DMG when Channeling
+(Legendary Effect) 5% DMG Taken Dampening while Channeling","Resource Cost Increase 20%
++85% DMG when Channeling
+5.1% DMG Taken Dampening while Channeling
+1% DMG Amplification every 0.5 s on Focus
+Max Stacks 15
+(Magic Effect) +15% DMG when Channeling
+(Magic Effect) 2% DMG Taken Dampening while Channeling
+(Rare Effect) +30% DMG when Channeling
+(Rare Effect) 3.5% DMG Taken Dampening while Channeling
+(Legendary Effect) +60% DMG when Channeling
+(Legendary Effect) 5% DMG Taken Dampening while Channeling",+[55-80]% DMG when Channeling,"[2.8-4]% Element DMG Amplification while Channeling
+[2.8-4]% Physical DMG Amplification while Channeling","+[3-5]% DMG per 1 Awakened Link Rune on linked Skill Rune
+[3-5]% DMG Taken Dampening while Channeling"
+,,After,Can be linked with Skills that are Channel,Channel,"Resource Cost Increase 20%
++10% DMG when Channeling
+2% DMG Taken Dampening while Channeling
+3% DMG Amplification every 0.5 s on Focus
+Max Stacks 5
+(Magic Effect) +15% DMG when Channeling
+(Magic Effect) 2% DMG Taken Dampening while Channeling
+(Rare Effect) +30% DMG when Channeling
+(Rare Effect) 3.5% DMG Taken Dampening while Channeling
+(Legendary Effect) +60% DMG when Channeling
+(Legendary Effect) 5% DMG Taken Dampening while Channeling","Resource Cost Increase 20%
++85% DMG when Channeling
+5.1% DMG Taken Dampening while Channeling
+3% DMG Amplification every 0.5 s on Focus
+Max Stacks 5
+(Magic Effect) +15% DMG when Channeling
+(Magic Effect) 2% DMG Taken Dampening while Channeling
+(Rare Effect) +30% DMG when Channeling
+(Rare Effect) 3.5% DMG Taken Dampening while Channeling
+(Legendary Effect) +60% DMG when Channeling
+(Legendary Effect) 5% DMG Taken Dampening while Channeling",+[55-80]% DMG when Channeling,Channeling Enhancement Max Stacks +[1-2],"+[8-11]% DMG per 1 Awakened Link Rune on linked Skill Rune
+[3-5]% DMG Taken Dampening while Channeling"
+,Minion DMG,Before,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
+Your Minions behave aggressively
+8% Minion DMG Amplification
+25% DMG Taken by Minions Increase
+(Magic Effect) +20% Minion DMG
+(Rare Effect) +60% Minion DMG
+(Legendary Effect) +90% Minion DMG
+(Legendary Effect) 10% Minion Movement Speed Increase","Resource Cost Increase 15%
+Your Minions behave aggressively
+36.2% Minion DMG Amplification
+14.5% DMG Taken by Minions Increase
+(Magic Effect) +20% Minion DMG
+(Rare Effect) +60% Minion DMG
+(Legendary Effect) +90% Minion DMG
+(Legendary Effect) 10% Minion Movement Speed Increase",[3.5-5]% Minion DMG Amplification,+[8-14]% Minion DMG per 1 Minion tag Link Rune on linked Skill Rune,[2-5]% DMG Taken by Minions Decrease
+,,After,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
+Your Minions behave aggressively
+8% Minion DMG Amplification
+25% DMG Taken by Minions Increase
+(Magic Effect) +20% Minion DMG
+(Rare Effect) +60% Minion DMG
+(Legendary Effect) +90% Minion DMG
+(Legendary Effect) 10% Minion Movement Speed Increase","Resource Cost Increase 15%
+Your Minions behave aggressively
+36.2% Minion DMG Amplification
+14.5% DMG Taken by Minions Increase
+(Magic Effect) +20% Minion DMG
+(Rare Effect) +60% Minion DMG
+(Legendary Effect) +90% Minion DMG
+(Legendary Effect) 10% Minion Movement Speed Increase","[7-10]% Minion DMG Amplification
+[9-13]% DMG Taken by Minions Amplification",[3-6]% Minion DMG Amplification,"[7-10]% Minion DMG Dampening
+[9-13]% DMG Taken by Minion Dampening"
+,Minion Speed,Before,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
++13% Minion Attack Speed
++13% Minion Cast Speed
+8% Minion Movement Speed Increase
+(Magic Effect) 5% Minion Movement Speed Increase
+(Rare Effect) 10% Minion Movement Speed Increase
+(Legendary Effect) 15% Minion Movement Speed Increase
+(Legendary Effect) +10% Minion Cast Speed
+(Legendary Effect) +10% Minion Attack Speed","Resource Cost Increase 15%
++46.3% Minion Attack Speed
++46.3% Minion Cast Speed
+25% Minion Movement Speed Increase
+(Magic Effect) 5% Minion Movement Speed Increase
+(Rare Effect) 10% Minion Movement Speed Increase
+(Legendary Effect) 15% Minion Movement Speed Increase
+(Legendary Effect) +10% Minion Cast Speed
+(Legendary Effect) +10% Minion Attack Speed",+[10-17]% Minion Cast Speed,"+[5-10]% Resource Cost
++1 Skill Rune Level if linked Skill Rune has 6 Legendary Link Runes",[1-1.5]% Minion Attack Speed Amplification per 1 Minion tag Link Rune on linked Skill Rune
+,,After,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
++13% Minion Attack Speed
++13% Minion Cast Speed
+8% Minion Movement Speed Increase
+(Magic Effect) 5% Minion Movement Speed Increase
+(Rare Effect) 10% Minion Movement Speed Increase
+(Legendary Effect) 15% Minion Movement Speed Increase
+(Legendary Effect) +10% Minion Cast Speed
+(Legendary Effect) +10% Minion Attack Speed","Resource Cost Increase 15%
++46.3% Minion Attack Speed
++46.3% Minion Cast Speed
+25% Minion Movement Speed Increase
+(Magic Effect) 5% Minion Movement Speed Increase
+(Rare Effect) 10% Minion Movement Speed Increase
+(Legendary Effect) 15% Minion Movement Speed Increase
+(Legendary Effect) +10% Minion Cast Speed
+(Legendary Effect) +10% Minion Attack Speed",[8-13]% Minion Movement Speed Increase,+2 Skill Rune Level if linked Skill Rune has 5 Legendary Link Runes,"[1-1.5]% Minion Cast Speed Amplification per 1 Minion tag Link Rune on linked Skill Rune
+[1-1.5]% Minion Attack Speed Amplification per 1 Minion tag Link Rune on linked Skill Rune"
+,Minion HP,Before,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
+Amplifies Minion Max HP by 10%
+(Magic Effect) +15% Minion HP
+(Rare Effect) +30% Minion HP
+(Legendary Effect) +50% Minion HP
+(Legendary Effect) Minion regenerates 2% of Max HP per Sec","Resource Cost Increase 15%
+Amplifies Minion Max HP by 34%
+(Magic Effect) +15% Minion HP
+(Rare Effect) +30% Minion HP
+(Legendary Effect) +50% Minion HP
+(Legendary Effect) Minion regenerates 2% of Max HP per Sec",Amplifies Minion Max HP by [5-8]%,-[10-5]% Resource Cost,Minion regenerates [2-5]% of Max HP per Sec
+,,After,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
+Amplifies Minion Max HP by 10%
++3% Minion DMG per 200 Minion HP
+(Max: 300%)
+(Magic Effect) +15% Minion HP
+(Rare Effect) +30% Minion HP
+(Legendary Effect) +50% Minion HP
+(Legendary Effect) Minion regenerates 2% of Max HP per Sec","Resource Cost Increase 15%
+Amplifies Minion Max HP by 34%
++3% Minion DMG per 200 Minion HP
+(Max: 300%)
+(Magic Effect) +15% Minion HP
+(Rare Effect) +30% Minion HP
+(Legendary Effect) +50% Minion HP
+(Legendary Effect) Minion regenerates 2% of Max HP per Sec",Amplifies Minion Max HP by [5-8]%,"[3-5]% Minion DMG Amplification
+-[10-5]% Minion HP",Minion regenerates [2-5]% of Max HP per Sec
+,Minion Body Shield,Before,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
+25% Minion DMG Dampening
+10% DMG Taken by Minions Decrease
+(Magic Effect) 5% DMG Taken by Minions Decrease
+(Rare Effect) 5% DMG Taken by Minions Decrease
+(Rare Effect) 10% Area DMG Taken by Minions Decrease
+(Legendary Effect) 10% DMG Taken by Minions Decrease
+(Legendary Effect) 10% Area DMG Taken by Minions Decrease
+(Legendary Effect) 10% Boss DMG Taken by Minions Decrease","Resource Cost Increase 15%
+25% Minion DMG Dampening
+25% DMG Taken by Minions Decrease
+(Magic Effect) 5% DMG Taken by Minions Decrease
+(Rare Effect) 5% DMG Taken by Minions Decrease
+(Rare Effect) 10% Area DMG Taken by Minions Decrease
+(Legendary Effect) 10% DMG Taken by Minions Decrease
+(Legendary Effect) 10% Area DMG Taken by Minions Decrease
+(Legendary Effect) 10% Boss DMG Taken by Minions Decrease",[3-5.5]% DMG Taken by Minions Decrease,[0.6-1.2]% Boss DMG Taken by Minions Decrease per 1 Awakened Link Rune on linked Skill Rune,"-[10-5]% Resource Cost
+Minion Bind Immunity"
+,,After,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
+20% Minion DMG Dampening
+15% DMG Taken by Minions Decrease
+(Magic Effect) 5% DMG Taken by Minions Decrease
+(Rare Effect) 10% DMG Taken by Minions Decrease
+(Legendary Effect) 15% DMG Taken by Minions Decrease
+(Legendary Effect) 10% DMG from Elites Taken by Minions Decrease","Resource Cost Increase 15%
+8% Minion DMG Dampening
+20% DMG Taken by Minions Decrease
+(Magic Effect) 5% DMG Taken by Minions Decrease
+(Rare Effect) 10% DMG Taken by Minions Decrease
+(Legendary Effect) 15% DMG Taken by Minions Decrease
+(Legendary Effect) 10% DMG from Elites Taken by Minions Decrease",[3-5.5]% DMG Taken by Minions Decrease,[0.6-1.2]% DMG from Elites Taken by Minions Decrease per 1 Awakened Link Rune on linked Skill Rune,Minion Immune to Status Effects
+,Flowing Pain,Before,"Can be linked with Skills that are Strike, Poison (must include all)
+ Applies to Minions when linked to Summon Skill","Strike, Poison","Resource Cost Increase 20%
++20 Venom Rate
++20% Venom DMG
+(Magic Effect) +20% Venom Duration
+(Rare Effect) +30% Venom Duration
+(Rare Effect) 10% Venom DMG Amplification
+(Legendary Effect) +40% Venom Duration
+(Legendary Effect) 15% Venom DMG Amplification
+(Legendary Effect) +5% Venom Chance","Resource Cost Increase 20%
++51 Venom Rate
++77.3% Venom DMG
+(Magic Effect) +20% Venom Duration
+(Rare Effect) +30% Venom Duration
+(Rare Effect) 10% Venom DMG Amplification
+(Legendary Effect) +40% Venom Duration
+(Legendary Effect) 15% Venom DMG Amplification
+(Legendary Effect) +5% Venom Chance",[3.5-5]% DoT Amplification,[2-4]% chance to gain Poison Energy on hit,"+[30-40]% DMG against enemies affected by Venom
++[20-30] Venom Rate"
+,,After,"Can be linked with Skills that are Strike, Poison (must include all)
+ Applies to Minions when linked to Summon Skill","Strike, Poison","Resource Cost Increase 20%
++20 Venom Rate
++20% Venom DMG
+Gain Flowing Pain Effect for 5 s every time Venom is inflicted (Max Stacks: 3)
+Flowing Pain Effect
+7% Venom DMG Amplification
+(Magic Effect) +20% Venom Duration
+(Rare Effect) +35% Venom Duration
+(Rare Effect) 10% Venom DMG Amplification
+(Legendary Effect) +50% Venom Duration
+(Legendary Effect) 15% Venom DMG Amplification
+(Legendary Effect) +5% Venom Chance","Resource Cost Increase 20%
++51 Venom Rate
++77.3% Venom DMG
+Gain Flowing Pain Effect for 5 s every time Venom is inflicted (Max Stacks: 3)
+Flowing Pain Effect
+7% Venom DMG Amplification
+(Magic Effect) +20% Venom Duration
+(Rare Effect) +35% Venom Duration
+(Rare Effect) 10% Venom DMG Amplification
+(Legendary Effect) +50% Venom Duration
+(Legendary Effect) 15% Venom DMG Amplification
+(Legendary Effect) +5% Venom Chance",+[10-25]% Venom Duration,[5-7.5]% chance to gain Poison Energy on hit,Flowing Pain Effect +[10-30]%
+,Continuous Shock,Before,"Can be linked with Skills that are Lightning, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Lightning, Strike","Resource Cost Increase 20%
++10 Shock Rate
++8% Shock Effect
+(Magic Effect) +5% Shock Duration
+(Magic Effect) +2-18 Lightning DMG
+(Rare Effect) +15% Shock Duration
+(Rare Effect) +4-56 Lightning DMG
+(Legendary Effect) +25% Shock Duration
+(Legendary Effect) +5-65 Lightning DMG
+(Legendary Effect) +7.5% Shock Chance","Resource Cost Increase 20%
++31 Shock Rate
++26.8% Shock Effect
+(Magic Effect) +5% Shock Duration
+(Magic Effect) +2-18 Lightning DMG
+(Rare Effect) +15% Shock Duration
+(Rare Effect) +4-56 Lightning DMG
+(Legendary Effect) +25% Shock Duration
+(Legendary Effect) +5-65 Lightning DMG
+(Legendary Effect) +7.5% Shock Chance",+[10-17] Shock Rate,"-20% Shock Duration
++[13-20]% Shock Effect",+[9-13.5]% Lightning DMG per 1 Blue Link Rune on linked Skill Rune
+,,After,"Can be linked with Skills that are Lightning, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Lightning, Strike","Resource Cost Increase 20%
++10 Shock Rate
++8% Shock Effect
+Gain Continuous Shock Effect for 5 s every time Shock is inflicted (Max Stacks: 3)
+Continuous Shock Effect
++7% Shock Effect
+(Magic Effect) +5% Shock Duration
+(Magic Effect) +2-18 Lightning DMG
+(Rare Effect) +15% Shock Duration
+(Rare Effect) +4-56 Lightning DMG
+(Legendary Effect) +25% Shock Duration
+(Legendary Effect) +5-65 Lightning DMG
+(Legendary Effect) +7.5% Shock Chance","Resource Cost Increase 20%
++31 Shock Rate
++26.8% Shock Effect
+Gain Continuous Shock Effect for 5 s every time Shock is inflicted (Max Stacks: 3)
+Continuous Shock Effect
++7% Shock Effect
+(Magic Effect) +5% Shock Duration
+(Magic Effect) +2-18 Lightning DMG
+(Rare Effect) +15% Shock Duration
+(Rare Effect) +4-56 Lightning DMG
+(Legendary Effect) +25% Shock Duration
+(Legendary Effect) +5-65 Lightning DMG
+(Legendary Effect) +7.5% Shock Chance","+[10-17] Shock Rate
++[20-35]% Shock Duration","-[20-15]% Shock Duration
++[13-20]% Shock Effect",Continuous Shock Max Stacks +[1-2]
+,Elite Slayer,Before,"Can be linked with Skills that are any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT","Resource Cost Increase 20%
++35% DMG against Elites
+Gain Elite Slayer effect on Elite kill
+10% chance to gain Elite Slayer s on hitting a boss
+Elite Slayer effect
+Duration 25 s
+2.6% DMG Amplification against Elites
+Max Stack(s) 3
+(Magic Effect) +24% DMG against Elites
+(Rare Effect) +70% DMG against Elites
+(Legendary Effect) +80% DMG against Elites
+(Legendary Effect) 3.5% DMG Amplification against Bosses","Resource Cost Increase 20%
++185% DMG against Elites
+Gain Elite Slayer effect on Elite kill
+10% chance to gain Elite Slayer s on hitting a boss
+Elite Slayer effect
+Duration 25 s
+5.1% DMG Amplification against Elites
+Max Stack(s) 3
+(Magic Effect) +24% DMG against Elites
+(Rare Effect) +70% DMG against Elites
+(Legendary Effect) +80% DMG against Elites
+(Legendary Effect) 3.5% DMG Amplification against Bosses",[5.3-7]% DMG Amplification against Bosses,"+[35-50]% DMG against Elites
++40% DMG against Elites when distance from enemy is 500 or less","[2.1-3]% DMG Amplification against Elites if linked Skill Rune has 1 Green Link Rune
+3% DMG Amplification against Elites"
+,,After,"Can be linked with Skills that are any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT","Resource Cost Increase 20%
++35% DMG against Elites
+Gain Elite Slayer effect on Elite kill
+10% chance to gain Elite Slayer s on hitting a boss
+Elite Slayer effect
+Duration 25 s
+2.6% DMG Amplification against Elites
+Max Stack(s) 3
+(Magic Effect) +24% DMG against Elites
+(Rare Effect) +70% DMG against Elites
+(Legendary Effect) +80% DMG against Elites
+(Legendary Effect) 3.5% DMG Amplification against Bosses","Resource Cost Increase 20%
++185% DMG against Elites
+Gain Elite Slayer effect on Elite kill
+10% chance to gain Elite Slayer s on hitting a boss
+Elite Slayer effect
+Duration 25 s
+5.1% DMG Amplification against Elites
+Max Stack(s) 3
+(Magic Effect) +24% DMG against Elites
+(Rare Effect) +70% DMG against Elites
+(Legendary Effect) +80% DMG against Elites
+(Legendary Effect) 3.5% DMG Amplification against Bosses",[7.5-11]% DMG Amplification against Bosses,[5.3-7]% DMG Amplification against Elites,"Elite Slayer Max Stacks +[1-2]
+Elite Slayer Effect -[30-20]%"
+,Blind Aid,Before,"Can be linked with Skills that are Strike, Poison (must include all)
+ Applies to Minions when linked to Summon Skill","Strike, Poison","Resource Cost Increase 20%
++15 Blind Rate
++20% DMG against Blinded enemies
+(Magic Effect) +5 Blind Rate
+(Rare Effect) +10 Blind Rate
+(Rare Effect) 5% DMG Amplification against Blinded enemies
+(Legendary Effect) +12 Blind Rate
+(Legendary Effect) 10% DMG Amplification against Blinded enemies
+(Legendary Effect) +5% Blind Chance","Resource Cost Increase 20%
++46 Blind Rate
++105.5% DMG against Blinded enemies
+(Magic Effect) +5 Blind Rate
+(Rare Effect) +10 Blind Rate
+(Rare Effect) 5% DMG Amplification against Blinded enemies
+(Legendary Effect) +12 Blind Rate
+(Legendary Effect) 10% DMG Amplification against Blinded enemies
+(Legendary Effect) +5% Blind Chance","+[7-10] Blind Rate
++[40-55]% DMG against Blinded enemies",[3.5-5]% DMG Amplification against Blinded enemies,+[17-25] Blind Rate on Critical Hit
+,,After,"Can be linked with Skills that are Strike, Poison (must include all)
+ Applies to Minions when linked to Summon Skill","Strike, Poison","Resource Cost Increase 15%
++15 Blind Rate
++5% Blind Duration
++20% DMG against Blinded enemies
+Gain Blind Aid Effect for 5 s every time Blind is inflicted (Max Stacks: 3)
+Blind Aid Effect
+1.5% Poison DMG Amplification
+(Magic Effect) +5 Blind Rate
+(Rare Effect) +10 Blind Rate
+(Rare Effect) 5% DMG Amplification against Blinded enemies
+(Legendary Effect) +12 Blind Rate
+(Legendary Effect) 10% DMG Amplification against Blinded enemies
+(Legendary Effect) +5% Blind Chance","Resource Cost Increase 15%
++55 Blind Rate
++20% Blind Duration
++105.5% DMG against Blinded enemies
+Gain Blind Aid Effect for 5 s every time Blind is inflicted (Max Stacks: 3)
+Blind Aid Effect
+1.5% Poison DMG Amplification
+(Magic Effect) +5 Blind Rate
+(Rare Effect) +10 Blind Rate
+(Rare Effect) 5% DMG Amplification against Blinded enemies
+(Legendary Effect) +12 Blind Rate
+(Legendary Effect) 10% DMG Amplification against Blinded enemies
+(Legendary Effect) +5% Blind Chance","+[25-40]% Blind Effect
++[40-55]% DMG against Blinded enemies",[3.5-5]% DMG Amplification against Blinded enemies,Blind Aid Max Stacks +[2-3]
+,Deadly Poison,Before,"Can be linked with Skills that are Poison
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT, Poison","Resource Cost Increase 20%
+Cannot apply Venom
+8.6% DMG Amplification against enemies affected by Venom
+(Magic Effect) 3% DMG Amplification against enemies affected by Venom
+(Rare Effect) 5% DMG Amplification against enemies affected by Venom
+(Legendary Effect) 8% DMG Amplification against enemies affected by Venom
+(Legendary Effect) +10% DMG Multiplier against enemies affected by Venom","Resource Cost Increase 20%
+Cannot apply Venom
+24.4% DMG Amplification against enemies affected by Venom
+(Magic Effect) 3% DMG Amplification against enemies affected by Venom
+(Rare Effect) 5% DMG Amplification against enemies affected by Venom
+(Legendary Effect) 8% DMG Amplification against enemies affected by Venom
+(Legendary Effect) +10% DMG Multiplier against enemies affected by Venom",+[55-80]% DMG against enemies affected by Venom,-[10-5]% Resource Cost,"+[17-25] Venom Rate
+Change to Can inflict Venom"
+,,After,"Can be linked with Skills that are Poison
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT, Poison","Resource Cost Increase 20%
+Cannot apply Venom
+8.6% DMG Amplification against enemies affected by Venom
+(Magic Effect) 3% DMG Amplification against enemies affected by Venom
+(Rare Effect) 5% DMG Amplification against enemies affected by Venom
+(Legendary Effect) 8% DMG Amplification against enemies affected by Venom
+(Legendary Effect) +10% DMG Multiplier against enemies affected by Venom","Resource Cost Increase 20%
+Cannot apply Venom
+24.4% DMG Amplification against enemies affected by Venom
+(Magic Effect) 3% DMG Amplification against enemies affected by Venom
+(Rare Effect) 5% DMG Amplification against enemies affected by Venom
+(Legendary Effect) 8% DMG Amplification against enemies affected by Venom
+(Legendary Effect) +10% DMG Multiplier against enemies affected by Venom",+[55-80]% DMG against enemies affected by Venom,[0.5-0.9]% Poison DMG Amplification per 1 Poison tag Link Rune on linked Skill Rune,"[5-7.5]% Venom DMG Amplification
+Change to Can inflict Venom"
+,Conductor,Before,"Can be linked with Skills that are Lightning, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Lightning, Strike","Resource Cost Increase 15%
+Cannot apply Shock
++35% Critical Rate against Shocked enemies
++10% Critical DMG against Shocked enemies
+(Magic Effect) +10% DMG against Shocked enemies
+(Magic Effect) +15% Critical Rate against Shocked enemies
+(Rare Effect) +25% DMG against Shocked enemies
+(Rare Effect) +45% Critical Rate against Shocked enemies
+(Legendary Effect) +35% DMG against Shocked enemies
+(Legendary Effect) +70% Critical Rate against Shocked enemies
+(Legendary Effect) 7.5% DMG Amplification against Shocked enemies","Resource Cost Increase 15%
+Cannot apply Shock
++236% Critical Rate against Shocked enemies
++10% Critical DMG against Shocked enemies
+(Magic Effect) +10% DMG against Shocked enemies
+(Magic Effect) +15% Critical Rate against Shocked enemies
+(Rare Effect) +25% DMG against Shocked enemies
+(Rare Effect) +45% Critical Rate against Shocked enemies
+(Legendary Effect) +35% DMG against Shocked enemies
+(Legendary Effect) +70% Critical Rate against Shocked enemies
+(Legendary Effect) 7.5% DMG Amplification against Shocked enemies",+[25-40]% Critical DMG against Shocked enemies,"Change to can inflict Shock
+[3-5]% DMG Dampening against Shocked enemies","[1.1-2]% DMG Amplification against Shocked enemies
+1% Element DMG Amplification if linked Skill Rune has 5 or more Blue Link Runes"
+,,After,"Can be linked with Skills that are Lightning, Strike (must include all)
+ Applies to Minions when linked to Summon Skill","Lightning, Strike","Resource Cost Increase 15%
+Cannot apply Shock
++35% Critical Rate against Shocked enemies
++10% Critical DMG against Shocked enemies
+(Magic Effect) +10% DMG against Shocked enemies
+(Magic Effect) +15% Critical Rate against Shocked enemies
+(Rare Effect) +25% DMG against Shocked enemies
+(Rare Effect) +45% Critical Rate against Shocked enemies
+(Legendary Effect) +35% DMG against Shocked enemies
+(Legendary Effect) +70% Critical Rate against Shocked enemies
+(Legendary Effect) 7.5% DMG Amplification against Shocked enemies","Resource Cost Increase 15%
+Cannot apply Shock
++236% Critical Rate against Shocked enemies
++10% Critical DMG against Shocked enemies
+(Magic Effect) +10% DMG against Shocked enemies
+(Magic Effect) +15% Critical Rate against Shocked enemies
+(Rare Effect) +25% DMG against Shocked enemies
+(Rare Effect) +45% Critical Rate against Shocked enemies
+(Legendary Effect) +35% DMG against Shocked enemies
+(Legendary Effect) +70% Critical Rate against Shocked enemies
+(Legendary Effect) 7.5% DMG Amplification against Shocked enemies",+[25-40]% Critical DMG against Shocked enemies,"Change to can inflict Shock
++[15-30]% Shock Effect",[2.1-4]% DMG Amplification against Shocked enemies
+,Convert Fire DMG,Before,"Can be linked with Skills that are Physical
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Cannot be linked with Skills that are Cannot Convert DMG, Totem, Minion, Shout
+ Only one Convert DMG can be linked at a time.
+ Applies to Minions when linked to Summon Skill
+ Rune cannot be awakened.","Strike, DoT, Physical","Resource Cost Increase 15%
+Convert DMG to Fire
+Convert DMG to Main Element 50%
++30% Fire DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Fire DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Fire DMG Amplification","Resource Cost Increase 15%
+Convert DMG to Fire
+Convert DMG to Main Element 50%
++151.5% Fire DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Fire DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Fire DMG Amplification",0,0,0
+,,After,"Can be linked with Skills that are Physical
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Cannot be linked with Skills that are Cannot Convert DMG, Totem, Minion, Shout
+ Only one Convert DMG can be linked at a time.
+ Applies to Minions when linked to Summon Skill
+ Rune cannot be awakened.","Strike, DoT, Physical","Resource Cost Increase 15%
+Convert DMG to Fire
+Convert DMG to Main Element 50%
++30% Fire DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Fire DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Fire DMG Amplification
+(Legendary Effect) Additional Fire DMG equal to 10% of DMG on every hit","Resource Cost Increase 15%
+Convert DMG to Fire
+Convert DMG to Main Element 50%
++151.5% Fire DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Fire DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Fire DMG Amplification
+(Legendary Effect) Additional Fire DMG equal to 10% of DMG on every hit",0,0,0
+,Convert Cold DMG,Before,"Can be linked with Skills that are Physical
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Cannot be linked with Skills that are Cannot Convert DMG, Totem, Minion, Shout
+ Only one Convert DMG can be linked at a time.
+ Applies to Minions when linked to Summon Skill
+ Rune cannot be awakened.","Strike, DoT, Physical","Resource Cost Increase 15%
+Convert DMG to Cold
+Convert DMG to Main Element 50%
++30% Cold DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Cold DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Cold DMG Amplification","Resource Cost Increase 15%
+Convert DMG to Cold
+Convert DMG to Main Element 50%
++151.5% Cold DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Cold DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Cold DMG Amplification",0,0,0
+,,After,"Can be linked with Skills that are Physical
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Cannot be linked with Skills that are Cannot Convert DMG, Totem, Minion, Shout
+ Only one Convert DMG can be linked at a time.
+ Applies to Minions when linked to Summon Skill
+ Rune cannot be awakened.","Strike, DoT, Physical","Resource Cost Increase 15%
+Convert DMG to Cold
+Convert DMG to Main Element 50%
++30% Cold DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Cold DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Cold DMG Amplification
+(Legendary Effect) Additional Cold DMG equal to 10% of DMG on every hit","Resource Cost Increase 15%
+Convert DMG to Cold
+Convert DMG to Main Element 50%
++151.5% Cold DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Cold DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Cold DMG Amplification
+(Legendary Effect) Additional Cold DMG equal to 10% of DMG on every hit",0,0,0
+,Convert Lightning DMG,Before,"Can be linked with Skills that are Physical
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Cannot be linked with Skills that are Cannot Convert DMG, Totem, Minion, Shout
+ Only one Convert DMG can be linked at a time.
+ Applies to Minions when linked to Summon Skill
+ Rune cannot be awakened.","Strike, DoT, Physical","Resource Cost Increase 15%
+Convert DMG to Lightning
+Convert DMG to Main Element 50%
++30% Lightning DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Lightning DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Lightning DMG Amplification","Resource Cost Increase 15%
+Convert DMG to Lightning
+Convert DMG to Main Element 50%
++151.5% Lightning DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Lightning DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Lightning DMG Amplification",0,0,0
+,,After,"Can be linked with Skills that are Physical
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Cannot be linked with Skills that are Cannot Convert DMG, Totem, Minion, Shout
+ Only one Convert DMG can be linked at a time.
+ Applies to Minions when linked to Summon Skill
+ Rune cannot be awakened.","Strike, DoT, Physical","Resource Cost Increase 15%
+Convert DMG to Lightning
+Convert DMG to Main Element 50%
++30% Lightning DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Lightning DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Lightning DMG Amplification
+(Legendary Effect) Additional Lightning DMG equal to 10% of DMG on every hit","Resource Cost Increase 15%
+Convert DMG to Lightning
+Convert DMG to Main Element 50%
++151.5% Lightning DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Lightning DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Lightning DMG Amplification
+(Legendary Effect) Additional Lightning DMG equal to 10% of DMG on every hit",0,0,0
+,Convert Poison DMG,Before,"Can be linked with Skills that are Physical
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Cannot be linked with Skills that are Cannot Convert DMG, Totem, Minion, Shout
+ Only one Convert DMG can be linked at a time.
+ Applies to Minions when linked to Summon Skill
+ Rune cannot be awakened.","Strike, DoT, Physical","Resource Cost Increase 15%
+Convert DMG to Poison
+Convert DMG to Main Element 50%
++30% Poison DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Poison DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Poison DMG Amplification","Resource Cost Increase 15%
+Convert DMG to Poison
+Convert DMG to Main Element 50%
++151.5% Poison DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Poison DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Poison DMG Amplification",0,0,0
+,,After,"Can be linked with Skills that are Physical
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Cannot be linked with Skills that are Cannot Convert DMG, Totem, Minion, Shout
+ Only one Convert DMG can be linked at a time.
+ Applies to Minions when linked to Summon Skill
+ Rune cannot be awakened.","Strike, DoT, Physical","Resource Cost Increase 15%
+Convert DMG to Poison
+Convert DMG to Main Element 50%
++30% Poison DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Poison DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Poison DMG Amplification
+(Legendary Effect) Additional Poison DMG on DMG equal to 10% of DMG on every hit","Resource Cost Increase 15%
+Convert DMG to Poison
+Convert DMG to Main Element 50%
++151.5% Poison DMG
+(Magic Effect) Convert DMG to Main Element 30%
+(Rare Effect) Convert DMG to Main Element 40%
+(Rare Effect) 5% Poison DMG Amplification
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Poison DMG Amplification
+(Legendary Effect) Additional Poison DMG on DMG equal to 10% of DMG on every hit",0,0,0
+,Close Range Shot,Before,"Can be linked with Skills that are Projectile
+ Can be linked with Skills that satisfy any one of Bow, Sentry
+ Cannot be linked with Skills that are Channel, Totem, Movement
+ Applies to Minions when linked to Summon Skill","Bow, Sentry, Projectile","Resource Cost Increase 20%
++10% DMG upon every Projectile Hit against enemies at 400 distance or less
+100% chance to gain Close Range Shot for 8 s on hit
+Close Range Shot effect
+( 5% Projectile DMG Amplification per 100 distance decrease upon hitting an enemy at 600 distance or less (Max 20%) )
+(Magic Effect) +15% DMG upon every Projectile Hit against enemies at 400 distance or less
+(Magic Effect) +20% Close Range Shot Effect
+(Rare Effect) +45% DMG upon every Projectile Hit against enemies at 400 distance or less
+(Rare Effect) +25% Close Range Shot Effect
+(Legendary Effect) +90% DMG upon every Projectile Hit against enemies at 400 distance or less
+(Legendary Effect) +35% Close Range Shot Effect","Resource Cost Increase 20%
++176.7% DMG upon every Projectile Hit against enemies at 400 distance or less
+100% chance to gain Close Range Shot for 8 s on hit
+Close Range Shot effect
+( 5% Projectile DMG Amplification per 100 distance decrease upon hitting an enemy at 600 distance or less (Max 20%) )
+(Magic Effect) +15% DMG upon every Projectile Hit against enemies at 400 distance or less
+(Magic Effect) +20% Close Range Shot Effect
+(Rare Effect) +45% DMG upon every Projectile Hit against enemies at 400 distance or less
+(Rare Effect) +25% Close Range Shot Effect
+(Legendary Effect) +90% DMG upon every Projectile Hit against enemies at 400 distance or less
+(Legendary Effect) +35% Close Range Shot Effect",+[55-80]% DMG upon every Projectile Hit against enemies at 400 distance or less,Close Range Shot effect +[6-10]% Increase,+[500-1000] Armor for 5 s on hitting enemies within 300 or less distance
+,,After,"Can be linked with Skills that are Projectile
+ Can be linked with Skills that satisfy any one of Bow, Sentry
+ Cannot be linked with Skills that are Channel, Totem, Movement
+ Applies to Minions when linked to Summon Skill","Bow, Sentry, Projectile","Resource Cost Increase 20%
++10% DMG upon every Projectile Hit against enemies at 600 distance or less
+100% chance to gain Close Range Shot for 8 s on hit
+Close Range Shot effect
+( 5% Projectile DMG Amplification per 100 distance decrease upon hitting an enemy at 600 distance or less (Max 20%) )
+(Magic Effect) +15% DMG upon every Projectile Hit against enemies at 600 distance or less
+(Magic Effect) +20% Close Range Shot Effect
+(Rare Effect) +45% DMG upon every Projectile Hit against enemies at 600 distance or less
+(Rare Effect) +25% Close Range Shot Effect
+(Legendary Effect) +90% DMG upon every Projectile Hit against enemies at 600 distance or less
+(Legendary Effect) +35% Close Range Shot Effect","Resource Cost Increase 20%
++176.7% DMG upon every Projectile Hit against enemies at 600 distance or less
+100% chance to gain Close Range Shot for 8 s on hit
+Close Range Shot effect
+( 5% Projectile DMG Amplification per 100 distance decrease upon hitting an enemy at 600 distance or less (Max 20%) )
+(Magic Effect) +15% DMG upon every Projectile Hit against enemies at 600 distance or less
+(Magic Effect) +20% Close Range Shot Effect
+(Rare Effect) +45% DMG upon every Projectile Hit against enemies at 600 distance or less
+(Rare Effect) +25% Close Range Shot Effect
+(Legendary Effect) +90% DMG upon every Projectile Hit against enemies at 600 distance or less
+(Legendary Effect) +35% Close Range Shot Effect",+[55-80]% DMG upon every Projectile Hit against enemies at 600 distance or less,Close Range Shot effect +[6-10]% Increase,+[600-1000] Armor for 5 s on hitting enemies within 600 or less distance
+,Electric Shock,Before,"Can be linked with Skills that are Strike
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 15%
++40% Critical Rate against Shocked enemies
++15% Critical DMG against Shocked enemies
+(Magic Effect) +10% Critical DMG against Shocked enemies
+(Rare Effect) +20% Critical DMG against Shocked enemies
+(Legendary Effect) +35% Critical DMG against Shocked enemies
+(Legendary Effect) 3% DMG Amplification against Shocked enemies","Resource Cost Increase 15%
++165% Critical Rate against Shocked enemies
++56.7% Critical DMG against Shocked enemies
+(Magic Effect) +10% Critical DMG against Shocked enemies
+(Rare Effect) +20% Critical DMG against Shocked enemies
+(Legendary Effect) +35% Critical DMG against Shocked enemies
+(Legendary Effect) 3% DMG Amplification against Shocked enemies",+[17-25]% Critical DMG against Shocked enemies,[2.1-3]% DMG Amplification against Shocked enemies,-[10-5]% Resource Cost
+,,After,"Can be linked with Skills that are Strike
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 15%
++40% Critical Rate against Shocked enemies
++15% Critical DMG against Shocked enemies
+Inflicts Electric Shock Effect on a target for 5 s upon hitting a Shocked target (Max Stacks: 3)
+Electric Shock Effect
+1.5% Lightning DMG Taken Amplification
+(Magic Effect) +10% Critical DMG against Shocked enemies
+(Rare Effect) +20% Critical DMG against Shocked enemies
+(Legendary Effect) +35% Critical DMG against Shocked enemies
+(Legendary Effect) 3% DMG Amplification against Shocked enemies","Resource Cost Increase 15%
++165% Critical Rate against Shocked enemies
++56.7% Critical DMG against Shocked enemies
+Inflicts Electric Shock Effect on a target for 5 s upon hitting a Shocked target (Max Stacks: 3)
+Electric Shock Effect
+1.5% Lightning DMG Taken Amplification
+(Magic Effect) +10% Critical DMG against Shocked enemies
+(Rare Effect) +20% Critical DMG against Shocked enemies
+(Legendary Effect) +35% Critical DMG against Shocked enemies
+(Legendary Effect) 3% DMG Amplification against Shocked enemies",+[17-25]% Critical DMG against Shocked enemies,[2.1-3]% DMG Amplification against Shocked enemies,Electric Shock Effect +[30-45]%
+,Sharpness,Before,"Can be linked with Skills that are Strike, Cold (must include all)
+ Cannot be linked with Skills that are Channel, Totem, Sentry, Minion, Movement
+ Rune cannot be awakened.","Strike, Cold","Resource Cost Increase 15%
++20% Cold DMG against Frozen enemies
++16-19 Cold DMG
+Gain Sharpness for 3 s upon inflicting a Status Effect
+Sharpness effect
+(Critical Rate +50%, Critical DMG +25%)
+(Magic Effect) +5 Freeze Rate against Chilled Enemies
+(Magic Effect) +5% Sharpness Effect
+(Rare Effect) +10 Freeze Rate against Chilled Enemies
+(Rare Effect) +25% Sharpness Effect
+(Legendary Effect) +15 Freeze Rate against Chilled Enemies
+(Legendary Effect) 5% DMG Amplification against Chilled enemies
+(Legendary Effect) +35% Sharpness Effect","Resource Cost Increase 15%
++92% Cold DMG against Frozen enemies
++82-118 Cold DMG
+Gain Sharpness for 3 s upon inflicting a Status Effect
+Sharpness effect
+(Critical Rate +50%, Critical DMG +25%)
+(Magic Effect) +5 Freeze Rate against Chilled Enemies
+(Magic Effect) +5% Sharpness Effect
+(Rare Effect) +10 Freeze Rate against Chilled Enemies
+(Rare Effect) +25% Sharpness Effect
+(Legendary Effect) +15 Freeze Rate against Chilled Enemies
+(Legendary Effect) 5% DMG Amplification against Chilled enemies
+(Legendary Effect) +35% Sharpness Effect",0,0,0
+,,After,"Can be linked with Skills that are Strike
+ Cannot be linked with Skills that are Channel, Totem, Sentry, Minion, Movement
+ Rune cannot be awakened.",Strike,"Resource Cost Increase 15%
++10% Critical Rate
++5% Critical DMG
+100% chance to gain Sharpness Effect for 5 s upon Critical Hit
+Sharpness effect
+(Critical Rate +50%, Critical DMG +25%)
+(Magic Effect) +10% Critical Rate
+(Magic Effect) +5% Sharpness Effect
+(Rare Effect) +20% Critical Rate
+(Rare Effect) +25% Sharpness Effect
+(Legendary Effect) +30% Critical Rate
+(Legendary Effect) +15% Critical DMG
+(Legendary Effect) +35% Sharpness Effect","Resource Cost Increase 15%
++100% Critical Rate
++45% Critical DMG
+100% chance to gain Sharpness Effect for 5 s upon Critical Hit
+Sharpness effect
+(Critical Rate +50%, Critical DMG +25%)
+(Magic Effect) +10% Critical Rate
+(Magic Effect) +5% Sharpness Effect
+(Rare Effect) +20% Critical Rate
+(Rare Effect) +25% Sharpness Effect
+(Legendary Effect) +30% Critical Rate
+(Legendary Effect) +15% Critical DMG
+(Legendary Effect) +35% Sharpness Effect",0,0,0
+,Status Effect Enhancement,Before,"Can be linked with Skills that are Strike
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 15%
++15% Status Effect Duration
++10% Debuff Effect
+(Magic Effect) +2.5% Status Effect Duration
+(Magic Effect) +5% Debuff Effect
+(Rare Effect) +7.5% Status Effect Duration
+(Rare Effect) +10% Debuff Effect
+(Legendary Effect) +15% Status Effect Duration
+(Legendary Effect) +20% Debuff Effect
+(Legendary Effect) +5 Status Effect Rate","Resource Cost Increase 15%
++40.5% Status Effect Duration
++34% Debuff Effect
+(Magic Effect) +2.5% Status Effect Duration
+(Magic Effect) +5% Debuff Effect
+(Rare Effect) +7.5% Status Effect Duration
+(Rare Effect) +10% Debuff Effect
+(Legendary Effect) +15% Status Effect Duration
+(Legendary Effect) +20% Debuff Effect
+(Legendary Effect) +5 Status Effect Rate",+[55-80]% DMG against Debuffed enemies,+[6-15] Crowd Control Rate at 80% or more HP,+[10-16]% Status Effect Duration
+,,After,"Can be linked with Skills that are Strike
+ Applies to Minions when linked to Summon Skill",Strike,"Resource Cost Increase 15%
++15% Status Effect Duration
++10% Debuff Effect
+(Magic Effect) +2.5% Status Effect Duration
+(Magic Effect) +5% Debuff Effect
+(Rare Effect) +7.5% Status Effect Duration
+(Rare Effect) +10% Debuff Effect
+(Legendary Effect) +15% Status Effect Duration
+(Legendary Effect) +20% Debuff Effect
+(Legendary Effect) +5 Status Effect Rate","Resource Cost Increase 15%
++40.5% Status Effect Duration
++34% Debuff Effect
+(Magic Effect) +2.5% Status Effect Duration
+(Magic Effect) +5% Debuff Effect
+(Rare Effect) +7.5% Status Effect Duration
+(Rare Effect) +10% Debuff Effect
+(Legendary Effect) +15% Status Effect Duration
+(Legendary Effect) +20% Debuff Effect
+(Legendary Effect) +5 Status Effect Rate",+[55-80]% DMG against Debuffed enemies,+[20-30]% Status Effect DMG,+[20-27]% Crowd Control Duration
+,Totem Affinity,Before,Can be linked with Skills that are Totem,Totem,"Resource Cost Increase 15%
+Connects Totem with Healing Chains
+Healing Chains are removed past 800 range
+Regen 1% of Max HP/Sec for friendly targets that touch Healing Chains excluding the Caster
+(Rare Effect) 5% Movement Speed increase for 3 s upon summoning Totem
+(Legendary Effect) 10% Movement Speed increase for 3 s upon summoning Totem","Resource Cost Increase 15%
+Connects Totem with Healing Chains
+Healing Chains are removed past 800 range
+Regen 3.9% of Max HP/Sec for friendly targets that touch Healing Chains excluding the Caster
+(Rare Effect) 5% Movement Speed increase for 3 s upon summoning Totem
+(Legendary Effect) 10% Movement Speed increase for 3 s upon summoning Totem",+[10-15]% Healing Chain Effect,"-[10-5]% Resource Cost
+Add 1% Max Mana Regen/Sec to Healing Chain Effect",+[35-50]% Armor when distance from Totem is 400 or less
+,,After,Can be linked with Skills that are Totem,Totem,"Resource Cost Increase 15%
+Connects Totem with Healing Chains
+Healing Chains are removed past 1000 range
+Regen 1% of Max HP/Sec for friendly targets that touch Healing Chains excluding the Caster
+(Rare Effect) 10% Movement Speed increase for 6 s upon summoning Totem
+(Legendary Effect) 20% Movement Speed increase for 6 s upon summoning Totem","Resource Cost Increase 15%
+Connects Totem with Healing Chains
+Healing Chains are removed past 1000 range
+Regen 3.9% of Max HP/Sec for friendly targets that touch Healing Chains excluding the Caster
+(Rare Effect) 10% Movement Speed increase for 6 s upon summoning Totem
+(Legendary Effect) 20% Movement Speed increase for 6 s upon summoning Totem",+[10-15]% Healing Chain Effect,"-[10-5]% Resource Cost
+Add 1% Max Mana Regen/Sec to Healing Chain Effect",+[35-50]% Armor when distance from Totem is 600 or less
+,DoT,Before,"Can be linked with Skills that are any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT","Resource Cost Increase 15%
+12.1% DoT Amplification
+25% Strike DMG Dampening
+(Magic Effect) +10% DoT
+(Magic Effect) +3 DoT Rate
+(Rare Effect) +30% DoT
+(Rare Effect) +10 DoT Rate
+(Legendary Effect) +50% DoT
+(Legendary Effect) +30 DoT Rate","Resource Cost Increase 15%
+33.8% DoT Amplification
+25% Strike DMG Dampening
+(Magic Effect) +10% DoT
+(Magic Effect) +3 DoT Rate
+(Rare Effect) +30% DoT
+(Rare Effect) +10 DoT Rate
+(Legendary Effect) +50% DoT
+(Legendary Effect) +30 DoT Rate",+[55-80]% DoT,-[10-5]% Resource Cost,"1.5% DoT Amplification if linked Skill Rune has 5 or more DoT tag Link Runes
+[0.3-0.6]% DoT Amplification per 1 Blue Link Rune on linked Skill Rune"
+,,After,"Can be linked with Skills that are any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT","Resource Cost Increase 15%
+12.1% DoT Amplification
+25% Strike DMG Dampening
+(Magic Effect) +10% DoT
+(Magic Effect) +2% DoT Acceleration
+(Rare Effect) +30% DoT
+(Rare Effect) +6% DoT Acceleration
+(Legendary Effect) +50% DoT
+(Legendary Effect) +10% DoT Acceleration","Resource Cost Increase 15%
+33.8% DoT Amplification
+15% Strike DMG Dampening
+(Magic Effect) +10% DoT
+(Magic Effect) +2% DoT Acceleration
+(Rare Effect) +30% DoT
+(Rare Effect) +6% DoT Acceleration
+(Legendary Effect) +50% DoT
+(Legendary Effect) +10% DoT Acceleration",[3-7]% DoT Amplification,+[25-35] DoT Rate,+[7-12]% DoT Acceleration
+,Chain Impact,Before,"Cannot be linked with Skills that are Minion, Sentry, Cannot Chain
+ Can be linked with Skills that are capable of being Chained",0,"Resource Cost Increase 15%
++5 DoT Rate per Chain
++15% DMG per Chain
+(Magic Effect) +5 Status Effect Rate
+(Rare Effect) +7 Status Effect Rate
+(Rare Effect) 3% Status Effect DMG Amplification
+(Legendary Effect) +8 Status Effect Rate
+(Legendary Effect) 8% Status Effect DMG Amplification","Resource Cost Increase 15%
++16 DoT Rate per Chain
++37% DMG per Chain
+(Magic Effect) +5 Status Effect Rate
+(Rare Effect) +7 Status Effect Rate
+(Rare Effect) 3% Status Effect DMG Amplification
+(Legendary Effect) +8 Status Effect Rate
+(Legendary Effect) 8% Status Effect DMG Amplification",+[35-50]% Chain Impact Effect,[1.4-2]% DMG Amplification per 1 Chain(s),"[3-5]% Status Effect DMG Amplification when 2-handed weapon is equipped
++[10-15] Status Effect Rate when 1-handed weapon is equipped"
+,,After,"Cannot be linked with Skills that are Minion, Sentry, Cannot Chain
+ Can be linked with Skills that are capable of being Chained",0,"Resource Cost Increase 15%
++3 Status Effect Rate per Chain
++15% DMG per Chain
+(Magic Effect) +11 Status Effect Rate
+(Rare Effect) +13 Status Effect Rate
+(Rare Effect) 3% Status Effect DMG Amplification
+(Legendary Effect) +15 Status Effect Rate
+(Legendary Effect) 8% Status Effect DMG Amplification","Resource Cost Increase 15%
++10 Status Effect Rate per Chain
++37% DMG per Chain
+(Magic Effect) +11 Status Effect Rate
+(Rare Effect) +13 Status Effect Rate
+(Rare Effect) 3% Status Effect DMG Amplification
+(Legendary Effect) +15 Status Effect Rate
+(Legendary Effect) 8% Status Effect DMG Amplification",+[35-50]% Chain Impact Effect,[1.4-2]% DMG Amplification per 1 Chain(s),"+[10-15] Status Effect Rate
+[3-5]% Status Effect DMG Amplification"
+,Hunger,Before,"Can be linked with Skills that are Melee, Strike (must include all)
+ Can be linked with Skills that satisfy any one of Attack, Spell
+ Cannot be linked with Skills that are Totem, Sentry, Minion, Movement, Toggle","Attack, Spell, Melee, Strike","Resource Cost Increase 15%
++2 HP on every Attack Hit
++18% Melee DMG
++2 Additional HP Recovery on Attack Hit when not Channeling
+(Magic Effect) +1 HP on every Attack Hit
+(Magic Effect) +10% Melee DMG
+(Rare Effect) +2 HP on every Attack Hit
+(Rare Effect) +20% Melee DMG
+(Legendary Effect) +4 HP on every Attack Hit
+(Legendary Effect) +30% Melee DMG","Resource Cost Increase 15%
++26 HP on every Attack Hit
++90% Melee DMG
++26 Additional HP Recovery on Attack Hit when not Channeling
+(Magic Effect) +1 HP on every Attack Hit
+(Magic Effect) +10% Melee DMG
+(Rare Effect) +2 HP on every Attack Hit
+(Rare Effect) +20% Melee DMG
+(Legendary Effect) +4 HP on every Attack Hit
+(Legendary Effect) +30% Melee DMG",-[10-5]% Resource Cost,+[50-70]% Melee DMG,"1.5% Melee DMG Amplification
++[3-5] HP on every hit at 40% or less HP"
+,,After,"Can be linked with Skills that are Melee, Strike (must include all)
+ Can be linked with Skills that satisfy any one of Attack, Spell
+ Cannot be linked with Skills that are Totem, Sentry, Minion, Movement, Toggle","Attack, Spell, Melee, Strike","Resource Cost Increase 15%
++2 HP on every Attack Hit
++18% Melee DMG
++2 Additional HP Recovery on Attack Hit when not Channeling
+Gain Hunger Effect at 50% HP or less
+Hunger Effect
+HP Absorb Limit increased by 50% of current HP Absorb Limit
+(Magic Effect) +1 HP on every Attack Hit
+(Magic Effect) +10% Melee DMG
+(Rare Effect) +2 HP on every Attack Hit
+(Rare Effect) +20% Melee DMG
+(Legendary Effect) +4 HP on every Attack Hit
+(Legendary Effect) +30% Melee DMG","Resource Cost Increase 15%
++26 HP on every Attack Hit
++90% Melee DMG
++26 Additional HP Recovery on Attack Hit when not Channeling
+Gain Hunger Effect at 50% HP or less
+Hunger Effect
+HP Absorb Limit increased by 50% of current HP Absorb Limit
+(Magic Effect) +1 HP on every Attack Hit
+(Magic Effect) +10% Melee DMG
+(Rare Effect) +2 HP on every Attack Hit
+(Rare Effect) +20% Melee DMG
+(Legendary Effect) +4 HP on every Attack Hit
+(Legendary Effect) +30% Melee DMG","Add Hunger Effect
+[10-20]% DMG Taken Dampening",[5-7.5]% Melee DMG Amplification,"Add Hunger Effect
+[10-20]% Melee DMG Amplification"
+,Precise Shot,Before,"Can be linked with Skills that are Projectile
+ Can be linked with Skills that satisfy any one of Bow, Sentry
+ Cannot be linked with Skills that are Channel, Totem, Movement
+ Applies to Minions when linked to Summon Skill","Bow, Sentry, Projectile","Resource Cost Increase 15%
++40% DMG upon every Projectile Hit against enemies at 800 distance or more
+Gain 1 Precise Shot stack for 3 s on projectile hit to enemy at 800 or more distance
+Max Stack(s) 8
++6% Critical DMG per Precise Shot stack
+(Magic Effect) +15% DMG upon every Projectile Hit against enemies at 800 distance or more
+(Magic Effect) +6% Projectile DMG
+(Rare Effect) +45% DMG upon every Projectile Hit against enemies at 800 distance or more
+(Rare Effect) +12% Projectile DMG
+(Legendary Effect) +70% DMG upon every Projectile Hit against enemies at 800 distance or more
+(Legendary Effect) +20% Projectile DMG
+(Legendary Effect) 5% Projectile DMG Amplification","Resource Cost Increase 15%
++170.5% DMG upon every Projectile Hit against enemies at 800 distance or more
+Gain 1 Precise Shot stack for 3 s on projectile hit to enemy at 800 or more distance
+Max Stack(s) 8
++16% Critical DMG per Precise Shot stack
+(Magic Effect) +15% DMG upon every Projectile Hit against enemies at 800 distance or more
+(Magic Effect) +6% Projectile DMG
+(Rare Effect) +45% DMG upon every Projectile Hit against enemies at 800 distance or more
+(Rare Effect) +12% Projectile DMG
+(Legendary Effect) +70% DMG upon every Projectile Hit against enemies at 800 distance or more
+(Legendary Effect) +20% Projectile DMG
+(Legendary Effect) 5% Projectile DMG Amplification",+[55-80]% DMG upon every Projectile Hit against enemies at 800 distance or more,+[7-10]% DMG per 50 Dexterity on every Projectile hit against enemies at 800 distance or more (Max: 80%),+[55-80]% Attack Critical Rate upon every Projectile Hit against enemies at 800 distance or more
+,,After,"Can be linked with Skills that are Projectile
+ Can be linked with Skills that satisfy any one of Bow, Sentry
+ Cannot be linked with Skills that are Channel, Totem, Movement
+ Applies to Minions when linked to Summon Skill","Bow, Sentry, Projectile","Resource Cost Increase 15%
++40% DMG upon every Projectile Hit against enemies at 600 distance or more
+Gain 1 Precise Shot stack for 3 s on projectile hit to enemy at 600 or more distance
+Max Stack(s) 6
++6% Critical DMG per Precise Shot stack
+0.5% Projectile DMG per Precise Shot stack Amplification
+(Magic Effect) +15% DMG upon every Projectile Hit against enemies at 600 distance or more
+(Magic Effect) +6% Projectile DMG
+(Rare Effect) +45% DMG upon every Projectile Hit against enemies at 600 distance or more
+(Rare Effect) +12% Projectile DMG
+(Legendary Effect) +70% DMG upon every Projectile Hit against enemies at 600 distance or more
+(Legendary Effect) +20% Projectile DMG
+(Legendary Effect) 5% Projectile DMG Amplification","Resource Cost Increase 15%
++170.5% DMG upon every Projectile Hit against enemies at 600 distance or more
+Gain 1 Precise Shot stack for 3 s on projectile hit to enemy at 600 or more distance
+Max Stack(s) 6
++20% Critical DMG per Precise Shot stack
+1.5% Projectile DMG per Precise Shot stack Amplification
+(Magic Effect) +15% DMG upon every Projectile Hit against enemies at 600 distance or more
+(Magic Effect) +6% Projectile DMG
+(Rare Effect) +45% DMG upon every Projectile Hit against enemies at 600 distance or more
+(Rare Effect) +12% Projectile DMG
+(Legendary Effect) +70% DMG upon every Projectile Hit against enemies at 600 distance or more
+(Legendary Effect) +20% Projectile DMG
+(Legendary Effect) 5% Projectile DMG Amplification",+[55-80]% DMG upon every Projectile Hit against enemies at 600 distance or more,"-[30-15]% Critical DMG
+[6-10]% Projectile DMG Amplification",+[55-80]% Critical Rate upon every Projectile Hit against enemies at 600 distance or more
+,Acceleration,Before,"Can be linked with Skills that are Strike
+ Cannot be linked with Skills that are Totem, Sentry, Minion, Movement, Toggle
+ Rune cannot be awakened.",Strike,"Resource Cost Increase 20%
++10% Acceleration Effect
+100% chance to gain Acceleration for 3 s on hit
+Acceleration effect
+( Attack Speed +20%, Cast Speed +20%, Movement Speed +15% )
++20% Acceleration effect for 6 s on kill
+(Rare Effect) +15% Acceleration Effect
+(Legendary Effect) +30% Acceleration Effect","Resource Cost Increase 20%
++30.8% Acceleration Effect
+100% chance to gain Acceleration for 3 s on hit
+Acceleration effect
+( Attack Speed +20%, Cast Speed +20%, Movement Speed +15% )
++103% Acceleration effect for 6 s on kill
+(Rare Effect) +15% Acceleration Effect
+(Legendary Effect) +30% Acceleration Effect",0,0,0
+,,After,"Can be linked with Skills that are Strike
+ Cannot be linked with Skills that are Totem, Sentry, Minion, Movement, Toggle
+ Rune cannot be awakened.",Strike,"Resource Cost Increase 20%
++10% Acceleration Effect
+100% chance to gain Acceleration for 3 s on hit
+Acceleration effect
+( Attack Speed +20%, Cast Speed +20%, Movement Speed +15% )
++20% Acceleration effect for 6 s on kill
+(Rare Effect) +15% Acceleration Effect
+(Rare Effect) +10% Attack Speed
+(Rare Effect) +10% Cast Speed
+(Legendary Effect) +30% Acceleration Effect
+(Legendary Effect) +15% Attack Speed
+(Legendary Effect) +15% Cast Speed","Resource Cost Increase 20%
++30.8% Acceleration Effect
+100% chance to gain Acceleration for 3 s on hit
+Acceleration effect
+( Attack Speed +20%, Cast Speed +20%, Movement Speed +15% )
++103% Acceleration effect for 6 s on kill
+(Rare Effect) +15% Acceleration Effect
+(Rare Effect) +10% Attack Speed
+(Rare Effect) +10% Cast Speed
+(Legendary Effect) +30% Acceleration Effect
+(Legendary Effect) +15% Attack Speed
+(Legendary Effect) +15% Cast Speed",0,0,0
+,Minion Armor,Before,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
++20% Minion Armor
++15 Minion Element Resist
+(Magic Effect) +10% Minion Armor
+(Magic Effect) +5 Minion Element Resist
+(Rare Effect) +20% Minion Armor
+(Rare Effect) +10 Minion Element Resist
+(Rare Effect) +10 Minion Chaos Resist
+(Legendary Effect) +30% Minion Armor
+(Legendary Effect) +15 Minion Element Resist
+(Legendary Effect) +15 Minion Chaos Resist","Resource Cost Increase 15%
++74% Minion Armor
++41 Minion Element Resist
+(Magic Effect) +10% Minion Armor
+(Magic Effect) +5 Minion Element Resist
+(Rare Effect) +20% Minion Armor
+(Rare Effect) +10 Minion Element Resist
+(Rare Effect) +10 Minion Chaos Resist
+(Legendary Effect) +30% Minion Armor
+(Legendary Effect) +15 Minion Element Resist
+(Legendary Effect) +15 Minion Chaos Resist","+[35-55]% Minion Armor
++[8-10] Minion Chaos Resist","-10 Minion Element Resist
++[60-80]% Minion Armor
++[15-20] Minion Chaos Resist",-[10-5]% Resource Cost
+,,After,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
++20% Minion Armor
++15 Minion Element Resist
++5 Minion Chaos Resist
+1% Minion DMG Amplification per 3000 Minion Armor
+(Max: 8%)
+1% Minion DMG Amplification per 50 sum of Minion Element Resist
+(Max: 8%)
+(Magic Effect) +10% Minion Armor
+(Magic Effect) +5 Minion Element Resist
+(Rare Effect) +20% Minion Armor
+(Rare Effect) +10 Minion Element Resist
+(Legendary Effect) +30% Minion Armor
+(Legendary Effect) +15 Minion Element Resist","Resource Cost Increase 15%
++74% Minion Armor
++41 Minion Element Resist
++23 Minion Chaos Resist
+1% Minion DMG Amplification per 3000 Minion Armor
+(Max: 8%)
+1% Minion DMG Amplification per 50 sum of Minion Element Resist
+(Max: 8%)
+(Magic Effect) +10% Minion Armor
+(Magic Effect) +5 Minion Element Resist
+(Rare Effect) +20% Minion Armor
+(Rare Effect) +10 Minion Element Resist
+(Legendary Effect) +30% Minion Armor
+(Legendary Effect) +15 Minion Element Resist","+[35-55]% Minion Armor
++[10-12] Minion Element Resist","-[20-13]% Minion Armor
++[20-30] Minion Element Resist","+[60-80]% Minion Armor
+-[15-10] Minion Element Resist"
+,Life Imbued Sentry,Before,Can be linked with Skills that are Sentry,Sentry,"Resource Cost Increase 15%
+Amplifies Sentry Max HP by 10%
+0.5% Sentry Max HP Regen/Sec
+(Magic Effect) +15% Sentry HP
+(Rare Effect) +30% Sentry HP
+(Legendary Effect) +45% Sentry HP","Resource Cost Increase 15%
+Amplifies Sentry Max HP by 31.9%
+2.5% Sentry Max HP Regen/Sec
+(Magic Effect) +15% Sentry HP
+(Rare Effect) +30% Sentry HP
+(Legendary Effect) +45% Sentry HP","[20-10]% DMG Taken by Sentry Increase
+Grants Sentry with an aura that recovers nearby allies by 3% of its Max HP every second.
+Disable the Sentry HP Regeneration effect of Link Runes","+[15-45] Sentry HP upon every Sentry Attack Hit
+-[30-15]% Sentry HP","-[15-5]% Sentry DMG
+1% DMG Amplification per 2500 of Sentry HP (Max: 10)"
+,,After,Can be linked with Skills that are Sentry,Sentry,"Resource Cost Increase 15%
+Amplifies Sentry Max HP by 10%
+0.5% Sentry Max HP Regen/Sec
+1% DMG Amplification per 2500 of Sentry HP (Max: 20)
+(Magic Effect) +15% Sentry HP
+(Rare Effect) +30% Sentry HP
+(Legendary Effect) +45% Sentry HP","Resource Cost Increase 15%
+Amplifies Sentry Max HP by 31.9%
+2.5% Sentry Max HP Regen/Sec
+1% DMG Amplification per 2500 of Sentry HP (Max: 20)
+(Magic Effect) +15% Sentry HP
+(Rare Effect) +30% Sentry HP
+(Legendary Effect) +45% Sentry HP","Disable the Sentry HP Regeneration effect of Link Runes
+Grants Sentry with an aura that recovers nearby allies by 3% of its Max HP every second.",+[15-30]% Sentry HP,+[20-30]% Sentry DMG
+,Precise Sentry,Before,Can be linked with Skills that are Sentry,Sentry,"Resource Cost Increase 15%
++10% Sentry Hit Rate
++5 Sentry Critical Rate
+(Magic Effect) +10% Sentry Hit Rate
+(Rare Effect) +30% Sentry Hit Rate
+(Rare Effect) +3 Sentry Critical Rate
+(Legendary Effect) +50% Sentry Hit Rate
+(Legendary Effect) +5 Sentry Critical Rate
+(Legendary Effect) +50% Sentry Critical DMG","Resource Cost Increase 15%
++55% Sentry Hit Rate
++16 Sentry Critical Rate
+(Magic Effect) +10% Sentry Hit Rate
+(Rare Effect) +30% Sentry Hit Rate
+(Rare Effect) +3 Sentry Critical Rate
+(Legendary Effect) +50% Sentry Hit Rate
+(Legendary Effect) +5 Sentry Critical Rate
+(Legendary Effect) +50% Sentry Critical DMG","Amplifies Sentry Hit Rate by [2-4]%
+[2.5-4]% Sentry DMG Amplification",[3.5-5]% Sentry DMG Amplification against enemies affected by DoT,[3.5-5]% chance for Sentry to deal double maximized DMG on hit when Sentry Attack Hit Rate is 12000 or more
+,,After,Can be linked with Skills that are Sentry,Sentry,"Resource Cost Increase 15%
++10% Sentry Hit Rate
++5 Sentry Critical Rate
+3% Sentry DMG Amplification per 500 Sentry Hit Rate (Max: 15%)
+(Magic Effect) +10% Sentry Hit Rate
+(Rare Effect) +30% Sentry Hit Rate
+(Rare Effect) +3 Sentry Critical Rate
+(Legendary Effect) +50% Sentry Hit Rate
+(Legendary Effect) +5 Sentry Critical Rate
+(Legendary Effect) +50% Sentry Critical DMG","Resource Cost Increase 15%
++55% Sentry Hit Rate
++16 Sentry Critical Rate
+3% Sentry DMG Amplification per 500 Sentry Hit Rate (Max: 15%)
+(Magic Effect) +10% Sentry Hit Rate
+(Rare Effect) +30% Sentry Hit Rate
+(Rare Effect) +3 Sentry Critical Rate
+(Legendary Effect) +50% Sentry Hit Rate
+(Legendary Effect) +5 Sentry Critical Rate
+(Legendary Effect) +50% Sentry Critical DMG","Amplifies Sentry Hit Rate by [2-4]%
+[2.5-4]% Sentry DMG Amplification",[3.5-5]% Sentry DMG Amplification against enemies affected by DoT,[3.5-5]% chance for Sentry to deal double maximized DMG
+,Sturdy Sentry,Before,Can be linked with Skills that are Sentry,Sentry,"Resource Cost Increase 15%
++500 Sentry Armor
++10 Sentry Element Resist
+(Magic Effect) +20% Sentry Armor
+(Magic Effect) +5 Sentry Chaos Resist
+(Rare Effect) +35% Sentry Armor
+(Rare Effect) +10 Sentry Chaos Resist
+(Legendary Effect) +85% Sentry Armor
+(Legendary Effect) +15 Sentry Chaos Resist","Resource Cost Increase 15%
++4000 Sentry Armor
++42 Sentry Element Resist
+(Magic Effect) +20% Sentry Armor
+(Magic Effect) +5 Sentry Chaos Resist
+(Rare Effect) +35% Sentry Armor
+(Rare Effect) +10 Sentry Chaos Resist
+(Legendary Effect) +85% Sentry Armor
+(Legendary Effect) +15 Sentry Chaos Resist","Amplifies Sentry Armor by [20-40]%
+Sentry takes [1-5]% of DMG Taken instead for 5 s upon summoning Sentry",[5-25]% Chaos DMG Taken by Sentry Dampening,"[10-20]% Sentry Armor Dampening
+Sentry Element Resist [10-20]% Dampening
+1% DMG Amplification per 5000 of Sentry Defense (Max: 10)
+1% DMG Amplification per 50 of total Sentry Element Resist (Max: 10)"
+,,After,Can be linked with Skills that are Sentry,Sentry,"Resource Cost Increase 15%
++500 Sentry Armor
++10 Sentry Element Resist
+1% DMG Amplification per 5000 of Sentry Armor (Max: 10)
+1% DMG Amplification per 50 of total Sentry Element Resist (Max: 10)
+(Magic Effect) +20% Sentry Armor
+(Magic Effect) +5 Sentry Chaos Resist
+(Rare Effect) +35% Sentry Armor
+(Rare Effect) +10 Sentry Chaos Resist
+(Legendary Effect) +85% Sentry Armor
+(Legendary Effect) +15 Sentry Chaos Resist","Resource Cost Increase 15%
++4000 Sentry Armor
++42 Sentry Element Resist
+1% DMG Amplification per 5000 of Sentry Armor (Max: 10)
+1% DMG Amplification per 50 of total Sentry Element Resist (Max: 10)
+(Magic Effect) +20% Sentry Armor
+(Magic Effect) +5 Sentry Chaos Resist
+(Rare Effect) +35% Sentry Armor
+(Rare Effect) +10 Sentry Chaos Resist
+(Legendary Effect) +85% Sentry Armor
+(Legendary Effect) +15 Sentry Chaos Resist","Amplifies Sentry Armor by [20-40]%
+Sentry takes [1-5]% of DMG Taken instead for 5 s upon summoning Sentry",[5-15]% DMG Taken by Sentry Dampening,+[30-45] Sentry Element Resist
+,DoT Enhancement,Before,"Can be linked with Skills that are Strike
+ Cannot be linked with Skills that are Totem, Sentry, Minion",Strike,"Resource Cost Increase 20%
+10% Status Effect DMG Amplification
+-25% Status Effect Duration
+(Magic Effect) +6 DoT Rate
+(Rare Effect) +12 DoT Rate
+(Rare Effect) 10% Status Effect DMG Amplification
+(Legendary Effect) +24 DoT Rate
+(Legendary Effect) 15% Status Effect DMG Amplification","Resource Cost Increase 20%
+26.7% Status Effect DMG Amplification
++8.3% Status Effect Duration
+(Magic Effect) +6 DoT Rate
+(Rare Effect) +12 DoT Rate
+(Rare Effect) 10% Status Effect DMG Amplification
+(Legendary Effect) +24 DoT Rate
+(Legendary Effect) 15% Status Effect DMG Amplification",+[55-80]% Status Effect DMG,"10% Status Effect Duration Dampening
+[9-15]% Status Effect DMG Amplification",-[10-5]% Resource Cost
+,,After,"Can be linked with Skills that are Strike
+ Cannot be linked with Skills that are Totem, Sentry, Minion",Strike,"Resource Cost Increase 20%
+10% Status Effect DMG Amplification
+-25% Status Effect Duration
+(Magic Effect) +6 DoT Rate
+(Rare Effect) +12 DoT Rate
+(Rare Effect) 10% Status Effect DMG Amplification
+(Legendary Effect) +24 DoT Rate
+(Legendary Effect) 15% Status Effect DMG Amplification","Resource Cost Increase 20%
+35% Status Effect DMG Amplification
++8.3% Status Effect Duration
+(Magic Effect) +6 DoT Rate
+(Rare Effect) +12 DoT Rate
+(Rare Effect) 10% Status Effect DMG Amplification
+(Legendary Effect) +24 DoT Rate
+(Legendary Effect) 15% Status Effect DMG Amplification",[2-3.5]% Status Effect DMG Amplification,"10% Status Effect Duration Dampening
+[9-15]% Status Effect DMG Amplification","10% Status Effect Duration Amplification
+[6-10]% Status Effect DMG Dampening"
+,Spell DMG Increase,Before,"Can be linked with Skills that are Spell
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT, Spell","Resource Cost Increase 15%
++24% DMG upon Spell
+(Magic Effect) +25% DMG upon Spell
+(Rare Effect) +60% DMG upon Spell
+(Legendary Effect) +100% DMG upon Spell
+(Legendary Effect) +100% Spell DMG for 2 s on kill","Resource Cost Increase 15%
++207% DMG upon Spell
+(Magic Effect) +25% DMG upon Spell
+(Rare Effect) +60% DMG upon Spell
+(Legendary Effect) +100% DMG upon Spell
+(Legendary Effect) +100% Spell DMG for 2 s on kill",+[55-80]% DMG upon Spell,-[10-5]% Resource Cost,"2% DMG Amplification if linked Skill Rune has 6 Blue Link Runes
+[0.2-0.5]% DMG Amplification per 1 Blue Link Rune on linked Skill Rune"
+,,After,"Can be linked with Skills that are Spell
+ Can be linked with Skills that satisfy any one of Strike, DoT
+ Applies to Minions when linked to Summon Skill","Strike, DoT, Spell","Resource Cost Increase 15%
++24% DMG upon Spell
+(Magic Effect) +100% DMG upon Spell
+(Rare Effect) +150% DMG upon Spell
+(Legendary Effect) +200% DMG upon Spell","Resource Cost Increase 15%
++207% DMG upon Spell
+(Magic Effect) +100% DMG upon Spell
+(Rare Effect) +150% DMG upon Spell
+(Legendary Effect) +200% DMG upon Spell",+[55-80]% DMG upon Spell,-[10-5]% Resource Cost,[0.6-1]% DMG Amplification per 1 Blue Link Rune on linked Skill Rune
+,Preserve Mana,Before,"Can be linked with Skills that are any one of Attack, Spell
+ Cannot be linked with Skills that are Channel, Toggle","Attack, Spell","Grants 1 stack of Preserve Mana upon skill use
+Max Stacks 10
+Activates Preserve Mana effect every 0.1 s for 1 s
+Preserve Mana effect
+Recovers 28% of last Mana spent at Max Stacks
+(Magic Effect) +10% Preserve Mana Effect
+(Rare Effect) +17.5% Preserve Mana Effect
+(Legendary Effect) +22.5% Preserve Mana Effect
+(Legendary Effect) Mana Regen/Sec while Preserve Mana is active +100%","Grants 1 stack of Preserve Mana upon skill use
+Max Stacks 10
+Activates Preserve Mana effect every 0.1 s for 1 s
+Preserve Mana effect
+Recovers 53% of last Mana spent at Max Stacks
+(Magic Effect) +10% Preserve Mana Effect
+(Rare Effect) +17.5% Preserve Mana Effect
+(Legendary Effect) +22.5% Preserve Mana Effect
+(Legendary Effect) Mana Regen/Sec while Preserve Mana is active +100%",+[10-15]% Preserve Mana Effect,"-2 Max Preserve Mana Stacks
++[3-5]% Preserve Mana Effect","[1.3-2.5]% Max HP Regen/Sec while Preserve Mana is active
+[1.3-2.5]% Max Barrier Regen/Sec while Preserve Mana is active"
+,,After,"Can be linked with Skills that are any one of Attack, Spell
+ Cannot be linked with Skills that are Channel, Toggle","Attack, Spell","Grants 1 stack of Preserve Mana upon skill use
+Max Stacks 10
+Gains Mana Release every 0.1 s at Max Preserve Mana Stacks for 1s
+Mana Release effect
+Recovers 28% of last Mana spent at Max Stacks
+(Magic Effect) +10% Mana Release Effect
+(Rare Effect) +17.5% Mana Release Effect
+(Legendary Effect) +22.5% Mana Release Effect
+(Legendary Effect) Mana Regen/Sec +100% while Mana Release is active","Grants 1 stack of Preserve Mana upon skill use
+Max Stacks 10
+Gains Mana Release every 0.1 s at Max Preserve Mana Stacks for 1s
+Mana Release effect
+Recovers 53% of last Mana spent at Max Stacks
+(Magic Effect) +10% Mana Release Effect
+(Rare Effect) +17.5% Mana Release Effect
+(Legendary Effect) +22.5% Mana Release Effect
+(Legendary Effect) Mana Regen/Sec +100% while Mana Release is active",+[10-15]% Mana Release Effect,"-2 Max Preserve Mana Stacks
++[3-5]% Mana Release Effect","[1.3-2.5]% Max HP Regen/Sec while Mana Release is active
+[1.3-2.5]% Max Barrier Regen/Sec while Mana Release is active"
+,Opportunistic Strike,Before,"Can be linked with Skills that are Strike
+ Can be linked with Skills that satisfy any one of Attack, Spell
+ Cannot be linked with Skills that are Channel, Totem, Sentry, Minion, Toggle
+ Cannot be linked with Persistence","Attack, Spell, Strike","Resource Cost Increase 15%
+Gain Opportunistic Strike effect for 5 s upon dealing DMG
+Max Stacks 10
++1% Critical Chance per Stack
++6% DMG per Stack
+-1 Opportunity stacks on Critical Hit
+(Magic Effect) +4% DMG Penetration
+(Rare Effect) +6% DMG Penetration
+(Rare Effect) +15% Critical DMG
+(Legendary Effect) +12% DMG Penetration
+(Legendary Effect) +30% Critical DMG","Resource Cost Increase 15%
+Gain Opportunistic Strike effect for 5 s upon dealing DMG
+Max Stacks 10
++4.3% Critical Chance per Stack
++31% DMG per Stack
+-1 Opportunity stacks on Critical Hit
+(Magic Effect) +4% DMG Penetration
+(Rare Effect) +6% DMG Penetration
+(Rare Effect) +15% Critical DMG
+(Legendary Effect) +12% DMG Penetration
+(Legendary Effect) +30% Critical DMG",[3.5-5]% Strike DMG Amplification,-[10-5]% Resource Cost,+[25-40]% Critical DMG
+,,After,"Can be linked with Skills that are Strike
+ Can be linked with Skills that satisfy any one of Attack, Spell
+ Cannot be linked with Skills that are Channel, Totem, Sentry, Minion, Toggle
+ Cannot be linked with Persistence","Attack, Spell, Strike","Resource Cost Increase 15%
+Gain Opportunistic Strike Effect for 5 s upon dealing Critical DMG
+Max Stacks 5
++1.5% Critical Chance per Stack
++9% Critical DMG per stack
+-1 Opportunistic Strike Stack when hit
+(Magic Effect) +4% DMG Penetration
+(Rare Effect) +6% DMG Penetration
+(Rare Effect) +15% Critical DMG
+(Legendary Effect) +12% DMG Penetration
+(Legendary Effect) +30% Critical DMG","Resource Cost Increase 15%
+Gain Opportunistic Strike Effect for 5 s upon dealing Critical DMG
+Max Stacks 5
++6.4% Critical Chance per Stack
++42% Critical DMG per stack
+-1 Opportunistic Strike Stack when hit
+(Magic Effect) +4% DMG Penetration
+(Rare Effect) +6% DMG Penetration
+(Rare Effect) +15% Critical DMG
+(Legendary Effect) +12% DMG Penetration
+(Legendary Effect) +30% Critical DMG",[3.5-5]% Strike DMG Amplification,"Opportunistic Strike Max Stacks +[1-2]
+Opportunistic Strike Effect -[30-20]%",+[25-40]% Critical DMG
+,Vitality Recovery,Before,"Can be linked with Skills that are Defense Enhance
+ Cannot be linked with Skills that are Totem, Sentry, Toggle, Shout, Movement, Minion
+ Rune cannot be awakened.",Defense Enhance,"Resource Cost Increase 15%
++10% Regeneration Effect
+Gain Regeneration for 10 s upon using a Defense Enhance Skill
+(1% Max HP Regen/Sec, 0.4% Max Mana Regen/Sec)
+Cannot be linked to a common Buff Link Rune activated with Defense Enhance Skill
+(Rare Effect) +25% Regeneration Effect
+(Legendary Effect) +10% Defense Enhance Skill Rune Duration
+(Legendary Effect) +50% Regeneration Effect","Resource Cost Increase 15%
++55% Regeneration Effect
+Gain Regeneration for 10 s upon using a Defense Enhance Skill
+(1% Max HP Regen/Sec, 0.4% Max Mana Regen/Sec)
+Cannot be linked to a common Buff Link Rune activated with Defense Enhance Skill
+(Rare Effect) +25% Regeneration Effect
+(Legendary Effect) +10% Defense Enhance Skill Rune Duration
+(Legendary Effect) +50% Regeneration Effect",0,0,0
+,,After,"Can be linked with Skills that are Defense Enhance
+ Cannot be linked with Skills that are Totem, Sentry, Toggle, Shout, Movement, Minion
+ Rune cannot be awakened.",Defense Enhance,"Resource Cost Increase 15%
++10% Regeneration Effect
++5% Defense Enhance Skill Rune Effect
+Gain Regeneration for 10 s upon using a Defense Enhance Skill
+(1% Max HP Regen/Sec, 0.4% Max Mana Regen/Sec)
+Cannot be linked to a common Buff Link Rune activated with Defense Enhance Skill
+(Rare Effect) +25% Regeneration Effect
+(Legendary Effect) +10% Defense Enhance Skill Rune Duration
+(Legendary Effect) +50% Regeneration Effect","Resource Cost Increase 15%
++55% Regeneration Effect
++30% Defense Enhance Skill Rune Effect
+Gain Regeneration for 10 s upon using a Defense Enhance Skill
+(1% Max HP Regen/Sec, 0.4% Max Mana Regen/Sec)
+Cannot be linked to a common Buff Link Rune activated with Defense Enhance Skill
+(Rare Effect) +25% Regeneration Effect
+(Legendary Effect) +10% Defense Enhance Skill Rune Duration
+(Legendary Effect) +50% Regeneration Effect",0,0,0
+,Intellectual,Before,"Can be linked with Skills that are Attack Enhance
+ Cannot be linked with Skills that are Totem, Sentry, Toggle, Shout, Movement, Minion
+ Rune cannot be awakened.",Attack Enhance,"Resource Cost Increase 15%
++10% Knowledge Effect
+Gain Knowledge for 10 s upon using Attack Enhance Skill
+(Spell DMG +50%, Cast Speed +10%)
+Cannot be linked to a common Buff Link Rune activated with Attack Enhance Skill
+(Rare Effect) +10% Knowledge Effect
+(Legendary Effect) +10% Attack Enhance Skill Rune Effect
+(Legendary Effect) +20% Knowledge Effect","Resource Cost Increase 15%
++51.7% Knowledge Effect
+Gain Knowledge for 10 s upon using Attack Enhance Skill
+(Spell DMG +50%, Cast Speed +10%)
+Cannot be linked to a common Buff Link Rune activated with Attack Enhance Skill
+(Rare Effect) +10% Knowledge Effect
+(Legendary Effect) +10% Attack Enhance Skill Rune Effect
+(Legendary Effect) +20% Knowledge Effect",0,0,0
+,,After,"Can be linked with Skills that are Spell, Strike (must include all)
+ Cannot be linked with Skills that are Totem, Sentry, Toggle, Shout, Movement, Minion
+ Rune cannot be awakened.","Spell, Strike","Resource Cost Increase 15%
++10% Knowledge Effect
+Gain Knowledge Effect for 5 s on hit
+(Spell DMG +50%, Cast Speed +10% )
+(Rare Effect) +10% Knowledge Effect
+(Rare Effect) +15% DMG upon Spell
+(Rare Effect) +3% Cast Speed
+(Legendary Effect) +20% Knowledge Effect
+(Legendary Effect) +30% DMG upon Spell
+(Legendary Effect) +7% Cast Speed","Resource Cost Increase 15%
++51.7% Knowledge Effect
+Gain Knowledge Effect for 5 s on hit
+(Spell DMG +50%, Cast Speed +10% )
+(Rare Effect) +10% Knowledge Effect
+(Rare Effect) +15% DMG upon Spell
+(Rare Effect) +3% Cast Speed
+(Legendary Effect) +20% Knowledge Effect
+(Legendary Effect) +30% DMG upon Spell
+(Legendary Effect) +7% Cast Speed",0,0,0
+,Quick Sentry Installation,Before,"Can be linked with Skills that are Sentry
+ Cannot be linked with Skills that are Totem, Toggle, Shout, Movement",Sentry,"Resource Cost Increase 15%
++20% Sentry Install Speed
++6% Sentry Attack Speed
+(Rare Effect) +10% Sentry Projectile Speed
+(Rare Effect) +5% Sentry Attack Speed
+(Legendary Effect) +20% Sentry Projectile Speed
+(Legendary Effect) +20% Sentry Attack Speed","Resource Cost Increase 15%
++78.3% Sentry Install Speed
++31% Sentry Attack Speed
+(Rare Effect) +10% Sentry Projectile Speed
+(Rare Effect) +5% Sentry Attack Speed
+(Legendary Effect) +20% Sentry Projectile Speed
+(Legendary Effect) +20% Sentry Attack Speed","+[30-40]% Sentry Install Speed
++[25-55]% Sentry DMG",+[13-20]% Sentry Attack Speed,-[10-5]% Resource Cost
+,,After,"Can be linked with Skills that are Sentry
+ Cannot be linked with Skills that are Totem, Toggle, Shout, Movement",Sentry,"Resource Cost Increase 15%
++20% Sentry Install Speed
++6% Sentry Attack Speed
+5% Sentry DMG Amplification for 3 s after installing Sentry
+(Rare Effect) +10% Sentry Projectile Speed
+(Rare Effect) +5% Sentry Attack Speed
+(Legendary Effect) +20% Sentry Projectile Speed
+(Legendary Effect) +20% Sentry Attack Speed","Resource Cost Increase 15%
++78.3% Sentry Install Speed
++31% Sentry Attack Speed
+26% Sentry DMG Amplification for 3 s after installing Sentry
+(Rare Effect) +10% Sentry Projectile Speed
+(Rare Effect) +5% Sentry Attack Speed
+(Legendary Effect) +20% Sentry Projectile Speed
+(Legendary Effect) +20% Sentry Attack Speed","+[30-40]% Sentry Install Speed
++[25-55]% Sentry DMG",+[13-20]% Sentry Attack Speed,+[7-15]% Sentry Attack Speed per 1 Green Link Rune on linked Skill Rune
+,Element Master,Before,"Can be linked with Skills that are any one of Fire, Cold, Lightning, Poison
+ Applies to Minions when linked to Summon Skill","Fire, Cold, Lightning, Poison","Resource Cost Increase 15%
++5% Element Penetration
++20% Element DMG
++5% All Energy effects for 5 s on hit
++10% All Energy effects for 10 s on kill
+(Rare Effect) +10% Element Penetration
+(Legendary Effect) +15% Element Penetration
+(Legendary Effect) 3% Element DMG Amplification","Resource Cost Increase 15%
++15.4% Element Penetration
++61.7% Element DMG
++13.3% All Energy effects for 5 s on hit
++26.7% All Energy effects for 10 s on kill
+(Rare Effect) +10% Element Penetration
+(Legendary Effect) +15% Element Penetration
+(Legendary Effect) 3% Element DMG Amplification",+[55-80]% Element DMG,"+[28-40]% Element DMG
+2% Element DMG Amplification if linked Skill Rune has 5 or more Blue Link Runes",+[1.9-2.8]% Element Penetration per 1 Blue Link Rune on linked Skill Rune
+,,After,"Can be linked with Skills that are any one of Fire, Cold, Lightning, Poison
+ Applies to Minions when linked to Summon Skill","Fire, Cold, Lightning, Poison","Resource Cost Increase 15%
++5% Element Penetration
++20% Element DMG
+(Rare Effect) +15% Element Penetration
+(Legendary Effect) +20% Element Penetration
+(Legendary Effect) 6% Element DMG Amplification","Resource Cost Increase 15%
++20% Element Penetration
++75% Element DMG
+(Rare Effect) +15% Element Penetration
+(Legendary Effect) +20% Element Penetration
+(Legendary Effect) 6% Element DMG Amplification",+[55-80]% Element DMG,"+[28-40]% Element DMG
+2% Element DMG Amplification if linked Skill Rune has 3 or more Blue Link Runes",+[1.9-2.8]% Element Penetration per 1 Blue Link Rune on linked Skill Rune
+,Amplify Trap DMG,Before,Can be linked with Skills that are Trap,Trap,"Resource Cost Increase 20%
+8.9% Trap DMG Amplification
+(Magic Effect) -15% Trap Install Speed
+(Magic Effect) -15% Attack Speed
+(Rare Effect) -5% Trap Install Speed
+(Rare Effect) -5% Attack Speed
+(Rare Effect) +30% Trap DMG
+(Legendary Effect) +5% Trap Install Speed
+(Legendary Effect) +5% Attack Speed
+(Legendary Effect) +60% Trap DMG
+(Legendary Effect) 3% Trap DMG Amplification","Resource Cost Increase 20%
+26.4% Trap DMG Amplification
+(Magic Effect) -15% Trap Install Speed
+(Magic Effect) -15% Attack Speed
+(Rare Effect) -5% Trap Install Speed
+(Rare Effect) -5% Attack Speed
+(Rare Effect) +30% Trap DMG
+(Legendary Effect) +5% Trap Install Speed
+(Legendary Effect) +5% Attack Speed
+(Legendary Effect) +60% Trap DMG
+(Legendary Effect) 3% Trap DMG Amplification",[3.5-5]% Trap DMG Amplification,"+[25-80]% Trap DMG
+1.5% DMG Amplification if linked Skill Rune has 5 or more Trap tag Link Runes",[0.5-0.9]% Trap DMG Amplification per 1 Green Link Rune on linked Skill Rune
+,,After,Can be linked with Skills that are Trap,Trap,"Resource Cost Increase 15%
++25% Trap DMG
+8.9% Trap DMG Amplification
+(Magic Effect) -15% Trap Install Speed
+(Magic Effect) -15% Attack Speed
+(Rare Effect) -5% Trap Install Speed
+(Rare Effect) -5% Attack Speed
+(Rare Effect) +30% Trap DMG
+(Legendary Effect) +5% Trap Install Speed
+(Legendary Effect) +5% Attack Speed
+(Legendary Effect) +60% Trap DMG
+(Legendary Effect) 3% Trap DMG Amplification","Resource Cost Increase 15%
++80% Trap DMG
+26.4% Trap DMG Amplification
+(Magic Effect) -15% Trap Install Speed
+(Magic Effect) -15% Attack Speed
+(Rare Effect) -5% Trap Install Speed
+(Rare Effect) -5% Attack Speed
+(Rare Effect) +30% Trap DMG
+(Legendary Effect) +5% Trap Install Speed
+(Legendary Effect) +5% Attack Speed
+(Legendary Effect) +60% Trap DMG
+(Legendary Effect) 3% Trap DMG Amplification",[3.5-5]% Trap DMG Amplification,[1.2-1.7]% Trap DMG Amplification per 1 Trap tag Link Rune on linked Skill Rune,[0.8-1.3]% Trap DMG Amplification per 1 Green Link Rune on linked Skill Rune
+,Quick Trap Installation,Before,Can be linked with Skills that are Trap,Trap,"Resource Cost Increase 15%
++10% Trap Install Speed
++10% Skill Rune Cooldown Recovery Speed
++10% Attack Speed
+(Magic Effect) +20% Trap DMG
+(Rare Effect) +40% Trap DMG
+(Rare Effect) +10% Skill Rune Cooldown Recovery Speed
+(Legendary Effect) +60% Trap DMG
+(Legendary Effect) +20% Skill Rune Cooldown Recovery Speed","Resource Cost Increase 15%
++50.5% Trap Install Speed
++29.5% Skill Rune Cooldown Recovery Speed
++50.5% Attack Speed
+(Magic Effect) +20% Trap DMG
+(Rare Effect) +40% Trap DMG
+(Rare Effect) +10% Skill Rune Cooldown Recovery Speed
+(Legendary Effect) +60% Trap DMG
+(Legendary Effect) +20% Skill Rune Cooldown Recovery Speed","+[35-40]% Trap DMG
++[10-20]% Trap Install Speed
++[10-20]% Attack Speed",-[10-5]% Resource Cost,[2.5-5]% Movement Speed Increase for 5 s upon using Skill (Max Stacks: 3)
+,,After,Can be linked with Skills that are Trap,Trap,"Resource Cost Increase 15%
++10% Trap Install Speed
++10% Skill Rune Cooldown Recovery Speed
++10% Attack Speed
+5% Trap DMG Amplification for 3 s after installing Trap
+(Magic Effect) +20% Trap DMG
+(Rare Effect) +40% Trap DMG
+(Rare Effect) +10% Skill Rune Cooldown Recovery Speed
+(Legendary Effect) +60% Trap DMG
+(Legendary Effect) +20% Skill Rune Cooldown Recovery Speed","Resource Cost Increase 15%
++50.5% Trap Install Speed
++29.5% Skill Rune Cooldown Recovery Speed
++50.5% Attack Speed
+26% Trap DMG Amplification for 3 s after installing Trap
+(Magic Effect) +20% Trap DMG
+(Rare Effect) +40% Trap DMG
+(Rare Effect) +10% Skill Rune Cooldown Recovery Speed
+(Legendary Effect) +60% Trap DMG
+(Legendary Effect) +20% Skill Rune Cooldown Recovery Speed","+[35-40]% Trap DMG
++[10-20]% Trap Install Speed
++[10-20]% Attack Speed",+[15-30]% Skill Rune Cooldown Recovery Speed,[8-17]% Movement Speed Increase for 5s upon using Skill
+,Trap Master,Before,"Can be linked with Skills that are Trap
+ Rune cannot be awakened.",Trap,"Resource Cost Increase 15%
++20% Trap DMG
+100% chance to gain Realization for 3 s on Trap activation
+Realization Effect
+( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )
+(Magic Effect) +10% Trap DMG
+(Magic Effect) +10% Realization Effect
+(Rare Effect) +20% Trap DMG
+(Rare Effect) +20% Realization Effect
+(Legendary Effect) +30% Trap DMG
+(Legendary Effect) +30% Realization Effect","Resource Cost Increase 15%
++117.5% Trap DMG
+100% chance to gain Realization for 3 s on Trap activation
+Realization Effect
+( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )
+(Magic Effect) +10% Trap DMG
+(Magic Effect) +10% Realization Effect
+(Rare Effect) +20% Trap DMG
+(Rare Effect) +20% Realization Effect
+(Legendary Effect) +30% Trap DMG
+(Legendary Effect) +30% Realization Effect",0,0,0
+,,After,"Can be linked with Skills that are Strike
+ Cannot be linked with Skills that are Totem, Sentry, Minion, Movement, Toggle
+ Rune cannot be awakened.",Strike,"Resource Cost Increase 15%
++20% DMG
+100% chance to gain Realization for 3 s on hit
+Realization Effect
+( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )
+(Magic Effect) +10% DMG
+(Magic Effect) +10% Realization Effect
+(Rare Effect) +20% DMG
+(Rare Effect) +20% Realization Effect
+(Legendary Effect) +30% DMG
+(Legendary Effect) +30% Realization Effect","Resource Cost Increase 15%
++117.5% DMG
+100% chance to gain Realization for 3 s on hit
+Realization Effect
+( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )
+(Magic Effect) +10% DMG
+(Magic Effect) +10% Realization Effect
+(Rare Effect) +20% DMG
+(Rare Effect) +20% Realization Effect
+(Legendary Effect) +30% DMG
+(Legendary Effect) +30% Realization Effect",0,0,0
+,Improved Technique,Before,"Can be linked with Skills that are any one of Attack, Spell
+ Rune cannot be awakened.","Attack, Spell","Resource Cost Increase 15%
++1 Rune Level
++1% Minion DMG per 4 Intelligence (Max: 320%)
++1% Sentry DMG per 4 Dexterity (Max: 320%)
+(Legendary Effect) +1 Rune Level","Resource Cost Increase 15%
++3 Rune Level
++4% Minion DMG per 4 Intelligence (Max: 320%)
++4% Sentry DMG per 4 Dexterity (Max: 320%)
+(Legendary Effect) +1 Rune Level",0,0,0
+,,After,"Can be linked with Skills that are any one of Attack, Spell
+ Rune cannot be awakened.","Attack, Spell","Resource Cost Increase 15%
++1 Rune Level
++1% Minion DMG per 4 Intelligence (Max: 360%)
++1% Sentry DMG per 4 Dexterity (Max: 360%)
+(Legendary Effect) +1 Rune Level
+(Legendary Effect) +1 Minion Skill Rune Level
+(Legendary Effect) +1 Sentry Skill Rune Level
+(Legendary Effect) 2% Minion DMG Amplification per 70 Intelligence (Max: 10%)
+(Legendary Effect) 2% Sentry DMG Amplification per 70 Dexterity (Max: 10)","Resource Cost Increase 15%
++3 Rune Level
++6% Minion DMG per 4 Intelligence (Max: 360%)
++6% Sentry DMG per 4 Dexterity (Max: 360%)
+(Legendary Effect) +1 Rune Level
+(Legendary Effect) +1 Minion Skill Rune Level
+(Legendary Effect) +1 Sentry Skill Rune Level
+(Legendary Effect) 2% Minion DMG Amplification per 70 Intelligence (Max: 10%)
+(Legendary Effect) 2% Sentry DMG Amplification per 70 Dexterity (Max: 10)",0,0,0
+,Break,Before,"Can be linked with Skills that are Melee, Strike (must include all)
+ Can be linked with Skills that satisfy any one of Attack, Spell
+ Cannot be linked with Skills that are Minion, Sentry, Trap, Toggle","Attack, Spell, Melee, Strike","Resource Cost Increase 15%
++26% Physical DMG
++10 Stun Rate
+Amplify Strike DMG by 20% of Stun Rate on hit (Max 20%)
+(Magic Effect) +4 Stun Rate
+(Rare Effect) +6 Stun Rate
+(Rare Effect) +5% Max Strike DMG Amplification of Stun Rate
+(Legendary Effect) +1 Stun Rate per 50 Strength
+(Legendary Effect) +8 Stun Rate
+(Legendary Effect) +10% Max Strike DMG Amplification of Stun Rate","Resource Cost Increase 15%
++116% Physical DMG
++20 Stun Rate
+Amplify Strike DMG by 20% of Stun Rate on hit (Max 20%)
+(Magic Effect) +4 Stun Rate
+(Rare Effect) +6 Stun Rate
+(Rare Effect) +5% Max Strike DMG Amplification of Stun Rate
+(Legendary Effect) +1 Stun Rate per 50 Strength
+(Legendary Effect) +8 Stun Rate
+(Legendary Effect) +10% Max Strike DMG Amplification of Stun Rate","+30% Melee DMG
+[3.5-5.5]% DMG Amplification against Stunned enemies","+4 Stun Rate
++[6-12] Stun Rate when enemy is at 50% or less HP",[0.4-0.8]% Melee DMG Amplification per 1 Red Link Rune on linked Skill Rune
+,,After,"Can be linked with Skills that are Melee, Strike (must include all)
+ Can be linked with Skills that satisfy any one of Attack, Spell
+ Cannot be linked with Skills that are Minion, Sentry, Trap, Toggle","Attack, Spell, Melee, Strike","Resource Cost Increase 15%
++26% Physical DMG
++10 Stun Rate
+Amplify Strike DMG by 30% of Stun Rate on hit (Max 20%)
+(Magic Effect) +6 Stun Rate
+(Rare Effect) +8 Stun Rate
+(Rare Effect) +5% Max Strike DMG Amplification of Stun Rate
+(Legendary Effect) +1 Stun Rate per 50 Strength
+(Legendary Effect) +10 Stun Rate
+(Legendary Effect) +10% Max Strike DMG Amplification of Stun Rate","Resource Cost Increase 15%
++116% Physical DMG
++20 Stun Rate
+Amplify Strike DMG by 30% of Stun Rate on hit (Max 20%)
+(Magic Effect) +6 Stun Rate
+(Rare Effect) +8 Stun Rate
+(Rare Effect) +5% Max Strike DMG Amplification of Stun Rate
+(Legendary Effect) +1 Stun Rate per 50 Strength
+(Legendary Effect) +10 Stun Rate
+(Legendary Effect) +10% Max Strike DMG Amplification of Stun Rate","+30% Melee DMG
+[0.4-0.8]% Melee DMG Amplification per 1 Red Link Rune on linked Skill Rune",+[15-21] Stun Rate,[3.5-5.5]% DMG Amplification against Stunned enemies
+,Promised Protection,Before,"Can be linked with Skills that are Defense Enhance
+ Cannot be linked with Skills that are Totem, Sentry, Toggle, Shout, Movement, Minion",Defense Enhance,"Resource Cost Increase 20%
+Gain max Promised Protection stacks for 3 s upon using Skill (Max Stacks: 3)
+Increase Armor by 7% of Max Barrier per stack (Max: 3600)
+Remove Promised Protection stack(s) when hit
+(Rare Effect) +1 Max Promised Protection Stacks
+(Legendary Effect) +1 Max Promised Protection Stacks
+(Legendary Effect) +10% Defense Enhance Skill Rune Duration
+(Legendary Effect) +200 Max Promised Protection Effect","Resource Cost Increase 20%
+Gain max Promised Protection stacks for 3 s upon using Skill (Max Stacks: 3)
+Increase Armor by 13% of Max Barrier per stack (Max: 3600)
+Remove Promised Protection stack(s) when hit
+(Rare Effect) +1 Max Promised Protection Stacks
+(Legendary Effect) +1 Max Promised Protection Stacks
+(Legendary Effect) +10% Defense Enhance Skill Rune Duration
+(Legendary Effect) +200 Max Promised Protection Effect","+[1-5]% Skill Rune Duration
++1 Max Promised Protection Stacks",[40-70]% chance to gain Cold Energy upon activating Promised Protection,"+[2-6]% Skill Rune Cooldown Recovery Speed
++8% Skill Rune Cooldown Recovery Speed if linked Skill Rune has 4 or more Legendary Link Runes"
+,,After,"Can be linked with Skills that are Defense Enhance
+ Cannot be linked with Skills that are Totem, Sentry, Toggle, Shout, Movement, Minion",Defense Enhance,"Resource Cost Increase 20%
+Gain max Promised Protection stacks for 7 s upon using Skill (Max Stacks: 3)
+Increase Armor by 7% of Max Barrier per stack (Max: 3600)
+(Rare Effect) +1 Max Promised Protection Stacks
+(Legendary Effect) +1 Max Promised Protection Stacks
+(Legendary Effect) +10% Defense Enhance Skill Rune Duration
+(Legendary Effect) +200 Max Promised Protection Effect","Resource Cost Increase 20%
+Gain max Promised Protection stacks for 7 s upon using Skill (Max Stacks: 3)
+Increase Armor by 13% of Max Barrier per stack (Max: 3600)
+(Rare Effect) +1 Max Promised Protection Stacks
+(Legendary Effect) +1 Max Promised Protection Stacks
+(Legendary Effect) +10% Defense Enhance Skill Rune Duration
+(Legendary Effect) +200 Max Promised Protection Effect",+[10-15]% Skill Rune Duration,+[800-1200] Max Promised Protection Effect,+[10-15]% Skill Rune Cooldown Recovery Speed
+,Heat Efficiency,Before,Can be linked with Skills that are Overheat,Overheat,"Resource Cost Increase 20%
++0.9% Attack Speed for every 5% Overheat
+6% Attack Speed Amplification at 40% or more Overheat
+(Magic Effect) +6% Attack Speed if Overheat is at 60% or more
+(Rare Effect) +12% Attack Speed if Overheat is at 60% or more
+(Legendary Effect) +18% Attack Speed if Overheat is at 60% or more","Resource Cost Increase 20%
++5.4% Attack Speed for every 5% Overheat
+19.5% Attack Speed Amplification at 40% or more Overheat
+(Magic Effect) +6% Attack Speed if Overheat is at 60% or more
+(Rare Effect) +12% Attack Speed if Overheat is at 60% or more
+(Legendary Effect) +18% Attack Speed if Overheat is at 60% or more",+[14-21]% Attack Speed if Overheat is at 60% or more,"-[3.5-0.5]% Resource Cost
+10% chance to gain 1 Fire Energy on hit at 60% or more Overheat (Cooldown 6 s)
+Reset Cooldown on Rapid Cooling",+[6-12]% Attack Speed if linked Skill Rune has 2 or more Overheat tag Link Runes
+,,After,Can be linked with Skills that are Overheat,Overheat,"Resource Cost Increase 20%
+Increase Attack Speed by 2% of Max Overheat (Max: 80%)
+6% Attack Speed Amplification at 40% or more Overheat
+(Magic Effect) +6% Attack Speed if Overheat is at 60% or more
+(Rare Effect) +12% Attack Speed if Overheat is at 60% or more
+(Legendary Effect) +18% Attack Speed if Overheat is at 60% or more","Resource Cost Increase 20%
+Increase Attack Speed by 2% of Max Overheat (Max: 80%)
+19.5% Attack Speed Amplification at 40% or more Overheat
+(Magic Effect) +6% Attack Speed if Overheat is at 60% or more
+(Rare Effect) +12% Attack Speed if Overheat is at 60% or more
+(Legendary Effect) +18% Attack Speed if Overheat is at 60% or more",+[21-28]% Attack Speed if Overheat is at 60% or more,+[15-25]% Max Heat Efficiency Attack Speed,+[6-12]% Attack Speed per 1 Overheat tag Link Rune on linked Skill Rune
+,Over Cooling,Before,Can be linked with Skills that are Overheat,Overheat,"Resource Cost Increase 20%
+1.5% Overheat Accumulation Dampening per 10% Overheat
+0.3% DMG Amplification per 10% of remaining ratio until Critical Overheat Point
+(Magic Effect) 1.5% Overheat Accumulation Dampening
+(Rare Effect) 3% DMG Amplification if Overheat is at below 25%
+(Rare Effect) 1.5% Overheat Accumulation Dampening
+(Legendary Effect) 3% DMG Amplification if Overheat is at below 40%
+(Legendary Effect) 3% Overheat Accumulation Dampening","Resource Cost Increase 20%
+1.5% Overheat Accumulation Dampening per 10% Overheat
+4.8% DMG Amplification per 10% of remaining ratio until Critical Overheat Point
+(Magic Effect) 1.5% Overheat Accumulation Dampening
+(Rare Effect) 3% DMG Amplification if Overheat is at below 25%
+(Rare Effect) 1.5% Overheat Accumulation Dampening
+(Legendary Effect) 3% DMG Amplification if Overheat is at below 40%
+(Legendary Effect) 3% Overheat Accumulation Dampening",+[6-12]% DMG per 10% remaining ratio until Critical Overheat Point,[3-5]% DMG Amplification if linked Skill Rune has 2 or more Overheat tag Link Runes,"-[8-3]% Resource Cost
+2% Overheat Accumulation Dampening"
+,,After,Can be linked with Skills that are Overheat,Overheat,"Resource Cost Increase 15%
+5% Overheat Accumulation Dampening
+0.3% DMG Amplification per 10% of remaining ratio until Critical Overheat Point
+(Magic Effect) 1.5% Overheat Accumulation Dampening
+(Rare Effect) 3% DMG Amplification
+(Rare Effect) 1.5% Overheat Accumulation Dampening
+(Legendary Effect) 5% DMG Amplification
+(Legendary Effect) 3% Overheat Accumulation Dampening","Resource Cost Increase 15%
+8% Overheat Accumulation Dampening
+4.8% DMG Amplification per 10% of remaining ratio until Critical Overheat Point
+(Magic Effect) 1.5% Overheat Accumulation Dampening
+(Rare Effect) 3% DMG Amplification
+(Rare Effect) 1.5% Overheat Accumulation Dampening
+(Legendary Effect) 5% DMG Amplification
+(Legendary Effect) 3% Overheat Accumulation Dampening",+[6-12]% DMG per 10% remaining ratio until Critical Overheat Point,[3-5]% DMG Amplification if linked Skill Rune has 2 or more Overheat tag Link Runes,"-[8-3]% Resource Cost
+2% Overheat Accumulation Dampening"
+,Outlaw,Before,Can be linked with Skills that are Overheat,Overheat,"Resource Cost Increase 15%
++2% Critical Rate per 10% Overheat
++0.5% Critical Chance per 10% Overheat
+(Rare Effect) +40% Critical Rate
+(Rare Effect) +1% Critical Chance
+(Rare Effect) +20% Critical DMG
+(Legendary Effect) +70% Critical Rate
+(Legendary Effect) +2% Critical Chance
+(Legendary Effect) +40% Critical DMG","Resource Cost Increase 15%
++42.5% Critical Rate per 10% Overheat
++0.5% Critical Chance per 10% Overheat
+(Rare Effect) +40% Critical Rate
+(Rare Effect) +1% Critical Chance
+(Rare Effect) +20% Critical DMG
+(Legendary Effect) +70% Critical Rate
+(Legendary Effect) +2% Critical Chance
+(Legendary Effect) +40% Critical DMG",+[5-10]% Critical Rate per 10% Overheat,+[8-12]% Critical Rate per 1 Green Link Rune on linked Skill Rune,"-[12-3]% Resource Cost
+[1-5]% Overheat Accumulation Amplification"
+,,After,Can be linked with Skills that are Overheat,Overheat,"Resource Cost Increase 15%
+Increases Critical Rate by 2% of Max Overheat (Max: 80%)
+Increases Critical Chance by 0.3% of Max Overheat (Max: 7%)
+Increases Critical DMG by 5% of Max Overheat (Max: 100%)
++30% Outlaw Max Critical Rate
++0.5% Outlaw Max Critical Chance
++50% Outlaw Max Critical DMG
+(Rare Effect) +40% Critical Rate
+(Rare Effect) +1% Critical Chance
+(Rare Effect) +20% Critical DMG
+(Legendary Effect) +70% Critical Rate
+(Legendary Effect) +2% Critical Chance
+(Legendary Effect) +40% Critical DMG","Resource Cost Increase 15%
+Increases Critical Rate by 2% of Max Overheat (Max: 80%)
+Increases Critical Chance by 0.3% of Max Overheat (Max: 7%)
+Increases Critical DMG by 5% of Max Overheat (Max: 100%)
++66% Outlaw Max Critical Rate
++3% Outlaw Max Critical Chance
++100% Outlaw Max Critical DMG
+(Rare Effect) +40% Critical Rate
+(Rare Effect) +1% Critical Chance
+(Rare Effect) +20% Critical DMG
+(Legendary Effect) +70% Critical Rate
+(Legendary Effect) +2% Critical Chance
+(Legendary Effect) +40% Critical DMG",+[30-60]% Outlaw Max Critical DMG,+[1-3]% Outlaw Max Critical Chance,+[10-30]% Outlaw Max Critical Rate
+,Heat Cycle,Before,Can be linked with Skills that are Overheat,Overheat,"Resource Cost Increase 20%
+Gain Low Temperature for 2 s on hit at 40% or less Overheat
+Low Temperature effect
++9% Critical DMG
+Gain High Temperature for 2 s on hit at 40% or more Overheat
+High Temperature effect
++18% Critical Rate
+(Magic Effect) +10% Low Temperature effect
+(Magic Effect) +10% High Temperature effect
+(Rare Effect) +15% Low Temperature effect
+(Rare Effect) +15% High Temperature effect
+(Legendary Effect) +20% Low Temperature effect
+(Legendary Effect) +20% High Temperature effect","Resource Cost Increase 20%
+Gain Low Temperature for 2 s on hit at 40% or less Overheat
+Low Temperature effect
++72% Critical DMG
+Gain High Temperature for 2 s on hit at 40% or more Overheat
+High Temperature effect
++166.5% Critical Rate
+(Magic Effect) +10% Low Temperature effect
+(Magic Effect) +10% High Temperature effect
+(Rare Effect) +15% Low Temperature effect
+(Rare Effect) +15% High Temperature effect
+(Legendary Effect) +20% Low Temperature effect
+(Legendary Effect) +20% High Temperature effect",+[15-30]% Low Temperature effect,+[20-40]% High Temperature effect,"+[5-25]% Low Temperature Duration
++[5-25]% High Temperature Duration"
+,,After,Can be linked with Skills that are Overheat,Overheat,"Resource Cost Increase 20%
+Gain Low Temperature for 2 s on hit at 40% or less Overheat
+Low Temperature effect
++9% Critical DMG
++2% Critical Rate
+Gain High Temperature for 2 s on hit at 40% or more Overheat
+High Temperature effect
++4% Critical DMG
++18% Critical Rate
+(Magic Effect) +10% Low Temperature effect
+(Magic Effect) +10% High Temperature effect
+(Rare Effect) +15% Low Temperature effect
+(Rare Effect) +15% High Temperature effect
+(Legendary Effect) +20% Low Temperature effect
+(Legendary Effect) +20% High Temperature effect","Resource Cost Increase 20%
+Gain Low Temperature for 2 s on hit at 40% or less Overheat
+Low Temperature effect
++72% Critical DMG
++20% Critical Rate
+Gain High Temperature for 2 s on hit at 40% or more Overheat
+High Temperature effect
++36% Critical DMG
++166.5% Critical Rate
+(Magic Effect) +10% Low Temperature effect
+(Magic Effect) +10% High Temperature effect
+(Rare Effect) +15% Low Temperature effect
+(Rare Effect) +15% High Temperature effect
+(Legendary Effect) +20% Low Temperature effect
+(Legendary Effect) +20% High Temperature effect",+[20-40]% Low Temperature effect,+[20-40]% High Temperature effect,"Low Temperature effects and High Temperature effects are applied in reverse
++[15-25]% Low Temperature Duration
++[15-25]% High Temperature Duration"
+,Spot Weakness,Before,"Can be linked with Skills that are Projectile
+ Cannot be linked with Skills that are Minion, Sentry, Toggle, Movement, DoT",Projectile,"Resource Cost Increase 20%
+1.7% DMG Amplification per 100 distance decreased against enemies at 600 distance or less (Max 40%)
+Gain Spot Weakness for 2 s upon hitting an enemy at 600 distance or less
+Spot Weakness effect
++6% Dodge Rate
++0.2% Max Attack Dodge Chance
++0.2% Max Spell Dodge Chance
+(Max stacks: 8)
+(Rare Effect) +1 Max Spot Weakness Stacks
+(Legendary Effect) +2 Max Spot Weakness Stacks
+(Legendary Effect) 3.5% DMG Amplification against enemies at 400 distance or less","Resource Cost Increase 20%
+4.2% DMG Amplification per 100 distance decreased against enemies at 600 distance or less (Max 40%)
+Gain Spot Weakness for 2 s upon hitting an enemy at 600 distance or less
+Spot Weakness effect
++19.5% Dodge Rate
++0.2% Max Attack Dodge Chance
++0.2% Max Spell Dodge Chance
+(Max stacks: 8)
+(Rare Effect) +1 Max Spot Weakness Stacks
+(Legendary Effect) +2 Max Spot Weakness Stacks
+(Legendary Effect) 3.5% DMG Amplification against enemies at 400 distance or less",+[45-70]% Projectile DMG,"-[8-4]% Resource Cost
++1 Max Spot Weakness Stacks","[1-3]% DMG Amplification against enemies at 400 distance or less
+Add Melee tag"
+,,After,"Can be linked with Skills that are Projectile
+ Cannot be linked with Skills that are Minion, Sentry, Toggle, Movement, DoT",Projectile,"Resource Cost Increase 20%
+1.7% DMG Amplification per 100 distance decreased against enemies at 600 distance or less (Max 40%)
+Gain Spot Weakness for 2 s upon hitting an enemy at 600 distance or less
+Spot Weakness effect
++12% Dodge Rate
++0.4% Max Attack Dodge Chance
++0.4% Max Spell Dodge Chance
+(Max stacks: 4)
+(Rare Effect) +1 Max Spot Weakness Stacks
+(Legendary Effect) +1 Max Spot Weakness Stacks
+(Legendary Effect) 3.5% DMG Amplification against enemies at 400 distance or less","Resource Cost Increase 20%
+4.2% DMG Amplification per 100 distance decreased against enemies at 600 distance or less (Max 40%)
+Gain Spot Weakness for 2 s upon hitting an enemy at 600 distance or less
+Spot Weakness effect
++39% Dodge Rate
++0.4% Max Attack Dodge Chance
++0.4% Max Spell Dodge Chance
+(Max stacks: 4)
+(Rare Effect) +1 Max Spot Weakness Stacks
+(Legendary Effect) +1 Max Spot Weakness Stacks
+(Legendary Effect) 3.5% DMG Amplification against enemies at 400 distance or less",+[45-70]% Projectile DMG,+[1-2] Max Spot Weakness Stacks,"[1-3]% DMG Amplification against enemies at 400 distance or less
+Add Melee tag"
+,Trapper,Before,Can be linked with Skills that are Trap,Trap,"Resource Cost Increase 20%
++22% DMG against Crowd Controlled enemies
++8% Crowd Control Duration
++5 Crowd Control Rate
+(Magic Effect) +20% Trap DMG
+(Magic Effect) +2 Crowd Control Rate
+(Rare Effect) +30% Trap DMG
+(Rare Effect) +3 Crowd Control Rate
+(Legendary Effect) +40% Trap DMG
+(Legendary Effect) +4 Crowd Control Rate
+(Legendary Effect) 5% DMG Amplification against Crowd Controlled enemies","Resource Cost Increase 20%
++248% DMG against Crowd Controlled enemies
++41% Crowd Control Duration
++5 Crowd Control Rate
+(Magic Effect) +20% Trap DMG
+(Magic Effect) +2 Crowd Control Rate
+(Rare Effect) +30% Trap DMG
+(Rare Effect) +3 Crowd Control Rate
+(Legendary Effect) +40% Trap DMG
+(Legendary Effect) +4 Crowd Control Rate
+(Legendary Effect) 5% DMG Amplification against Crowd Controlled enemies",+[3-8] Crowd Control Rate,[2-6.5]% DMG Amplification against Crowd Controlled enemies,"+[10-35]% Trap DMG
+[3-5]% DMG Amplification if linked Skill Rune has 5 or more Trap tag Link Runes"
+,,After,Can be linked with Skills that are Trap,Trap,"Resource Cost Increase 20%
++22% DMG against Crowd Controlled enemies
++8% Crowd Control Duration
++13 Crowd Control Rate
+(Magic Effect) +20% Trap DMG
+(Magic Effect) +2 Crowd Control Rate
+(Rare Effect) +30% Trap DMG
+(Rare Effect) +3 Crowd Control Rate
+(Legendary Effect) +40% Trap DMG
+(Legendary Effect) +4 Crowd Control Rate
+(Legendary Effect) 5% DMG Amplification against Crowd Controlled enemies","Resource Cost Increase 20%
++248% DMG against Crowd Controlled enemies
++41% Crowd Control Duration
++13 Crowd Control Rate
+(Magic Effect) +20% Trap DMG
+(Magic Effect) +2 Crowd Control Rate
+(Rare Effect) +30% Trap DMG
+(Rare Effect) +3 Crowd Control Rate
+(Legendary Effect) +40% Trap DMG
+(Legendary Effect) +4 Crowd Control Rate
+(Legendary Effect) 5% DMG Amplification against Crowd Controlled enemies",+[20-35]% Crowd Control Duration,[2-6.5]% DMG Amplification against Crowd Controlled enemies,"+[10-35]% Trap DMG
+[1-1.5]% Trap DMG Amplification per 1 Trap tag Link Rune on linked Skill Rune"
+,Enrage,Before,"Can be linked with Skills that are Melee, Strike (must include all)
+ Can be linked with Skills that satisfy any one of Attack, Spell
+ Cannot be linked with Skills that are Minion","Attack, Spell, Melee, Strike","Resource Cost Increase 15%
+15% DMG Amplification at 40% or less HP
++15% Attack Speed at 40% or less HP
++15% Cast Speed at 40% or less HP
+-2.5% Max HP on skill use at 40% or less HP
+(Rare Effect) +5% Attack Speed
+(Rare Effect) +5% Cast Speed
+(Rare Effect) +0.5% HP Absorb on hit at 40% or less HP
+(Legendary Effect) +10% Attack Speed
+(Legendary Effect) +10% Cast Speed
+(Legendary Effect) +1% HP Absorb on hit at 40% or less HP","Resource Cost Increase 15%
+36% DMG Amplification at 40% or less HP
++36% Attack Speed at 40% or less HP
++36% Cast Speed at 40% or less HP
+-2.5% Max HP on skill use at 40% or less HP
+(Rare Effect) +5% Attack Speed
+(Rare Effect) +5% Cast Speed
+(Rare Effect) +0.5% HP Absorb on hit at 40% or less HP
+(Legendary Effect) +10% Attack Speed
+(Legendary Effect) +10% Cast Speed
+(Legendary Effect) +1% HP Absorb on hit at 40% or less HP","+[10-25]% Attack Speed at 40% or less HP
++[10-25]% Cast Speed at 40% or less HP",Max HP -[1-5]% on skill use at 40% or more HP,"+[25-55]% Melee DMG
+[1.5-4]% Critical DMG Taken Decrease for 3 s on hit"
+,,After,"Can be linked with Skills that are Melee, Strike (must include all)
+ Can be linked with Skills that satisfy any one of Attack, Spell
+ Cannot be linked with Skills that are Minion","Attack, Spell, Melee, Strike","Resource Cost Increase 15%
+15% DMG Amplification at 40% or less HP
+5% Attack Speed Amplification at 40% or less HP
+5% Cast Speed Amplification at 40% or less HP
+-2.5% Max HP on skill use at 40% or less HP
+(Rare Effect) 20% Melee DMG Amplification at 40% or less HP
+(Legendary Effect) 40% Melee DMG Amplification at 40% or less HP","Resource Cost Increase 15%
+36% DMG Amplification at 40% or less HP
+20% Attack Speed Amplification at 40% or less HP
+20% Cast Speed Amplification at 40% or less HP
+-2.5% Max HP on skill use at 40% or less HP
+(Rare Effect) 20% Melee DMG Amplification at 40% or less HP
+(Legendary Effect) 40% Melee DMG Amplification at 40% or less HP","+[10-25]% Attack Speed at 40% or less HP
++[10-25]% Cast Speed at 40% or less HP",Max HP -[1-5]% on skill use at 40% or more HP,"+[25-55]% Melee DMG
+[1.5-4]% DMG Taken Decrease for 3 s on hit"
+,Endless Growth,Before,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
+Gain Growth effect every 3 s on Summon (Max Stacks: 15)
+Gain 1 Growth effect stack when Hit (Cooldown: 1 s)
+Growth Effect
++1% DMG
++0.5% Attack Speed
++0.5% Cast Speed
+(Rare Effect) +25% Minion DMG
+(Rare Effect) Amplifies Minion Max HP by 3.5%
+(Legendary Effect) +60% Minion DMG
+(Legendary Effect) Amplifies Minion Max HP by 5%
+(Legendary Effect) 5% DMG Taken by Minion Dampening","Resource Cost Increase 15%
+Gain Growth effect every 3 s on Summon (Max Stacks: 15)
+Gain 1 Growth effect stack when Hit (Cooldown: 1 s)
+Growth Effect
++11.4% DMG
++2.1% Attack Speed
++2.1% Cast Speed
+(Rare Effect) +25% Minion DMG
+(Rare Effect) Amplifies Minion Max HP by 3.5%
+(Legendary Effect) +60% Minion DMG
+(Legendary Effect) Amplifies Minion Max HP by 5%
+(Legendary Effect) 5% DMG Taken by Minion Dampening",+[10-30]% Minion HP,+[1.5-3.5]% Minion Max Element Resist,"+[5-15]% Minion Attack Speed
++[5-15]% Minion Cast Speed"
+,,After,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
+Gain Growth effect every 2 s on Summon (Max Stacks: 15)
+Growth Effect
++1% DMG
++0.5% Attack Speed
++0.5% Cast Speed
+(Rare Effect) Growth Effect +10%
+(Rare Effect) +25% Minion DMG
+(Rare Effect) Amplifies Minion Max HP by 3.5%
+(Legendary Effect) Growth Effect +20%
+(Legendary Effect) +60% Minion DMG
+(Legendary Effect) Amplifies Minion Max HP by 5%
+(Legendary Effect) 5% DMG Taken by Minion Dampening","Resource Cost Increase 15%
+Gain Growth effect every 2 s on Summon (Max Stacks: 15)
+Growth Effect
++15% DMG
++2.1% Attack Speed
++2.1% Cast Speed
+(Rare Effect) Growth Effect +10%
+(Rare Effect) +25% Minion DMG
+(Rare Effect) Amplifies Minion Max HP by 3.5%
+(Legendary Effect) Growth Effect +20%
+(Legendary Effect) +60% Minion DMG
+(Legendary Effect) Amplifies Minion Max HP by 5%
+(Legendary Effect) 5% DMG Taken by Minion Dampening","+[10-30]% Minion HP
++[1.5-3.5]% Minion Max Element Resist",+[50-90]% Minion DMG,"+[5-15]% Minion Attack Speed
++[5-15]% Minion Cast Speed"
+,Destructive Instinct,Before,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
+Provides Destructive Instinct effect for 3 s to Minions upon Summoning
+Destructive Instinct Effect
+100% chance to deal triple Maximized DMG on hit
+0.5% DMG Amplification
+(Magic Effect) 3% chance for Minion to deal double maximized DMG
+(Rare Effect) 3% chance for Minion to deal double maximized DMG
+(Rare Effect) 3% Minion DMG Amplification
+(Legendary Effect) 5% chance for Minion to deal double maximized DMG
+(Legendary Effect) 5% Minion DMG Amplification","Resource Cost Increase 15%
+Provides Destructive Instinct effect for 3 s to Minions upon Summoning
+Destructive Instinct Effect
+100% chance to deal triple Maximized DMG on hit
+24.6% DMG Amplification
+(Magic Effect) 3% chance for Minion to deal double maximized DMG
+(Rare Effect) 3% chance for Minion to deal double maximized DMG
+(Rare Effect) 3% Minion DMG Amplification
+(Legendary Effect) 5% chance for Minion to deal double maximized DMG
+(Legendary Effect) 5% Minion DMG Amplification",[3-6]% Minion DMG Amplification,+[4-8]% Triple Maximized Minion DMG,+[8-14]% Minion DMG per 1 Minion tag Link Rune on linked Skill Rune
+,,After,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 15%
+Provides Destructive Instinct effect for 5 s to Minions upon Summoning
+Destructive Instinct Effect
+100% chance to deal triple Maximized DMG on hit
+0.5% DMG Amplification
+(Magic Effect) +8% Maximized Minion DMG
+(Rare Effect) +13% Maximized Minion DMG
+(Rare Effect) 3% Minion DMG Amplification
+(Legendary Effect) +20% Maximized Minion DMG
+(Legendary Effect) 5% Minion DMG Amplification","Resource Cost Increase 15%
+Provides Destructive Instinct effect for 5 s to Minions upon Summoning
+Destructive Instinct Effect
+100% chance to deal triple Maximized DMG on hit
+24.6% DMG Amplification
+(Magic Effect) +8% Maximized Minion DMG
+(Rare Effect) +13% Maximized Minion DMG
+(Rare Effect) 3% Minion DMG Amplification
+(Legendary Effect) +20% Maximized Minion DMG
+(Legendary Effect) 5% Minion DMG Amplification",[3-6]% Minion DMG Amplification,+[4-8]% Maximized Minion DMG,+[8-14]% Minion DMG per 1 Minion tag Link Rune on linked Skill Rune
+,Absorb Minion HP,Before,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 20%
++10% Minion DMG
++0.1% HP Absorb on hit
++1% HP Absorb Limit
+(Magic Effect) +20% Minion DMG
+(Rare Effect) +30% Minion DMG
+(Rare Effect) +8% Minion HP
+(Legendary Effect) +60% Minion DMG
+(Legendary Effect) +25% Minion HP","Resource Cost Increase 20%
++127% Minion DMG
++1.6% HP Absorb on hit
++1% HP Absorb Limit
+(Magic Effect) +20% Minion DMG
+(Rare Effect) +30% Minion DMG
+(Rare Effect) +8% Minion HP
+(Legendary Effect) +60% Minion DMG
+(Legendary Effect) +25% Minion HP",+[10-25]% Maximized Minion DMG,+[35-55]% Minion DMG,[2-5]% chance for Minion to deal double maximized DMG
+,,After,Can be linked with Skills that are Minion,Minion,"Resource Cost Increase 20%
++10% Minion DMG
+Applies the following effects on Minions
++0.1% HP Absorb on hit
++1% HP Absorb Limit
+(Magic Effect) +20% Minion DMG
+(Rare Effect) +30% Minion DMG
+(Rare Effect) +8% Minion HP
+(Legendary Effect) +60% Minion DMG
+(Legendary Effect) +25% Minion HP","Resource Cost Increase 20%
++127% Minion DMG
+Applies the following effects on Minions
++1.6% HP Absorb on hit
++1% HP Absorb Limit
+(Magic Effect) +20% Minion DMG
+(Rare Effect) +30% Minion DMG
+(Rare Effect) +8% Minion HP
+(Legendary Effect) +60% Minion DMG
+(Legendary Effect) +25% Minion HP","[1-3]% chance for Minion to deal double maximized DMG
++[10-25]% Maximized Minion DMG",+[50-85]% Minion DMG,+[30-50]% Minion HP
+,Convert Physical Damage,Before,"Can be linked with skills that are any one of Strike, DoT and are any one of Fire, Cold, Lightning, Poison
+ Cannot be linked with Cannot Convert DMG, Totem, Minion, Shout, Physical Skills
+ Only one Convert DMG can be linked at a time.
+ Applies to Minions when linked to Summon Skill
+ Rune cannot be awakened.","Strike, DoT, Fire, Cold, Lightning, Poison","Resource Cost Increase 20%
+Converts DMG to Physical Element
+Convert DMG to Main Element 50%
++30% Physical DMG
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Physical DMG Amplification","Resource Cost Increase 20%
+Converts DMG to Physical Element
+Convert DMG to Main Element 50%
++151.5% Physical DMG
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Physical DMG Amplification",0,0,0
+,,After,"Can be linked with skills that are any one of Strike, DoT and are any one of Fire, Cold, Lightning, Poison
+ Cannot be linked with Cannot Convert DMG, Totem, Minion, Shout, Physical Skills
+ Only one Convert DMG can be linked at a time.
+ Applies to Minions when linked to Summon Skill
+ Rune cannot be awakened.","Strike, DoT, Fire, Cold, Lightning, Poison","Resource Cost Increase 20%
+Converts DMG to Physical Element
+Convert DMG to Main Element 50%
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Physical DMG Amplification","Resource Cost Increase 20%
+Converts DMG to Physical Element
+Convert DMG to Main Element 50%
+(Legendary Effect) Convert DMG to Main Element 50%
+(Legendary Effect) 10% Physical DMG Amplification",0,0,0
+,Warrior's Shadow,Before,"Can be linked with Skills that are Attack, Shadow, Strike, Melee (must include all)
+ Cannot be linked with Skills that are Projectile, Channel, Chain Attack
+ Cannot be linked with Trigger Link Runes.","Attack, Shadow, Strike, Melee","Resource Cost Increase 50%
+Warrior's Shadow Effect
+Summon 1 Warrior's Shadow(s) on skill use
+-60% Melee DMG
+(Rare Effect) 10% Melee DMG Amplification
+(Rare Effect) +15% DMG Penetration
+(Legendary Effect) 15% Melee DMG Amplification
+(Legendary Effect) +30% DMG Penetration","Resource Cost Increase 50%
+Warrior's Shadow Effect
+Summon 1 Warrior's Shadow(s) on skill use
++225% Melee DMG
+(Rare Effect) 10% Melee DMG Amplification
+(Rare Effect) +15% DMG Penetration
+(Legendary Effect) 15% Melee DMG Amplification
+(Legendary Effect) +30% DMG Penetration","[7.5-15]% DMG Amplification
++[20-30]% Area of Effect","Gain Traces of the Warrior on hit
+Gain Warrior's Shadow on 5 Traces of the Warrior stacks
+Warrior's Shadow [Origin] Effect
+Summon 1 Warrior's Shadows on skill use
++[30-60]% Strike DMG","Summon 1 Warrior's Shadow when HP is at 40% or lower
+Consume all Barrier upon Attack
+[20-30]% DMG Dampening
++[60-100]% Critical DMG at 40% or less HP"
+,,After,"Can be linked with Skills that are Attack, Shadow, Strike, Melee (must include all)
+ Cannot be linked with Skills that are Projectile, Channel, Chain Attack
+ Cannot be linked with Trigger Link Runes.","Attack, Shadow, Strike, Melee","Resource Cost Increase 50%
+Warrior's Shadow Effect
+Summon 1 Warrior's Shadow(s) on skill use
+-60% Melee DMG
+(Rare Effect) 10% Melee DMG Amplification
+(Rare Effect) +15% DMG Penetration
+(Legendary Effect) 15% Melee DMG Amplification
+(Legendary Effect) +30% DMG Penetration","Resource Cost Increase 50%
+Warrior's Shadow Effect
+Summon 1 Warrior's Shadow(s) on skill use
++30% Melee DMG
+(Rare Effect) 10% Melee DMG Amplification
+(Rare Effect) +15% DMG Penetration
+(Legendary Effect) 15% Melee DMG Amplification
+(Legendary Effect) +30% DMG Penetration","[7.5-15]% DMG Amplification
++[20-30]% Area of Effect","Gain Traces of the Warrior on hit
+Gain Warrior's Shadow on 5 Traces of the Warrior stacks
+Warrior's Shadow [Origin] Effect
+Summon 1 Warrior's Shadows on skill use
++[30-60]% Strike DMG","Summon 1 Warrior's Shadow when HP is at 40% or lower
+Consume all Barrier upon Attack
+[20-30]% DMG Dampening
++[60-100]% Critical DMG at 40% or less HP"
+,Shadow Archer,Before,"Can be linked with Skills that are Attack, Shadow, Strike, Projectile (must include all)
+ Cannot be linked with Skills that are Melee, Trap
+ Cannot be linked with Trigger Link Runes.","Attack, Shadow, Strike, Projectile","Resource Cost Increase 50%
+Shadow Archer Effect
+Summon 1 Shadow Archer(s) on skill use
+-60% Projectile DMG
+(Rare Effect) 10% Projectile DMG Amplification
+(Rare Effect) +15% DMG Penetration
+(Legendary Effect) 15% Projectile DMG Amplification
+(Legendary Effect) +30% DMG Penetration","Resource Cost Increase 50%
+Shadow Archer Effect
+Summon 1 Shadow Archer(s) on skill use
++225% Projectile DMG
+(Rare Effect) 10% Projectile DMG Amplification
+(Rare Effect) +15% DMG Penetration
+(Legendary Effect) 15% Projectile DMG Amplification
+(Legendary Effect) +30% DMG Penetration","10% chance to summon Double Shadow Archer on hit
+Double Shadow Archer Effect
+Summon 1 Shadow Archer(s) on skill use
++[20-35]% Attack Speed","Double Shadow Archer Effect
+Summon 1 Shadow Archer(s) on skill use
+Cooldown 1 s
++[45-60]% Attack Critical DMG
++[45-60]% Projectile DMG","[7.5-15]% DMG Amplification
++2 Projectile Count"
+,,After,"Can be linked with Skills that are Attack, Shadow, Strike, Projectile (must include all)
+ Cannot be linked with Skills that are Melee, Trap
+ Cannot be linked with Trigger Link Runes.","Attack, Shadow, Strike, Projectile","Resource Cost Increase 50%
+Shadow Archer Effect
+Summon 1 Shadow Archer(s) on skill use
+-60% Projectile DMG
+(Rare Effect) 10% Projectile DMG Amplification
+(Rare Effect) +15% DMG Penetration
+(Legendary Effect) 15% Projectile DMG Amplification
+(Legendary Effect) +30% DMG Penetration","Resource Cost Increase 50%
+Shadow Archer Effect
+Summon 1 Shadow Archer(s) on skill use
++30% Projectile DMG
+(Rare Effect) 10% Projectile DMG Amplification
+(Rare Effect) +15% DMG Penetration
+(Legendary Effect) 15% Projectile DMG Amplification
+(Legendary Effect) +30% DMG Penetration","10% chance to summon Double Shadow Archer on hit
+Double Shadow Archer Effect
+Summon 1 Shadow Archer(s) on skill use
++[20-35]% Attack Speed","Double Shadow Archer Effect
+Summon 1 Shadow Archer(s) on skill use
+Cooldown 1 s
++[45-60]% Attack Critical DMG
++[45-60]% Projectile DMG","[7.5-15]% DMG Amplification
++2 Projectile Count"

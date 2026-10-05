@@ -1,0 +1,5714 @@
+[
+ {
+  "id": "approaching-omen",
+  "name": "Approaching Omen",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "[1-10]% Attack Speed Amplification",
+   "[1-10]% Cast Speed Amplification",
+   "[1-10]% Hit Rate Amplification",
+   "+[1-15] Element Penetration",
+   "[1-8]% Element DMG Amplification",
+   "+[5-20]% Element Penetration50% chance to apply Engraved Fear to enemies for 5 s on Hit (Max 5 stacks)",
+   "16% Element Resist Dampening",
+   "-2% Block Chance",
+   "Gains Reaper's Harvest for 5 s on Hit",
+   "Amplifies DMG by 0.4% per stack (Max 100 stacks, up to 12 stacks gained per Hit)",
+   "Duration is not refreshed when gaining stacks",
+   "1 of the options below will be imbued.",
+   "- +[7-11]% Critical Chance",
+   "+[42-95]% Critical DMG[Chance 50%]",
+   "- +[7-11]% Maximization Chance",
+   "+[42-95]% Maximized DMG[Chance 50%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "commanders-shout",
+  "name": "Commander's Shout",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "[10-14]% DMG Amplification"
+  ],
+  "innate": [],
+  "options": [
+   "+[45-60]% Shout Skill Rune Cooldown Recovery Speed",
+   "+[155-170]% Shout Skill Rune Cast Speed",
+   "+[30-35]% Shout Skill Rune Effect",
+   "30% Shout Skill Rune Duration Dampening",
+   "[10-15]% Resource Cost Dampening",
+   "Grant the following effect(s) for 5 s upon triggering Shout",
+   "Regen 0.5% of Max HP/Sec",
+   "12% DMG Amplification",
+   "12% DMG Taken Dampening",
+   "12% Hit Rate Amplification",
+   "12% Weapon Range Amplification",
+   "12% Area of Effect Amplification"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "legion-apothecary",
+  "name": "Legion Apothecary",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Belt",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "[15-20]% Minion HP Amplification",
+   "[15-20]% Sentry HP Amplification"
+  ],
+  "innate": [],
+  "options": [
+   "[15-25]% Minion DMG Amplification",
+   "[15-25]% Sentry DMG Amplification",
+   "[5-12]% HP Amplification",
+   "+[75-100]% Enhance Potion Cooldown Recovery Speed",
+   "+[150-200]% Enhance Potion Effect",
+   "[55-65]% Enhance Potion Duration Dampening",
+   "1 of the options below will be imbued.",
+   "- High Elixir effects also apply to Minions[Chance 50%]",
+   "- High Elixir effects also apply to Sentries[Chance 50%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "resonance-of-all-colors",
+  "name": "Resonance of All Colors",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "+[7-10]% Stats"
+  ],
+  "innate": [],
+  "options": [
+   "-2 Max Energy",
+   "[1-10]% Movement Speed Amplification",
+   "[10-20]% Attack Speed Amplification",
+   "[10-20]% Cast Speed Amplification",
+   "10% DMG Amplification per 10 Energy possessed",
+   "1 of the options below will be imbued.",
+   "- +[2-7] Fixed Max Earth Energy[Chance 20%]",
+   "- +[2-7] Fixed Max Fire Energy[Chance 20%]",
+   "- +[2-7] Fixed Max Cold Energy[Chance 20%]",
+   "- +[2-7] Fixed Max Lightning Energy[Chance 20%]",
+   "- +[2-7] Fixed Max Poison Energy[Chance 20%]",
+   "1 of the options below will be imbued.",
+   "- [5-8]% of DMG as Additional Physical DMG on every hit per Earth Energy[Chance 20%]",
+   "- [5-8]% of DMG as Additional Fire DMG on every hit per Fire Energy[Chance 20%]",
+   "- [5-8]% of DMG as Additional Cold DMG on every hit per Cold Energy[Chance 20%]",
+   "- [5-8]% of DMG as Additional Lightning DMG on every hit per Lightning Energy[Chance 20%]",
+   "- [5-8]% of DMG as Additional Poison DMG on every hit per Poison Energy[Chance 20%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "returnees-waistband",
+  "name": "Returnee's Waistband",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Belt",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[30-35]% HP",
+   "[15-20]% HP Amplification",
+   "+[280-375]% Enhance Potion Effect",
+   "[15-20]% Enhance Potion Duration Dampening",
+   "1 of the options below will be imbued.",
+   "- Blessing of the Plains[Chance 12.5%]",
+   "- Doublesideness[Chance 12.5%]",
+   "- Child of the Stars[Chance 12.5%]",
+   "- Deep-rooted Tree[Chance 12.5%]",
+   "- Ring of Cycle[Chance 12.5%]",
+   "- Maggot Executioner[Chance 12.5%]",
+   "- Path of Prosperity[Chance 12.5%]",
+   "- Research and Experimentation[Chance 12.5%]",
+   "1 of the options below will be imbued.",
+   "- 3% DMG Amplification per 1 active Potion Effect(s)[Chance 33.3%]",
+   "- 3% Minion DMG Amplification per 1 active Potion Effect(s)[Chance 33.3%]",
+   "- 3% Sentry DMG Amplification per 1 active Potion Effect(s)[Chance 33.3%]"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "ring-of-amplified-power",
+  "name": "Ring of Amplified Power",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[50-70] Element Resist",
+   "[1-25]% HP Amplification",
+   "[1-15]% Attack Speed Amplification",
+   "[1-15]% Cast Speed Amplification",
+   "-[4500-3500] Hit Rate",
+   "Gains Hit Amplification for 15 s on miss",
+   "+4500 Hit Rate",
+   "+175% DMG",
+   "Gains Chance Amplification for 15 s on hit",
+   "+15% Critical Chance",
+   "+15% Maximization Chance",
+   "Gains DMG Amplification for 15 s on Critical or Maximized hit",
+   "+55% Critical DMG",
+   "+55% Maximized DMG",
+   "Gains Amplified Power for 10 s when using a skill after gaining all effects",
+   "All effect durations reset and values increase by 100%. All effects are removed when Amplified Power ends"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-acubens-crystal",
+  "name": "Transcendent Acuben's Crystal",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Belt",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "+[14.1-15]% Attack Speed"
+  ],
+  "innate": [],
+  "options": [
+   "[26-30]% HP Amplification",
+   "+[34-55]% Enhance Skill Rune Effect",
+   "[9-13]% DMG Amplification",
+   "+[18-22] Chaos Resist",
+   "+[20-25] Element Resist",
+   "Reduces Piercing Arrow Projectile Speed",
+   "Creates additional Hits at set intervals while the Projectile travels",
+   "Dampens Piercing Arrow DMG by 50%",
+   "Fixed to 1 Projectile"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-boreals-peace",
+  "name": "Transcendent Boreal's Peace",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "[25-35]% Attack Speed Dampening"
+  ],
+  "innate": [],
+  "options": [
+   "[5-10]% DMG Taken Decrease",
+   "+[300-400] HP",
+   "+[15-20]% Armor Penetration",
+   "Rain of Arrows Projectile Count +4",
+   "+[50-75]% Mana Regen/Sec",
+   "Removes Rain of Arrows Cooldown",
+   "Amplifies Rain of Arrows Mana Cost by 15%",
+   "Rain of Arrows Projectile Creation Range +175%"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-sephdars-order",
+  "name": "Transcendent Sephdar's Order",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "+[28.9-34]% Critical DMG"
+  ],
+  "innate": [],
+  "options": [
+   "+[20-30] Stats",
+   "-[5-4] Resource Cost",
+   "+[20-40] Chill Rate",
+   "[10-12]% Cold DMG Amplification",
+   "[14-21]% Attack Speed Amplification",
+   "+[120-150]% Arctic Shard Area of Effect",
+   "Arctic Shard's Ice Pillars Now Spawn to the Left and Right"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-spicas-ovation",
+  "name": "Transcendent Spica's Ovation",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "+50% Sentry Attack Speed"
+  ],
+  "innate": [],
+  "options": [
+   "+[81-97]% Sentry Critical Rate",
+   "+[47-88]% Sentry Critical DMG",
+   "+[85-101]% Sentry Hit Rate",
+   "+[5-8] Sentry Skill Rune Level",
+   "Enchanted Sentry instantly reaches Max Stacks and applies as Aura upon use",
+   "Sentry Enhance takes effect immediately for the duration",
+   "+[150-200]% Enchanted Sentry Duration",
+   "Add 15 s to Enchanted Sentry Cooldown"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-vermilion-root",
+  "name": "Transcendent Vermilion Root",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "[15-20]% HP Dampening",
+   "50% Barrier Dampening",
+   "+[25-40]% Enhance Skill Rune Cooldown Recovery Speed",
+   "30% Skill Rune Duration Dampening",
+   "+[35-50]% Tenacious Regeneration Effect",
+   "20% Max HP Amplification for duration of Tenacious Regeneration",
+   "[0.9-1.5]% DMG Amplification per 10,000 Max HP for duration of Tenacious Regeneration"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-vespers-cloud",
+  "name": "Transcendent Vesper's Cloud",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "+[48-56]% Minion Critical Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+[81-97]% Minion Critical Rate",
+   "+[47-88]% Minion Critical DMG",
+   "+[85-101]% Minion Hit Rate",
+   "+[5-8] Minion Skill Rune Level",
+   "Sacred Devotion instantly reaches Max Stacks and applies as Aura upon use",
+   "Minion Enhance takes effect immediately for the duration.",
+   "Dampens DMG Taken by Minions by 5% per stack",
+   "Minion Element Resist +20",
+   "+[150-200]% Sacred Devotion Duration",
+   "Add 15 s to Sacred Devotion Cooldown"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "ultimate-approaching-omen",
+  "name": "Ultimate Approaching Omen",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "[10-20]% Attack Speed Amplification",
+   "[10-20]% Cast Speed Amplification",
+   "[10-20]% Hit Rate Amplification",
+   "+[20-35] Element Penetration",
+   "[8-18]% Element DMG Amplification",
+   "+[25-50]% Element Penetration",
+   "50% chance to apply Engraved Fear to enemies for 5 s on Hit (Max 5 stacks)",
+   "16% Element Resist Dampening",
+   "-2% Block Chance",
+   "+[10-20]% Max Element Penetration",
+   "Gains Reaper's Harvest for 5 s on Hit",
+   "Amplifies DMG by 0.9% per stack (Max 100 stacks, up to 12 stacks gained per Hit)",
+   "Duration is not refreshed when gaining stacks",
+   "1 of the options below will be imbued.",
+   "- +[11-18]% Critical Chance",
+   "+[95-165]% Critical DMG[Chance 50%]",
+   "- +[11-18]% Maximization Chance",
+   "+[95-165]% Maximized DMG[Chance 50%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-commanders-shout",
+  "name": "Ultimate Commander's Shout",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "[15-20]% DMG Amplification"
+  ],
+  "innate": [],
+  "options": [
+   "+[65-80]% Shout Skill Rune Cooldown Recovery Speed",
+   "+[185-205]% Shout Skill Rune Cast Speed",
+   "+[36-45]% Shout Skill Rune Effect",
+   "30% Shout Skill Rune Duration Dampening",
+   "[16-25]% Resource Cost Dampening",
+   "Grant the following effect(s) for 5 s upon triggering Shout",
+   "Regen 1% of Max HP/Sec",
+   "24% DMG Amplification",
+   "24% DMG Taken Dampening",
+   "24% Hit Rate Amplification",
+   "24% Weapon Range Amplification",
+   "24% Area of Effect Amplification"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-legion-apothecary",
+  "name": "Ultimate Legion Apothecary",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Belt",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "20% Minion HP Amplification",
+   "20% Sentry HP Amplification"
+  ],
+  "innate": [],
+  "options": [
+   "[25-35]% Minion DMG Amplification",
+   "[25-35]% Sentry DMG Amplification",
+   "[12-17]% HP Amplification",
+   "+[100-125]% Enhance Potion Cooldown Recovery Speed",
+   "+[200-250]% Enhance Potion Effect",
+   "[45-55]% Enhance Potion Duration Dampening",
+   "1 of the options below will be imbued.",
+   "- High Elixir effects also apply to Minions[Chance 50%]",
+   "- High Elixir effects also apply to Sentries[Chance 50%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-resonance-of-all-colors",
+  "name": "Ultimate Resonance of All Colors",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "+10% Stats"
+  ],
+  "innate": [],
+  "options": [
+   "-2 Max Energy",
+   "10% Movement Speed Amplification",
+   "[20-25]% Attack Speed Amplification",
+   "[20-25]% Cast Speed Amplification",
+   "10% DMG Amplification per 10 Energy possessed",
+   "1 of the options below will be imbued.",
+   "- +7 Fixed Max Earth Energy[Chance 20%]",
+   "- +7 Fixed Max Fire Energy[Chance 20%]",
+   "- +7 Fixed Max Cold Energy[Chance 20%]",
+   "- +7 Fixed Max Lightning Energy[Chance 20%]",
+   "- +7 Fixed Max Poison Energy[Chance 20%]",
+   "1 of the options below will be imbued.",
+   "- [8-11]% of DMG as Additional Physical DMG on every hit per Earth Energy[Chance 20%]",
+   "- [8-11]% of DMG as Additional Fire DMG on every hit per Fire Energy[Chance 20%]",
+   "- [8-11]% of DMG as Additional Cold DMG on every hit per Cold Energy[Chance 20%]",
+   "- [8-11]% of DMG as Additional Lightning DMG on every hit per Lightning Energy[Chance 20%]",
+   "- [8-11]% of DMG as Additional Poison DMG on every hit per Poison Energy[Chance 20%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-ring-of-amplified-power",
+  "name": "Ultimate Ring of Amplified Power",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[70-90] Element Resist",
+   "[15-30]% HP Amplification",
+   "[15-30]% Attack Speed Amplification",
+   "[15-30]% Cast Speed Amplification",
+   "-[4500-3500] Hit Rate",
+   "Gains Hit Amplification for 15 s on miss",
+   "+5500 Hit Rate",
+   "+350% DMG",
+   "Gains Chance Amplification for 15 s on hit",
+   "+25% Critical Chance",
+   "+25% Maximization Chance",
+   "Gains DMG Amplification for 15 s on Critical or Maximized hit",
+   "+110% Critical DMG",
+   "+110% Maximized DMG",
+   "Gains Amplified Power for 10 s when using a skill after gaining all effects",
+   "All effect durations reset and values increase by 100%. All effects are removed when Amplified Power ends"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "sephdars-halter",
+  "name": "Sephdar's Halter",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [
+   "+14 Stats"
+  ],
+  "innate": [],
+  "options": [
+   "[3-12]% Melee DMG Amplification",
+   "[15-30]% DMG Taken Decrease",
+   "[15-30]% DMG Amplification for the next first Attack Skill for 3 s upon using a Movement Skill Rune",
+   "[8-20]% DMG Amplification for 3 s upon using Attack Enhance Skill Rune",
+   "1% Melee DMG Amplification per 50 Strength",
+   "50% chance to apply Shadow of Sephdar for 3 s on Hit",
+   "(Shadow of Sephdar: Cooldown 0.5 s)",
+   "(Summons a Shadow when using a skill while Shadow of Sephdar is active)",
+   "(Summon Shadow: Only summons an Illusion when the skill has the 'Shadow' tag.)",
+   "(Does not apply to skills linked with Trigger Link Runes.)",
+   "Effect cannot overlap with other activation effect with the same name"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-acubens-mist",
+  "name": "Transcendent Acuben's Mist",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Belt",
+  "category": "accessory",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[120-160] HP",
+   "[15-21]% HP Amplification",
+   "+[15-20] Stats",
+   "+[10-15] Chaos Resist",
+   "+[50-70]% Potion Effect",
+   "Dagger Throw Projectile Count +9",
+   "Fires Dagger Throw Projectiles in a circle",
+   "+800 Dagger Throw Projectile Speed",
+   "Dagger Throw Projectile Return"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-band-of-certainty",
+  "name": "Transcendent Band of Certainty",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[1200-2400] Hit Rate",
+   "+[60-80]% DMG",
+   "+[35-50]% Maximized DMG",
+   "[15-22]% DMG Amplification when Strength, Dexterity, and Intelligence are 200 or more",
+   "Activates double maximized DMG per 2 strikes",
+   "upon using Seal of Persistence",
+   "Deals triple maximized DMG per 3 strikes",
+   "Does not apply to skills with the Focus tag",
+   "+2000 Hit Rate upon Seal of Persistence Activation"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-blacksmiths-ring",
+  "name": "Transcendent Blacksmith's Ring",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [
+   "+[86-104]% DMG"
+  ],
+  "innate": [],
+  "options": [
+   "+[0.05-0.1] Speed",
+   "[1-3]% Max Barrier Regen/Sec upon charging Barrier",
+   "+[75-110]% Spell Hit Rate",
+   "[30-40]% Spell DMG Amplification when using Siphon Life",
+   "+[200-450] Barrier",
+   "10% Movement Speed Increase",
+   "HP Absorb stat of Siphon Life applies as Barrier Absorb",
+   "Max HP Absorb stat of Siphon Life applies as Max stat of Barrier Absorb"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-hamals-vine",
+  "name": "Transcendent Hamal's Vine",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Belt",
+  "category": "accessory",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[30-60] HP Regen/Sec",
+   "[8-14]% Sentry HP Amplification",
+   "+2 Sentry Projectile Count",
+   "+[15-50]% Recovery Potion Effect",
+   "+[15-50]% Enhance Potion Effect",
+   "Upon installing Frost Totem, creates an Area of Chill",
+   "[35-60]% Sentry DMG Amplification against Frozen enemies"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-hiras-charm",
+  "name": "Transcendent Hira's Charm",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [
+   "+[28.9-34]% Critical DMG"
+  ],
+  "innate": [],
+  "options": [
+   "[8-13]% DMG Amplification",
+   "+[80-100]% Critical DMG",
+   "+[34-40]% Attack Speed",
+   "+[100-120]% Hit Rate",
+   "+150% Frost Strike Range",
+   "+35% Frost Strike Freeze Chance",
+   "+[80-100]% Cold DMG"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-leos-flow",
+  "name": "Transcendent Leo's Flow",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[11.2-18]% Cast Speed",
+   "+[44-53]% Critical Rate",
+   "+[25-28]% Critical DMG",
+   "[7-9]% Lightning DMG Amplification",
+   "+[9.8-12.6]% Lightning Penetration",
+   "Lightning Energy will not be consumed when using Lightning Wave",
+   "25% Lightning Wave DMG Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-surging-knowledge",
+  "name": "Transcendent Surging Knowledge",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [
+   "+75% DMG"
+  ],
+  "innate": [],
+  "options": [
+   "+[103-113]-[146-160] Poison DMG",
+   "Additional Poison DMG on DMG equal to [10-20]% of DMG on every hit",
+   "+[5-10]% Maximization Chance",
+   "Gain Powerful Effect on Poison Area",
+   "Powerful Effect",
+   "Critical DMG +80%",
+   "Maximized DMG +50%",
+   "20% Poison DMG Amplification",
+   "DMG Taken 15% Decrease",
+   "Resource Cost 40% Dampening",
+   "Mana on hit +20"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-triahs-necklace",
+  "name": "Transcendent Triah's Necklace",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[30-50] Intelligence",
+   "10% Movement Speed Increase",
+   "[10-15]% DMG Amplification against Chilled enemies",
+   "Removes Blizzard Cooldown",
+   "+150% Blizzard Creation Range",
+   "-[7-5] Blizzard Mana Cost"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-vespers-tear",
+  "name": "Transcendent Vesper's Tear",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [
+   "+36% Mana Regen/Sec"
+  ],
+  "innate": [],
+  "options": [
+   "+400% Poison Orb Range",
+   "-1 Poison Orb Chain Count",
+   "-2 Poison Orb Projectile Count",
+   "+[110-130] Poison Resist",
+   "[22-27]% Poison DMG Amplification",
+   "[8-12]% Attack Speed Amplification",
+   "[8-12]% Cast Speed Amplification",
+   "+[2-3] Mana on every hit"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "vermilion-root",
+  "name": "Vermilion Root",
+  "transcendent": false,
+  "tier": 30,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 63,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "[25-35]% HP Dampening",
+   "50% Barrier Dampening",
+   "+[15-20]% Enhance Skill Rune Cooldown Recovery Speed",
+   "30% Skill Rune Duration Dampening",
+   "+30% Tenacious Regeneration Effect",
+   "10% Max HP Amplification for duration of Tenacious Regeneration",
+   "[0.5-0.8]% DMG Amplification per 10,000 Max HP for duration of Tenacious Regeneration"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "surging-knowledge",
+  "name": "Surging Knowledge",
+  "transcendent": false,
+  "tier": 28,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 49,
+  "requirement": null,
+  "implicit": [
+   "+9% Cast Speed"
+  ],
+  "innate": [],
+  "options": [
+   "+[58-68]-[83-99] Poison DMG",
+   "+[20-40]% Poison DMG",
+   "+50% Critical Rate",
+   "Gain Advantageous Effect on Poison Area",
+   "Advantageous Effect",
+   "Critical DMG +80%",
+   "Poison DMG +60%",
+   "DMG Taken 30% Dampening",
+   "Resource Cost 20% Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "acubens-mist",
+  "name": "Acuben's Mist",
+  "transcendent": false,
+  "tier": 27,
+  "gearType": "Belt",
+  "category": "accessory",
+  "reqLevel": 62,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[60-90] HP",
+   "+[10-18]% HP",
+   "+[10-15] Stats",
+   "+[5-10] Chaos Resist",
+   "+[25-30]% Potion Effect",
+   "Dagger Throw Projectile Count +9",
+   "Fires Dagger Throw Projectiles in a circle",
+   "+400 Dagger Throw Projectile Speed",
+   "Dagger Throw Projectile DMG 30% Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "band-of-certainty",
+  "name": "Band of Certainty",
+  "transcendent": false,
+  "tier": 25,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 59,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[300-1200] Hit Rate",
+   "+[40-60]% DMG",
+   "+[10-20]% Maximized DMG",
+   "Activates double maximized DMG per 2 strikes",
+   "upon using Seal of Persistence",
+   "Deals triple maximized DMG per 3 strikes",
+   "Does not apply to skills with the Focus tag",
+   "+2000 Hit Rate upon Seal of Persistence Activation"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "hiras-charm",
+  "name": "Hira's Charm",
+  "transcendent": false,
+  "tier": 25,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 46,
+  "requirement": null,
+  "implicit": [
+   "+22% Critical DMG"
+  ],
+  "innate": [],
+  "options": [
+   "+[80-95]% DMG",
+   "+[30-40]% Critical DMG",
+   "+[15-19]% Attack Speed",
+   "+[45-50]% Hit Rate",
+   "+125% Frost Strike Range"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "leos-flow",
+  "name": "Leo's Flow",
+  "transcendent": false,
+  "tier": 25,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 59,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[9-16] Intelligence",
+   "+[20-24] Element Resist",
+   "+[6.6-10.8]% Cast Speed",
+   "+[30-50]% Lightning DMG",
+   "Fixes Max Lightning Energy count to 5",
+   "Lightning Energy will not be consumed when using Lightning Wave",
+   "25% Lightning Wave DMG Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "vespers-tear",
+  "name": "Vesper's Tear",
+  "transcendent": false,
+  "tier": 25,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 46,
+  "requirement": null,
+  "implicit": [
+   "+32% Mana Regen/Sec"
+  ],
+  "innate": [],
+  "options": [
+   "+130% Poison Orb Range",
+   "-1 Poison Orb Chain Count",
+   "-2 Poison Orb Projectile Count",
+   "+[81-91] Poison Resist",
+   "+[40-50]% Poison DMG",
+   "+[20-25]% Attack Speed",
+   "+[20-25]% Cast Speed",
+   "+[60-70]% Mana Regen/Sec"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "acubens-crystal",
+  "name": "Acuben's Crystal",
+  "transcendent": false,
+  "tier": 24,
+  "gearType": "Belt",
+  "category": "accessory",
+  "reqLevel": 58,
+  "requirement": null,
+  "implicit": [
+   "+[5.1-6]% Attack Speed"
+  ],
+  "innate": [],
+  "options": [
+   "+[20-30]% HP",
+   "+[28-40]% Enhance Skill Rune Duration",
+   "+[20-35]% DMG",
+   "+[20-25] Chaos Resist",
+   "+[25-30] Element Resist",
+   "Reduces Piercing Arrow Projectile Speed",
+   "Creates additional Hits at set intervals while the Projectile travels",
+   "Dampens Piercing Arrow DMG by 50%",
+   "Fixed to 1 Projectile"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "triahs-necklace",
+  "name": "Triah's Necklace",
+  "transcendent": false,
+  "tier": 23,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 56,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[10-15] Intelligence",
+   "5% Movement Speed Increase",
+   "+[15-25]% DMG against Chilled enemies",
+   "Removes Blizzard Cooldown",
+   "+150% Blizzard Creation Range",
+   "-[5-3] Blizzard Mana Cost"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "vespers-cloud",
+  "name": "Vesper's Cloud",
+  "transcendent": false,
+  "tier": 23,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 58,
+  "requirement": null,
+  "implicit": [
+   "+[23-26]% Minion Critical Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+[46-50]% Minion Critical Rate",
+   "+[18-23]% Minion Critical DMG",
+   "+[51-65]% Minion Hit Rate",
+   "+[1-3] Minion Skill Rune Level",
+   "Sacred Devotion instantly reaches Max Stacks and applies as Aura upon use",
+   "Minion Enhance takes effect immediately for the duration.",
+   "Dampens DMG Taken by Minions by 5% per stack",
+   "Minion Element Resist +20",
+   "+[50-90]% Sacred Devotion Duration",
+   "Add 20 s to Sacred Devotion Cooldown"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "boreals-peace",
+  "name": "Boreal's Peace",
+  "transcendent": false,
+  "tier": 22,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 55,
+  "requirement": null,
+  "implicit": [
+   "[25-35]% Attack Speed Dampening"
+  ],
+  "innate": [],
+  "options": [
+   "[10-15]% DMG Taken Dampening",
+   "+[85-150] HP",
+   "+[20-40]% DMG",
+   "Rain of Arrows Projectile Count +2",
+   "+[18-22]% Mana Regen/Sec",
+   "Removes Rain of Arrows Cooldown",
+   "Amplifies Rain of Arrows Mana Cost by 15%",
+   "Rain of Arrows Projectile Creation Range +175%"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "sephdars-order",
+  "name": "Sephdar's Order",
+  "transcendent": false,
+  "tier": 22,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 55,
+  "requirement": null,
+  "implicit": [
+   "+29% Element DMG"
+  ],
+  "innate": [],
+  "options": [
+   "-2 Resource Cost",
+   "+[40-80]% Mana Regen/Sec",
+   "+[25-50]% Cold DMG",
+   "+[20-40]% Attack Speed",
+   "+[80-120]% Arctic Shard Area of Effect",
+   "Arctic Shard's Ice Pillars Now Spawn to the Left and Right"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "hamals-vine",
+  "name": "Hamal's Vine",
+  "transcendent": false,
+  "tier": 18,
+  "gearType": "Belt",
+  "category": "accessory",
+  "reqLevel": 40,
+  "requirement": null,
+  "implicit": [],
+  "innate": [],
+  "options": [
+   "+[15-20] HP Regen/Sec",
+   "+[20-35]% Sentry HP",
+   "+2 Sentry Projectile Count",
+   "+[5-10]% Recovery Potion Effect",
+   "Upon installing Frost Totem, creates an Area of Chill",
+   "[15-30]% Sentry DMG Amplification against Frozen enemies"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "spicas-ovation",
+  "name": "Spica's Ovation",
+  "transcendent": false,
+  "tier": 14,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 31,
+  "requirement": null,
+  "implicit": [
+   "+10% Sentry Attack Speed"
+  ],
+  "innate": [],
+  "options": [
+   "+[46-50]% Sentry Critical Rate",
+   "+[18-23]% Sentry Critical DMG",
+   "+[51-65]% Sentry Hit Rate",
+   "+[1-3] Sentry Skill Rune Level",
+   "Enchanted Sentry instantly reaches Max Stacks and applies as Aura upon use",
+   "Sentry Enhance takes effect immediately for the duration",
+   "+[50-90]% Enchanted Sentry Duration",
+   "Add 20 s to Enchanted Sentry Cooldown"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "star-usurper-s-belt",
+  "name": "Star Usurper’s Belt",
+  "transcendent": false,
+  "tier": 10,
+  "gearType": "Belt",
+  "category": "accessory",
+  "reqLevel": 1,
+  "requirement": null,
+  "implicit": [
+   "+25 Stats"
+  ],
+  "innate": [],
+  "options": [
+   "+25% HP",
+   "10% Movement Speed Amplification",
+   "+75% HP Potion Effect",
+   "+75% Mana Potion Effect",
+   "+100% Enhance Potion Effect",
+   "+35% Enhance Potion Duration"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "star-usurper-s-necklace",
+  "name": "Star Usurper’s Necklace",
+  "transcendent": false,
+  "tier": 10,
+  "gearType": "Necklace",
+  "category": "accessory",
+  "reqLevel": 1,
+  "requirement": null,
+  "implicit": [
+   "+8% DMG"
+  ],
+  "innate": [],
+  "options": [
+   "15% DMG Amplification",
+   "+10% Maximization Chance",
+   "+30% Maximized DMG",
+   "+70% Critical Rate",
+   "+70% Critical DMG",
+   "+1 Max Energy"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "star-usurper-s-ring",
+  "name": "Star Usurper’s Ring",
+  "transcendent": false,
+  "tier": 10,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 1,
+  "requirement": null,
+  "implicit": [
+   "+25 Stats"
+  ],
+  "innate": [],
+  "options": [
+   "+1000 Hit Rate",
+   "+10 Critical Rate",
+   "+75% Critical DMG",
+   "-3 Resource Cost",
+   "+30 Element Resist",
+   "+30 Chaos Resist",
+   "10% DMG Amplification"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "blacksmiths-ring",
+  "name": "Blacksmith's Ring",
+  "transcendent": false,
+  "tier": 8,
+  "gearType": "Ring",
+  "category": "accessory",
+  "reqLevel": 13,
+  "requirement": null,
+  "implicit": [
+   "+[21-25]% DMG"
+  ],
+  "innate": [],
+  "options": [
+   "10% Movement Speed Increase",
+   "1% Max Barrier Regen/Sec upon charging Barrier",
+   "+[18-22]% Spell Hit Rate",
+   "HP Absorb stat of Siphon Life applies as Barrier Absorb",
+   "Max HP Absorb stat of Siphon Life applies as Max stat of Barrier Absorb"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "bellatuss-spaulders",
+  "name": "Bellatus's Spaulders",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Intelligence 228",
+  "implicit": [
+   "+[153-165] Gear Barrier"
+  ],
+  "innate": [
+   "6% DMG Taken Dampening while Channeling"
+  ],
+  "options": [
+   "+[92-95] Gear Barrier",
+   "+[190-205]% Gear Barrier",
+   "+1 Channeling Skill Rune Level",
+   "+[60-82]% Critical DMG",
+   "+[38-45]% Maximized DMG",
+   "Grants the following effect every 1 s while Channeling (Duration: 3 s, Max Stacks: 5)",
+   "3% DMG Taken Dampening",
+   "4% DMG Amplification",
+   "+5% Area of Effect",
+   "Gain the following additional effect at Max Stacks",
+   "Trance effect",
+   "(DMG when Channeling +30%, Attack Speed when Channeling +15%, Cast Speed when Channeling +15%)"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "entangling-tendrils",
+  "name": "Entangling Tendrils",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 118 Dexterity 118",
+  "implicit": [
+   "+[195-220] Gear Armor",
+   "+[250-275] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+30% DoT"
+  ],
+  "options": [
+   "+[175-190]% Gear Armor",
+   "+[190-215]% Gear Dodge Rate",
+   "+[85-90]% DoT",
+   "+[15-25]% DoT Duration",
+   "[16-24]% Attack Speed Amplification",
+   "[16-24]% Cast Speed Amplification",
+   "[10-15]% DoT Amplification",
+   "50% Strike DMG Dampening",
+   "Converts 100% of % Strike DMG Increase to % DoT Increase",
+   "Converts 100% of % Strike DMG Amplification to % DoT Amplification"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "epaulet-of-unity",
+  "name": "Epaulet of Unity",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 105 Dexterity 105",
+  "implicit": [
+   "+[210-234] Gear Armor",
+   "+[299-333] Gear Dodge Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+[175-225] Gear Armor",
+   "+[115-140] Gear Dodge Rate",
+   "+[410-455]% Gear Armor",
+   "+[410-455]% Gear Dodge Rate",
+   "[15-25]% Chaos DMG Taken Dampening",
+   "+4% Critical Chance per 1 Holy Set score",
+   "+15% Critical DMG per 1 Holy Set score",
+   "+10% Maximization Chance per every 4 Holy Set score",
+   "+50% Maximization DMG per every 4 Holy Set score",
+   "Amplify DMG by 25% if 9 or more Divine Gear is equipped",
+   "Dampen DMG taken by 20% if 9 or more Divine Gear is equipped"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "flowing-vanguard",
+  "name": "Flowing Vanguard",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Intelligence 255",
+  "implicit": [
+   "+[252-282] Gear Barrier"
+  ],
+  "innate": [],
+  "options": [
+   "+[200-300]% Gear Barrier",
+   "[25-45]% Barrier Amplification",
+   "35% HP Dampening",
+   "[8-16]% DMG Taken Dampening while Barrier is active",
+   "Grants the following effects for 3 s on Hit (Max 5 stacks)",
+   "+5% Barrier Charge Cycle Recovery Speed",
+   "1% Max Barrier Regen/Sec upon charging Barrier",
+   "Grants additional effects at max stacks",
+   "5% Movement Speed Amplification",
+   "+5 Barrier on every hit",
+   "Upon Barrier Deactivation, grants the following effects for 3 s (Cooldown: 60 s)",
+   "Forced Barrier Charge",
+   "+1% Barrier Absorb on hit",
+   "1 of the options below will be imbued.",
+   "- Immune to Bleed[Chance 33.3%]",
+   "- Immune to Venom[Chance 33.3%]",
+   "- Immune to Burn[Chance 33.3%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "glory-of-submergence",
+  "name": "Glory of Submergence",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 118 Dexterity 118",
+  "implicit": [
+   "+[149-166] Gear Armor",
+   "+[249-277] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+[3-4]% Perfect Dodge"
+  ],
+  "options": [
+   "+[163-176]% Gear Armor",
+   "+[183-198]% Gear Dodge Rate",
+   "15% Movement Speed Dampening",
+   "+[50-100]% Movement Skill Rune Cooldown Recovery Speed",
+   "+[30-50] Element Resist",
+   "+[35-40] Chaos Resist",
+   "Amplifies DMG by 1% per 40 Movement Speed for 3 s upon using Movement Skill (Cooldown: 5 s)"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "silver-shadows-footprints",
+  "name": "Silver Shadow's Footprints",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 228",
+  "implicit": [
+   "+[553-614] Gear Armor"
+  ],
+  "innate": [
+   "40% Movement Speed Amplification"
+  ],
+  "options": [
+   "+[529-564] Gear Armor",
+   "+[225-239]% Gear Armor",
+   "+[80-85]% Critical Rate",
+   "+[40-45]% Critical DMG",
+   "[10-16]% DMG Amplification",
+   "The following effect for 3 s upon hit (Max 10 Stacks)",
+   "3% Attack Speed Amplification",
+   "3% Cast Speed Amplification",
+   "3% Movement Speed Amplification",
+   "Gain the following additional effect at Max Stacks",
+   "Movement Speed cannot fall below 1200"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "stellar-counterattack",
+  "name": "Stellar Counterattack",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Helmet",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 228",
+  "implicit": [
+   "+[1110-1250] Gear Armor"
+  ],
+  "innate": [
+   "+[45-50] Stats"
+  ],
+  "options": [
+   "+[240-260]% Gear Armor",
+   "+[20-26] Element Resist",
+   "+[15-23] Chaos Resist",
+   "[16-21]% DMG Amplification",
+   "Doubles the increased Zodiac Stats",
+   "Does not stack with identical effects",
+   "1 of the options below will be imbued.",
+   "- +[25-30]% Enhance Skill Rune Effect[Chance 33.3%]",
+   "- +[25-30]% Enhance Potion Effect[Chance 33.3%]",
+   "- +[25-30]% Shout Skill Rune Effect[Chance 33.3%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-acubens-garden",
+  "name": "Transcendent Acuben's Garden",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Intelligence 270",
+  "implicit": [
+   "+[134-148] Gear Barrier"
+  ],
+  "innate": [
+   "+[72-80] Mana"
+  ],
+  "options": [
+   "+[60-64] Gear Barrier",
+   "+[170-179]% Gear Barrier",
+   "[50-80]% Movement Speed Increase",
+   "[20-40]% Cast Speed Amplification",
+   "[11-16]% Poison DMG Amplification",
+   "+[30-40] Poison Resist",
+   "Immune to Venom",
+   "Poison Cloud Hit Count Changed to 3",
+   "When Hitting a Venom-Affected Enemy, 50% Chance to Trigger 1 Additional Hit (Once per Skill)",
+   "Poison Cloud DMG [30-45]% Reduced"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-acubens-nebula",
+  "name": "Transcendent Acuben's Nebula",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Helmet",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Intelligence 270",
+  "implicit": [
+   "+[219-369] Gear Barrier"
+  ],
+  "innate": [
+   "Immune to Freeze"
+  ],
+  "options": [
+   "+[94-100] Gear Barrier",
+   "+[188-199]% Gear Barrier",
+   "Frost Thorn Mana Cost -[9-4]",
+   "+5 Fixed Max Cold Energy",
+   "+[20-50]% Cold Energy Effect",
+   "+[35-55] Chaos Resist",
+   "+[80-89] Cold Resist",
+   "[12-15]% DMG upon Spell Amplification",
+   "Frost Thorn Projectile Count is fixed to 10 and cannot be increased",
+   "Frost Thorn Projectile Count does not increase with Cold Energy",
+   "Changes Frost Thorn DMG Dampening when hitting the same target to 10%",
+   "Frost Thorn Projectile Pierce Count +2"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-aquillas-sunlight",
+  "name": "Transcendent Aquilla's Sunlight",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 270",
+  "implicit": [
+   "+[305-350] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+[34-40]% DMG against Elites"
+  ],
+  "options": [
+   "+[658-749] Gear Dodge Rate",
+   "+[229-241]% Gear Dodge Rate",
+   "[15-20]% DMG Taken Decrease",
+   "[25-40]% Attack Speed Amplification",
+   "+[40-50]% HP",
+   "[10-18]% Skill Rune Cooldown Dampening",
+   "+[10-20]% Skill Rune Duration",
+   "Improved Senses Effect Added",
+   "Perfect Dodge +10%",
+   "DMG 3% Amplified for 5 Sec When Dodge Activates (Up to 5 Stacks)",
+   "Perfect Dodge Immediately Applies Maximum Stacks When Triggered",
+   "Improved Senses Skill Rune Cooldown 30% Dampening",
+   "+20% Improved Senses Skill Rune Duration"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-critical-point-venom-sac",
+  "name": "Transcendent Critical Point Venom Sac",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 118 Intelligence 118",
+  "implicit": [
+   "+[280-351] Gear Dodge Rate",
+   "+[52-58] Gear Barrier"
+  ],
+  "innate": [
+   "[6.7-7.8]% Resource Cost Dampening"
+  ],
+  "options": [
+   "+[195-209]% Gear Dodge Rate",
+   "+[153-165]% Gear Barrier",
+   "Inflicts Poison on self on Hit while using Poison Explosion",
+   "+4% Poison Chance per Poison stack on self while using Poison Explosion",
+   "Unaffected by Poison while using Poison Explosion",
+   "Amplifies DMG by 2% per Poison stack on self",
+   "+[50-100]% Venom Duration",
+   "[5-12]% Poison DMG Amplification",
+   "Poison Max Stacks +[1-2] while using Poison Explosion",
+   "Amplifies Poison DMG by [150-250]% while using Poison Explosion"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-mirasetis-miracle",
+  "name": "Transcendent Miraseti's Miracle",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 270",
+  "implicit": [
+   "+[614-722] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+[85-90] Lightning Resist"
+  ],
+  "options": [
+   "+[656-745] Gear Dodge Rate",
+   "+[251-265]% Gear Dodge Rate",
+   "+[50-75]% Critical DMG",
+   "[10-12]% Lightning DMG Amplification",
+   "[8-10]% Attack Speed Amplification",
+   "+[8-13]% Shock Chance",
+   "Triggers additional Lightning attacks that have the same DMG as the Lightning Particles upon hitting an enemy with Unleash Lightning Shot"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-spicas-sagacity",
+  "name": "Transcendent Spica's Sagacity",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 270",
+  "implicit": [
+   "+[590-655] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+30 Dexterity"
+  ],
+  "options": [
+   "+[662-748] Gear Dodge Rate",
+   "+[230-241]% Gear Dodge Rate",
+   "+[40-75]% Projectile DMG",
+   "+[60-80]% Hit Rate",
+   "+[3-6] Mana on every hit",
+   "[50-80]% Movement Speed Increase",
+   "Instant Acceleration Movement Range +250",
+   "15% DMG Amplification while Shrewdness is active",
+   "+[20-45]% Shrewdness effect",
+   "+[90-130]% Shrewdness Duration"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-vespers-rest",
+  "name": "Transcendent Vesper's Rest",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 270",
+  "implicit": [
+   "+[1485-1650] Gear Armor"
+  ],
+  "innate": [
+   "+68 Strength"
+  ],
+  "options": [
+   "+[970-1050] Gear Armor",
+   "+[207-215]% Gear Armor",
+   "[10-25]% HP Amplification",
+   "+[20-40] Element Resist",
+   "+[10-35] Chaos Resist",
+   "[5-9]% DMG Amplification against Bleeding enemies",
+   "Immune to Bleed",
+   "+[20-30] Bleed Rate",
+   "Domain of Blood Range increased to 750.",
+   "Domain of Blood Effects are further enhanced:",
+   "Bloodshed DMG 10% Amplified",
+   "Bloodshed Weapon Range 20% Increased"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "ultimate-bellatuss-spaulders",
+  "name": "Ultimate Bellatus's Spaulders",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Intelligence 228",
+  "implicit": [
+   "+[230-250] Gear Barrier"
+  ],
+  "innate": [
+   "12% DMG Taken Dampening while Channeling"
+  ],
+  "options": [
+   "+[120-124] Gear Barrier",
+   "+[247-267]% Gear Barrier",
+   "+2 Channeling Skill Rune Level",
+   "+[83-150]% Critical DMG",
+   "+[46-90]% Maximized DMG",
+   "Grants the following effect every 1 s while Channeling (Duration: 3 s, Max Stacks: 5)",
+   "5% DMG Taken Dampening",
+   "7% DMG Amplification",
+   "+10% Area of Effect",
+   "Gain the following additional effect at Max Stacks",
+   "Trance effect",
+   "(DMG when Channeling +30%, Attack Speed when Channeling +15%, Cast Speed when Channeling +15%)",
+   "+200% Trance Effect"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-entangling-tendrils",
+  "name": "Ultimate Entangling Tendrils",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 118 Dexterity 118",
+  "implicit": [
+   "+[250-290] Gear Armor",
+   "+[325-360] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+60% DoT"
+  ],
+  "options": [
+   "+[195-220]% Gear Armor",
+   "+[220-250]% Gear Dodge Rate",
+   "+[95-120]% DoT",
+   "+[26-40]% DoT Duration",
+   "[25-40]% Attack Speed Amplification",
+   "[25-40]% Cast Speed Amplification",
+   "[16-24]% DoT Amplification",
+   "50% Strike DMG Dampening",
+   "Converts 100% of % Strike DMG Increase to % DoT Increase",
+   "Converts 100% of % Strike DMG Amplification to % DoT Amplification"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-epaulet-of-unity",
+  "name": "Ultimate Epaulet of Unity",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 105 Dexterity 105",
+  "implicit": [
+   "+[234-292] Gear Armor",
+   "+[333-416] Gear Dodge Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+[225-275] Gear Armor",
+   "+[140-190] Gear Dodge Rate",
+   "+[455-500]% Gear Armor",
+   "+[455-500]% Gear Dodge Rate",
+   "[25-35]% Chaos DMG Taken Dampening",
+   "+7% Critical Chance per 1 Holy Set score",
+   "+25% Critical DMG per 1 Holy Set score",
+   "+20% Maximization Chance per every 4 Holy Set score",
+   "+100% Maximization DMG per every 4 Holy Set score",
+   "Amplify DMG by 35% if 9 or more Divine Gear is equipped",
+   "Dampen DMG taken by 30% if 9 or more Divine Gear is equipped"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-flowing-vanguard",
+  "name": "Ultimate Flowing Vanguard",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Intelligence 255",
+  "implicit": [
+   "+[280-314] Gear Barrier"
+  ],
+  "innate": [],
+  "options": [
+   "+[300-400]% Gear Barrier",
+   "[45-75]% Barrier Amplification",
+   "35% HP Dampening",
+   "[16-25]% DMG Taken Dampening while Barrier is active",
+   "Grants the following effects for 3 s on Hit (Max 5 stacks)",
+   "+5% Barrier Charge Cycle Recovery Speed",
+   "1% Max Barrier Regen/Sec upon charging Barrier",
+   "Grants additional effects at max stacks",
+   "5% Movement Speed Amplification",
+   "+5 Barrier on every hit",
+   "Upon Barrier Deactivation, grants the following effects for 3 s (Cooldown: 60 s)",
+   "Forced Barrier Charge",
+   "+1% Barrier Absorb on hit",
+   "1 of the options below will be imbued.",
+   "- Immune to Bleed[Chance 31.7%]",
+   "- Immune to Venom[Chance 31.7%]",
+   "- Immune to Burn[Chance 31.7%]",
+   "- Immune to DoT[Chance 5.0%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-glory-of-submergence",
+  "name": "Ultimate Glory of Submergence",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 118 Dexterity 118",
+  "implicit": [
+   "+[176-197] Gear Armor",
+   "+[295-329] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+[5-7]% Perfect Dodge"
+  ],
+  "options": [
+   "+[177-190]% Gear Armor",
+   "+[199-214]% Gear Dodge Rate",
+   "10% Movement Speed Dampening",
+   "+[75-150]% Movement Skill Rune Cooldown Recovery Speed",
+   "+[50-70] Element Resist",
+   "+[45-60] Chaos Resist",
+   "Amplifies DMG by 1% per 25 Movement Speed for 3 s upon using Movement Skill (Cooldown: 5 s)"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-silver-shadows-footprints",
+  "name": "Ultimate Silver Shadow's Footprints",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 228",
+  "implicit": [
+   "+[736-817] Gear Armor"
+  ],
+  "innate": [
+   "40% Movement Speed Amplification"
+  ],
+  "options": [
+   "+[635-677] Gear Armor",
+   "+[270-287]% Gear Armor",
+   "+[86-110]% Critical Rate",
+   "+[46-105]% Critical DMG",
+   "[17-32]% DMG Amplification",
+   "The following effect for 3 s upon hit (Max 10 Stacks)",
+   "3% Attack Speed Amplification",
+   "3% Cast Speed Amplification",
+   "3% Movement Speed Amplification",
+   "Gain the following additional effect at Max Stacks",
+   "Movement Speed cannot fall below 1200",
+   "Immune to Curse of Speed"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-stellar-counterattack",
+  "name": "Ultimate Stellar Counterattack",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Helmet",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 228",
+  "implicit": [
+   "+[1450-1650] Gear Armor"
+  ],
+  "innate": [
+   "+[55-65] Stats"
+  ],
+  "options": [
+   "+[260-320]% Gear Armor",
+   "+[27-45] Element Resist",
+   "+[24-40] Chaos Resist",
+   "[22-28]% DMG Amplification",
+   "Doubles the increased Zodiac Stats",
+   "Does not stack with identical effects",
+   "1 of the options below will be imbued.",
+   "- +[35-45]% Enhance Skill Rune Effect[Chance 33.3%]",
+   "- +[35-45]% Enhance Potion Effect[Chance 33.3%]",
+   "- +[35-45]% Shout Skill Rune Effect[Chance 33.3%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "hamals-verdancy",
+  "name": "Hamal's Verdancy",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 115 Dexterity 115",
+  "implicit": [
+   "+[165-185] Gear Armor",
+   "+[209-233] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+[9-10]% Maximized DMG"
+  ],
+  "options": [
+   "+[250-350]% Gear Armor",
+   "+[250-350]% Gear Dodge Rate",
+   "[5-10]% Attack Speed Amplification",
+   "[5-10]% Cast Speed Amplification",
+   "[8-16]% chance to deal double Maximized DMG on hit",
+   "[4-8]% chance to deal triple Maximized DMG on hit",
+   "+[30-60]% Maximized DMG",
+   "+[35-55] Element Resist",
+   "[45-55]% DMG Amplification against Elites"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "numbing-armor",
+  "name": "Numbing Armor",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 250",
+  "implicit": [
+   "+[1750-1900] Gear Armor"
+  ],
+  "innate": [],
+  "options": [
+   "+[300-350]% Gear Armor",
+   "[60-85]% HP Amplification",
+   "[15-18]% DMG Taken Dampening",
+   "Gain Invincibility for 3 s at 20% or less HP (Cooldown: 45 s)",
+   "Immune to Wound",
+   "Barrier Disabled",
+   "+[45-50]% Enhance Skill Rune Cooldown Recovery Speed"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "stras-boots",
+  "name": "Stra's Boots",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Dexterity 223",
+  "implicit": [
+   "+[585-650] Gear Dodge Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+[446-457] Gear Dodge Rate",
+   "+[140-175]% Gear Dodge Rate",
+   "[55-60]% Movement Speed Increase",
+   "Immune to Movement Speed decrease",
+   "Sharpness effect",
+   "(Critical Rate +50%, Critical DMG +25%)",
+   "+[100-200]% Sharpness Effect",
+   "+[4.5-9]% Perfect Dodge for 3 s on Critical Hit",
+   "+[150-200]% Critical DMG for 3 s upon Perfect Dodge",
+   "10% chance to gain [5-20]% DMG Amplification for 3 s on Critical Hit",
+   "+[150-200]% Critical DMG against Elites"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-acubens-wrath",
+  "name": "Transcendent Acuben's Wrath",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Intelligence 223",
+  "implicit": [
+   "+[145-163] Gear Barrier"
+  ],
+  "innate": [],
+  "options": [
+   "+[183-193]% Gear Barrier",
+   "[50-55]% Movement Speed Increase",
+   "+[15-25] Chaos Resist",
+   "+[40-45]% Critical DMG",
+   "+[20-30]% Maximized DMG",
+   "Gain the effects below for 5 s upon Divine Punishment Hit (Max 5 Stacks)",
+   "Divine Punishment Area of Effect +10%",
+   "Divine Punishment Spell Critical Rate +15%",
+   "Divine Punishment Spell Critical DMG +15%",
+   "At Max Stacks, Enhanced Lightning Bolt Chance 100%"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-aftershock",
+  "name": "Transcendent Aftershock",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 223",
+  "implicit": [
+   "+[318-353] Gear Armor"
+  ],
+  "innate": [],
+  "options": [
+   "+[460-505] Gear Armor",
+   "+[200-210]% Gear Armor",
+   "+[35-38]% Critical DMG",
+   "[15-19]% Attack Speed Amplification",
+   "+[30-50]% Earth Energy Duration",
+   "+[15-28]% Earth Energy Effect",
+   "+[2-4] Mana on every hit",
+   "2 Earth Energy Spent Reduction on Fissure's Additional Fissures Hit",
+   "+[200-250]% Fissure Range"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-alyssas-landing",
+  "name": "Transcendent Alyssa's Landing",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 223",
+  "implicit": [
+   "+[430-479] Gear Armor"
+  ],
+  "innate": [],
+  "options": [
+   "+[207-232]% Gear Armor",
+   "Decrease DMG Taken by 30% For 1 Second, Drag Enemies in, and Trigger Additional Strikes When Using Leap Attack",
+   "+[200-300]% Leap Attack Range",
+   "+[8-12]% HP",
+   "[10-12]% Melee DMG Amplification",
+   "[50-65]% Movement Speed Increase",
+   "+[40-70]% DMG for 3 s upon Using Leap Attack",
+   "+[40-50]% Leap Attack Cooldown Recovery Speed"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-aphross-veil",
+  "name": "Transcendent Aphros's Veil",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Helmet",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 98 Dexterity 98",
+  "implicit": [
+   "+[954-1060] Gear Armor",
+   "+[780-791] Gear Dodge Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+[89-104] Gear Armor",
+   "+[62-79] Gear Dodge Rate",
+   "[9-12]% Melee DMG Amplification",
+   "+[11-14.5]% Critical DMG",
+   "[5-10]% HP Amplification",
+   "+[32-38] Element Resist",
+   "+[21-30]% Enhance Skill Rune Cooldown Recovery Speed",
+   "Always gain Max Stacks when using Domain of Strength",
+   "[20-30]% Domain of Strength DMG Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-aquillas-claw",
+  "name": "Transcendent Aquilla's Claw",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 115 Dexterity 115",
+  "implicit": [
+   "+[165-185] Gear Armor",
+   "+[209-233] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+[34-40]% DMG against Elites"
+  ],
+  "options": [
+   "+[235-250] Gear Armor",
+   "+[220-255] Gear Dodge Rate",
+   "+[155-170]% Gear Armor",
+   "+[175-190]% Gear Dodge Rate",
+   "+[63-68]% Critical Rate",
+   "[8-10]% Attack Speed Amplification",
+   "+[80-110]% Combo Critical DMG",
+   "Increase Combo Attack Count by 1"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-aquillas-eternity",
+  "name": "Transcendent Aquilla's Eternity",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 250",
+  "implicit": [
+   "+[1733-1915] Gear Armor"
+  ],
+  "innate": [],
+  "options": [
+   "+[215-229]% Gear Armor",
+   "-5 Resource Cost",
+   "[20-30]% HP Amplification",
+   "[20-30]% Barrier Amplification",
+   "+[35-50]% Veil of Protection Skill Rune effect",
+   "Both Veil effects applies upon using Veil of Protection",
+   "+30% Earth Veil Effect",
+   "+30% Wind Veil Effect",
+   "Immune to Reflect upon using Veil of Protection"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-cold-comfort",
+  "name": "Transcendent Cold Comfort",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Intelligence 280",
+  "implicit": [
+   "+[132-150] Gear Barrier"
+  ],
+  "innate": [
+   "+[120-165]% Gear Barrier"
+  ],
+  "options": [
+   "-10 Fire Resist",
+   "+[42-50] Cold Resist",
+   "Immune to Freeze when Intelligence is higher than Dexterity",
+   "Frost Bomb [25-32]% Cold DMG Amplification",
+   "[8-15]% Fire DMG Dampening",
+   "[11-15]% DMG Amplification against Chilled enemies",
+   "Fires a Frost Bomb forward that Pierces all enemies.",
+   "Frost Bomb periodically fires Projectiles in a circular pattern."
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-cold-blooded-burden",
+  "name": "Transcendent Cold-blooded Burden",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 115 Intelligence 115",
+  "implicit": [
+   "+[189-210] Gear Armor",
+   "+[52-58] Gear Barrier"
+  ],
+  "innate": [
+   "[6.7-7.8]% Resource Cost Dampening"
+  ],
+  "options": [
+   "+[390-423]% Gear Armor",
+   "+[64-70]% Gear Barrier",
+   "+75% Bleed Rate While Using Blood Explosion",
+   "Immune to Bleed while using Blood Explosion",
+   "[12-18]% Amplification DMG to Bleeding Enemies While Using Blood Explosion",
+   "+[1-3] Max Bleed Stacks While Using Blood Explosion",
+   "[200-300]% Amplification Bleed DMG While Using Blood Explosion",
+   "[5-12]% Physical DMG Amplification",
+   "+[50-75]% Critical DMG"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-decomposers-contradiction",
+  "name": "Transcendent Decomposer's Contradiction",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 105 Dexterity 105",
+  "implicit": [
+   "+[195-225] Gear Armor",
+   "+[210-255] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+[33-38]% Melee DMG"
+  ],
+  "options": [
+   "+[18-24]% HP",
+   "+[25-50]% DMG",
+   "+[15-30] Chaos Resist",
+   "+[25-35]% Critical Rate",
+   "+[30-50]% Critical DMG",
+   "Activates additional Crescent Slashes to the sides",
+   "25% Crescent Slash DMG Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-enemy-in-the-mirror",
+  "name": "Transcendent Enemy in the Mirror",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 255",
+  "implicit": [
+   "+[2343-2586] Gear Dodge Rate"
+  ],
+  "innate": [
+   "25% Reflect DMG Taken Decrease"
+  ],
+  "options": [
+   "+[1250-1300] Gear Dodge Rate",
+   "+[250-280]% Gear Dodge Rate",
+   "[25-35]% HP Amplification",
+   "+[75-90] Element Resist",
+   "+[65-75] Chaos Resist",
+   "-4 Resource Cost",
+   "[16-25]% Reflect DMG Amplification",
+   "Counterattack Trigger Cooldown changed to 0.3 s",
+   "While Counterattack is active, Reflect DMG related stats are converted into Counterattack DMG stats",
+   "(Applies the higher value between Physical and Elemental % Reflect DMG Taken Decrease as Counterattack DMG % Amplification)"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-leg-bone-of-the-wind",
+  "name": "Transcendent Leg Bone of the Wind",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 165 Dexterity 165",
+  "implicit": [
+   "+[289-327] Gear Armor",
+   "+[403-438] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+[61-72] Cold Resist"
+  ],
+  "options": [
+   "+[150-230]% Gear Armor",
+   "+[200-230]% Gear Dodge Rate",
+   "[80-100]% Movement Speed Increase",
+   "Ice Crystal Arrow [40-60]% Cold DMG Amplification",
+   "[6-9]% DMG Amplification against Chilled enemies",
+   "Own maxed stats of Cold Crystal upon using Ice Crystal Arrow"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-leos-roar",
+  "name": "Transcendent Leo's Roar",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 105 Dexterity 105",
+  "implicit": [
+   "+[200-300] Gear Armor",
+   "+[100-200] Gear Dodge Rate"
+  ],
+  "innate": [
+   "[6.7-7.8]% Resource Cost Dampening"
+  ],
+  "options": [
+   "+[185-365] Gear Armor",
+   "+[87-168] Gear Dodge Rate",
+   "+[90-150]% Gear Armor",
+   "+[150-180]% Gear Dodge Rate",
+   "[30-50]% Movement Speed Increase",
+   "+[15-30] Block Expertise with Shield equipped",
+   "HP Absorb on Hit for 2 s upon Blocking +[2-4]%",
+   "+4 Shield Strike Range Count",
+   "+120 Shield Strike Interval Angle",
+   "+120 Shield Strike Max Angle"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-lingering-summer",
+  "name": "Transcendent Lingering Summer",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Intelligence 223",
+  "implicit": [
+   "+[130-146] Gear Barrier"
+  ],
+  "innate": [
+   "+[72-80] Mana"
+  ],
+  "options": [
+   "+[105-115]-[148-163] Poison DMG",
+   "[16-26]% HP Amplification",
+   "Chance to inflict up to 4 stacks of Black Plague",
+   "[35-50]% Movement Speed Increase",
+   "HP Recovery on Hit while Channeling +[100-120]",
+   "[35-45]% DMG Taken Dampening while Channeling"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-preles-gauntlets",
+  "name": "Transcendent Prele's Gauntlets",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 105 Intelligence 105",
+  "implicit": [
+   "+[209-234] Gear Armor",
+   "+[78-80] Gear Barrier"
+  ],
+  "innate": [
+   "[6.4-8.8]% Resource Cost Dampening"
+  ],
+  "options": [
+   "[5-8]% Minion DMG Amplification",
+   "+[25-34]% Minion HP",
+   "+[20-31]% Minion Attack Speed",
+   "+[20-31]% Minion Cast Speed",
+   "+[62-70]% Minion Critical Rate",
+   "+[31-35.5]% Minion Critical DMG",
+   "1 of the options below will be imbued.",
+   "- Gain Bursting Fusion Buff Lv.3 upon summoning Bursting Rune Knight when affected by Hazy Melody High Tone",
+   "75DMG Taken % Dampening for 10 s",
+   "100% Bursting Rune Knight Cooldown Amplification[Chance 16.7%]",
+   "- Gain Arctic Fusion Buff Lv.3 upon summoning Arctic Rune Knight when affected by Hazy Melody High Tone",
+   "75DMG Taken % Dampening for 10 s",
+   "100% Arctic Rune Knight Cooldown Amplification[Chance 16.7%]",
+   "- Gain Lightning Fusion Buff Lv.3 upon summoning Lightning Rune Knight when affected by Hazy Melody High Tone",
+   "75DMG Taken % Dampening for 10 s",
+   "100% Lighting Rune Knight Cooldown Amplification[Chance 16.7%]",
+   "- Gain Deadly Poison Fusion Buff Lv.3 upon summoning Deadly Poison Rune Knight when affected by Hazy Melody High Tone",
+   "75DMG Taken % Dampening for 10 s",
+   "100% Deadly Poison Rune Knight Cooldown Amplification[Chance 16.7%]",
+   "- Gain Wrathful Fusion Buff Lv.3 upon summoning Wrathful Rune Knight when affected by Hazy Melody High Tone",
+   "75DMG Taken % Dampening for 10 s",
+   "100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]",
+   "- Gain Fury Fusion Buff Lv.3 upon summoning Fury Rune Knight when affected by Hazy Melody High Tone",
+   "75% DMG Taken % Dampening for 10 s",
+   "100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-spicas-light",
+  "name": "Transcendent Spica's Light",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Intelligence 223",
+  "implicit": [
+   "+[130-146] Gear Barrier"
+  ],
+  "innate": [
+   "+[10.8-12]% Element Penetration"
+  ],
+  "options": [
+   "+[169-187]% Gear Barrier",
+   "+[40-50]% Critical Rate",
+   "+[100-125]% Critical DMG",
+   "[30-38]% Flames of Death DMG Amplification",
+   "[20-35]% Cast Speed Amplification",
+   "+[15-25]% Area of Effect",
+   "+[200-250]% Spreading Flames Buff Duration",
+   "100% chance to gain 2 Fire Energy upon using Flames of Death"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-the-first-returnee",
+  "name": "Transcendent The First Returnee",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 260",
+  "implicit": [
+   "+[600-630] Gear Armor"
+  ],
+  "innate": [
+   "+68 Strength"
+  ],
+  "options": [
+   "+[375-420] Gear Armor",
+   "+[105-150]% Gear Armor",
+   "+[365-600] HP",
+   "+[21-28]% HP",
+   "[12-20]% Attack Speed Amplification",
+   "Additional Physical DMG equal to [5-15]% of DMG on every hit",
+   "[22-30]% Fierce Strike DMG Amplification against Stunned enemies",
+   "Triggers Ultimate Blow every 3 Fierce Strikes",
+   "Increases range of Ultimate Blow by 200%"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-twilight-veil",
+  "name": "Transcendent Twilight Veil",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Intelligence 247",
+  "implicit": [
+   "+[250-270] Gear Barrier"
+  ],
+  "innate": [
+   "+[90-140]% Gear Barrier"
+  ],
+  "options": [
+   "+[150-250] Mana",
+   "+[17-20]% Mana Regen/Sec",
+   "5% Cold DMG Amplification per 40 Cold Resist upon using Cold Armor (Max stacks:  30%)",
+   "+5% Barrier Charge Cycle Recovery Speed",
+   "1.5% Max Barrier Regen/Sec upon charging Barrier",
+   "[20-25]% DMG from Elites Dampening",
+   "[300-450]% Barrier Increase upon using Cold Armor",
+   "Barrier Recovery to the Max value upon reaching below 1% (Cooldown 90 s)",
+   "[30-50]% DMG Taken Decrease for 3 s upon Barrier Deactivation"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-vanguards-gaze",
+  "name": "Transcendent Vanguard's Gaze",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Helmet",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Dexterity 170",
+  "implicit": [
+   "+[954-1060] Gear Dodge Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+[350-400] Gear Dodge Rate",
+   "+[15-20] Chaos Resist",
+   "+[25-35]% Sentry Hit Rate",
+   "Sentry gains Sharpness effect",
+   "( Critical Rate +50%, Critical DMG +25% )",
+   "Sentry gains Close Range Shot effect",
+   "( Amplifies Projectile DMG up to 20% the closer you are to the enemy upon hitting within 600 distance )",
+   "[20-35]% Sentry Close Range Shot Effect",
+   "[10-20]% Sentry DMG Amplification against Bleeding enemies",
+   "Piercing Sentry Projectile Count +2",
+   "Piercing Sentry Curve +1"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-vespers-destruction",
+  "name": "Transcendent Vesper's Destruction",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Dexterity 280",
+  "implicit": [
+   "+[304-348] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+10 Chaos Resist"
+  ],
+  "options": [
+   "+[301-352] Gear Dodge Rate",
+   "+[132-150]% Gear Dodge Rate",
+   "Deadly Poison Claw DMG [5-12]% Dampening",
+   "Deadly Poison Claw [3-7]%  DMG Amplification per 1 Poison Energy",
+   "+[10-30]% Critical DMG",
+   "+[30-50]% Poison Energy Effect",
+   "Increases Deadly Poison Claw range by 5% per Poison Energy stack",
+   "Increase is doubled when Dual Wielding"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "ultimate-hamals-verdancy",
+  "name": "Ultimate Hamal's Verdancy",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 115 Dexterity 115",
+  "implicit": [
+   "+[217-243] Gear Armor",
+   "+[274-307] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+[9-10]% Maximized DMG"
+  ],
+  "options": [
+   "+[350-450]% Gear Armor",
+   "+[350-450]% Gear Dodge Rate",
+   "[10-15]% Attack Speed Amplification",
+   "[10-15]% Cast Speed Amplification",
+   "[12-24]% chance to deal double Maximized DMG on hit",
+   "[6-12]% chance to deal triple Maximized DMG on hit",
+   "+[60-90]% Maximized DMG",
+   "+[55-75] Element Resist",
+   "[55-105]% DMG Amplification against Elites"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-numbing-armor",
+  "name": "Ultimate Numbing Armor",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 250",
+  "implicit": [
+   "+[1925-2090] Gear Armor"
+  ],
+  "innate": [],
+  "options": [
+   "+[350-400]% Gear Armor",
+   "[85-110]% HP Amplification",
+   "[18-25]% DMG Taken Dampening",
+   "Gain Invincibility for 3 s at 20% or less HP (Cooldown: 45 s)",
+   "Immune to Wound",
+   "Barrier Disabled",
+   "+[45-50]% Enhance Skill Rune Cooldown Recovery Speed"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-stras-boots",
+  "name": "Ultimate Stra's Boots",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 79,
+  "requirement": "Requires Dexterity 223",
+  "implicit": [
+   "+[672-747] Gear Dodge Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+[446-457] Gear Dodge Rate",
+   "+[175-210]% Gear Dodge Rate",
+   "[60-65]% Movement Speed Increase",
+   "Immune to Movement Speed decrease",
+   "Sharpness effect",
+   "(Critical Rate +50%, Critical DMG +25%)",
+   "+[200-300]% Sharpness Effect",
+   "+[9-13.5]% Perfect Dodge for 3 s on Critical Hit",
+   "+[200-250]% Critical DMG for 3 s upon Perfect Dodge",
+   "10% chance to gain [20-35]% DMG Amplification for 3 s on Critical Hit",
+   "+[200-250]% Critical DMG against Elites"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "leg-bone-of-the-wind",
+  "name": "Leg Bone of the Wind",
+  "transcendent": false,
+  "tier": 32,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 73,
+  "requirement": "Requires Strength 109 Dexterity 109",
+  "implicit": [
+   "+[258-297] Gear Armor",
+   "+[349-397] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+[43-55] Cold Resist"
+  ],
+  "options": [
+   "+[120-142]% Gear Armor",
+   "+[134-157]% Gear Dodge Rate",
+   "[50-70]% Movement Speed Increase",
+   "+[20-30]% DMG against Chilled enemies",
+   "+[30-50]% Ice Crystal Arrow Cold DMG",
+   "Own maxed stats of Cold Crystal upon using Ice Crystal Arrow"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "acubens-wrath",
+  "name": "Acuben's Wrath",
+  "transcendent": false,
+  "tier": 31,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 70,
+  "requirement": "Requires Intelligence 208",
+  "implicit": [
+   "+[117-130] Gear Barrier"
+  ],
+  "innate": [],
+  "options": [
+   "+[161-171]% Gear Barrier",
+   "[40-45]% Movement Speed Increase",
+   "+[5-15] Chaos Resist",
+   "+[25-30]% Critical DMG",
+   "+[12-16]% Maximized DMG",
+   "Gain the effects below for 5 s upon Divine Punishment Hit (Max 5 Stacks)",
+   "Divine Punishment Area of Effect +10%",
+   "Divine Punishment Spell Critical Rate +15%",
+   "Divine Punishment Spell Critical DMG +15%",
+   "At Max Stacks, Enhanced Lightning Bolt Chance 100%"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "critical-point-venom-sac",
+  "name": "Critical Point Venom Sac",
+  "transcendent": false,
+  "tier": 30,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 69,
+  "requirement": "Requires Dexterity 85 Intelligence 85",
+  "implicit": [
+   "+[192-241] Gear Dodge Rate",
+   "+[37-38] Gear Barrier"
+  ],
+  "innate": [
+   "3% Resource Cost Dampening"
+  ],
+  "options": [
+   "+[112-134]% Gear Dodge Rate",
+   "+[85-100]% Gear Barrier",
+   "Inflicts Poison on self on Hit while using Poison Explosion",
+   "+4% Poison Chance per Poison stack on self while using Poison Explosion",
+   "Unaffected by Poison while using Poison Explosion",
+   "Amplifies DMG by 2% per Poison stack on self",
+   "+[25-40]% Venom Duration",
+   "+[40-60]% Poison DMG"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "cold-comfort",
+  "name": "Cold Comfort",
+  "transcendent": false,
+  "tier": 28,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 63,
+  "requirement": "Requires Intelligence 160",
+  "implicit": [
+   "+[95-111] Gear Barrier"
+  ],
+  "innate": [
+   "+[23-30]% Gear Barrier"
+  ],
+  "options": [
+   "+[17-25]% Frost Bomb Cold DMG",
+   "-10 Fire Resist",
+   "+[15-22] Cold Resist",
+   "+[60-90]% DMG against Chilled enemies",
+   "Immune to Freeze when Intelligence is higher than Dexterity",
+   "Fires a Frost Bomb forward that Pierces all enemies.",
+   "Frost Bomb periodically fires Projectiles in a circular pattern."
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "enemy-in-the-mirror",
+  "name": "Enemy in the Mirror",
+  "transcendent": false,
+  "tier": 28,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 65,
+  "requirement": "Requires Dexterity 218",
+  "implicit": [
+   "+[1054-1151] Gear Dodge Rate"
+  ],
+  "innate": [
+   "10% Reflect DMG Taken Decrease"
+  ],
+  "options": [
+   "+[700-850] Gear Dodge Rate",
+   "+[160-190]% Gear Dodge Rate",
+   "+[35-45]% HP",
+   "+[50-60] Element Resist",
+   "+[30-40] Chaos Resist",
+   "[10-15]% Reflect DMG Amplification",
+   "Counterattack Trigger Cooldown changed to 0.3 s",
+   "While Counterattack is active, Reflect DMG related stats are converted into Counterattack DMG stats",
+   "(Applies the higher value between Physical and Elemental % Reflect DMG Taken Decrease as Counterattack DMG % Amplification)"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "aquillas-eternity",
+  "name": "Aquilla's Eternity",
+  "transcendent": false,
+  "tier": 27,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 49,
+  "requirement": "Requires Strength 212",
+  "implicit": [
+   "+[764-833] Gear Armor"
+  ],
+  "innate": [],
+  "options": [
+   "+[166-184]% Gear Armor",
+   "-[4-2] Resource Cost",
+   "+30% HP",
+   "+[30-35]% Barrier",
+   "+[10-25]% Veil of Protection Skill Rune effect",
+   "Both Veil effects applies upon using Veil of Protection",
+   "+30% Earth Veil Effect",
+   "+30% Wind Veil Effect",
+   "Immune to Reflect upon using Veil of Protection"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "vespers-destruction",
+  "name": "Vesper's Destruction",
+  "transcendent": false,
+  "tier": 26,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 59,
+  "requirement": "Requires Dexterity 75 Intelligence 75",
+  "implicit": [
+   "+[120-142] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+8 Chaos Resist"
+  ],
+  "options": [
+   "+[148-170] Gear Dodge Rate",
+   "+[95-112]% Gear Dodge Rate",
+   "Deadly Poison Claw DMG [5-12]% Dampening",
+   "Deadly Poison Claw [1-3]%  DMG Amplification per 1 Poison Energy",
+   "Increases Deadly Poison Claw range by 5% per Poison Energy stack",
+   "Increase is doubled when Dual Wielding"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "aftershock",
+  "name": "Aftershock",
+  "transcendent": false,
+  "tier": 25,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 46,
+  "requirement": "Requires Strength 178",
+  "implicit": [
+   "+[186-202] Gear Armor"
+  ],
+  "innate": [],
+  "options": [
+   "+[271-315] Gear Armor",
+   "+[85-100]% Gear Armor",
+   "+[14-16]% Critical DMG",
+   "+[20-25]% Attack Speed",
+   "+[15-30]% Earth Energy Duration",
+   "+1 Mana on every hit",
+   "+[100-200]% Fissure Range",
+   "1 Earth Energy Spent Reduction on Fissure's Additional Fissures Hit",
+   "-[50-20]% Fissure DMG"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "aquillas-claw",
+  "name": "Aquilla's Claw",
+  "transcendent": false,
+  "tier": 25,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 46,
+  "requirement": "Requires Strength 85 Dexterity 85",
+  "implicit": [
+   "+[76-83] Gear Armor",
+   "+[94-102] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+18% DMG against Elites"
+  ],
+  "options": [
+   "+[180-205] Gear Armor",
+   "+[160-175] Gear Dodge Rate",
+   "+[120-130]% Gear Armor",
+   "+[130-145]% Gear Dodge Rate",
+   "+[44-47]% Critical Rate",
+   "+[8-12]% Attack Speed",
+   "+[40-60]% Combo Critical DMG",
+   "-[40-20]% Combo DMG",
+   "Increase Combo Attack Count by 1"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "cold-blooded-burden",
+  "name": "Cold-blooded Burden",
+  "transcendent": false,
+  "tier": 25,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 46,
+  "requirement": "Requires Strength 85 Intelligence 85",
+  "implicit": [
+   "+[105-114] Gear Armor",
+   "+[37-38] Gear Barrier"
+  ],
+  "innate": [
+   "3% Resource Cost Dampening"
+  ],
+  "options": [
+   "+[270-315]% Gear Armor",
+   "+[43-52]% Gear Barrier",
+   "+75% Bleed Rate While Using Blood Explosion",
+   "Immune to Bleed while using Blood Explosion",
+   "[3-5]% Amplification DMG to Bleeding Enemies While Using Blood Explosion",
+   "+[40-60]% Physical DMG",
+   "+[30-50]% Critical DMG"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "acubens-garden",
+  "name": "Acuben's Garden",
+  "transcendent": false,
+  "tier": 24,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 58,
+  "requirement": "Requires Intelligence 145",
+  "implicit": [
+   "+[34-36] Gear Barrier"
+  ],
+  "innate": [
+   "+5% Movement Skill Rune Cooldown Recovery Speed"
+  ],
+  "options": [
+   "+[23-25] Gear Barrier",
+   "+[50-59]% Gear Barrier",
+   "[30-50]% Movement Speed Increase",
+   "+[20-40]% Cast Speed",
+   "+[35-70]% Poison DMG",
+   "+[20-25] Poison Resist",
+   "Poison Cloud Hit Count Changed to 3",
+   "When Hitting a Venom-Affected Enemy, 50% Chance to Trigger 1 Additional Hit (Once per Skill)",
+   "Poison Cloud DMG [40-60]% Reduced"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "preles-gauntlets",
+  "name": "Prele's Gauntlets",
+  "transcendent": false,
+  "tier": 24,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 55,
+  "requirement": "Requires Strength 70 Intelligence 70",
+  "implicit": [
+   "+[91-102] Gear Armor",
+   "+[37-38] Gear Barrier"
+  ],
+  "innate": [
+   "[3.2-3.8]% Resource Cost Dampening"
+  ],
+  "options": [
+   "+[132-156] Gear Armor",
+   "+[29-34] Gear Barrier",
+   "+[40-45]% Minion Critical Rate",
+   "+[10-12]% Minion DMG",
+   "+[18-24]% Minion HP",
+   "+[14-22]% Minion Attack Speed",
+   "+[14-22]% Minion Cast Speed",
+   "1 of the options below will be imbued.",
+   "- Gain Bursting Fusion Buff Lv.3 upon summoning Bursting Rune Knight when affected by Hazy Melody High Tone",
+   "75DMG Taken % Dampening for 10 s",
+   "100% Bursting Rune Knight Cooldown Amplification[Chance 16.7%]",
+   "- Gain Arctic Fusion Buff Lv.3 upon summoning Arctic Rune Knight when affected by Hazy Melody High Tone",
+   "75DMG Taken % Dampening for 10 s",
+   "100% Arctic Rune Knight Cooldown Amplification[Chance 16.7%]",
+   "- Gain Lightning Fusion Buff Lv.3 upon summoning Lightning Rune Knight when affected by Hazy Melody High Tone",
+   "75DMG Taken % Dampening for 10 s",
+   "100% Lighting Rune Knight Cooldown Amplification[Chance 16.7%]",
+   "- Gain Deadly Poison Fusion Buff Lv.3 upon summoning Deadly Poison Rune Knight when affected by Hazy Melody High Tone",
+   "75DMG Taken % Dampening for 10 s",
+   "100% Deadly Poison Rune Knight Cooldown Amplification[Chance 16.7%]",
+   "- Gain Wrathful Fusion Buff Lv.3 upon summoning Wrathful Rune Knight when affected by Hazy Melody High Tone",
+   "75DMG Taken % Dampening for 10 s",
+   "100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]",
+   "- Gain Fury Fusion Buff Lv.3 upon summoning Fury Rune Knight when affected by Hazy Melody High Tone",
+   "75% DMG Taken % Dampening for 10 s",
+   "100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "vanguards-gaze",
+  "name": "Vanguard's Gaze",
+  "transcendent": false,
+  "tier": 24,
+  "gearType": "Helmet",
+  "category": "armor",
+  "reqLevel": 55,
+  "requirement": "Requires Dexterity 140",
+  "implicit": [
+   "+[401-435] Gear Dodge Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+[237-279] Gear Dodge Rate",
+   "+[11-14] Chaos Resist",
+   "+[17-20]% Sentry Hit Rate",
+   "Sentry gains Sharpness effect",
+   "( Critical Rate +50%, Critical DMG +25% )",
+   "[5-15]% Sentry DMG Amplification against Bleeding enemies",
+   "Piercing Sentry Projectile Count +2",
+   "Piercing Sentry Curve +1"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "aquillas-sunlight",
+  "name": "Aquilla's Sunlight",
+  "transcendent": false,
+  "tier": 23,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 58,
+  "requirement": "Requires Dexterity 143",
+  "implicit": [
+   "+[121-145] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+18% DMG against Elites"
+  ],
+  "options": [
+   "+[219-262] Gear Dodge Rate",
+   "+[72-87]% Gear Dodge Rate",
+   "[10-15]% DMG Taken Dampening",
+   "+[30-50]% Attack Speed",
+   "+[20-40]% HP",
+   "[5-12]% Skill Rune Cooldown Dampening",
+   "Improved Senses Effect Added",
+   "Perfect Dodge +10%",
+   "DMG 3% Amplified for 5 Sec When Dodge Activates (Up to 5 Stacks)",
+   "Perfect Dodge Immediately Applies Maximum Stacks When Triggered",
+   "Improved Senses Skill Rune Cooldown 30% Dampening",
+   "+20% Improved Senses Skill Rune Duration"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "decomposers-contradiction",
+  "name": "Decomposer's Contradiction",
+  "transcendent": false,
+  "tier": 23,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 52,
+  "requirement": "Requires Strength 67 Dexterity 67",
+  "implicit": [
+   "+[130-150] Gear Armor",
+   "+[140-170] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+20% Melee DMG"
+  ],
+  "options": [
+   "+[8-12]% HP",
+   "+[15-25]% DMG",
+   "+[10-20] Chaos Resist",
+   "+[10-15]% Critical Rate",
+   "Activates additional Crescent Slashes to the sides",
+   "50% Crescent Slash DMG Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "spicas-light",
+  "name": "Spica's Light",
+  "transcendent": false,
+  "tier": 21,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 42,
+  "requirement": "Requires Intelligence 140",
+  "implicit": [
+   "+[63-65] Gear Barrier"
+  ],
+  "innate": [],
+  "options": [
+   "+[135-149]% Gear Barrier",
+   "[12-18]% Flames of Death DMG Amplification",
+   "+[30-45]% Spell Critical Rate",
+   "+[40-45]% Spell Critical DMG",
+   "+[30-35]% Cast Speed",
+   "100% chance to gain 2 Fire Energy upon using Flames of Death"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "spicas-sagacity",
+  "name": "Spica's Sagacity",
+  "transcendent": false,
+  "tier": 17,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 36,
+  "requirement": "Requires Dexterity 100",
+  "implicit": [
+   "+[102-110] Gear Dodge Rate"
+  ],
+  "innate": [
+   "+15 Dexterity"
+  ],
+  "options": [
+   "+[137-174] Gear Dodge Rate",
+   "+[72-87]% Gear Dodge Rate",
+   "+[20-40]% Projectile DMG",
+   "+[20-35]% Hit Rate",
+   "+[40-60]% Mana",
+   "[30-50]% Movement Speed Increase",
+   "Instant Acceleration Movement Range +250",
+   "15% DMG Amplification while Shrewdness is active",
+   "+[10-15]% Shrewdness effect",
+   "+[40-50]% Shrewdness Duration"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "the-first-returnee",
+  "name": "The First Returnee",
+  "transcendent": false,
+  "tier": 17,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 37,
+  "requirement": "Requires Strength 105",
+  "implicit": [
+   "+[400-450] Gear Armor"
+  ],
+  "innate": [
+   "+15 Strength"
+  ],
+  "options": [
+   "+[250-280] Gear Armor",
+   "+[70-100]% Gear Armor",
+   "+[225-430] HP",
+   "+[10-18]% HP",
+   "[5-10]% Attack Speed Amplification",
+   "[9-14]% Fierce Strike DMG Amplification against Stunned enemies",
+   "Triggers Ultimate Blow every 3 Fierce Strikes",
+   "Increases range of Ultimate Blow by 200%",
+   "30% Fierce Strike DMG Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "acubens-nebula",
+  "name": "Acuben's Nebula",
+  "transcendent": false,
+  "tier": 16,
+  "gearType": "Helmet",
+  "category": "armor",
+  "reqLevel": 38,
+  "requirement": "Requires Intelligence 118",
+  "implicit": [
+   "+[73-78] Gear Barrier"
+  ],
+  "innate": [
+   "[4.5-5]% Resource Cost Dampening"
+  ],
+  "options": [
+   "+[39-46] Gear Barrier",
+   "+[99-113]% Gear Barrier",
+   "Frost Thorn Mana Cost -[5-1]",
+   "+3 Fixed Max Cold Energy",
+   "+10% Cold Energy Effect",
+   "+[42-50] Cold Resist",
+   "+[12-15]% DMG upon Spell",
+   "Frost Thorn Projectile Count is fixed to 10 and cannot be increased",
+   "Frost Thorn Projectile Count does not increase with Cold Energy",
+   "Changes Frost Thorn DMG Dampening when hitting the same target to 10%",
+   "Frost Thorn Projectile Pierce Count +2"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "alyssas-landing",
+  "name": "Alyssa's Landing",
+  "transcendent": false,
+  "tier": 14,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 29,
+  "requirement": "Requires Strength 80",
+  "implicit": [
+   "+[76-79] Gear Armor"
+  ],
+  "innate": [],
+  "options": [
+   "+[161-179]% Gear Armor",
+   "Decrease DMG Taken by 30% For 1 Second, Drag Enemies in, and Trigger Additional Strikes When Using Leap Attack",
+   "[35-40]% Movement Speed Increase",
+   "+[40-50]% Melee DMG",
+   "+[15-30]% DMG for 3 s upon Using Leap Attack",
+   "+[30-35]% Leap Attack Cooldown Recovery Speed"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "vespers-rest",
+  "name": "Vesper's Rest",
+  "transcendent": false,
+  "tier": 14,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 31,
+  "requirement": "Requires Strength 118",
+  "implicit": [
+   "+[410-465] Gear Armor"
+  ],
+  "innate": [
+   "+15 Strength"
+  ],
+  "options": [
+   "+[310-385] Gear Armor",
+   "+[70-88]% Gear Armor",
+   "+[10-20] Element Resist",
+   "+[30-50]% HP",
+   "+[10-20]% DMG against Bleeding enemies",
+   "Immune to Bleed",
+   "+[10-30] Bleed Rate",
+   "Domain of Blood Range increased to 750.",
+   "Domain of Blood Effects are further enhanced:",
+   "Bloodshed DMG 10% Amplified",
+   "Bloodshed Weapon Range 20% Increased"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "lingering-summer",
+  "name": "Lingering Summer",
+  "transcendent": false,
+  "tier": 11,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 25,
+  "requirement": "Requires Intelligence 63",
+  "implicit": [
+   "+[27-29] Gear Barrier"
+  ],
+  "innate": [],
+  "options": [
+   "+[17-19]% HP",
+   "+[30-45]% Poison DMG",
+   "+[15-30]% Mana Potion Effect",
+   "[20-25]% Movement Speed Increase",
+   "Chance to inflict up to 2 stacks of Black Plague",
+   "HP Recovery on Hit while Channeling +[60-80]"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "star-usurper-s-armor",
+  "name": "Star Usurper’s Armor",
+  "transcendent": false,
+  "tier": 10,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 1,
+  "requirement": "Requires Strength 7",
+  "implicit": [
+   "+[690-700] Gear Armor",
+   "+[690-700] Gear Dodge Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+10% Character EXP on Kill",
+   "+3% Armor for every 1 Character Level(s) (Max  210%)",
+   "+3% Dodge Rate per 1 Character Level(s) (Max  210%)",
+   "0.3% HP Amplification for every 1 Character Level(s) (Max:  21%)",
+   "+50 Element Resist",
+   "+50 Chaos Resist",
+   "10% DMG Taken Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "star-usurper-s-boots",
+  "name": "Star Usurper’s Boots",
+  "transcendent": false,
+  "tier": 10,
+  "gearType": "Shoes",
+  "category": "armor",
+  "reqLevel": 1,
+  "requirement": "Requires Strength 7",
+  "implicit": [
+   "+[690-700] Gear Armor"
+  ],
+  "innate": [],
+  "options": [
+   "+10% Character EXP on Kill",
+   "+100% Gear Armor",
+   "45% Movement Speed Increase",
+   "10% Movement Speed Amplification",
+   "+30% Movement Skill Rune Cooldown Recovery Speed"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "star-usurper-s-gauntlets",
+  "name": "Star Usurper’s Gauntlets",
+  "transcendent": false,
+  "tier": 10,
+  "gearType": "Gloves",
+  "category": "armor",
+  "reqLevel": 1,
+  "requirement": "Requires Strength 7",
+  "implicit": [
+   "+[790-800] Gear Armor"
+  ],
+  "innate": [],
+  "options": [
+   "+10% Character EXP on Kill",
+   "21% Attack Speed Amplification",
+   "21% Cast Speed Amplification",
+   "+35% HP",
+   "+20% Element Penetration",
+   "+20% Armor Penetration",
+   "+25% DMG against Elites"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "star-usurper-s-helmet",
+  "name": "Star Usurper’s Helmet",
+  "transcendent": false,
+  "tier": 10,
+  "gearType": "Helmet",
+  "category": "armor",
+  "reqLevel": 1,
+  "requirement": "Requires Intelligence 7",
+  "implicit": [
+   "+[390-400] Gear Barrier"
+  ],
+  "innate": [],
+  "options": [
+   "+10% Character EXP on Kill",
+   "0.3% DMG Amplification for every 1 Character Level(s) (Max:  21%)",
+   "+10% Skill Rune Cooldown Recovery Speed",
+   "+25% Enhance Skill Rune Duration",
+   "+30% HP",
+   "+50% Hit Rate",
+   "Doubles the increased Zodiac Stats"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "star-usurper-s-spaulders",
+  "name": "Star Usurper’s Spaulders",
+  "transcendent": false,
+  "tier": 10,
+  "gearType": "Spaulders",
+  "category": "armor",
+  "reqLevel": 1,
+  "requirement": "Requires Dexterity 7",
+  "implicit": [
+   "+[790-800] Gear Dodge Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+10% Character EXP on Kill",
+   "+1000 HP",
+   "+1.5% Critical Rate for every 1 Character Level(s) (Max:  80%)",
+   "+1.5% Hit Rate per 1 Character Level(s) (Max  80%)",
+   "+5% DMG for every 2 Character Level(s)",
+   "(Max:  250%)",
+   "+30% Maximized DMG"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "twilight-veil",
+  "name": "Twilight Veil",
+  "transcendent": false,
+  "tier": 5,
+  "gearType": "Armor",
+  "category": "armor",
+  "reqLevel": 10,
+  "requirement": "Requires Intelligence 31",
+  "implicit": [
+   "+[24-27] Gear Barrier"
+  ],
+  "innate": [
+   "+[25-30] Gear Barrier"
+  ],
+  "options": [
+   "+[42-50] Mana",
+   "+[17-20]% Mana Regen/Sec",
+   "+5% Barrier Charge Cycle Recovery Speed",
+   "1% Max Barrier Regen/Sec upon charging Barrier",
+   "Barrier Recovery to the Max value upon reaching below 1% (Cooldown 90 s)"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "bulwark-of-balance",
+  "name": "Bulwark of Balance",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Shield",
+  "category": "offhand",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 120 Dexterity 120",
+  "implicit": [
+   "+[512-570] Gear Armor",
+   "+[692-768] Gear Dodge Rate",
+   "+65 Gear Block Expertise"
+  ],
+  "innate": [
+   "+[44-50]% Block Recovery Speed"
+  ],
+  "options": [
+   "+[100-150]% Gear Armor",
+   "+[100-150]% Gear Dodge Rate",
+   "+[30-50] Weapon Range",
+   "+[30-50] Area of Effect",
+   "[10-15]% DMG Taken Dampening",
+   "[30-45]% Critical DMG Taken Dampening",
+   "+6% Perfect Dodge for {BuffDurationTime} s on hit (Max Stacks 10)",
+   "Removes Perfect Dodge stacks gained through Bulwark of Balance upon Perfect Dodge and gains the following effects for 20 s",
+   "Amplify DMG by 25%",
+   "15% DMG Taken Dampening",
+   "+6% Block Chance for {BuffDurationTime} s on hit (Max Stacks 10)",
+   "Removes Block Chance stacks gained through Bulwark of Balance upon successful Block and gains the following effects for 20 s",
+   "Amplify DMG by 25%",
+   "15% DMG Taken Dampening"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "master-of-trajectory",
+  "name": "Master of Trajectory",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Quiver",
+  "category": "offhand",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 270",
+  "implicit": [
+   "+[70-91]-[150-191] Attack and Spell DMG"
+  ],
+  "innate": [],
+  "options": [
+   "+[100-174]-[181-273] Attack and Spell DMG",
+   "+[20-35]% Attack and Spell DMG",
+   "+[2-4] Mana on every hit",
+   "+[3-7]% Maximization Chance",
+   "+[15-27]% Maximized DMG",
+   "1 of the options below will be imbued.",
+   "- [10-14.5]% DMG Amplification per Split Count upon using skill[Chance 25%]",
+   "- [9.4-14]% DMG Amplification per Refraction Count upon using skill[Chance 25%]",
+   "- [2.4-4]% DMG Amplification per Penetration Count upon using skill[Chance 25%]",
+   "- [1.8-3]% DMG Amplification per Chain Count upon using skill[Chance 25%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-mirasetis-blessing",
+  "name": "Transcendent Miraseti's Blessing",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Magazine",
+  "category": "offhand",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "+45-70 Attack DMG",
+   "+800 Max Overheat"
+  ],
+  "innate": [
+   "+[20-25]% Max Overheat"
+  ],
+  "options": [
+   "+[60-100]% DMG",
+   "[8-12]% Attack Speed Amplification",
+   "[12-16]% DMG Amplification against enemies affected by Physical Status Effect",
+   "+[55-80]% Attack Critical Rate",
+   "+[75-80]% Attack Critical DMG",
+   "Charged Shot's Projectiles spread forward and Base Projectile Count changes to 3",
+   "Charged Shot +1 Projectile per Stage",
+   "Charged Shot's Per-Stage Projectile Size Increase",
+   "Projectile DMG Amplification per 3 Stages effect does not apply"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-mirasetis-wave",
+  "name": "Transcendent Miraseti's Wave",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Quiver",
+  "category": "offhand",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 270",
+  "implicit": [
+   "+[45-50]-[62-68] Attack and Spell DMG"
+  ],
+  "innate": [
+   "+70% DMG"
+  ],
+  "options": [
+   "+[155-170]-[188-205] Physical DMG",
+   "[12-16]% Attack Speed Amplification",
+   "+[40-70]% Attack Critical Rate",
+   "+[3-4] Mana on every hit",
+   "Additional Cold DMG equal to [8-12]% of DMG on every hit",
+   "Illusion Arrow Activation Condition Changed to On Hit",
+   "Illusion Arrow Projectile Count -5",
+   "Illusion Arrow Projectile DMG [30-40]% Reduced"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-vertical-chill",
+  "name": "Transcendent Vertical Chill",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Quiver",
+  "category": "offhand",
+  "reqLevel": 82,
+  "requirement": null,
+  "implicit": [
+   "+42-[61-64] Attack and Spell DMG"
+  ],
+  "innate": [
+   "+[40-100]% Attack DMG"
+  ],
+  "options": [
+   "+[130-220] HP",
+   "[8-12]% Attack Speed Amplification",
+   "[8-12]% DMG Amplification against enemies affected by Cold Status Effect",
+   "Does not create Chill Area",
+   "Converts 100% of Chill Area Duration increase into Frost Storm DMG Amplification",
+   "Cold Status Effect Rate +[35-45]",
+   "Amplifies Frost Storm DMG by [2-6]%"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-bulwark-of-balance",
+  "name": "Ultimate Bulwark of Balance",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Shield",
+  "category": "offhand",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 120 Dexterity 120",
+  "implicit": [
+   "+[570-712] Gear Armor",
+   "+[768-960] Gear Dodge Rate",
+   "+65 Gear Block Expertise"
+  ],
+  "innate": [
+   "+[44-50]% Block Recovery Speed"
+  ],
+  "options": [
+   "+[150-200]% Gear Armor",
+   "+[150-200]% Gear Dodge Rate",
+   "+[50-65] Weapon Range",
+   "+[50-65] Area of Effect",
+   "[15-20]% DMG Taken Dampening",
+   "[45-60]% Critical DMG Taken Dampening",
+   "+9% Perfect Dodge for {BuffDurationTime} s on hit (Max Stacks 10)",
+   "Removes Perfect Dodge stacks gained through Bulwark of Balance upon Perfect Dodge and gains the following effects for 20 s",
+   "Amplify DMG by 35%",
+   "25% DMG Taken Dampening",
+   "+9% Block Chance for {BuffDurationTime} s on hit (Max Stacks 10)",
+   "Removes Block Chance stacks gained through Bulwark of Balance upon successful Block and gains the following effects for 20 s",
+   "Amplify DMG by 35%",
+   "25% DMG Taken Dampening"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-master-of-trajectory",
+  "name": "Ultimate Master of Trajectory",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Quiver",
+  "category": "offhand",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 270",
+  "implicit": [
+   "+[91-111]-[191-234] Attack and Spell DMG"
+  ],
+  "innate": [],
+  "options": [
+   "+[115-200]-[208-313] Attack and Spell DMG",
+   "+[35-55]% Attack and Spell DMG",
+   "+[4-6] Mana on every hit",
+   "+[7-10]% Maximization Chance",
+   "+[27-37]% Maximized DMG",
+   "1 of the options below will be imbued.",
+   "- [14.5-20.8]% DMG Amplification per Split Count upon using skill[Chance 25%]",
+   "- [14-19.2]% DMG Amplification per Refraction Count upon using skill[Chance 25%]",
+   "- [4-5.8]% DMG Amplification per Penetration Count upon using skill[Chance 25%]",
+   "- [3-4.5]% DMG Amplification per Chain Count upon using skill[Chance 25%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "boreals-heart",
+  "name": "Boreal's Heart",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "Shield",
+  "category": "offhand",
+  "reqLevel": 79,
+  "requirement": "Requires Intelligence 300",
+  "implicit": [
+   "+[200-350] Gear Barrier",
+   "+30 Gear Block Expertise"
+  ],
+  "innate": [
+   "Recover 1% of Max Barrier upon successful Block"
+  ],
+  "options": [
+   "+[650-900] Gear Barrier",
+   "+[75-125]% Gear Barrier",
+   "Apply additional 300% to Barrier on using HP potion",
+   "Realization Effect",
+   "( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )",
+   "+[25-150]% Realization Effect",
+   "15% DMG Amplification per 20% of activated Barrier when Max Barrier is at 10000 or above (Max stacks: 5)",
+   "4% DMG Dampening per 20% of activated Barrier when Max Barrier is at 10000 or above (Max stacks: 5)",
+   "1 of the options below will be imbued.",
+   "- +[1-2] Fixed Max Earth Energy[Chance 20%]",
+   "- +[1-2] Fixed Max Fire Energy[Chance 20%]",
+   "- +[1-2] Fixed Max Cold Energy[Chance 20%]",
+   "- +[1-2] Fixed Max Lightning Energy[Chance 20%]",
+   "- +[1-2] Fixed Max Poison Energy[Chance 20%]"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-mirror-wall",
+  "name": "Transcendent Mirror Wall",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Shield",
+  "category": "offhand",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 260",
+  "implicit": [
+   "+[1400-2200] Gear Armor",
+   "+[200-300] Gear Block Expertise"
+  ],
+  "innate": [
+   "+[100-150]% Gear Block Expertise"
+  ],
+  "options": [
+   "+[21-30]% Gear Armor",
+   "Enduring Pain Patience Outburst Deactivation",
+   "3% DMG Increase per 2500 Armor while using Enduring Pain (Max stacks: 10)",
+   "[10-15]% DMG Taken Dampening while using Enduring Pain",
+   "1 of the options below will be imbued.",
+   "- Physical Reflect DMG Immunity while using Enduring Pain[Chance 50%]",
+   "- Element Reflect DMG Immunity while using Enduring Pain[Chance 50%]"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-plate-of-addendum",
+  "name": "Transcendent Plate of Addendum",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Quiver",
+  "category": "offhand",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [
+   "+48-72 Attack DMG"
+  ],
+  "innate": [],
+  "options": [
+   "+2 Simultaneous Sentry Count",
+   "+[50-100]% Sentry Threat Level",
+   "[8-12]% Sentry Attack Speed Amplification",
+   "+[2-3] Toggle Skill Rune Level",
+   "Chance to grant Sentry DMG 10% Amplification buff for 10 s when switching to the Sentry Expert Toggle (Max: 5 stacks)",
+   "[5-15]% Resource Cost Amplification"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-predators-tongue",
+  "name": "Transcendent Predator's Tongue",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Quiver",
+  "category": "offhand",
+  "reqLevel": 79,
+  "requirement": null,
+  "implicit": [
+   "+[38-45]-[61-64] Attack DMG"
+  ],
+  "innate": [],
+  "options": [
+   "+[40-100]% DMG",
+   "+[130-220] HP",
+   "[8-12]% Attack Speed Amplification",
+   "[5-12]% DMG Amplification against Burning enemies",
+   "Changes Explosion cooldown to 10 s",
+   "Decreases cooldown by 2 s upon killing an enemy with Explosive Arrow",
+   "30% Fire DMG Taken Amplification for targets hit by Explosive Arrow for 10 s",
+   "+[100-140]% Explosive Arrow DMG"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-sephdars-longing",
+  "name": "Transcendent Sephdar's Longing",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Shield",
+  "category": "offhand",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 250",
+  "implicit": [
+   "+[1736-1930] Gear Armor",
+   "+62 Gear Block Expertise"
+  ],
+  "innate": [
+   "+[18-20] Attack Block Expertise"
+  ],
+  "options": [
+   "+[830-880] Gear Armor",
+   "+[210-220]% Gear Armor",
+   "+[124-142]% Gear Block Expertise",
+   "[12-18]% DMG Amplification against Stunned enemies",
+   "+[30-50]% Pain Effect",
+   "Illusion Hook Stun Chance +10%",
+   "Cast Illusion Hook to all directions",
+   "Guaranteed Critical Hit for Illusion Hook against Stunned enemies",
+   "[25-35]% DMG Taken Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "ultimate-boreals-heart",
+  "name": "Ultimate Boreal's Heart",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "Shield",
+  "category": "offhand",
+  "reqLevel": 79,
+  "requirement": "Requires Intelligence 300",
+  "implicit": [
+   "+[308-539] Gear Barrier",
+   "+30 Gear Block Expertise"
+  ],
+  "innate": [
+   "Recover 1% of Max Barrier upon successful Block"
+  ],
+  "options": [
+   "+[900-1150] Gear Barrier",
+   "+[125-175]% Gear Barrier",
+   "Apply additional 300% to Barrier on using HP potion",
+   "Realization Effect",
+   "( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )",
+   "+[150-225]% Realization Effect",
+   "15% DMG Amplification per 20% of activated Barrier when Max Barrier is at 10000 or above (Max stacks: 5)",
+   "4% DMG Dampening per 20% of activated Barrier when Max Barrier is at 10000 or above (Max stacks: 5)",
+   "+[1-5] Max Energy",
+   "+[5-35]% All Energy Effect"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "mirasetis-blessing",
+  "name": "Miraseti's Blessing",
+  "transcendent": false,
+  "tier": 32,
+  "gearType": "Magazine",
+  "category": "offhand",
+  "reqLevel": 73,
+  "requirement": null,
+  "implicit": [
+   "+36-54 Attack DMG",
+   "+800 Max Overheat"
+  ],
+  "innate": [
+   "+16% Max Overheat"
+  ],
+  "options": [
+   "+[40-60]% DMG",
+   "+[18-22]% Attack Speed",
+   "+[45-55]% DMG against enemies affected by Physical Status Effect",
+   "+[27-55]% Attack Critical Rate",
+   "+[50-55]% Attack Critical DMG",
+   "Charged Shot's Projectiles spread forward and Base Projectile Count changes to 3",
+   "Charged Shot +1 Projectile per Stage",
+   "Charged Shot's Per-Stage Projectile Size Increase",
+   "Projectile DMG Amplification per 3 Stages effect does not apply"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "plate-of-addendum",
+  "name": "Plate of Addendum",
+  "transcendent": false,
+  "tier": 30,
+  "gearType": "Quiver",
+  "category": "offhand",
+  "reqLevel": 69,
+  "requirement": null,
+  "implicit": [
+   "+30-42 Attack DMG"
+  ],
+  "innate": [],
+  "options": [
+   "+1 Simultaneous Sentry Count",
+   "+[30-50]% Sentry Threat Level",
+   "+[18-23]% Sentry Attack Speed",
+   "+[1-2] Toggle Skill Rune Level",
+   "Chance to grant Sentry DMG 10% Amplification buff for 10 s when switching to the Sentry Expert Toggle (Max: 5 stacks)",
+   "[15-25]% Resource Cost Amplification"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "vertical-chill",
+  "name": "Vertical Chill",
+  "transcendent": false,
+  "tier": 30,
+  "gearType": "Quiver",
+  "category": "offhand",
+  "reqLevel": 69,
+  "requirement": null,
+  "implicit": [
+   "+30-[38-45] Attack and Spell DMG"
+  ],
+  "innate": [
+   "+[30-60]% Attack DMG"
+  ],
+  "options": [
+   "+[100-150] HP",
+   "+[18-22]% Attack Speed",
+   "+[28-40]% DMG against Chilled enemies",
+   "Does not create Chill Area",
+   "Converts 100% of Chill Area Duration increase into Frost Storm DMG Amplification",
+   "+[25-35] Chill Rate"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "predators-tongue",
+  "name": "Predator's Tongue",
+  "transcendent": false,
+  "tier": 28,
+  "gearType": "Quiver",
+  "category": "offhand",
+  "reqLevel": 65,
+  "requirement": null,
+  "implicit": [
+   "+28-38 Attack DMG"
+  ],
+  "innate": [],
+  "options": [
+   "+[30-60]% DMG",
+   "+[100-150] HP",
+   "+[18-22]% Attack Speed",
+   "+[28-40]% DMG against Burning enemies",
+   "Changes Explosion cooldown to 10 s",
+   "Decreases cooldown by 2 s upon killing an enemy with Explosive Arrow",
+   "30% Fire DMG Taken Amplification for targets hit by Explosive Arrow for 10 s"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "sephdars-longing",
+  "name": "Sephdar's Longing",
+  "transcendent": false,
+  "tier": 27,
+  "gearType": "Shield",
+  "category": "offhand",
+  "reqLevel": 49,
+  "requirement": "Requires Strength 212",
+  "implicit": [
+   "+[752-820] Gear Armor",
+   "+26 Gear Block Expertise"
+  ],
+  "innate": [],
+  "options": [
+   "+[537-624] Gear Armor",
+   "+[100-116]% Gear Armor",
+   "+[27-29] Block Expertise",
+   "+[60-85]% DMG against Stunned enemies",
+   "+[20-40]% HP",
+   "Illusion Hook Stun Chance +5%",
+   "Cast Illusion Hook to all directions",
+   "Guaranteed Critical Hit for Illusion Hook against Stunned enemies",
+   "[15-25]% DMG Taken Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "boundary-resonance",
+  "name": "Boundary Resonance",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Scepter",
+  "category": "weapon1h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 134 Intelligence 134",
+  "implicit": [
+   "+[410-520]-[620-777] Attack and Spell DMG",
+   "+1.4 Speed",
+   "+10 Gear Critical Rate",
+   "+200 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+0.8% Barrier Absorb on hit"
+  ],
+  "options": [
+   "+[230-260]-[330-360] Attack and Spell DMG",
+   "+[130-170]% Attack and Spell DMG",
+   "+[25-30]% Speed",
+   "+[160-180]% Gear Critical Rate",
+   "+[85-90]% Barrier",
+   "When percentage of Barrier is higher than or equal to Mana, [15-19]% DMG Amplification",
+   "When percentage of Barrier is less than Mana, Regenerate [0.5-1]% of Max Barrier per second",
+   "[0.2-0.3]% DMG Amplification per 5,000 Max Barrier"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "resolution-of-four-paths",
+  "name": "Resolution of Four Paths",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Sword",
+  "category": "weapon1h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 134 Dexterity 134",
+  "implicit": [
+   "+[298-372]-[447-558] Attack DMG",
+   "+1.3 Speed",
+   "+15 Gear Critical Rate",
+   "+215 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[323-348]-[379-404] Attack DMG",
+   "+[130-170]% Attack DMG",
+   "+[180-250]% Gear Critical Rate",
+   "+[27-37]% Speed",
+   "+[35-65] Equipped Weapon Range",
+   "+[15-35] Area of Effect",
+   "Additional Fire DMG equal to [15-25]% of DMG on every hit",
+   "Additional Cold DMG equal to [15-25]% of DMG on every hit",
+   "Additional Lightning DMG equal to [15-25]% of DMG on every hit",
+   "Additional Poison DMG on DMG equal to [15-25]% of DMG on every hit"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-aquilas-chain",
+  "name": "Transcendent Aquila's Chain",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Axe",
+  "category": "weapon1h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 189 Dexterity 82",
+  "implicit": [
+   "+[266-334]-[400-501] Attack DMG",
+   "+1.3 Speed",
+   "+10 Gear Critical Rate",
+   "+200 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[92-110]-[134-166] Attack DMG",
+   "+[80-105]% Attack DMG",
+   "+[130-145]% Gear Critical Rate",
+   "+[22-26]% Speed",
+   "+1 Chain Count",
+   "Cannot Pierce and can Chain when a 1-handed weapon is equipped",
+   "Converts 1 Pierce Count into 1 Chain Count for Axe Throw",
+   "[1.8-3]% DMG Amplification per Chain Count upon using skill"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-capris-burst",
+  "name": "Transcendent Capri's Burst",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Axe",
+  "category": "weapon1h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 189 Dexterity 82",
+  "implicit": [
+   "+[266-334]-[400-501] Attack DMG",
+   "+1.3 Speed",
+   "+10 Gear Critical Rate",
+   "+200 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[92-110]-[134-166] Attack DMG",
+   "+[80-105]% Attack DMG",
+   "+[130-145]% Gear Critical Rate",
+   "+[24-30]% Speed",
+   "+[110-130]% Critical DMG",
+   "[12-16]% DMG Amplification when Dual Wielding",
+   "+[40-80]% Area of Effect when Dual Wielding",
+   "Axe Throw deals Area DMG identical to Axe Throw on Hit when Dual Wielding",
+   "Explosion Range 150"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-capris-ember",
+  "name": "Transcendent Capri's Ember",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Wand",
+  "category": "weapon1h",
+  "reqLevel": 82,
+  "requirement": "Requires Intelligence 270",
+  "implicit": [
+   "+[356-445]-[534-669] Spell DMG",
+   "+1.2 Speed",
+   "+9 Gear Critical Rate"
+  ],
+  "innate": [
+   "+20% Spell DMG"
+  ],
+  "options": [
+   "+[90-98]-[126-137] Spell DMG",
+   "+[105-110]% Spell DMG",
+   "+[25-26]% Speed",
+   "+[133-145]-[244-268] Fire DMG",
+   "[13-16]% Fire DMG Amplification",
+   "+[73-79]% Critical DMG",
+   "Fire Ball gains +2 additional Projectiles on the 3rd use",
+   "Fire Ball can hit the same target",
+   "Fire Ball Same Target DMG 15% Dampening"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-corrosion-claw",
+  "name": "Transcendent Corrosion Claw",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Sword",
+  "category": "weapon1h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 134 Dexterity 134",
+  "implicit": [
+   "+[280-351]-[420-527] Attack DMG",
+   "+1.4 Speed",
+   "+8 Gear Critical Rate",
+   "+215 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[92-110]-[134-166] Attack DMG",
+   "+[80-105]% Attack DMG",
+   "+[24-28]% Speed",
+   "+[49-51] Equipped Weapon Range",
+   "[12-16]% DoT Amplification",
+   "100% Bleed DMG Dampening",
+   "+[15-25]% DoT Acceleration",
+   "Grants 1 additional Wheel Slash stack(s) upon using Wheel Slash",
+   "Wheel Slash Max Stacks +[2-3]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-flash-tail",
+  "name": "Transcendent Flash Tail",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Dagger",
+  "category": "weapon1h",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 134 Intelligence 134",
+  "implicit": [
+   "+[261-327]-[392-492] Attack and Spell DMG",
+   "+1.35 Speed",
+   "+9 Gear Critical Rate",
+   "+180 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+50 Equipped Weapon Range"
+  ],
+  "options": [
+   "+[90-100]-[125-140] Attack and Spell DMG",
+   "+[105-115]% Attack and Spell DMG",
+   "+[140-150]% Gear Critical Rate",
+   "+[26-30]% Speed",
+   "[12-16]% DMG Amplification",
+   "40% Movement Speed Increase",
+   "Flash Effect changed to 300",
+   "Generates 1 additional strike at current location on every hit",
+   "25% Attack Speed and Movement Speed Amplification for 5 s on hit"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-hamals-wreath",
+  "name": "Transcendent Hamal's Wreath",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Dagger",
+  "category": "weapon1h",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 270",
+  "implicit": [
+   "+[274-353]-[424-487] Attack and Spell DMG",
+   "+1.2 Speed",
+   "+10 Gear Critical Rate",
+   "+180 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+450 Attack Hit Rate"
+  ],
+  "options": [
+   "+[145-172]-[196-218] Attack and Spell DMG",
+   "+[72-98]% Attack and Spell DMG",
+   "+[10-11]% Speed",
+   "+[111-130]% Gear Critical Rate",
+   "[12-18]% DMG Amplification",
+   "[12-20]% chance to deal double Maximized DMG on hit",
+   "Additional Fire DMG equal to [13-17]% of DMG on every hit",
+   "Blade of Death Projectile +3",
+   "Amplify Blade of Death DMG by 100% against Bleeding enemies",
+   "Blade of Death Projectile immediately returns to the character"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-mirasetis-sea",
+  "name": "Transcendent Miraseti's Sea",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Dagger",
+  "category": "weapon1h",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 270",
+  "implicit": [
+   "+[274-353]-[424-487] Attack and Spell DMG",
+   "+1.2 Speed",
+   "+12 Gear Critical Rate",
+   "+180 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+28 Stats"
+  ],
+  "options": [
+   "+[48-56]-[68-85] Attack and Spell DMG",
+   "+[65-100]% Gear Critical Rate",
+   "+[24-25]% Speed",
+   "+[70-100]% Attack and Spell DMG",
+   "+[50-70]% Critical Rate",
+   "+[7-13]% Maximization Chance",
+   "+[2-5] Mana on every hit",
+   "+[70-110]% DMG",
+   "Cross Slash Maximized DMG +150%"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "ultimate-boundary-resonance",
+  "name": "Ultimate Boundary Resonance",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Scepter",
+  "category": "weapon1h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 134 Intelligence 134",
+  "implicit": [
+   "+[550-710]-[809-1014] Attack and Spell DMG",
+   "+1.4 Speed",
+   "+10 Gear Critical Rate",
+   "+200 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+1.2% Barrier Absorb on hit"
+  ],
+  "options": [
+   "+[300-340]-[430-470] Attack and Spell DMG",
+   "+[170-210]% Attack and Spell DMG",
+   "+[31-40]% Speed",
+   "+[190-250]% Gear Critical Rate",
+   "[15-25]% Barrier Amplification",
+   "When percentage of Barrier is higher than or equal to Mana, [20-26]% DMG Amplification",
+   "When percentage of Barrier is less than Mana, Regenerate [1-2]% of Max Barrier per second",
+   "[0.4-0.6]% DMG Amplification per 5,000 Max Barrier"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-resolution-of-four-paths",
+  "name": "Ultimate Resolution of Four Paths",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Sword",
+  "category": "weapon1h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 134 Dexterity 134",
+  "implicit": [
+   "+[372-465]-[558-698] Attack DMG",
+   "+1.3 Speed",
+   "+15 Gear Critical Rate",
+   "+215 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[348-435]-[404-505] Attack DMG",
+   "+[170-210]% Attack DMG",
+   "+[250-320]% Gear Critical Rate",
+   "+[37-46]% Speed",
+   "+[65-100] Equipped Weapon Range",
+   "+[35-55] Area of Effect",
+   "Additional Fire DMG equal to [25-35]% of DMG on every hit",
+   "Additional Cold DMG equal to [25-35]% of DMG on every hit",
+   "Additional Lightning DMG equal to [25-35]% of DMG on every hit",
+   "Additional Poison DMG on DMG equal to [25-35]% of DMG on every hit"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "aquillas-resonance",
+  "name": "Aquilla's Resonance",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "Wand",
+  "category": "weapon1h",
+  "reqLevel": 79,
+  "requirement": "Requires Intelligence 261",
+  "implicit": [
+   "+[384-480]-[576-722] Spell DMG",
+   "+1.2 Speed",
+   "+8 Gear Critical Rate"
+  ],
+  "innate": [
+   "+60% Spell DMG"
+  ],
+  "options": [
+   "+[160-180]% Spell DMG",
+   "+[20-26]% Speed",
+   "+[190-250]% Gear Critical Rate",
+   "+[1-2]% Barrier Absorb on Spell Hit",
+   "+[50-120]% Critical DMG",
+   "[15-30]% DMG Amplification if Dexterity and Intelligence are at 500 or above",
+   "+15% Maximized DMG for every 3000 Barrier (Max:  150%)"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-capris-flame",
+  "name": "Transcendent Capri's Flame",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Wand",
+  "category": "weapon1h",
+  "reqLevel": 79,
+  "requirement": "Requires Intelligence 216",
+  "implicit": [
+   "+[308-385]-[462-579] Spell DMG",
+   "+1.3 Speed",
+   "+10 Gear Critical Rate"
+  ],
+  "innate": [
+   "+51 Intelligence"
+  ],
+  "options": [
+   "+[68-84]-[97-105] Attack and Spell DMG",
+   "+[25-40]% Speed",
+   "[10-18]% Fire DMG Amplification",
+   "+[2-3] Spell Skill Rune Level",
+   "Increases Fire Torment Creation Speed by 100%",
+   "+[60-80]% Fire Torrent Skill Rune Duration"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-moon-halo",
+  "name": "Transcendent Moon Halo",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Dagger",
+  "category": "weapon1h",
+  "reqLevel": 79,
+  "requirement": "Requires Dexterity 130 Intelligence 130",
+  "implicit": [
+   "+[210-263]-[315-395] Attack and Spell DMG",
+   "+1.2 Speed",
+   "+11 Gear Critical Rate",
+   "+180 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+26 Stats"
+  ],
+  "options": [
+   "+[480-520]-[550-585] Attack and Spell DMG",
+   "+[150-163]% Gear Critical Rate",
+   "+11% Attack and Spell DMG",
+   "+[90-110]% Critical DMG",
+   "[8-12]% Attack Speed Amplification",
+   "Trigger 2 Additional Strikes at Character's Location When Using Wind Blade, Additional Strikes Are Not Triggered on Critical Hit",
+   "+80% Wind Blade Range",
+   "-[40-20]% Wind Blade DMG"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-reign-of-consecration",
+  "name": "Transcendent Reign of Consecration",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Wand",
+  "category": "weapon1h",
+  "reqLevel": 79,
+  "requirement": "Requires Intelligence 265",
+  "implicit": [
+   "+[196-248]-[370-443] Spell DMG",
+   "+1.5 Speed",
+   "+7 Gear Critical Rate"
+  ],
+  "innate": [
+   "+225% Minion DMG"
+  ],
+  "options": [
+   "+[17.3-21]% Speed",
+   "+[120-135]% Minion Critical Rate",
+   "+[68-75]% Minion Critical DMG",
+   "+[60-100]% Minion Area of Effect",
+   "+[22-29]% Minion HP",
+   "+1 Max Abyssling Summon Count",
+   "Increases Twisted Abyssling Movement Speed by 100% for 10 s upon summoning Twisted Abyssling",
+   "75DMG Taken % Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-vespers-venom-fang",
+  "name": "Transcendent Vesper's Venom Fang",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Dagger",
+  "category": "weapon1h",
+  "reqLevel": 79,
+  "requirement": "Requires Dexterity 130 Intelligence 130",
+  "implicit": [
+   "+[223-279]-[311-392] Attack and Spell DMG",
+   "+1.4 Speed",
+   "+11 Gear Critical Rate",
+   "+180 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+60% Element DMG"
+  ],
+  "options": [
+   "+[110-150]% Attack and Spell DMG",
+   "+[15.3-18.6]% Speed",
+   "+[30-45]% Area of Effect",
+   "+[22-38] Venom Rate",
+   "[7-10]% DMG Amplification against enemies affected by Venom",
+   "+[41-55]% Critical DMG against enemies affected by Venom",
+   "Changes Deadly Poison Skewer to charge towards the farthest enemy",
+   "Changes Deadly Poison Skewer to pass through enemies while charging"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "ultimate-aquillas-resonance",
+  "name": "Ultimate Aquilla's Resonance",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "Wand",
+  "category": "weapon1h",
+  "reqLevel": 79,
+  "requirement": "Requires Intelligence 261",
+  "implicit": [
+   "+[468-585]-[702-880] Spell DMG",
+   "+1.2 Speed",
+   "+8 Gear Critical Rate"
+  ],
+  "innate": [
+   "+60% Spell DMG"
+  ],
+  "options": [
+   "+[210-230]% Spell DMG",
+   "+[20-26]% Speed",
+   "+[250-310]% Gear Critical Rate",
+   "+[1-2]% Barrier Absorb on Spell Hit",
+   "+[120-190]% Critical DMG",
+   "[30-45]% DMG Amplification if Dexterity and Intelligence are at 500 or above",
+   "+15% Maximized DMG for every 3000 Barrier (Max: 150%)"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "aquilas-chain",
+  "name": "Aquila's Chain",
+  "transcendent": false,
+  "tier": 30,
+  "gearType": "Axe",
+  "category": "weapon1h",
+  "reqLevel": 69,
+  "requirement": "Requires Strength 143 Dexterity 62",
+  "implicit": [
+   "+[168-210]-[261-290] Attack DMG",
+   "+1.3 Speed",
+   "+8 Gear Critical Rate",
+   "+200 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[48-58]-[68-85] Attack DMG",
+   "+[65-75]% Attack DMG",
+   "+[115-125]% Gear Critical Rate",
+   "+[22-26]% Speed",
+   "Cannot Pierce and can Chain when a 1-handed weapon is equipped",
+   "Converts 1 Pierce Count into 1 Chain Count for Axe Throw",
+   "[1.2-1.6]% DMG Amplification per Chain Count upon using skill"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "capris-burst",
+  "name": "Capri's Burst",
+  "transcendent": false,
+  "tier": 30,
+  "gearType": "Axe",
+  "category": "weapon1h",
+  "reqLevel": 69,
+  "requirement": "Requires Strength 143 Dexterity 62",
+  "implicit": [
+   "+[168-210]-[261-290] Attack DMG",
+   "+1.3 Speed",
+   "+8 Gear Critical Rate",
+   "+200 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[48-58]-[68-85] Attack DMG",
+   "+[65-75]% Attack DMG",
+   "+[115-125]% Gear Critical Rate",
+   "+[22-26]% Speed",
+   "+[90-105]% Critical DMG",
+   "+[173-194]% DMG when Dual Wielding",
+   "Axe Throw deals Area DMG identical to Axe Throw on Hit when Dual Wielding",
+   "Explosion Range 150"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "corrosion-claw",
+  "name": "Corrosion Claw",
+  "transcendent": false,
+  "tier": 30,
+  "gearType": "Sword",
+  "category": "weapon1h",
+  "reqLevel": 69,
+  "requirement": "Requires Strength 102 Dexterity 102",
+  "implicit": [
+   "+[192-241]-[252-281] Attack DMG",
+   "+1.4 Speed",
+   "+7 Gear Critical Rate",
+   "+215 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[62-84]-[92-104] Attack DMG",
+   "+[60-80]% Attack DMG",
+   "+[22-26]% Speed",
+   "+[36-42] Equipped Weapon Range",
+   "+[173-194]% DoT",
+   "100% Bleed DMG Dampening",
+   "Grants 1 additional Wheel Slash stack(s) upon using Wheel Slash",
+   "Wheel Slash Max Stacks +[1-2]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "capris-ember",
+  "name": "Capri's Ember",
+  "transcendent": false,
+  "tier": 29,
+  "gearType": "Wand",
+  "category": "weapon1h",
+  "reqLevel": 56,
+  "requirement": "Requires Intelligence 216",
+  "implicit": [
+   "+[185-232]-[278-350] Spell DMG",
+   "+1.2 Speed",
+   "+9 Gear Critical Rate"
+  ],
+  "innate": [
+   "+20% Spell DMG"
+  ],
+  "options": [
+   "+[63-71]-[90-101] Spell DMG",
+   "+[85-90]% Spell DMG",
+   "+[20-22]% Speed",
+   "+[101-113]-[182-206] Fire DMG",
+   "+[89-103]% Fire DMG",
+   "+[55-60]% Critical DMG",
+   "Fire Ball gains +2 additional Projectiles on the 3rd use",
+   "Fire Ball can hit the same target",
+   "Fire Ball Same Target DMG 15% Dampening"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "reign-of-consecration",
+  "name": "Reign of Consecration",
+  "transcendent": false,
+  "tier": 28,
+  "gearType": "Wand",
+  "category": "weapon1h",
+  "reqLevel": 64,
+  "requirement": "Requires Intelligence 195",
+  "implicit": [
+   "+[116-145]-[216-255] Spell DMG",
+   "+1.5 Speed",
+   "+7 Gear Critical Rate"
+  ],
+  "innate": [
+   "+30 Intelligence"
+  ],
+  "options": [
+   "+[84-100]% Minion DMG",
+   "+[14.4-16.2]% Speed",
+   "+[80-100]% Minion Critical Rate",
+   "+[30-50]% Minion Area of Effect",
+   "+[12-18]% Minion HP",
+   "Increases Twisted Abyssling Movement Speed by 100% for 10 s upon summoning Twisted Abyssling",
+   "75DMG Taken % Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "capris-flame",
+  "name": "Capri's Flame",
+  "transcendent": false,
+  "tier": 27,
+  "gearType": "Wand",
+  "category": "weapon1h",
+  "reqLevel": 61,
+  "requirement": "Requires Intelligence 140",
+  "implicit": [
+   "+[114-142]-[144-184] Spell DMG",
+   "+1.3 Speed",
+   "+8 Gear Critical Rate"
+  ],
+  "innate": [
+   "+30 Intelligence"
+  ],
+  "options": [
+   "+[28-41]-[48-60] Attack and Spell DMG",
+   "+[18-22]% Speed",
+   "+[25-50]% Fire DMG",
+   "+[2-3] Spell Skill Rune Level",
+   "Increases Fire Torment Creation Speed by 100%",
+   "+[30-50]% Fire Torrent Skill Rune Duration"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "vespers-venom-fang",
+  "name": "Vesper's Venom Fang",
+  "transcendent": false,
+  "tier": 27,
+  "gearType": "Dagger",
+  "category": "weapon1h",
+  "reqLevel": 61,
+  "requirement": "Requires Dexterity 93 Intelligence 93",
+  "implicit": [
+   "+[113-141]-[143-171] Attack and Spell DMG",
+   "+1.4 Speed",
+   "+8 Gear Critical Rate",
+   "+180 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+30% Element DMG"
+  ],
+  "options": [
+   "+[16-21]% Speed",
+   "+[15-28]% Attack and Spell DMG",
+   "+[108-122]% Gear Critical Rate",
+   "+[85-95]% Poison DMG",
+   "+[12-25] Venom Rate",
+   "+[19-27]% Critical Rate against enemies affected by Venom",
+   "Changes Deadly Poison Skewer to charge towards the farthest enemy",
+   "Changes Deadly Poison Skewer to pass through enemies while charging"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "moon-halo",
+  "name": "Moon Halo",
+  "transcendent": false,
+  "tier": 25,
+  "gearType": "Dagger",
+  "category": "weapon1h",
+  "reqLevel": 46,
+  "requirement": "Requires Dexterity 99 Intelligence 99",
+  "implicit": [
+   "+[89-112]-[134-168] Attack and Spell DMG",
+   "+1.2 Speed",
+   "+11 Gear Critical Rate",
+   "+180 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+22 Stats"
+  ],
+  "options": [
+   "+[210-240]-[280-320] Attack and Spell DMG",
+   "+[85-96]% Gear Critical Rate",
+   "+5% Attack and Spell DMG",
+   "+[20-25]% Attack Speed",
+   "Trigger 2 Additional Strikes at Character's Location When Using Wind Blade, Additional Strikes Are Not Triggered on Critical Hit",
+   "+50% Wind Blade Range",
+   "-[60-40]% Wind Blade DMG"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "hamals-wreath",
+  "name": "Hamal's Wreath",
+  "transcendent": false,
+  "tier": 14,
+  "gearType": "Dagger",
+  "category": "weapon1h",
+  "reqLevel": 31,
+  "requirement": "Requires Dexterity 112",
+  "implicit": [
+   "+[70-88]-[105-134] Attack and Spell DMG",
+   "+1.2 Speed",
+   "+10 Gear Critical Rate",
+   "+180 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+13 Stats"
+  ],
+  "options": [
+   "+[54-62]-[64-89] Attack and Spell DMG",
+   "+[65-70]% Attack and Spell DMG",
+   "+[6-7]% Speed",
+   "+[71-80]% Gear Critical Rate",
+   "+[20-35]% DMG",
+   "+[20-30]% Critical Rate",
+   "Additional Fire DMG equal to [5-8]% of DMG on every hit",
+   "Blade of Death Projectile +3",
+   "Amplify Blade of Death DMG by 100% against Bleeding enemies",
+   "Blade of Death Projectile immediately returns to the character"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "flash-tail",
+  "name": "Flash Tail",
+  "transcendent": false,
+  "tier": 12,
+  "gearType": "Dagger",
+  "category": "weapon1h",
+  "reqLevel": 25,
+  "requirement": "Requires Dexterity 39 Intelligence 39",
+  "implicit": [
+   "+[70-88]-[105-134] Attack and Spell DMG",
+   "+1.35 Speed",
+   "+9 Gear Critical Rate",
+   "+180 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+30 Equipped Weapon Range"
+  ],
+  "options": [
+   "+[25-35]-[40-50] Attack and Spell DMG",
+   "+[50-60]% Attack and Spell DMG",
+   "+[75-90]% Gear Critical Rate",
+   "+[15-20]% Speed",
+   "+[75-90]% DMG",
+   "15% Movement Speed Increase",
+   "Flash Effect changed to 300",
+   "Generates 1 additional strike at current location on every hit"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "alyssas-victory",
+  "name": "Alyssa's Victory",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 157 Intelligence 157",
+  "implicit": [
+   "+[545-685]-[815-1020] Attack and Spell DMG",
+   "+1 Speed",
+   "+9 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+120% DMG when Channeling"
+  ],
+  "options": [
+   "+[220-245]-[315-345] Attack and Spell DMG",
+   "+[125-165]% Attack and Spell DMG",
+   "+[25-30]% Speed",
+   "+[155-175]% Gear Critical Rate",
+   "Spell DMG [29-34]% Amplification when Channeling",
+   "Grants the following effect upon Hit (Duration: 3 s, Max Stacks: 10)",
+   "1% chance to ignore enemy Armor",
+   "1% chance to ignore enemy Element Resist",
+   "+5% Area of Effect",
+   "+15% Spell Critical DMG"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "brilliance-of-contrast",
+  "name": "Brilliance of Contrast",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "2-handed Sword",
+  "category": "weapon2h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 157 Dexterity 157",
+  "implicit": [
+   "+[438-495]-[684-735] Attack DMG",
+   "+0.9 Speed",
+   "+14 Gear Critical Rate",
+   "+260 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+40% Attack DMG"
+  ],
+  "options": [
+   "+[286-338]-[447-562] Attack DMG",
+   "+[80-100]% Attack DMG",
+   "+[22-26]% Speed",
+   "+[140-180]% Gear Critical Rate",
+   "50% chance to apply Shadow of Sephdar for 3 s on Hit",
+   "(Shadow of Sephdar: Cooldown 0.5 s)",
+   "(Summons a Shadow when using a skill while Shadow of Sephdar is active)",
+   "(Summon Shadow: Only summons an Illusion when the skill has the 'Shadow' tag.)",
+   "(Does not apply to skills linked with Trigger Link Runes.)",
+   "Effect cannot overlap with other activation effect with the same name",
+   "When using a Shadow-tagged skill while in the Shadow of Sephdar state, obtain the following effect",
+   "35% DMG Amplification",
+   "+150 Weapon Range",
+   "25% Area of Effect Amplification",
+   "+250% Critical DMG",
+   "1 of the options below will be imbued.",
+   "- [25-30]% Physical DMG Amplification[Chance 20%]",
+   "- [25-30]% Fire DMG Amplification[Chance 20%]",
+   "- [25-30]% Cold DMG Amplification[Chance 20%]",
+   "- [25-30]% Poison DMG Amplification[Chance 20%]",
+   "- [25-30]% Lightning DMG Amplification[Chance 20%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "expanding-boundary",
+  "name": "Expanding Boundary",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 157 Intelligence 157",
+  "implicit": [
+   "+[441-559]-[732-855] Attack and Spell DMG",
+   "+1.1 Speed",
+   "+13 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[357-415]-[566-667] Attack and Spell DMG",
+   "+[50-110]% Attack and Spell DMG",
+   "+[175-250]% Gear Critical Rate",
+   "Grants Expanding Boundary effect upon equipping",
+   "Upon Hit, +39 Equipped Weapon Range for 10 s (Max Stacks: 10)",
+   "Increase Area of Effect by 15% of Weapon Range (Max: 120%)",
+   "2% DMG Amplification per 30 Weapon Range (Max: 50%)",
+   "(Does not stack with Watcher's Stick effect)"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "token-of-trust",
+  "name": "Token of Trust",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Bowgun",
+  "category": "weapon2h",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 270",
+  "implicit": [
+   "+[390-495]-[590-740] Attack DMG",
+   "+500 Max Overheat",
+   "+1.4 Speed",
+   "+10 Gear Critical Rate"
+  ],
+  "innate": [
+   "+60% Attack DMG"
+  ],
+  "options": [
+   "+[235-255]-[330-360] Attack DMG",
+   "+[125-165]% Attack DMG",
+   "+[25-30]% Speed",
+   "+[135-150]% Gear Critical Rate",
+   "[17-25]% DMG Amplification",
+   "+[115-130]% Critical DMG",
+   "25% Overheat Accumulation Dampening",
+   "Enhances Bowgun's Base Effect (Applies as 0.9% DMG Amplification per Overheat(%))"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-casthors-glory",
+  "name": "Transcendent Casthor's Glory",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 157 Intelligence 157",
+  "implicit": [
+   "+[429-536]-[643-804] Attack and Spell DMG",
+   "+1.1 Speed",
+   "+11 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+40% Attack and Spell DMG"
+  ],
+  "options": [
+   "+[90-98]-[126-137] Attack and Spell DMG",
+   "+[105-110]% Attack and Spell DMG",
+   "+[25-26]% Speed",
+   "+[130-145]% Gear Critical Rate",
+   "[24-32]% DMG Amplification when Channeling",
+   "+[100-115]% Critical DMG when Channeling",
+   "Sacred Light fires in three directions when used",
+   "+[15-25]% Blessing Effect"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-earths-judgment",
+  "name": "Transcendent Earth's Judgment",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "2-handed Axe",
+  "category": "weapon2h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 219 Dexterity 95",
+  "implicit": [
+   "+[388-485]-[582-729] Attack DMG",
+   "+0.9 Speed",
+   "+14 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[92-104]-[188-224] Attack DMG",
+   "+[80-100]% Attack DMG",
+   "+[130-145]% Gear Critical Rate",
+   "+[24-30]% Speed",
+   "+[1-1.1]% HP Absorb on Attack Hit",
+   "The third Axe Throw projectile becomes a Massive Explosion when a 2-handed weapon is equipped",
+   "60% DMG Multiplier Amplification",
+   "30% Critical Hit DMG Increase",
+   "Area of Effect doubled"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "transcendent-lightning-runaway",
+  "name": "Transcendent Lightning Runaway",
+  "transcendent": true,
+  "tier": 35,
+  "gearType": "Bowgun",
+  "category": "weapon2h",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 270",
+  "implicit": [
+   "+[242-304]-[364-456] Attack DMG",
+   "+500 Max Overheat",
+   "+1.3 Speed",
+   "+10 Gear Critical Rate"
+  ],
+  "innate": [
+   "+40% Attack DMG"
+  ],
+  "options": [
+   "+[90-98]-[126-137] Attack DMG",
+   "+[104-110]% Attack DMG",
+   "+[25-30]% Speed",
+   "+[140-150]% Gear Critical Rate",
+   "Electric Shell Shot changes to a Rapid Shot form",
+   "Electric Shell Shot Projectile Count +2",
+   "Affected by Projectile Count stats",
+   "25% Electric Round DMG Dampening"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-alyssas-victory",
+  "name": "Ultimate Alyssa's Victory",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 157 Intelligence 157",
+  "implicit": [
+   "+[709-891]-[1060-1326] Attack and Spell DMG",
+   "+1 Speed",
+   "+9 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+140% DMG when Channeling"
+  ],
+  "options": [
+   "+[285-325]-[415-450] Attack and Spell DMG",
+   "+[165-205]% Attack and Spell DMG",
+   "+[31-40]% Speed",
+   "+[185-240]% Gear Critical Rate",
+   "Spell DMG [35-42]% Amplification when Channeling",
+   "Grants the following effect upon Hit (Duration: 3 s, Max Stacks: 10)",
+   "1% chance to ignore enemy Armor",
+   "1% chance to ignore enemy Element Resist",
+   "+5% Area of Effect",
+   "+15% Spell Critical DMG"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-brilliance-of-contrast",
+  "name": "Ultimate Brilliance of Contrast",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "2-handed Sword",
+  "category": "weapon2h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 157 Dexterity 157",
+  "implicit": [
+   "+[520-614]-[830-896] Attack DMG",
+   "+0.9 Speed",
+   "+14 Gear Critical Rate",
+   "+260 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+60% Attack DMG"
+  ],
+  "options": [
+   "+[358-423]-[591-703] Attack DMG",
+   "+[100-120]% Attack DMG",
+   "+[26-30]% Speed",
+   "+[180-220]% Gear Critical Rate",
+   "50% chance to apply Shadow of Sephdar for 3 s on Hit",
+   "(Shadow of Sephdar: Cooldown 0.5 s)",
+   "(Summons a Shadow when using a skill while Shadow of Sephdar is active)",
+   "(Summon Shadow: Only summons an Illusion when the skill has the 'Shadow' tag.)",
+   "(Does not apply to skills linked with Trigger Link Runes.)",
+   "Effect cannot overlap with other activation effect with the same name",
+   "When using a Shadow-tagged skill while in the Shadow of Sephdar state, obtain the following effect",
+   "35% DMG Amplification",
+   "+150 Weapon Range",
+   "25% Area of Effect Amplification",
+   "+250% Critical DMG",
+   "1 of the options below will be imbued.",
+   "- [35-45]% Physical DMG Amplification[Chance 20%]",
+   "- [35-45]% Fire DMG Amplification[Chance 20%]",
+   "- [35-45]% Cold DMG Amplification[Chance 20%]",
+   "- [35-45]% Poison DMG Amplification[Chance 20%]",
+   "- [35-45]% Lightning DMG Amplification[Chance 20%]"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-expanding-boundary",
+  "name": "Ultimate Expanding Boundary",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 82,
+  "requirement": "Requires Strength 157 Intelligence 157",
+  "implicit": [
+   "+[559-698]-[855-993] Attack and Spell DMG",
+   "+1.1 Speed",
+   "+13 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[389-452]-[616-727] Attack and Spell DMG",
+   "+[110-130]% Attack and Spell DMG",
+   "+[250-325]% Gear Critical Rate",
+   "+[10-35] Equipped Weapon Range",
+   "Grants Expanding Boundary effect upon equipping",
+   "Upon Hit, +39 Equipped Weapon Range for 10 s (Max Stacks: 10)",
+   "Increase Area of Effect by 15% of Weapon Range (Max: 120%)",
+   "2% DMG Amplification per 30 Weapon Range (Max: 50%)",
+   "(Does not stack with Watcher's Stick effect)"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "ultimate-token-of-trust",
+  "name": "Ultimate Token of Trust",
+  "transcendent": false,
+  "tier": 35,
+  "gearType": "Bowgun",
+  "category": "weapon2h",
+  "reqLevel": 82,
+  "requirement": "Requires Dexterity 270",
+  "implicit": [
+   "+[500-645]-[770-965] Attack DMG",
+   "+500 Max Overheat",
+   "+1.4 Speed",
+   "+10 Gear Critical Rate"
+  ],
+  "innate": [
+   "+60% Attack DMG"
+  ],
+  "options": [
+   "+[300-335]-[430-475] Attack DMG",
+   "+[165-200]% Attack DMG",
+   "+[31-40]% Speed",
+   "+[150-200]% Gear Critical Rate",
+   "[26-35]% DMG Amplification",
+   "+[130-160]% Critical DMG",
+   "25% Overheat Accumulation Dampening",
+   "Enhances Bowgun's Base Effect (Applies as 1.2% DMG Amplification per Overheat(%))"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "casthors-vision",
+  "name": "Casthor's Vision",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "2-handed Axe",
+  "category": "weapon2h",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 213 Dexterity 92",
+  "implicit": [
+   "+[369-462]-[554-694] Attack DMG",
+   "+0.9 Speed",
+   "+14 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+20% Attack DMG"
+  ],
+  "options": [
+   "+[524-580]-[596-669] Attack DMG",
+   "+[150-250]% Gear Critical Rate",
+   "+[60-80]% Attack DMG",
+   "+[23-26]% Speed",
+   "+[185-240] Equipped Weapon Range",
+   "+[120-135]% Critical DMG",
+   "+[55-75]% Maximized DMG"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-bow-of-splendor",
+  "name": "Transcendent Bow of Splendor",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Steel Bow",
+  "category": "weapon2h",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 123 Dexterity 123",
+  "implicit": [
+   "+[243-304]-[364-456] Attack and Spell DMG",
+   "+1.5 Speed",
+   "+9 Gear Critical Rate"
+  ],
+  "innate": [
+   "+70% Sentry Attack Speed"
+  ],
+  "options": [
+   "+[50-80]% Sentry Attack Speed",
+   "+[100-150]% Sentry Critical Rate",
+   "+2 Sentry Projectile Count",
+   "[9-18]% Sentry DMG Amplification",
+   "+[150-200]% DMG when distance from Sentry is 400 or less",
+   "Changes Knockback direction of Shockwave Sentry to the opposite",
+   "Knockback Chance +60%"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-niviss-breath",
+  "name": "Transcendent Nivis's Breath",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Steel Bow",
+  "category": "weapon2h",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 127 Dexterity 127",
+  "implicit": [
+   "+[243-304]-[364-456] Attack and Spell DMG",
+   "+1.3 Speed",
+   "+10 Gear Critical Rate"
+  ],
+  "innate": [
+   "+295% Sentry DMG"
+  ],
+  "options": [
+   "+[20-40]% Sentry Attack Speed",
+   "+[80-110]% Sentry Critical Rate",
+   "+2 Sentry Projectile Count",
+   "[25-35]% Sentry DMG Amplification against Chilled enemies",
+   "[3-15]% chance for Sentry to deal triple maximized DMG",
+   "Changes Fan Blade Sentry to fire multiple projectiles",
+   "Fan Blade Sentry Projectile Count +2",
+   "Additional Fan Blade Cold Damage equal to 12% on every hit"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-portrait-of-light-and-darkness",
+  "name": "Transcendent Portrait of Light and Darkness",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 165 Intelligence 165",
+  "implicit": [
+   "+[558-600]-[827-921] Attack and Spell DMG",
+   "+1 Speed",
+   "+13 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+[35-40] Burn Rate"
+  ],
+  "options": [
+   "[22-30]% DMG Amplification when Channeling",
+   "[18-25]% Attack Cycle  when Channeling",
+   "[12-18]% DMG Amplification against Burning enemies",
+   "+[10-15]% Fire Penetration",
+   "Generates explosions on additional area while casting Flamethrower"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-righteous-traitor",
+  "name": "Transcendent Righteous Traitor",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "2-handed Sword",
+  "category": "weapon2h",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 144 Dexterity 144",
+  "implicit": [
+   "+[390-490]-[620-840] Attack DMG",
+   "+1.1 Speed",
+   "+13 Gear Critical Rate",
+   "+260 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+800 Hit Rate"
+  ],
+  "options": [
+   "+[84-102]-[123-153] Attack DMG",
+   "+[100-150]% Attack DMG",
+   "+[28-32]% Speed",
+   "Acceleration effect",
+   "( Attack Speed +20%, Cast Speed +20%, Movement Speed +15% )",
+   "Immune to Burn",
+   "Fire Storm does not trigger Burn",
+   "100% chance to activate Additional Strike from Fire Storm (Activates up to 3 times maximum)",
+   "[5-10]% DMG Amplification against Burning enemies"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-sephdars-coexistence",
+  "name": "Transcendent Sephdar's Coexistence",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 155 Intelligence 155",
+  "implicit": [
+   "+[358-426]-[530-663] Attack and Spell DMG",
+   "+1 Speed",
+   "+12 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [
+   "28% Resource Cost Dampening"
+  ],
+  "options": [
+   "+[85-98]% Attack and Spell DMG",
+   "+[15-19]% Speed",
+   "+[99-113]% Gear Critical Rate",
+   "[9.8-11.6]% Projectile DMG Amplification",
+   "+[84-102]-[154-180] Cold DMG against Chilled enemies",
+   "+[67-95]% Critical DMG against Chilled enemies",
+   "Dramatically increases Frost Ball Projectile Speed",
+   "Frost Ball pierces all targets",
+   "Frost Ball generates explosions along its path",
+   "The number of Frost Ball projectiles cannot exceed 7",
+   "35% Frost Ball DMG Dampening"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-tipans-long-bow",
+  "name": "Transcendent Tipan's Long Bow",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Bow",
+  "category": "weapon2h",
+  "reqLevel": 79,
+  "requirement": "Requires Dexterity 266",
+  "implicit": [
+   "+[190-232]-[304-365] Attack DMG",
+   "+1.3 Speed",
+   "+9 Gear Critical Rate"
+  ],
+  "innate": [
+   "+54 Dexterity"
+  ],
+  "options": [
+   "+[85-115]% Attack DMG",
+   "+[17-21]% Speed",
+   "+[46-57]% Gear Critical Rate",
+   "+[52-61]% Critical DMG",
+   "[12-18]% Cold DMG Amplification",
+   "[8-12]% DMG Amplification against enemies affected by Cold Status Effect",
+   "Dramatically increases Icy Arrow's additional Explosion Range",
+   "Can only fire up to 3 additional explosions",
+   "[10-15]% Icy Arrow DMG Amplification"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-unchanging-light",
+  "name": "Transcendent Unchanging Light",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Bowgun",
+  "category": "weapon2h",
+  "reqLevel": 79,
+  "requirement": "Requires Dexterity 261",
+  "implicit": [
+   "+[308-385]-[462-579] Attack DMG",
+   "+500 Max Overheat",
+   "+1.3 Speed",
+   "+10 Gear Critical Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+[91-99]-[124-134] Attack DMG",
+   "+10% Attack and Spell DMG",
+   "+[25-30]% Fire Penetration",
+   "+5 Fixed Max Fire Energy",
+   "[20-35]% Attack Speed Amplification",
+   "+[50-70]% Projectile Speed",
+   "Firebomb Shot DMG +[15-20]% Amplification",
+   "+[30-50]% Heat Explosion Duration",
+   "[5-10]% Fire DMG Amplification",
+   "Change basic duration of Heat Explosion to 0.6 s"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "transcendent-vanishing-night",
+  "name": "Transcendent Vanishing Night",
+  "transcendent": true,
+  "tier": 34,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 152 Intelligence 152",
+  "implicit": [
+   "+[468-586]-[703-880] Attack and Spell DMG",
+   "+1 Speed",
+   "+14 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [
+   "21% Resource Cost Dampening"
+  ],
+  "options": [
+   "+[85-96]-[120-135] Attack and Spell DMG",
+   "+[98-103]% Attack and Spell DMG",
+   "[15-20]% Poison DMG Amplification",
+   "+50% Projectile Speed",
+   "Toxic Flame DoT Acceleration +120%",
+   "Toxic Flame DoT +[150-180]%",
+   "Toxic Flame Pierce Count +[3-5]",
+   "Toxic Flame Max Stacks +5"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "ultimate-casthors-vision",
+  "name": "Ultimate Casthor's Vision",
+  "transcendent": false,
+  "tier": 34,
+  "gearType": "2-handed Axe",
+  "category": "weapon2h",
+  "reqLevel": 79,
+  "requirement": "Requires Strength 213 Dexterity 92",
+  "implicit": [
+   "+[442-554]-[664-832] Attack DMG",
+   "+0.9 Speed",
+   "+14 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+20% Attack DMG"
+  ],
+  "options": [
+   "+[524-609]-[596-702] Attack DMG",
+   "+[150-250]% Gear Critical Rate",
+   "+[80-100]% Attack DMG",
+   "+[26-30]% Speed",
+   "+[240-265] Equipped Weapon Range",
+   "+[135-180]% Critical DMG",
+   "+[75-110]% Maximized DMG"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "earths-judgment",
+  "name": "Earth's Judgment",
+  "transcendent": false,
+  "tier": 31,
+  "gearType": "2-handed Axe",
+  "category": "weapon2h",
+  "reqLevel": 70,
+  "requirement": "Requires Strength 175 Dexterity 75",
+  "implicit": [
+   "+[340-425]-[436-485] Attack DMG",
+   "+0.9 Speed",
+   "+12 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+[62-84]-[168-184] Attack DMG",
+   "+[60-80]% Attack DMG",
+   "+[115-125]% Gear Critical Rate",
+   "+[22-26]% Speed",
+   "+[0.8-0.9]% HP Absorb on Attack Hit",
+   "The third Axe Throw projectile becomes a Massive Explosion when a 2-handed weapon is equipped",
+   "60% DMG Multiplier Amplification",
+   "30% Critical Hit DMG Increase",
+   "Area of Effect doubled"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "lightning-runaway",
+  "name": "Lightning Runaway",
+  "transcendent": false,
+  "tier": 30,
+  "gearType": "Bowgun",
+  "category": "weapon2h",
+  "reqLevel": 63,
+  "requirement": "Requires Dexterity 225",
+  "implicit": [
+   "+[150-188]-[193-214] Attack DMG",
+   "+500 Max Overheat",
+   "+1.3 Speed",
+   "+10 Gear Critical Rate"
+  ],
+  "innate": [
+   "+20% Attack DMG"
+  ],
+  "options": [
+   "+[72-80]-[102-113] Attack DMG",
+   "+[88-95]% Attack DMG",
+   "+[18-23]% Speed",
+   "+[115-125]% Gear Critical Rate",
+   "Electric Shell Shot changes to a Rapid Shot form",
+   "Electric Shell Shot Projectile Count +1",
+   "Affected by Projectile Count stats",
+   "35% Electric Round DMG Dampening"
+  ],
+  "season": "S11",
+  "status": "new"
+ },
+ {
+  "id": "casthors-glory",
+  "name": "Casthor's Glory",
+  "transcendent": false,
+  "tier": 29,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 56,
+  "requirement": "Requires Strength 126 Intelligence 126",
+  "implicit": [
+   "+[279-349]-[418-524] Attack and Spell DMG",
+   "+1.1 Speed",
+   "+11 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+20% Attack and Spell DMG"
+  ],
+  "options": [
+   "+[63-71]-[90-101] Attack and Spell DMG",
+   "+[85-90]% Attack and Spell DMG",
+   "+[20-21]% Speed",
+   "+[110-120]% Gear Critical Rate",
+   "+[160-180]% DMG when Channeling",
+   "+[80-90]% Critical DMG when Channeling",
+   "Sacred Light fires in three directions when used"
+  ],
+  "season": "S12",
+  "status": "new"
+ },
+ {
+  "id": "bow-of-splendor",
+  "name": "Bow of Splendor",
+  "transcendent": false,
+  "tier": 28,
+  "gearType": "Steel Bow",
+  "category": "weapon2h",
+  "reqLevel": 61,
+  "requirement": "Requires Strength 93 Dexterity 93",
+  "implicit": [
+   "+[98-122]-[124-125] Attack and Spell DMG",
+   "+1.3 Speed",
+   "+8 Gear Critical Rate"
+  ],
+  "innate": [
+   "+18% Sentry Attack Speed"
+  ],
+  "options": [
+   "+[35-50]% Sentry Attack Speed",
+   "+[59-70]% Sentry Critical Rate",
+   "[5-8]% Sentry DMG Amplification",
+   "+[75-125]% DMG when distance from Sentry is 400 or less",
+   "Changes Knockback direction of Shockwave Sentry to the opposite",
+   "Knockback Chance +60%"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "tipans-long-bow",
+  "name": "Tipan's Long Bow",
+  "transcendent": false,
+  "tier": 24,
+  "gearType": "Bow",
+  "category": "weapon2h",
+  "reqLevel": 61,
+  "requirement": "Requires Dexterity 186",
+  "implicit": [
+   "+[96-108]-[119-121] Attack DMG",
+   "+1.3 Speed",
+   "+9 Gear Critical Rate"
+  ],
+  "innate": [
+   "+30 Dexterity"
+  ],
+  "options": [
+   "+[12-18]% Speed",
+   "+[53-64]% Attack DMG",
+   "+[33-45]% Gear Critical Rate",
+   "+[20-40]% Cold DMG",
+   "+[58-76]% DMG against Chilled enemies",
+   "Dramatically increases Icy Arrow's additional Explosion Range",
+   "Can only fire up to 3 additional explosions",
+   "[5-10]% Icy Arrow DMG Amplification"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "unchanging-light",
+  "name": "Unchanging Light",
+  "transcendent": false,
+  "tier": 23,
+  "gearType": "Bowgun",
+  "category": "weapon2h",
+  "reqLevel": 46,
+  "requirement": "Requires Dexterity 198",
+  "implicit": [
+   "+[152-191]-[229-287] Attack DMG",
+   "+500 Max Overheat",
+   "+1.3 Speed",
+   "+10 Gear Critical Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+[54-62]-[64-89] Attack DMG",
+   "+[89-103]% Fire DMG",
+   "+2 Fixed Max Fire Energy",
+   "+[15-25]% Attack Speed",
+   "Firebomb Shot DMG +[60-80]%",
+   "+[10-30]% Heat Explosion Duration",
+   "Change basic duration of Heat Explosion to 0.6 s"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "niviss-breath",
+  "name": "Nivis's Breath",
+  "transcendent": false,
+  "tier": 15,
+  "gearType": "Steel Bow",
+  "category": "weapon2h",
+  "reqLevel": 33,
+  "requirement": "Requires Strength 51 Dexterity 51",
+  "implicit": [
+   "+[60-74]-[76-77] Attack and Spell DMG",
+   "+1.3 Speed",
+   "+8 Gear Critical Rate"
+  ],
+  "innate": [
+   "+45% Sentry DMG"
+  ],
+  "options": [
+   "+[10-20]% Sentry Attack Speed",
+   "+[50-80]% Sentry Critical Rate",
+   "+[90-120]% Sentry DMG against Chilled enemies",
+   "Changes Fan Blade Sentry to fire multiple projectiles",
+   "Fan Blade Sentry Projectile Count +2",
+   "Additional Fan Blade Cold Damage equal to 12% on every hit"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "portrait-of-light-and-darkness",
+  "name": "Portrait of Light and Darkness",
+  "transcendent": false,
+  "tier": 11,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 25,
+  "requirement": "Requires Strength 46 Intelligence 46",
+  "implicit": [
+   "+[81-101]-[104-119] Attack and Spell DMG",
+   "+0.95 Speed",
+   "+11 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [
+   "+[21-25] Burn Rate"
+  ],
+  "options": [
+   "[5-10]% DMG Amplification when Channeling",
+   "[10-15]% Attack Cycle  when Channeling",
+   "+[20-40]% DMG against Burning enemies",
+   "Generates explosions on additional area while casting Flamethrower"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "vanishing-night",
+  "name": "Vanishing Night",
+  "transcendent": false,
+  "tier": 11,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 27,
+  "requirement": "Requires Strength 49 Intelligence 49",
+  "implicit": [
+   "+[74-93]-[111-141] Attack and Spell DMG",
+   "+1.1 Speed",
+   "+11 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [
+   "15% Resource Cost Dampening"
+  ],
+  "options": [
+   "+[54-62]-[64-89] Attack and Spell DMG",
+   "+[20-35]% Attack and Spell DMG",
+   "+[30-55]% Poison DMG",
+   "+[30-40]% Projectile Speed",
+   "Toxic Flame DoT Acceleration +100%",
+   "Toxic Flame DoT +[80-110]%",
+   "Toxic Flame Pierce Count +[1-2]"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "star-usurper-s-2-handed-axe",
+  "name": "Star Usurper’s 2-handed Axe",
+  "transcendent": false,
+  "tier": 10,
+  "gearType": "2-handed Axe",
+  "category": "weapon2h",
+  "reqLevel": 1,
+  "requirement": "Requires Strength 7",
+  "implicit": [
+   "+[165-175]-[190-200] Attack DMG",
+   "+1.1 Speed",
+   "+13 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+100% Attack DMG",
+   "+30% Speed",
+   "+100% Gear Critical Rate",
+   "+120% Critical DMG",
+   "+30% Maximized DMG",
+   "+100 Equipped Weapon Range",
+   "3% DMG Amplification for every 1 Character Level(s) (Max:  300%)"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "star-usurper-s-bow",
+  "name": "Star Usurper’s Bow",
+  "transcendent": false,
+  "tier": 10,
+  "gearType": "Bow",
+  "category": "weapon2h",
+  "reqLevel": 1,
+  "requirement": "Requires Dexterity 7",
+  "implicit": [
+   "+[140-150]-[165-175] Attack DMG",
+   "+1.35 Speed",
+   "+11 Gear Critical Rate"
+  ],
+  "innate": [],
+  "options": [
+   "+100% Attack DMG",
+   "+30% Speed",
+   "+100% Gear Critical Rate",
+   "+120% Critical DMG",
+   "+30% Maximized DMG",
+   "+2 Projectile Count",
+   "+1 Pierce Count",
+   "3% DMG Amplification for every 1 Character Level(s) (Max:  300%)"
+  ],
+  "season": "S11",
+  "status": "changed"
+ },
+ {
+  "id": "star-usurper-s-staff",
+  "name": "Star Usurper’s Staff",
+  "transcendent": false,
+  "tier": 10,
+  "gearType": "Staff",
+  "category": "weapon2h",
+  "reqLevel": 1,
+  "requirement": "Requires Intelligence 7",
+  "implicit": [
+   "+[165-175]-[190-200] Attack and Spell DMG",
+   "+1.1 Speed",
+   "+12 Gear Critical Rate",
+   "+240 Equipped Weapon Range"
+  ],
+  "innate": [],
+  "options": [
+   "+100% Attack and Spell DMG",
+   "+30% Speed",
+   "+100% Gear Critical Rate",
+   "+30% Cast Speed",
+   "+120% Critical DMG",
+   "+30% Maximized DMG",
+   "+50% Area of Effect",
+   "3% DMG Amplification for every 1 Character Level(s) (Max:  300%)"
+  ],
+  "season": "S11",
+  "status": "changed"
+ }
+]

@@ -1,0 +1,68 @@
+.home {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero {
+  padding: 1.5rem 0 0.5rem;
+}
+.hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+}
+.hero p {
+  max-width: 60ch;
+  margin: 0;
+}
+.eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem !important;
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.home-card {
+  display: block;
+  color: inherit;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.home-card:hover {
+  color: inherit;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.home-card.accent {
+  background: linear-gradient(160deg, var(--accent-bg), var(--bg-raised) 60%);
+}
+.home-card .big {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+.home-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.home-notes h3 {
+  margin-top: 0.8rem;
+}
+.home-notes h3:first-child {
+  margin-top: 0;
+}
+.home-notes ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}

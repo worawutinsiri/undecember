@@ -1,0 +1,84 @@
+# Undecember DB (แฟนเมด)
+
+เว็บดูข้อมูล Undecember ภาษาไทย อ้างอิง **Season 12: The Farside**
+
+- **ไอเทม**: Unique 197 ชิ้น (ที่เพิ่ม/ปรับใน S11–S12) แยกเป็น 5 หมวด กรองตามชนิดอุปกรณ์ได้ และค้นหาได้ทั้งชื่อและออปชัน (ไทย/อังกฤษ)
+- **รูน**: รูนสกิล 187 ตัวและรูนลิงก์ 182 ตัว ปรับเลเวลได้ 1–50 ดูเกรด การปลุกพลัง และสิ่งที่เปลี่ยนใน S12
+- **จำลองดาเมจ**: ลากรูนสกิล รูนลิงก์ 6 ช่องแบบ Rune Cast และไอเทม 11 ช่อง แล้วดู DPS พร้อมขั้นตอนการคำนวณ
+
+ไม่มีส่วนเกี่ยวข้องกับ LINE Games หรือ Needs Games
+
+## เริ่มใช้งาน
+
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm test           # unit tests (ตัวอ่านค่าสถานะ, สูตรดาเมจ)
+npm run build      # static build ใน dist/ (deploy ที่ไหนก็ได้ เช่น GitHub Pages)
+```
+
+ใช้ hash routing (`/#/runes`) และ `base: './'` จึงเปิดจากโฟลเดอร์ย่อยหรือ static hosting ได้เลย
+
+## โครงสร้าง
+
+```
+data-raw/official-s12/   CSV จากชีททางการ (ข้อมูลต้นทาง)
+data-raw/buildDecember/  RuneList.json (MIT) — สีรูน / วิธีได้รับ
+scripts/build-data.mjs   CSV → src/data/generated/*.json
+scripts/i18n-*.mjs       หา/รวมคำแปลไทย
+src/data/th/             คำแปลไทย (lines.json = บรรทัดค่าสถานะ, descriptions.json = คำอธิบายรูน)
+src/lib/statParser.ts    แปลงบรรทัดค่าสถานะ → modifier
+src/lib/damage.ts        สูตรคำนวณดาเมจ
+src/lib/runeLevel.ts     ค่ารูนตามเลเวล / ค่าสุ่มของไอเทม
+src/pages/               หน้าแรก, ไอเทม, รูน, จำลองดาเมจ
+docs/thai-glossary.md    อภิธานศัพท์สำหรับแปล
+```
+
+## อัปเดตข้อมูลเมื่อมีซีซันใหม่
+
+1. ดาวน์โหลดแต่ละแท็บของชีททางการ (ลิงก์อยู่ใน https://ud.floor.line.games/us/bbs/guide/stat) เป็น CSV
+   (`.../pub?gid=<gid>&single=true&output=csv`) แล้ววางใน `data-raw/official-s12/` (หรือโฟลเดอร์ซีซันใหม่ แล้วแก้ชื่อไฟล์ใน `build-data.mjs`)
+2. `npm run data:build`
+3. `npm run i18n:missing` เพื่อดูว่ามีข้อความใหม่ที่ยังไม่แปลกี่บรรทัด
+   - `node scripts/i18n-extract.mjs <โฟลเดอร์>` จะแยกข้อความที่ยังไม่แปลออกเป็นไฟล์
+   - แปลตาม `docs/thai-glossary.md`
+   - `node scripts/i18n-merge.mjs <ไฟล์ที่แปลแล้ว...>` จะตรวจ placeholder แล้วรวมเข้า `src/data/th/`
+4. แก้ `DATA_META` ใน `src/data/index.ts` (ชื่อซีซัน และวันที่อัปเดต)
+
+ข้อความที่ยังไม่มีคำแปลจะแสดงเป็นภาษาอังกฤษแทน เว็บจึงไม่พัง
+
+## สูตรดาเมจและสมมติฐาน
+
+```
+hit    = (ดาเมจคงที่ธาตุหลัก + ค่าคงที่ของสกิล) × ตัวคูณสกิล% × (1 + Σ"+X%") × Π(1 + Amplification) × Π(1 − Dampening)
+crit%  = ค่าคริ × (1 + Σค่าคริ%) / (1 + 0.04 × เลเวลศัตรู) + โอกาสคริแบบคงที่
+crit×  = 1.5 + Σดาเมจคริ            (Σดาเมจคริ สูงสุด 1300%)
+resist = min(85%, R / (1 + เลเวลศัตรู/100)),  R = ต้านทาน × (1 − เจาะ%) − เจาะคงที่
+speed  = ความเร็วอาวุธ × (1 + local%) × (1 + Σ+%) × Π(1 + Amp), สูงสุด 5 ครั้ง/วินาที
+DPS    = hit × ศัตรู × คริ × ครั้งต่อวินาที (หรือ 1/คูลดาวน์)
+```
+
+| ส่วน | ที่มา |
+|---|---|
+| ลำดับ flat → ตัวคูณสกิล → +% → Amplification → Dampening | คู่มือทางการ (rune-list glossary) |
+| ดาเมจคริเริ่มต้น +50% และเพดาน 1300% | patch note ทางการ |
+| สูตรโอกาสคริ และสูตรค่าต้านทานของมอนสเตอร์ | ชุมชนทดสอบ (เช่น APXEOLOG/undecember-calculator) |
+| เลเวลรูน 2–44 และ 46–50 | ประมาณแบบเส้นตรงจาก Lv1/Lv45 |
+| `Resource Cost Increase` ของรูนลิงก์บวกกัน (ไม่คูณ) | สมมติฐาน |
+| `+X% Strike DMG Multiplier` บวกเข้ากับตัวคูณสกิลตรง ๆ | สมมติฐาน |
+| เกราะลดดาเมจกายภาพ | เกมไม่เปิดเผยสูตร ให้กรอก % เอง |
+
+สิ่งที่ยังไม่รองรับ:
+- DoT, ดาเมจ Maximized และสถานะผิดปกติ
+- มินเนียน/เซนทรี/โทเทม (มีคำเตือนในหน้าจำลอง)
+- รูนลิงก์แบบทริกเกอร์/เปิดใช้งาน
+- บรรทัดแบบ "ต่อ X" (per)
+
+บรรทัดที่มีเงื่อนไข เช่น "against Burning enemies" ไม่ถูกนับโดยอัตโนมัติ ผู้ใช้ต้องติ๊กเปิดเองในหน้าจำลอง
+
+มีรายงานจากชุมชนว่าเกมมีตัวคูณแฝงที่ไม่เปิดเผย ตัวเลขจึงใช้เปรียบเทียบบิลด์ได้ แต่อาจไม่ตรงกับในเกม 100%
+
+## แหล่งข้อมูลและสัญญาอนุญาต
+
+- ข้อมูลเกม © LINE Games / Needs Games: ชีท [Season Mode Changes](https://ud.floor.line.games/us/bbs/guide/stat)
+- สีรูน, เกรดต่ำสุด และวิธีได้รับ: [nestula/BuildDecember](https://github.com/nestula/BuildDecember) (MIT, ไฟล์ LICENSE อยู่ใน `data-raw/buildDecember/`)

@@ -1,0 +1,84 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1.25rem;
+  background: color-mix(in srgb, var(--bg-raised) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-strong);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.brand b {
+  color: var(--accent);
+}
+
+.nav {
+  display: flex;
+  gap: 0.25rem;
+  flex: 1;
+  overflow-x: auto;
+}
+.nav a {
+  color: var(--text-dim);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+.nav a:hover {
+  color: var(--text-strong);
+  background: var(--surface);
+}
+.nav a.active {
+  color: var(--accent-strong);
+  background: var(--accent-bg);
+}
+
+.theme-toggle {
+  width: 2.2rem;
+  padding: 0.3rem;
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+  .brand span {
+    display: none;
+  }
+  .content {
+    padding: 1rem 1rem 2rem;
+  }
+}

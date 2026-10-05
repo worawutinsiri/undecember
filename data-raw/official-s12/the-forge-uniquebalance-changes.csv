@@ -1,0 +1,2713 @@
+,Edited on May. 13 21:47 (UTC+9),,,,,,
+,,,,,,,
+,Name,Tier,Gear Type,Req Lv.,Equip Requirement,Option (Before),Option (After)
+,Sephdar's Halter,34,Necklace,Lv. 79,-,"+14 Stats
+----------------------------------------------
+[3-12]% Melee DMG Amplification
+[15-30]% DMG Taken Decrease
+[15-30]% DMG Amplification for next Attack Skill for 3 s upon using a Movement Skill Rune
+[8-20]% DMG Amplification for 3 s upon using Attack Enhance Skill Rune1% Melee DMG Amplification per 50 Strength
+Apply Shadow of Sephdar for 5 s when hit
+(Shadow of Sephdar: Cooldown 1 s)
+(Summons a Shadow when using a skill while Shadow of Sephdar is active)
+(Summon Shadow: Only summons an Illusion when the skill has the 'Shadow' tag.)
+(Does not apply to skills linked with Trigger Link Runes.)","+14 Stats
+-------------------------------------------------------
+[3-12]% Melee DMG Amplification
+[15-30]% DMG Taken Decrease
+[15-30]% DMG Amplification for the next first Attack Skill for 3 s upon using a Movement Skill Rune
+[8-20]% DMG Amplification for 3 s upon using Attack Enhance Skill Rune
+1% Melee DMG Amplification per 50 Strength
+50% chance to apply Shadow of Sephdar for 3 s on Hit
+(Shadow of Sephdar: Cooldown 0.5 s)
+(Summons a Shadow when using a skill while Shadow of Sephdar is active)
+(Summon Shadow: Only summons an Illusion when the skill has the 'Shadow' tag.)
+(Does not apply to skills linked with Trigger Link Runes.)
+Effect cannot overlap with other activation effect with the same name"
+,Cold-blooded Burden,25,Spaulders,Lv. 46,Requires Strength 85 Intelligence 85,"+[105-114] Gear Armor
++[37-38] Gear Barrier
+-------------------------------------------------------
+3% Resource Cost Dampening
+-------------------------------------------------------
++[270-315]% Gear Armor
++[43-52]% Gear Barrier
++50% Bleed Rate While Using Blood Explosion
+[3-5]% Amplification DMG to Bleeding Enemies While Using Blood Explosion
++[40-60]% Physical DMG
++[30-50]% Critical DMG
+Immune to Bleed","+[105-114] Gear Armor
++[37-38] Gear Barrier
+-------------------------------------------------------
+3% Resource Cost Dampening
+-------------------------------------------------------
++[270-315]% Gear Armor
++[43-52]% Gear Barrier
++75% Bleed Rate While Using Blood Explosion
+Immune to Bleed while using Blood Explosion
+[3-5]% Amplification DMG to Bleeding Enemies While Using Blood Explosion
++[40-60]% Physical DMG
++[30-50]% Critical DMG"
+,Transcendent Cold-blooded Burden,34,Spaulders,Lv. 79,Requires Strength 115 Intelligence 115,"+[189-210] Gear Armor
++[52-58] Gear Barrier
+-------------------------------------------------------
+[6.7-7.8]% Resource Cost Dampening
+-------------------------------------------------------
++[390-423]% Gear Armor
++[64-70]% Gear Barrier
++75% Bleed Rate While Using Blood Explosion
+[12-15]% Amplification DMG to Bleeding Enemies While Using Blood Explosion
++[1-3] Max Bleed Stacks
+[200-300]% Bleed DMG Amplification
+Immune to Bleed","+[189-210] Gear Armor
++[52-58] Gear Barrier
+-------------------------------------------------------
+[6.7-7.8]% Resource Cost Dampening
+-------------------------------------------------------
++[390-423]% Gear Armor
++[64-70]% Gear Barrier
++75% Bleed Rate While Using Blood Explosion
+Immune to Bleed while using Blood Explosion
+[12-18]% Amplification DMG to Bleeding Enemies While Using Blood Explosion
++[1-3] Max Bleed Stacks While Using Blood Explosion
+[200-300]% Amplification Bleed DMG While Using Blood Explosion
+[5-12]% Physical DMG Amplification
++[50-75]% Critical DMG"
+,Vesper's Tear,25,Necklace,Lv. 46,,"+32% Mana Regen/Sec
+-------------------------------------------------------
++130% Poison Orb Range
+-1 Poison Orb Chain Count
+-2 Poison Orb Projectile Count
++[81-91] Poison Resist
++[40-50]% Poison DMG
++[7-9]% Attack Speed
++[7-9]% Cast Speed
++[60-70]% Mana Regen/Sec","+32% Mana Regen/Sec
+-------------------------------------------------------
++130% Poison Orb Range
+-1 Poison Orb Chain Count
+-2 Poison Orb Projectile Count
++[81-91] Poison Resist
++[40-50]% Poison DMG
++[20-25]% Attack Speed
++[20-25]% Cast Speed
++[60-70]% Mana Regen/Sec"
+,Transcendent Vesper's Tear,34,Necklace,Lv. 79,,"+36% Mana Regen/Sec
+-------------------------------------------------------
++400% Poison Orb Range
+-1 Poison Orb Chain Count
+-2 Poison Orb Projectile Count
++[110-130] Poison Resist
+[22-27]% Poison DMG Amplification
++[10-12]% Attack Speed
++[10-12]% Cast Speed
++[2-3] Mana on every hit","+36% Mana Regen/Sec
+-------------------------------------------------------
++400% Poison Orb Range
+-1 Poison Orb Chain Count
+-2 Poison Orb Projectile Count
++[110-130] Poison Resist
+[22-27]% Poison DMG Amplification
+[8-12]% Attack Speed Amplification
+[8-12]% Cast Speed Amplification
++[2-3] Mana on every hit"
+,Moon Halo,25,Dagger,Lv. 46,Requires Dexterity 99 Intelligence 99,"+[89-112]-[134-168] Attack and Spell DMG
++1.2 Speed
++11 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++22 Stats
+-------------------------------------------------------
++[210-240]-[280-320] Attack and Spell DMG
++[85-96]% Gear Critical Rate
++5% Attack and Spell DMG
++[12-15]% Attack Speed
+Trigger 2 Additional Strikes at Character's Location When Using Wind Blade, Additional Strikes Are Not Triggered on Critical Hit
++50% Wind Blade Range
+-70% Wind Blade DMG","+[89-112]-[134-168] Attack and Spell DMG
++1.2 Speed
++11 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++22 Stats
+-------------------------------------------------------
++[210-240]-[280-320] Attack and Spell DMG
++[85-96]% Gear Critical Rate
++5% Attack and Spell DMG
++[20-25]% Attack Speed
+Trigger 2 Additional Strikes at Character's Location When Using Wind Blade, Additional Strikes Are Not Triggered on Critical Hit
++50% Wind Blade Range
+-[60-40]% Wind Blade DMG"
+,Transcendent Moon Halo,34,Dagger,Lv. 79,Requires Dexterity 130 Intelligence 130,"+[210-263]-[315-395] Attack and Spell DMG
++1.2 Speed
++11 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++26 Stats
+-------------------------------------------------------
++[470-510]-[540-580] Attack and Spell DMG
++[120-130]% Gear Critical Rate
++10% Attack and Spell DMG
++[90-110]% Critical DMG
++[20-23]% Attack Speed
+Trigger 2 Additional Strikes at Character's Location When Using Wind Blade, Additional Strikes Are Not Triggered on Critical Hit
++80% Wind Blade Range
+-40% Wind Blade DMG","+[210-263]-[315-395] Attack and Spell DMG
++1.2 Speed
++11 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++26 Stats
+-------------------------------------------------------
++[480-520]-[550-585] Attack and Spell DMG
++[150-163]% Gear Critical Rate
++11% Attack and Spell DMG
++[90-110]% Critical DMG
+[8-12]% Attack Speed Amplification
+Trigger 2 Additional Strikes at Character's Location When Using Wind Blade, Additional Strikes Are Not Triggered on Critical Hit
++80% Wind Blade Range
+-[40-20]% Wind Blade DMG"
+,Alyssa's Landing,14,Shoes,Lv. 29,Requires Strength 80,"+[76-79] Gear Armor
+-------------------------------------------------------
++[161-179]% Gear Armor
+Decrease DMG Taken by 30% For 1 Second, Drag Enemies in, and Trigger Additional Strikes When Using Leap Attack
+[35-40]% Movement Speed Increase
++[40-50]% Melee DMG
++[17-23]% Movement Skill Rune Cooldown Recovery Speed","+[76-79] Gear Armor
+-------------------------------------------------------
++[161-179]% Gear Armor
+Decrease DMG Taken by 30% For 1 Second, Drag Enemies in, and Trigger Additional Strikes When Using Leap Attack
+[35-40]% Movement Speed Increase
++[40-50]% Melee DMG
++[15-30]% DMG for 3 s upon Using Leap Attack
++[30-35]% Leap Attack Cooldown Recovery Speed"
+,Transcendent Alyssa's Landing,34,Shoes,Lv. 79,Requires Strength 223,"+[430-479] Gear Armor
+-------------------------------------------------------
++[207-232]% Gear Armor
+Decrease DMG Taken by 30% For 1 Second, Drag Enemies in, and Trigger Additional Strikes When Using Leap Attack
++[200-300]% Leap Attack Range
++[8-12]% HP
+[10-12]% Melee DMG Amplification
+50% Movement Speed Increase
++[30-35]% Movement Skill Rune Cooldown Recovery Speed","+[430-479] Gear Armor
+-------------------------------------------------------
++[207-232]% Gear Armor
+Decrease DMG Taken by 30% For 1 Second, Drag Enemies in, and Trigger Additional Strikes When Using Leap Attack
++[200-300]% Leap Attack Range
++[8-12]% HP
+[10-12]% Melee DMG Amplification
+[50-65]% Movement Speed Increase
++[40-70]% DMG for 3 s upon Using Leap Attack
++[40-50]% Leap Attack Cooldown Recovery Speed"
+,Transcendent Leo's Roar,34,Shoes,Lv. 79,Requires Strength 105 Dexterity 105,"+[200-300] Gear Armor
++[100-200] Gear Dodge Rate
+-------------------------------------------------------
+[6.7-7.8]% Resource Cost Dampening
+-------------------------------------------------------
++[185-365] Gear Armor
++[87-168] Gear Dodge Rate
++[90-150]% Gear Armor
++[45-90]% Gear Dodge Rate
+[30-50]% Movement Speed Increase
++[15-30] Block Expertise with Shield equipped
+HP Absorb on Hit for 2 s upon Blocking +[2-4]%
++4 Shield Strike Range Count
++120 Shield Strike Interval Angle
++120 Shield Strike Max Angle","+[200-300] Gear Armor
++[100-200] Gear Dodge Rate
+-------------------------------------------------------
+[6.7-7.8]% Resource Cost Dampening
+-------------------------------------------------------
++[185-365] Gear Armor
++[87-168] Gear Dodge Rate
++[90-150]% Gear Armor
++[150-180]% Gear Dodge Rate
+[30-50]% Movement Speed Increase
++[15-30] Block Expertise with Shield equipped
+HP Absorb on Hit for 2 s upon Blocking +[2-4]%
++4 Shield Strike Range Count
++120 Shield Strike Interval Angle
++120 Shield Strike Max Angle"
+,Acuben's Mist,27,Belt,Lv. 62,,"+[10-15] Stats
++[5-10] Chaos Resist
++[5-10]% Potion Effect
+Dagger Throw Projectile Count +9
+Fires Dagger Throw Projectiles in a circle
++400 Dagger Throw Projectile Speed
+30% Projectile DMG Dampening","+[60-90] HP
++[10-18]% HP
++[10-15] Stats
++[5-10] Chaos Resist
++[25-30]% Potion Effect
+Dagger Throw Projectile Count +9
+Fires Dagger Throw Projectiles in a circle
++400 Dagger Throw Projectile Speed
+Dagger Throw Projectile DMG 30% Dampening"
+,Transcendent Acuben's Mist,34,Belt,Lv. 79,,"+[15-20] Stats
++[10-15] Chaos Resist
++[30-50]% Potion Effect
+Dagger Throw Projectile Count +9
+Fires Dagger Throw Projectiles in a circle
++800 Dagger Throw Projectile Speed
+Dagger Throw Projectile Return","+[120-160] HP
+[15-21]% HP Amplification
++[15-20] Stats
++[10-15] Chaos Resist
++[50-70]% Potion Effect
+Dagger Throw Projectile Count +9
+Fires Dagger Throw Projectiles in a circle
++800 Dagger Throw Projectile Speed
+Dagger Throw Projectile Return"
+,Transcendent Sephdar's Coexistence,34,Staff,Lv. 79,Requires Strength 155 Intelligence 155,"+[358-426]-[530-663] Attack and Spell DMG
++1 Speed
++12 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
+28% Resource Cost Dampening
+-------------------------------------------------------
++[15-19]% Speed
++[99-113]% Gear Critical Rate
+[9.8-11.6]% Projectile DMG Amplification
++[84-102]-[154-180] Cold DMG against Chilled enemies
++[67-95]% Critical DMG against Chilled enemies
+Dramatically increases Frost Ball Projectile Speed
+Frost Ball pierces all targets
+Frost Ball generates explosions along its path
+The number of Frost Ball projectiles cannot exceed 7
+50% Frost Ball DMG Dampening","+[358-426]-[530-663] Attack and Spell DMG
++1 Speed
++12 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
+28% Resource Cost Dampening
+-------------------------------------------------------
++[85-98]% Attack and Spell DMG
++[15-19]% Speed
++[99-113]% Gear Critical Rate
+[9.8-11.6]% Projectile DMG Amplification
++[84-102]-[154-180] Cold DMG against Chilled enemies
++[67-95]% Critical DMG against Chilled enemies
+Dramatically increases Frost Ball Projectile Speed
+Frost Ball pierces all targets
+Frost Ball generates explosions along its path
+The number of Frost Ball projectiles cannot exceed 7
+35% Frost Ball DMG Dampening"
+,Leo's Flow,25,Ring,Lv. 59,,"+[9-16] Intelligence
++[20-24] Element Resist
++[6.6-10.8]% Cast Speed
++[30-50]% Lightning DMG
+Fixes Max Lightning Energy count to 5
+Lightning Energy will not be consumed when using Lightning Wave
+50% Lightning Wave DMG Dampening","+[9-16] Intelligence
++[20-24] Element Resist
++[6.6-10.8]% Cast Speed
++[30-50]% Lightning DMG
+Fixes Max Lightning Energy count to 5
+Lightning Energy will not be consumed when using Lightning Wave
+25% Lightning Wave DMG Dampening"
+,Transcendent Leo's Flow,34,Ring,Lv. 79,,"+[11.2-18]% Cast Speed
++[44-53]% Critical Rate
++[25-28]% Critical DMG
+[7-9]% Lightning DMG Amplification
++[9.8-12.6]% Lightning Penetration
+Lightning Energy will not be consumed when using Lightning Wave
+50% Lightning Wave DMG Dampening","+[11.2-18]% Cast Speed
++[44-53]% Critical Rate
++[25-28]% Critical DMG
+[7-9]% Lightning DMG Amplification
++[9.8-12.6]% Lightning Penetration
+Lightning Energy will not be consumed when using Lightning Wave
+25% Lightning Wave DMG Dampening"
+,Transcendent Aphros's Veil,34,Helmet,Lv. 79,Requires Strength 98 Dexterity 98,"+[954-1060] Gear Armor
++[780-791] Gear Dodge Rate
+-------------------------------------------------------
++[89-104] Gear Armor
++[62-79] Gear Dodge Rate
+[9-12]% Melee DMG Amplification
++[11-14.5]% Critical DMG
++[23-31] Element Resist
++[21-30]% Enhance Skill Rune Cooldown Recovery Speed
+Always gain Max Stacks when using Domain of Strength
+[20-30]% Domain of Strength DMG Dampening","+[954-1060] Gear Armor
++[780-791] Gear Dodge Rate
+-------------------------------------------------------
++[89-104] Gear Armor
++[62-79] Gear Dodge Rate
+[9-12]% Melee DMG Amplification
++[11-14.5]% Critical DMG
+[5-10]% HP Amplification
++[32-38] Element Resist
++[21-30]% Enhance Skill Rune Cooldown Recovery Speed
+Always gain Max Stacks when using Domain of Strength
+[20-30]% Domain of Strength DMG Dampening"
+,Blacksmith's Ring,8,Ring,Lv. 13,,"+[21-25]% DMG
+-------------------------------------------------------
+10% Movement Speed Increase
+1% Max Barrier Regen/Sec upon charging Barrier
++[20-23] Spell Hit Rate
+HP Absorb stat of Siphon Life applies as Barrier Absorb 
+Max HP Absorb stat of Siphon Life applies as Max stat of Barrier Absorb","+[21-25]% DMG
+-------------------------------------------------------
+10% Movement Speed Increase
+1% Max Barrier Regen/Sec upon charging Barrier
++[18-22]% Spell Hit Rate
+HP Absorb stat of Siphon Life applies as Barrier Absorb 
+Max HP Absorb stat of Siphon Life applies as Max stat of Barrier Absorb"
+,Transcendent Blacksmith's Ring,34,Ring,Lv. 79,,"+[86-104]% DMG
+-------------------------------------------------------
++[0.05-0.1] Speed
+[1-3]% Max Barrier Regen/Sec upon charging Barrier
++[50-100] Spell Hit Rate
+[10-20]% DMG upon Spell Amplification
++[200-450] Barrier
+10% Movement Speed Increase
+HP Absorb stat of Siphon Life applies as Barrier Absorb 
+Max HP Absorb stat of Siphon Life applies as Max stat of Barrier Absorb","+[86-104]% DMG
+-------------------------------------------------------
++[0.05-0.1] Speed
+[1-3]% Max Barrier Regen/Sec upon charging Barrier
++[75-110]% Spell Hit Rate
+[30-40]% Spell DMG Amplification when using Siphon Life
++[200-450] Barrier
+10% Movement Speed Increase
+HP Absorb stat of Siphon Life applies as Barrier Absorb 
+Max HP Absorb stat of Siphon Life applies as Max stat of Barrier Absorb"
+,Transcendent Mirror Wall,34,Shield,Lv. 79,Requires Strength 260,"+[1400-2200] Gear Armor
++[200-300] Gear Block Expertise
+-------------------------------------------------------
++[100-150]% Gear Block Expertise
+-------------------------------------------------------
++[21-30]% Gear Armor
+Enduring Pain Patience Outburst Deactivation
+3% DMG Increase per 2500 Armor while using Enduring Pain (Max stacks: 10)
+1 of the options below will be imbued.
+- Physical Reflect DMG Immunity while using Enduring Pain[Chance 50%]
+- Element Reflect DMG Immunity while using Enduring Pain[Chance 50%]","+[1400-2200] Gear Armor
++[200-300] Gear Block Expertise
+-------------------------------------------------------
++[100-150]% Gear Block Expertise
+-------------------------------------------------------
++[21-30]% Gear Armor
+Enduring Pain Patience Outburst Deactivation
+3% DMG Increase per 2500 Armor while using Enduring Pain (Max stacks: 10)
+[10-15]% DMG Taken Dampening while using Enduring Pain
+1 of the options below will be imbued.
+- Physical Reflect DMG Immunity while using Enduring Pain[Chance 50%]
+- Element Reflect DMG Immunity while using Enduring Pain[Chance 50%]"
+,Vesper's Destruction,26,Gloves,Lv. 59,Requires Dexterity 75 Intelligence 75,"+[120-142] Gear Dodge Rate
+-------------------------------------------------------
++8 Chaos Resist
+-------------------------------------------------------
++[148-170] Gear Dodge Rate
++[95-112]% Gear Dodge Rate
+Deadly Poison Claw DMG [5-12]% Dampening
+Deadly Poison Claw 1%  DMG Amplification per 1 Poison Energy
+Inflict Additional Hit upon using Deadly Poison Claw with Dual Wield","+[120-142] Gear Dodge Rate
+-------------------------------------------------------
++8 Chaos Resist
+-------------------------------------------------------
++[148-170] Gear Dodge Rate
++[95-112]% Gear Dodge Rate
+Deadly Poison Claw DMG [5-12]% Dampening
+Deadly Poison Claw [1-3]%  DMG Amplification per 1 Poison Energy
+Increases Deadly Poison Claw range by 5% per Poison Energy stack
+Increase is doubled when Dual Wielding"
+,Transcendent Vesper's Destruction,34,Gloves,Lv. 79,Requires Dexterity 280,"+[304-348] Gear Dodge Rate
+-------------------------------------------------------
++10 Chaos Resist
+-------------------------------------------------------
++[301-352] Gear Dodge Rate
++[132-150]% Gear Dodge Rate
+Deadly Poison Claw DMG [5-12]% Dampening
+Deadly Poison Claw 3%  DMG Amplification per 1 Poison Energy
++[10-30]% Critical DMG
++[30-50]% Poison Energy Effect
+Inflict Additional Hit upon using Deadly Poison Claw with Dual Wield","+[304-348] Gear Dodge Rate
+-------------------------------------------------------
++10 Chaos Resist
+-------------------------------------------------------
++[301-352] Gear Dodge Rate
++[132-150]% Gear Dodge Rate
+Deadly Poison Claw DMG [5-12]% Dampening
+Deadly Poison Claw [3-7]%  DMG Amplification per 1 Poison Energy
++[10-30]% Critical DMG
++[30-50]% Poison Energy Effect
+Increases Deadly Poison Claw range by 5% per Poison Energy stack
+Increase is doubled when Dual Wielding"
+,Aquilla's Eternity,27,Armor,Lv. 49,Requires Strength 212,"+[764-833] Gear Armor
+-------------------------------------------------------
++[166-184]% Gear Armor
+-[4-2] Resource Cost
++30% HP
++[30-35]% Barrier
++[20-25]% Enhance Skill Rune Duration
++30% Earth Veil Effect
++30% Wind Veil Effect
+Both Veil effects applies upon using Veil of Protection","+[764-833] Gear Armor
+-------------------------------------------------------
++[166-184]% Gear Armor
+-[4-2] Resource Cost
++30% HP
++[30-35]% Barrier
++[10-25]% Veil of Protection Skill Rune effect
+Both Veil effects applies upon using Veil of Protection
++30% Earth Veil Effect
++30% Wind Veil Effect
+Immune to Reflect upon using Veil of Protection"
+,Transcendent Aquilla's Eternity,34,Armor,Lv. 79,Requires Strength 250,"+[1733-1915] Gear Armor
+-------------------------------------------------------
++[215-229]% Gear Armor
+-5 Resource Cost
+[20-30]% HP Amplification
+[20-30]% Barrier Amplification
+Immune to Reflect DMG
++[35-50]% Enhance Skill Rune Effect
++30% Earth Veil Effect
++30% Wind Veil Effect
+Both Veil effects applies upon using Veil of Protection","+[1733-1915] Gear Armor
+-------------------------------------------------------
++[215-229]% Gear Armor
+-5 Resource Cost
+[20-30]% HP Amplification
+[20-30]% Barrier Amplification
++[35-50]% Veil of Protection Skill Rune effect
+Both Veil effects applies upon using Veil of Protection
++30% Earth Veil Effect
++30% Wind Veil Effect
+Immune to Reflect upon using Veil of Protection"
+,Unchanging Light,23,Bowgun,Lv. 46,Requires Dexterity 198,"+[152-191]-[229-287] Attack DMG
++500 Max Overheat
++1.3 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++[54-62]-[64-89] Attack DMG
++[89-103]% Fire DMG
++2 Fixed Max Fire Energy
++[15-25]% Attack Speed
+Firebomb Shot DMG +[60-80]%
+Change basic duration of Heat Explosion to 0.6 s","+[152-191]-[229-287] Attack DMG
++500 Max Overheat
++1.3 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++[54-62]-[64-89] Attack DMG
++[89-103]% Fire DMG
++2 Fixed Max Fire Energy
++[15-25]% Attack Speed
+Firebomb Shot DMG +[60-80]%
++[10-30]% Heat Explosion Duration
+Change basic duration of Heat Explosion to 0.6 s"
+,Transcendent Unchanging Light,34,Bowgun,Lv. 79,Requires Dexterity 261,"+[308-385]-[462-579] Attack DMG
++500 Max Overheat
++1.3 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++[91-99]-[124-134] Attack DMG
++[25-30]% Fire Penetration
++5 Fixed Max Fire Energy
+[20-35]% Attack Speed Amplification
+Firebomb Shot DMG +[15-20]% Amplification
+Change basic duration of Heat Explosion to 0.6 s","+[308-385]-[462-579] Attack DMG
++500 Max Overheat
++1.3 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++[91-99]-[124-134] Attack DMG
++10% Attack and Spell DMG
++[25-30]% Fire Penetration
++5 Fixed Max Fire Energy
+[20-35]% Attack Speed Amplification
++[50-70]% Projectile Speed
+Firebomb Shot DMG +[15-20]% Amplification
++[30-50]% Heat Explosion Duration
+[5-10]% Fire DMG Amplification
+Change basic duration of Heat Explosion to 0.6 s"
+,Sephdar's Longing,27,Shield,Lv. 49,Requires Strength 212,"+[752-820] Gear Armor
++26 Gear Block Expertise
+-------------------------------------------------------
++[537-624] Gear Armor
++[100-116]% Gear Armor
++[27-29] Block Expertise
++[60-85]% DMG against Stunned enemies
++[20-40]% HP
+Illusion Hook Stun Chance +5%
+Cast Illusion Hook to all directions
+[15-25]% DMG Taken Dampening","+[752-820] Gear Armor
++26 Gear Block Expertise
+-------------------------------------------------------
++[537-624] Gear Armor
++[100-116]% Gear Armor
++[27-29] Block Expertise
++[60-85]% DMG against Stunned enemies
++[20-40]% HP
+Illusion Hook Stun Chance +5%
+Cast Illusion Hook to all directions
+Guaranteed Critical Hit for Illusion Hook against Stunned enemies
+[15-25]% DMG Taken Dampening"
+,Transcendent Sephdar's Longing,34,Shield,Lv. 79,Requires Strength 250,"+[1736-1930] Gear Armor
++62 Gear Block Expertise
+-------------------------------------------------------
++[18-20] Attack Block Expertise
+-------------------------------------------------------
++[830-880] Gear Armor
++[210-220]% Gear Armor
++[124-142]% Gear Block Expertise
+Guaranteed Critical Hit against Stunned enemies
++[30-50]% Pain Effect
+Illusion Hook Stun Chance +10%
+Cast Illusion Hook to all directions
+[25-35]% DMG Taken Dampening","+[1736-1930] Gear Armor
++62 Gear Block Expertise
+-------------------------------------------------------
++[18-20] Attack Block Expertise
+-------------------------------------------------------
++[830-880] Gear Armor
++[210-220]% Gear Armor
++[124-142]% Gear Block Expertise
+[12-18]% DMG Amplification against Stunned enemies
++[30-50]% Pain Effect
+Illusion Hook Stun Chance +10%
+Cast Illusion Hook to all directions
+Guaranteed Critical Hit for Illusion Hook against Stunned enemies
+[25-35]% DMG Taken Dampening"
+,Vanishing Night,11,Staff,Lv. 27,Requires Strength 49 Intelligence 49,"+[74-93]-[111-141] Attack and Spell DMG
++1.1 Speed
++11 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
+15% Resource Cost Dampening
+-------------------------------------------------------
++[54-62]-[64-89] Attack and Spell DMG
++[20-35]% Attack and Spell DMG
++[30-55]% Poison DMG
++[30-40]% Projectile Speed
+Toxic Flame DoT Acceleration +100%
+Toxic Flame DoT +[30-50]%
+Toxic Flame Pierce Count +[1-2]","+[74-93]-[111-141] Attack and Spell DMG
++1.1 Speed
++11 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
+15% Resource Cost Dampening
+-------------------------------------------------------
++[54-62]-[64-89] Attack and Spell DMG
++[20-35]% Attack and Spell DMG
++[30-55]% Poison DMG
++[30-40]% Projectile Speed
+Toxic Flame DoT Acceleration +100%
+Toxic Flame DoT +[80-110]%
+Toxic Flame Pierce Count +[1-2]"
+,Transcendent Vanishing Night,34,Staff,Lv. 79,Requires Strength 152 Intelligence 152,"+[468-586]-[703-880] Attack and Spell DMG
++1 Speed
++14 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
+21% Resource Cost Dampening
+-------------------------------------------------------
++[85-96]-[120-135] Attack and Spell DMG
++[98-103]% Attack and Spell DMG
+[15-20]% Poison DMG Amplification
++50% Projectile Speed
+Toxic Flame DoT Acceleration +120%
+Toxic Flame DoT +[110-130]%
+Toxic Flame Pierce Count +[3-5]
+Toxic Flame Max Stacks +5","+[468-586]-[703-880] Attack and Spell DMG
++1 Speed
++14 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
+21% Resource Cost Dampening
+-------------------------------------------------------
++[85-96]-[120-135] Attack and Spell DMG
++[98-103]% Attack and Spell DMG
+[15-20]% Poison DMG Amplification
++50% Projectile Speed
+Toxic Flame DoT Acceleration +120%
+Toxic Flame DoT +[150-180]%
+Toxic Flame Pierce Count +[3-5]
+Toxic Flame Max Stacks +5"
+,Boreal's Peace,22,Necklace,Lv. 55,,"[25-35]% Attack Speed Dampening
+-------------------------------------------------------
+[10-15]% DMG Taken Dampening
++[85-150] HP
++[20-40]% DMG
+Rain of Arrows Projectile Count +2
++[18-22]% Mana Regen/Sec
+Removes Rain of Arrows Cooldown
+Amplifies Rain of Arrows Mana Cost by 20%
+Rain of Arrows Projectile Creation Range +200%","[25-35]% Attack Speed Dampening
+-------------------------------------------------------
+[10-15]% DMG Taken Dampening
++[85-150] HP
++[20-40]% DMG
+Rain of Arrows Projectile Count +2
++[18-22]% Mana Regen/Sec
+Removes Rain of Arrows Cooldown
+Amplifies Rain of Arrows Mana Cost by 15%
+Rain of Arrows Projectile Creation Range +175%"
+,Transcendent Boreal's Peace,35,Necklace,Lv. 82,,"[25-35]% Attack Speed Dampening
+-------------------------------------------------------
+[5-10]% DMG Taken Decrease
++[300-400] HP
++[15-20]% Armor Penetration
+Rain of Arrows Projectile Count +4
++[50-75]% Mana Regen/Sec
+Removes Rain of Arrows Cooldown
+Amplifies Rain of Arrows Mana Cost by 20%
+Rain of Arrows Projectile Creation Range +200%","[25-35]% Attack Speed Dampening
+-------------------------------------------------------
+[5-10]% DMG Taken Decrease
++[300-400] HP
++[15-20]% Armor Penetration
+Rain of Arrows Projectile Count +4
++[50-75]% Mana Regen/Sec
+Removes Rain of Arrows Cooldown
+Amplifies Rain of Arrows Mana Cost by 15%
+Rain of Arrows Projectile Creation Range +175%"
+,Acuben's Crystal,24,Belt,Lv. 58,,"+[5.1-6]% Attack Speed
+-------------------------------------------------------
++[20-30]% HP
++[28-40]% Enhance Skill Rune Duration
++[20-35]% DMG
++[20-25] Chaos Resist
++[25-30] Element Resist
+Decreases Piercing Arrow Projectile Speed
+Increases Piercing Arrow Projectile Size
+Piercing Arrow fires only 1 Projectile with the DMG Amplified by 1000%
+Skill Cooldown +1 s","+[5.1-6]% Attack Speed
+-------------------------------------------------------
++[20-30]% HP
++[28-40]% Enhance Skill Rune Duration
++[20-35]% DMG
++[20-25] Chaos Resist
++[25-30] Element Resist
+Reduces Piercing Arrow Projectile Speed
+Creates additional Hits at set intervals while the Projectile travels
+Dampens Piercing Arrow DMG by 50%
+Fixed to 1 Projectile"
+,Transcendent Acuben's Crystal,35,Belt,Lv. 82,,"+[14.1-15]% Attack Speed
+-------------------------------------------------------
+[26-30]% HP Amplification
++[34-55]% Enhance Skill Rune Effect
+[9-13]% DMG Amplification
++[18-22] Chaos Resist
++[20-25] Element Resist
+Decreases Piercing Arrow Projectile Speed
+Increases Piercing Arrow Projectile Size
+Piercing Arrow fires only 1 Projectile with the DMG Amplified by 1000%
+Skill Cooldown +1 s","+[14.1-15]% Attack Speed
+-------------------------------------------------------
+[26-30]% HP Amplification
++[34-55]% Enhance Skill Rune Effect
+[9-13]% DMG Amplification
++[18-22] Chaos Resist
++[20-25] Element Resist
+Reduces Piercing Arrow Projectile Speed
+Creates additional Hits at set intervals while the Projectile travels
+Dampens Piercing Arrow DMG by 50%
+Fixed to 1 Projectile"
+,Capri's Flame,27,Wand,Lv. 61,Requires Intelligence 140,"+[114-142]-[144-184] Spell DMG
++1.3 Speed
++8 Gear Critical Rate
+-------------------------------------------------------
++30 Intelligence
+-------------------------------------------------------
++[18-22]% Speed
+[30-50]% Attack Cycle  when Channeling
+[3-5]% DMG Amplification when Channeling
+30% Resource Cost Amplification
++[2-3] Spell Skill Rune Level
+Increases Fire Torment Stack Speed by 100%
+Decreases DMG Taken by 2% per Fire Torment stage
+Increases Attack Cycle by 8% per Fire Torment stage","+[114-142]-[144-184] Spell DMG
++1.3 Speed
++8 Gear Critical Rate
+-------------------------------------------------------
++30 Intelligence
+-------------------------------------------------------
++[28-41]-[48-60] Attack and Spell DMG
++[18-22]% Speed
++[25-50]% Fire DMG
++[2-3] Spell Skill Rune Level
+Increases Fire Torment Creation Speed by 100%
++[30-50]% Fire Torrent Skill Rune Duration"
+,Transcendent Capri's Flame,34,Wand,Lv. 79,Requires Intelligence 216,"+[308-385]-[462-579] Spell DMG
++1.3 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++51 Intelligence
+-------------------------------------------------------
++[25-40]% Speed
+[70-100]% Attack Cycle  when Channeling
+[8-15]% DMG Amplification when Channeling
+15% Resource Cost Amplification
++[2-3] Spell Skill Rune Level
+Increases Fire Torment Stack Speed by 100%
+Decreases DMG Taken by 2% per Fire Torment stage
+Increases Attack Cycle by 8% per Fire Torment stage","+[308-385]-[462-579] Spell DMG
++1.3 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++51 Intelligence
+-------------------------------------------------------
++[68-84]-[97-105] Attack and Spell DMG
++[25-40]% Speed
+[10-18]% Fire DMG Amplification
++[2-3] Spell Skill Rune Level
+Increases Fire Torment Creation Speed by 100%
++[60-80]% Fire Torrent Skill Rune Duration"
+,Vesper's Rest,14,Armor,Lv. 31,Requires Strength 118,"+[410-465] Gear Armor
+-------------------------------------------------------
++15 Strength
+-------------------------------------------------------
++[310-385] Gear Armor
++[70-88]% Gear Armor
++[10-20] Element Resist
++[30-50]% HP
+Immune to Bleed
++[10-30] Bleed Rate
+Bloodshed Domain Effects enhanced as follows
+Bloodshed DMG 10% Amplified
+Bloodshed Weapon Range 20% Increased","+[410-465] Gear Armor
+-------------------------------------------------------
++15 Strength
+-------------------------------------------------------
++[310-385] Gear Armor
++[70-88]% Gear Armor
++[10-20] Element Resist
++[30-50]% HP
++[10-20]% DMG against Bleeding enemies
+Immune to Bleed
++[10-30] Bleed Rate
+Domain of Blood Range increased to 750.
+Domain of Blood Effects are further enhanced:
+Bloodshed DMG 10% Amplified
+Bloodshed Weapon Range 20% Increased"
+,Transcendent Vesper's Rest,35,Armor,Lv. 82,Requires Strength 270,"+[1485-1650] Gear Armor
+-------------------------------------------------------
++68 Strength
+-------------------------------------------------------
++[970-1050] Gear Armor
++[207-215]% Gear Armor
+[10-25]% HP Amplification
++[20-40] Element Resist
++[10-35] Chaos Resist
++[10-14]% DMG against Bleeding enemies
+Immune to Bleed
++[20-30] Bleed Rate
+Bloodshed Domain Effects enhanced as follows
+Bloodshed DMG 10% Amplified
+Bloodshed Weapon Range 20% Increased","+[1485-1650] Gear Armor
+-------------------------------------------------------
++68 Strength
+-------------------------------------------------------
++[970-1050] Gear Armor
++[207-215]% Gear Armor
+[10-25]% HP Amplification
++[20-40] Element Resist
++[10-35] Chaos Resist
+[5-9]% DMG Amplification against Bleeding enemies
+Immune to Bleed
++[20-30] Bleed Rate
+Domain of Blood Range increased to 750.
+Domain of Blood Effects are further enhanced:
+Bloodshed DMG 10% Amplified
+Bloodshed Weapon Range 20% Increased"
+,The First Returnee,17,Armor,Lv. 37,Requires Strength 105,"+[400-450] Gear Armor
+-------------------------------------------------------
++15 Strength
+-------------------------------------------------------
++[250-280] Gear Armor
++[70-100]% Gear Armor
++[225-430] HP
+[5-10]% Attack Speed Amplification
+Triggers Ultimate Blow every 3 strikes
+Increases range of Ultimate Blow
+30% Fierce Strike DMG Dampening","+[400-450] Gear Armor
+-------------------------------------------------------
++15 Strength
+-------------------------------------------------------
++[250-280] Gear Armor
++[70-100]% Gear Armor
++[225-430] HP
++[10-18]% HP
+[5-10]% Attack Speed Amplification
+[9-14]% Fierce Strike DMG Amplification against Stunned enemies
+Triggers Ultimate Blow every 3 Fierce Strikes
+Increases range of Ultimate Blow by 200%
+30% Fierce Strike DMG Dampening"
+,Transcendent The First Returnee,34,Armor,Lv. 79,Requires Strength 260,"+[600-630] Gear Armor
+-------------------------------------------------------
++68 Strength
+-------------------------------------------------------
++[375-420] Gear Armor
++[105-150]% Gear Armor
++[365-600] HP
+[5-20]% Attack Speed Amplification
+Additional Physical DMG equal to [5-15]% of DMG on every hit
+Triggers Ultimate Blow every 3 strikes
+Increases range of Ultimate Blow","+[600-630] Gear Armor
+-------------------------------------------------------
++68 Strength
+-------------------------------------------------------
++[375-420] Gear Armor
++[105-150]% Gear Armor
++[365-600] HP
++[21-28]% HP
+[12-20]% Attack Speed Amplification
+Additional Physical DMG equal to [5-15]% of DMG on every hit
+[22-30]% Fierce Strike DMG Amplification against Stunned enemies
+Triggers Ultimate Blow every 3 Fierce Strikes
+Increases range of Ultimate Blow by 200%"
+,Transcendent Righteous Traitor,34,2-handed Sword,Lv. 79,Requires Strength 144 Dexterity 144,"+[390-490]-[620-840] Attack DMG
++1.1 Speed
++13 Gear Critical Rate
++260 Equipped Weapon Range
+-------------------------------------------------------
++800 Hit Rate
+-------------------------------------------------------
++[84-102]-[123-153] Attack DMG
++[100-150]% Attack DMG
+Acceleration effect
+( Attack Speed +20%, Cast Speed +20%, Movement Speed +15% )
+Immune to Burn
+Fire Storm does not trigger Burn
+100% chance to activate Additional Strike from Fire Storm (Activates up to 3 times maximum)
+[5-10]% DMG Amplification against Burning enemies","+[390-490]-[620-840] Attack DMG
++1.1 Speed
++13 Gear Critical Rate
++260 Equipped Weapon Range
+-------------------------------------------------------
++800 Hit Rate
+-------------------------------------------------------
++[84-102]-[123-153] Attack DMG
++[100-150]% Attack DMG
++[28-32]% Speed
+Acceleration effect
+( Attack Speed +20%, Cast Speed +20%, Movement Speed +15% )
+Immune to Burn
+Fire Storm does not trigger Burn
+100% chance to activate Additional Strike from Fire Storm (Activates up to 3 times maximum)
+[5-10]% DMG Amplification against Burning enemies"
+,Band of Certainty,25,Ring,Lv. 59,,"+[2000-3000] Hit Rate
++[60-100]% DMG
+Activates double maximized DMG per 2 strikes
+upon using Seal of Persistence
+Deals triple maximized DMG per 3 strikes
+Does not apply to skills with the Focus tag","+[300-1200] Hit Rate
++[40-60]% DMG
++[10-20]% Maximized DMG
+Activates double maximized DMG per 2 strikes
+upon using Seal of Persistence
+Deals triple maximized DMG per 3 strikes
+Does not apply to skills with the Focus tag
++2000 Hit Rate upon Seal of Persistence Activation"
+,Transcendent Band of Certainty,34,Ring,Lv. 79,,"+[3000-5000] Hit Rate
++[80-120]% DMG
+[20-30]% DMG Amplification when Strength, Dexterity, and Intelligence are 200 or more
+Activates double maximized DMG per 2 strikes
+upon using Seal of Persistence
+Deals triple maximized DMG per 3 strikes
+Does not apply to skills with the Focus tag","+[1200-2400] Hit Rate
++[60-80]% DMG
++[35-50]% Maximized DMG
+[15-22]% DMG Amplification when Strength, Dexterity, and Intelligence are 200 or more
+Activates double maximized DMG per 2 strikes
+upon using Seal of Persistence
+Deals triple maximized DMG per 3 strikes
+Does not apply to skills with the Focus tag
++2000 Hit Rate upon Seal of Persistence Activation"
+,Plate of Addendum,30,Quiver,Lv. 69,,"+30-42 Attack DMG
+-------------------------------------------------------
++1 Simultaneous Sentry Count
++[30-50]% Sentry Threat Level
++[5-10]% Sentry Attack Speed
++[1-2] Toggle Skill Rune Level
+Chance to grant Sentry DMG 10% Amplification buff for 10 s when switching to the Sentry Expert Toggle (Max: 5 stacks)
+25% Resource Cost Amplification","+30-42 Attack DMG
+-------------------------------------------------------
++1 Simultaneous Sentry Count
++[30-50]% Sentry Threat Level
++[18-23]% Sentry Attack Speed
++[1-2] Toggle Skill Rune Level
+Chance to grant Sentry DMG 10% Amplification buff for 10 s when switching to the Sentry Expert Toggle (Max: 5 stacks)
+[15-25]% Resource Cost Amplification"
+,Transcendent Plate of Addendum,34,Quiver,Lv. 79,,"+48-72 Attack DMG
+-------------------------------------------------------
++2 Simultaneous Sentry Count
++[50-100]% Sentry Threat Level
++[10-20]% Sentry Attack Speed
++[2-3] Toggle Skill Rune Level
+Chance to grant Sentry DMG 10% Amplification buff for 10 s when switching to the Sentry Expert Toggle (Max: 5 stacks)
+15% Resource Cost Amplification","+48-72 Attack DMG
+-------------------------------------------------------
++2 Simultaneous Sentry Count
++[50-100]% Sentry Threat Level
+[8-12]% Sentry Attack Speed Amplification
++[2-3] Toggle Skill Rune Level
+Chance to grant Sentry DMG 10% Amplification buff for 10 s when switching to the Sentry Expert Toggle (Max: 5 stacks)
+[5-15]% Resource Cost Amplification"
+,Nivis's Breath,15,Steel Bow,Lv. 33,Requires Strength 51 Dexterity 51,"+[60-74]-[76-77] Attack and Spell DMG
++1.3 Speed
++8 Gear Critical Rate
+-------------------------------------------------------
++45% Sentry DMG
+-------------------------------------------------------
++[10-20]% Sentry Attack Speed
++30% Sentry Install Speed
++[30-60]% Sentry DMG against Chilled enemies
+Changes Fan Blade Sentry to fire multiple projectiles
+Fan Blade Sentry Projectile Count +2
+Additional Fan Blade Cold Damage equal to 12% on every hit","+[60-74]-[76-77] Attack and Spell DMG
++1.3 Speed
++8 Gear Critical Rate
+-------------------------------------------------------
++45% Sentry DMG
+-------------------------------------------------------
++[10-20]% Sentry Attack Speed
++[50-80]% Sentry Critical Rate
++[90-120]% Sentry DMG against Chilled enemies
+Changes Fan Blade Sentry to fire multiple projectiles
+Fan Blade Sentry Projectile Count +2
+Additional Fan Blade Cold Damage equal to 12% on every hit"
+,Transcendent Nivis's Breath,34,Steel Bow,Lv. 79,Requires Strength 127 Dexterity 127,"+[243-304]-[364-456] Attack and Spell DMG
++1.3 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++295% Sentry DMG
+-------------------------------------------------------
++[20-40]% Sentry Attack Speed
++2 Sentry Projectile Count
++[60-120]% Sentry DMG against Chilled enemies
+[3-15]% chance for Sentry to deal triple maximized DMG
+Changes Fan Blade Sentry to fire multiple projectiles
+Fan Blade Sentry Projectile Count +2
+Additional Fan Blade Cold Damage equal to 12% on every hit","+[243-304]-[364-456] Attack and Spell DMG
++1.3 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++295% Sentry DMG
+-------------------------------------------------------
++[20-40]% Sentry Attack Speed
++[80-110]% Sentry Critical Rate
++2 Sentry Projectile Count
+[25-35]% Sentry DMG Amplification against Chilled enemies
+[3-15]% chance for Sentry to deal triple maximized DMG
+Changes Fan Blade Sentry to fire multiple projectiles
+Fan Blade Sentry Projectile Count +2
+Additional Fan Blade Cold Damage equal to 12% on every hit"
+,Vanguard's Gaze,24,Helmet,Lv. 55,Requires Dexterity 140,"+[401-435] Gear Dodge Rate
+-------------------------------------------------------
++[237-279] Gear Dodge Rate
++[11-14] Chaos Resist
++[17-20]% Sentry Hit Rate
+Amplifies DMG Taken by [5-10]%
+[5-15]% Sentry DMG Amplification against Bleeding enemies
+Piercing Sentry Projectile Count +2
+Piercing Sentry Curve +1","+[401-435] Gear Dodge Rate
+-------------------------------------------------------
++[237-279] Gear Dodge Rate
++[11-14] Chaos Resist
++[17-20]% Sentry Hit Rate
+Sentry gains Sharpness effect
+( Critical Rate +50%, Critical DMG +25% )
+[5-15]% Sentry DMG Amplification against Bleeding enemies
+Piercing Sentry Projectile Count +2
+Piercing Sentry Curve +1"
+,Transcendent Vanguard's Gaze,34,Helmet,Lv. 79,Requires Dexterity 170,"+[954-1060] Gear Dodge Rate
+-------------------------------------------------------
++[350-400] Gear Dodge Rate
++[15-20] Chaos Resist
+Sentry gains Sharpness effect
+( Critical Rate +50%, Critical DMG +25% )
+Sentry gains Close Range Shot effect
+( Amplifies Projectile DMG up to 20% the closer you are to the enemy upon hitting within 600 distance )
+[10-20]% Sentry DMG Amplification against Bleeding enemies
+Piercing Sentry Projectile Count +2
+Piercing Sentry Curve +1","+[954-1060] Gear Dodge Rate
+-------------------------------------------------------
++[350-400] Gear Dodge Rate
++[15-20] Chaos Resist
++[25-35]% Sentry Hit Rate
+Sentry gains Sharpness effect
+( Critical Rate +50%, Critical DMG +25% )
+Sentry gains Close Range Shot effect
+( Amplifies Projectile DMG up to 20% the closer you are to the enemy upon hitting within 600 distance )
+[20-35]% Sentry Close Range Shot Effect
+[10-20]% Sentry DMG Amplification against Bleeding enemies
+Piercing Sentry Projectile Count +2
+Piercing Sentry Curve +1"
+,Hamal's Vine,18,Belt,Lv. 40,,"+[15-20] HP Regen/Sec
++2 Sentry Projectile Count
++[5-10]% Recovery Potion Effect
+Upon installing Frost Totem, creates an Area of Chill
+[15-30]% Sentry DMG Amplification against Frozen enemies","+[15-20] HP Regen/Sec
++[20-35]% Sentry HP
++2 Sentry Projectile Count
++[5-10]% Recovery Potion Effect
+Upon installing Frost Totem, creates an Area of Chill
+[15-30]% Sentry DMG Amplification against Frozen enemies"
+,Transcendent Hamal's Vine,34,Belt,Lv. 79,,"+[30-60] HP Regen/Sec
++2 Sentry Projectile Count
++[15-20]% Recovery Potion Effect
++[15-20]% Enhance Potion Effect
+Upon installing Frost Totem, creates an Area of Chill
+[25-50]% Sentry DMG Amplification against Frozen enemies","+[30-60] HP Regen/Sec
+[8-14]% Sentry HP Amplification
++2 Sentry Projectile Count
++[15-50]% Recovery Potion Effect
++[15-50]% Enhance Potion Effect
+Upon installing Frost Totem, creates an Area of Chill
+[35-60]% Sentry DMG Amplification against Frozen enemies"
+,Bow of Splendor,28,Steel Bow,Lv. 61,Requires Strength 93 Dexterity 93,"+[98-122]-[124-125] Attack and Spell DMG
++1.3 Speed
++8 Gear Critical Rate
+-------------------------------------------------------
++18% Sentry Attack Speed
+-------------------------------------------------------
++[10-15]% Sentry Attack Speed
++[59-70]% Sentry Critical Rate
+[5-8]% Sentry DMG Amplification for 3 s upon summoning Sentry
++[25-50]% DMG when distance from Sentry is 400 or less
+Changes Knockback direction of Shockwave Sentry to the opposite
+Knockback Chance +35%","+[98-122]-[124-125] Attack and Spell DMG
++1.3 Speed
++8 Gear Critical Rate
+-------------------------------------------------------
++18% Sentry Attack Speed
+-------------------------------------------------------
++[35-50]% Sentry Attack Speed
++[59-70]% Sentry Critical Rate
+[5-8]% Sentry DMG Amplification
++[75-125]% DMG when distance from Sentry is 400 or less
+Changes Knockback direction of Shockwave Sentry to the opposite
+Knockback Chance +60%"
+,Transcendent Bow of Splendor,34,Steel Bow,Lv. 79,Requires Strength 123 Dexterity 123,"+[243-304]-[364-456] Attack and Spell DMG
++1.5 Speed
++9 Gear Critical Rate
+-------------------------------------------------------
++70% Sentry Attack Speed
+-------------------------------------------------------
++[15-30]% Sentry Attack Speed
++[100-150]% Sentry Critical Rate
++2 Sentry Projectile Count
+[9-18]% Sentry DMG Amplification for 3 s upon summoning Sentry
++[50-100]% DMG when distance from Sentry is 400 or less
+Changes Knockback direction of Shockwave Sentry to the opposite
+Knockback Chance +35%","+[243-304]-[364-456] Attack and Spell DMG
++1.5 Speed
++9 Gear Critical Rate
+-------------------------------------------------------
++70% Sentry Attack Speed
+-------------------------------------------------------
++[50-80]% Sentry Attack Speed
++[100-150]% Sentry Critical Rate
++2 Sentry Projectile Count
+[9-18]% Sentry DMG Amplification
++[150-200]% DMG when distance from Sentry is 400 or less
+Changes Knockback direction of Shockwave Sentry to the opposite
+Knockback Chance +60%"
+,Reign of Consecration,28,Wand,Lv. 64,Requires Intelligence 195,"+[116-145]-[216-255] Spell DMG
++1.5 Speed
++7 Gear Critical Rate
+-------------------------------------------------------
++30 Intelligence
+-------------------------------------------------------
++[84-100]% Minion DMG
++[14.4-16.2]% Speed
++[80-100]% Minion Critical Rate
++[30-50]% Minion Area of Effect
+Increases Twisted Abyssling Movement Speed by 100% for 10 s upon summoning Twisted Abyssling
+75DMG Taken % Dampening","+[116-145]-[216-255] Spell DMG
++1.5 Speed
++7 Gear Critical Rate
+-------------------------------------------------------
++30 Intelligence
+-------------------------------------------------------
++[84-100]% Minion DMG
++[14.4-16.2]% Speed
++[80-100]% Minion Critical Rate
++[30-50]% Minion Area of Effect
++[12-18]% Minion HP
+Increases Twisted Abyssling Movement Speed by 100% for 10 s upon summoning Twisted Abyssling
+75DMG Taken % Dampening"
+,Transcendent Reign of Consecration,34,Wand,Lv. 79,Requires Intelligence 265,"+[196-248]-[370-443] Spell DMG
++1.5 Speed
++7 Gear Critical Rate
+-------------------------------------------------------
++225% Minion DMG
+-------------------------------------------------------
++[17.3-21]% Speed
++[120-135]% Minion Critical Rate
++[68-75]% Minion Critical DMG
++[60-100]% Minion Area of Effect
++1 Max Abyssling Summon Count
+Increases Twisted Abyssling Movement Speed by 100% for 10 s upon summoning Twisted Abyssling
+75DMG Taken % Dampening","+[196-248]-[370-443] Spell DMG
++1.5 Speed
++7 Gear Critical Rate
+-------------------------------------------------------
++225% Minion DMG
+-------------------------------------------------------
++[17.3-21]% Speed
++[120-135]% Minion Critical Rate
++[68-75]% Minion Critical DMG
++[60-100]% Minion Area of Effect
++[22-29]% Minion HP
++1 Max Abyssling Summon Count
+Increases Twisted Abyssling Movement Speed by 100% for 10 s upon summoning Twisted Abyssling
+75DMG Taken % Dampening"
+,Vesper's Venom Fang,27,Dagger,Lv. 61,Requires Dexterity 93 Intelligence 93,"+[113-141]-[143-171] Attack and Spell DMG
++1.4 Speed
++8 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++30% Element DMG
+-------------------------------------------------------
++[16-21]% Speed
++[108-122]% Gear Critical Rate
++[85-95]% Poison DMG
++[19-27]% Critical Rate against enemies affected by Venom
+Changes Deadly Poison Skewer to charge towards the farthest enemy
+Changes Deadly Poison Skewer to pass through enemies while charging","+[113-141]-[143-171] Attack and Spell DMG
++1.4 Speed
++8 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++30% Element DMG
+-------------------------------------------------------
++[16-21]% Speed
++[15-28]% Attack and Spell DMG
++[108-122]% Gear Critical Rate
++[85-95]% Poison DMG
++[12-25] Venom Rate
++[19-27]% Critical Rate against enemies affected by Venom
+Changes Deadly Poison Skewer to charge towards the farthest enemy
+Changes Deadly Poison Skewer to pass through enemies while charging"
+,Transcendent Vesper's Venom Fang,34,Dagger,Lv. 79,Requires Dexterity 130 Intelligence 130,"+[223-279]-[311-392] Attack and Spell DMG
++1.4 Speed
++11 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++60% Element DMG
+-------------------------------------------------------
++[75-90]% Attack and Spell DMG
++[15.3-18.6]% Speed
++[30-45]% Area of Effect
+[7-10]% DMG Amplification against enemies affected by Venom
++[41-55]% Critical DMG against enemies affected by Venom
+Changes Deadly Poison Skewer to charge towards the farthest enemy
+Changes Deadly Poison Skewer to pass through enemies while charging","+[223-279]-[311-392] Attack and Spell DMG
++1.4 Speed
++11 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++60% Element DMG
+-------------------------------------------------------
++[110-150]% Attack and Spell DMG
++[15.3-18.6]% Speed
++[30-45]% Area of Effect
++[22-38] Venom Rate
+[7-10]% DMG Amplification against enemies affected by Venom
++[41-55]% Critical DMG against enemies affected by Venom
+Changes Deadly Poison Skewer to charge towards the farthest enemy
+Changes Deadly Poison Skewer to pass through enemies while charging"
+,Portrait of Light and Darkness,11,Staff,Lv. 25,Requires Strength 46 Intelligence 46,"+[81-101]-[104-119] Attack and Spell DMG
++0.95 Speed
++11 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++[21-25] Burn Rate
+-------------------------------------------------------
+[5-10]% DMG Amplification when Channeling
+[10-15]% Attack Cycle  when Channeling
++20% DMG against Burning enemies
+Generates explosions on additional area while casting Flamethrower","+[81-101]-[104-119] Attack and Spell DMG
++0.95 Speed
++11 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++[21-25] Burn Rate
+-------------------------------------------------------
+[5-10]% DMG Amplification when Channeling
+[10-15]% Attack Cycle  when Channeling
++[20-40]% DMG against Burning enemies
+Generates explosions on additional area while casting Flamethrower"
+,Transcendent Portrait of Light and Darkness,34,Staff,Lv. 79,Requires Strength 165 Intelligence 165,"+[558-600]-[827-921] Attack and Spell DMG
++1 Speed
++13 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++[35-40] Burn Rate
+-------------------------------------------------------
+20% DMG Amplification when Channeling
+[10-15]% Attack Cycle  when Channeling
++50% DMG against Burning enemies
++[10-15]% Fire Penetration
+Generates explosions on additional area while casting Flamethrower","+[558-600]-[827-921] Attack and Spell DMG
++1 Speed
++13 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++[35-40] Burn Rate
+-------------------------------------------------------
+[22-30]% DMG Amplification when Channeling
+[18-25]% Attack Cycle  when Channeling
+[12-18]% DMG Amplification against Burning enemies
++[10-15]% Fire Penetration
+Generates explosions on additional area while casting Flamethrower"
+,Surging Knowledge,28,Necklace,Lv. 49,,"+9% Cast Speed
+-------------------------------------------------------
++[58-68]-[83-99] Poison DMG
++[20-40]% Poison DMG
++50% Critical Rate
+[15-30]% Resource Cost Dampening
+Gain Advantageous Effect on Poison Area
+Advantageous Effect
+Critical DMG +80%
+Poison DMG +60%
+DMG Taken 30% Dampening","+9% Cast Speed
+-------------------------------------------------------
++[58-68]-[83-99] Poison DMG
++[20-40]% Poison DMG
++50% Critical Rate
+Gain Advantageous Effect on Poison Area
+Advantageous Effect
+Critical DMG +80%
+Poison DMG +60%
+DMG Taken 30% Dampening
+Resource Cost 20% Dampening"
+,Transcendent Surging Knowledge,34,Necklace,Lv. 79,,"+75% DMG
+-------------------------------------------------------
++[103-113]-[146-160] Poison DMG
+Additional Poison DMG on DMG equal to [10-20]% of DMG on every hit
++[5-10]% Maximization Chance
+[30-45]% Resource Cost Dampening
++[30-50] Mana on every hit
+Gain Powerful Effect on Poison Area
+Powerful Effect
++50% Maximized DMG
+20% Poison DMG Amplification
+DMG Taken 15% Decrease","+75% DMG
+-------------------------------------------------------
++[103-113]-[146-160] Poison DMG
+Additional Poison DMG on DMG equal to [10-20]% of DMG on every hit
++[5-10]% Maximization Chance
+Gain Powerful Effect on Poison Area
+Powerful Effect
+Critical DMG +80%
+Maximized DMG +50%
+20% Poison DMG Amplification
+DMG Taken 15% Decrease
+Resource Cost 40% Dampening
+Mana on hit +20"
+,Lingering Summer,11,Shoes,Lv. 25,Requires Intelligence 63,"+[27-29] Gear Barrier
+-------------------------------------------------------
++[17-19]% HP
++[30-45]% Poison DMG
++[15-30]% Mana Potion Effect
+[20-25]% Movement Speed Increase
+Chance to inflict up to 2 stacks of Black Plague
+HP Recovery on Hit while Channeling +60","+[27-29] Gear Barrier
+-------------------------------------------------------
++[17-19]% HP
++[30-45]% Poison DMG
++[15-30]% Mana Potion Effect
+[20-25]% Movement Speed Increase
+Chance to inflict up to 2 stacks of Black Plague
+HP Recovery on Hit while Channeling +[60-80]"
+,Transcendent Lingering Summer,34,Shoes,Lv. 79,Requires Intelligence 223,"+[130-146] Gear Barrier
+-------------------------------------------------------
++[72-80] Mana
+-------------------------------------------------------
++[105-115]-[148-163] Poison DMG
+[16-26]% HP Amplification
+Chance to inflict up to 4 stacks of Black Plague
+1300 Fixed Movement Speed
+HP Recovery on Hit while Channeling +[100-120]
+[35-45]% DMG Taken Dampening while Channeling","+[130-146] Gear Barrier
+-------------------------------------------------------
++[72-80] Mana
+-------------------------------------------------------
++[105-115]-[148-163] Poison DMG
+[16-26]% HP Amplification
+Chance to inflict up to 4 stacks of Black Plague
+[35-50]% Movement Speed Increase
+HP Recovery on Hit while Channeling +[100-120]
+[35-45]% DMG Taken Dampening while Channeling"
+,Transcendent Miraseti's Miracle,35,Gloves,Lv. 82,Requires Dexterity 270,"+[614-722] Gear Dodge Rate
+-------------------------------------------------------
++[85-90] Lightning Resist
+-------------------------------------------------------
++[656-745] Gear Dodge Rate
++[251-265]% Gear Dodge Rate
++[30-45]% Critical DMG
+[10-12]% Lightning DMG Amplification
+[8-10]% Attack Speed Amplification
++[8-13]% Shock Chance
+Triggers additional Lightning attacks that have the same DMG as the Lightning Particles upon hitting an enemy with Unleash Lightning Shot","+[614-722] Gear Dodge Rate
+-------------------------------------------------------
++[85-90] Lightning Resist
+-------------------------------------------------------
++[656-745] Gear Dodge Rate
++[251-265]% Gear Dodge Rate
++[50-75]% Critical DMG
+[10-12]% Lightning DMG Amplification
+[8-10]% Attack Speed Amplification
++[8-13]% Shock Chance
+Triggers additional Lightning attacks that have the same DMG as the Lightning Particles upon hitting an enemy with Unleash Lightning Shot"
+,Hamal's Wreath,14,Dagger,Lv. 31,Requires Dexterity 112,"+[70-88]-[105-134] Attack and Spell DMG
++1.2 Speed
++10 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++13 Stats
+-------------------------------------------------------
++[54-62]-[64-89] Attack and Spell DMG
++[65-70]% Attack and Spell DMG
++[6-7]% Speed
++[71-80]% Gear Critical Rate
++[20-35]% DMG
++[20-30]% Critical Rate
+Additional Fire DMG equal to [5-8]% of DMG on every hit
+Blade of Death Projectile +3
+Amplify Blade of Death DMG by 50% against Bleeding enemies
+Blade of Death Projectile immediately returns to the character","+[70-88]-[105-134] Attack and Spell DMG
++1.2 Speed
++10 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++13 Stats
+-------------------------------------------------------
++[54-62]-[64-89] Attack and Spell DMG
++[65-70]% Attack and Spell DMG
++[6-7]% Speed
++[71-80]% Gear Critical Rate
++[20-35]% DMG
++[20-30]% Critical Rate
+Additional Fire DMG equal to [5-8]% of DMG on every hit
+Blade of Death Projectile +3
+Amplify Blade of Death DMG by 100% against Bleeding enemies
+Blade of Death Projectile immediately returns to the character"
+,Transcendent Hamal's Wreath,35,Dagger,Lv. 82,Requires Dexterity 270,"+[338-423]-[508-636] Attack and Spell DMG
++1.2 Speed
++10 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++450 Attack Hit Rate
+-------------------------------------------------------
++[145-172]-[225-254] Attack and Spell DMG
++[110-128]% Attack and Spell DMG
++[10-11]% Speed
++[111-120]% Gear Critical Rate
+[6-12]% DMG Amplification
+[10-18]% chance to deal double Maximized DMG on hit
+Additional Fire DMG equal to [10-13]% of DMG on every hit
+Blade of Death Projectile +3
+Amplify Blade of Death DMG by 50% against Bleeding enemies
+Blade of Death Projectile immediately returns to the character","+[274-353]-[424-487] Attack and Spell DMG
++1.2 Speed
++10 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++450 Attack Hit Rate
+-------------------------------------------------------
++[145-172]-[196-218] Attack and Spell DMG
++[72-98]% Attack and Spell DMG
++[10-11]% Speed
++[111-130]% Gear Critical Rate
+[12-18]% DMG Amplification
+[12-20]% chance to deal double Maximized DMG on hit
+Additional Fire DMG equal to [13-17]% of DMG on every hit
+Blade of Death Projectile +3
+Amplify Blade of Death DMG by 100% against Bleeding enemies
+Blade of Death Projectile immediately returns to the character"
+,Aquilla's Claw,25,Gloves,Lv. 46,Requires Strength 85 Dexterity 85,"+[76-83] Gear Armor
++[94-102] Gear Dodge Rate
+-------------------------------------------------------
++18% DMG against Elites
+-------------------------------------------------------
++[180-205] Gear Armor
++[160-175] Gear Dodge Rate
++[120-130]% Gear Armor
++[130-145]% Gear Dodge Rate
++[44-47]% Critical Rate
++[8-12]% Attack Speed
++1 Mana on every hit
+-50% Combo DMG
+Increase Combo Attack Count by 1","+[76-83] Gear Armor
++[94-102] Gear Dodge Rate
+-------------------------------------------------------
++18% DMG against Elites
+-------------------------------------------------------
++[180-205] Gear Armor
++[160-175] Gear Dodge Rate
++[120-130]% Gear Armor
++[130-145]% Gear Dodge Rate
++[44-47]% Critical Rate
++[8-12]% Attack Speed
++[40-60]% Combo Critical DMG
+-[40-20]% Combo DMG
+Increase Combo Attack Count by 1"
+,Transcendent Aquilla's Claw,34,Gloves,Lv. 79,Requires Strength 115 Dexterity 115,"+[165-185] Gear Armor
++[209-233] Gear Dodge Rate
+-------------------------------------------------------
++[34-40]% DMG against Elites
+-------------------------------------------------------
++[235-250] Gear Armor
++[220-255] Gear Dodge Rate
++[155-170]% Gear Armor
++[175-190]% Gear Dodge Rate
++[63-68]% Critical Rate
+[8-10]% Attack Speed Amplification
++[2-4] Mana on every hit
+Increase Combo Attack Count by 1","+[165-185] Gear Armor
++[209-233] Gear Dodge Rate
+-------------------------------------------------------
++[34-40]% DMG against Elites
+-------------------------------------------------------
++[235-250] Gear Armor
++[220-255] Gear Dodge Rate
++[155-170]% Gear Armor
++[175-190]% Gear Dodge Rate
++[63-68]% Critical Rate
+[8-10]% Attack Speed Amplification
++[80-110]% Combo Critical DMG
+Increase Combo Attack Count by 1"
+,Aquilla's Sunlight,23,Gloves,Lv. 58,Requires Dexterity 143,"+[121-145] Gear Dodge Rate
+-------------------------------------------------------
++18% DMG against Elites
+-------------------------------------------------------
++[219-262] Gear Dodge Rate
++[72-87]% Gear Dodge Rate
+[10-15]% DMG Taken Dampening
++[30-50]% Attack Speed
++[20-40]% HP
+[15-30]% Skill Rune Cooldown Dampening
+Improved Senses Effect Added
+Perfect Dodge +10%
+DMG 3% Amplified for 5 Sec When Dodge Activates (Up to 5 Stacks)
+Perfect Dodge Immediately Applies Maximum Stacks When Triggered","+[121-145] Gear Dodge Rate
+-------------------------------------------------------
++18% DMG against Elites
+-------------------------------------------------------
++[219-262] Gear Dodge Rate
++[72-87]% Gear Dodge Rate
+[10-15]% DMG Taken Dampening
++[30-50]% Attack Speed
++[20-40]% HP
+[5-12]% Skill Rune Cooldown Dampening
+Improved Senses Effect Added
+Perfect Dodge +10%
+DMG 3% Amplified for 5 Sec When Dodge Activates (Up to 5 Stacks)
+Perfect Dodge Immediately Applies Maximum Stacks When Triggered
+Improved Senses Skill Rune Cooldown 30% Dampening
++20% Improved Senses Skill Rune Duration"
+,Transcendent Aquilla's Sunlight,35,Gloves,Lv. 82,Requires Dexterity 270,"+[305-350] Gear Dodge Rate
+-------------------------------------------------------
++[34-40]% DMG against Elites
+-------------------------------------------------------
++[658-749] Gear Dodge Rate
++[229-241]% Gear Dodge Rate
+[15-20]% DMG Taken Decrease
+[25-40]% Attack Speed Amplification
++[40-50]% HP
+[35-55]% Skill Rune Cooldown Dampening
++[30-40]% Skill Rune Duration
+Improved Senses Effect Added
+Perfect Dodge +10%
+DMG 3% Amplified for 5 Sec When Dodge Activates (Up to 5 Stacks)
+Perfect Dodge Immediately Applies Maximum Stacks When Triggered","+[305-350] Gear Dodge Rate
+-------------------------------------------------------
++[34-40]% DMG against Elites
+-------------------------------------------------------
++[658-749] Gear Dodge Rate
++[229-241]% Gear Dodge Rate
+[15-20]% DMG Taken Decrease
+[25-40]% Attack Speed Amplification
++[40-50]% HP
+[10-18]% Skill Rune Cooldown Dampening
++[10-20]% Skill Rune Duration
+Improved Senses Effect Added
+Perfect Dodge +10%
+DMG 3% Amplified for 5 Sec When Dodge Activates (Up to 5 Stacks)
+Perfect Dodge Immediately Applies Maximum Stacks When Triggered
+Improved Senses Skill Rune Cooldown 30% Dampening
++20% Improved Senses Skill Rune Duration"
+,Tipan's Long Bow,24,Bow,Lv. 61,Requires Dexterity 186,"+[96-108]-[119-121] Attack DMG
++1.3 Speed
++9 Gear Critical Rate
+-------------------------------------------------------
++30 Dexterity
+-------------------------------------------------------
++[12-18]% Speed
++[42-51]% Attack DMG
++[33-45]% Gear Critical Rate
++[53-72]% Chill Effect
++[58-76]% DMG against Chilled enemies
+Dramatically increases Icy Arrow's additional Explosion Range
+Can only fire up to 3 additional explosions
+[5-10]% Icy Arrow DMG Amplification","+[96-108]-[119-121] Attack DMG
++1.3 Speed
++9 Gear Critical Rate
+-------------------------------------------------------
++30 Dexterity
+-------------------------------------------------------
++[12-18]% Speed
++[53-64]% Attack DMG
++[33-45]% Gear Critical Rate
++[20-40]% Cold DMG
++[58-76]% DMG against Chilled enemies
+Dramatically increases Icy Arrow's additional Explosion Range
+Can only fire up to 3 additional explosions
+[5-10]% Icy Arrow DMG Amplification"
+,Transcendent Tipan's Long Bow,34,Bow,Lv. 79,Requires Dexterity 266,"+[190-232]-[304-365] Attack DMG
++1.3 Speed
++9 Gear Critical Rate
+-------------------------------------------------------
++54 Dexterity
+-------------------------------------------------------
++[68-92]% Attack DMG
++[17-21]% Speed
++[46-57]% Gear Critical Rate
++[52-61]% Critical DMG
+[8-12]% DMG Amplification against enemies affected by Cold Status Effect
+Dramatically increases Icy Arrow's additional Explosion Range
+Can only fire up to 3 additional explosions
+[10-15]% Icy Arrow DMG Amplification","+[190-232]-[304-365] Attack DMG
++1.3 Speed
++9 Gear Critical Rate
+-------------------------------------------------------
++54 Dexterity
+-------------------------------------------------------
++[85-115]% Attack DMG
++[17-21]% Speed
++[46-57]% Gear Critical Rate
++[52-61]% Critical DMG
+[12-18]% Cold DMG Amplification
+[8-12]% DMG Amplification against enemies affected by Cold Status Effect
+Dramatically increases Icy Arrow's additional Explosion Range
+Can only fire up to 3 additional explosions
+[10-15]% Icy Arrow DMG Amplification"
+,Aftershock,25,Gloves,Lv. 46,Requires Strength 178,"+[186-202] Gear Armor
+-------------------------------------------------------
++[271-315] Gear Armor
++[85-100]% Gear Armor
++[14-16]% Critical DMG
++[8-12]% Attack Speed
++1 Mana on every hit
++[100-200]% Fissure Range
+1 Earth Energy Spent Reduction on Fissure's Additional Fissures Hit
+-[50-20]% Fissure DMG","+[186-202] Gear Armor
+-------------------------------------------------------
++[271-315] Gear Armor
++[85-100]% Gear Armor
++[14-16]% Critical DMG
++[20-25]% Attack Speed
++[15-30]% Earth Energy Duration
++1 Mana on every hit
++[100-200]% Fissure Range
+1 Earth Energy Spent Reduction on Fissure's Additional Fissures Hit
+-[50-20]% Fissure DMG"
+,Transcendent Aftershock,34,Gloves,Lv. 79,Requires Strength 223,"+[318-353] Gear Armor
+-------------------------------------------------------
++[460-505] Gear Armor
++[200-210]% Gear Armor
++[35-38]% Critical DMG
++[15-20]% Attack Speed
+[9-11]% Attack Speed Amplification
++[2-4] Mana on every hit
+2 Earth Energy Spent Reduction on Fissure's Additional Fissures Hit
++[200-250]% Fissure Range","+[318-353] Gear Armor
+-------------------------------------------------------
++[460-505] Gear Armor
++[200-210]% Gear Armor
++[35-38]% Critical DMG
+[15-19]% Attack Speed Amplification
++[30-50]% Earth Energy Duration
++[15-28]% Earth Energy Effect
++[2-4] Mana on every hit
+2 Earth Energy Spent Reduction on Fissure's Additional Fissures Hit
++[200-250]% Fissure Range"
+,Decomposer's Contradiction,23,Spaulders,Lv. 52,Requires Strength 67 Dexterity 67,"+[130-150] Gear Armor
++[140-170] Gear Dodge Rate
+-------------------------------------------------------
++20% Melee DMG
+-------------------------------------------------------
++[85-100] Mana
++[15-25]% DMG
++[10-20] Chaos Resist
++[10-15]% Critical Rate against enemies affected by Shout Skill Effect
+Activates additional Crescent Slashes to the sides
+50% Crescent Slash DMG Dampening","+[130-150] Gear Armor
++[140-170] Gear Dodge Rate
+-------------------------------------------------------
++20% Melee DMG
+-------------------------------------------------------
++[8-12]% HP
++[15-25]% DMG
++[10-20] Chaos Resist
++[10-15]% Critical Rate
+Activates additional Crescent Slashes to the sides
+50% Crescent Slash DMG Dampening"
+,Transcendent Decomposer's Contradiction,34,Spaulders,Lv. 79,Requires Strength 105 Dexterity 105,"+[195-225] Gear Armor
++[210-255] Gear Dodge Rate
+-------------------------------------------------------
++[33-38]% Melee DMG
+-------------------------------------------------------
++[150-200] Mana
++[25-50]% DMG
++[15-30] Chaos Resist
++[25-35]% Critical Rate against enemies affected by Shout Skill Effect
++[30-50]% Critical DMG against enemies affected by Shout Skill Effect
+Activates additional Crescent Slashes to the sides
+25% Crescent Slash DMG Dampening","+[195-225] Gear Armor
++[210-255] Gear Dodge Rate
+-------------------------------------------------------
++[33-38]% Melee DMG
+-------------------------------------------------------
++[18-24]% HP
++[25-50]% DMG
++[15-30] Chaos Resist
++[25-35]% Critical Rate
++[30-50]% Critical DMG
+Activates additional Crescent Slashes to the sides
+25% Crescent Slash DMG Dampening"
+,Predator's Tongue,28,Quiver,Lv. 65,,"+28-38 Attack DMG
+-------------------------------------------------------
++[30-60]% DMG
++[100-150] HP
++[5-10]% Attack Speed
++[0.3-0.5]% HP Absorb on hit
+Changes Explosion cooldown to 10 s
+Decreases cooldown by 2 s upon killing an enemy with Explosive Arrow
+30% Fire DMG Taken Amplification for targets hit by Explosive Arrow for 10 s","+28-38 Attack DMG
+-------------------------------------------------------
++[30-60]% DMG
++[100-150] HP
++[18-22]% Attack Speed
++[28-40]% DMG against Burning enemies
+Changes Explosion cooldown to 10 s
+Decreases cooldown by 2 s upon killing an enemy with Explosive Arrow
+30% Fire DMG Taken Amplification for targets hit by Explosive Arrow for 10 s"
+,Transcendent Predator's Tongue,34,Quiver,Lv. 79,,"+[38-45]-[61-64] Attack DMG
+-------------------------------------------------------
++[40-100]% DMG
++[130-220] HP
++[10-20]% Attack Speed
++[0.5-0.8]% HP Absorb on hit
+Changes Explosion cooldown to 10 s
+Decreases cooldown by 2 s upon killing an enemy with Explosive Arrow
+30% Fire DMG Taken Amplification for targets hit by Explosive Arrow for 10 s
++50% Explosive Arrow DMG","+[38-45]-[61-64] Attack DMG
+-------------------------------------------------------
++[40-100]% DMG
++[130-220] HP
+[8-12]% Attack Speed Amplification
+[5-12]% DMG Amplification against Burning enemies
+Changes Explosion cooldown to 10 s
+Decreases cooldown by 2 s upon killing an enemy with Explosive Arrow
+30% Fire DMG Taken Amplification for targets hit by Explosive Arrow for 10 s
++[100-140]% Explosive Arrow DMG"
+,Triah's Necklace,23,Necklace,Lv. 56,,"+[10-15] Intelligence
+5% Movement Speed Increase
++[15-25]% DMG against Chilled enemies
+Removes Blizzard Cooldown
+-[6-3] Blizzard Mana Cost
++150% Blizzard Creation Range","+[10-15] Intelligence
+5% Movement Speed Increase
++[15-25]% DMG against Chilled enemies
+Removes Blizzard Cooldown
++150% Blizzard Creation Range
+-[5-3] Blizzard Mana Cost"
+,Transcendent Triah's Necklace,34,Necklace,Lv. 79,,"+[30-50] Intelligence
+10% Movement Speed Increase
+[10-15]% DMG Amplification against Chilled enemies
+Removes Blizzard Cooldown
+-[10-5] Blizzard Mana Cost
++150% Blizzard Creation Range","+[30-50] Intelligence
+10% Movement Speed Increase
+[10-15]% DMG Amplification against Chilled enemies
+Removes Blizzard Cooldown
++150% Blizzard Creation Range
+-[7-5] Blizzard Mana Cost"
+,Prele's Gauntlets,24,Gloves,Lv. 55,Requires Strength 70 Intelligence 70,"+[91-102] Gear Armor
++[37-38] Gear Barrier
+-------------------------------------------------------
+[3.2-3.8]% Resource Cost Dampening
+-------------------------------------------------------
++[132-156] Gear Armor
++[29-34] Gear Barrier
++[40-45]% Minion Critical Rate
++[10-12]% Minion DMG
++[7.9-11.4]% Minion Attack Speed
++[7.9-11.4]% Minion Cast Speed
+1 of the options below will be imbued.
+- Gain Bursting Fusion Buff Lv.3 upon summoning Bursting Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Bursting Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Arctic Fusion Buff Lv.3 upon summoning Arctic Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Arctic Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Lightning Fusion Buff Lv.3 upon summoning Lightning Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Lighting Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Deadly Poison Fusion Buff Lv.3 upon summoning Deadly Poison Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Deadly Poison Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Wrathful Fusion Buff Lv.3 upon summoning Wrathful Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Fury Fusion Buff Lv.3 upon summoning Fury Rune Knight when affected by Hazy Melody High Tone
+75% DMG Taken % Dampening for 10 s
+100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]","+[91-102] Gear Armor
++[37-38] Gear Barrier
+-------------------------------------------------------
+[3.2-3.8]% Resource Cost Dampening
+-------------------------------------------------------
++[132-156] Gear Armor
++[29-34] Gear Barrier
++[40-45]% Minion Critical Rate
++[10-12]% Minion DMG
++[18-24]% Minion HP
++[14-22]% Minion Attack Speed
++[14-22]% Minion Cast Speed
+1 of the options below will be imbued.
+- Gain Bursting Fusion Buff Lv.3 upon summoning Bursting Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Bursting Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Arctic Fusion Buff Lv.3 upon summoning Arctic Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Arctic Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Lightning Fusion Buff Lv.3 upon summoning Lightning Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Lighting Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Deadly Poison Fusion Buff Lv.3 upon summoning Deadly Poison Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Deadly Poison Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Wrathful Fusion Buff Lv.3 upon summoning Wrathful Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Fury Fusion Buff Lv.3 upon summoning Fury Rune Knight when affected by Hazy Melody High Tone
+75% DMG Taken % Dampening for 10 s
+100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]"
+,Transcendent Prele's Gauntlets,34,Gloves,Lv. 79,Requires Strength 105 Intelligence 105,"+[209-234] Gear Armor
++[78-80] Gear Barrier
+-------------------------------------------------------
+[6.4-8.8]% Resource Cost Dampening
+-------------------------------------------------------
+[5-8]% Minion DMG Amplification
++[15-18]% Minion Attack Speed
++[15-18]% Minion Cast Speed
++[62-70]% Minion Critical Rate
++[31-35.5]% Minion Critical DMG
+1 of the options below will be imbued.
+- Gain Bursting Fusion Buff Lv.3 upon summoning Bursting Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Bursting Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Arctic Fusion Buff Lv.3 upon summoning Arctic Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Arctic Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Lightning Fusion Buff Lv.3 upon summoning Lightning Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Lighting Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Deadly Poison Fusion Buff Lv.3 upon summoning Deadly Poison Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Deadly Poison Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Wrathful Fusion Buff Lv.3 upon summoning Wrathful Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Fury Fusion Buff Lv.3 upon summoning Fury Rune Knight when affected by Hazy Melody High Tone
+75% DMG Taken % Dampening for 10 s
+100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]","+[209-234] Gear Armor
++[78-80] Gear Barrier
+-------------------------------------------------------
+[6.4-8.8]% Resource Cost Dampening
+-------------------------------------------------------
+[5-8]% Minion DMG Amplification
++[25-34]% Minion HP
++[20-31]% Minion Attack Speed
++[20-31]% Minion Cast Speed
++[62-70]% Minion Critical Rate
++[31-35.5]% Minion Critical DMG
+1 of the options below will be imbued.
+- Gain Bursting Fusion Buff Lv.3 upon summoning Bursting Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Bursting Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Arctic Fusion Buff Lv.3 upon summoning Arctic Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Arctic Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Lightning Fusion Buff Lv.3 upon summoning Lightning Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Lighting Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Deadly Poison Fusion Buff Lv.3 upon summoning Deadly Poison Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Deadly Poison Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Wrathful Fusion Buff Lv.3 upon summoning Wrathful Rune Knight when affected by Hazy Melody High Tone
+75DMG Taken % Dampening for 10 s
+100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]
+- Gain Fury Fusion Buff Lv.3 upon summoning Fury Rune Knight when affected by Hazy Melody High Tone
+75% DMG Taken % Dampening for 10 s
+100% Wrathful Rune Knight Cooldown Amplification[Chance 16.7%]"
+,Twilight Veil,5,Armor,Lv. 10,Requires Intelligence 31,"+[24-27] Gear Barrier
+-------------------------------------------------------
++[25-30] Gear Barrier
+-------------------------------------------------------
++[42-50] Mana
++[17-20]% Mana Regen/Sec
++5% Barrier Charge Cycle Recovery Speed
+1% Max Barrier Regen/Sec upon charging Barrier
+Barrier Recovery to the Max value upon reaching below 1% (Cooldown 120 s)","+[24-27] Gear Barrier
+-------------------------------------------------------
++[25-30] Gear Barrier
+-------------------------------------------------------
++[42-50] Mana
++[17-20]% Mana Regen/Sec
++5% Barrier Charge Cycle Recovery Speed
+1% Max Barrier Regen/Sec upon charging Barrier
+Barrier Recovery to the Max value upon reaching below 1% (Cooldown 90 s)"
+,Transcendent Twilight Veil,34,Armor,Lv. 79,Requires Intelligence 247,"+[250-270] Gear Barrier
+-------------------------------------------------------
++[90-140]% Gear Barrier
+-------------------------------------------------------
++[150-250] Mana
++[17-20]% Mana Regen/Sec
+5% Cold DMG Amplification per 50 Cold Resist upon using Cold Armor (Max stacks: 4)
+[20-25]% DMG from Elites Dampening
+[100-450]% Barrier Increase upon using Cold Armor
+Barrier Recovery to the Max value upon reaching below 1% (Cooldown 120 s)
+[30-50]% DMG Taken Decrease for 3 s upon Barrier Deactivation","+[250-270] Gear Barrier
+-------------------------------------------------------
++[90-140]% Gear Barrier
+-------------------------------------------------------
++[150-250] Mana
++[17-20]% Mana Regen/Sec
+5% Cold DMG Amplification per 40 Cold Resist upon using Cold Armor (Max stacks:  30%)
++5% Barrier Charge Cycle Recovery Speed
+1.5% Max Barrier Regen/Sec upon charging Barrier
+[20-25]% DMG from Elites Dampening
+[300-450]% Barrier Increase upon using Cold Armor
+Barrier Recovery to the Max value upon reaching below 1% (Cooldown 90 s)
+[30-50]% DMG Taken Decrease for 3 s upon Barrier Deactivation"
+,Cold Comfort,28,Spaulders,Lv. 63,Requires Intelligence 160,"+[95-111] Gear Barrier
+-------------------------------------------------------
++[23-30]% Gear Barrier
+-------------------------------------------------------
++[17-25]% Frost Bomb Cold DMG
+-10 Fire Resist
++[15-22] Cold Resist
+Immune to Freeze when Intelligence is higher than Dexterity
+Fire Projectiles periodically in a circle upon casting Frost Bomb","+[95-111] Gear Barrier
+-------------------------------------------------------
++[23-30]% Gear Barrier
+-------------------------------------------------------
++[17-25]% Frost Bomb Cold DMG
+-10 Fire Resist
++[15-22] Cold Resist
++[60-90]% DMG against Chilled enemies
+Immune to Freeze when Intelligence is higher than Dexterity
+Fires a Frost Bomb forward that Pierces all enemies.
+Frost Bomb periodically fires Projectiles in a circular pattern."
+,Transcendent Cold Comfort,34,Spaulders,Lv. 79,Requires Intelligence 280,"+[132-150] Gear Barrier
+-------------------------------------------------------
++[120-165]% Gear Barrier
+-------------------------------------------------------
+-10 Fire Resist
++[42-50] Cold Resist
+Immune to Freeze when Intelligence is higher than Dexterity
+Frost Bomb [25-32]% Cold DMG Amplification
+[8-15]% Fire DMG Dampening
+Fire Projectiles periodically in a circle upon casting Frost Bomb","+[132-150] Gear Barrier
+-------------------------------------------------------
++[120-165]% Gear Barrier
+-------------------------------------------------------
+-10 Fire Resist
++[42-50] Cold Resist
+Immune to Freeze when Intelligence is higher than Dexterity
+Frost Bomb [25-32]% Cold DMG Amplification
+[8-15]% Fire DMG Dampening
+[11-15]% DMG Amplification against Chilled enemies
+Fires a Frost Bomb forward that Pierces all enemies.
+Frost Bomb periodically fires Projectiles in a circular pattern."
+,Leg Bone of the Wind,32,Shoes,Lv. 73,Requires Strength 109 Dexterity 109,"+[258-297] Gear Armor
++[349-397] Gear Dodge Rate
+-------------------------------------------------------
++[43-55] Cold Resist
+-------------------------------------------------------
++[120-142]% Gear Armor
++[134-157]% Gear Dodge Rate
+[50-70]% Movement Speed Increase
++[30-50]% Ice Crystal Arrow Cold DMG
+Own maxed stats of Cold Crystal upon using Ice Crystal Arrow","+[258-297] Gear Armor
++[349-397] Gear Dodge Rate
+-------------------------------------------------------
++[43-55] Cold Resist
+-------------------------------------------------------
++[120-142]% Gear Armor
++[134-157]% Gear Dodge Rate
+[50-70]% Movement Speed Increase
++[20-30]% DMG against Chilled enemies
++[30-50]% Ice Crystal Arrow Cold DMG
+Own maxed stats of Cold Crystal upon using Ice Crystal Arrow"
+,Transcendent Leg Bone of the Wind,34,Shoes,Lv. 79,Requires Strength 165 Dexterity 165,"+[289-327] Gear Armor
++[403-438] Gear Dodge Rate
+-------------------------------------------------------
++[61-72] Cold Resist
+-------------------------------------------------------
++[150-230]% Gear Armor
++[200-230]% Gear Dodge Rate
+[80-100]% Movement Speed Increase
+Ice Crystal Arrow [40-60]% Cold DMG Amplification
++[20-30]% DMG against Chilled enemies
+Own maxed stats of Cold Crystal upon using Ice Crystal Arrow","+[289-327] Gear Armor
++[403-438] Gear Dodge Rate
+-------------------------------------------------------
++[61-72] Cold Resist
+-------------------------------------------------------
++[150-230]% Gear Armor
++[200-230]% Gear Dodge Rate
+[80-100]% Movement Speed Increase
+Ice Crystal Arrow [40-60]% Cold DMG Amplification
+[6-9]% DMG Amplification against Chilled enemies
+Own maxed stats of Cold Crystal upon using Ice Crystal Arrow"
+,Spica's Light,21,Gloves,Lv. 42,Requires Intelligence 140,"+[63-65] Gear Barrier
+-------------------------------------------------------
++[135-149]% Gear Barrier
+[5-10]% DMG upon Spell Amplification
++[30-45]% Spell Critical Rate
++[40-45]% Spell Critical DMG
++[30-35]% Cast Speed
+20% chance to gain 2 Fire Energy upon using Flames of Death","+[63-65] Gear Barrier
+-------------------------------------------------------
++[135-149]% Gear Barrier
+[12-18]% Flames of Death DMG Amplification
++[30-45]% Spell Critical Rate
++[40-45]% Spell Critical DMG
++[30-35]% Cast Speed
+100% chance to gain 2 Fire Energy upon using Flames of Death"
+,Transcendent Spica's Light,34,Gloves,Lv. 79,Requires Intelligence 223,"+[130-146] Gear Barrier
+-------------------------------------------------------
++[10.8-12]% Element Penetration
+-------------------------------------------------------
++[169-187]% Gear Barrier
++[40-50]% Critical Rate
++[100-125]% Critical DMG
+[15-20]% DMG Amplification
+[20-35]% Cast Speed Amplification
++[200-250]% Spreading Flames Buff Duration
+20% chance to gain 2 Fire Energy upon using Flames of Death","+[130-146] Gear Barrier
+-------------------------------------------------------
++[10.8-12]% Element Penetration
+-------------------------------------------------------
++[169-187]% Gear Barrier
++[40-50]% Critical Rate
++[100-125]% Critical DMG
+[30-38]% Flames of Death DMG Amplification
+[20-35]% Cast Speed Amplification
++[15-25]% Area of Effect
++[200-250]% Spreading Flames Buff Duration
+100% chance to gain 2 Fire Energy upon using Flames of Death"
+,Spica's Ovation,14,Ring,Lv. 31,,"+10% Sentry Attack Speed
+-------------------------------------------------------
++[46-50]% Sentry Critical Rate
++[18-23]% Sentry Critical DMG
++[51-65]% Sentry Hit Rate
++[1-3] Sentry Skill Rune Level
+Enchanted Sentry instantly reaches Max Stacks and applies as Aura upon use
+Sentry Enhance takes effect immediately for the duration
+Add 30 s to Enchanted Sentry Cooldown","+10% Sentry Attack Speed
+-------------------------------------------------------
++[46-50]% Sentry Critical Rate
++[18-23]% Sentry Critical DMG
++[51-65]% Sentry Hit Rate
++[1-3] Sentry Skill Rune Level
+Enchanted Sentry instantly reaches Max Stacks and applies as Aura upon use
+Sentry Enhance takes effect immediately for the duration
++[50-90]% Enchanted Sentry Duration
+Add 20 s to Enchanted Sentry Cooldown"
+,Transcendent Spica's Ovation,35,Ring,Lv. 82,,"+50% Sentry Attack Speed
+-------------------------------------------------------
++[81-97]% Sentry Critical Rate
++[47-88]% Sentry Critical DMG
++[85-101]% Sentry Hit Rate
++[5-8] Sentry Skill Rune Level
+Enchanted Sentry instantly reaches Max Stacks and applies as Aura upon use
+Sentry Enhance takes effect immediately for the duration
+Add 20 s to Enchanted Sentry Cooldown","+50% Sentry Attack Speed
+-------------------------------------------------------
++[81-97]% Sentry Critical Rate
++[47-88]% Sentry Critical DMG
++[85-101]% Sentry Hit Rate
++[5-8] Sentry Skill Rune Level
+Enchanted Sentry instantly reaches Max Stacks and applies as Aura upon use
+Sentry Enhance takes effect immediately for the duration
++[150-200]% Enchanted Sentry Duration
+Add 15 s to Enchanted Sentry Cooldown"
+,Vesper's Cloud,23,Ring,Lv. 58,,"+[23-26]% Minion Critical Rate
+-------------------------------------------------------
++[46-50]% Minion Critical Rate
++[18-23]% Minion Critical DMG
++[51-65]% Minion Hit Rate
++[1-3] Minion Skill Rune Level
+Sacred Devotion instantly reaches Max Stacks and applies as Aura upon use
+Minion Enhance takes effect immediately for the duration.
+ Dampens DMG Taken by Minions by 5% per stack
+Minion Element Resist +20
+Add 30 s to Sacred Devotion Cooldown","+[23-26]% Minion Critical Rate
+-------------------------------------------------------
++[46-50]% Minion Critical Rate
++[18-23]% Minion Critical DMG
++[51-65]% Minion Hit Rate
++[1-3] Minion Skill Rune Level
+Sacred Devotion instantly reaches Max Stacks and applies as Aura upon use
+Minion Enhance takes effect immediately for the duration.
+ Dampens DMG Taken by Minions by 5% per stack
+Minion Element Resist +20
++[50-90]% Sacred Devotion Duration
+Add 20 s to Sacred Devotion Cooldown"
+,Transcendent Vesper's Cloud,35,Ring,Lv. 82,,"+[48-56]% Minion Critical Rate
+-------------------------------------------------------
++[81-97]% Minion Critical Rate
++[47-88]% Minion Critical DMG
++[85-101]% Minion Hit Rate
++[5-8] Minion Skill Rune Level
+Sacred Devotion instantly reaches Max Stacks and applies as Aura upon use
+Minion Enhance takes effect immediately for the duration.
+ Dampens DMG Taken by Minions by 5% per stack
+Minion Element Resist +20
+Add 20 s to Sacred Devotion Cooldown","+[48-56]% Minion Critical Rate
+-------------------------------------------------------
++[81-97]% Minion Critical Rate
++[47-88]% Minion Critical DMG
++[85-101]% Minion Hit Rate
++[5-8] Minion Skill Rune Level
+Sacred Devotion instantly reaches Max Stacks and applies as Aura upon use
+Minion Enhance takes effect immediately for the duration.
+ Dampens DMG Taken by Minions by 5% per stack
+Minion Element Resist +20
++[150-200]% Sacred Devotion Duration
+Add 15 s to Sacred Devotion Cooldown"
+,Acuben's Nebula,16,Helmet,Lv. 38,Requires Intelligence 118,"+[73-78] Gear Barrier
+-------------------------------------------------------
+[4.5-5]% Resource Cost Dampening
+-------------------------------------------------------
++[39-46] Gear Barrier
++[99-113]% Gear Barrier
+Frost Thorn Mana Cost -[5-1]
++3 Fixed Max Cold Energy
++10% Cold Energy Effect
++[42-50] Cold Resist
++[12-15]% DMG upon Spell
+Frost Thorn Projectile Count is fixed to 8 and cannot be increased
+Frost Thorn Projectile Count does not increase with Cold Energy
+Changes Frost Thorn DMG Dampening when hitting the same target to 10%
+Frost Thorn Projectile Pierce Count +2","+[73-78] Gear Barrier
+-------------------------------------------------------
+[4.5-5]% Resource Cost Dampening
+-------------------------------------------------------
++[39-46] Gear Barrier
++[99-113]% Gear Barrier
+Frost Thorn Mana Cost -[5-1]
++3 Fixed Max Cold Energy
++10% Cold Energy Effect
++[42-50] Cold Resist
++[12-15]% DMG upon Spell
+Frost Thorn Projectile Count is fixed to 10 and cannot be increased
+Frost Thorn Projectile Count does not increase with Cold Energy
+Changes Frost Thorn DMG Dampening when hitting the same target to 10%
+Frost Thorn Projectile Pierce Count +2"
+,Transcendent Acuben's Nebula,35,Helmet,Lv. 82,Requires Intelligence 270,"+[219-369] Gear Barrier
+-------------------------------------------------------
+Immune to Freeze
+-------------------------------------------------------
++[94-100] Gear Barrier
++[188-199]% Gear Barrier
+Frost Thorn Mana Cost -[9-4]
++5 Fixed Max Cold Energy
++[20-50]% Cold Energy Effect
++[35-55] Chaos Resist
++[80-89] Cold Resist
+[12-15]% DMG upon Spell Amplification
+Frost Thorn Projectile Count is fixed to 8 and cannot be increased
+Frost Thorn Projectile Count does not increase with Cold Energy
+Changes Frost Thorn DMG Dampening when hitting the same target to 10%
+Frost Thorn Projectile Pierce Count +2","+[219-369] Gear Barrier
+-------------------------------------------------------
+Immune to Freeze
+-------------------------------------------------------
++[94-100] Gear Barrier
++[188-199]% Gear Barrier
+Frost Thorn Mana Cost -[9-4]
++5 Fixed Max Cold Energy
++[20-50]% Cold Energy Effect
++[35-55] Chaos Resist
++[80-89] Cold Resist
+[12-15]% DMG upon Spell Amplification
+Frost Thorn Projectile Count is fixed to 10 and cannot be increased
+Frost Thorn Projectile Count does not increase with Cold Energy
+Changes Frost Thorn DMG Dampening when hitting the same target to 10%
+Frost Thorn Projectile Pierce Count +2"
+,Spica's Sagacity,17,Shoes,Lv. 36,Requires Dexterity 100,"+[102-110] Gear Dodge Rate
+-------------------------------------------------------
++15 Dexterity
+-------------------------------------------------------
++[137-174] Gear Dodge Rate
++[72-87]% Gear Dodge Rate
++[20-40]% Projectile DMG
++[40-60]% Mana
+[30-50]% Movement Speed Increase
+Instant Acceleration Movement Range +250
+DMG 10
+% Amplified while Shrewdness Buff is Active
++5% Shrewdness effect
++[20-40]% Shrewdness Duration","+[102-110] Gear Dodge Rate
+-------------------------------------------------------
++15 Dexterity
+-------------------------------------------------------
++[137-174] Gear Dodge Rate
++[72-87]% Gear Dodge Rate
++[20-40]% Projectile DMG
++[20-35]% Hit Rate
++[40-60]% Mana
+[30-50]% Movement Speed Increase
+Instant Acceleration Movement Range +250
+15% DMG Amplification while Shrewdness is active
++[10-15]% Shrewdness effect
++[40-50]% Shrewdness Duration"
+,Transcendent Spica's Sagacity,35,Shoes,Lv. 82,Requires Dexterity 270,"+[590-655] Gear Dodge Rate
+-------------------------------------------------------
++30 Dexterity
+-------------------------------------------------------
++[662-748] Gear Dodge Rate
++[230-241]% Gear Dodge Rate
++[40-75]% Projectile DMG
++[3-6] Mana on every hit
+[50-80]% Movement Speed Increase
+Instant Acceleration Movement Range +250
+DMG 10
+% Amplified while Shrewdness Buff is Active
++[10-20]% Shrewdness effect
++[50-90]% Shrewdness Duration","+[590-655] Gear Dodge Rate
+-------------------------------------------------------
++30 Dexterity
+-------------------------------------------------------
++[662-748] Gear Dodge Rate
++[230-241]% Gear Dodge Rate
++[40-75]% Projectile DMG
++[60-80]% Hit Rate
++[3-6] Mana on every hit
+[50-80]% Movement Speed Increase
+Instant Acceleration Movement Range +250
+15% DMG Amplification while Shrewdness is active
++[20-45]% Shrewdness effect
++[90-130]% Shrewdness Duration"
+,Transcendent Miraseti's Wave,35,Quiver,Lv. 82,Requires Dexterity 270,"+[45-50]-[62-68] Attack and Spell DMG
+-------------------------------------------------------
++70% DMG
+-------------------------------------------------------
++[155-170]-[188-205] Physical DMG
++[30-55]% Attack Speed
++[40-70]% Attack Critical Rate
++[3-4] Mana on every hit
+Additional Cold DMG equal to [8-12]% of DMG on every hit
+Illusion Arrow Activation Condition Changed to On Hit
+Illusion Arrow Projectile Count -5
+Illusion Arrow Projectile DMG [30-40]% Reduced","+[45-50]-[62-68] Attack and Spell DMG
+-------------------------------------------------------
++70% DMG
+-------------------------------------------------------
++[155-170]-[188-205] Physical DMG
+[12-16]% Attack Speed Amplification
++[40-70]% Attack Critical Rate
++[3-4] Mana on every hit
+Additional Cold DMG equal to [8-12]% of DMG on every hit
+Illusion Arrow Activation Condition Changed to On Hit
+Illusion Arrow Projectile Count -5
+Illusion Arrow Projectile DMG [30-40]% Reduced"
+,Acuben's Garden,24,Shoes,Lv. 58,Requires Intelligence 145,"+[34-36] Gear Barrier
+-------------------------------------------------------
++5% Movement Skill Rune Cooldown Recovery Speed
+-------------------------------------------------------
++[23-25] Gear Barrier
++[50-59]% Gear Barrier
+[30-50]% Movement Speed Increase
++[20-40]% Cast Speed
++[35-70]% Poison DMG
++[20-25] Poison Resist
+Poison Cloud Hit Count Changed to 3
+When Hitting a Venom-Affected Enemy, 50% Chance to Trigger 1 Additional Hit (Once per Skill)
+Poison Cloud DMG [50-75]% Reduced","+[34-36] Gear Barrier
+-------------------------------------------------------
++5% Movement Skill Rune Cooldown Recovery Speed
+-------------------------------------------------------
++[23-25] Gear Barrier
++[50-59]% Gear Barrier
+[30-50]% Movement Speed Increase
++[20-40]% Cast Speed
++[35-70]% Poison DMG
++[20-25] Poison Resist
+Poison Cloud Hit Count Changed to 3
+When Hitting a Venom-Affected Enemy, 50% Chance to Trigger 1 Additional Hit (Once per Skill)
+Poison Cloud DMG [40-60]% Reduced"
+,Transcendent Acuben's Garden,35,Shoes,Lv. 82,Requires Intelligence 270,"+[134-148] Gear Barrier
+-------------------------------------------------------
++[72-80] Mana
+-------------------------------------------------------
++[60-64] Gear Barrier
++[170-179]% Gear Barrier
+[50-80]% Movement Speed Increase
+[20-40]% Cast Speed Amplification
++[50-70]% Poison DMG
++[30-40] Poison Resist
+Immune to Venom
+Poison Cloud Hit Count Changed to 3
+When Hitting a Venom-Affected Enemy, 50% Chance to Trigger 1 Additional Hit (Once per Skill)
+Poison Cloud DMG [40-50]% Reduced","+[134-148] Gear Barrier
+-------------------------------------------------------
++[72-80] Mana
+-------------------------------------------------------
++[60-64] Gear Barrier
++[170-179]% Gear Barrier
+[50-80]% Movement Speed Increase
+[20-40]% Cast Speed Amplification
+[11-16]% Poison DMG Amplification
++[30-40] Poison Resist
+Immune to Venom
+Poison Cloud Hit Count Changed to 3
+When Hitting a Venom-Affected Enemy, 50% Chance to Trigger 1 Additional Hit (Once per Skill)
+Poison Cloud DMG [30-45]% Reduced"
+,Sephdar's Order,22,Necklace,Lv. 55,,"+29% Element DMG
+-------------------------------------------------------
+-2 Resource Cost
++[40-80]% Mana Regen/Sec
++[25-50]% Cold DMG
++[20-40]% Attack Speed
++[15-35]% Area of Effect
+Arctic Shard's Ice Pillars Now Spawn to the Left and Right","+29% Element DMG
+-------------------------------------------------------
+-2 Resource Cost
++[40-80]% Mana Regen/Sec
++[25-50]% Cold DMG
++[20-40]% Attack Speed
++[80-120]% Arctic Shard Area of Effect
+Arctic Shard's Ice Pillars Now Spawn to the Left and Right"
+,Transcendent Sephdar's Order,35,Necklace,Lv. 82,,"+[28.9-34]% Critical DMG
+-------------------------------------------------------
++[20-30] Stats
+-[5-4] Resource Cost
++[20-40] Chill Rate
+[10-12]% Cold DMG Amplification
+[14-21]% Attack Speed Amplification
++[30-60]% Area of Effect
+Arctic Shard's Ice Pillars Now Spawn to the Left and Right","+[28.9-34]% Critical DMG
+-------------------------------------------------------
++[20-30] Stats
+-[5-4] Resource Cost
++[20-40] Chill Rate
+[10-12]% Cold DMG Amplification
+[14-21]% Attack Speed Amplification
++[120-150]% Arctic Shard Area of Effect
+Arctic Shard's Ice Pillars Now Spawn to the Left and Right"
+,Hira's Charm,25,Necklace,Lv. 46,,"+22% Critical DMG
+-------------------------------------------------------
++[80-95]% DMG
++[30-40]% Critical DMG
++[5-8]% Attack Speed
++[45-50]% Hit Rate
++125% Frost Strike Range","+22% Critical DMG
+-------------------------------------------------------
++[80-95]% DMG
++[30-40]% Critical DMG
++[15-19]% Attack Speed
++[45-50]% Hit Rate
++125% Frost Strike Range"
+,Transcendent Hira's Charm,34,Necklace,Lv. 79,,"+[28.9-34]% Critical DMG
+-------------------------------------------------------
+[8-13]% DMG Amplification
++[80-100]% Critical DMG
++[20-22]% Attack Speed
++[100-120]% Hit Rate
++150% Frost Strike Range
++35% Frost Strike Freeze Chance
++[80-100]% Cold DMG","+[28.9-34]% Critical DMG
+-------------------------------------------------------
+[8-13]% DMG Amplification
++[80-100]% Critical DMG
++[34-40]% Attack Speed
++[100-120]% Hit Rate
++150% Frost Strike Range
++35% Frost Strike Freeze Chance
++[80-100]% Cold DMG"
+,Transcendent Miraseti's Sea,35,Dagger,Lv. 82,Requires Dexterity 270,"+[340-425]-[510-638] Attack and Spell DMG
++1.2 Speed
++12 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++28 Stats
+-------------------------------------------------------
++[94-99]-[124-138] Attack and Spell DMG
++[131-140]% Gear Critical Rate
++[24-25]% Speed
++[130-170]% Attack and Spell DMG
++[30-50]% Critical Rate
++[10-20]% Maximization Chance
++[5-10] Mana on every hit
++[70-110]% DMG
+Cross Slash Maximized DMG +75%","+[274-353]-[424-487] Attack and Spell DMG
++1.2 Speed
++12 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++28 Stats
+-------------------------------------------------------
++[48-56]-[68-85] Attack and Spell DMG
++[65-100]% Gear Critical Rate
++[24-25]% Speed
++[70-100]% Attack and Spell DMG
++[50-70]% Critical Rate
++[7-13]% Maximization Chance
++[2-5] Mana on every hit
++[70-110]% DMG
+Cross Slash Maximized DMG +150%"
+,Casthor's Vision,34,2-handed Axe,Lv. 79,Requires Strength 213 Dexterity 92,"+[336-420]-[504-631] Attack DMG
++0.9 Speed
++14 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++20% Attack DMG
+-------------------------------------------------------
++[524-580]-[596-669] Attack DMG
++[150-250]% Gear Critical Rate
++60% Attack DMG
++[23-26]% Speed
++[185-240] Equipped Weapon Range
++[120-135]% Critical DMG
++[55-75]% Maximized DMG","+[369-462]-[554-694] Attack DMG
++0.9 Speed
++14 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++20% Attack DMG
+-------------------------------------------------------
++[524-580]-[596-669] Attack DMG
++[150-250]% Gear Critical Rate
++[60-80]% Attack DMG
++[23-26]% Speed
++[185-240] Equipped Weapon Range
++[120-135]% Critical DMG
++[55-75]% Maximized DMG"
+,Numbing Armor,34,Armor,Lv. 79,Requires Strength 250,"+[1750-1900] Gear Armor
+-------------------------------------------------------
++[300-350]% Gear Armor
+[20-25]% HP Amplification
+[15-18]% DMG Taken Dampening
+Gain Invincibility for 3 s at 20% or less HP (Cooldown: 45 s)
+Immune to Wound
+Barrier Disabled
++[45-50]% Enhance Skill Rune Cooldown Recovery Speed","+[1750-1900] Gear Armor
+-------------------------------------------------------
++[300-350]% Gear Armor
+[60-85]% HP Amplification
+[15-18]% DMG Taken Dampening
+Gain Invincibility for 3 s at 20% or less HP (Cooldown: 45 s)
+Immune to Wound
+Barrier Disabled
++[45-50]% Enhance Skill Rune Cooldown Recovery Speed"
+,Stra's Boots,34,Shoes,Lv. 79,Requires Dexterity 223,"+[585-650] Gear Dodge Rate
+-------------------------------------------------------
++[446-457] Gear Dodge Rate
++[140-150]% Gear Dodge Rate
+55% Movement Speed Increase
+Immune to Movement Speed decrease
++[100-130]% DMG
++[60-80]% Sharpness Effect","+[585-650] Gear Dodge Rate
+-------------------------------------------------------
++[446-457] Gear Dodge Rate
++[140-175]% Gear Dodge Rate
+[55-60]% Movement Speed Increase
+Immune to Movement Speed decrease
+Sharpness effect
+(Critical Rate +50%, Critical DMG +25%)
++[100-200]% Sharpness Effect
++[4.5-9]% Perfect Dodge for 3 s on Critical Hit
++[150-200]% Critical DMG for 3 s upon Perfect Dodge
+10% chance to gain [5-20]% DMG Amplification for 3 s on Critical Hit
++[150-200]% Critical DMG against Elites"
+,Aquilla's Resonance,34,Wand,Lv. 79,Requires Intelligence 261,"+[356-445]-[534-669] Spell DMG
++1.2 Speed
++8 Gear Critical Rate
+-------------------------------------------------------
++60% Spell DMG
+-------------------------------------------------------
++[140-160]% Spell DMG
++[20-26]% Speed
++[160-190]% Gear Critical Rate
++[1-2]% Barrier Absorb on Spell Hit
++[50-70]% Critical DMG
+[10-15]% DMG Amplification if Dexterity and Intelligence are at 500 or above
++10% Maximized DMG for every 3000 Barrier (Max:  80%)","+[384-480]-[576-722] Spell DMG
++1.2 Speed
++8 Gear Critical Rate
+-------------------------------------------------------
++60% Spell DMG
+-------------------------------------------------------
++[160-180]% Spell DMG
++[20-26]% Speed
++[190-250]% Gear Critical Rate
++[1-2]% Barrier Absorb on Spell Hit
++[50-120]% Critical DMG
+[15-30]% DMG Amplification if Dexterity and Intelligence are at 500 or above
++15% Maximized DMG for every 3000 Barrier (Max:  150%)"
+,Hamal's Verdancy,34,Gloves,Lv. 79,Requires Strength 115 Dexterity 115,"+[165-185] Gear Armor
++[209-233] Gear Dodge Rate
+-------------------------------------------------------
++[9-10]% Maximized DMG
+-------------------------------------------------------
+[5-10]% Attack Speed Amplification
+[5-10]% Cast Speed Amplification
+[8-16]% chance to deal double Maximized DMG on hit
+[4-8]% chance to deal triple Maximized DMG on hit
++[30-50]% Maximized DMG
++[22-30] Element Resist
+[18-25]% DMG Amplification against Elites","+[165-185] Gear Armor
++[209-233] Gear Dodge Rate
+-------------------------------------------------------
++[9-10]% Maximized DMG
+-------------------------------------------------------
++[250-350]% Gear Armor
++[250-350]% Gear Dodge Rate
+[5-10]% Attack Speed Amplification
+[5-10]% Cast Speed Amplification
+[8-16]% chance to deal double Maximized DMG on hit
+[4-8]% chance to deal triple Maximized DMG on hit
++[30-60]% Maximized DMG
++[35-55] Element Resist
+[45-55]% DMG Amplification against Elites"
+,Boreal's Heart,34,Shield,Lv. 79,Requires Intelligence 300,"+[200-350] Gear Barrier
++30 Gear Block Expertise
+-------------------------------------------------------
+Recover 1% of Max Barrier upon successful Block
+-------------------------------------------------------
++[50-100]% Gear Barrier
++[250-350]% Armor when Shield is equipped
+Apply additional 300% to Barrier on using HP potion
+Realization Effect
+( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )
++[25-150]% Realization Effect
+10% DMG Amplification per 20% of activated Barrier when Max Barrier is at 10000 or above (Max stacks: 5)
+2% DMG Dampening per 20% of activated Barrier when Max Barrier is at 10000 or above (Max stacks: 5)
+1 of the options below will be imbued.
+- +[1-2] Fixed Max Earth Energy[Chance 20%]
+- +[1-2] Fixed Max Fire Energy[Chance 20%]
+- +[1-2] Fixed Max Cold Energy[Chance 20%]
+- +[1-2] Fixed Max Lightning Energy[Chance 20%]
+- +[1-2] Fixed Max Poison Energy[Chance 20%]","+[200-350] Gear Barrier
++30 Gear Block Expertise
+-------------------------------------------------------
+Recover 1% of Max Barrier upon successful Block
+-------------------------------------------------------
++[650-900] Gear Barrier
++[75-125]% Gear Barrier
+Apply additional 300% to Barrier on using HP potion
+Realization Effect
+( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )
++[25-150]% Realization Effect
+15% DMG Amplification per 20% of activated Barrier when Max Barrier is at 10000 or above (Max stacks: 5)
+4% DMG Dampening per 20% of activated Barrier when Max Barrier is at 10000 or above (Max stacks: 5)
+1 of the options below will be imbued.
+- +[1-2] Fixed Max Earth Energy[Chance 20%]
+- +[1-2] Fixed Max Fire Energy[Chance 20%]
+- +[1-2] Fixed Max Cold Energy[Chance 20%]
+- +[1-2] Fixed Max Lightning Energy[Chance 20%]
+- +[1-2] Fixed Max Poison Energy[Chance 20%]"
+,Star Usurper’s Armor,10,Armor,Lv. 1,Requires Strength 7,"+[30-35] Gear Armor
+-------------------------------------------------------
++450 Gear Armor
++5% Armor for every 1 Character Level(s) (Max  350%)
++2% HP for every 1 Character Level(s) (Max  140%)
++1 DMG Skill Rune Level
++160 HP
+7% DMG Taken Dampening","+[690-700] Gear Armor
++[690-700] Gear Dodge Rate
+-------------------------------------------------------
++10% Character EXP on Kill
++3% Armor for every 1 Character Level(s) (Max  210%)
++3% Dodge Rate per 1 Character Level(s) (Max  210%)
+0.3% HP Amplification for every 1 Character Level(s) (Max:  21%)
++50 Element Resist
++50 Chaos Resist
+10% DMG Taken Dampening"
+,Star Usurper’s Necklace,10,Necklace,Lv. 1,,"+8% DMG
+-------------------------------------------------------
++0.7% Speed for every 1 Character Level(s) (Max  49%)
++20% HP
++20% Mana
++30% DMG
++20 Element Resist
++3 Element Resist for every 5 Character Level(s) (Max  42)","+8% DMG
+-------------------------------------------------------
+15% DMG Amplification
++10% Maximization Chance
++30% Maximized DMG
++70% Critical Rate
++70% Critical DMG
++1 Max Energy"
+,Star Usurper’s Boots,10,Shoes,Lv. 1,Requires Strength 7,"+[15-20] Gear Armor
+-------------------------------------------------------
++300 Gear Armor
+40% Movement Speed Increase
+5% Movement Speed Amplification
++120 HP
++35% DMG","+[690-700] Gear Armor
+-------------------------------------------------------
++10% Character EXP on Kill
++100% Gear Armor
+45% Movement Speed Increase
+10% Movement Speed Amplification
++30% Movement Skill Rune Cooldown Recovery Speed"
+,Star Usurper’s Spaulders,10,Spaulders,Lv. 1,Requires Dexterity 7,"+[20-28] Gear Dodge Rate
+-------------------------------------------------------
++500 Gear Dodge Rate
++200 HP
++20% Attack Speed
++20% Cast Speed
+1% Critical Rate for every 1 Character Level(s) (Max:  70%)
+5% DMG for every 2 Character Level(s)
+(Max:  175%)","+[790-800] Gear Dodge Rate
+-------------------------------------------------------
++10% Character EXP on Kill
++1000 HP
++1.5% Critical Rate for every 1 Character Level(s) (Max:  80%)
++1.5% Hit Rate per 1 Character Level(s) (Max  80%)
++5% DMG for every 2 Character Level(s)
+(Max:  250%)
++30% Maximized DMG"
+,Star Usurper’s Gauntlets,10,Gloves,Lv. 1,Requires Strength 7,"+[20-25] Gear Armor
+-------------------------------------------------------
++350 Gear Armor
++25% HP
++50% Hit Rate
++25 Chaos Resist
++32% Enhance Skill Rune Cooldown Recovery Speed
++25% Attack Enhance Skill Rune Duration","+[790-800] Gear Armor
+-------------------------------------------------------
++10% Character EXP on Kill
+21% Attack Speed Amplification
+21% Cast Speed Amplification
++35% HP
++20% Element Penetration
++20% Armor Penetration
++25% DMG against Elites"
+,Star Usurper’s Helmet,10,Helmet,Lv. 1,Requires Intelligence 7,"+[18-24] Gear Barrier
+-------------------------------------------------------
++200 Gear Barrier
++20% Mana
++18% Element Penetration
++18% Armor Penetration
++22 Element Resist
+0.3% DMG Amplification for every 1 Character Level(s)
+(Max:  21%)","+[390-400] Gear Barrier
+-------------------------------------------------------
++10% Character EXP on Kill
+0.3% DMG Amplification for every 1 Character Level(s) (Max:  21%)
++10% Skill Rune Cooldown Recovery Speed
++25% Enhance Skill Rune Duration
++30% HP
++50% Hit Rate
+Doubles the increased Zodiac Stats"
+,Star Usurper’s 2-handed Axe,10,2-handed Axe,Lv. 1,Requires Strength 7,"+[55-69]-[82-104] Attack DMG
++1.1 Speed
++13 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++331-356 Attack DMG
++80% Attack DMG
++20% Speed
++100% Gear Critical Rate
+2% Critical DMG for every 1 Character Level(s)
+(Max:  140%)
++100 Weapon Range when below level 90","+[165-175]-[190-200] Attack DMG
++1.1 Speed
++13 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++100% Attack DMG
++30% Speed
++100% Gear Critical Rate
++120% Critical DMG
++30% Maximized DMG
++100 Equipped Weapon Range
+3% DMG Amplification for every 1 Character Level(s) (Max:  300%)"
+,Star Usurper’s Bow,10,Bow,Lv. 1,Requires Dexterity 7,"+[40-46]-[51-60] Attack DMG
++1.35 Speed
++11 Gear Critical Rate
+-------------------------------------------------------
++136-216 Attack DMG
++80% Attack DMG
++20% Speed
++100% Gear Critical Rate
+2% Critical DMG for every 1 Character Level(s)
+(Max:  140)
++1 Chain Count when below level 90
++1 Pierce Count when below level 90","+[140-150]-[165-175] Attack DMG
++1.35 Speed
++11 Gear Critical Rate
+-------------------------------------------------------
++100% Attack DMG
++30% Speed
++100% Gear Critical Rate
++120% Critical DMG
++30% Maximized DMG
++2 Projectile Count
++1 Pierce Count
+3% DMG Amplification for every 1 Character Level(s) (Max:  300%)"
+,Star Usurper’s Staff,10,Staff,Lv. 1,Requires Intelligence 7,"+[65-85]-[98-125] Attack and Spell DMG
++1.1 Speed
++12 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++292-438 Attack and Spell DMG
++80% Attack and Spell DMG
++20% Speed
++100% Gear Critical Rate
+2% Critical DMG for every 1 Character Level(s)
+(Max:  140%)
++50% Area of Effect when below level 90","+[165-175]-[190-200] Attack and Spell DMG
++1.1 Speed
++12 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++100% Attack and Spell DMG
++30% Speed
++100% Gear Critical Rate
++30% Cast Speed
++120% Critical DMG
++30% Maximized DMG
++50% Area of Effect
+3% DMG Amplification for every 1 Character Level(s) (Max:  300%)"
+,Star Usurper’s Ring,10,Ring,Lv. 1,,"+500 Hit Rate
++50 Hit Rate per 2 Character Level(s) (Max: + 1750)
++10 Critical Rate
+-3 Resource Cost
++4 Element Resist per 5 Character Level(s) (Max:+  56)
++25 Chaos Resist","+25 Stats
+-------------------------------------------------------
++1000 Hit Rate
++10 Critical Rate
++75% Critical DMG
+-3 Resource Cost
++30 Element Resist
++30 Chaos Resist
+10% DMG Amplification"
+,Star Usurper’s Belt,10,Belt,Lv. 1,,"+400 HP
+10% Movement Speed Amplification
++50% HP Potion Effect
+1% DMG Taken Decrease per 5 Character Level(s) (Max:  14% Decrease)
++50% Enhance Potion Effect
++25% Enhance Potion Duration","+25 Stats
+-------------------------------------------------------
++25% HP
+10% Movement Speed Amplification
++75% HP Potion Effect
++75% Mana Potion Effect
++100% Enhance Potion Effect
++35% Enhance Potion Duration"

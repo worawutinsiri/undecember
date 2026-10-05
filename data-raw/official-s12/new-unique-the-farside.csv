@@ -1,0 +1,258 @@
+,,,,,,
+,Name,Tier,Gear Type,Req Lv.,Equip Requirement,Option
+,Miraseti's Blessing,32,Magazine,Lv. 73,,"+36-54 Attack DMG
++800 Max Overheat
+-------------------------------------------------------
++16% Max Overheat
+-------------------------------------------------------
++[40-60]% DMG
++[18-22]% Attack Speed
++[45-55]% DMG against enemies affected by Physical Status Effect
++[27-55]% Attack Critical Rate
++[50-55]% Attack Critical DMG
+Charged Shot's Projectiles spread forward and Base Projectile Count changes to 3
+Charged Shot +1 Projectile per Stage
+Charged Shot's Per-Stage Projectile Size Increase
+Projectile DMG Amplification per 3 Stages effect does not apply"
+,Acuben's Wrath,31,Shoes,Lv. 70,Requires Intelligence 208,"+[117-130] Gear Barrier
+-------------------------------------------------------
++[161-171]% Gear Barrier
+[40-45]% Movement Speed Increase
++[5-15] Chaos Resist
++[25-30]% Critical DMG
++[12-16]% Maximized DMG
+Gain the effects below for 5 s upon Divine Punishment Hit (Max 5 Stacks)
+Divine Punishment Area of Effect +10%
+Divine Punishment Spell Critical Rate +15%
+Divine Punishment Spell Critical DMG +15%
+At Max Stacks, Enhanced Lightning Bolt Chance 100%"
+,Casthor's Glory,29,Staff,Lv. 56,Requires Strength 126 Intelligence 126,"+[279-349]-[418-524] Attack and Spell DMG
++1.1 Speed
++11 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++20% Attack and Spell DMG
+-------------------------------------------------------
++[63-71]-[90-101] Attack and Spell DMG
++[85-90]% Attack and Spell DMG
++[20-21]% Speed
++[110-120]% Gear Critical Rate
++[160-180]% DMG when Channeling
++[80-90]% Critical DMG when Channeling
+Sacred Light fires in three directions when used"
+,Capri's Ember,29,Wand,Lv. 56,Requires Intelligence 216,"+[185-232]-[278-350] Spell DMG
++1.2 Speed
++9 Gear Critical Rate
+-------------------------------------------------------
++20% Spell DMG
+-------------------------------------------------------
++[63-71]-[90-101] Spell DMG
++[85-90]% Spell DMG
++[20-22]% Speed
++[101-113]-[182-206] Fire DMG
++[89-103]% Fire DMG
++[55-60]% Critical DMG
+Fire Ball gains +2 additional Projectiles on the 3rd use
+Fire Ball can hit the same target
+Fire Ball Same Target DMG 15% Dampening"
+,Transcendent Miraseti's Blessing,35,Magazine,Lv. 82,,"+45-70 Attack DMG
++800 Max Overheat
+-------------------------------------------------------
++[20-25]% Max Overheat
+-------------------------------------------------------
++[60-100]% DMG
+[8-12]% Attack Speed Amplification
+[12-16]% DMG Amplification against enemies affected by Physical Status Effect
++[55-80]% Attack Critical Rate
++[75-80]% Attack Critical DMG
+Charged Shot's Projectiles spread forward and Base Projectile Count changes to 3
+Charged Shot +1 Projectile per Stage
+Charged Shot's Per-Stage Projectile Size Increase
+Projectile DMG Amplification per 3 Stages effect does not apply"
+,Transcendent Acuben's Wrath,34,Shoes,Lv. 79,Requires Intelligence 223,"+[145-163] Gear Barrier
+-------------------------------------------------------
++[183-193]% Gear Barrier
+[50-55]% Movement Speed Increase
++[15-25] Chaos Resist
++[40-45]% Critical DMG
++[20-30]% Maximized DMG
+Gain the effects below for 5 s upon Divine Punishment Hit (Max 5 Stacks)
+Divine Punishment Area of Effect +10%
+Divine Punishment Spell Critical Rate +15%
+Divine Punishment Spell Critical DMG +15%
+At Max Stacks, Enhanced Lightning Bolt Chance 100%"
+,Transcendent Casthor's Glory,35,Staff,Lv. 82,Requires Strength 157 Intelligence 157,"+[429-536]-[643-804] Attack and Spell DMG
++1.1 Speed
++11 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++40% Attack and Spell DMG
+-------------------------------------------------------
++[90-98]-[126-137] Attack and Spell DMG
++[105-110]% Attack and Spell DMG
++[25-26]% Speed
++[130-145]% Gear Critical Rate
+[24-32]% DMG Amplification when Channeling
++[100-115]% Critical DMG when Channeling
+Sacred Light fires in three directions when used
++[15-25]% Blessing Effect"
+,Transcendent Capri's Ember,35,Wand,Lv. 82,Requires Intelligence 270,"+[356-445]-[534-669] Spell DMG
++1.2 Speed
++9 Gear Critical Rate
+-------------------------------------------------------
++20% Spell DMG
+-------------------------------------------------------
++[90-98]-[126-137] Spell DMG
++[105-110]% Spell DMG
++[25-26]% Speed
++[133-145]-[244-268] Fire DMG
+[13-16]% Fire DMG Amplification
++[73-79]% Critical DMG
+Fire Ball gains +2 additional Projectiles on the 3rd use
+Fire Ball can hit the same target
+Fire Ball Same Target DMG 15% Dampening"
+,Bellatus's Spaulders,35,Spaulders,Lv. 82,Requires Intelligence 228,"+[153-165] Gear Barrier
+-------------------------------------------------------
+6% DMG Taken Dampening while Channeling
+-------------------------------------------------------
++[92-95] Gear Barrier
++[190-205]% Gear Barrier
++1 Channeling Skill Rune Level
++[60-82]% Critical DMG
++[38-45]% Maximized DMG
+Grants the following effect every 1 s while Channeling (Duration: 3 s, Max Stacks: 5)
+3% DMG Taken Dampening
+4% DMG Amplification
++5% Area of Effect
+Gain the following additional effect at Max Stacks
+Trance effect
+(DMG when Channeling +30%, Attack Speed when Channeling +15%, Cast Speed when Channeling +15%)"
+,Silver Shadow's Footprints,35,Shoes,Lv. 82,Requires Strength 228,"+[553-614] Gear Armor
+-------------------------------------------------------
+40% Movement Speed Amplification
+-------------------------------------------------------
++[529-564] Gear Armor
++[225-239]% Gear Armor
++[80-85]% Critical Rate
++[40-45]% Critical DMG
+[10-16]% DMG Amplification
+The following effect for 3 s upon hit (Max 10 Stacks)
+3% Attack Speed Amplification
+3% Cast Speed Amplification
+3% Movement Speed Amplification
+Gain the following additional effect at Max Stacks
+Movement Speed cannot fall below 1200"
+,Token of Trust,35,Bowgun,Lv. 82,Requires Dexterity 270,"+[390-495]-[590-740] Attack DMG
++500 Max Overheat
++1.4 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++60% Attack DMG
+-------------------------------------------------------
++[235-255]-[330-360] Attack DMG
++[125-165]% Attack DMG
++[25-30]% Speed
++[135-150]% Gear Critical Rate
+[17-25]% DMG Amplification
++[115-130]% Critical DMG
+25% Overheat Accumulation Dampening
+Enhances Bowgun's Base Effect (Applies as 0.9% DMG Amplification per Overheat(%))"
+,Alyssa's Victory,35,Staff,Lv. 82,Requires Strength 157 Intelligence 157,"+[545-685]-[815-1020] Attack and Spell DMG
++1 Speed
++9 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++120% DMG when Channeling
+-------------------------------------------------------
++[220-245]-[315-345] Attack and Spell DMG
++[125-165]% Attack and Spell DMG
++[25-30]% Speed
++[155-175]% Gear Critical Rate
+Spell DMG [29-34]% Amplification when Channeling
+Grants the following effect upon Hit (Duration: 3 s, Max Stacks: 10)
+1% chance to ignore enemy Armor
+1% chance to ignore enemy Element Resist
++5% Area of Effect
++15% Spell Critical DMG"
+,Returnee's Waistband,35,Belt,Lv. 82,,"+[30-35]% HP
+[15-20]% HP Amplification
++[280-375]% Enhance Potion Effect
+[15-20]% Enhance Potion Duration Dampening
+1 of the options below will be imbued.
+- Blessing of the Plains[Chance 12.5%]
+- Doublesideness[Chance 12.5%]
+- Child of the Stars[Chance 12.5%]
+- Deep-rooted Tree[Chance 12.5%]
+- Ring of Cycle[Chance 12.5%]
+- Maggot Executioner[Chance 12.5%]
+- Path of Prosperity[Chance 12.5%]
+- Research and Experimentation[Chance 12.5%]
+1 of the options below will be imbued.
+- 3% DMG Amplification per 1 active Potion Effect(s)[Chance 33.3%]
+- 3% Minion DMG Amplification per 1 active Potion Effect(s)[Chance 33.3%]
+- 3% Sentry DMG Amplification per 1 active Potion Effect(s)[Chance 33.3%]"
+,Ultimate Bellatus's Spaulders,35,Spaulders,Lv. 82,Requires Intelligence 228,"+[230-250] Gear Barrier
+-------------------------------------------------------
+12% DMG Taken Dampening while Channeling
+-------------------------------------------------------
++[120-124] Gear Barrier
++[247-267]% Gear Barrier
++2 Channeling Skill Rune Level
++[83-150]% Critical DMG
++[46-90]% Maximized DMG
+Grants the following effect every 1 s while Channeling (Duration: 3 s, Max Stacks: 5)
+5% DMG Taken Dampening
+7% DMG Amplification
++10% Area of Effect
+Gain the following additional effect at Max Stacks
+Trance effect
+(DMG when Channeling +30%, Attack Speed when Channeling +15%, Cast Speed when Channeling +15%)
++200% Trance Effect"
+,Ultimate Silver Shadow's Footprints,35,Shoes,Lv. 82,Requires Strength 228,"+[736-817] Gear Armor
+-------------------------------------------------------
+40% Movement Speed Amplification
+-------------------------------------------------------
++[635-677] Gear Armor
++[270-287]% Gear Armor
++[86-110]% Critical Rate
++[46-105]% Critical DMG
+[17-32]% DMG Amplification
+The following effect for 3 s upon hit (Max 10 Stacks)
+3% Attack Speed Amplification
+3% Cast Speed Amplification
+3% Movement Speed Amplification
+Gain the following additional effect at Max Stacks
+Movement Speed cannot fall below 1200
+Immune to Curse of Speed"
+,Ultimate Token of Trust,35,Bowgun,Lv. 82,Requires Dexterity 270,"+[500-645]-[770-965] Attack DMG
++500 Max Overheat
++1.4 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++60% Attack DMG
+-------------------------------------------------------
++[300-335]-[430-475] Attack DMG
++[165-200]% Attack DMG
++[31-40]% Speed
++[150-200]% Gear Critical Rate
+[26-35]% DMG Amplification
++[130-160]% Critical DMG
+25% Overheat Accumulation Dampening
+Enhances Bowgun's Base Effect (Applies as 1.2% DMG Amplification per Overheat(%))"
+,Ultimate Alyssa's Victory,35,Staff,Lv. 82,Requires Strength 157 Intelligence 157,"+[709-891]-[1060-1326] Attack and Spell DMG
++1 Speed
++9 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++140% DMG when Channeling
+-------------------------------------------------------
++[285-325]-[415-450] Attack and Spell DMG
++[165-205]% Attack and Spell DMG
++[31-40]% Speed
++[185-240]% Gear Critical Rate
+Spell DMG [35-42]% Amplification when Channeling
+Grants the following effect upon Hit (Duration: 3 s, Max Stacks: 10)
+1% chance to ignore enemy Armor
+1% chance to ignore enemy Element Resist
++5% Area of Effect
++15% Spell Critical DMG"

@@ -1,0 +1,49 @@
+,,,,,
+,,,,,
+,,,,,
+,이름,설명,태그,Lv.1,Lv.10
+,Transcendent Spell Activation while Channeling,"Must link an Activation(Channeling) Skill and a Target(Spell) Skill in the arrow's direction.
+Target Skill cannot be linked if any of the Attack, Channeling, Totem, Sentry, Minion, Movement, Toggle, Trap tags exist.
+Target Skill must be registered in a Skill slot to activate
+Rune cannot be awakened.",Channel,"Resource Cost Increase 15%
+5% DMG Amplification for Activated Skill
+30% Resource Cost Dampening for Activated Skill
+Adds 100% of Attack DMG increase to Spell DMG
+Add 100% of Attack Critical Rate Increase/Critical DMG to Spell Critical Rate Increase/Critical DMG
+Trigger Chance 100%
+Displays Cooldown according to Activation Skill's Speed upon linking Link Rune.
+
+
+(유물 등급 효과) 10% Resource Cost Dampening
+(유물 등급 효과) +20% Skill Rune Cooldown Recovery Speed
+","Resource Cost Increase 15%
+40% DMG Amplification for Activated Skill
+30% Resource Cost Dampening for Activated Skill
++1 Rune Level
+Adds 100% of Attack DMG increase to Spell DMG
+Add 100% of Attack Critical Rate Increase/Critical DMG to Spell Critical Rate Increase/Critical DMG
+Trigger Chance 100%
+Displays Cooldown according to Activation Skill's Speed upon linking Link Rune.
+
+
+(유물 등급 효과) 10% Resource Cost Dampening
+(유물 등급 효과) +20% Skill Rune Cooldown Recovery Speed
+"
+,Transcendent Dampen Resource Cost,"Can be linked with Skills that are any one of Attack, Spell
+Rune cannot be awakened.","Attack, Spell","Resource Cost Increase -25%
++60% DMG
++4% Skill Rune Effect
+DMG % Amplification by 50% of Resource Consumed
+
+
+(유물 등급 효과) -2 Resource Cost
+(유물 등급 효과) Increases DMG by 20% of resources spent (Max:  100%)
+","Resource Cost Increase -30%
++180% DMG
++20% Skill Rune Effect
+DMG % Amplification by 61% of Resource Consumed
+
+
+(유물 등급 효과) -2 Resource Cost
+(유물 등급 효과) Increases DMG by 20% of resources spent (Max:  100%)
+"

@@ -1,0 +1,87 @@
+,Edited on Jul. 8 17:51 (UTC+9),,,,
+,,,,,
+,Link Rune,Description,tag,Lv.1,Lv.10
+,Transcendent Buff Activation when Hit,"Must link a Target(Shout, Attack Enhance, Defense Enhance) Skill in the arrow's direction.
+Target Skill cannot be linked if any of the Channeling, Totem, Sentry, Minion, Movement, Toggle, Trap tags exist
+Target Skill must be registered in a Skill slot to activate
+Rune cannot be awakened.","Shout, Attack Enhance, Defense Enhance","Resource Cost Increase 15%
+5% Effect Amplification for Activated Skill
++35.6% Skill Rune Cooldown Recovery Speed
+Trigger Chance 100%
+Trigger Cooldown 1 s
+(Unique Effect) +15% Skill Rune Effect
+(Unique Effect) +15% Skill Rune Cooldown Recovery Speed
+(Unique Effect) +15% Skill Rune Duration
+(Unique Effect) -10% Resource Cost","Resource Cost Increase 15%
+10% Effect Amplification for Activated Skill
++1 Rune Level
++42% Skill Rune Cooldown Recovery Speed
+Trigger Chance 100%
+Trigger Cooldown 1 s
+(Unique Effect) +15% Skill Rune Effect
+(Unique Effect) +15% Skill Rune Cooldown Recovery Speed
+(Unique Effect) +15% Skill Rune Duration
+(Unique Effect) -10% Resource Cost"
+,Harmony,"Can be linked with Skills that are any one of Attack, Spell
+Cannot be linked with Skills that are Totem, Minion, Sentry, Toggle, Shout, Attack Enhance, Defense Enhance, Movement, Trap
+Rune cannot be awakened.","Attack, Spell","Resource Cost Increase 20%
+When HP and Mana are 50% or more
+10% Resource Cost Amplification
+25.5% DMG Amplification
++12% Attack Speed
++12% Cast Speed
+When HP and Mana are under 50%
+20% Resource Cost Dampening
+25.5% DMG Amplification
++24% Attack Speed
++24% Cast Speed
+(Unique Effect) 5% DMG Amplification when percentage of HP is higher than or equal to Mana
+(Unique Effect) +1% HP Absorb on hit when percentage of HP is lower than Mana
+(Unique Effect) +1% Barrier Absorb on hit when percentage of Barrier is lower than Mana","Resource Cost Increase 20%
+When HP and Mana are 50% or more
+10% Resource Cost Amplification
+78.9% DMG Amplification
++14.9% Attack Speed
++14.9% Cast Speed
+When HP and Mana are under 50%
+20% Resource Cost Dampening
+39.4% DMG Amplification
++29.9% Attack Speed
++29.9% Cast Speed
+(Unique Effect) 5% DMG Amplification when percentage of HP is higher than or equal to Mana
+(Unique Effect) +1% HP Absorb on hit when percentage of HP is lower than Mana
+(Unique Effect) +1% Barrier Absorb on hit when percentage of Barrier is lower than Mana"
+,Enhance Effect,"Can be linked with Skills that are any one of Shout, Attack Enhance, Defense Enhance, Rapid Seal
+Rune cannot be awakened.","Shout, Attack Enhance, Defense Enhance, Rapid Seal","Resource Cost Increase 20%
++22% Skill Rune Effect
+(Unique Effect) +20% Skill Rune Effect
+(Unique Effect) +15% Skill Rune Duration
+(Unique Effect) +15% Skill Rune Cooldown Recovery Speed
+(Unique Effect) -10% Resource Cost","Resource Cost Increase 20%
++74.9% Skill Rune Effect
+(Unique Effect) +20% Skill Rune Effect
+(Unique Effect) +15% Skill Rune Duration
+(Unique Effect) +15% Skill Rune Cooldown Recovery Speed
+(Unique Effect) -10% Resource Cost"
+,Improved Technique,"Can be linked with Skills that are any one of Attack, Spell
+Rune cannot be awakened.","Attack, Spell","Resource Cost Increase 15%
++2 Rune Level
++4% Minion DMG per 4 Intelligence (Max: 360%)
++4% Sentry DMG per 4 Dexterity (Max: 360%)
++4% DMG for every 4 Strength (Max: 360%)
+(Unique Effect) +2 Rune Level
+(Unique Effect) +2 Minion Skill Rune Level
+(Unique Effect) +2 Sentry Skill Rune Level
+(Unique Effect) 3% Minion DMG Amplification per 50 Intelligence (Max: 36%)
+(Unique Effect) 3% Sentry DMG Amplification per 50 Dexterity (Max: 36)
+(Unique Effect) 3% DMG Amplification for every 50 Strength (Max: 36%)","Resource Cost Increase 15%
++3 Rune Level
++6% Minion DMG per 4 Intelligence (Max: 360%)
++6% Sentry DMG per 4 Dexterity (Max: 360%)
++6% DMG for every 4 Strength (Max: 360%)
+(Unique Effect) +2 Rune Level
+(Unique Effect) +2 Minion Skill Rune Level
+(Unique Effect) +2 Sentry Skill Rune Level
+(Unique Effect) 3% Minion DMG Amplification per 50 Intelligence (Max: 36%)
+(Unique Effect) 3% Sentry DMG Amplification per 50 Dexterity (Max: 36)
+(Unique Effect) 3% DMG Amplification for every 50 Strength (Max: 36%)"

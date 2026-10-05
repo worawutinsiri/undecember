@@ -1,0 +1,851 @@
+,Edited on Jul. 8 17:51 (UTC+9),,,,,
+,,,,,,
+,Name,Tier,Gear Type,Req Lv.,Equip Requirement,Option
+,Lightning Runaway,30,Bowgun,Lv. 63,Requires Dexterity 225,"+[150-188]-[193-214] Attack DMG
++500 Max Overheat
++1.3 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++20% Attack DMG
+-------------------------------------------------------
++[72-80]-[102-113] Attack DMG
++[88-95]% Attack DMG
++[18-23]% Speed
++[115-125]% Gear Critical Rate
+Electric Shell Shot changes to a Rapid Shot form
+Electric Shell Shot Projectile Count +1
+Affected by Projectile Count stats
+35% Electric Round DMG Dampening"
+,Flash Tail,12,Dagger,Lv. 25,Requires Dexterity 39 Intelligence 39,"+[70-88]-[105-134] Attack and Spell DMG
++1.35 Speed
++9 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++30 Equipped Weapon Range
+-------------------------------------------------------
++[25-35]-[40-50] Attack and Spell DMG
++[50-60]% Attack and Spell DMG
++[75-90]% Gear Critical Rate
++[15-20]% Speed
++[75-90]% DMG
+15% Movement Speed Increase
+Flash Effect changed to 300
+Generates 1 additional strike at current location on every hit"
+,Enemy in the Mirror,28,Armor,Lv. 65,Requires Dexterity 218,"+[1054-1151] Gear Dodge Rate
+-------------------------------------------------------
+10% Reflect DMG Taken Decrease
+-------------------------------------------------------
++[700-850] Gear Dodge Rate
++[160-190]% Gear Dodge Rate
++[35-45]% HP
++[50-60] Element Resist
++[30-40] Chaos Resist
+[10-15]% Reflect DMG Amplification
+Counterattack Trigger Cooldown changed to 0.3 s
+While Counterattack is active, Reflect DMG related stats are converted into Counterattack DMG stats
+(Applies the higher value between Physical and Elemental % Reflect DMG Taken Decrease as Counterattack DMG % Amplification)"
+,Vermilion Root,30,Ring,Lv. 63,,"[25-35]% HP Dampening
+50% Barrier Dampening
++[15-20]% Enhance Skill Rune Cooldown Recovery Speed
+30% Skill Rune Duration Dampening
++30% Tenacious Regeneration Effect
+10% Max HP Amplification for duration of Tenacious Regeneration
+[0.5-0.8]% DMG Amplification per 10,000 Max HP for duration of Tenacious Regeneration"
+,Transcendent Lightning Runaway,35,Bowgun,Lv. 82,Requires Dexterity 270,"+[242-304]-[364-456] Attack DMG
++500 Max Overheat
++1.3 Speed
++10 Gear Critical Rate
+-------------------------------------------------------
++40% Attack DMG
+-------------------------------------------------------
++[90-98]-[126-137] Attack DMG
++[104-110]% Attack DMG
++[25-30]% Speed
++[140-150]% Gear Critical Rate
+Electric Shell Shot changes to a Rapid Shot form
+Electric Shell Shot Projectile Count +2
+Affected by Projectile Count stats
+25% Electric Round DMG Dampening"
+,Transcendent Flash Tail,35,Dagger,Lv. 82,Requires Dexterity 134 Intelligence 134,"+[261-327]-[392-492] Attack and Spell DMG
++1.35 Speed
++9 Gear Critical Rate
++180 Equipped Weapon Range
+-------------------------------------------------------
++50 Equipped Weapon Range
+-------------------------------------------------------
++[90-100]-[125-140] Attack and Spell DMG
++[105-115]% Attack and Spell DMG
++[140-150]% Gear Critical Rate
++[26-30]% Speed
+[12-16]% DMG Amplification
+40% Movement Speed Increase
+Flash Effect changed to 300
+Generates 1 additional strike at current location on every hit
+25% Attack Speed and Movement Speed Amplification for 5 s on hit"
+,Transcendent Enemy in the Mirror,34,Armor,Lv. 82,Requires Dexterity 255,"+[2343-2586] Gear Dodge Rate
+-------------------------------------------------------
+25% Reflect DMG Taken Decrease
+-------------------------------------------------------
++[1250-1300] Gear Dodge Rate
++[250-280]% Gear Dodge Rate
+[25-35]% HP Amplification
++[75-90] Element Resist
++[65-75] Chaos Resist
+-4 Resource Cost
+[16-25]% Reflect DMG Amplification
+Counterattack Trigger Cooldown changed to 0.3 s
+While Counterattack is active, Reflect DMG related stats are converted into Counterattack DMG stats
+(Applies the higher value between Physical and Elemental % Reflect DMG Taken Decrease as Counterattack DMG % Amplification)"
+,Transcendent Vermilion Root,35,Ring,Lv. 82,,"[15-20]% HP Dampening
+50% Barrier Dampening
++[25-40]% Enhance Skill Rune Cooldown Recovery Speed
+30% Skill Rune Duration Dampening
++[35-50]% Tenacious Regeneration Effect
+20% Max HP Amplification for duration of Tenacious Regeneration
+[0.9-1.5]% DMG Amplification per 10,000 Max HP for duration of Tenacious Regeneration"
+,Boundary Resonance,35,Scepter,Lv. 82,Requires Strength 134 Intelligence 134,"+[410-520]-[620-777] Attack and Spell DMG
++1.4 Speed
++10 Gear Critical Rate
++200 Equipped Weapon Range
+-------------------------------------------------------
++0.8% Barrier Absorb on hit
+-------------------------------------------------------
++[230-260]-[330-360] Attack and Spell DMG
++[130-170]% Attack and Spell DMG
++[25-30]% Speed
++[160-180]% Gear Critical Rate
++[85-90]% Barrier
+When percentage of Barrier is higher than or equal to Mana, [15-19]% DMG Amplification
+When percentage of Barrier is less than Mana, Regenerate [0.5-1]% of Max Barrier per second
+[0.2-0.3]% DMG Amplification per 5,000 Max Barrier"
+,Commander's Shout,35,Necklace,Lv. 82,,"[10-14]% DMG Amplification
+-------------------------------------------------------
++[45-60]% Shout Skill Rune Cooldown Recovery Speed
++[155-170]% Shout Skill Rune Cast Speed
++[30-35]% Shout Skill Rune Effect
+30% Shout Skill Rune Duration Dampening
+[10-15]% Resource Cost Dampening
+Grant the following effect(s) for 5 s upon triggering Shout
+Regen 0.5% of Max HP/Sec
+12% DMG Amplification
+12% DMG Taken Dampening
+12% Hit Rate Amplification
+12% Weapon Range Amplification
+12% Area of Effect Amplification"
+,Stellar Counterattack,35,Helmet,Lv. 82,Requires Strength 228,"+[1110-1250] Gear Armor
+-------------------------------------------------------
++[45-50] Stats
+-------------------------------------------------------
++[240-260]% Gear Armor
++[20-26] Element Resist
++[15-23] Chaos Resist
+[16-21]% DMG Amplification
+Doubles the increased Zodiac Stats
+Does not stack with identical effects
+1 of the options below will be imbued.
+- +[25-30]% Enhance Skill Rune Effect[Chance 33.3%]
+- +[25-30]% Enhance Potion Effect[Chance 33.3%]
+- +[25-30]% Shout Skill Rune Effect[Chance 33.3%]"
+,Entangling Tendrils,35,Gloves,Lv. 82,Requires Strength 118 Dexterity 118,"+[195-220] Gear Armor
++[250-275] Gear Dodge Rate
+-------------------------------------------------------
++30% DoT
+-------------------------------------------------------
++[175-190]% Gear Armor
++[190-215]% Gear Dodge Rate
++[85-90]% DoT
++[15-25]% DoT Duration
+[16-24]% Attack Speed Amplification
+[16-24]% Cast Speed Amplification
+[10-15]% DoT Amplification
+50% Strike DMG Dampening
+Converts 100% of % Strike DMG Increase to % DoT Increase
+Converts 100% of % Strike DMG Amplification to % DoT Amplification"
+,Ultimate Boundary Resonance,35,Scepter,Lv. 82,Requires Strength 134 Intelligence 134,"+[550-710]-[809-1014] Attack and Spell DMG
++1.4 Speed
++10 Gear Critical Rate
++200 Equipped Weapon Range
+-------------------------------------------------------
++1.2% Barrier Absorb on hit
+-------------------------------------------------------
++[300-340]-[430-470] Attack and Spell DMG
++[170-210]% Attack and Spell DMG
++[31-40]% Speed
++[190-250]% Gear Critical Rate
+[15-25]% Barrier Amplification
+When percentage of Barrier is higher than or equal to Mana, [20-26]% DMG Amplification
+When percentage of Barrier is less than Mana, Regenerate [1-2]% of Max Barrier per second
+[0.4-0.6]% DMG Amplification per 5,000 Max Barrier"
+,Ultimate Commander's Shout,35,Necklace,Lv. 82,,"[15-20]% DMG Amplification
+-------------------------------------------------------
++[65-80]% Shout Skill Rune Cooldown Recovery Speed
++[185-205]% Shout Skill Rune Cast Speed
++[36-45]% Shout Skill Rune Effect
+30% Shout Skill Rune Duration Dampening
+[16-25]% Resource Cost Dampening
+Grant the following effect(s) for 5 s upon triggering Shout
+Regen 1% of Max HP/Sec
+24% DMG Amplification
+24% DMG Taken Dampening
+24% Hit Rate Amplification
+24% Weapon Range Amplification
+24% Area of Effect Amplification"
+,Ultimate Stellar Counterattack,35,Helmet,Lv. 82,Requires Strength 228,"+[1450-1650] Gear Armor
+-------------------------------------------------------
++[55-65] Stats
+-------------------------------------------------------
++[260-320]% Gear Armor
++[27-45] Element Resist
++[24-40] Chaos Resist
+[22-28]% DMG Amplification
+Doubles the increased Zodiac Stats
+Does not stack with identical effects
+1 of the options below will be imbued.
+- +[35-45]% Enhance Skill Rune Effect[Chance 33.3%]
+- +[35-45]% Enhance Potion Effect[Chance 33.3%]
+- +[35-45]% Shout Skill Rune Effect[Chance 33.3%]"
+,Ultimate Entangling Tendrils,35,Gloves,Lv. 82,Requires Strength 118 Dexterity 118,"+[250-290] Gear Armor
++[325-360] Gear Dodge Rate
+-------------------------------------------------------
++60% DoT
+-------------------------------------------------------
++[195-220]% Gear Armor
++[220-250]% Gear Dodge Rate
++[95-120]% DoT
++[26-40]% DoT Duration
+[25-40]% Attack Speed Amplification
+[25-40]% Cast Speed Amplification
+[16-24]% DoT Amplification
+50% Strike DMG Dampening
+Converts 100% of % Strike DMG Increase to % DoT Increase
+Converts 100% of % Strike DMG Amplification to % DoT Amplification"
+,Aquila's Chain,30,Axe,Lv. 69,Requires Strength 143 Dexterity 62,"+[168-210]-[261-290] Attack DMG
++1.3 Speed
++8 Gear Critical Rate
++200 Equipped Weapon Range
+-------------------------------------------------------
++[48-58]-[68-85] Attack DMG
++[65-75]% Attack DMG
++[115-125]% Gear Critical Rate
++[22-26]% Speed
+Cannot Pierce and can Chain when a 1-handed weapon is equipped
+Converts 1 Pierce Count into 1 Chain Count for Axe Throw
+[1.2-1.6]% DMG Amplification per Chain Count upon using skill"
+,Capri's Burst,30,Axe,Lv. 69,Requires Strength 143 Dexterity 62,"+[168-210]-[261-290] Attack DMG
++1.3 Speed
++8 Gear Critical Rate
++200 Equipped Weapon Range
+-------------------------------------------------------
++[48-58]-[68-85] Attack DMG
++[65-75]% Attack DMG
++[115-125]% Gear Critical Rate
++[22-26]% Speed
++[90-105]% Critical DMG
++[173-194]% DMG when Dual Wielding
+Axe Throw deals Area DMG identical to Axe Throw on Hit when Dual Wielding
+Explosion Range 150"
+,Earth's Judgment,31,2-handed Axe,Lv. 70,Requires Strength 175 Dexterity 75,"+[340-425]-[436-485] Attack DMG
++0.9 Speed
++12 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++[62-84]-[168-184] Attack DMG
++[60-80]% Attack DMG
++[115-125]% Gear Critical Rate
++[22-26]% Speed
++[0.8-0.9]% HP Absorb on Attack Hit
+The third Axe Throw projectile becomes a Massive Explosion when a 2-handed weapon is equipped
+60% DMG Multiplier Amplification
+30% Critical Hit DMG Increase
+Area of Effect doubled"
+,Corrosion Claw,30,Sword,Lv. 69,Requires Strength 102 Dexterity 102,"+[192-241]-[252-281] Attack DMG
++1.4 Speed
++7 Gear Critical Rate
++215 Equipped Weapon Range
+-------------------------------------------------------
++[62-84]-[92-104] Attack DMG
++[60-80]% Attack DMG
++[22-26]% Speed
++[36-42] Equipped Weapon Range
++[173-194]% DoT
+100% Bleed DMG Dampening
+Grants 1 additional Wheel Slash stack(s) upon using Wheel Slash
+Wheel Slash Max Stacks +[1-2]"
+,Critical Point Venom Sac,30,Spaulders,Lv. 69,Requires Dexterity 85 Intelligence 85,"+[192-241] Gear Dodge Rate
++[37-38] Gear Barrier
+-------------------------------------------------------
+3% Resource Cost Dampening
+-------------------------------------------------------
++[112-134]% Gear Dodge Rate
++[85-100]% Gear Barrier
+Inflicts Poison on self on Hit while using Poison Explosion
++4% Poison Chance per Poison stack on self while using Poison Explosion
+Unaffected by Poison while using Poison Explosion
+Amplifies DMG by 2% per Poison stack on self
++[25-40]% Venom Duration
++[40-60]% Poison DMG"
+,Vertical Chill,30,Quiver,Lv. 69,-,"+30-[38-45] Attack and Spell DMG
+-------------------------------------------------------
++[30-60]% Attack DMG
+-------------------------------------------------------
++[100-150] HP
++[18-22]% Attack Speed
++[28-40]% DMG against Chilled enemies
+Does not create Chill Area
+Converts 100% of Chill Area Duration increase into Frost Storm DMG Amplification
++[25-35] Chill Rate"
+,Transcendent Aquila's Chain,35,Axe,Lv. 82,Requires Strength 189 Dexterity 82,"+[266-334]-[400-501] Attack DMG
++1.3 Speed
++10 Gear Critical Rate
++200 Equipped Weapon Range
+-------------------------------------------------------
++[92-110]-[134-166] Attack DMG
++[80-105]% Attack DMG
++[130-145]% Gear Critical Rate
++[22-26]% Speed
++1 Chain Count
+Cannot Pierce and can Chain when a 1-handed weapon is equipped
+Converts 1 Pierce Count into 1 Chain Count for Axe Throw
+[1.8-3]% DMG Amplification per Chain Count upon using skill"
+,Transcendent Capri's Burst,35,Axe,Lv. 82,Requires Strength 189 Dexterity 82,"+[266-334]-[400-501] Attack DMG
++1.3 Speed
++10 Gear Critical Rate
++200 Equipped Weapon Range
+-------------------------------------------------------
++[92-110]-[134-166] Attack DMG
++[80-105]% Attack DMG
++[130-145]% Gear Critical Rate
++[24-30]% Speed
++[110-130]% Critical DMG
+[12-16]% DMG Amplification when Dual Wielding
++[40-80]% Area of Effect when Dual Wielding
+Axe Throw deals Area DMG identical to Axe Throw on Hit when Dual Wielding
+Explosion Range 150"
+,Transcendent Earth's Judgment,35,2-handed Axe,Lv. 82,Requires Strength 219 Dexterity 95,"+[388-485]-[582-729] Attack DMG
++0.9 Speed
++14 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++[92-104]-[188-224] Attack DMG
++[80-100]% Attack DMG
++[130-145]% Gear Critical Rate
++[24-30]% Speed
++[1-1.1]% HP Absorb on Attack Hit
+The third Axe Throw projectile becomes a Massive Explosion when a 2-handed weapon is equipped
+60% DMG Multiplier Amplification
+30% Critical Hit DMG Increase
+Area of Effect doubled"
+,Transcendent Corrosion Claw,35,Sword,Lv. 82,Requires Strength 134 Dexterity 134,"+[280-351]-[420-527] Attack DMG
++1.4 Speed
++8 Gear Critical Rate
++215 Equipped Weapon Range
+-------------------------------------------------------
++[92-110]-[134-166] Attack DMG
++[80-105]% Attack DMG
++[24-28]% Speed
++[49-51] Equipped Weapon Range
+[12-16]% DoT Amplification
+100% Bleed DMG Dampening
++[15-25]% DoT Acceleration
+Grants 1 additional Wheel Slash stack(s) upon using Wheel Slash
+Wheel Slash Max Stacks +[2-3]"
+,Transcendent Critical Point Venom Sac,35,Spaulders,Lv. 82,Requires Dexterity 118 Intelligence 118,"+[280-351] Gear Dodge Rate
++[52-58] Gear Barrier
+-------------------------------------------------------
+[6.7-7.8]% Resource Cost Dampening
+-------------------------------------------------------
++[195-209]% Gear Dodge Rate
++[153-165]% Gear Barrier
+Inflicts Poison on self on Hit while using Poison Explosion
++4% Poison Chance per Poison stack on self while using Poison Explosion
+Unaffected by Poison while using Poison Explosion
+Amplifies DMG by 2% per Poison stack on self
++[50-100]% Venom Duration
+[5-12]% Poison DMG Amplification
+Poison Max Stacks +[1-2] while using Poison Explosion
+Amplifies Poison DMG by [150-250]% while using Poison Explosion"
+,Transcendent Vertical Chill,35,Quiver,Lv. 82,-,"+42-[61-64] Attack and Spell DMG
+-------------------------------------------------------
++[40-100]% Attack DMG
+-------------------------------------------------------
++[130-220] HP
+[8-12]% Attack Speed Amplification
+[8-12]% DMG Amplification against enemies affected by Cold Status Effect
+Does not create Chill Area
+Converts 100% of Chill Area Duration increase into Frost Storm DMG Amplification
+Cold Status Effect Rate +[35-45]
+Amplifies Frost Storm DMG by [2-6]%"
+,Brilliance of Contrast,35,2-handed Sword,Lv. 82,Requires Strength 157 Dexterity 157,"+[438-495]-[684-735] Attack DMG
++0.9 Speed
++14 Gear Critical Rate
++260 Equipped Weapon Range
+-------------------------------------------------------
++40% Attack DMG
+-------------------------------------------------------
++[286-338]-[447-562] Attack DMG
++[80-100]% Attack DMG
++[22-26]% Speed
++[140-180]% Gear Critical Rate
+50% chance to apply Shadow of Sephdar for 3 s on Hit
+(Shadow of Sephdar: Cooldown 0.5 s)
+(Summons a Shadow when using a skill while Shadow of Sephdar is active)
+(Summon Shadow: Only summons an Illusion when the skill has the 'Shadow' tag.)
+(Does not apply to skills linked with Trigger Link Runes.)
+Effect cannot overlap with other activation effect with the same name
+When using a Shadow-tagged skill while in the Shadow of Sephdar state, obtain the following effect
+35% DMG Amplification
++150 Weapon Range
+25% Area of Effect Amplification
++250% Critical DMG
+1 of the options below will be imbued.
+- [25-30]% Physical DMG Amplification[Chance 20%]
+- [25-30]% Fire DMG Amplification[Chance 20%]
+- [25-30]% Cold DMG Amplification[Chance 20%]
+- [25-30]% Poison DMG Amplification[Chance 20%]
+- [25-30]% Lightning DMG Amplification[Chance 20%]"
+,Flowing Vanguard,35,Armor,Lv. 82,Requires Intelligence 255,"+[252-282] Gear Barrier
+-------------------------------------------------------
++[200-300]% Gear Barrier
+[25-45]% Barrier Amplification
+35% HP Dampening
+[8-16]% DMG Taken Dampening while Barrier is active
+Grants the following effects for 3 s on Hit (Max 5 stacks)
++5% Barrier Charge Cycle Recovery Speed
+1% Max Barrier Regen/Sec upon charging Barrier
+Grants additional effects at max stacks
+5% Movement Speed Amplification
++5 Barrier on every hit
+Upon Barrier Deactivation, grants the following effects for 3 s (Cooldown: 60 s)
+Forced Barrier Charge
++1% Barrier Absorb on hit
+1 of the options below will be imbued.
+- Immune to Bleed[Chance 33.3%]
+- Immune to Venom[Chance 33.3%]
+- Immune to Burn[Chance 33.3%]"
+,Glory of Submergence,35,Shoes,Lv. 82,Requires Strength 118 Dexterity 118,"+[149-166] Gear Armor
++[249-277] Gear Dodge Rate
+-------------------------------------------------------
++[3-4]% Perfect Dodge
+-------------------------------------------------------
++[163-176]% Gear Armor
++[183-198]% Gear Dodge Rate
+15% Movement Speed Dampening
++[50-100]% Movement Skill Rune Cooldown Recovery Speed
++[30-50] Element Resist
++[35-40] Chaos Resist
+Amplifies DMG by 1% per 40 Movement Speed for 3 s upon using Movement Skill (Cooldown: 5 s)"
+,Approaching Omen,35,Ring,Lv. 82,-,"[1-10]% Attack Speed Amplification
+[1-10]% Cast Speed Amplification
+[1-10]% Hit Rate Amplification
++[1-15] Element Penetration
+[1-8]% Element DMG Amplification
++[5-20]% Element Penetration50% chance to apply Engraved Fear to enemies for 5 s on Hit (Max 5 stacks)
+16% Element Resist Dampening
+-2% Block Chance
+Gains Reaper's Harvest for 5 s on Hit
+Amplifies DMG by 0.4% per stack (Max 100 stacks, up to 12 stacks gained per Hit)
+Duration is not refreshed when gaining stacks
+1 of the options below will be imbued.
+- +[7-11]% Critical Chance
++[42-95]% Critical DMG[Chance 50%]
+- +[7-11]% Maximization Chance
++[42-95]% Maximized DMG[Chance 50%]"
+,Ultimate Brilliance of Contrast,35,2-handed Sword,Lv. 82,Requires Strength 157 Dexterity 157,"+[520-614]-[830-896] Attack DMG
++0.9 Speed
++14 Gear Critical Rate
++260 Equipped Weapon Range
+-------------------------------------------------------
++60% Attack DMG
+-------------------------------------------------------
++[358-423]-[591-703] Attack DMG
++[100-120]% Attack DMG
++[26-30]% Speed
++[180-220]% Gear Critical Rate
+50% chance to apply Shadow of Sephdar for 3 s on Hit
+(Shadow of Sephdar: Cooldown 0.5 s)
+(Summons a Shadow when using a skill while Shadow of Sephdar is active)
+(Summon Shadow: Only summons an Illusion when the skill has the 'Shadow' tag.)
+(Does not apply to skills linked with Trigger Link Runes.)
+Effect cannot overlap with other activation effect with the same name
+When using a Shadow-tagged skill while in the Shadow of Sephdar state, obtain the following effect
+35% DMG Amplification
++150 Weapon Range
+25% Area of Effect Amplification
++250% Critical DMG
+1 of the options below will be imbued.
+- [35-45]% Physical DMG Amplification[Chance 20%]
+- [35-45]% Fire DMG Amplification[Chance 20%]
+- [35-45]% Cold DMG Amplification[Chance 20%]
+- [35-45]% Poison DMG Amplification[Chance 20%]
+- [35-45]% Lightning DMG Amplification[Chance 20%]"
+,Ultimate Flowing Vanguard,35,Armor,Lv. 82,Requires Intelligence 255,"+[280-314] Gear Barrier
+-------------------------------------------------------
++[300-400]% Gear Barrier
+[45-75]% Barrier Amplification
+35% HP Dampening
+[16-25]% DMG Taken Dampening while Barrier is active
+Grants the following effects for 3 s on Hit (Max 5 stacks)
++5% Barrier Charge Cycle Recovery Speed
+1% Max Barrier Regen/Sec upon charging Barrier
+Grants additional effects at max stacks
+5% Movement Speed Amplification
++5 Barrier on every hit
+Upon Barrier Deactivation, grants the following effects for 3 s (Cooldown: 60 s)
+Forced Barrier Charge
++1% Barrier Absorb on hit
+1 of the options below will be imbued.
+- Immune to Bleed[Chance 31.7%]
+- Immune to Venom[Chance 31.7%]
+- Immune to Burn[Chance 31.7%]
+- Immune to DoT[Chance 5.0%]"
+,Ultimate Glory of Submergence,35,Shoes,Lv. 82,Requires Strength 118 Dexterity 118,"+[176-197] Gear Armor
++[295-329] Gear Dodge Rate
+-------------------------------------------------------
++[5-7]% Perfect Dodge
+-------------------------------------------------------
++[177-190]% Gear Armor
++[199-214]% Gear Dodge Rate
+10% Movement Speed Dampening
++[75-150]% Movement Skill Rune Cooldown Recovery Speed
++[50-70] Element Resist
++[45-60] Chaos Resist
+Amplifies DMG by 1% per 25 Movement Speed for 3 s upon using Movement Skill (Cooldown: 5 s)"
+,Ultimate Approaching Omen,35,Ring,Lv. 82,-,"[10-20]% Attack Speed Amplification
+[10-20]% Cast Speed Amplification
+[10-20]% Hit Rate Amplification
++[20-35] Element Penetration
+[8-18]% Element DMG Amplification
++[25-50]% Element Penetration
+50% chance to apply Engraved Fear to enemies for 5 s on Hit (Max 5 stacks)
+16% Element Resist Dampening
+-2% Block Chance
++[10-20]% Max Element Penetration
+Gains Reaper's Harvest for 5 s on Hit
+Amplifies DMG by 0.9% per stack (Max 100 stacks, up to 12 stacks gained per Hit)
+Duration is not refreshed when gaining stacks
+1 of the options below will be imbued.
+- +[11-18]% Critical Chance
++[95-165]% Critical DMG[Chance 50%]
+- +[11-18]% Maximization Chance
++[95-165]% Maximized DMG[Chance 50%]"
+,Expanding Boundary,35,Staff,Lv. 82,Requires Strength 157 Intelligence 157,"+[441-559]-[732-855] Attack and Spell DMG
++1.1 Speed
++13 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++[357-415]-[566-667] Attack and Spell DMG
++[50-110]% Attack and Spell DMG
++[175-250]% Gear Critical Rate
+Grants Expanding Boundary effect upon equipping
+Upon Hit, +39 Equipped Weapon Range for 10 s (Max Stacks: 10)
+Increase Area of Effect by 15% of Weapon Range (Max: 120%)
+2% DMG Amplification per 30 Weapon Range (Max: 50%)
+(Does not stack with Watcher's Stick effect)"
+,Resonance of All Colors,35,Necklace,Lv. 82,-,"+[7-10]% Stats
+-------------------------------------------------------
+-2 Max Energy
+[1-10]% Movement Speed Amplification
+[10-20]% Attack Speed Amplification
+[10-20]% Cast Speed Amplification
+10% DMG Amplification per 10 Energy possessed
+1 of the options below will be imbued.
+- +[2-7] Fixed Max Earth Energy[Chance 20%]
+- +[2-7] Fixed Max Fire Energy[Chance 20%]
+- +[2-7] Fixed Max Cold Energy[Chance 20%]
+- +[2-7] Fixed Max Lightning Energy[Chance 20%]
+- +[2-7] Fixed Max Poison Energy[Chance 20%]
+1 of the options below will be imbued.
+- [5-8]% of DMG as Additional Physical DMG on every hit per Earth Energy[Chance 20%]
+- [5-8]% of DMG as Additional Fire DMG on every hit per Fire Energy[Chance 20%]
+- [5-8]% of DMG as Additional Cold DMG on every hit per Cold Energy[Chance 20%]
+- [5-8]% of DMG as Additional Lightning DMG on every hit per Lightning Energy[Chance 20%]
+- [5-8]% of DMG as Additional Poison DMG on every hit per Poison Energy[Chance 20%]"
+,Legion Apothecary,35,Belt,Lv. 82,-,"[15-20]% Minion HP Amplification
+[15-20]% Sentry HP Amplification
+-------------------------------------------------------
+[15-25]% Minion DMG Amplification
+[15-25]% Sentry DMG Amplification
+[5-12]% HP Amplification
++[75-100]% Enhance Potion Cooldown Recovery Speed
++[150-200]% Enhance Potion Effect
+[55-65]% Enhance Potion Duration Dampening
+1 of the options below will be imbued.
+- High Elixir effects also apply to Minions[Chance 50%]
+- High Elixir effects also apply to Sentries[Chance 50%]"
+,Master of Trajectory,35,Quiver,Lv. 82,Requires Dexterity 270,"+[70-91]-[150-191] Attack and Spell DMG
+-------------------------------------------------------
++[100-174]-[181-273] Attack and Spell DMG
++[20-35]% Attack and Spell DMG
++[2-4] Mana on every hit
++[3-7]% Maximization Chance
++[15-27]% Maximized DMG
+1 of the options below will be imbued.
+- [10-14.5]% DMG Amplification per Split Count upon using skill[Chance 25%]
+- [9.4-14]% DMG Amplification per Refraction Count upon using skill[Chance 25%]
+- [2.4-4]% DMG Amplification per Penetration Count upon using skill[Chance 25%]
+- [1.8-3]% DMG Amplification per Chain Count upon using skill[Chance 25%]"
+,Ultimate Expanding Boundary,35,Staff,Lv. 82,Requires Strength 157 Intelligence 157,"+[559-698]-[855-993] Attack and Spell DMG
++1.1 Speed
++13 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++[389-452]-[616-727] Attack and Spell DMG
++[110-130]% Attack and Spell DMG
++[250-325]% Gear Critical Rate
++[10-35] Equipped Weapon Range
+Grants Expanding Boundary effect upon equipping
+Upon Hit, +39 Equipped Weapon Range for 10 s (Max Stacks: 10)
+Increase Area of Effect by 15% of Weapon Range (Max: 120%)
+2% DMG Amplification per 30 Weapon Range (Max: 50%)
+(Does not stack with Watcher's Stick effect)"
+,Ultimate Resonance of All Colors,35,Necklace,Lv. 82,-,"+10% Stats
+-------------------------------------------------------
+-2 Max Energy
+10% Movement Speed Amplification
+[20-25]% Attack Speed Amplification
+[20-25]% Cast Speed Amplification
+10% DMG Amplification per 10 Energy possessed
+1 of the options below will be imbued.
+- +7 Fixed Max Earth Energy[Chance 20%]
+- +7 Fixed Max Fire Energy[Chance 20%]
+- +7 Fixed Max Cold Energy[Chance 20%]
+- +7 Fixed Max Lightning Energy[Chance 20%]
+- +7 Fixed Max Poison Energy[Chance 20%]
+1 of the options below will be imbued.
+- [8-11]% of DMG as Additional Physical DMG on every hit per Earth Energy[Chance 20%]
+- [8-11]% of DMG as Additional Fire DMG on every hit per Fire Energy[Chance 20%]
+- [8-11]% of DMG as Additional Cold DMG on every hit per Cold Energy[Chance 20%]
+- [8-11]% of DMG as Additional Lightning DMG on every hit per Lightning Energy[Chance 20%]
+- [8-11]% of DMG as Additional Poison DMG on every hit per Poison Energy[Chance 20%]"
+,Ultimate Legion Apothecary,35,Belt,Lv. 82,-,"20% Minion HP Amplification
+20% Sentry HP Amplification
+-------------------------------------------------------
+[25-35]% Minion DMG Amplification
+[25-35]% Sentry DMG Amplification
+[12-17]% HP Amplification
++[100-125]% Enhance Potion Cooldown Recovery Speed
++[200-250]% Enhance Potion Effect
+[45-55]% Enhance Potion Duration Dampening
+1 of the options below will be imbued.
+- High Elixir effects also apply to Minions[Chance 50%]
+- High Elixir effects also apply to Sentries[Chance 50%]"
+,Ultimate Master of Trajectory,35,Quiver,Lv. 82,Requires Dexterity 270,"+[91-111]-[191-234] Attack and Spell DMG
+-------------------------------------------------------
++[115-200]-[208-313] Attack and Spell DMG
++[35-55]% Attack and Spell DMG
++[4-6] Mana on every hit
++[7-10]% Maximization Chance
++[27-37]% Maximized DMG
+1 of the options below will be imbued.
+- [14.5-20.8]% DMG Amplification per Split Count upon using skill[Chance 25%]
+- [14-19.2]% DMG Amplification per Refraction Count upon using skill[Chance 25%]
+- [4-5.8]% DMG Amplification per Penetration Count upon using skill[Chance 25%]
+- [3-4.5]% DMG Amplification per Chain Count upon using skill[Chance 25%]"
+,Ultimate Casthor's Vision,34,2-handed Axe,Lv. 79,Requires Strength 213 Dexterity 92,"+[442-554]-[664-832] Attack DMG
++0.9 Speed
++14 Gear Critical Rate
++240 Equipped Weapon Range
+-------------------------------------------------------
++20% Attack DMG
+-------------------------------------------------------
++[524-609]-[596-702] Attack DMG
++[150-250]% Gear Critical Rate
++[80-100]% Attack DMG
++[26-30]% Speed
++[240-265] Equipped Weapon Range
++[135-180]% Critical DMG
++[75-110]% Maximized DMG"
+,Ultimate Numbing Armor,34,Armor,Lv. 79,Requires Strength 250,"+[1925-2090] Gear Armor
+-------------------------------------------------------
++[350-400]% Gear Armor
+[85-110]% HP Amplification
+[18-25]% DMG Taken Dampening
+Gain Invincibility for 3 s at 20% or less HP (Cooldown: 45 s)
+Immune to Wound
+Barrier Disabled
++[45-50]% Enhance Skill Rune Cooldown Recovery Speed"
+,Ultimate Stra's Boots,34,Shoes,Lv. 79,Requires Dexterity 223,"+[672-747] Gear Dodge Rate
+-------------------------------------------------------
++[446-457] Gear Dodge Rate
++[175-210]% Gear Dodge Rate
+[60-65]% Movement Speed Increase
+Immune to Movement Speed decrease
+Sharpness effect
+(Critical Rate +50%, Critical DMG +25%)
++[200-300]% Sharpness Effect
++[9-13.5]% Perfect Dodge for 3 s on Critical Hit
++[200-250]% Critical DMG for 3 s upon Perfect Dodge
+10% chance to gain [20-35]% DMG Amplification for 3 s on Critical Hit
++[200-250]% Critical DMG against Elites"
+,Ultimate Aquilla's Resonance,34,Wand,Lv. 79,Requires Intelligence 261,"+[468-585]-[702-880] Spell DMG
++1.2 Speed
++8 Gear Critical Rate
+-------------------------------------------------------
++60% Spell DMG
+-------------------------------------------------------
++[210-230]% Spell DMG
++[20-26]% Speed
++[250-310]% Gear Critical Rate
++[1-2]% Barrier Absorb on Spell Hit
++[120-190]% Critical DMG
+[30-45]% DMG Amplification if Dexterity and Intelligence are at 500 or above
++15% Maximized DMG for every 3000 Barrier (Max: 150%)"
+,Ultimate Hamal's Verdancy,34,Gloves,Lv. 79,Requires Strength 115 Dexterity 115,"+[217-243] Gear Armor
++[274-307] Gear Dodge Rate
+-------------------------------------------------------
++[9-10]% Maximized DMG
+-------------------------------------------------------
++[350-450]% Gear Armor
++[350-450]% Gear Dodge Rate
+[10-15]% Attack Speed Amplification
+[10-15]% Cast Speed Amplification
+[12-24]% chance to deal double Maximized DMG on hit
+[6-12]% chance to deal triple Maximized DMG on hit
++[60-90]% Maximized DMG
++[55-75] Element Resist
+[55-105]% DMG Amplification against Elites"
+,Ultimate Boreal's Heart,34,Shield,Lv. 79,Requires Intelligence 300,"+[308-539] Gear Barrier
++30 Gear Block Expertise
+-------------------------------------------------------
+Recover 1% of Max Barrier upon successful Block
+-------------------------------------------------------
++[900-1150] Gear Barrier
++[125-175]% Gear Barrier
+Apply additional 300% to Barrier on using HP potion
+Realization Effect
+( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )
++[150-225]% Realization Effect
+15% DMG Amplification per 20% of activated Barrier when Max Barrier is at 10000 or above (Max stacks: 5)
+4% DMG Dampening per 20% of activated Barrier when Max Barrier is at 10000 or above (Max stacks: 5)
++[1-5] Max Energy
++[5-35]% All Energy Effect"
+,Resolution of Four Paths,35,Sword,Lv. 82,Requires Strength 134 Dexterity 134,"+[298-372]-[447-558] Attack DMG
++1.3 Speed
++15 Gear Critical Rate
++215 Equipped Weapon Range
+-------------------------------------------------------
++[323-348]-[379-404] Attack DMG
++[130-170]% Attack DMG
++[180-250]% Gear Critical Rate
++[27-37]% Speed
++[35-65] Equipped Weapon Range
++[15-35] Area of Effect
+Additional Fire DMG equal to [15-25]% of DMG on every hit
+Additional Cold DMG equal to [15-25]% of DMG on every hit
+Additional Lightning DMG equal to [15-25]% of DMG on every hit
+Additional Poison DMG on DMG equal to [15-25]% of DMG on every hit"
+,Epaulet of Unity,35,Spaulders,Lv. 82,Requires Strength 105 Dexterity 105,"+[210-234] Gear Armor
++[299-333] Gear Dodge Rate
+-------------------------------------------------------
++[175-225] Gear Armor
++[115-140] Gear Dodge Rate
++[410-455]% Gear Armor
++[410-455]% Gear Dodge Rate
+[15-25]% Chaos DMG Taken Dampening
++4% Critical Chance per 1 Holy Set score
++15% Critical DMG per 1 Holy Set score
++10% Maximization Chance per every 4 Holy Set score
++50% Maximization DMG per every 4 Holy Set score
+Amplify DMG by 25% if 9 or more Divine Gear is equipped
+Dampen DMG taken by 20% if 9 or more Divine Gear is equipped"
+,Bulwark of Balance,35,Shield,Lv. 82,Requires Strength 120 Dexterity 120,"+[512-570] Gear Armor
++[692-768] Gear Dodge Rate
++65 Gear Block Expertise
+-------------------------------------------------------
++[44-50]% Block Recovery Speed
+-------------------------------------------------------
++[100-150]% Gear Armor
++[100-150]% Gear Dodge Rate
++[30-50] Weapon Range
++[30-50] Area of Effect
+[10-15]% DMG Taken Dampening
+[30-45]% Critical DMG Taken Dampening
++6% Perfect Dodge for {BuffDurationTime} s on hit (Max Stacks 10)
+Removes Perfect Dodge stacks gained through Bulwark of Balance upon Perfect Dodge and gains the following effects for 20 s
+Amplify DMG by 25%
+15% DMG Taken Dampening
++6% Block Chance for {BuffDurationTime} s on hit (Max Stacks 10)
+Removes Block Chance stacks gained through Bulwark of Balance upon successful Block and gains the following effects for 20 s
+Amplify DMG by 25%
+15% DMG Taken Dampening"
+,Ring of Amplified Power,35,Ring,Lv. 82,-,"+[50-70] Element Resist
+[1-25]% HP Amplification
+[1-15]% Attack Speed Amplification
+[1-15]% Cast Speed Amplification
+-[4500-3500] Hit Rate
+Gains Hit Amplification for 15 s on miss
++4500 Hit Rate
++175% DMG
+Gains Chance Amplification for 15 s on hit
++15% Critical Chance
++15% Maximization Chance
+Gains DMG Amplification for 15 s on Critical or Maximized hit
++55% Critical DMG
++55% Maximized DMG
+Gains Amplified Power for 10 s when using a skill after gaining all effects
+All effect durations reset and values increase by 100%. All effects are removed when Amplified Power ends"
+,Ultimate Resolution of Four Paths,35,Sword,Lv. 82,Requires Strength 134 Dexterity 134,"+[372-465]-[558-698] Attack DMG
++1.3 Speed
++15 Gear Critical Rate
++215 Equipped Weapon Range
+-------------------------------------------------------
++[348-435]-[404-505] Attack DMG
++[170-210]% Attack DMG
++[250-320]% Gear Critical Rate
++[37-46]% Speed
++[65-100] Equipped Weapon Range
++[35-55] Area of Effect
+Additional Fire DMG equal to [25-35]% of DMG on every hit
+Additional Cold DMG equal to [25-35]% of DMG on every hit
+Additional Lightning DMG equal to [25-35]% of DMG on every hit
+Additional Poison DMG on DMG equal to [25-35]% of DMG on every hit"
+,Ultimate Epaulet of Unity,35,Spaulders,Lv. 82,Requires Strength 105 Dexterity 105,"+[234-292] Gear Armor
++[333-416] Gear Dodge Rate
+-------------------------------------------------------
++[225-275] Gear Armor
++[140-190] Gear Dodge Rate
++[455-500]% Gear Armor
++[455-500]% Gear Dodge Rate
+[25-35]% Chaos DMG Taken Dampening
++7% Critical Chance per 1 Holy Set score
++25% Critical DMG per 1 Holy Set score
++20% Maximization Chance per every 4 Holy Set score
++100% Maximization DMG per every 4 Holy Set score
+Amplify DMG by 35% if 9 or more Divine Gear is equipped
+Dampen DMG taken by 30% if 9 or more Divine Gear is equipped"
+,Ultimate Bulwark of Balance,35,Shield,Lv. 82,Requires Strength 120 Dexterity 120,"+[570-712] Gear Armor
++[768-960] Gear Dodge Rate
++65 Gear Block Expertise
+-------------------------------------------------------
++[44-50]% Block Recovery Speed
+-------------------------------------------------------
++[150-200]% Gear Armor
++[150-200]% Gear Dodge Rate
++[50-65] Weapon Range
++[50-65] Area of Effect
+[15-20]% DMG Taken Dampening
+[45-60]% Critical DMG Taken Dampening
++9% Perfect Dodge for {BuffDurationTime} s on hit (Max Stacks 10)
+Removes Perfect Dodge stacks gained through Bulwark of Balance upon Perfect Dodge and gains the following effects for 20 s
+Amplify DMG by 35%
+25% DMG Taken Dampening
++9% Block Chance for {BuffDurationTime} s on hit (Max Stacks 10)
+Removes Block Chance stacks gained through Bulwark of Balance upon successful Block and gains the following effects for 20 s
+Amplify DMG by 35%
+25% DMG Taken Dampening"
+,Ultimate Ring of Amplified Power,35,Ring,Lv. 82,-,"+[70-90] Element Resist
+[15-30]% HP Amplification
+[15-30]% Attack Speed Amplification
+[15-30]% Cast Speed Amplification
+-[4500-3500] Hit Rate
+Gains Hit Amplification for 15 s on miss
++5500 Hit Rate
++350% DMG
+Gains Chance Amplification for 15 s on hit
++25% Critical Chance
++25% Maximization Chance
+Gains DMG Amplification for 15 s on Critical or Maximized hit
++110% Critical DMG
++110% Maximized DMG
+Gains Amplified Power for 10 s when using a skill after gaining all effects
+All effect durations reset and values increase by 100%. All effects are removed when Amplified Power ends"

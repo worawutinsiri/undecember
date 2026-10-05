@@ -1,0 +1,37 @@
+.rune-icon {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  --c: var(--text-faint);
+}
+.rune-icon.c-red {
+  --c: var(--link-red);
+}
+.rune-icon.c-green {
+  --c: var(--link-green);
+}
+.rune-icon.c-blue {
+  --c: var(--link-blue);
+}
+
+.rune-icon svg {
+  position: absolute;
+  inset: 0;
+}
+.rune-icon path {
+  fill: color-mix(in srgb, var(--c) 22%, var(--bg-sunken));
+  stroke: var(--c);
+  stroke-width: 2.5;
+}
+.rune-icon.link path {
+  stroke-width: 2;
+}
+
+.rune-initials {
+  position: relative;
+  font-weight: 700;
+  color: var(--text-strong);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}

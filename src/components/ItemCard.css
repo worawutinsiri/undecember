@@ -1,0 +1,54 @@
+.item-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--r-unique);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem 1rem;
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
+}
+.item-card.transcendent {
+  border-top-color: var(--r-legendary);
+  background: linear-gradient(170deg, color-mix(in srgb, var(--r-legendary) 7%, var(--bg-raised)), var(--bg-raised) 40%);
+}
+.item-card h3 {
+  color: var(--r-unique);
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+.item-card.transcendent h3 {
+  color: var(--r-legendary);
+}
+
+.item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.chip.season.new {
+  color: var(--ok);
+  border-color: color-mix(in srgb, var(--ok) 40%, var(--border));
+}
+.chip.season.changed {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 40%, var(--border));
+}
+.item-req {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+}
+
+.item-card .stat-lines + .stat-lines {
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}
+.item-card .implicit {
+  color: var(--text-strong);
+}
+.item-card .innate {
+  color: var(--r-magic);
+}
+.item-card .options {
+  color: var(--text);
+}
