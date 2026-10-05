@@ -3,7 +3,7 @@ import { UNIQUE_BY_ID } from '../../data'
 import { GEAR_SLOTS, type GearSlotDef } from '../../lib/buildState'
 import type { SlotId } from '../../lib/damage'
 import { accepts, dropId, type DragPayload, type DropTarget } from './dnd'
-import type { Selection } from './RuneBoard'
+import type { Selection } from './boardOps'
 
 function Slot({ def, itemId, selected, onSelect }: { def: GearSlotDef; itemId?: string; selected: boolean; onSelect: () => void }) {
   const target: DropTarget = { type: 'gear', slot: def.id }

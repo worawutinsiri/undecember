@@ -29,6 +29,8 @@ export interface RuneSetup {
   level: number
   grade: RuneGrade
   awakening: Partial<Record<AwakeningTier, boolean>>
+  /** Link runes only: why the board won't let it link (closed slot, wrong colour…). */
+  blocked?: string
 }
 
 export interface SimInput {
@@ -183,7 +185,7 @@ export function simulate(input: SimInput): SimResult {
   const skillTags = skill ? skill.rune.tags : []
   input.links.forEach((l) => {
     if (!l) return
-    const check = checkLink(l.rune.linkRules, skillTags)
+    const check = l.blocked ? { ok: false, reason: l.blocked } : checkLink(l.rune.linkRules, skillTags)
     const source = `รูนลิงก์ ${l.rune.name}`
     if (skill && !check.ok) warnings.push(`${l.rune.name}: ${check.reason}`)
     take(source, runeLines(l), 'link', !skill || check.ok)
