@@ -19,6 +19,13 @@ npm run build      # static build ใน dist/ (deploy ที่ไหนก็�
 
 ใช้ hash routing (`/#/runes`) และ `base: './'` จึงเปิดจากโฟลเดอร์ย่อยหรือ static hosting ได้เลย
 
+### GitHub Pages
+
+`.github/workflows/deploy.yml` จะ test → build → deploy อัตโนมัติทุกครั้งที่ push ขึ้น `main`
+ตั้งค่าครั้งแรกครั้งเดียว: repo **Settings → Pages → Source: GitHub Actions**
+เว็บจะอยู่ที่ https://worawutinsiri.github.io/undecember/
+(repo private ต้องใช้แพ็กเกจ GitHub Pro ขึ้นไปจึงจะเปิด Pages ได้ และเว็บที่ได้จะเปิดให้ทุกคนดู)
+
 ## โครงสร้าง
 
 ```
