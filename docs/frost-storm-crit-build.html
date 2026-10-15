@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frost Storm สายคริ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Taviraj:wght@500;700&display=swap">
+<style>
+/* Layout: build sheet in one reading column; rune board diagram beside its table on wide screens; tokens shared with Undecember DB */
+:root {
+  --bg: #0f0d14;
+  --raised: #17141f;
+  --sunken: #0b0a10;
+  --line: #2e2840;
+  --line-strong: #463d5e;
+  --text: #d9d4e4;
+  --dim: #a39bb6;
+  --faint: #756e8a;
+  --strong: #f6f2ff;
+  --accent: #d4a64a;
+  --accent-strong: #f0c46a;
+  --accent-bg: rgba(212, 166, 74, 0.12);
+  --cold: #5cc8ff;
+  --cold-bg: rgba(92, 200, 255, 0.1);
+  --warn: #f0b84a;
+  --warn-bg: rgba(240, 184, 74, 0.09);
+  --up: #4cc27a;
+  --rune-red: #e0533f;
+  --rune-green: #4cc27a;
+  --rune-blue: #4f8df0;
+  --display: 'Taviraj', 'IBM Plex Sans Thai', Georgia, serif;
+  --sans: 'IBM Plex Sans Thai', system-ui, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+    --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+    --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+    --cold: #1f8fc7; --cold-bg: rgba(31, 143, 199, 0.09);
+    --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c;
+    --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+  --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+  --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+  --cold: #1f8fc7; --cold-bg: rgba(31, 143, 199, 0.09);
+  --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c;
+  --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15.5px/1.7 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-strong); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 72px;
+  display: grid;
+  gap: 50px;
+}
+@media (max-width: 520px) { .page { padding-inline: 16px; padding-block: 28px 56px; gap: 42px; } }
+
+h1, h2, h3 { color: var(--strong); text-wrap: balance; margin: 0; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.15; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1.3; }
+h3 { font-size: 1rem; font-weight: 600; line-height: 1.4; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow {
+  font: 600 0.72rem/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.dim { color: var(--dim); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+header { display: grid; gap: 14px; }
+.lede { font-size: 1.06rem; color: var(--dim); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--faint); }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px; }
+nav.toc a {
+  font-size: 0.82rem;
+  color: var(--dim);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+nav.toc a:hover { color: var(--strong); border-color: var(--line-strong); }
+.caveat {
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+  background: var(--warn-bg);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  display: grid;
+  gap: 4px;
+}
+.caveat strong { color: var(--warn); font-weight: 600; }
+
+section { display: grid; gap: 18px; scroll-margin-top: 16px; }
+.sec-head { display: grid; gap: 6px; padding-top: 18px; border-top: 1px solid var(--line); }
+
+/* thesis */
+.thesis {
+  border-left: 3px solid var(--cold);
+  background: var(--cold-bg);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 18px;
+  display: grid;
+  gap: 6px;
+}
+.thesis b { color: var(--strong); font-size: 1.08rem; font-weight: 600; }
+.thesis span { color: var(--dim); font-size: 0.92rem; }
+
+/* dps bars */
+.bars { display: grid; gap: 14px; background: var(--raised); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+.bar-row { display: grid; gap: 6px; }
+.bar-label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; font-size: 0.88rem; }
+.bar-label span:first-child { color: var(--text); }
+.bar-label .mono { color: var(--faint); font-size: 0.8rem; }
+.bar-track { height: 26px; background: var(--sunken); border-radius: 5px; position: relative; overflow: hidden; }
+.bar-fill {
+  position: absolute; inset: 0 auto 0 0;
+  width: calc(var(--v) / 9.49 * 100%);
+  background: color-mix(in srgb, var(--cold) 55%, var(--raised));
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: flex-end;
+  padding-right: 8px;
+}
+.bar-row.best .bar-fill { background: var(--cold); }
+.bar-fill b { font: 600 0.8rem/1 var(--mono); color: var(--strong); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bar-row.best .bar-fill b { color: var(--bg); }
+.caption { font-size: 0.8rem; color: var(--faint); }
+
+/* rune board */
+.board-wrap { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 20px; align-items: center; }
+@media (max-width: 760px) { .board-wrap { grid-template-columns: 1fr; } .board-wrap svg { max-width: 340px; margin: 0 auto; } }
+.board-wrap svg { width: 100%; height: auto; display: block; }
+.hx { stroke-width: 2; }
+.hx-red { fill: color-mix(in srgb, var(--rune-red) 16%, var(--raised)); stroke: var(--rune-red); }
+.hx-green { fill: color-mix(in srgb, var(--rune-green) 16%, var(--raised)); stroke: var(--rune-green); }
+.hx-blue { fill: color-mix(in srgb, var(--rune-blue) 16%, var(--raised)); stroke: var(--rune-blue); }
+.hx-skill { fill: color-mix(in srgb, var(--cold) 22%, var(--raised)); stroke: var(--cold); stroke-width: 3; }
+.hx-text { fill: var(--strong); font: 600 10.5px/1 var(--sans); text-anchor: middle; }
+.hx-sub { fill: var(--dim); font: 9.5px/1 var(--mono); text-anchor: middle; }
+.hx-skill-text { fill: var(--strong); font: 700 13px/1 var(--sans); text-anchor: middle; }
+.link-line { stroke: var(--accent); stroke-width: 2; opacity: 0.8; }
+.hx-shared { stroke: var(--accent); stroke-width: 3; stroke-dasharray: 6 3; }
+.hx-sm { font-size: 9px; }
+.slot-col, .board-wrap.dual td:first-child { white-space: nowrap; width: 1%; }
+.hx-skill-sm { font-size: 11px; }
+.hx-share { fill: var(--accent-strong); font: 600 9px/1 var(--sans); text-anchor: middle; }
+.board-wrap.dual { grid-template-columns: minmax(0, 380px) minmax(0, 1fr); }
+@media (max-width: 760px) { .board-wrap.dual { grid-template-columns: 1fr; } .board-wrap.dual svg { max-width: 380px; } }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+th, td { text-align: left; padding: 9px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th {
+  font: 600 0.7rem/1.3 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  background: var(--sunken);
+  white-space: nowrap;
+}
+td:first-child { color: var(--strong); font-weight: 500; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td small { display: block; color: var(--faint); font-size: 0.8rem; font-weight: 400; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; vertical-align: 0; }
+.dot.red { background: var(--rune-red); }
+.dot.green { background: var(--rune-green); }
+.dot.blue { background: var(--rune-blue); }
+.pill {
+  display: inline-block;
+  font: 600 0.66rem/1.5 var(--mono);
+  padding: 0 6px;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+  vertical-align: 1px;
+}
+.pill.top { color: var(--up); }
+.pill.cond { color: var(--warn); }
+.pill.shadow { color: var(--cold); }
+
+.gear-opt { display: grid; gap: 12px; padding-top: 8px; scroll-margin-top: 16px; }
+.gear-opt h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.swaps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+@media (max-width: 560px) { .swaps { grid-template-columns: 1fr; } }
+.swap { border-left: 2px solid var(--line-strong); padding: 2px 0 2px 14px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.swap p { font-size: 0.88rem; color: var(--dim); }
+
+/* crit math */
+.formula {
+  font: 600 1rem/1.5 var(--mono);
+  color: var(--strong);
+  background: var(--sunken);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.need { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 520px) { .need { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.need div { background: var(--raised); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; display: grid; gap: 2px; }
+.need span { font-size: 0.78rem; color: var(--faint); }
+.need b { font: 600 1.3rem/1.2 var(--mono); color: var(--accent-strong); font-variant-numeric: tabular-nums; }
+
+ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
+ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: baseline; }
+ol.steps > li::before { content: counter(s); font: 600 0.8rem/1 var(--mono); color: var(--accent); text-align: right; }
+ol.steps > li > div { min-width: 0; }
+ul.notes { margin: 0; padding-left: 1.1rem; display: grid; gap: 4px; color: var(--dim); font-size: 0.9rem; }
+
+ul.sources { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.88rem; }
+ul.sources li { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
+ul.sources li span { font: 0.74rem var(--mono); color: var(--faint); white-space: nowrap; }
+@media (max-width: 520px) { ul.sources li { grid-template-columns: 1fr; gap: 2px; } }
+
+footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="eyebrow">Undecember · S12 The Farside · Build</span>
+  <h1>Frost Storm สายคริ</h1>
+  <p class="lede">บิลด์ธนูธาตุน้ำแข็งที่ได้บัฟหนักที่สุดใน S12 เน้นทำค่าคริเวทให้ถึง 100% จากไอเทมและสกิลเสริม แล้วใช้ช่องรูนลิงก์เพิ่มดาเมจ</p>
+  <div class="meta">
+    <span>อัปเดต 14 ต.ค. 2026</span>
+    <span>ทดสอบด้วยตัวจำลองดาเมจ Undecember DB</span>
+    <span>18,564 ชุดรูนลิงก์</span>
+  </div>
+  <nav class="toc" aria-label="สารบัญ">
+    <a href="#core">หัวใจของบิลด์</a>
+    <a href="#links">รูนลิงก์</a>
+    <a href="#crit">ค่าคริเวท</a>
+    <a href="#gear">ไอเทม</a>
+    <a href="#shoes">รองเท้า</a>
+    <a href="#armor">ชุดเกราะ</a>
+    <a href="#ica">คู่ Ice Crystal Arrow</a>
+    <a href="#order">ลำดับการอัป</a>
+    <a href="#limits">ข้อจำกัด</a>
+  </nav>
+  <div class="caveat">
+    <strong>ตัวเลขมาจากการจำลอง ไม่ใช่ค่าที่วัดในเกม</strong>
+    <span>ใช้ไอเทมชุดตัวอย่าง รูนเลเวล 45 เกรด Legendary มอนเลเวล 150 ค่าต้านธาตุ 40% ตัวจำลองยังไม่นับ Zodiac ไลน์ที่เป็นสแตก และผลพิเศษของ Vertical Chill จึงใช้ดูสัดส่วนว่าอะไรคุ้ม มากกว่าดู DPS จริง</span>
+  </div>
+</header>
+
+<section id="core">
+  <div class="sec-head">
+    <span class="eyebrow">Core idea</span>
+    <h2>หัวใจของบิลด์</h2>
+  </div>
+  <div class="thesis">
+    <b>ทำค่าคริเวทให้ถึง 100% ก่อน แล้วอย่าใช้ช่องรูนลิงก์หาคริเกิน 1 ช่อง</b>
+    <span>รูนลิงก์ชุดเดียวกัน ไอเทมชุดเดียวกัน เปลี่ยนแค่แหล่งค่าคริเวท DPS ขึ้นประมาณ 3 เท่า พอคริเต็มแล้ว รูนคริดาเมจอย่าง Slaughter ได้ DPS พอ ๆ กับรูนดาเมจทั่วไปเท่านั้น</span>
+  </div>
+  <div class="bars" role="img" aria-label="DPS 3.13 ล้านเมื่อคริ 18 เปอร์เซ็นต์, 7.03 ล้านเมื่อคริ 68 เปอร์เซ็นต์, 9.49 ล้านเมื่อคริ 100 เปอร์เซ็นต์">
+    <div class="bar-row">
+      <div class="bar-label"><span>ไอเทม + รูนลิงก์อย่างเดียว</span><span class="mono">คริเวท 111 · โอกาสคริ 18%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="--v:3.13"><b>3.13 ล้าน</b></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><span>+ Seal of Critical Chance + คริ 40 จาก Zodiac/ของคราฟ</span><span class="mono">คริเวท 443 · โอกาสคริ 68%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="--v:7.03"><b>7.03 ล้าน</b></div></div>
+    </div>
+    <div class="bar-row best">
+      <div class="bar-label"><span>+ Seal + คริ 80 จาก Zodiac/ของคราฟ</span><span class="mono">คริเวท 705 · โอกาสคริ 100%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="--v:9.49"><b>9.49 ล้าน</b></div></div>
+    </div>
+  </div>
+  <p class="caption">DPS ของชุดรูนลิงก์แนะนำ (Find Weakness, Shadow Archer, Attack DMG Increase, Element DMG Amplification, Concentrated Area DMG, Mana Storm) เปิดเงื่อนไขทุกไลน์ ยังไม่นับการโจมตีของธนูเงาที่ Shadow Archer เรียกออกมา DPS จริงจึงสูงกว่านี้</p>
+</section>
+
+<section id="links">
+  <div class="sec-head">
+    <span class="eyebrow">Rune board</span>
+    <h2>รูนลิงก์ 6 ช่อง</h2>
+  </div>
+  <div class="board-wrap">
+    <svg viewBox="-170 -160 340 320" aria-label="แผนผังรูน Frost Storm อยู่ตรงกลาง ล้อมด้วยรูนลิงก์ 6 ตัว">
+      <defs>
+        <polygon id="hex" points="50.2,-29 50.2,29 0,58 -50.2,29 -50.2,-29 0,-58"/>
+      </defs>
+      <!-- link lines -->
+      <line class="link-line" x1="0" y1="0" x2="80" y2="0"/>
+      <line class="link-line" x1="0" y1="0" x2="40" y2="69"/>
+      <line class="link-line" x1="0" y1="0" x2="-40" y2="69"/>
+      <line class="link-line" x1="0" y1="0" x2="-80" y2="0"/>
+      <line class="link-line" x1="0" y1="0" x2="-40" y2="-69"/>
+      <line class="link-line" x1="0" y1="0" x2="40" y2="-69"/>
+      <!-- NE: Find Weakness -->
+      <use href="#hex" class="hx hx-green" x="53.7" y="-93"/>
+      <text class="hx-text" x="53.7" y="-97">Find</text>
+      <text class="hx-text" x="53.7" y="-84">Weakness</text>
+      <!-- E: Attack DMG Increase -->
+      <use href="#hex" class="hx hx-red" x="107.4" y="0"/>
+      <text class="hx-text" x="107.4" y="-4">Attack DMG</text>
+      <text class="hx-text" x="107.4" y="9">Increase</text>
+      <!-- SE: Concentrated Area DMG -->
+      <use href="#hex" class="hx hx-red" x="53.7" y="93"/>
+      <text class="hx-text" x="53.7" y="89">Concentrated</text>
+      <text class="hx-text" x="53.7" y="102">Area DMG</text>
+      <!-- SW: Mana Storm -->
+      <use href="#hex" class="hx hx-blue" x="-53.7" y="93"/>
+      <text class="hx-text" x="-53.7" y="89">Mana</text>
+      <text class="hx-text" x="-53.7" y="102">Storm</text>
+      <!-- W: Element DMG Amplification -->
+      <use href="#hex" class="hx hx-blue" x="-107.4" y="0"/>
+      <text class="hx-text" x="-107.4" y="-4">Element DMG</text>
+      <text class="hx-text" x="-107.4" y="9">Amp.</text>
+      <!-- NW: Shadow Archer -->
+      <use href="#hex" class="hx hx-green" x="-53.7" y="-93"/>
+      <text class="hx-text" x="-53.7" y="-97">Shadow</text>
+      <text class="hx-text" x="-53.7" y="-84">Archer</text>
+      <!-- center -->
+      <use href="#hex" class="hx hx-skill" x="0" y="0"/>
+      <text class="hx-skill-text" x="0" y="-2">Frost</text>
+      <text class="hx-skill-text" x="0" y="13">Storm</text>
+    </svg>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+        <tbody>
+          <tr><td><span class="dot red"></span>Attack DMG Increase <span class="pill top">ผลสูงสุด</span></td><td>ดาเมจ +249% เมื่อใช้ Attack อยู่อันดับ 1 เกือบทุกการจำลอง</td></tr>
+          <tr><td><span class="dot green"></span>Find Weakness</td><td>อัตราคริเวท +178.5% รูนคริตัวเดียวที่ควรใส่</td></tr>
+          <tr><td><span class="dot green"></span>Shadow Archer <span class="pill shadow">Shadow</span></td><td>เรียกธนูเงา 1 ตัวทุกครั้งที่ใช้สกิล และดาเมจโปรเจกไทล์ +31.2% เกรด Legendary ได้ขยายดาเมจโปรเจกไทล์ 15% และเจาะดาเมจ +30% ลิงก์ได้เพราะ Frost Storm มีแท็ก Shadow แต่ใช้มานาเพิ่ม 50%</td></tr>
+          <tr><td><span class="dot red"></span>Concentrated Area DMG</td><td>ขยายดาเมจ 29.8% แต่พื้นที่ระเบิดเล็กลง 30% เหมาะตีบอส</td></tr>
+          <tr><td><span class="dot blue"></span>Mana Storm</td><td>ขยายดาเมจ Strike 24.2% เป็นรูนเกรด Rare</td></tr>
+          <tr><td><span class="dot blue"></span>Element DMG Amplification</td><td>ขยายดาเมจธาตุ 19.3% ใช้ Additional Cold DMG แทนได้ ผลแทบเท่ากัน</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ul class="notes">
+    <li>ตำแหน่งในแผนผังเป็นตัวอย่าง สีของรูนลิงก์ต้องตรงกับสีช่องบน Frost Storm ของคุณ ช่องสีขาวใส่สีไหนก็ได้และได้เลเวลรูน +1</li>
+    <li>ปลุก (Awaken) Shadow Archer ได้ 3 ระดับ: Source มีโอกาส 10% เรียกธนูเงาคู่และความเร็วโจมตี +20–35%, Origin ได้คริดาเมจ Attack +45–60% และดาเมจโปรเจกไทล์ +45–60%, Verity ขยายดาเมจ 7.5–15% และลูกธนู +2 สำหรับสายคริ Origin คุ้มที่สุด</li>
+    <li>ลองจัดวางบนกระดานจริงได้ในหน้าจำลองดาเมจของเว็บ Undecember DB</li>
+  </ul>
+
+  <h3>ตัวเลือกสลับ</h3>
+  <div class="swaps">
+    <div class="swap">
+      <h3>ตอนเคลียร์ม็อบ</h3>
+      <p>เปลี่ยน Concentrated Area DMG เป็น Multishot (ลูกธนู +2) หรือ Area Effect (พื้นที่ +70.7%, ดาเมจ +64.4%)</p>
+    </div>
+    <div class="swap">
+      <h3>เมื่อคริเกิน 85%</h3>
+      <p>Sharpness (คริเวท +104%, คริดาเมจ +46.8% และบัฟเมื่อคริ) ให้ DPS พอ ๆ กับหรือสูงกว่า Find Weakness เล็กน้อย</p>
+    </div>
+    <div class="swap">
+      <h3>ถ้ายืนยิงไกลได้ตลอด</h3>
+      <p>Precise Shot (ดาเมจ +177.3% เมื่อศัตรูห่าง 600 ขึ้นไป) ได้ 10.24 ล้านในตัวจำลอง เทียบกับ Shadow Archer 9.49 ล้าน แต่ตัวเลข Shadow Archer ยังไม่นับธนูเงา และ Precise Shot ใช้ไม่ได้เมื่อศัตรูเข้าใกล้</p>
+    </div>
+    <div class="swap">
+      <h3>เมื่อยังไม่มี Mana Storm</h3>
+      <p>Additional Cold DMG หรือ Element Master เป็นตัวสำรองที่ได้ DPS ใกล้เคียง</p>
+    </div>
+  </div>
+</section>
+
+<section id="crit">
+  <div class="sec-head">
+    <span class="eyebrow">Critical Rate</span>
+    <h2>ค่าคริเวทที่ต้องการ</h2>
+  </div>
+  <p class="dim">โอกาสคริขึ้นกับเลเวลมอน ยิ่งมอนเลเวลสูง ยิ่งต้องใช้ค่าคริเวทมาก</p>
+  <div class="formula">คริเวทที่ต้องใช้ ≈ 100 × (1 + 0.04 × เลเวลมอน)</div>
+  <div class="need">
+    <div><span>มอน Lv100</span><b>500</b></div>
+    <div><span>มอน Lv150</span><b>700</b></div>
+    <div><span>มอน Lv160</span><b>740</b></div>
+    <div><span>มอน Lv170</span><b>780</b></div>
+  </div>
+  <div class="formula">คริเวท = (คริของอาวุธ × (1 + %คริอุปกรณ์) + คริแบบตัวเลข) × (1 + %คริเวทรวม)</div>
+  <ul class="notes">
+    <li><b>คริแบบตัวเลข (flat) สำคัญที่สุด</b> เพราะ % ทุกตัวคูณกับฐานนี้ ธนูมีคริฐานแค่ประมาณ 9–11</li>
+    <li>แหล่ง % หลัก: Seal of Critical Chance +252.4%, Find Weakness +178.5% และไอเทมแต่ละชิ้นอีก 40–70%</li>
+    <li>โอกาสคริแบบ % ตรง (เช่น +3% จาก Seal, +25% จาก Ultimate Ring of Amplified Power) บวกเข้าโอกาสคริโดยตรง ช่วยลดค่าคริเวทที่ต้องใช้</li>
+    <li>คริฐาน 50% บวกค่าคริดาเมจ เช่น คริดาเมจ 450% คือคริแล้วตีแรงประมาณ 6 เท่า</li>
+  </ul>
+</section>
+
+<section id="gear">
+  <div class="sec-head">
+    <span class="eyebrow">Gear</span>
+    <h2>สกิลเสริมและไอเทม</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>ช่อง</th><th>ไอเทม / สกิล</th><th>ค่าคริ</th></tr></thead>
+      <tbody>
+        <tr><td>สกิลเสริม<small>ต้องมี</small></td><td>Seal of Critical Chance<small>เปิดค้างไว้ (Toggle)</small></td><td>คริเวท +252.4%, โอกาสคริ +3%</td></tr>
+        <tr><td>อาวุธ</td><td>Transcendent Tipan's Long Bow<small>ช่วงเก็บเลเวล: Star Usurper's Bow (ใส่ได้ตั้งแต่ Lv1)</small></td><td>คริอุปกรณ์ +9, %คริอุปกรณ์ +46–57%, คริดาเมจ +52–61%</td></tr>
+        <tr><td>ซองธนู</td><td>Transcendent Vertical Chill<small>ยูนีคเฉพาะ Frost Storm ถ้ายังไม่มีใช้ Transcendent Miraseti's Wave</small></td><td>ไม่มีค่าคริ แต่ขยายดาเมจ Frost Storm (Miraseti's: คริ Attack +40–70%)</td></tr>
+        <tr><td>ถุงมือ</td><td>Transcendent Spica's Light</td><td>คริเวท +40–50%, คริดาเมจ +100–125%</td></tr>
+        <tr><td>สร้อย</td><td>Transcendent Hira's Charm<small>หรือ Surging Knowledge / Star Usurper's Necklace</small></td><td>คริดาเมจ +29–34% และ +80–100%</td></tr>
+        <tr><td>แหวน 1</td><td>Transcendent Leo's Flow</td><td>คริเวท +44–53%, คริดาเมจ +25–28%</td></tr>
+        <tr><td>แหวน 2</td><td>Ultimate Ring of Amplified Power<small>หรือ Ultimate Approaching Omen</small></td><td>โอกาสคริ +25%, คริดาเมจ +110% และบัฟขยายดาเมจ</td></tr>
+        <tr><td>สกิลเสริม<small>ทางเลือก</small></td><td>Marksman</td><td>ขยายดาเมจโปรเจกไทล์ 58.3% นาน 3 วินาที คูลดาวน์ 30 วินาที</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>Vertical Chill ไม่สร้างพื้นที่เย็น แต่เปลี่ยนค่าระยะเวลาพื้นที่เย็นทั้งหมดเป็นขยายดาเมจ Frost Storm ใน S12 ดาเมจหลักย้ายไปอยู่ที่ระเบิด 900% ส่วนพื้นที่เย็นเหลือแค่ 76% ต่อครั้ง การตัดพื้นที่เย็นทิ้งจึงเสียไม่มาก (ข้อนี้เป็นการอนุมาน ยังไม่ได้ทดสอบในเกม)</li>
+    <li>ช่องที่เหลือ (หมวก บ่า เข็มขัด) ใช้ของคราฟที่มีออปชันคริแบบตัวเลขหรือค่าป้องกัน ดูวิธีคราฟได้ใน <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></li>
+  </ul>
+
+  <div class="gear-opt" id="shoes">
+    <h3>รองเท้า <span class="pill cond">ตัวเลือก ลองเทียบในเกม</span></h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>รองเท้า</th><th>DPS จำลอง</th><th>สถานะ</th><th>จุดเด่น</th></tr></thead>
+        <tbody>
+          <tr><td>Ultimate Silver Shadow's Footprints<small>ของใหม่ S12</small></td><td class="num">18.1 ล้าน</td><td class="num">Str 228</td><td>คริเวท +86–110%, คริดาเมจ +46–105%, ขยายดาเมจ 17–32% และตีโดนได้สแตกความเร็วโจมตี 3% สูงสุด 10 สแตก</td></tr>
+          <tr><td>Silver Shadow's Footprints</td><td class="num">15.5 ล้าน</td><td class="num">Str 228</td><td>ออปชันเหมือนกันแต่ค่าน้อยกว่า</td></tr>
+          <tr><td>Ultimate Stra's Boots</td><td class="num">11.0 ล้าน<small>สู้ Elite 18.9 ล้าน</small></td><td class="num">Dex 223</td><td>ขยายเอฟเฟกต์ Sharpness +200–300%, คริดาเมจ +200–250% เมื่อสู้ Elite, ค่าหลบสูงและวิ่งเร็ว ใช้ Dex ตรงสายธนู</td></tr>
+          <tr><td>Transcendent Spica's Sagacity</td><td class="num">10.0 ล้าน</td><td class="num">Dex 270</td><td>ดาเมจโปรเจกไทล์ +40–75%, Dex +30 แต่บัฟ 15% ต้องใช้ Instant Acceleration ซึ่งเป็นสกิลสาย Bowgun</td></tr>
+          <tr><td>ไม่ใส่รองเท้ายูนีค</td><td class="num">9.5 ล้าน</td><td class="num">–</td><td>ใช้เป็นเส้นฐานเทียบ</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>Silver Shadow's แรงสุดเพราะได้คริเวท คริดาเมจ ขยายดาเมจ และความเร็วโจมตีจากชิ้นเดียว แต่ต้องลงสเตตัส Str 228 ทั้งที่บิลด์ธนูเน้น Dex</li>
+      <li>ถ้าลง Str ไม่ไหว Ultimate Stra's Boots เป็นตัวเลือกที่ใช้ Dex และแรงขึ้นมากเมื่อสู้ Elite</li>
+      <li>ตัวเลขจำลองที่ Find Weakness, คริ 100%, มอน Lv150 ผมเติมค่าที่ตัวจำลองยังไม่นับเอง: สแตกความเร็วนับเต็ม 10 สแตก (+30%) และเอฟเฟกต์ Sharpness (คริเวท +50%, คริดาเมจ +25%) ขยายตามที่รองเท้าระบุ ส่วนคอลัมน์ "สู้ Elite" นับไลน์ Perfect Dodge ว่าเกิดตลอดด้วย จึงเป็นกรณีดีที่สุด</li>
+    </ul>
+  </div>
+
+  <div class="gear-opt" id="armor">
+    <h3>ชุดเกราะ <span class="pill cond">ตัวเลือก ลองเทียบในเกม</span></h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ชุดเกราะ</th><th>สถานะ</th><th>จุดเด่น</th><th>ข้อเสีย</th></tr></thead>
+        <tbody>
+          <tr><td>Ultimate Numbing Armor<small>เน้นอึด</small></td><td class="num">Str 250</td><td>HP +85–110%, รับดาเมจลด 18–25%, อมตะ 3 วินาทีเมื่อ HP ต่ำกว่า 20% (คูลดาวน์ 45 วินาที), คูลดาวน์สกิล Enhance เร็วขึ้น 45–50% ช่วยให้ Marksman กลับมาไวขึ้น</td><td>ใช้ Barrier ไม่ได้</td></tr>
+          <tr><td>Transcendent Aquilla's Eternity</td><td class="num">Str 250</td><td>HP และ Barrier +20–30%, ค่าใช้ทรัพยากร −5 และเสริมสกิล Veil of Protection</td><td>คุ้มเมื่อใช้ Veil of Protection</td></tr>
+          <tr><td>Transcendent Twilight Veil<small>ตัวเดียวที่เพิ่มดาเมจ</small></td><td class="num">Int 247</td><td>ขยายดาเมจน้ำแข็ง 5% ต่อค่าต้านน้ำแข็ง 40 (สูงสุด 30%) เมื่อใช้สกิล Cold Armor และเพิ่ม Barrier มาก</td><td>ต้องเปิด Cold Armor มีค่าต้านน้ำแข็งประมาณ 240 และใช้ Int ซึ่งไม่ตรงสาย</td></tr>
+          <tr><td>Star Usurper's Armor<small>ช่วงเก็บเลเวล</small></td><td class="num">Str 7</td><td>ใส่ได้ตั้งแต่ Lv1, ค่าต้านธาตุและ Chaos +50, รับดาเมจลด 10%, เกราะและหลบโตตามเลเวล</td><td>ค่าตันเมื่อถึงเลเวลสูง</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>ไม่มีชุดเกราะยูนีคตัวไหนเพิ่มดาเมจ Frost Storm ได้คุ้ม ช่องนี้จึงเน้นความอึดเป็นหลัก หรือใช้ชุดคราฟที่มี HP และค่าต้านธาตุแทนก็ได้</li>
+      <li>Silver Shadow's (Str 228) กับ Numbing Armor (Str 250) ใช้สถานะเดียวกัน ถ้าลง Str ให้รองเท้าแล้ว เพิ่มอีกนิดก็ใส่ชุดเกราะนี้ได้</li>
+      <li>ข้อมูลยูนีคมาจากชีททางการซึ่งส่วนใหญ่เป็นของ S11–S12 อาจมีชุดเกราะยูนีครุ่นเก่าในเกมที่ไม่อยู่ในรายการนี้</li>
+    </ul>
+  </div>
+</section>
+
+<section id="ica">
+  <div class="sec-head">
+    <span class="eyebrow">Option · Dual skill</span>
+    <h2>ตัวเลือก: เล่นคู่ Ice Crystal Arrow <span class="pill cond">ตัวเลือก</span></h2>
+  </div>
+  <p class="dim">ใช้ Frost Storm ระเบิดหมู่ดาเมจหนัก และใช้ Ice Crystal Arrow ยิงเร็ว เด้งต่อเป้า ตอนวิ่งไล่หรือหนี สองสกิลนี้ใช้รูนลิงก์ ไอเทม และธาตุชุดเดียวกันเกือบทั้งหมด</p>
+
+  <div class="swaps">
+    <div class="swap">
+      <h3>แท็กเกือบเหมือนกัน</h3>
+      <p>ทั้งคู่เป็น Attack / Strike / Cold / Projectile / Bow / Shadow รูนลิงก์ในบิลด์นี้ใช้กับ Ice Crystal Arrow ได้ทุกตัว ยกเว้น Concentrated Area DMG ที่ใช้ได้เฉพาะสกิล AoE</p>
+    </div>
+    <div class="swap">
+      <h3>Chill ส่งต่อกัน</h3>
+      <p>Frost Storm ทำ Chill ทุกครั้งที่โดน (ค่าทำ Chill +45) ทำให้โบนัส "เมื่อศัตรูติด Chill" ของ Ice Crystal Arrow ทำงานตลอด เช่น Lingering Chill (ดาเมจ +107.4%) และรองเท้า Leg Bone of the Wind</p>
+    </div>
+    <div class="swap">
+      <h3>Freeze</h3>
+      <p>ปลุก Frost Storm ระดับ Verity ได้ค่าทำ Freeze +20–30 ช่วยเปิดโบนัส "ขยายดาเมจ 25% เมื่อศัตรูติด Freeze" ของ Ice Crystal Arrow เกรด Legendary</p>
+    </div>
+    <div class="swap">
+      <h3>Overheat</h3>
+      <p>Ice Crystal Arrow สะสม Overheat 40 ต่อการยิง ส่วน Frost Storm ไม่สะสมเลย จึงน่าจะสลับมายิง Frost Storm ระหว่างรอ Overheat ลดได้ (ข้อนี้เป็นการอนุมาน)</p>
+    </div>
+  </div>
+
+  <h3>วางกระดานให้แชร์รูนลิงก์ 2 ช่อง</h3>
+  <div class="board-wrap dual">
+    <svg viewBox="-128 -118 376 304" aria-label="Frost Storm และ Ice Crystal Arrow วางห่างกันสองช่องแบบเยื้อง มีรูนลิงก์สองช่องอยู่ติดทั้งสองสกิล">
+      <defs>
+        <polygon id="hex2" points="37.2,-21.5 37.2,21.5 0,43 -37.2,21.5 -37.2,-21.5 0,-43"/>
+      </defs>
+      <!-- Frost Storm only -->
+      <use href="#hex2" class="hx hx-green" x="-39.84" y="-69"/>
+      <text class="hx-text hx-sm" x="-39.84" y="-72">Shadow</text>
+      <text class="hx-text hx-sm" x="-39.84" y="-61">Archer</text>
+      <use href="#hex2" class="hx hx-blue" x="39.84" y="-69"/>
+      <text class="hx-text hx-sm" x="39.84" y="-72">Mana</text>
+      <text class="hx-text hx-sm" x="39.84" y="-61">Storm</text>
+      <use href="#hex2" class="hx hx-blue" x="-79.67" y="0"/>
+      <text class="hx-text hx-sm" x="-79.67" y="-3">Element</text>
+      <text class="hx-text hx-sm" x="-79.67" y="8">DMG Amp.</text>
+      <use href="#hex2" class="hx hx-red" x="-39.84" y="69"/>
+      <text class="hx-text hx-sm" x="-39.84" y="66">Concentrated</text>
+      <text class="hx-text hx-sm" x="-39.84" y="77">Area DMG</text>
+      <!-- Ice Crystal Arrow only -->
+      <use href="#hex2" class="hx hx-green" x="159.3" y="0"/>
+      <text class="hx-text hx-sm" x="159.3" y="-3">Quick</text>
+      <text class="hx-text hx-sm" x="159.3" y="8">Attack</text>
+      <use href="#hex2" class="hx hx-blue" x="199.2" y="69"/>
+      <text class="hx-text hx-sm" x="199.2" y="66">Additional</text>
+      <text class="hx-text hx-sm" x="199.2" y="77">Cold DMG</text>
+      <use href="#hex2" class="hx hx-blue" x="159.3" y="138"/>
+      <text class="hx-text hx-sm" x="159.3" y="135">Element</text>
+      <text class="hx-text hx-sm" x="159.3" y="146">DMG Amp.</text>
+      <use href="#hex2" class="hx hx-blue" x="79.67" y="138"/>
+      <text class="hx-text hx-sm" x="79.67" y="135">Mana</text>
+      <text class="hx-text hx-sm" x="79.67" y="146">Storm</text>
+      <!-- shared -->
+      <use href="#hex2" class="hx hx-green hx-shared" x="79.67" y="0"/>
+      <text class="hx-text hx-sm" x="79.67" y="-6">Find</text>
+      <text class="hx-text hx-sm" x="79.67" y="5">Weakness</text>
+      <text class="hx-share" x="79.67" y="19">แชร์</text>
+      <use href="#hex2" class="hx hx-red hx-shared" x="39.84" y="69"/>
+      <text class="hx-text hx-sm" x="39.84" y="63">Attack DMG</text>
+      <text class="hx-text hx-sm" x="39.84" y="74">Increase</text>
+      <text class="hx-share" x="39.84" y="88">แชร์</text>
+      <!-- skills -->
+      <use href="#hex2" class="hx hx-skill" x="0" y="0"/>
+      <text class="hx-skill-text hx-skill-sm" x="0" y="-2">Frost</text>
+      <text class="hx-skill-text hx-skill-sm" x="0" y="11">Storm</text>
+      <use href="#hex2" class="hx hx-skill" x="119.5" y="69"/>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="61">Ice</text>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="73">Crystal</text>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="85">Arrow</text>
+    </svg>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th class="slot-col">ช่อง</th><th>Frost Storm</th><th>Ice Crystal Arrow</th></tr></thead>
+        <tbody>
+          <tr><td>แชร์ 1</td><td colspan="2"><span class="dot green"></span>Find Weakness (ลิงก์ให้ทั้งคู่)</td></tr>
+          <tr><td>แชร์ 2</td><td colspan="2"><span class="dot red"></span>Attack DMG Increase (ลิงก์ให้ทั้งคู่)</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot green"></span>Shadow Archer</td><td><span class="dot green"></span>Quick Attack</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot red"></span>Concentrated Area DMG</td><td><span class="dot blue"></span>Additional Cold DMG</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot blue"></span>Mana Storm</td><td><span class="dot blue"></span>Mana Storm</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot blue"></span>Element DMG Amplification</td><td><span class="dot blue"></span>Element DMG Amplification</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ul class="notes">
+    <li>วางสองสกิลห่างกัน 2 ช่องแบบเยื้อง (ไม่ใช่แนวตรง) จะมีช่องที่ติดทั้งสองสกิล 2 ช่อง รูนลิงก์ในช่องนั้นลิงก์ให้ทั้งคู่ ประหยัดรูนไป 2 ตัว สีช่องของทั้งสองสกิลในทิศนั้นต้องตรงกับสีรูน</li>
+    <li>Ice Crystal Arrow ชุดนี้ได้ DPS สูงสุดในการจำลอง 495 ชุด Quick Attack ทำให้ความเร็วยิงชนเพดาน 5 ครั้งต่อวินาทีพอดี</li>
+    <li>ชุดนี้ต้องมี Mana Storm และ Element DMG Amplification อย่างละ 2 ชิ้น ถ้ามีอย่างละชิ้นเดียว ให้ Ice Crystal Arrow ใช้ Element Master, Lingering Chill หรือ Slaughter แทนตัวที่ขาด ขาดตัวเดียว DPS ลดไม่ถึง 5% ขาดทั้งสองตัวลดราว 7%</li>
+    <li>ใส่ Shadow Archer ให้ Ice Crystal Arrow แทนตัวใดตัวหนึ่งก็ได้ ในการจำลองต่ำกว่าประมาณ 5% แต่ตัวจำลองยังไม่นับธนูเงา</li>
+  </ul>
+
+  <h3>ผลจำลอง: รองเท้าตัวไหนเหมาะกับการเล่นคู่</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>สกิล</th><th>Ult. Silver Shadow's Footprints</th><th>Trans. Leg Bone of the Wind</th></tr></thead>
+      <tbody>
+        <tr><td>Frost Storm</td><td class="num">18.1 ล้าน</td><td class="num">10.2 ล้าน</td></tr>
+        <tr><td>Ice Crystal Arrow*</td><td class="num">8.9 ล้าน</td><td class="num">5.2 ล้าน<small>≈ 7.8 ล้าน เมื่อรวม Ice Crystal Arrow +50%</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>* ตัวเลข Ice Crystal Arrow ต่ำกว่าความจริง ตัวจำลองนับแค่ลูกหลักลูกเดียว ยังไม่นับลูกแตก Ice Crystal Arrow +2 ลูก สแตก Cold Crystal และผล "Ice Crystal Arrow +40–60%" ของ Leg Bone of the Wind จึงยังบอกไม่ได้ว่า Ice Crystal Arrow อ่อนกว่า Frost Storm จริงแค่ไหน</li>
+    <li>เงื่อนไข "ศัตรูติด Chill" นับว่าเกิดตลอดเพราะ Frost Storm ทำ Chill ให้ ส่วน Freeze, Elite และระยะ 600 ไม่นับ</li>
+  </ul>
+
+  <div class="swaps">
+    <div class="swap">
+      <h3>Frost Storm เป็นหลัก <span class="pill top">แนะนำ</span></h3>
+      <p>ใช้ Silver Shadow's Footprints และ Vertical Chill ตามบิลด์เดิม Silver Shadow's ให้ค่าคริและความเร็วกับทั้งสองสกิล จึงดีกว่า Leg Bone ทั้งสองคอลัมน์</p>
+    </div>
+    <div class="swap">
+      <h3>Ice Crystal Arrow เป็นหลัก</h3>
+      <p>เปลี่ยนรองเท้าเป็น Transcendent Leg Bone of the Wind (Str 165 / Dex 165) ได้ Ice Crystal Arrow +40–60% และ Cold Crystal เต็มทันทีที่ยิงโดยไม่ต้องเดิน แต่ Frost Storm จะอ่อนลงเพราะเสีย Silver Shadow's</p>
+    </div>
+  </div>
+  <ul class="notes">
+    <li>Ice Crystal Arrow เป็นรูนเกรด Rare ได้จาก Synthesis เท่านั้น</li>
+    <li>Ice Crystal Arrow ใช้ Multishot ไม่ได้ ระบบลิงก์อาจขึ้นว่าลิงก์ได้ แต่ตัวสกิลเขียนไว้ว่า Cannot Multishot</li>
+    <li>รูนลิงก์สาย Overheat (Heat Cycle, Outlaw, Over Cooling) ใช้ได้เฉพาะ Ice Crystal Arrow แต่ในการจำลองได้ DPS น้อยกว่าชุดด้านบน</li>
+  </ul>
+</section>
+
+<section id="order">
+  <div class="sec-head">
+    <span class="eyebrow">Priority</span>
+    <h2>ลำดับการอัป</h2>
+  </div>
+  <ol class="steps">
+    <li><div><b>ลง Frost Storm พร้อมรูนลิงก์ 6 ช่อง และเปิด Seal of Critical Chance</b> ใช้ Star Usurper's Bow ระหว่างเก็บเลเวล</div></li>
+    <li><div><b>ไล่ค่าคริเวทให้ถึงเป้า</b> (700 สำหรับมอน Lv150) จาก Zodiac, ออปชันคริแบบตัวเลขบนของคราฟ และ Tipan's Long Bow ขั้นนี้ให้ DPS เพิ่มมากที่สุด</div></li>
+    <li><div><b>หา Vertical Chill</b> มาใส่ช่องซองธนู</div></li>
+    <li><div><b>เมื่อโอกาสคริเกิน 85%</b> ลองสลับ Find Weakness เป็น Sharpness แล้วค่อยเติมคริดาเมจจากถุงมือ สร้อย และแหวน</div></li>
+    <li><div><b>อัปเลเวลและเกรดรูนลิงก์</b> โดยเฉพาะ Attack DMG Increase ที่ให้ผลมากที่สุด และปลุก (Awaken) Shadow Archer ระดับ Origin เพื่อรับคริดาเมจ Attack +45–60%</div></li>
+  </ol>
+</section>
+
+<section id="limits">
+  <div class="sec-head">
+    <span class="eyebrow">Limits</span>
+    <h2>ข้อจำกัดของการจำลอง</h2>
+  </div>
+  <ul class="notes">
+    <li>ไอเทมที่ใช้: Transcendent Tipan's Long Bow, Transcendent Vertical Chill, Transcendent Spica's Light, Transcendent Hira's Charm, Transcendent Leo's Flow, Star Usurper's Ring ค่าสุ่มออปชันตั้งไว้ครึ่งทาง</li>
+    <li>"คริ 40 / 80" คือค่าสมมติแทน Zodiac และของคราฟ ตัวจำลองยังไม่รองรับสองส่วนนี้</li>
+    <li>ยังไม่นับธนูเงาที่ Shadow Archer เรียกออกมา นับแค่ดาเมจโปรเจกไทล์และค่าเจาะดาเมจของรูน ในเกมจริงรูนนี้จึงดีกว่าที่ตัวเลขแสดง</li>
+    <li>ยังไม่นับผลแปลงค่าของ Vertical Chill และ Abyss Stone</li>
+    <li>ยังไม่นับไลน์ที่เป็นสแตก เช่น Opportunistic Strike และสแตกของ Slaughter</li>
+  </ul>
+</section>
+
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">อ้างอิง</span>
+    <h2>แหล่งข้อมูล</h2>
+  </div>
+  <ul class="sources">
+    <li>ชีทข้อมูลรูนและยูนีคทางการ S12 (ข้อมูลเดียวกับเว็บ Undecember DB)<span>ก.ย. 2026</span></li>
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1788995577330018641">9/10 Update Notice (S12 The Farside)</a><span>10 ก.ย. 2026</span></li>
+    <li><a href="https://guide.floor.line.games/UD/en_US/detail/1166866686993700041">Character Info (ไกด์ทางการ: คริฐาน +50%)</a><span>ไกด์ทางการ</span></li>
+    <li><a href="https://gall.dcinside.com/mgallery/board/view/?id=undecember&amp;no=285417">DC Inside: วิธีคำนวณค่าคริเวท</a><span>9 เม.ย. 2024</span></li>
+    <li><a href="https://www.youtube.com/watch?v=FfMwBPXGL-8">YouTube: Frost Storm Is Much Stronger (S12)</a><span>ก.ย. 2026</span></li>
+    <li><a href="https://gall.dcinside.com/mgallery/board/view/?id=undecember&amp;no=303969">DC Inside: Frost Storm บัฟแล้วโกง</a><span>11 ก.ย. 2026</span></li>
+  </ul>
+</section>
+
+<footer>
+  <span>ดูเพิ่ม: <a href="skill-tier-list.html">Tier List สกิล S12</a> · <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></span>
+  <span>จัดทำจากข้อมูลสาธารณะและตัวจำลองของ Undecember DB ไม่ใช่ไกด์ทางการของ LINE Games</span>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คราฟอาวุธ Undecember</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Taviraj:wght@500;700&display=swap">
+<style>
+/* Layout: one reading column like a field manual; tables and the stage ruler run full column width; rarity colours carry meaning */
+:root {
+  --bg: #0f0d14;
+  --raised: #17141f;
+  --sunken: #0b0a10;
+  --line: #2e2840;
+  --line-strong: #463d5e;
+  --text: #d9d4e4;
+  --dim: #a39bb6;
+  --faint: #756e8a;
+  --strong: #f6f2ff;
+  --accent: #d4a64a;
+  --accent-strong: #f0c46a;
+  --accent-bg: rgba(212, 166, 74, 0.12);
+  --warn: #f0b84a;
+  --warn-bg: rgba(240, 184, 74, 0.09);
+  --danger: #ff7a7a;
+  --danger-bg: rgba(255, 122, 122, 0.09);
+  --r-normal: #c9c4d4;
+  --r-magic: #6ea8ff;
+  --r-rare: #f2d14b;
+  --r-legendary: #ff8a3d;
+  --r-ancient: #ff5d8a;
+  --r-unique: #c77dff;
+  --r-divine: #6fe0cf;
+  --display: 'Taviraj', 'IBM Plex Sans Thai', Georgia, serif;
+  --sans: 'IBM Plex Sans Thai', system-ui, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+    --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+    --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+    --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --danger: #c03a3a; --danger-bg: rgba(200, 60, 60, 0.08);
+    --r-normal: #5f5770; --r-magic: #2f6fd6; --r-rare: #9a7e00; --r-legendary: #c85a12; --r-ancient: #c42a5a; --r-unique: #8a3fd1; --r-divine: #12877a;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+  --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+  --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+  --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --danger: #c03a3a; --danger-bg: rgba(200, 60, 60, 0.08);
+  --r-normal: #5f5770; --r-magic: #2f6fd6; --r-rare: #9a7e00; --r-legendary: #c85a12; --r-ancient: #c42a5a; --r-unique: #8a3fd1; --r-divine: #12877a;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15.5px/1.7 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-strong); text-underline-offset: 3px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.page {
+  max-width: 840px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 72px;
+  display: grid;
+  gap: 52px;
+}
+@media (max-width: 520px) { .page { padding-inline: 16px; padding-block: 28px 56px; gap: 44px; } }
+
+h1, h2, h3 { color: var(--strong); text-wrap: balance; margin: 0; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.15; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.55rem; line-height: 1.3; }
+h3 { font-size: 1.02rem; font-weight: 600; line-height: 1.4; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow {
+  font: 600 0.72rem/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.dim { color: var(--dim); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* header */
+header { display: grid; gap: 14px; }
+.lede { font-size: 1.08rem; color: var(--dim); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--faint); }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+nav.toc a {
+  font-size: 0.82rem;
+  color: var(--dim);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+nav.toc a:hover { color: var(--strong); border-color: var(--line-strong); }
+
+.caveat {
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+  background: var(--warn-bg);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  display: grid;
+  gap: 4px;
+}
+.caveat strong { color: var(--warn); font-weight: 600; }
+
+section { display: grid; gap: 18px; scroll-margin-top: 16px; }
+.sec-head { display: grid; gap: 6px; padding-top: 18px; border-top: 1px solid var(--line); }
+
+/* the 3-step flow */
+.flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.flow-step {
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  min-width: 0;
+}
+.flow-step .n {
+  font: 600 0.78rem/1 var(--mono);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  width: 26px; height: 26px;
+  display: grid; place-items: center;
+}
+.flow-step p { font-size: 0.9rem; color: var(--dim); }
+.mats { display: flex; flex-wrap: wrap; gap: 4px; }
+.mat {
+  font-size: 0.74rem;
+  background: var(--sunken);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1px 7px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+/* steps list */
+ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
+ol.steps > li {
+  counter-increment: s;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 12px;
+  align-items: baseline;
+}
+ol.steps > li::before {
+  content: counter(s);
+  font: 600 0.8rem/1 var(--mono);
+  color: var(--accent);
+  text-align: right;
+}
+ol.steps > li > div { min-width: 0; }
+ul.notes { margin: 0; padding-left: 1.1rem; display: grid; gap: 4px; color: var(--dim); font-size: 0.9rem; }
+ul.notes li::marker { color: var(--faint); }
+
+/* line chips: Ortemis/Triah/Chaos */
+.lines { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 520px) { .lines { grid-template-columns: 1fr; } }
+.line-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: grid;
+  gap: 2px;
+  background: var(--raised);
+}
+.line-card b { color: var(--strong); font-weight: 600; }
+.line-card span { font-size: 0.85rem; color: var(--dim); }
+.line-card.focus { border-color: var(--accent); background: var(--accent-bg); }
+.line-card.focus span { color: var(--text); }
+
+/* tables */
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; padding: 10px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th {
+  font: 600 0.72rem/1.3 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  background: var(--sunken);
+  white-space: nowrap;
+}
+td:first-child { color: var(--strong); font-weight: 500; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--accent-strong); }
+td small { display: block; color: var(--faint); font-size: 0.8rem; }
+.tag {
+  display: inline-block;
+  font: 600 0.66rem/1.5 var(--mono);
+  letter-spacing: 0.05em;
+  padding: 0 6px;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  vertical-align: 2px;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+.tag.season { color: var(--r-divine); }
+.tag.old { color: var(--warn); }
+.caption { font-size: 0.8rem; color: var(--faint); }
+
+/* tips grid */
+.tips { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+.tip { border-left: 2px solid var(--line-strong); padding: 2px 0 2px 14px; display: grid; gap: 4px; min-width: 0; }
+.tip p { font-size: 0.9rem; color: var(--dim); }
+.tip .big { font: 600 1.05rem/1.2 var(--mono); color: var(--accent-strong); font-variant-numeric: tabular-nums; }
+
+/* stage ruler */
+.ruler {
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 18px 14px;
+  display: grid;
+  gap: 18px;
+}
+.ruler-row { display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: center; }
+.ruler-row > span { font-size: 0.82rem; color: var(--dim); text-align: right; }
+.track { position: relative; height: 46px; }
+.track::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 20px;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--r-magic), var(--r-rare));
+  opacity: 0.35;
+}
+.mk {
+  position: absolute;
+  left: calc((var(--s) - 1) / 39 * 100%);
+  top: 0;
+  transform: translateX(-50%);
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+}
+.mk .dots { display: flex; gap: 3px; height: 14px; align-items: center; }
+.mk i { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--raised); display: block; }
+.mk::after { content: ""; position: absolute; top: 16px; left: 50%; margin-left: -1px; width: 2px; height: 14px; background: var(--line-strong); z-index: 0; }
+.mk b { font: 600 0.78rem/1 var(--mono); color: var(--strong); margin-top: 14px; position: relative; z-index: 1; }
+.c-unique { background: var(--r-unique); }
+.c-legendary { background: var(--r-legendary); }
+.c-divine { background: var(--r-divine); }
+.c-ancient { background: var(--r-ancient); }
+.axis { position: relative; height: 16px; margin-left: 76px; }
+.axis span {
+  position: absolute;
+  left: calc((var(--s) - 1) / 39 * 100%);
+  transform: translateX(-50%);
+  font: 0.7rem/1 var(--mono);
+  color: var(--faint);
+}
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--dim); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.legend i.base { background: linear-gradient(90deg, var(--r-magic), var(--r-rare)); opacity: 0.7; border-radius: 2px; width: 16px; height: 6px; }
+
+/* rarity chain */
+.chain { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.grade {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  background: color-mix(in srgb, currentColor 10%, transparent);
+}
+.g-normal { color: var(--r-normal); }
+.g-magic { color: var(--r-magic); }
+.g-rare { color: var(--r-rare); }
+.g-legendary { color: var(--r-legendary); }
+.g-ancient { color: var(--r-ancient); }
+.arrow { display: grid; justify-items: center; font-size: 0.66rem; line-height: 1.2; color: var(--faint); }
+.arrow::after { content: "→"; font-size: 0.95rem; color: var(--dim); }
+.chain .lock { flex-basis: 100%; font-size: 0.8rem; color: var(--danger); }
+
+.callout {
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  display: grid;
+  gap: 4px;
+}
+.callout.danger { background: var(--danger-bg); border: 1px solid color-mix(in srgb, var(--danger) 40%, transparent); }
+.callout.danger strong { color: var(--danger); }
+.callout.info { background: var(--accent-bg); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+.callout.info strong { color: var(--accent-strong); }
+
+.craft-step { display: grid; gap: 12px; }
+.craft-step > h3 { display: flex; gap: 10px; align-items: baseline; }
+.craft-step > h3 .mono { color: var(--accent); font-size: 0.82rem; }
+
+/* sources */
+ul.sources { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.88rem; }
+ul.sources li { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
+ul.sources li span { font: 0.74rem var(--mono); color: var(--faint); white-space: nowrap; }
+@media (max-width: 520px) { ul.sources li { grid-template-columns: 1fr; gap: 2px; } }
+
+footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; }
+
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="eyebrow">Undecember · S12 The Farside</span>
+  <h1>คราฟอาวุธเอง</h1>
+  <p class="lede">ฟาร์มวัสดุที่ไหน ลงการ์ดอะไรที่ Chaos Statue และทำยังไงให้มีโอกาสได้ของมากขึ้น ตั้งแต่หาเบสอาวุธจนใส่ Crafting Option ที่ Alchemy Desk</p>
+  <div class="meta">
+    <span>รวบรวม 14 ต.ค. 2026</span>
+    <span>อ้างอิงไกด์และประกาศทางการ LINE Games</span>
+  </div>
+  <nav class="toc" aria-label="สารบัญ">
+    <a href="#overview">ภาพรวม</a>
+    <a href="#where">ลงการ์ดที่ไหน</a>
+    <a href="#cards">ลงการ์ดอะไร</a>
+    <a href="#rates">อัตราดรอป</a>
+    <a href="#boost">เพิ่มโอกาส</a>
+    <a href="#craft">ขั้นตอนคราฟ</a>
+    <a href="#sources">แหล่งข้อมูล</a>
+  </nav>
+  <div class="caveat">
+    <strong>อ่านก่อน</strong>
+    <span>ไกด์ทางการบางหน้าอัปเดตล่าสุดปี 2023–2025 และตัวเลขอัตราดรอปมาจากหน้าประกาศที่ตั้งตั้งแต่ปี 2022 ค่าจริงในเกมตอนนี้อาจต่างไป ชื่อไอเทมใช้ภาษาอังกฤษตามเซิร์ฟ Global เพราะยังไม่มีชื่อไทยทางการให้อ้างอิง</span>
+  </div>
+</header>
+
+<section id="overview">
+  <div class="sec-head">
+    <span class="eyebrow">ภาพรวม</span>
+    <h2>คราฟอาวุธมี 3 ขั้น</h2>
+  </div>
+  <p class="dim">ทุกขั้นพึ่งของจาก Chaos Dungeon เป็นหลัก ทำตามลำดับนี้ เพราะบางขั้นย้อนกลับไม่ได้</p>
+  <div class="flow">
+    <div class="flow-step">
+      <span class="n">1</span>
+      <h3>หาเบสอาวุธ</h3>
+      <p>อาวุธเลเวล 165 ขึ้นไป ถึงจะติดออปชัน Tier 15 ได้ ฟาร์มจาก Chaos Dungeon สเตจสูง</p>
+      <div class="mats"><span class="mat">Item Lv 165+</span><span class="mat">Chaos Dungeon</span></div>
+    </div>
+    <div class="flow-step">
+      <span class="n">2</span>
+      <h3>ปั้นออปชันด้วย Essence</h3>
+      <p>อัปเกรดเกรดและสุ่มออปชันจนได้ชุดที่ต้องการ ก่อนอัปเป็น Legendary</p>
+      <div class="mats"><span class="mat">Rare Birth</span><span class="mat">Alyssa</span><span class="mat">Vesper</span><span class="mat">Imbue</span></div>
+    </div>
+    <div class="flow-step">
+      <span class="n">3</span>
+      <h3>ใส่ Crafting Option</h3>
+      <p>ที่ Alchemy Desk ใช้วัสดุจากการ์ด Traces of Memory (Ortemis)</p>
+      <div class="mats"><span class="mat">Trace of Creation</span><span class="mat">Star Memory</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="where">
+  <div class="sec-head">
+    <span class="eyebrow">Chaos Statue · Saluto</span>
+    <h2>ลงการ์ดที่ไหน</h2>
+  </div>
+  <p class="dim">Chaos Dungeon ปลดล็อกหลังผ่านเควสหลักตัวสุดท้าย</p>
+  <ol class="steps">
+    <li><div>ไปที่ <b>Chaos Statue</b> ในเมือง Saluto แล้วกดปุ่ม <b>Dungeon</b></div></li>
+    <li><div>ลง <b>Chaos Card</b> หรือ <b>Exodium Card</b> จากกระเป๋าหรือคลังส่วนตัว</div></li>
+    <li><div>ถ้ามี ใส่วัสดุพิเศษ <b>Emerald Ether</b> หรือใช้ <b>Chaos Points</b> การันตีอีเวนต์ในดัน (ดูหัวข้อเพิ่มโอกาส)</div></li>
+    <li><div>กด <b>Activate</b> ระบบจะสร้างดันใช้ครั้งเดียว แล้วเดินเข้าประตูที่เปิดขึ้น</div></li>
+    <li><div>ฆ่ามอนสเตอร์จนหลอดความคืบหน้าเต็ม ประตู <b>Abyssal Rift</b> ไปหาบอสจะเปิด ฆ่าบอสแล้วถือว่าเคลียร์</div></li>
+  </ol>
+  <ul class="notes">
+    <li>ถ้าเล่นปาร์ตี้ คนที่ลงการ์ดเท่านั้นที่เปิดประตูบอสได้</li>
+    <li>โหมด Standard และ Season ชุบได้ 3 ครั้ง ส่วนโหมด Hard ชุบไม่ได้</li>
+    <li>มอนที่เหลือหลังบอสตายยังฆ่าได้ แต่ไม่ได้ EXP ของ Statue</li>
+  </ul>
+</section>
+
+<section id="cards">
+  <div class="sec-head">
+    <span class="eyebrow">Chaos Card</span>
+    <h2>ลงการ์ดอะไร</h2>
+  </div>
+  <p class="dim">วัสดุคราฟแยกเป็น 3 สาย ถ้าจะคราฟอาวุธให้ล่าสาย <b>Ortemis</b></p>
+  <div class="lines">
+    <div class="line-card focus"><b>Ortemis</b><span>วัสดุคราฟอาวุธ</span></div>
+    <div class="line-card"><b>Triah</b><span>วัสดุคราฟชุดเกราะ</span></div>
+    <div class="line-card"><b>Chaos</b><span>วัสดุคราฟเครื่องประดับ</span></div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>การ์ด / วิธี</th><th>ได้อะไร</th><th>หมายเหตุ</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Traces of Memory (Ortemis)</td>
+          <td>Trace of Creation (อาวุธ), Star Memory (อาวุธ)</td>
+          <td>มอนทุกตัวในดันมีโอกาสดรอป การ์ดเกรดธรรมดาดรอปเป็นใบ ไม่ต้องรวมชิ้นส่วนแล้ว อัปเกรดเกรดที่ Alchemy โดยรวมกับ Chaos Upgrade Stone</td>
+        </tr>
+        <tr>
+          <td>Rare Chaos Card + Memory Rune (Ortemis)</td>
+          <td>อีเวนต์ Traces of Ortemis ในดัน ดรอปวัสดุคราฟอาวุธ</td>
+          <td>ใช้ Chaos Points การันตีให้อีเวนต์เกิดได้</td>
+        </tr>
+        <tr>
+          <td>Unique Chaos Card</td>
+          <td>ของรางวัลหลักที่เขียนไว้บนการ์ด</td>
+          <td>เหมาะกับการล่าอาวุธยูนีคเฉพาะชิ้น ดรอปตามโอกาส</td>
+        </tr>
+        <tr>
+          <td>Exodium Card</td>
+          <td>รางวัลหลัก และรางวัลตามเส้นทางที่เลือก</td>
+          <td>ดันเกาะ Kustodia เทียร์ 3–12</td>
+        </tr>
+        <tr>
+          <td>Greater Card</td>
+          <td>ดันเทียร์ 11–12</td>
+          <td>การ์ดชื่อเทพ 12 ใบดรอปจากดันเทียร์ 10 บางใบคราฟได้ด้วย Chaos Key</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>วัสดุ</th><th>ใช้ทำอะไร</th><th>ได้จาก</th></tr></thead>
+      <tbody>
+        <tr><td>Trace of Creation</td><td>Normal Crafting</td><td>ดันจากการ์ด Traces of Memory</td></tr>
+        <tr><td>Star Memory</td><td>Normal Crafting และอัปเลเวลคราฟ</td><td>ดันจากการ์ด Traces of Memory</td></tr>
+        <tr><td>High Traces of Creation</td><td>High Crafting</td><td>Traces of Memory, Chaos Dungeon</td></tr>
+        <tr><td>Traces of Disintegration</td><td>ล้าง Crafting Option</td><td>Chaos Dungeon, ร้านค้าเงินจริง</td></tr>
+        <tr><td>Gold</td><td>อัปเลเวลคราฟ</td><td>ทั่วไป</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caption">ที่มา: ไกด์ทางการหน้า Crafting และ Chaos Dungeon</p>
+</section>
+
+<section id="rates">
+  <div class="sec-head">
+    <span class="eyebrow">ตัวเลขทางการ <span class="tag old">ปี 2022</span></span>
+    <h2>อัตราดรอปที่เคยประกาศ</h2>
+  </div>
+  <p class="dim">ใช้ดูสัดส่วนคร่าว ๆ ว่าอะไรหายากแค่ไหน ตัวเลขปัจจุบันอาจเปลี่ยนแล้ว</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>แหล่ง</th><th>ไอเทม</th><th>โอกาส</th><th>จำนวน</th></tr></thead>
+      <tbody>
+        <tr><td>Legendary Chaos Card T1–10<small>กล่องรางวัลของคนลงการ์ด</small></td><td>การ์ด Traces of Memory (Ortemis)</td><td class="num">3%</td><td class="num">1</td></tr>
+        <tr><td>Legendary Chaos Card T11<small>กล่องรางวัลของคนลงการ์ด</small></td><td>การ์ด Traces of Memory (Ortemis)</td><td class="num">0.1495%</td><td class="num">1</td></tr>
+        <tr><td>Legendary Chaos Card T1–5<small>รางวัลปาร์ตี้</small></td><td>Star Memory (อาวุธ)</td><td class="num">7%</td><td class="num">30</td></tr>
+        <tr><td>Legendary Chaos Card T6–10<small>รางวัลปาร์ตี้</small></td><td>Star Memory (อาวุธ)</td><td class="num">7%</td><td class="num">40</td></tr>
+        <tr><td>Legendary Chaos Card T11<small>รางวัลปาร์ตี้</small></td><td>Star Memory (อาวุธ)</td><td class="num">7%</td><td class="num">50</td></tr>
+        <tr><td>Unknown Crafting Box</td><td>Star Memory (อาวุธ)</td><td class="num">22%</td><td class="num">50</td></tr>
+        <tr><td>Unknown Crafting Box</td><td>Trace of Creation (อาวุธ)</td><td class="num">5%</td><td class="num">1</td></tr>
+        <tr><td>Memory Trace Box</td><td>การ์ด Ortemis / Triah / Chaos</td><td class="num">เท่ากัน</td><td class="num">1</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caption">ที่มา: ประกาศ "언디셈버 확률 정보 안내" (โพสต์ 12 ก.พ. 2022)</p>
+</section>
+
+<section id="boost">
+  <div class="sec-head">
+    <span class="eyebrow">Drop chance</span>
+    <h2>ทำยังไงให้มีโอกาสได้ของมากขึ้น</h2>
+  </div>
+  <div class="tips">
+    <div class="tip">
+      <h3>อัปเลเวล Chaos Statue</h3>
+      <p>มอนสเตอร์และไอเทมเลเวลสูงขึ้น ได้ Chaos Points มากขึ้น และโหมด Hard เปิดเมื่อ Statue เลเวลเต็มแล้วเท่านั้น</p>
+    </div>
+    <div class="tip">
+      <h3>เลือกการ์ดให้ดี</h3>
+      <p>เทียร์การ์ด เกรดการ์ด ระดับความยาก และ Growth Level มีผลกับอัตราดรอปวัสดุคราฟ</p>
+    </div>
+    <div class="tip">
+      <h3>ส่องการ์ดก่อนลง</h3>
+      <p>การ์ดเกรด Magic ขึ้นไปใช้ Identification Scroll ดูออปชันและรางวัลได้ การ์ด Legendary ขึ้นไปให้รางวัลภารกิจเฉพาะตอนเล่น Hard</p>
+    </div>
+    <div class="tip">
+      <span class="big">×2</span>
+      <h3>Emerald Ether <span class="tag season">S12</span></h3>
+      <p>ใส่ตอนเปิดดัน แล้ว Essence ทั่วไปที่เทรดได้จะดรอปเป็น 2 เท่า ใช้แทน White Night Crystal ของซีซันก่อน</p>
+    </div>
+    <div class="tip">
+      <span class="big">5 อีเวนต์</span>
+      <h3>ใช้ Chaos Points</h3>
+      <p>การันตีอีเวนต์ในดันได้สูงสุด 5 อย่าง หมวดละ 1 รวมถึง Memory Rune (Ortemis) แต้มรีเซ็ตทุกซีซัน</p>
+    </div>
+    <div class="tip">
+      <span class="big">+50% / +100%</span>
+      <h3>เล่นโหมดซีซัน</h3>
+      <p>ดรอปไอเทม +50% ส่วน Gold และ Essence +100% ของซีซันดรอปมาพร้อมออปชันเต็ม</p>
+    </div>
+  </div>
+
+  <div class="craft-step">
+    <h3>หีบสมบัติใน Chaos Dungeon เริ่มออกที่สเตจไหน</h3>
+    <div class="ruler" role="img" aria-label="หีบ Unique เริ่มสเตจ 21 ทั้งสองโหมด หีบ Legendary เริ่มสเตจ 26 โหมดทั่วไป และ 21 โหมด Hard หีบ Divine และ Ancient เริ่มสเตจ 36 โหมดทั่วไป และ 31 โหมด Hard">
+      <div class="ruler-row">
+        <span>ทั่วไป</span>
+        <div class="track">
+          <span class="mk" style="--s:21"><span class="dots"><i class="c-unique"></i></span><b>21</b></span>
+          <span class="mk" style="--s:26"><span class="dots"><i class="c-legendary"></i></span><b>26</b></span>
+          <span class="mk" style="--s:36"><span class="dots"><i class="c-divine"></i><i class="c-ancient"></i></span><b>36</b></span>
+        </div>
+      </div>
+      <div class="ruler-row">
+        <span>Hard</span>
+        <div class="track">
+          <span class="mk" style="--s:21"><span class="dots"><i class="c-unique"></i><i class="c-legendary"></i></span><b>21</b></span>
+          <span class="mk" style="--s:31"><span class="dots"><i class="c-divine"></i><i class="c-ancient"></i></span><b>31</b></span>
+        </div>
+      </div>
+      <div class="axis" aria-hidden="true">
+        <span style="--s:1">1</span><span style="--s:10">10</span><span style="--s:20">20</span><span style="--s:30">30</span><span style="--s:40">40</span>
+      </div>
+      <div class="legend">
+        <span><i class="base"></i>Magic, Rare ทุกสเตจ</span>
+        <span><i class="c-unique"></i>Unique</span>
+        <span><i class="c-legendary"></i>Legendary</span>
+        <span><i class="c-divine"></i>Divine</span>
+        <span><i class="c-ancient"></i>Ancient</span>
+      </div>
+    </div>
+    <ul class="notes">
+      <li>หีบ Legendary, Divine และ Ancient การันตี Essence เกรดนั้นอย่างน้อย 3 ชิ้น</li>
+      <li>หีบ Unique เกรดสูงการันตี Transcendent Unique อย่างน้อย 1 ชิ้น</li>
+      <li>โหมด Hard มีหีบมากกว่า แต่ S12 ลดอัตราการเกิดหีบลงโดยรวม</li>
+    </ul>
+  </div>
+
+  <div class="callout info">
+    <strong>Agony Wave <span class="tag season">S12</span></strong>
+    <span>คอนเทนต์ใหม่ใน Saluto ปลดล็อกหลัง Act 13 และเควส Unidentified Phenomenon ต้องใช้ Agony Key บอสแต่ละเวฟดรอป Agony Shard ไว้เปิดหีบรางวัล ข่าวเกาหลีระบุว่าได้ Essence ใหม่อย่าง Spica และ Castor จากที่นี่ด้วย</span>
+  </div>
+</section>
+
+<section id="craft">
+  <div class="sec-head">
+    <span class="eyebrow">Step by step</span>
+    <h2>ขั้นตอนคราฟอาวุธ</h2>
+  </div>
+
+  <div class="craft-step">
+    <h3><span class="mono">01</span>หาเบสอาวุธ</h3>
+    <ul class="notes">
+      <li>ออปชันท้ายชื่อ (suffix) <b>Tier 15</b> ติดได้เฉพาะอุปกรณ์เลเวล <b>165 ขึ้นไป</b> ออปชันนี้แรงใกล้เคียงหรือเกินของยูนีค</li>
+      <li>เลเวลไอเทมผูกกับเลเวลมอนสเตอร์ ซึ่งขึ้นกับเลเวล Chaos Statue จึงต้องฟาร์มสเตจสูง</li>
+      <li>เลเวลไอเทมยิ่งสูง เทียร์สูงสุดของออปชันที่สุ่มได้ยิ่งสูง</li>
+    </ul>
+  </div>
+
+  <div class="craft-step">
+    <h3><span class="mono">02</span>ปั้นออปชันด้วย Essence</h3>
+    <div class="chain" aria-label="เส้นทางอัปเกรดเกรด">
+      <span class="grade g-normal">Normal</span>
+      <span class="arrow">Magic Upgrade</span>
+      <span class="grade g-magic">Magic</span>
+      <span class="arrow">Rare Upgrade</span>
+      <span class="grade g-rare">Rare</span>
+      <span class="arrow">Legendary Upgrade</span>
+      <span class="grade g-legendary">Legendary</span>
+      <span class="arrow">Ancient Upgrade</span>
+      <span class="grade g-ancient">Ancient</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Essence</th><th>ทำอะไร</th><th>เงื่อนไข</th></tr></thead>
+        <tbody>
+          <tr><td>Rare Birth</td><td>สุ่มออปชันใหม่ทั้งหมด</td><td>เกรด Rare</td></tr>
+          <tr><td>Prefix / Suffix Option Birth</td><td>สุ่มใหม่เฉพาะออปชันหน้าหรือท้าย</td><td>Magic หรือ Rare</td></tr>
+          <tr><td>Alyssa</td><td>ล็อกออปชันที่เลือกไว้ 1 อัน แล้วสุ่มที่เหลือใหม่จนเต็มช่อง โอกาสได้เทียร์สูงสูง</td><td>Rare เลเวล 88+</td></tr>
+          <tr><td>Vesper</td><td>คงออปชันเดิม สุ่มเทียร์ใหม่ อย่างน้อย 1 อันได้เทียร์สูงสุด</td><td>Rare หรือ Legendary เลเวล 88+</td></tr>
+          <tr><td>Rare Imbue / Rare Change</td><td>เพิ่มออปชัน 1 อัน / สุ่มค่าตัวเลขใหม่</td><td>เกรด Rare</td></tr>
+          <tr><td>Disintegration, Prefix / Suffix Removal</td><td>ลบออปชันแบบสุ่ม 1 อัน</td><td>Magic หรือ Rare</td></tr>
+          <tr><td>Legendary Imbue, Ancient Imbue</td><td>เพิ่มออปชัน 1 อัน</td><td>Legendary / Ancient</td></tr>
+          <tr><td>The Forge Birth <span class="tag season">ซีซัน</span></td><td>สุ่มออปชันใหม่ การันตีออปชัน Forge อย่างน้อย 1 อัน</td><td>โหมดซีซัน</td></tr>
+          <tr><td>The Forge Imbue <span class="tag season">ซีซัน</span></td><td>เติมออปชันแบบแน่นอน</td><td>จำกัดครั้งต่อชิ้น เติมจำนวนครั้งคืนไม่ได้</td></tr>
+          <tr><td>Reversion</td><td>ย้อนกลับเป็น Normal เพื่อเริ่มใหม่</td><td>Magic, Rare, Legendary, Ancient</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout danger">
+      <strong>จัดออปชันให้เสร็จตอนเป็น Rare</strong>
+      <span>หลังกด Legendary Upgrade จะแก้ออปชันเดิมไม่ได้อีก ทำได้แค่ Imbue เพิ่ม</span>
+    </div>
+    <ul class="notes">
+      <li>ตั้ง <b>Repeat Settings</b> เลือกออปชันหน้าและท้ายรวมสูงสุด 6 อัน พร้อมเทียร์ที่ต้องการ ระบบจะสุ่มซ้ำอัตโนมัติจนได้ผล</li>
+      <li>ในโหมดซีซัน Essence ประเภท Imbue, Birth และ Casthor มีโอกาสออกออปชัน Forge ซึ่งค่าสูงกว่าออปชันปกติ 1 เทียร์</li>
+    </ul>
+  </div>
+
+  <div class="craft-step">
+    <h3><span class="mono">03</span>ใส่ Crafting Option ที่ Alchemy Desk</h3>
+    <p class="dim">Alchemy Desk มีในเมืองของทุก Act และใน Saluto</p>
+    <ol class="steps">
+      <li><div><b>อัปเลเวลคราฟสายอาวุธก่อน</b> ใช้ Star Memory + Gold เลเวลยิ่งสูง เทียร์และโอกาสของ Crafting Option ยิ่งดี และปลดออปชันใหม่ (สายอาวุธ เกราะ เครื่องประดับ อัปแยกกัน)</div></li>
+      <li><div><b>Normal Crafting</b> ใช้ Trace of Creation + Star Memory เลือกออปชันหน้าหรือท้ายที่จะใส่ แล้วระบบสุ่ม Crafting Option ให้ 1 อัน ถ้ามีอยู่แล้วจะถูกแทนที่</div></li>
+      <li><div><b>High Crafting</b> ใช้ High Traces of Creation เพิ่ม Crafting Option อีกอันลงช่องที่ยังว่าง</div></li>
+      <li><div><b>Crafting Reset</b> ใช้ Traces of Disintegration ล้าง Crafting Option ทั้งหมดถ้าออกไม่ถูกใจ</div></li>
+    </ol>
+    <ul class="notes">
+      <li>หน้าจอคราฟแสดงโอกาสออกของแต่ละออปชันและแต่ละเทียร์ ดูก่อนกด</li>
+      <li>Crafting Option บางอันจะแทนที่หรือลดค่าออปชันเดิมที่ผูกอยู่ ดูไอคอนลิงก์ก่อนยืนยัน</li>
+    </ul>
+  </div>
+
+  <div class="craft-step">
+    <h3><span class="mono">04</span>Casthor Essence (ทางเลือก)</h3>
+    <div class="callout danger">
+      <strong>เป็นการพนัน ใช้แล้วย้อนไม่ได้</strong>
+      <span>ใช้กับอุปกรณ์เกรด Rare ขึ้นไป มีโอกาสต่ำที่ Quality และออปชันจะเพิ่มเป็น 2 เท่าหรือลดครึ่ง ออปชันอาจถูกสุ่มแทนหรือถูกลบ อุปกรณ์จะเทรดไม่ได้ทันที และใช้ได้จำกัดครั้งต่อชิ้น Casthor Revitalization คืนจำนวนครั้งได้แต่ลดเพดานลงครั้งละ 1</span>
+    </div>
+  </div>
+
+  <div class="callout info">
+    <strong>ถ้าอยากได้อาวุธยูนีคแทนการคราฟ</strong>
+    <span>ลง Unique Chaos Card ที่ระบุอาวุธนั้นเป็นรางวัลหลัก หรือใช้ Unique Synthesis กับ Astrologer Fortuna (อยู่ถาวรใน Saluto ถ้าเจอในดันจะสังเคราะห์ถูกกว่า) แล้วค่อยใช้ Holy Upgrade ดันยูนีคเป็นเกรด Holy</span>
+  </div>
+</section>
+
+<section id="sources">
+  <div class="sec-head">
+    <span class="eyebrow">อ้างอิง</span>
+    <h2>แหล่งข้อมูล</h2>
+  </div>
+  <ul class="sources">
+    <li><a href="https://guide.floor.line.games/UD/en_US/detail/1166917784809800682">Chaos Dungeon (ไกด์ทางการ)</a><span>อัปเดต 24 มิ.ย. 2025</span></li>
+    <li><a href="https://guide.floor.line.games/UD/en_US/detail/1167273317660900289">Crafting (ไกด์ทางการ)</a><span>อัปเดต 26 ม.ค. 2023</span></li>
+    <li><a href="https://guide.floor.line.games/UD/en_US/detail/1166917747181300461">Gear Enchants (ไกด์ทางการ)</a><span>อัปเดต 18 ก.พ. 2025</span></li>
+    <li><a href="https://guide.floor.line.games/UD/en_US/detail/1166916754242800576">Alchemy (ไกด์ทางการ)</a><span>อัปเดต 10 ธ.ค. 2024</span></li>
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1788995577330018641">9/10 Update Notice (S12 The Farside)</a><span>10 ก.ย. 2026</span></li>
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1778202906899019119">May 14 Update (S11 The Forge, Tier 15)</a><span>14 พ.ค. 2026</span></li>
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1777359093157005364">Director's Letter Vol. 22</a><span>30 เม.ย. 2026</span></li>
+    <li><a href="https://ud.floor.line.games/kr/bbsCmn/detail/1641989997843019290">언디셈버 확률 정보 안내 (อัตราดรอป)</a><span>12 ก.พ. 2022</span></li>
+    <li><a href="https://ud.floor.line.games/kr/bbsCmn/detail/1659522177740012349">08/04 업데이트 안내 (Traces of Memory Ortemis)</a><span>2022</span></li>
+    <li><a href="https://www.inven.co.kr/webzine/news/?news=276130&amp;site=undecember">Inven: ใช้การ์ด Ortemis ก่อน</a><span>2022</span></li>
+    <li><a href="https://www.inven.co.kr/webzine/news/?news=320723">Inven: เปิดซีซัน 침식의 저편</a><span>ก.ย. 2026</span></li>
+  </ul>
+</section>
+
+<footer>
+  ข้อมูลรวบรวมจากไกด์และประกาศทางการของ LINE Games ไม่ใช่เอกสารทางการ ตัวเลขในเกมอาจเปลี่ยนตามแพตช์
+</footer>
+
+</div>
+</body>
+</html>

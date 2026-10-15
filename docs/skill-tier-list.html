@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tier List สกิล S12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Taviraj:wght@500;700&display=swap">
+<style>
+/* Layout: classic tier rows (big tier letter left, skill cards right), then evidence table and method; tokens shared with Undecember DB */
+:root {
+  --bg: #0f0d14;
+  --raised: #17141f;
+  --sunken: #0b0a10;
+  --line: #2e2840;
+  --line-strong: #463d5e;
+  --text: #d9d4e4;
+  --dim: #a39bb6;
+  --faint: #756e8a;
+  --strong: #f6f2ff;
+  --accent: #d4a64a;
+  --accent-strong: #f0c46a;
+  --accent-bg: rgba(212, 166, 74, 0.12);
+  --warn: #f0b84a;
+  --warn-bg: rgba(240, 184, 74, 0.09);
+  --up: #4cc27a;
+  --down: #ff7a7a;
+  --t-s: #ff8a3d;
+  --t-a: #f2d14b;
+  --t-b: #6ea8ff;
+  --t-c: #9a92ad;
+  --t-q: #c77dff;
+  --rune-red: #e0533f;
+  --rune-green: #4cc27a;
+  --rune-blue: #4f8df0;
+  --display: 'Taviraj', 'IBM Plex Sans Thai', Georgia, serif;
+  --sans: 'IBM Plex Sans Thai', system-ui, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+    --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+    --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+    --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c; --down: #c03a3a;
+    --t-s: #c85a12; --t-a: #9a7e00; --t-b: #2f6fd6; --t-c: #6c6580; --t-q: #8a3fd1;
+    --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+  --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+  --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+  --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c; --down: #c03a3a;
+  --t-s: #c85a12; --t-a: #9a7e00; --t-b: #2f6fd6; --t-c: #6c6580; --t-q: #8a3fd1;
+  --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15.5px/1.7 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-strong); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 72px;
+  display: grid;
+  gap: 48px;
+}
+@media (max-width: 520px) { .page { padding-inline: 16px; padding-block: 28px 56px; gap: 40px; } }
+
+h1, h2, h3 { color: var(--strong); text-wrap: balance; margin: 0; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.15; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1.3; }
+h3 { font-size: 1rem; font-weight: 600; line-height: 1.35; }
+p { margin: 0; max-width: 70ch; }
+.eyebrow {
+  font: 600 0.72rem/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.dim { color: var(--dim); }
+
+header { display: grid; gap: 14px; }
+.lede { font-size: 1.06rem; color: var(--dim); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--faint); }
+.caveat {
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+  background: var(--warn-bg);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  display: grid;
+  gap: 4px;
+}
+.caveat strong { color: var(--warn); font-weight: 600; }
+
+section { display: grid; gap: 18px; }
+.sec-head { display: grid; gap: 6px; padding-top: 18px; border-top: 1px solid var(--line); }
+
+/* tier board */
+.board { display: grid; gap: 10px; }
+.tier {
+  --tc: var(--t-c);
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--raised);
+}
+.tier.s { --tc: var(--t-s); }
+.tier.a { --tc: var(--t-a); }
+.tier.b { --tc: var(--t-b); }
+.tier.c { --tc: var(--t-c); }
+.tier.q { --tc: var(--t-q); }
+.tier-label {
+  background: color-mix(in srgb, var(--tc) 16%, var(--sunken));
+  border-right: 1px solid color-mix(in srgb, var(--tc) 45%, transparent);
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 4px;
+  padding: 14px 8px;
+  text-align: center;
+}
+.tier-label b { font: 700 2.4rem/1 var(--display); color: var(--tc); }
+.tier-label span { font-size: 0.74rem; color: var(--dim); line-height: 1.3; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 12px;
+  min-width: 0;
+}
+@media (max-width: 600px) {
+  .tier { grid-template-columns: 1fr; }
+  .tier-label { grid-template-columns: auto 1fr; justify-items: start; align-items: center; gap: 12px; border-right: 0; border-bottom: 1px solid color-mix(in srgb, var(--tc) 45%, transparent); padding: 10px 14px; text-align: left; }
+  .tier-label b { font-size: 1.9rem; }
+  .cards { grid-template-columns: 1fr; }
+}
+.card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 12px 14px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  min-width: 0;
+}
+.card-head { display: flex; align-items: flex-start; gap: 10px; }
+.rank {
+  font: 600 0.72rem/1 var(--mono);
+  color: var(--tc);
+  border: 1px solid color-mix(in srgb, var(--tc) 60%, transparent);
+  border-radius: 6px;
+  min-width: 26px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  margin-top: 2px;
+}
+.name { display: grid; min-width: 0; line-height: 1.3; }
+.name .en { color: var(--strong); font-weight: 600; }
+.name .th { font-size: 0.8em; color: var(--faint); }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; margin-left: 6px; vertical-align: 1px; border: 1px solid var(--line-strong); }
+.dot.red { background: var(--rune-red); border-color: transparent; }
+.dot.green { background: var(--rune-green); border-color: transparent; }
+.dot.blue { background: var(--rune-blue); border-color: transparent; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  padding: 0 7px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--dim);
+  white-space: nowrap;
+}
+.chip.up { color: var(--up); border-color: color-mix(in srgb, var(--up) 45%, transparent); }
+.chip.down { color: var(--down); border-color: color-mix(in srgb, var(--down) 45%, transparent); }
+.chip.new { color: var(--t-q); border-color: color-mix(in srgb, var(--t-q) 45%, transparent); }
+.chip.voice { color: var(--accent-strong); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.card p { font-size: 0.86rem; color: var(--dim); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.8rem; color: var(--dim); align-items: center; }
+
+/* evidence table */
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+th, td { text-align: left; padding: 9px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th {
+  font: 600 0.7rem/1.3 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  background: var(--sunken);
+  white-space: nowrap;
+}
+td:first-child { color: var(--strong); font-weight: 500; white-space: nowrap; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.num.up { color: var(--up); }
+td.num.down { color: var(--down); }
+td.tier-cell { font: 700 1rem/1 var(--display); }
+.tc-s { color: var(--t-s); } .tc-a { color: var(--t-a); } .tc-b { color: var(--t-b); } .tc-c { color: var(--t-c); } .tc-q { color: var(--t-q); }
+.caption { font-size: 0.8rem; color: var(--faint); }
+
+ol.method { margin: 0; padding-left: 1.3rem; display: grid; gap: 8px; }
+ol.method li::marker { color: var(--accent); font-family: var(--mono); font-weight: 600; }
+ul.notes { margin: 0; padding-left: 1.1rem; display: grid; gap: 4px; color: var(--dim); font-size: 0.9rem; }
+
+ul.sources { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.88rem; }
+ul.sources li { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
+ul.sources li span { font: 0.74rem var(--mono); color: var(--faint); white-space: nowrap; }
+@media (max-width: 520px) { ul.sources li { grid-template-columns: 1fr; gap: 2px; } }
+
+footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="eyebrow">Undecember · S12 The Farside</span>
+  <h1>Tier List สกิลหลัก</h1>
+  <p class="lede">จัดอันดับสกิลรูนที่ใช้เป็นสกิลหลักทำดาเมจ เรียงจากน่าเล่นที่สุดลงมา โดยดูจากตัวเลขบัฟ/เนิร์ฟใน S12 กับเสียงจากผู้เล่นที่หาได้</p>
+  <div class="meta">
+    <span>อัปเดต 14 ต.ค. 2026</span>
+    <span>ซีซันเริ่ม 10 ก.ย. 2026</span>
+    <span>ตัวเลขเทียบที่ Lv45</span>
+  </div>
+  <div class="caveat">
+    <strong>นี่คือการประเมิน ไม่ใช่สถิติทางการ</strong>
+    <span>ผู้พัฒนาไม่ได้เปิดเผยสถิติว่าผู้เล่นใช้สกิลไหนกันเท่าไร และชุมชนยังพูดถึง S12 ไม่มาก อันดับในหน้านี้จึงอิงจากตัวเลขในชีททางการกับความเห็นจาก YouTube และบอร์ด DC Inside ความแรงจริงขึ้นกับของที่ใส่ รูนลิงก์ และ Zodiac มาก</span>
+  </div>
+</header>
+
+<section>
+  <div class="board">
+
+    <div class="tier s">
+      <div class="tier-label"><b>S</b><span>บัฟหนักหรือของใหม่ และผู้เล่นยืนยันว่าแรง</span></div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-head"><span class="rank">1</span><div class="name"><span class="en">Frost Storm</span></div></div>
+          <div class="chips"><span class="chip">Cold</span><span class="chip">Bow</span><span class="chip">AoE</span><span class="chip up">บัฟใหญ่สุด S12</span><span class="chip voice">ชุมชนว่าโกง</span></div>
+          <p>ลูกธนูได้ระเบิดใหม่ 900% +1900 แต่ดาเมจพื้นที่เย็นต่อครั้งลดจาก 267% เหลือ 76% รวมแล้วแรงขึ้นมาก บอร์ด DC Inside โพสต์วันเปิดซีซันว่า "บัฟแล้วกลายเป็นสกิลโกง" และคลิป YouTube ชื่อ "Frost Storm Is Much Stronger"</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">2</span><div class="name"><span class="en">Divine Punishment</span><span class="th">การลงโทษสวรรค์</span></div></div>
+          <div class="chips"><span class="chip">Lightning</span><span class="chip">Spell</span><span class="chip">Channel</span><span class="chip new">ใหม่ S12</span><span class="chip voice">ไกด์เยอะสุด</span></div>
+          <p>1067% +185 พร้อมอัตราคริเวท +55% คริดาเมจ +80% และเมื่อคริมีโอกาส 40% ยิงซ้ำแบบเสริมพลัง มีคลิปไกด์ S12 อย่างน้อย 3 คลิป ข้อเสียคือต้องใช้ของดี มีคนบอกว่าเกียร์น้อยแล้วไปไม่ไหว</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="tier a">
+      <div class="tier-label"><b>A</b><span>แรงและเล่นง่าย หรือได้บัฟชัดเจน</span></div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-head"><span class="rank">3</span><div class="name"><span class="en">Lightning Arrow<i class="dot green" title="รูนสีเขียว"></i></span></div></div>
+          <div class="chips"><span class="chip">Lightning</span><span class="chip">Bow</span><span class="chip">+4%</span><span class="chip voice">ชุมชนว่าแรง</span></div>
+          <p>สายธนูที่แรงมาหลายซีซัน ในคอมเมนต์คลิป Frost Storm มีคนบอกว่าทั้งคู่แรงใน S12 และ Lightning Arrow เก่งกว่าเมื่อเจอศัตรูหลายตัว</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">4</span><div class="name"><span class="en">Sacred Light<i class="dot blue" title="รูนสีน้ำเงิน"></i></span></div></div>
+          <div class="chips"><span class="chip">ธาตุสูงสุด</span><span class="chip">Channel</span><span class="chip up">รีเวิร์ก</span><span class="chip voice">ใช้คู่บ่อย</span></div>
+          <p>เดินระหว่าง channel ได้และล็อกเป้าเอง ระบบสแตก Blessing ใหม่เดินแล้วไม่หาย 10 สแตกได้ขยายดาเมจ 30% และเจาะธาตุ 20% มีคนรายงานว่าใช้คู่ Toxic Mist แล้วตีหุ่นบอส Lv165 ได้ราว 5 พันล้าน</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">5</span><div class="name"><span class="en">Toxic Mist</span></div></div>
+          <div class="chips"><span class="chip">Poison</span><span class="chip">Spell</span><span class="chip up">ระเบิด ×16</span></div>
+          <p>ดาเมจระเบิด 45% → 721% และหมอกพิษ 830% → 960% เป็นบัฟจริงที่ใหญ่รองจาก Frost Storm ใช้คู่ Sacred Light</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">6</span><div class="name"><span class="en">Fire Ball<i class="dot blue" title="รูนสีน้ำเงิน"></i></span></div></div>
+          <div class="chips"><span class="chip">Fire</span><span class="chip">Spell</span><span class="chip">+4%</span><span class="chip voice">มือใหม่เล่นเยอะ</span></div>
+          <p>ไม่ค่อยง้อของ ใช้ได้ตั้งแต่ต้นจนท้ายเกม ในบอร์ดเกาหลีมือใหม่เลือกเส้น Sacred Light + Fire Ball และมีคนบอกว่า Fire Ball ตีแรงกว่า Divine Punishment ในเซ็ตของเขา</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">7</span><div class="name"><span class="en">Domain of Strength<i class="dot red" title="รูนสีแดง"></i></span></div></div>
+          <div class="chips"><span class="chip">Physical</span><span class="chip">Melee</span><span class="chip up">+56%</span><span class="chip">ยังไม่มีคนยืนยัน</span></div>
+          <p>ดาเมจ 598% → 933% และเดินระหว่าง channel ได้ เป็นบัฟสายแดง/ประชิดที่ใหญ่ที่สุด แต่ได้บทลงโทษเดินช้าลง 30% และยังไม่เจอผู้เล่นรีวิว</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="tier b">
+      <div class="tier-label"><b>B</b><span>ใช้ได้ มักเป็นสกิลคู่หรือทางเลือก</span></div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-head"><span class="rank">8</span><div class="name"><span class="en">Frost Bomb<i class="dot blue" title="รูนสีน้ำเงิน"></i></span></div></div>
+          <div class="chips"><span class="chip">Cold</span><span class="chip">+4%</span></div>
+          <p>1125% ถูกจับคู่กับ Divine Punishment ในคลิปไกด์ S12</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">9</span><div class="name"><span class="en">Blizzard<i class="dot blue" title="รูนสีน้ำเงิน"></i></span></div></div>
+          <div class="chips"><span class="chip">Cold</span><span class="chip">+4%</span></div>
+          <p>สกิลคู่ของ Divine Punishment ในอีกคลิปไกด์ S12</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">10</span><div class="name"><span class="en">Condense Fire<i class="dot blue" title="รูนสีน้ำเงิน"></i></span></div></div>
+          <div class="chips"><span class="chip">Fire</span><span class="chip">+4%</span></div>
+          <p>สกิลคู่ของ Divine Punishment ในคลิปไกด์ S12 ที่สาม</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">11</span><div class="name"><span class="en">Electric Ball<i class="dot blue" title="รูนสีน้ำเงิน"></i></span></div></div>
+          <div class="chips"><span class="chip">Lightning</span><span class="chip">+4%</span></div>
+          <p>มีผู้เล่นใช้คู่ Divine Punishment สายสายฟ้าเหมือนกัน</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">12</span><div class="name"><span class="en">Whirlwind<i class="dot red" title="รูนสีแดง"></i></span></div></div>
+          <div class="chips"><span class="chip">Physical</span><span class="chip">+4%</span><span class="chip down">เดินช้าลง 54.5%</span></div>
+          <p>สายประชิดยอดนิยมเดิม ดาเมจขึ้นเล็กน้อย แต่ได้บทลงโทษความเร็วเดินระหว่าง channel</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">13</span><div class="name"><span class="en">Axe Throw</span></div></div>
+          <div class="chips"><span class="chip">Fire</span><span class="chip">+4%</span></div>
+          <p>สกิลจาก S11 ดาเมจ 1379% มีคนถามหาบิลด์ในบอร์ดเกาหลี 2 โพสต์ ยังไม่เจอไกด์ S12</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">14</span><div class="name"><span class="en">Flamethrower<i class="dot blue" title="รูนสีน้ำเงิน"></i></span></div></div>
+          <div class="chips"><span class="chip">Fire DoT</span><span class="chip up">เดินได้</span><span class="chip down">ตัวคูณลด</span></div>
+          <p>เดินได้และล็อกเป้าเอง แต่ขยายดาเมจต่อขั้นลด 20% → 15% และตัวคูณเผาไหม้ 108% → 90% ส่วนสถานะ Burn ก็ไม่ทะลุค่าต้านธาตุแล้ว</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="tier c">
+      <div class="tier-label"><b>C</b><span>โดนเนิร์ฟทางตรงหรือทางอ้อม</span></div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-head"><span class="rank">15</span><div class="name"><span class="en">Bloodshed<i class="dot red" title="รูนสีแดง"></i></span></div></div>
+          <div class="chips"><span class="chip">Bleed</span><span class="chip down">Bleed ไม่ทะลุเกราะ</span></div>
+          <p>สาย Bleed เสียผล Ignore Armor ใน S12 และ Intensify Pain ที่ใช้เสริมสาย DoT ถูกลดขยายดาเมจสถานะผิดปกติ 218.5% → 140%</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">16</span><div class="name"><span class="en">Toxic Flame<i class="dot blue" title="รูนสีน้ำเงิน"></i></span></div></div>
+          <div class="chips"><span class="chip">Poison DoT</span><span class="chip voice">ชุมชนว่าอ่อน</span></div>
+          <p>บอร์ดเกาหลีตั้งคำถามว่าสาย DoT ล้วนแบบนี้ดาเมจไม่พอเมื่อเทียบสกิลที่ตีโดน และยังโดน Intensify Pain เนิร์ฟพ่วงไปด้วย</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">17</span><div class="name"><span class="en">Sentry (Electric / Frost / Fan Blade / Piercing)<i class="dot green" title="รูนสีเขียว"></i></span></div></div>
+          <div class="chips"><span class="chip">Sentry</span><span class="chip down">ไม่ได้ +4%</span></div>
+          <p>สกิลอื่นแทบทุกตัวได้ +4% แต่กลุ่ม Sentry อยู่ที่ −0.4% ถึง −0.9% จึงอ่อนลงเมื่อเทียบกับสกิลอื่น</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="tier q">
+      <div class="tier-label"><b>?</b><span>ยังประเมินไม่ได้</span></div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-head"><span class="rank">–</span><div class="name"><span class="en">Charged Shot</span><span class="th">ชาร์จยิง</span></div></div>
+          <div class="chips"><span class="chip">Physical</span><span class="chip">Bowgun</span><span class="chip new">ใหม่ S12</span></div>
+          <p>ตัวเลขสูงที่สุดในกลุ่ม 1766% +755 และเพิ่มตามขั้นชาร์จ แต่ต้องยืนนิ่งตอนชาร์จ ใช้ Multishot / Split / Chain ไม่ได้ เหมาะยิงบอสตัวเดียว ยังไม่เจอบิลด์จากผู้เล่น</p>
+        </article>
+        <article class="card">
+          <div class="card-head"><span class="rank">–</span><div class="name"><span class="en">Sacred Devotion / Enchanted Sentry</span></div></div>
+          <div class="chips"><span class="chip">Summoner</span><span class="chip up">เดินได้</span></div>
+          <p>สายซัมมอนเดินระหว่าง channel ได้แล้ว แต่ได้บทลงโทษดาเมจสกิลที่ถูกทริกเกอร์ 30% ยังไม่มีข้อมูลผู้เล่น</p>
+        </article>
+      </div>
+    </div>
+
+  </div>
+  <div class="legend">
+    <span>จุดสีหลังชื่อ = สีรูน (แดง/เขียว/น้ำเงิน) ไม่มีจุด = ไม่มีข้อมูลสี</span>
+    <span>"+4%" = ได้แค่บัฟทั่วไปที่สกิลแทบทุกตัวได้ใน S12</span>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">หลักฐาน</span>
+    <h2>ตัวเลขที่เปลี่ยนใน S12 (Lv45)</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>สกิล</th><th>Tier</th><th>ก่อน S12</th><th>S12</th><th>เปลี่ยน</th><th>สิ่งที่เปลี่ยนอื่น ๆ</th></tr></thead>
+      <tbody>
+        <tr><td>Frost Storm</td><td class="tier-cell tc-s">S</td><td class="num">267% +564</td><td class="num">900% +1900</td><td class="num up">+237%</td><td>เพิ่มระเบิดใหม่ ดาเมจพื้นที่เย็นต่อครั้งเหลือ 76% +159</td></tr>
+        <tr><td>Divine Punishment</td><td class="tier-cell tc-s">S</td><td class="num">–</td><td class="num">1067% +185</td><td class="num">ใหม่</td><td>คริเวท +55%, คริดาเมจ +80%, คริแล้ว 40% ยิงซ้ำ</td></tr>
+        <tr><td>Toxic Mist</td><td class="tier-cell tc-a">A</td><td class="num">45% / 830%</td><td class="num">721% / 960%</td><td class="num up">ระเบิด ×16</td><td>ตัวเลขแรก = ระเบิด, ตัวที่สอง = หมอกพิษ</td></tr>
+        <tr><td>Domain of Strength</td><td class="tier-cell tc-a">A</td><td class="num">598% +339</td><td class="num">933% +530</td><td class="num up">+56%</td><td>เดินได้ระหว่าง channel, เดินช้าลง 30%, สกิลที่ถูกทริกเกอร์ดาเมจลด 30%</td></tr>
+        <tr><td>Sacred Light</td><td class="tier-cell tc-a">A</td><td class="num">485%</td><td class="num">504%</td><td class="num up">+4%</td><td>สแตก Blessing 10 ชั้น (ขยายดาเมจ 3% และเจาะธาตุ 2% ต่อชั้น) เดินแล้วไม่หาย</td></tr>
+        <tr><td>Lightning Arrow</td><td class="tier-cell tc-a">A</td><td class="num">939%</td><td class="num">977%</td><td class="num up">+4%</td><td>–</td></tr>
+        <tr><td>Fire Ball</td><td class="tier-cell tc-a">A</td><td class="num">620%</td><td class="num">645%</td><td class="num up">+4%</td><td>–</td></tr>
+        <tr><td>Whirlwind</td><td class="tier-cell tc-b">B</td><td class="num">660%</td><td class="num">686%</td><td class="num up">+4%</td><td>เดินช้าลง 54.5% ระหว่าง channel</td></tr>
+        <tr><td>Flamethrower</td><td class="tier-cell tc-b">B</td><td class="num">405%</td><td class="num">421%</td><td class="num up">+4%</td><td>ขยายดาเมจต่อขั้น 20% → 15%, ตัวคูณเผาไหม้ 108% → 90%</td></tr>
+        <tr><td>Intensify Pain (สกิลเสริม)</td><td class="tier-cell tc-c">–</td><td class="num">218.5%</td><td class="num">140%</td><td class="num down">−36%</td><td>ขยายดาเมจสถานะผิดปกติ กระทบสาย DoT/Bleed</td></tr>
+        <tr><td>Electric Sentry</td><td class="tier-cell tc-c">C</td><td class="num">220%</td><td class="num">218%</td><td class="num down">−0.9%</td><td>Sentry ตัวอื่นอยู่ที่ −0.4%</td></tr>
+        <tr><td>Charged Shot</td><td class="tier-cell tc-q">?</td><td class="num">–</td><td class="num">1766% +755</td><td class="num">ใหม่</td><td>+22.8% ดาเมจต่อขั้นชาร์จ, ทะลุทุกเป้า</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caption">ที่มา: ชีทข้อมูลรูนทางการ S12 (ข้อมูลเดียวกับเว็บ Undecember DB) และประกาศอัปเดต 9/10 · กลไกที่เปลี่ยนทั้งระบบ: Bleed ไม่ทะลุเกราะ และ Burn ไม่ทะลุค่าต้านธาตุแล้ว</p>
+</section>
+
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">วิธีจัดอันดับ</span>
+    <h2>เกณฑ์ที่ใช้</h2>
+  </div>
+  <ol class="method">
+    <li><b>ตัวเลขทางการ:</b> เทียบดาเมจ Lv45 ก่อนและหลัง S12 จาก 187 สกิลรูน สกิลเกือบทุกตัวได้ +4% เท่ากัน ตัวที่ได้มากกว่านั้นชัดเจนมีแค่ Frost Storm, Domain of Strength และ Toxic Mist</li>
+    <li><b>เสียงผู้เล่น:</b> คลิปไกด์ S12 บน YouTube และโพสต์ในบอร์ด DC Inside ช่วง 10 ก.ย. – 14 ต.ค. 2026 สกิลที่มีคนยืนยันว่าแรงได้อันดับสูงกว่าสกิลที่มีแค่ตัวเลข</li>
+    <li><b>ความง่าย:</b> ถ้าหลักฐานใกล้กัน สกิลที่ไม่ง้อของ เดินได้ หรือตีหมู่ได้ จะได้อันดับสูงกว่า</li>
+    <li><b>ยังไม่จัดอันดับ:</b> สกิลใหม่หรือสายที่ไม่มีข้อมูลผู้เล่นเลย จัดไว้ใน "?" แทนการเดา</li>
+  </ol>
+  <ul class="notes">
+    <li>หน้านี้นับเฉพาะสกิลหลักทำดาเมจ สกิลเสริม เช่น Seal, Totem, บัฟ ไม่ได้จัดอันดับ</li>
+    <li>สกิลที่ไม่อยู่ในลิสต์ไม่ได้แปลว่าอ่อน แค่ยังไม่มีหลักฐานพอให้ขยับขึ้นหรือลง</li>
+    <li>ใช้หน้าจำลองดาเมจของเว็บ Undecember DB เทียบสกิลกับรูนลิงก์และของของตัวเองได้</li>
+  </ul>
+</section>
+
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">อ้างอิง</span>
+    <h2>แหล่งข้อมูล</h2>
+  </div>
+  <ul class="sources">
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1788995577330018641">9/10 Update Notice (S12 The Farside)</a><span>10 ก.ย. 2026</span></li>
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1787827169392016333">Director's Letter vol.24</a><span>27 ส.ค. 2026</span></li>
+    <li><a href="https://www.youtube.com/watch?v=FfMwBPXGL-8">YouTube: Frost Storm Is Much Stronger (S12)</a><span>ก.ย. 2026</span></li>
+    <li><a href="https://gall.dcinside.com/mgallery/board/view/?id=undecember&amp;no=303969">DC Inside: 날먹빌드 뜬거같은데? (Frost Storm)</a><span>11 ก.ย. 2026</span></li>
+    <li><a href="https://www.youtube.com/watch?v=fB5IlwJPoek">YouTube: Divine Punishment + Frost Bomb (S12)</a><span>ก.ย. 2026</span></li>
+    <li><a href="https://www.youtube.com/watch?v=-saSbSZdjjg">YouTube: Divine Punishment + Blizzard (S12)</a><span>ก.ย. 2026</span></li>
+    <li><a href="https://www.youtube.com/watch?v=1CUsWKBbrFw">YouTube: Divine Punishment + Condense Fire (S12)</a><span>ก.ย. 2026</span></li>
+    <li><a href="https://gall.dcinside.com/mgallery/board/view/?id=undecember&amp;no=304212">DC Inside: Divine Punishment vs Fire Ball</a><span>30 ก.ย. 2026</span></li>
+    <li><a href="https://gall.dcinside.com/mgallery/board/view/?id=undecember&amp;no=304250">DC Inside: สกิลตีโดน vs DoT ล้วน</a><span>3 ต.ค. 2026</span></li>
+    <li><a href="https://gall.dcinside.com/mgallery/board/view/?id=undecember&amp;no=304315">DC Inside: มือใหม่เส้น Sacred Light + Fire Ball</a><span>12 ต.ค. 2026</span></li>
+    <li><a href="https://gall.dcinside.com/mgallery/board/view/?id=undecember&amp;no=304124">DC Inside: Divine Punishment + Electric Ball</a><span>21 ก.ย. 2026</span></li>
+    <li><a href="https://allthings.how/undecember-the-farside-five-channelling-skills-you-can-now-cast-on-the-move/">allthings.how: สกิล channel 5 ตัวที่เดินได้</a><span>16 ก.ย. 2026</span></li>
+  </ul>
+</section>
+
+<footer>
+  จัดทำจากข้อมูลสาธารณะ ไม่ใช่การจัดอันดับทางการของ LINE Games อันดับอาจเปลี่ยนเมื่อมีแพตช์หรือผู้เล่นค้นพบบิลด์ใหม่
+</footer>
+
+</div>
+</body>
+</html>
