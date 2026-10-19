@@ -18,7 +18,7 @@
 ```bash
 npm install
 npm run dev        # http://localhost:5173
-npm test           # unit tests (ตัวอ่านค่าสถานะ, สูตรดาเมจ)
+npm test           # unit tests (ตัวอ่านค่าสถานะ, สูตรดาเมจ, ตัวอ่าน pak)
 npm run build      # static build ใน dist/ (deploy ที่ไหนก็ได้ เช่น GitHub Pages)
 ```
 
@@ -36,8 +36,10 @@ npm run build      # static build ใน dist/ (deploy ที่ไหนก็�
 ```
 data-raw/official-s12/   CSV จากชีททางการ (ข้อมูลต้นทาง)
 data-raw/buildDecember/  RuneList.json (MIT) — สีรูน / วิธีได้รับ
+data-raw/game-assets/    รายชื่อ asset จากไฟล์เกม 1 ไฟล์ต่อแพตช์ (ไอคอน แผนที่ blueprint)
 scripts/build-data.mjs   CSV → src/data/generated/*.json
 scripts/i18n-*.mjs       หา/รวมคำแปลไทย
+scripts/assets-*.mjs     ดึงรายชื่อ asset จากไฟล์เกม / เทียบระหว่างแพตช์ (ตัวอ่าน pak อยู่ใน scripts/lib/)
 src/data/th/             คำแปลไทย (lines.json = บรรทัดค่าสถานะ, descriptions.json = คำอธิบายรูน)
 src/lib/statParser.ts    แปลงบรรทัดค่าสถานะ → modifier
 src/lib/damage.ts        สูตรคำนวณดาเมจ
@@ -58,6 +60,24 @@ docs/thai-glossary.md    อภิธานศัพท์สำหรับแ�
 4. แก้ `DATA_META` ใน `src/data/index.ts` (ชื่อซีซัน และวันที่อัปเดต)
 
 ข้อความที่ยังไม่มีคำแปลจะแสดงเป็นภาษาอังกฤษแทน เว็บจึงไม่พัง
+
+## ตรวจของใหม่จากไฟล์เกม
+
+ใช้ดูว่าแพตช์ใหม่เพิ่มไอคอนรูนสกิล/รูนลิงก์ ไอเทม เอสเซนส์ แผนที่ หรือ blueprint อะไรบ้าง ซึ่งมักเห็นได้ก่อนประกาศ
+สคริปต์อ่าน `AssetRegistry.bin` จาก pak ของเกมที่ติดตั้งไว้ ไม่ต้องใช้คีย์ AES และไม่ต้องเปิดเกม
+
+```bash
+npm run assets:extract                     # อ่าน pak ล่าสุด → data-raw/game-assets/<pak>.tsv
+npm run assets:diff                        # เทียบ 2 snapshot ล่าสุด
+npm run assets:diff -- --out report.md     # บันทึกรายงานเต็มเป็น Markdown
+npm run assets:diff -- --unnamed           # ไอคอนรูนที่ยังไม่มีชื่อรูนคู่กัน (รูนใหม่/ยังไม่ออก/ถูกตัด)
+```
+
+- โฟลเดอร์เกมเริ่มต้นคือ `D:\SteamLibrary\steamapps\common\Undecember` เปลี่ยนได้ด้วย `--game <โฟลเดอร์>` หรือตัวแปร `UNDECEMBER_DIR`
+- `--all` ดึงจากทุก pak ที่มี registry (เก็บแพตช์เก่าที่ยังอยู่ในเครื่อง) ถ้าหลายแพตช์ติดกันเหมือนกันทุกไฟล์จะเก็บไว้แค่แพตช์เก่าสุด
+- `--full` เขียนรายชื่อครบทุก asset (~150,000 รายการ รวมเสียง/โมเดล) ไว้ที่ `data-raw/game-assets/full/` ซึ่งไม่ถูก commit
+- ชื่อรูนในรายงานจับคู่จากชื่อไฟล์ไอคอนใน RuneList.json ของ buildDecember
+- ได้แค่ **ชื่อ asset** ตัวเลขสกิล/ไอเทมและข้อความในเกมถูกเกมเข้ารหัสไว้อีกชั้น จึงยังต้องใช้ชีททางการเหมือนเดิม
 
 ## สูตรดาเมจและสมมติฐาน
 

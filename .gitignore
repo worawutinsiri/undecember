@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# full asset lists from `npm run assets:extract -- --full` (~12 MB each)
+data-raw/game-assets/full/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

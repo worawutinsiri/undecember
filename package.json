@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "test": "vitest run",
     "data:build": "node scripts/build-data.mjs",
-    "i18n:missing": "node scripts/i18n-extract.mjs"
+    "i18n:missing": "node scripts/i18n-extract.mjs",
+    "assets:extract": "node scripts/assets-extract.mjs",
+    "assets:diff": "node scripts/assets-diff.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
