@@ -138,7 +138,7 @@ section { display: grid; gap: 18px; scroll-margin-top: 16px; }
 .bar-track { height: 26px; background: var(--sunken); border-radius: 5px; position: relative; overflow: hidden; }
 .bar-fill {
   position: absolute; inset: 0 auto 0 0;
-  width: calc(var(--v) / 9.49 * 100%);
+  width: calc(var(--v) / var(--max, 9.49) * 100%);
   background: color-mix(in srgb, var(--cold) 55%, var(--raised));
   border-radius: 5px;
   display: flex; align-items: center; justify-content: flex-end;
@@ -248,12 +248,13 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
   <h1>Frost Storm สายคริ</h1>
   <p class="lede">บิลด์ธนูธาตุน้ำแข็งที่ได้บัฟหนักที่สุดใน S12 เน้นทำค่าคริเวทให้ถึง 100% จากไอเทมและสกิลเสริม แล้วใช้ช่องรูนลิงก์เพิ่มดาเมจ</p>
   <div class="meta">
-    <span>อัปเดต 16 ต.ค. 2026</span>
+    <span>อัปเดต 19 ต.ค. 2026 (รวมยูนีคแพตช์ 8 ต.ค.)</span>
     <span>ทดสอบด้วยตัวจำลองดาเมจ Undecember DB</span>
     <span>18,564 ชุดรูนลิงก์</span>
   </div>
   <nav class="toc" aria-label="สารบัญ">
     <a href="#core">หัวใจของบิลด์</a>
+    <a href="#oct8">ของใหม่ 8 ต.ค.</a>
     <a href="#links">รูนลิงก์</a>
     <a href="#crit">ค่าคริเวท</a>
     <a href="#gear">ไอเทม</a>
@@ -266,7 +267,7 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
   </nav>
   <div class="caveat">
     <strong>ตัวเลขมาจากการจำลอง ไม่ใช่ค่าที่วัดในเกม</strong>
-    <span>ใช้ไอเทมชุดตัวอย่าง รูนเลเวล 45 เกรด Legendary มอนเลเวล 150 ค่าต้านธาตุ 40% ตัวจำลองยังไม่นับ Zodiac ไลน์ที่เป็นสแตก และผลพิเศษของ Vertical Chill จึงใช้ดูสัดส่วนว่าอะไรคุ้ม มากกว่าดู DPS จริง</span>
+    <span>ใช้ไอเทมชุดตัวอย่าง รูนเลเวล 45 เกรด Legendary มอนเลเวล 150 ค่าต้านธาตุ 40% ตัวจำลองยังไม่นับ Zodiac ไลน์ที่เป็นสแตก และผลพิเศษของ Vertical Chill จึงใช้ดูสัดส่วนว่าอะไรคุ้ม มากกว่าดู DPS จริง ค่าของยูนีคแพตช์ 8 ต.ค. มาจากประกาศแพตช์ ยังไม่ได้ตรวจใน tooltip ของเกม</span>
   </div>
 </header>
 
@@ -294,6 +295,52 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
     </div>
   </div>
   <p class="caption">DPS ของชุดรูนลิงก์แนะนำ (Find Weakness, Shadow Archer, Attack DMG Increase, Element DMG Amplification, Concentrated Area DMG, Mana Storm) เปิดเงื่อนไขทุกไลน์ ยังไม่นับการโจมตีของธนูเงาที่ Shadow Archer เรียกออกมา DPS จริงจึงสูงกว่านี้</p>
+</section>
+
+<section id="oct8">
+  <div class="sec-head">
+    <span class="eyebrow">Patch · 8 ต.ค. 2026</span>
+    <h2>ของใหม่แพตช์ 8 ต.ค.: เปลี่ยน 3 ช่อง</h2>
+  </div>
+  <div class="thesis">
+    <b>เปลี่ยนธนู หมวก และแหวน 1 เป็นยูนีคใหม่ แล้วเติมคริแบบตัวเลขกลับให้โอกาสคริถึง 100%</b>
+    <span>ช่องอื่นและรูนลิงก์ใช้เหมือนเดิม DPS ในตัวจำลองขึ้นจาก 9.49 เป็น 38.9 ล้าน (ประมาณ 4 เท่า) และถอด Transcendent Leo's Flow ออกได้เลย</span>
+  </div>
+  <div class="bars" style="--max:38.91" role="img" aria-label="DPS 9.49 ล้านเมื่อใช้ชุดไอเทมเดิม, 35.59 ล้านเมื่อใส่ยูนีคใหม่ครบ 3 ชิ้น, 38.91 ล้านเมื่อเติมคริแบบตัวเลขกลับเป็น 80">
+    <div class="bar-row">
+      <div class="bar-label"><span>ชุดไอเทมเดิม</span><span class="mono">คริเวท 705 · โอกาสคริ 100%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="--v:9.49"><b>9.49 ล้าน</b></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><span>ใส่ยูนีคใหม่ครบ 3 ชิ้น (คริแบบตัวเลขเหลือ 60)</span><span class="mono">คริเวท 598 · โอกาสคริ 90%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="--v:35.59"><b>35.59 ล้าน</b></div></div>
+    </div>
+    <div class="bar-row best">
+      <div class="bar-label"><span>+ เติมคริแบบตัวเลขกลับเป็น 80</span><span class="mono">คริเวท 720 · โอกาสคริ 100%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="--v:38.91"><b>38.91 ล้าน</b></div></div>
+    </div>
+  </div>
+  <p class="caption">ตั้งค่าเดียวกับหัวข้อหัวใจของบิลด์ ยูนีคใหม่ใช้ค่าออปชันครึ่งทางจากประกาศแพตช์ และนับสแตกของ Ring of Fate เฉลี่ย 7.5 สแตก</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>ช่อง</th><th>เดิม → ใหม่</th><th>DPS เมื่อเปลี่ยนชิ้นเดียว</th><th>ต้องรู้</th></tr></thead>
+      <tbody>
+        <tr><td>หมวก <span class="pill top">เพิ่มมากสุด</span></td><td>ของคราฟ → <b>Crown of Integration</b></td><td class="num">16.41 ล้าน (×1.73)<small>Ultimate 23.16 ล้าน</small></td><td>เลเวลรูนสกิล AoE +2 (Ultimate +4) ซึ่ง Frost Storm ได้ด้วย ขยายดาเมจพื้นที่ 40–80% และคริดาเมจของดาเมจพื้นที่ +65–90% ต้องมี Str 118 และ Int 118 และลดพื้นที่สกิล 60% ตัวเลขนี้หักคริแบบตัวเลข 20 ที่หมวกคราฟเคยให้แล้ว</td></tr>
+        <tr><td>แหวน 1</td><td>Transcendent Leo's Flow → <b>Transcendent Ring of Fate</b></td><td class="num">14.83 ล้าน (×1.56)<small>12 สแตกตลอด 17.68 ล้าน</small></td><td>คริดาเมจ +40–45% และคริดาเมจ +35% ต่อสแตกนาน 8 วินาทีเมื่อคริระหว่างเปิด Seal of Critical Chance (สูงสุด 12 สแตก) ไม่ต้องใช้สเตตัส</td></tr>
+        <tr><td>ธนู</td><td>Transcendent Tipan's Long Bow → <b>Foresight of the Conqueror</b></td><td class="num">13.74 ล้าน (×1.45)<small>Ultimate 16.94 ล้าน</small></td><td>ดาเมจฐานสูงกว่า Tipan's มาก ความเร็ว +32–36%, %คริอุปกรณ์ +170–180%, ขยายดาเมจ 13–16%, คริดาเมจ +100–110% ต้องมี Dex 270</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li><b>ไม่ต้องย้าย Leo's Flow ไปช่องแหวน 2</b> ลองใส่แทน Star Usurper's Ring แล้ว DPS ลดลง เพราะคริแบบตัวเลข +10 ของ Star Usurper's มีผลมากกว่าคริเวท +44–53% ของ Leo's Flow</li>
+    <li><b>เติมคริแบบตัวเลข 20 กลับมา</b> เมื่อเปลี่ยนหมวกคราฟเป็น Crown โอกาสคริจะลดเหลือ 90% เติมจาก Zodiac หรือออปชันคริบนของคราฟช่องบ่าและเข็มขัด</li>
+    <li><b>Crown กับ Concentrated Area DMG ทำให้ระเบิดเล็กมาก</b> พื้นที่ลด 60% และ 30% ตามลำดับ ใช้ตีบอสได้ ตอนเคลียร์ม็อบให้สลับ Concentrated Area DMG เป็น Area Effect หรือใส่หมวกเดิม</li>
+    <li><b>สแตกของ Foresight ช่วยไม่มาก</b> ตี Elite แล้วได้สแตกละ ขยายดาเมจ 0.5% และคริดาเมจ +1.5% แต่สแตกหมดทุก 10 วินาที Frost Storm ตีได้ราว 12 สแตกต่อรอบ ได้เพิ่มแค่ 9% (13.74 → 15.00 ล้าน) ตัวเลขในตารางจึงไม่นับสแตกนี้</li>
+    <li><b>Ring of Fate: เช็ก tooltip ในเกมก่อนซื้อ</b> ประกาศแพตช์ไม่ได้บอกชัดว่า +35% เป็นค่าต่อสแตก ตัวเลขนี้ถือว่าเป็นค่าต่อสแตกตามรูปแบบไลน์สแตกอื่นของเกม สแตกไม่รีเฟรชเวลา จึงหมดทุก 8 วินาทีแล้วเริ่มนับใหม่ เฉลี่ยราว 7.5 สแตก ส่วนไลน์ขยายดาเมจ 15–22% ต้องมี Str, Dex และ Int 200 ขึ้นไปทั้งสามค่า ไม่ได้นับ</li>
+    <li><b>เวอร์ชัน Ultimate ได้จาก Gear Summon เท่านั้น</b> ถ้าได้ครบ 3 ชิ้นและสแตกเต็มตลอด ตัวจำลองได้ 74.58 ล้าน</li>
+    <li>Find Weakness ยังดีกว่า Sharpness ในชุดใหม่ (38.91 เทียบกับ 37.75 ล้าน)</li>
+    <li>เจอจากรายชื่อไอคอนในไฟล์เกมแพตช์ 8 ต.ค. ที่มีไอคอนยูนีคเพิ่ม 8 อัน ตรงกับยูนีคใหม่ 4 ชิ้นและที่ปรับใหม่ 4 ชิ้นในประกาศแพตช์ ตัวที่ปรับใหม่อย่าง Hamal's Wrath (ถุงมือ) และ Seized Breath (สร้อย) ไม่ช่วยบิลด์นี้ ค่าออปชันมาจากประกาศแพตช์</li>
+  </ul>
 </section>
 
 <section id="links">
@@ -415,11 +462,12 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
       <thead><tr><th>ช่อง</th><th>ไอเทม / สกิล</th><th>ค่าคริ</th></tr></thead>
       <tbody>
         <tr><td>สกิลเสริม<small>ต้องมี</small></td><td>Seal of Critical Chance<small>เปิดค้างไว้ (Toggle)</small></td><td>คริเวท +252.4%, โอกาสคริ +3%</td></tr>
-        <tr><td>อาวุธ</td><td>Transcendent Tipan's Long Bow<small>ช่วงเก็บเลเวล: Star Usurper's Bow (ใส่ได้ตั้งแต่ Lv1)</small></td><td>คริอุปกรณ์ +9, %คริอุปกรณ์ +46–57%, คริดาเมจ +52–61%</td></tr>
+        <tr><td>อาวุธ</td><td>Foresight of the Conqueror <span class="pill top">ใหม่ 8 ต.ค.</span><small>ยังไม่มี: Transcendent Tipan's Long Bow · ช่วงเก็บเลเวล: Star Usurper's Bow (ใส่ได้ตั้งแต่ Lv1)</small></td><td>คริอุปกรณ์ +9, %คริอุปกรณ์ +170–180%, คริดาเมจ +100–110%, ขยายดาเมจ 13–16%<small>Tipan's: %คริอุปกรณ์ +46–57%, คริดาเมจ +52–61%</small></td></tr>
+        <tr><td>หมวก</td><td>Crown of Integration <span class="pill top">ใหม่ 8 ต.ค.</span><small>ต้องมี Str 118 และ Int 118 ยังไม่มี: ของคราฟที่มีคริแบบตัวเลข</small></td><td>คริดาเมจของดาเมจพื้นที่ +65–90%, ขยายดาเมจพื้นที่ 40–80%, เลเวลรูนสกิล AoE +2</td></tr>
         <tr><td>ซองธนู</td><td>Transcendent Vertical Chill<small>ยูนีคเฉพาะ Frost Storm ถ้ายังไม่มีใช้ Transcendent Miraseti's Wave</small></td><td>ไม่มีค่าคริ แต่ขยายดาเมจ Frost Storm (Miraseti's: คริ Attack +40–70%)</td></tr>
         <tr><td>ถุงมือ</td><td>Transcendent Spica's Light</td><td>คริเวท +40–50%, คริดาเมจ +100–125%</td></tr>
         <tr><td>สร้อย</td><td>Transcendent Hira's Charm<small>หรือ Surging Knowledge / Star Usurper's Necklace</small></td><td>คริดาเมจ +29–34% และ +80–100%</td></tr>
-        <tr><td>แหวน 1</td><td>Transcendent Leo's Flow</td><td>คริเวท +44–53%, คริดาเมจ +25–28%</td></tr>
+        <tr><td>แหวน 1</td><td>Transcendent Ring of Fate <span class="pill top">ใหม่ 8 ต.ค.</span><small>ยังไม่มี: Transcendent Leo's Flow (คริเวท +44–53%, คริดาเมจ +25–28%)</small></td><td>คริดาเมจ +40–45% และ +35% ต่อสแตกเมื่อคริระหว่างเปิด Seal of Critical Chance (สูงสุด 12 สแตก)</td></tr>
         <tr><td>แหวน 2</td><td>Ultimate Ring of Amplified Power<small>หรือ Ultimate Approaching Omen</small></td><td>โอกาสคริ +25%, คริดาเมจ +110% และบัฟขยายดาเมจ</td></tr>
         <tr><td>สกิลเสริม<small>ทางเลือก</small></td><td>Illusion Arrow<small>เปิดค้างไว้ ดูหัวข้อ <a href="#illusion">Illusion Arrow</a></small></td><td>ยิงลูกธนูติดตามเป้าให้เองเมื่อ Frost Storm ยิงโดน ช่วยดาเมจราว 5%</td></tr>
         <tr><td>สกิลเสริม<small>ทางเลือก</small></td><td>Marksman</td><td>ขยายดาเมจโปรเจกไทล์ 58.3% นาน 3 วินาที คูลดาวน์ 30 วินาที</td></tr>
@@ -428,7 +476,7 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
   </div>
   <ul class="notes">
     <li>Vertical Chill ไม่สร้างพื้นที่เย็น แต่เปลี่ยนค่าระยะเวลาพื้นที่เย็นทั้งหมดเป็นขยายดาเมจ Frost Storm ใน S12 ดาเมจหลักย้ายไปอยู่ที่ระเบิด 900% ส่วนพื้นที่เย็นเหลือแค่ 76% ต่อครั้ง การตัดพื้นที่เย็นทิ้งจึงเสียไม่มาก (ข้อนี้เป็นการอนุมาน ยังไม่ได้ทดสอบในเกม)</li>
-    <li>ช่องที่เหลือ (หมวก บ่า เข็มขัด) ใช้ของคราฟที่มีออปชันคริแบบตัวเลขหรือค่าป้องกัน ดูวิธีคราฟได้ใน <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></li>
+    <li>ช่องที่เหลือ (บ่า เข็มขัด) ใช้ของคราฟที่มีออปชันคริแบบตัวเลขหรือค่าป้องกัน เมื่อเปลี่ยนหมวกเป็น Crown ต้องหาคริแบบตัวเลขจากสองช่องนี้หรือ Zodiac เพิ่มราว 20 ดูวิธีคราฟได้ใน <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></li>
   </ul>
 
   <div class="gear-opt" id="shoes">
@@ -487,6 +535,7 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
     </div>
     <h3>เลือกลาคริมา</h3>
     <ul class="notes">
+      <li><b>ถ้าลาคริมามีช่องอาวุธมือเดียวแทนสองมือ</b> ใส่ Token of Trust (Bowgun, Dex 270) ได้ขยายดาเมจ 17–25% และคริดาเมจ +115–130% ไลน์ %คริอุปกรณ์ของอาวุธน่าจะไม่ส่งต่อ ตัวเลือกนี้ดูจากออปชัน ยังไม่ได้จำลอง</li>
       <li><b>Item Level ของลาคริมาต้องไม่ต่ำกว่ายูนีค</b> ใส่ของที่เลเวลสูงกว่าลาคริมาไม่ได้ ยูนีคทั้งสามเป็น Tier 34–35 จึงต้องหาลาคริมา Item Level สูง</li>
       <li><b>ค่า Charm Blessing</b> ลาคริมาแต่ละอันต้องใช้ Blessing ต่างชนิดและต่างจำนวน เช็กก่อนซื้อว่าเครื่องรางที่ใส่อยู่ให้ค่าถึง</li>
       <li><b>ช่อง Magic/Rare ที่เหลือ</b> ยิ่ง % สูงยิ่งดี ลาคริมา Legendary ช่อง Magic ได้ 110–130% ช่อง Rare ได้ 85–100% (แพตช์ ม.ค. 2025) ของคราฟ Magic ที่ออปชันดีจึงคุ้มที่สุดในช่องนี้ ลาคริมาที่ดรอปก่อนแพตช์นั้นยังเป็น 40–85% และลาคริมาจากกล่องอีเวนต์ไม่ได้โบนัส % ดูดซับ</li>
@@ -610,8 +659,9 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
   </div>
   <ol class="steps">
     <li><div><b>ลง Frost Storm พร้อมรูนลิงก์ 6 ช่อง และเปิด Seal of Critical Chance</b> ใช้ Star Usurper's Bow ระหว่างเก็บเลเวล</div></li>
-    <li><div><b>ไล่ค่าคริเวทให้ถึงเป้า</b> (700 สำหรับมอน Lv150) จาก Zodiac, ออปชันคริแบบตัวเลขบนของคราฟ และ Tipan's Long Bow ขั้นนี้ให้ DPS เพิ่มมากที่สุด</div></li>
+    <li><div><b>ไล่ค่าคริเวทให้ถึงเป้า</b> (700 สำหรับมอน Lv150) จาก Zodiac, ออปชันคริแบบตัวเลขบนของคราฟ และธนูยูนีค (Foresight of the Conqueror หรือ Tipan's Long Bow) ขั้นนี้ให้ DPS เพิ่มมากที่สุด</div></li>
     <li><div><b>หา Vertical Chill</b> มาใส่ช่องซองธนู</div></li>
+    <li><div><b>เปลี่ยนเป็นยูนีคแพตช์ 8 ต.ค.</b> เรียงตามผลที่ได้: หมวก Crown of Integration (×1.73 ลง Str 118 และ Int 118 ก่อน), แหวน 1 Transcendent Ring of Fate (×1.56) แล้วธนู Foresight of the Conqueror (×1.45) ทุกครั้งที่เปลี่ยน เช็กว่าโอกาสคริยังถึง 100%</div></li>
     <li><div><b>เมื่อโอกาสคริเกิน 85%</b> ลองสลับ Find Weakness เป็น Sharpness แล้วค่อยเติมคริดาเมจจากถุงมือ สร้อย และแหวน</div></li>
     <li><div><b>อัปเลเวลและเกรดรูนลิงก์</b> โดยเฉพาะ Attack DMG Increase ที่ให้ผลมากที่สุด และปลุก (Awaken) Shadow Archer ระดับ Origin เพื่อรับคริดาเมจ Attack +45–60%</div></li>
     <li><div><b>เปิด Illusion Arrow เป็นสกิลเสริม</b> เริ่มจาก Time Acceleration กับ Multishot ก่อน แล้วค่อยเติมรูนสายกายภาพ ไม่ต้องรีบ เพราะช่วยดาเมจแค่ราว 5%</div></li>
@@ -624,7 +674,9 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
     <h2>ข้อจำกัดของการจำลอง</h2>
   </div>
   <ul class="notes">
-    <li>ไอเทมที่ใช้: Transcendent Tipan's Long Bow, Transcendent Vertical Chill, Transcendent Spica's Light, Transcendent Hira's Charm, Transcendent Leo's Flow, Star Usurper's Ring ค่าสุ่มออปชันตั้งไว้ครึ่งทาง</li>
+    <li>ไอเทมที่ใช้: Transcendent Tipan's Long Bow, Transcendent Vertical Chill, Transcendent Spica's Light, Transcendent Hira's Charm, Transcendent Leo's Flow, Star Usurper's Ring ค่าสุ่มออปชันตั้งไว้ครึ่งทาง ส่วนชุดใหม่เปลี่ยนธนู แหวน 1 และเพิ่มหมวกตามหัวข้อ <a href="#oct8">ของใหม่ 8 ต.ค.</a></li>
+    <li>ตัวเลขในหัวข้อรองเท้า ชุดเกราะ และ Illusion Arrow ยังคำนวณกับชุดไอเทมเดิม ใช้เทียบตัวเลือกในหัวข้อเดียวกันได้ แต่อย่าเทียบตรง ๆ กับ 38.9 ล้านของชุดใหม่</li>
+    <li>ยูนีคแพตช์ 8 ต.ค. ยังไม่อยู่ในฐานข้อมูลของเว็บ จึงใส่ค่าจากประกาศแพตช์เข้าตัวจำลองเอง ไลน์ขยายดาเมจพื้นที่ของ Crown นับเป็นขยายดาเมจของ Frost Storm ทั้งหมด และเลเวลรูน 47 (Ultimate 49) เป็นค่าประมาณแบบเส้นตรงจาก Lv45 กับ Lv50</li>
     <li>"คริ 40 / 80" คือค่าสมมติแทน Zodiac และของคราฟ ตัวจำลองยังไม่รองรับสองส่วนนี้</li>
     <li>ยังไม่นับธนูเงาที่ Shadow Archer เรียกออกมา นับแค่ดาเมจโปรเจกไทล์และค่าเจาะดาเมจของรูน ในเกมจริงรูนนี้จึงดีกว่าที่ตัวเลขแสดง</li>
     <li>ยังไม่นับผลแปลงค่าของ Vertical Chill และ Abyss Stone</li>
@@ -640,6 +692,8 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
   <ul class="sources">
     <li>ชีทข้อมูลรูนและยูนีคทางการ S12 (ข้อมูลเดียวกับเว็บ Undecember DB)<span>ก.ย. 2026</span></li>
     <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1788995577330018641">9/10 Update Notice (S12 The Farside)</a><span>10 ก.ย. 2026</span></li>
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1791362347478022365">Oct 8 Update Notice: Crown of Integration, Foresight of the Conqueror, Ring of Fate</a><span>8 ต.ค. 2026</span></li>
+    <li>รายชื่อ asset จากไฟล์เกม (AssetRegistry แพตช์ DXT_00000950)<span>8 ต.ค. 2026</span></li>
     <li><a href="https://guide.floor.line.games/UD/en_US/detail/1166866686993700041">Character Info (ไกด์ทางการ: คริฐาน +50%)</a><span>ไกด์ทางการ</span></li>
     <li><a href="https://gall.dcinside.com/mgallery/board/view/?id=undecember&amp;no=285417">DC Inside: วิธีคำนวณค่าคริเวท</a><span>9 เม.ย. 2024</span></li>
     <li><a href="https://www.youtube.com/watch?v=FfMwBPXGL-8">YouTube: Frost Storm Is Much Stronger (S12)</a><span>ก.ย. 2026</span></li>
