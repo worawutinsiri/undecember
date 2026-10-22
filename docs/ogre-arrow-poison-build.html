@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ogre Arrow สายพิษ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Taviraj:wght@500;700&display=swap">
+<style>
+/* Layout: build sheet in one reading column; rune board diagram beside its table on wide screens; tokens shared with Undecember DB */
+:root {
+  --bg: #0f0d14;
+  --raised: #17141f;
+  --sunken: #0b0a10;
+  --line: #2e2840;
+  --line-strong: #463d5e;
+  --text: #d9d4e4;
+  --dim: #a39bb6;
+  --faint: #756e8a;
+  --strong: #f6f2ff;
+  --accent: #d4a64a;
+  --accent-strong: #f0c46a;
+  --accent-bg: rgba(212, 166, 74, 0.12);
+  --cold: #5cc8ff;
+  --cold-bg: rgba(92, 200, 255, 0.1);
+  --warn: #f0b84a;
+  --warn-bg: rgba(240, 184, 74, 0.09);
+  --up: #4cc27a;
+  --rune-red: #e0533f;
+  --rune-green: #4cc27a;
+  --rune-blue: #4f8df0;
+  --display: 'Taviraj', 'IBM Plex Sans Thai', Georgia, serif;
+  --sans: 'IBM Plex Sans Thai', system-ui, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+    --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+    --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+    --cold: #1f8fc7; --cold-bg: rgba(31, 143, 199, 0.09);
+    --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c;
+    --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+  --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+  --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+  --cold: #1f8fc7; --cold-bg: rgba(31, 143, 199, 0.09);
+  --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c;
+  --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15.5px/1.7 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-strong); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 72px;
+  display: grid;
+  gap: 50px;
+}
+@media (max-width: 520px) { .page { padding-inline: 16px; padding-block: 28px 56px; gap: 42px; } }
+
+h1, h2, h3 { color: var(--strong); text-wrap: balance; margin: 0; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.15; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1.3; }
+h3 { font-size: 1rem; font-weight: 600; line-height: 1.4; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow {
+  font: 600 0.72rem/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.dim { color: var(--dim); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+header { display: grid; gap: 14px; }
+.lede { font-size: 1.06rem; color: var(--dim); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--faint); }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px; }
+nav.toc a {
+  font-size: 0.82rem;
+  color: var(--dim);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+nav.toc a:hover { color: var(--strong); border-color: var(--line-strong); }
+.caveat {
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+  background: var(--warn-bg);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  display: grid;
+  gap: 4px;
+}
+.caveat strong { color: var(--warn); font-weight: 600; }
+
+section { display: grid; gap: 18px; scroll-margin-top: 16px; }
+.sec-head { display: grid; gap: 6px; padding-top: 18px; border-top: 1px solid var(--line); }
+
+/* thesis */
+.thesis {
+  border-left: 3px solid var(--cold);
+  background: var(--cold-bg);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 18px;
+  display: grid;
+  gap: 6px;
+}
+.thesis b { color: var(--strong); font-size: 1.08rem; font-weight: 600; }
+.thesis span { color: var(--dim); font-size: 0.92rem; }
+
+/* dps bars */
+.bars { display: grid; gap: 14px; background: var(--raised); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+.bar-row { display: grid; gap: 6px; }
+.bar-label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; font-size: 0.88rem; }
+.bar-label span:first-child { color: var(--text); }
+.bar-label .mono { color: var(--faint); font-size: 0.8rem; }
+.bar-track { height: 26px; background: var(--sunken); border-radius: 5px; position: relative; overflow: hidden; }
+.bar-fill {
+  position: absolute; inset: 0 auto 0 0;
+  width: calc(var(--v) / var(--max, 9.49) * 100%);
+  background: color-mix(in srgb, var(--cold) 55%, var(--raised));
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: flex-end;
+  padding-right: 8px;
+}
+.bar-row.best .bar-fill { background: var(--cold); }
+.bar-fill b { font: 600 0.8rem/1 var(--mono); color: var(--strong); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bar-row.best .bar-fill b { color: var(--bg); }
+.caption { font-size: 0.8rem; color: var(--faint); }
+
+/* rune board */
+.board-wrap { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 20px; align-items: center; }
+@media (max-width: 760px) { .board-wrap { grid-template-columns: 1fr; } .board-wrap svg { max-width: 340px; margin: 0 auto; } }
+.board-wrap svg { width: 100%; height: auto; display: block; }
+.hx { stroke-width: 2; }
+.hx-red { fill: color-mix(in srgb, var(--rune-red) 16%, var(--raised)); stroke: var(--rune-red); }
+.hx-green { fill: color-mix(in srgb, var(--rune-green) 16%, var(--raised)); stroke: var(--rune-green); }
+.hx-blue { fill: color-mix(in srgb, var(--rune-blue) 16%, var(--raised)); stroke: var(--rune-blue); }
+.hx-skill { fill: color-mix(in srgb, var(--cold) 22%, var(--raised)); stroke: var(--cold); stroke-width: 3; }
+.hx-text { fill: var(--strong); font: 600 10.5px/1 var(--sans); text-anchor: middle; }
+.hx-sub { fill: var(--dim); font: 9.5px/1 var(--mono); text-anchor: middle; }
+.hx-skill-text { fill: var(--strong); font: 700 13px/1 var(--sans); text-anchor: middle; }
+.link-line { stroke: var(--accent); stroke-width: 2; opacity: 0.8; }
+.hx-shared { stroke: var(--accent); stroke-width: 3; stroke-dasharray: 6 3; }
+.hx-sm { font-size: 9px; }
+.slot-col, .board-wrap.dual td:first-child { white-space: nowrap; width: 1%; }
+.hx-skill-sm { font-size: 11px; }
+.hx-share { fill: var(--accent-strong); font: 600 9px/1 var(--sans); text-anchor: middle; }
+.board-wrap.dual { grid-template-columns: minmax(0, 380px) minmax(0, 1fr); }
+@media (max-width: 760px) { .board-wrap.dual { grid-template-columns: 1fr; } .board-wrap.dual svg { max-width: 380px; } }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+th, td { text-align: left; padding: 9px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th {
+  font: 600 0.7rem/1.3 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  background: var(--sunken);
+  white-space: nowrap;
+}
+td:first-child { color: var(--strong); font-weight: 500; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td small { display: block; color: var(--faint); font-size: 0.8rem; font-weight: 400; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; vertical-align: 0; }
+.dot.red { background: var(--rune-red); }
+.dot.green { background: var(--rune-green); }
+.dot.blue { background: var(--rune-blue); }
+.pill {
+  display: inline-block;
+  font: 600 0.66rem/1.5 var(--mono);
+  padding: 0 6px;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+  vertical-align: 1px;
+}
+.pill.top { color: var(--up); }
+.pill.cond { color: var(--warn); }
+.pill.shadow { color: var(--cold); }
+
+.gear-opt { display: grid; gap: 12px; padding-top: 8px; scroll-margin-top: 16px; }
+.gear-opt h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.swaps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+@media (max-width: 560px) { .swaps { grid-template-columns: 1fr; } }
+.swap { border-left: 2px solid var(--line-strong); padding: 2px 0 2px 14px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.swap p { font-size: 0.88rem; color: var(--dim); }
+
+/* crit math */
+.formula {
+  font: 600 1rem/1.5 var(--mono);
+  color: var(--strong);
+  background: var(--sunken);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.need { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 520px) { .need { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.need div { background: var(--raised); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; display: grid; gap: 2px; }
+.need span { font-size: 0.78rem; color: var(--faint); }
+.need b { font: 600 1.3rem/1.2 var(--mono); color: var(--accent-strong); font-variant-numeric: tabular-nums; }
+
+ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
+ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: baseline; }
+ol.steps > li::before { content: counter(s); font: 600 0.8rem/1 var(--mono); color: var(--accent); text-align: right; }
+ol.steps > li > div { min-width: 0; }
+ul.notes { margin: 0; padding-left: 1.1rem; display: grid; gap: 4px; color: var(--dim); font-size: 0.9rem; }
+
+ul.sources { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.88rem; }
+ul.sources li { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
+ul.sources li span { font: 0.74rem var(--mono); color: var(--faint); white-space: nowrap; }
+@media (max-width: 520px) { ul.sources li { grid-template-columns: 1fr; gap: 2px; } }
+
+footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="eyebrow">Undecember · S12 The Farside · Build</span>
+  <h1>Ogre Arrow สายพิษ</h1>
+  <p class="lede">บิลด์ธนูธาตุพิษ ใช้ Ogre Arrow ตีบอส เพราะลูกเจาะแล้ววนกลับมาโดนบอสซ้ำ ฟาร์มด้วย Poison Rain of Arrows และเปิด Poison Explosion ค้างไว้ ใช้หลักทำค่าคริแบบเดียวกับ<a href="frost-storm-crit-build.html">บิลด์ Frost Storm สายคริ</a></p>
+  <div class="meta">
+    <span>อัปเดต 22 ต.ค. 2026</span>
+    <span>ทดสอบด้วยตัวจำลองดาเมจ Undecember DB และคำนวณการเจาะเอง</span>
+  </div>
+  <nav class="toc" aria-label="สารบัญ">
+    <a href="#core">หัวใจของบิลด์</a>
+    <a href="#pierce">ทำไมตีบอสแรง</a>
+    <a href="#boss">เทียบ DPS บอส</a>
+    <a href="#board">กระดานรูน</a>
+    <a href="#farm">บิลด์ฟาร์ม</a>
+    <a href="#gear">ไอเทม</a>
+    <a href="#awaken">ปลุกพลัง</a>
+    <a href="#order">ลำดับการอัป</a>
+    <a href="#limits">ข้อจำกัด</a>
+  </nav>
+  <div class="caveat">
+    <strong>ตัวเลขของ Ogre Arrow เป็นการคำนวณเอง ยังไม่ได้ทดสอบในเกม</strong>
+    <span>ตัวจำลองไม่นับการเจาะเลย จึงคำนวณเพิ่มโดยสมมติว่าทุกลูกโดนบอส และวนกลับมาโดนซ้ำทุกครั้งที่เจาะ ถ้าในเกมลูกหลุดเป้าบ่อย ดาเมจจะต่ำกว่านี้มาก กรณีแย่สุดคือโดนครั้งเดียวต่อลูก ประมาณ 1.1 ล้าน ควรลองยิงหุ่นบอสเทียบกับ Frost Storm ก่อนลงทุน</span>
+  </div>
+</header>
+
+<section id="core">
+  <div class="sec-head">
+    <span class="eyebrow">Core idea</span>
+    <h2>หัวใจของบิลด์</h2>
+  </div>
+  <div class="thesis">
+    <b>เพิ่มจำนวนลูกและจำนวนเจาะของ Ogre Arrow ให้มากที่สุด</b>
+    <span>ลูกที่เจาะได้ 6 ครั้งจะโดนบอสได้ถึง 7 ครั้ง ยิ่งมีลูกเยอะยิ่งคูณขึ้น รูนลิงก์และไอเทมทุกชิ้นในหน้านี้เลือกเพื่อเพิ่มลูก เพิ่มเจาะ หรือเพิ่มดาเมจต่อการเจาะ</span>
+  </div>
+  <div class="swaps">
+    <div class="swap">
+      <h3>Ogre Arrow: ตีบอส</h3>
+      <p>ลูกติดตามเป้าและเจาะทะลุ ไม่มี Overheat ยิงได้ไม่หยุด รูนเกรด Normal หาได้จากดรอปและร้านค้า</p>
+    </div>
+    <div class="swap">
+      <h3>Poison Rain of Arrows: ฟาร์ม</h3>
+      <p>ยิงลูกธนู 5 ลูกขึ้นฟ้าแล้วตกลงมาระเบิดหลายจุด ครอบคลุมพื้นที่กว้าง รูนเกรด Magic ขึ้นไป ได้จาก Synthesis</p>
+    </div>
+    <div class="swap">
+      <h3>Poison Explosion: เปิดค้าง</h3>
+      <p>ทำ Venom ครบ 5 สแตกแล้วระเบิดพิษรอบตัว ช่วยเคลียร์มอน และเป็นเงื่อนไขของไหล่ Critical Point Venom Sac</p>
+    </div>
+    <div class="swap">
+      <h3>Seal of Critical Chance: เปิดค้าง</h3>
+      <p>หาค่าคริแบบเดียวกับบิลด์ Frost Storm คือ Seal of Critical Chance กับ Find Weakness แล้วเติมคริแบบตัวเลขจาก Zodiac และของคราฟ</p>
+    </div>
+  </div>
+</section>
+
+<section id="pierce">
+  <div class="sec-head">
+    <span class="eyebrow">Mechanic</span>
+    <h2>ทำไม Ogre Arrow ตีบอสแรง</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>ค่า (Lv45)</th><th>ได้อะไร</th></tr></thead>
+      <tbody>
+        <tr><td>ลูกติดตามเป้า + เจาะ 2</td><td>เจอบอสตัวเดียว ลูกจะเจาะผ่านแล้ววนกลับมาโดนซ้ำ สกิลมีไลน์ "ดาเมจลด 20% เมื่อโดนเป้าเดิมซ้ำ" แปลว่าตั้งใจให้โดนซ้ำได้</td></tr>
+        <tr><td>ดาเมจ +30% ต่อจำนวนเจาะ</td><td>สูงสุด +150% เต็มเมื่อเจาะได้ 5 ครั้ง</td></tr>
+        <tr><td>ดาเมจ 178% +719</td><td>ตัวคูณต่ำแต่ดาเมจตัวเลขสูง ได้ประโยชน์จากดาเมจแบบตัวเลขของอาวุธและไอเทม</td></tr>
+        <tr><td>จำนวนลูก</td><td>2 ลูก เกรด Legendary +1 ปลุกระดับ Source +1 และธนู Star Usurper's +2</td></tr>
+        <tr><td>จำนวนเจาะ</td><td>2 ครั้ง ปลุกระดับ Origin +1 รูน Piercing +3 และธนู Star Usurper's +1</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="formula">ครั้งที่โดนต่อการยิง ≈ จำนวนลูก × (1 + จำนวนเจาะ × 0.8)</div>
+  <ul class="notes">
+    <li>ครั้งแรกได้ดาเมจเต็ม ครั้งที่วนกลับมาได้ 80% ตามไลน์ดาเมจลด 20%</li>
+    <li>ตัวอย่าง: 4 ลูก เจาะ 6 ครั้ง ได้ 4 × (1 + 6 × 0.8) = 23 เท่าของการโดนครั้งเดียว ถ้าใช้ธนู Star Usurper's เป็น 6 ลูก เจาะ 7 ครั้ง ได้ประมาณ 40 เท่า</li>
+    <li>Ogre Arrow ใช้ Multishot, Split Projectile และ Chain ไม่ได้ จำนวนลูกจึงเพิ่มได้จากเกรด การปลุก และไอเทมเท่านั้น</li>
+  </ul>
+</section>
+
+<section id="boss">
+  <div class="sec-head">
+    <span class="eyebrow">Boss DPS</span>
+    <h2>เทียบ DPS ใส่บอสกับ Frost Storm</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>บิลด์</th><th>ไอเทม</th><th>DPS บอส (ประมาณ)</th></tr></thead>
+      <tbody>
+        <tr><td>Frost Storm<small>บิลด์หลัก</small></td><td>ชุดน้ำแข็งตามบิลด์หลัก</td><td class="num">~51 ล้าน<small>โดนครบ 3 ลูก ถ้าโดนลูกเดียว 17 ล้าน</small></td></tr>
+        <tr><td>Ogre Arrow</td><td>ชุดน้ำแข็งเดิม เปลี่ยนแค่ซองธนูเป็น Miraseti's Wave</td><td class="num">~50 ล้าน</td></tr>
+        <tr><td>Ogre Arrow</td><td>+ ซอง Ultimate Master of Trajectory (ไลน์เจาะ) + ไหล่ Critical Point Venom Sac</td><td class="num">~67 ล้าน*</td></tr>
+        <tr><td>Ogre Arrow <span class="pill top">แรงสุด</span></td><td>+ ธนู Star Usurper's Bow แทน Tipan's</td><td class="num">~150 ล้าน*</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li><b>* ยังไม่นับไลน์ใหญ่ของ Venom Sac</b> "ขยายดาเมจพิษ 150–250% ขณะเปิด Poison Explosion" ตัวจำลองอ่านไลน์นี้ไม่ได้ ถ้าไลน์นี้ใช้กับดาเมจธาตุพิษของ Ogre Arrow จริง จะแรงขึ้นอีกราว 3 เท่า แต่ในไอเทมชิ้นเดียวกันมีสถานะ "Poison" แบบสแตกอยู่ด้วย ไลน์นี้จึงอาจขยายแค่ดาเมจของสถานะ Poison ต้องเช็กในเกม</li>
+    <li>รูนลิงก์ทุกแถวใช้ชุดเดียวกัน: Find Weakness, Attack DMG Increase, Piercing, Pierce Wound, Quick Attack และ Additional Poison DMG ปลุก Ogre Arrow ระดับ Source และ Origin</li>
+    <li>ใช้ Hira's Charm ต่อได้ ในการจำลองดีกว่า Surging Knowledge (สร้อยสายพิษ) ประมาณ 5% เพราะคริดาเมจสองไลน์ของ Hira's มีผลกับทุกธาตุ ส่วนโบนัสของ Surging Knowledge ส่วนใหญ่ต้องยืนในพื้นที่ Poison Area</li>
+    <li>ค่า Frost Storm มาจากรอบเทียบสกิลธนูทั้งหมดด้วยการตั้งค่าเดียวกัน (ค่าคริ 100% บอส Lv150 ค่าต้านธาตุ 40%)</li>
+  </ul>
+</section>
+
+<section id="board">
+  <div class="sec-head">
+    <span class="eyebrow">Link runes</span>
+    <h2>กระดานรูน: แชร์รูนลิงก์ 2 ช่อง</h2>
+  </div>
+  <div class="board-wrap dual">
+    <svg viewBox="-128 -118 376 304" aria-label="Ogre Arrow และ Poison Rain of Arrows วางห่างกันสองช่องแบบเยื้อง มีรูนลิงก์สองช่องอยู่ติดทั้งสองสกิล">
+      <defs>
+        <polygon id="hex2" points="37.2,-21.5 37.2,21.5 0,43 -37.2,21.5 -37.2,-21.5 0,-43"/>
+      </defs>
+      <!-- Ogre Arrow only -->
+      <use href="#hex2" class="hx hx-green" x="-39.84" y="-69"/>
+      <text class="hx-text hx-sm" x="-39.84" y="-66">Piercing</text>
+      <use href="#hex2" class="hx hx-green" x="39.84" y="-69"/>
+      <text class="hx-text hx-sm" x="39.84" y="-72">Pierce</text>
+      <text class="hx-text hx-sm" x="39.84" y="-61">Wound</text>
+      <use href="#hex2" class="hx hx-green" x="-79.67" y="0"/>
+      <text class="hx-text hx-sm" x="-79.67" y="-3">Quick</text>
+      <text class="hx-text hx-sm" x="-79.67" y="8">Attack</text>
+      <use href="#hex2" class="hx hx-green" x="-39.84" y="69"/>
+      <text class="hx-text hx-sm" x="-39.84" y="66">Additional</text>
+      <text class="hx-text hx-sm" x="-39.84" y="77">Poison DMG</text>
+      <!-- Poison Rain of Arrows only -->
+      <use href="#hex2" class="hx hx-green" x="159.3" y="0"/>
+      <text class="hx-text hx-sm" x="159.3" y="-3">Quick</text>
+      <text class="hx-text hx-sm" x="159.3" y="8">Attack</text>
+      <use href="#hex2" class="hx hx-green" x="199.2" y="69"/>
+      <text class="hx-text hx-sm" x="199.2" y="66">Additional</text>
+      <text class="hx-text hx-sm" x="199.2" y="77">Poison DMG</text>
+      <use href="#hex2" class="hx hx-blue" x="159.3" y="138"/>
+      <text class="hx-text hx-sm" x="159.3" y="135">Element</text>
+      <text class="hx-text hx-sm" x="159.3" y="146">DMG Amp.</text>
+      <use href="#hex2" class="hx hx-blue" x="79.67" y="138"/>
+      <text class="hx-text hx-sm" x="79.67" y="135">Mana</text>
+      <text class="hx-text hx-sm" x="79.67" y="146">Storm</text>
+      <!-- shared -->
+      <use href="#hex2" class="hx hx-green hx-shared" x="79.67" y="0"/>
+      <text class="hx-text hx-sm" x="79.67" y="-6">Find</text>
+      <text class="hx-text hx-sm" x="79.67" y="5">Weakness</text>
+      <text class="hx-share" x="79.67" y="19">แชร์</text>
+      <use href="#hex2" class="hx hx-red hx-shared" x="39.84" y="69"/>
+      <text class="hx-text hx-sm" x="39.84" y="63">Attack DMG</text>
+      <text class="hx-text hx-sm" x="39.84" y="74">Increase</text>
+      <text class="hx-share" x="39.84" y="88">แชร์</text>
+      <!-- skills -->
+      <use href="#hex2" class="hx hx-skill" x="0" y="0"/>
+      <text class="hx-skill-text hx-skill-sm" x="0" y="-2">Ogre</text>
+      <text class="hx-skill-text hx-skill-sm" x="0" y="11">Arrow</text>
+      <use href="#hex2" class="hx hx-skill" x="119.5" y="69"/>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="61">Poison</text>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="73">Rain of</text>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="85">Arrows</text>
+    </svg>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th class="slot-col">ช่อง</th><th>Ogre Arrow</th><th>Poison Rain of Arrows</th></tr></thead>
+        <tbody>
+          <tr><td>แชร์ 1</td><td colspan="2"><span class="dot green"></span>Find Weakness (ลิงก์ให้ทั้งคู่)</td></tr>
+          <tr><td>แชร์ 2</td><td colspan="2"><span class="dot red"></span>Attack DMG Increase (ลิงก์ให้ทั้งคู่)</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot green"></span>Piercing <span class="pill top">ต้องมี</span></td><td><span class="dot green"></span>Quick Attack</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot green"></span>Pierce Wound <span class="pill top">ต้องมี</span></td><td><span class="dot green"></span>Additional Poison DMG</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot green"></span>Quick Attack</td><td><span class="dot blue"></span>Mana Storm</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot green"></span>Additional Poison DMG</td><td><span class="dot blue"></span>Element DMG Amplification</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><b>Piercing</b> เจาะ +3, ดาเมจโปรเจกไทล์ +41.5% และขยายดาเมจ 5.7% ต่อจำนวนเจาะ 1 ครั้ง <b>Pierce Wound</b> ดาเมจ +38.5% และขยายดาเมจ 5.7% ต่อการเจาะแต่ละครั้ง ตัวจำลองไม่นับทั้งสองตัว แต่สองตัวนี้คือเหตุผลที่ Ogre Arrow แรง</li>
+    <li>วางสองสกิลห่างกัน 2 ช่องแบบเยื้องเหมือน<a href="frost-storm-ice-crystal-build.html#board">บิลด์ Frost Storm + Ice Crystal Arrow</a> ช่องที่ติดทั้งสองสกิลใส่ Find Weakness กับ Attack DMG Increase</li>
+    <li>รูนลิงก์ของ Ogre Arrow เป็นสีเขียวเกือบทั้งหมด ต้องหารูนสกิล Ogre Arrow ที่ช่องลิงก์เป็นสีเขียวหรือสีขาวหลายช่อง</li>
+    <li>Poison Explosion วางที่ช่องไหนก็ได้ ไม่ต้องลิงก์ เพราะใช้แค่เปิดค้างไว้</li>
+    <li>ชุดของ Poison Rain of Arrows เลือกจากการจำลองโดยตัด Concentrated Area DMG ออก เพราะลดพื้นที่ 30% ไม่เหมาะกับการฟาร์ม</li>
+  </ul>
+</section>
+
+<section id="farm">
+  <div class="sec-head">
+    <span class="eyebrow">Farming</span>
+    <h2>บิลด์ฟาร์ม: Poison Rain of Arrows + Poison Explosion</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>สกิล</th><th>ค่า (Lv45)</th><th>หน้าที่</th></tr></thead>
+      <tbody>
+        <tr><td>Poison Rain of Arrows</td><td>5 ลูก ระเบิดกว้าง 150 ดาเมจ 253% +534 ต่อลูก โอกาสทำ Venom +10%</td><td>ยิงใส่กลุ่มมอน ลูกกระจายลงหลายจุด</td></tr>
+        <tr><td>Poison Explosion<small>เปิดค้าง</small></td><td>ทำ Venom ครบ 5 สแตกแล้วระเบิดรอบตัวกว้าง 250 ดาเมจ 277% +268 คูลดาวน์ 3 วินาที</td><td>เก็บมอนรอบตัวที่เหลือ และเปิดเงื่อนไขของไหล่ Venom Sac</td></tr>
+        <tr><td>Ogre Arrow</td><td>ลูกติดตามเป้าและเจาะ</td><td>ไล่ยิงมอนที่อยู่ห่าง แต่ละลูกเจาะผ่านได้หลายตัว</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>ในการจำลอง Poison Rain of Arrows ได้ 1.3 ล้านต่อลูก ถ้าโดนครบ 5 ลูกได้ 6.5 ล้าน (ยังไม่นับไลน์ 150–250% ของ Venom Sac)</li>
+    <li>ปลุก Poison Rain of Arrows ระดับ Source ได้ค่าทำ Venom +15–30 และดาเมจ Venom +25–50% ทำให้ Poison Explosion ระเบิดบ่อยขึ้น ไม่ควรปลุกระดับ Origin ตอนฟาร์ม เพราะได้ผลของ Concentrated Area DMG ติดมา ลดพื้นที่ 30%</li>
+    <li>Ogre Arrow ไม่มีโอกาสทำ Venom ในตัว สแตกของ Poison Explosion จึงมาจาก Poison Rain of Arrows เป็นหลัก</li>
+    <li>ไม่ควรใช้หมวก Crown of Integration กับบิลด์นี้ ถึงจะเพิ่มเลเวลสกิล AoE ให้ Poison Rain of Arrows แต่ลดพื้นที่สกิล 60% และ Ogre Arrow ไม่ใช่สกิล AoE จึงไม่ได้อะไร</li>
+    <li>สกิลพิษตัวอื่นที่แรง เช่น Toxic Mist และ Poison Orb เป็น Spell ใช้ค่า Int และไม่ได้ดาเมจจากธนู จึงไม่เหมาะกับบิลด์นี้</li>
+    <li>บอร์ด DC Inside เคยมีคนแชร์เซ็ต Ogre Arrow คู่ Plague Spike (Spell ที่ลดค่าต้านธาตุ 10% และเพิ่มดาเมจพิษที่ศัตรูได้รับ 10%) เคลียร์ระดับ 15 ใน 3 นาที แต่เป็นโพสต์ซีซันก่อน</li>
+  </ul>
+</section>
+
+<section id="gear">
+  <div class="sec-head">
+    <span class="eyebrow">Gear</span>
+    <h2>ไอเทม</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>ช่อง</th><th>ไอเทม</th><th>ทำไม</th></tr></thead>
+      <tbody>
+        <tr><td>ธนู <span class="pill top">สำคัญสุด</span></td><td>Star Usurper's Bow<small>ยังไม่มี: Transcendent Tipan's Long Bow หรือ Foresight of the Conqueror</small></td><td>ลูก +2 และเจาะ +1 ซึ่ง Ogre Arrow เพิ่มได้ยาก คริดาเมจ +120% และ Attack DMG +100% ใส่ได้ตั้งแต่ Lv1 ในการจำลองได้ DPS บอสมากกว่า Tipan's ราว 2.2 เท่า</td></tr>
+        <tr><td>ซองธนู</td><td>Ultimate Master of Trajectory<small>ต้องสุ่มได้ไลน์ "ขยายดาเมจ 4–5.8% ต่อจำนวนเจาะ" (โอกาส 25%) · ยังไม่มี: Transcendent Miraseti's Wave</small></td><td>เจาะ 6 ครั้งได้ขยายดาเมจราว 30% และดาเมจแบบตัวเลขสูง ต้องมี Dex 270</td></tr>
+        <tr><td>ไหล่</td><td>Transcendent Critical Point Venom Sac<small>ต้องมี Dex 118 และ Int 118</small></td><td>ขยายดาเมจพิษ 5–12% ใช้ทรัพยากรลด 6.7–7.8% และไลน์ขยายดาเมจพิษ 150–250% ขณะเปิด Poison Explosion (ดูหมายเหตุในหัวข้อเทียบ DPS)</td></tr>
+        <tr><td>สร้อย</td><td>Transcendent Hira's Charm<small>หรือ Transcendent Surging Knowledge</small></td><td>คริดาเมจ +29–34% และ +80–100% มีผลกับทุกธาตุ ไลน์ Cold DMG เสียเปล่า แต่ในการจำลองยังดีกว่า Surging Knowledge</td></tr>
+        <tr><td>ถุงมือ</td><td>Transcendent Spica's Light</td><td>คริเวท +40–50%, คริดาเมจ +100–125% และเจาะธาตุ 10.8–12%</td></tr>
+        <tr><td>แหวน</td><td>Transcendent Ring of Fate + Star Usurper's Ring<small>ยังไม่มี: Transcendent Leo's Flow</small></td><td>ใช้ชุดเดียวกับบิลด์หลัก ค่าคริไม่ขึ้นกับธาตุ</td></tr>
+        <tr><td>รองเท้า</td><td>Ultimate Silver Shadow's Footprints</td><td>คริเวท คริดาเมจ ขยายดาเมจ และสแตกความเร็ว ต้องมี Str 228</td></tr>
+        <tr><td>หมวก ชุดเกราะ เข็มขัด</td><td>ของคราฟ</td><td>เน้นคริแบบตัวเลข HP และค่าต้านธาตุ ชุดเกราะดูตัวเลือกได้ใน<a href="frost-storm-crit-build.html#armor">บิลด์หลัก</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li><b>Star Usurper's Bow ยังไม่ได้นับไลน์ "ขยายดาเมจ 3% ต่อเลเวลตัวละคร (สูงสุด 300%)"</b> ตัวจำลองอ่านไลน์นี้ไม่ได้ ตัวเลข 150 ล้านจึงไม่รวมไลน์นี้ ถ้าไลน์นี้ทำงานเต็มที่เลเวลสูง ธนูนี้จะแรงกว่าในตารางอีก</li>
+    <li>ถ้าเปลี่ยนจาก Frost Storm มาบิลด์นี้ ของที่ใช้ต่อได้คือถุงมือ แหวน รองเท้า และสร้อย ของที่ต้องเปลี่ยนคือธนู ซองธนู (Vertical Chill ใช้ได้เฉพาะ Frost Storm) และไหล่</li>
+    <li>ค่าสถานะที่ต้องมี: Dex 270 (Master of Trajectory), Str 228 (Silver Shadow's), Dex 118 และ Int 118 (Venom Sac)</li>
+    <li>ใช้มานาราว 40 ต่อครั้งสำหรับ Ogre Arrow และ 43 สำหรับ Poison Rain of Arrows (จากตัวจำลอง) Poison Explosion มีไลน์เพิ่มค่าทรัพยากร 15% อีกต่อหนึ่ง</li>
+  </ul>
+</section>
+
+<section id="awaken">
+  <div class="sec-head">
+    <span class="eyebrow">Awakening</span>
+    <h2>ปลุกพลัง</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>สกิล / ระดับ</th><th>ได้อะไร</th><th>ช่วยอย่างไร</th></tr></thead>
+      <tbody>
+        <tr><td>Ogre Arrow · Source <span class="pill top">ตีบอส</span></td><td>ลูก +1, ดาเมจโปรเจกไทล์ +30–50%</td><td>ลูกเพิ่ม 1 ลูกคือโดนบอสเพิ่มอีกหลายครั้ง</td></tr>
+        <tr><td>Ogre Arrow · Origin <span class="pill top">ตีบอส</span></td><td>เจาะ +1, ดาเมจโปรเจกไทล์ +30–50%</td><td>ทุกลูกวนกลับมาโดนเพิ่ม 1 ครั้ง</td></tr>
+        <tr><td>Ogre Arrow · Verity</td><td>ดาเมจ +125% เมื่อตี Elite, ขยายดาเมจ 8–12% เมื่อตีบอส</td><td>ลิงก์ Elite Slayer ไม่ได้ ช่วยบอสน้อยกว่าสองระดับแรก</td></tr>
+        <tr><td>Poison Rain of Arrows · Source <span class="pill top">ฟาร์ม</span></td><td>ค่าทำ Venom +15–30, ดาเมจ Venom +25–50%, Hit Rate +400–600</td><td>ทำ Venom บ่อยขึ้น Poison Explosion ระเบิดถี่ขึ้น</td></tr>
+        <tr><td>Poison Rain of Arrows · Origin</td><td>ได้ผลของ Concentrated Area DMG ติดมา</td><td>ลดพื้นที่ 30% ไม่เหมาะกับการฟาร์ม</td></tr>
+        <tr><td>Poison Rain of Arrows · Verity</td><td>โอกาส 20% ได้ Corrosion (ดาเมจพิษ +30%)</td><td>ใช้ได้ แต่ไม่จำเป็น</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="order">
+  <div class="sec-head">
+    <span class="eyebrow">Priority</span>
+    <h2>ลำดับการอัป</h2>
+  </div>
+  <ol class="steps">
+    <li><div><b>ลองก่อนลงทุน</b> ใส่ Ogre Arrow พร้อม Piercing และ Pierce Wound แล้วยิงหุ่นบอสเทียบกับ Frost Storm ด้วยไอเทมที่มีอยู่ ถ้าลูกวนกลับมาโดนบอสซ้ำจริง ควรได้ใกล้เคียงหรือมากกว่า Frost Storm</div></li>
+    <li><div><b>ใส่ Star Usurper's Bow</b> เพิ่มลูกและเจาะได้มากที่สุด ใส่ได้ตั้งแต่ Lv1 จึงลองได้ทันที</div></li>
+    <li><div><b>ไล่ค่าคริให้ถึงเป้า</b> ด้วย Seal of Critical Chance, Find Weakness และคริแบบตัวเลข ตามสูตรใน<a href="frost-storm-crit-build.html#crit">บิลด์หลัก</a></div></li>
+    <li><div><b>ปลุก Ogre Arrow ระดับ Source และ Origin</b> ได้ลูก +1 และเจาะ +1</div></li>
+    <li><div><b>ลง Int 118 แล้วใส่ไหล่ Critical Point Venom Sac</b> คู่กับเปิด Poison Explosion ค้าง เช็กในเกมว่าไลน์ขยายดาเมจพิษ 150–250% ทำให้ Ogre Arrow แรงขึ้นจริงไหม</div></li>
+    <li><div><b>หาซอง Ultimate Master of Trajectory</b> ที่สุ่มได้ไลน์ "ขยายดาเมจต่อจำนวนเจาะ"</div></li>
+    <li><div><b>เพิ่ม Poison Rain of Arrows</b> ไว้ฟาร์ม วางให้แชร์ Find Weakness กับ Attack DMG Increase แล้วปลุกระดับ Source</div></li>
+  </ol>
+</section>
+
+<section id="limits">
+  <div class="sec-head">
+    <span class="eyebrow">Limits</span>
+    <h2>ข้อจำกัดของการคำนวณ</h2>
+  </div>
+  <ul class="notes">
+    <li>ตัวจำลองไม่นับจำนวนเจาะ ไลน์ "+30% ต่อจำนวนเจาะ" และรูน Piercing, Pierce Wound ส่วนนี้ผมคำนวณเอง: ทุกลูกโดนบอส ลูกวนกลับมาโดนซ้ำทุกครั้งที่เจาะ ครั้งซ้ำได้ 80% และ Pierce Wound นับเฉลี่ยครึ่งหนึ่งของจำนวนเจาะ</li>
+    <li>ไลน์ที่ตัวจำลองอ่านไม่ได้และยังไม่นับ: ขยายดาเมจพิษ 150–250% ของ Venom Sac, ขยายดาเมจต่อเลเวลของ Star Usurper's Bow และไลน์ต่อจำนวนเจาะของ Master of Trajectory (ไลน์นี้คิดเองที่ 4.9% ต่อการเจาะ)</li>
+    <li>ค่าคริตั้งไว้ 100% รูน Lv45 เกรด Legendary บอส Lv150 ค่าต้านธาตุ 40% เกราะ 30% ค่าสุ่มออปชันตั้งไว้ครึ่งทาง</li>
+    <li>ยังไม่ได้รวมยูนีคแพตช์ 8 ต.ค. (Foresight of the Conqueror, Ring of Fate) ในการจำลอง เพราะยังไม่อยู่ในฐานข้อมูลของเว็บ</li>
+    <li>ไม่ได้นับดาเมจของ Poison Explosion และสถานะ Venom</li>
+  </ul>
+</section>
+
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">อ้างอิง</span>
+    <h2>แหล่งข้อมูล</h2>
+  </div>
+  <ul class="sources">
+    <li>ชีทข้อมูลรูนและยูนีคทางการ S12 (ข้อมูลเดียวกับเว็บ Undecember DB)<span>ก.ย. 2026</span></li>
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1788995577330018641">9/10 Update Notice (S12 The Farside)</a><span>10 ก.ย. 2026</span></li>
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1791362347478022365">Oct 8 Update Notice: Foresight of the Conqueror, Ring of Fate</a><span>8 ต.ค. 2026</span></li>
+    <li><a href="https://gall.dcinside.com/mgallery/board/view/?id=undecember&amp;no=272374">DC Inside: เซ็ต Ogre Arrow + Plague Spike (도깨비화살 역병가시)</a><span>ซีซันก่อน</span></li>
+  </ul>
+</section>
+
+<footer>
+  <span>ดูเพิ่ม: <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> · <a href="frost-storm-ice-crystal-build.html">Frost Storm + Ice Crystal Arrow</a> · <a href="skill-tier-list.html">Tier List สกิล S12</a></span>
+  <span>จัดทำจากข้อมูลสาธารณะและตัวจำลองของ Undecember DB ไม่ใช่ไกด์ทางการของ LINE Games</span>
+</footer>
+
+</div>
+</body>
+</html>
