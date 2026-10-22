@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frost Storm + Ice Crystal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Taviraj:wght@500;700&display=swap">
+<style>
+/* Layout: build sheet in one reading column; rune board diagram beside its table on wide screens; tokens shared with Undecember DB */
+:root {
+  --bg: #0f0d14;
+  --raised: #17141f;
+  --sunken: #0b0a10;
+  --line: #2e2840;
+  --line-strong: #463d5e;
+  --text: #d9d4e4;
+  --dim: #a39bb6;
+  --faint: #756e8a;
+  --strong: #f6f2ff;
+  --accent: #d4a64a;
+  --accent-strong: #f0c46a;
+  --accent-bg: rgba(212, 166, 74, 0.12);
+  --cold: #5cc8ff;
+  --cold-bg: rgba(92, 200, 255, 0.1);
+  --warn: #f0b84a;
+  --warn-bg: rgba(240, 184, 74, 0.09);
+  --up: #4cc27a;
+  --rune-red: #e0533f;
+  --rune-green: #4cc27a;
+  --rune-blue: #4f8df0;
+  --display: 'Taviraj', 'IBM Plex Sans Thai', Georgia, serif;
+  --sans: 'IBM Plex Sans Thai', system-ui, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+    --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+    --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+    --cold: #1f8fc7; --cold-bg: rgba(31, 143, 199, 0.09);
+    --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c;
+    --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+  --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+  --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+  --cold: #1f8fc7; --cold-bg: rgba(31, 143, 199, 0.09);
+  --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c;
+  --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15.5px/1.7 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-strong); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 72px;
+  display: grid;
+  gap: 50px;
+}
+@media (max-width: 520px) { .page { padding-inline: 16px; padding-block: 28px 56px; gap: 42px; } }
+
+h1, h2, h3 { color: var(--strong); text-wrap: balance; margin: 0; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.15; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1.3; }
+h3 { font-size: 1rem; font-weight: 600; line-height: 1.4; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow {
+  font: 600 0.72rem/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.dim { color: var(--dim); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+header { display: grid; gap: 14px; }
+.lede { font-size: 1.06rem; color: var(--dim); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--faint); }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px; }
+nav.toc a {
+  font-size: 0.82rem;
+  color: var(--dim);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+nav.toc a:hover { color: var(--strong); border-color: var(--line-strong); }
+.caveat {
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+  background: var(--warn-bg);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  display: grid;
+  gap: 4px;
+}
+.caveat strong { color: var(--warn); font-weight: 600; }
+
+section { display: grid; gap: 18px; scroll-margin-top: 16px; }
+.sec-head { display: grid; gap: 6px; padding-top: 18px; border-top: 1px solid var(--line); }
+
+/* thesis */
+.thesis {
+  border-left: 3px solid var(--cold);
+  background: var(--cold-bg);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 18px;
+  display: grid;
+  gap: 6px;
+}
+.thesis b { color: var(--strong); font-size: 1.08rem; font-weight: 600; }
+.thesis span { color: var(--dim); font-size: 0.92rem; }
+
+/* dps bars */
+.bars { display: grid; gap: 14px; background: var(--raised); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+.bar-row { display: grid; gap: 6px; }
+.bar-label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; font-size: 0.88rem; }
+.bar-label span:first-child { color: var(--text); }
+.bar-label .mono { color: var(--faint); font-size: 0.8rem; }
+.bar-track { height: 26px; background: var(--sunken); border-radius: 5px; position: relative; overflow: hidden; }
+.bar-fill {
+  position: absolute; inset: 0 auto 0 0;
+  width: calc(var(--v) / var(--max, 9.49) * 100%);
+  background: color-mix(in srgb, var(--cold) 55%, var(--raised));
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: flex-end;
+  padding-right: 8px;
+}
+.bar-row.best .bar-fill { background: var(--cold); }
+.bar-fill b { font: 600 0.8rem/1 var(--mono); color: var(--strong); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bar-row.best .bar-fill b { color: var(--bg); }
+.caption { font-size: 0.8rem; color: var(--faint); }
+
+/* rune board */
+.board-wrap { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 20px; align-items: center; }
+@media (max-width: 760px) { .board-wrap { grid-template-columns: 1fr; } .board-wrap svg { max-width: 340px; margin: 0 auto; } }
+.board-wrap svg { width: 100%; height: auto; display: block; }
+.hx { stroke-width: 2; }
+.hx-red { fill: color-mix(in srgb, var(--rune-red) 16%, var(--raised)); stroke: var(--rune-red); }
+.hx-green { fill: color-mix(in srgb, var(--rune-green) 16%, var(--raised)); stroke: var(--rune-green); }
+.hx-blue { fill: color-mix(in srgb, var(--rune-blue) 16%, var(--raised)); stroke: var(--rune-blue); }
+.hx-skill { fill: color-mix(in srgb, var(--cold) 22%, var(--raised)); stroke: var(--cold); stroke-width: 3; }
+.hx-text { fill: var(--strong); font: 600 10.5px/1 var(--sans); text-anchor: middle; }
+.hx-sub { fill: var(--dim); font: 9.5px/1 var(--mono); text-anchor: middle; }
+.hx-skill-text { fill: var(--strong); font: 700 13px/1 var(--sans); text-anchor: middle; }
+.link-line { stroke: var(--accent); stroke-width: 2; opacity: 0.8; }
+.hx-shared { stroke: var(--accent); stroke-width: 3; stroke-dasharray: 6 3; }
+.hx-sm { font-size: 9px; }
+.slot-col, .board-wrap.dual td:first-child { white-space: nowrap; width: 1%; }
+.hx-skill-sm { font-size: 11px; }
+.hx-share { fill: var(--accent-strong); font: 600 9px/1 var(--sans); text-anchor: middle; }
+.board-wrap.dual { grid-template-columns: minmax(0, 380px) minmax(0, 1fr); }
+@media (max-width: 760px) { .board-wrap.dual { grid-template-columns: 1fr; } .board-wrap.dual svg { max-width: 380px; } }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+th, td { text-align: left; padding: 9px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th {
+  font: 600 0.7rem/1.3 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  background: var(--sunken);
+  white-space: nowrap;
+}
+td:first-child { color: var(--strong); font-weight: 500; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td small { display: block; color: var(--faint); font-size: 0.8rem; font-weight: 400; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; vertical-align: 0; }
+.dot.red { background: var(--rune-red); }
+.dot.green { background: var(--rune-green); }
+.dot.blue { background: var(--rune-blue); }
+.pill {
+  display: inline-block;
+  font: 600 0.66rem/1.5 var(--mono);
+  padding: 0 6px;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+  vertical-align: 1px;
+}
+.pill.top { color: var(--up); }
+.pill.cond { color: var(--warn); }
+.pill.shadow { color: var(--cold); }
+
+.gear-opt { display: grid; gap: 12px; padding-top: 8px; scroll-margin-top: 16px; }
+.gear-opt h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.swaps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+@media (max-width: 560px) { .swaps { grid-template-columns: 1fr; } }
+.swap { border-left: 2px solid var(--line-strong); padding: 2px 0 2px 14px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.swap p { font-size: 0.88rem; color: var(--dim); }
+
+/* crit math */
+.formula {
+  font: 600 1rem/1.5 var(--mono);
+  color: var(--strong);
+  background: var(--sunken);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.need { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 520px) { .need { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.need div { background: var(--raised); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; display: grid; gap: 2px; }
+.need span { font-size: 0.78rem; color: var(--faint); }
+.need b { font: 600 1.3rem/1.2 var(--mono); color: var(--accent-strong); font-variant-numeric: tabular-nums; }
+
+ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
+ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: baseline; }
+ol.steps > li::before { content: counter(s); font: 600 0.8rem/1 var(--mono); color: var(--accent); text-align: right; }
+ol.steps > li > div { min-width: 0; }
+ul.notes { margin: 0; padding-left: 1.1rem; display: grid; gap: 4px; color: var(--dim); font-size: 0.9rem; }
+
+ul.sources { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.88rem; }
+ul.sources li { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
+ul.sources li span { font: 0.74rem var(--mono); color: var(--faint); white-space: nowrap; }
+@media (max-width: 520px) { ul.sources li { grid-template-columns: 1fr; gap: 2px; } }
+
+footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="eyebrow">Undecember · S12 The Farside · Build</span>
+  <h1>Frost Storm + Ice Crystal Arrow</h1>
+  <p class="lede">เดินยิง Ice Crystal Arrow เคลียร์แมพ แล้วใช้ Frost Storm ตีบอส Elite และมอนที่จับกลุ่มแน่น ไอเทมและรูนลิงก์เกือบทั้งหมดใช้ชุดเดียวกับ<a href="frost-storm-crit-build.html">บิลด์ Frost Storm สายคริ</a></p>
+  <div class="meta">
+    <span>อัปเดต 22 ต.ค. 2026</span>
+    <span>ทดสอบด้วยตัวจำลองดาเมจ Undecember DB</span>
+  </div>
+  <nav class="toc" aria-label="สารบัญ">
+    <a href="#core">แบ่งหน้าที่</a>
+    <a href="#compare">เทียบสองสกิล</a>
+    <a href="#synergy">ทำงานร่วมกัน</a>
+    <a href="#board">กระดานรูน</a>
+    <a href="#gear">ไอเทม</a>
+    <a href="#awaken">ปลุกพลัง</a>
+    <a href="#play">วิธีเล่น</a>
+    <a href="#order">ลำดับการอัป</a>
+    <a href="#limits">ข้อจำกัด</a>
+  </nav>
+  <div class="caveat">
+    <strong>ตัวเลขมาจากการจำลอง ไม่ใช่ค่าที่วัดในเกม</strong>
+    <span>วัดดาเมจใส่เป้าเดียว ไม่ได้วัดความเร็วเคลียร์แมพ และตัวจำลองนับ Ice Crystal Arrow แค่ลูกหลักลูกเดียว ตัวเลขของสกิลนี้จึงต่ำกว่าความจริง โดยเฉพาะตอนเจอมอนหลายตัว</span>
+  </div>
+</header>
+
+<section id="core">
+  <div class="sec-head">
+    <span class="eyebrow">Core idea</span>
+    <h2>แบ่งหน้าที่สองสกิล</h2>
+  </div>
+  <div class="thesis">
+    <b>Ice Crystal Arrow กวาดมอนระหว่างเดิน Frost Storm ปิดงานบอสและกลุ่มใหญ่</b>
+    <span>Frost Storm ดาเมจใส่เป้าเดียวสูงกว่าราว 2 เท่า แต่โดนแค่จุดที่ลูกระเบิด ส่วน Ice Crystal Arrow ได้ลูกและการเด้งต่อเป้าเพิ่มทุกครั้งที่เดิน จึงกวาดมอนที่อยู่กระจายได้ดีกว่า</span>
+  </div>
+  <div class="swaps">
+    <div class="swap">
+      <h3>Ice Crystal Arrow: เคลียร์แมพ</h3>
+      <p>มอนทั่วไปที่อยู่กระจาย ระหว่างวิ่งไปจุดถัดไป และตอนต้องขยับหลบ</p>
+    </div>
+    <div class="swap">
+      <h3>Frost Storm: ดาเมจหนัก</h3>
+      <p>บอส Elite และมอนที่จับกลุ่มแน่นพอให้ระเบิดโดนหลายตัวพร้อมกัน</p>
+    </div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="sec-head">
+    <span class="eyebrow">Comparison</span>
+    <h2>เทียบสองสกิล</h2>
+  </div>
+  <p class="dim">ค่ารูน Lv45 จากชีททางการ S12</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>Frost Storm</th><th>Ice Crystal Arrow</th></tr></thead>
+      <tbody>
+        <tr><td>ดาเมจต่อนัด</td><td>ระเบิด 900% +1900 แล้วมีพื้นที่เย็นทำดาเมจต่อ 76% +159 ต่อครั้ง</td><td>554% +968 ลูกแตกได้ดาเมจลดลง 25%</td></tr>
+        <tr><td>จำนวนลูก</td><td>1 ลูก เกรด Legendary +2 เป็น 3 ลูก<small>เด้งต่อเป้า แตกลูก และยิงขนานไม่ได้</small></td><td>ลูกน้ำแข็ง +1 และลูกแตก +2</td></tr>
+        <tr><td>ตอนเดิน</td><td>ไม่มีผล</td><td>ได้สแตก Cold Crystal (สูงสุด 6) ทุก 5 สแตกได้ลูก +2 และเด้งต่อเป้า +1<small>ยืนนิ่ง 5 วินาทีสแตกหายหมด</small></td></tr>
+        <tr><td>ความเร็ว</td><td>–</td><td>ลูกพุ่งเร็ว 3000 ความเร็วตี +0.6% ต่อสแตก</td></tr>
+        <tr><td>พื้นที่</td><td>ระเบิดกว้าง 150<small>บิลด์นี้ใส่ Concentrated Area DMG ลดพื้นที่ 30% แลกดาเมจ</small></td><td>ไม่มีพื้นที่ระเบิด ใช้การเด้งต่อเป้าแทน</td></tr>
+        <tr><td>ทรัพยากร</td><td>มานา 21</td><td>มานา 17.6 และสะสม Overheat 40 ต่อการยิง</td></tr>
+        <tr><td>ได้รูนจาก</td><td>–</td><td>เกรด Rare ขึ้นไป ได้จาก Synthesis เท่านั้น</td></tr>
+        <tr><td>DPS เป้าเดียว (จำลอง)</td><td class="num">18.1 ล้าน</td><td class="num">8.9 ล้าน<small>นับแค่ลูกหลัก ต่ำกว่าความจริง</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>ตอนเคลียร์แมพตัวละครเดินตลอด สแตก Cold Crystal จึงเต็มตลอด ลูกเยอะขึ้นและเด้งต่อเป้า ลูกวิ่งเร็วไปโดนมอนที่อยู่ห่างกันได้</li>
+    <li>Frost Storm โดนแค่จุดที่ลูก 3 ลูกระเบิด แล้วยังถูกบีบพื้นที่ลง 30% เหมาะกับเป้าที่รวมกันอยู่ ถ้ามอนกระจายจะโดนไม่ทั่ว</li>
+    <li><b>ถ้าจะใช้ Frost Storm ตัวเดียวเคลียร์แมพ</b> เปลี่ยน Concentrated Area DMG เป็น Area Effect (พื้นที่ +70.7%, ดาเมจ +64.4%) พื้นที่ระเบิดใหญ่ขึ้นราว 2.4 เท่า แต่ดาเมจเป้าเดียวลดประมาณ 20% ในบิลด์คู่ไม่ต้องเปลี่ยน เพราะ Ice Crystal Arrow รับหน้าที่เคลียร์แล้ว</li>
+  </ul>
+</section>
+
+<section id="synergy">
+  <div class="sec-head">
+    <span class="eyebrow">Synergy</span>
+    <h2>สองสกิลช่วยกันอย่างไร</h2>
+  </div>
+  <div class="swaps">
+    <div class="swap">
+      <h3>แท็กเกือบเหมือนกัน</h3>
+      <p>ทั้งคู่เป็น Attack / Strike / Cold / Projectile / Bow / Shadow รูนลิงก์ของบิลด์หลักใช้กับ Ice Crystal Arrow ได้ทุกตัว ยกเว้น Concentrated Area DMG ที่ใช้ได้เฉพาะสกิล AoE</p>
+    </div>
+    <div class="swap">
+      <h3>Chill ส่งต่อกัน</h3>
+      <p>Frost Storm ทำ Chill ทุกครั้งที่โดน (ค่าทำ Chill +45) โบนัส "เมื่อศัตรูติด Chill" ของ Ice Crystal Arrow จึงทำงานตลอด เช่น Lingering Chill (ดาเมจ +107.4%) และ Tipan's Long Bow (ขยายดาเมจเมื่อศัตรูติดสถานะเย็น)</p>
+    </div>
+    <div class="swap">
+      <h3>Freeze</h3>
+      <p>ปลุก Frost Storm ระดับ Verity ได้ค่าทำ Freeze +20–30 ช่วยเปิดโบนัส "ขยายดาเมจ 25% เมื่อศัตรูติด Freeze" ของ Ice Crystal Arrow เกรด Legendary</p>
+    </div>
+    <div class="swap">
+      <h3>Overheat</h3>
+      <p>Ice Crystal Arrow สะสม Overheat 40 ต่อการยิง ส่วน Frost Storm ไม่สะสมเลย จึงน่าจะสลับมายิง Frost Storm ระหว่างรอ Overheat ลดได้ (ข้อนี้เป็นการอนุมาน)</p>
+    </div>
+  </div>
+</section>
+
+<section id="board">
+  <div class="sec-head">
+    <span class="eyebrow">Link runes</span>
+    <h2>วางกระดานให้แชร์รูนลิงก์ 2 ช่อง</h2>
+  </div>
+  <div class="board-wrap dual">
+    <svg viewBox="-128 -118 376 304" aria-label="Frost Storm และ Ice Crystal Arrow วางห่างกันสองช่องแบบเยื้อง มีรูนลิงก์สองช่องอยู่ติดทั้งสองสกิล">
+      <defs>
+        <polygon id="hex2" points="37.2,-21.5 37.2,21.5 0,43 -37.2,21.5 -37.2,-21.5 0,-43"/>
+      </defs>
+      <!-- Frost Storm only -->
+      <use href="#hex2" class="hx hx-green" x="-39.84" y="-69"/>
+      <text class="hx-text hx-sm" x="-39.84" y="-72">Shadow</text>
+      <text class="hx-text hx-sm" x="-39.84" y="-61">Archer</text>
+      <use href="#hex2" class="hx hx-blue" x="39.84" y="-69"/>
+      <text class="hx-text hx-sm" x="39.84" y="-72">Mana</text>
+      <text class="hx-text hx-sm" x="39.84" y="-61">Storm</text>
+      <use href="#hex2" class="hx hx-blue" x="-79.67" y="0"/>
+      <text class="hx-text hx-sm" x="-79.67" y="-3">Element</text>
+      <text class="hx-text hx-sm" x="-79.67" y="8">DMG Amp.</text>
+      <use href="#hex2" class="hx hx-red" x="-39.84" y="69"/>
+      <text class="hx-text hx-sm" x="-39.84" y="66">Concentrated</text>
+      <text class="hx-text hx-sm" x="-39.84" y="77">Area DMG</text>
+      <!-- Ice Crystal Arrow only -->
+      <use href="#hex2" class="hx hx-green" x="159.3" y="0"/>
+      <text class="hx-text hx-sm" x="159.3" y="-3">Quick</text>
+      <text class="hx-text hx-sm" x="159.3" y="8">Attack</text>
+      <use href="#hex2" class="hx hx-blue" x="199.2" y="69"/>
+      <text class="hx-text hx-sm" x="199.2" y="66">Additional</text>
+      <text class="hx-text hx-sm" x="199.2" y="77">Cold DMG</text>
+      <use href="#hex2" class="hx hx-blue" x="159.3" y="138"/>
+      <text class="hx-text hx-sm" x="159.3" y="135">Element</text>
+      <text class="hx-text hx-sm" x="159.3" y="146">DMG Amp.</text>
+      <use href="#hex2" class="hx hx-blue" x="79.67" y="138"/>
+      <text class="hx-text hx-sm" x="79.67" y="135">Mana</text>
+      <text class="hx-text hx-sm" x="79.67" y="146">Storm</text>
+      <!-- shared -->
+      <use href="#hex2" class="hx hx-green hx-shared" x="79.67" y="0"/>
+      <text class="hx-text hx-sm" x="79.67" y="-6">Find</text>
+      <text class="hx-text hx-sm" x="79.67" y="5">Weakness</text>
+      <text class="hx-share" x="79.67" y="19">แชร์</text>
+      <use href="#hex2" class="hx hx-red hx-shared" x="39.84" y="69"/>
+      <text class="hx-text hx-sm" x="39.84" y="63">Attack DMG</text>
+      <text class="hx-text hx-sm" x="39.84" y="74">Increase</text>
+      <text class="hx-share" x="39.84" y="88">แชร์</text>
+      <!-- skills -->
+      <use href="#hex2" class="hx hx-skill" x="0" y="0"/>
+      <text class="hx-skill-text hx-skill-sm" x="0" y="-2">Frost</text>
+      <text class="hx-skill-text hx-skill-sm" x="0" y="11">Storm</text>
+      <use href="#hex2" class="hx hx-skill" x="119.5" y="69"/>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="61">Ice</text>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="73">Crystal</text>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="85">Arrow</text>
+    </svg>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th class="slot-col">ช่อง</th><th>Frost Storm</th><th>Ice Crystal Arrow</th></tr></thead>
+        <tbody>
+          <tr><td>แชร์ 1</td><td colspan="2"><span class="dot green"></span>Find Weakness (ลิงก์ให้ทั้งคู่)</td></tr>
+          <tr><td>แชร์ 2</td><td colspan="2"><span class="dot red"></span>Attack DMG Increase (ลิงก์ให้ทั้งคู่)</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot green"></span>Shadow Archer</td><td><span class="dot green"></span>Quick Attack</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot red"></span>Concentrated Area DMG</td><td><span class="dot blue"></span>Additional Cold DMG</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot blue"></span>Mana Storm</td><td><span class="dot blue"></span>Mana Storm</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot blue"></span>Element DMG Amplification</td><td><span class="dot blue"></span>Element DMG Amplification</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ul class="notes">
+    <li>วางสองสกิลห่างกัน 2 ช่องแบบเยื้อง (ไม่ใช่แนวตรง) จะมีช่องที่ติดทั้งสองสกิล 2 ช่อง รูนลิงก์ในช่องนั้นลิงก์ให้ทั้งคู่ ประหยัดรูนไป 2 ตัว สีช่องของทั้งสองสกิลในทิศนั้นต้องตรงกับสีรูน</li>
+    <li>ชุดของ Ice Crystal Arrow ได้ DPS สูงสุดในการจำลอง 495 ชุด Quick Attack บวกสแตกความเร็วของ Silver Shadow's ทำให้ความเร็วยิงชนเพดาน 5 ครั้งต่อวินาทีพอดี</li>
+    <li>ชุดนี้ต้องมี Mana Storm และ Element DMG Amplification อย่างละ 2 ชิ้น ถ้ามีอย่างละชิ้นเดียว ให้ Ice Crystal Arrow ใช้ Element Master, Lingering Chill หรือ Slaughter แทนตัวที่ขาด ขาดตัวเดียว DPS ลดไม่ถึง 5% ขาดทั้งสองตัวลดราว 7%</li>
+    <li>ใส่ Shadow Archer ให้ Ice Crystal Arrow แทนตัวใดตัวหนึ่งก็ได้ ในการจำลองต่ำกว่าประมาณ 5% แต่ตัวจำลองยังไม่นับธนูเงา</li>
+  </ul>
+  <h3>รูนที่ไม่ควรใส่ให้ Ice Crystal Arrow</h3>
+  <ul class="notes">
+    <li><b>Multishot</b> ระบบลิงก์อาจขึ้นว่าลิงก์ได้ แต่ตัวสกิลเขียนไว้ว่า Cannot Multishot</li>
+    <li><b>Chain และ Chain Impact</b> ลิงก์ไม่ได้ เพราะในข้อมูลทางการ Ice Crystal Arrow ไม่มีแท็ก "capable of being Chained" แม้คำอธิบายจะบอกว่าเด้งต่อเป้าได้ การเด้งของสกิลนี้มาจากสแตก Cold Crystal อย่างเดียว</li>
+    <li><b>Split Projectile</b> ลิงก์ได้ แต่ต้องเอา Quick Attack (สีเขียวเหมือนกัน) ออก ความเร็วยิงลดจากราว 4 เหลือ 2.7 ครั้งต่อวินาที และดาเมจเป้าเดียวลดประมาณ 17% ในการจำลอง</li>
+    <li><b>รูนลิงก์สาย Overheat</b> (Heat Cycle, Outlaw, Over Cooling) ใช้ได้เฉพาะ Ice Crystal Arrow แต่ในการจำลองได้ DPS น้อยกว่าชุดด้านบน</li>
+  </ul>
+</section>
+
+<section id="gear">
+  <div class="sec-head">
+    <span class="eyebrow">Gear</span>
+    <h2>ไอเทม</h2>
+  </div>
+  <p>ใช้ไอเทมชุดเดียวกับ<a href="frost-storm-crit-build.html#gear">บิลด์หลัก</a>ได้เลย ทั้งอาวุธ ซองธนู ถุงมือ สร้อย แหวน และ<a href="frost-storm-crit-build.html#lacrima">ลาคริมา</a> ค่าคริและคริดาเมจทุกตัวช่วยทั้งสองสกิล จุดที่ต้องเลือกคือรองเท้า</p>
+  <h3>ผลจำลอง: รองเท้าตัวไหนเหมาะกับการเล่นคู่</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>สกิล</th><th>Ult. Silver Shadow's Footprints</th><th>Trans. Leg Bone of the Wind</th></tr></thead>
+      <tbody>
+        <tr><td>Frost Storm</td><td class="num">18.1 ล้าน</td><td class="num">10.2 ล้าน</td></tr>
+        <tr><td>Ice Crystal Arrow*</td><td class="num">8.9 ล้าน</td><td class="num">5.2 ล้าน<small>≈ 7.8 ล้าน เมื่อรวม Ice Crystal Arrow +50%</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>* ตัวจำลองยังไม่นับลูกแตก Ice Crystal Arrow +2 ลูก สแตก Cold Crystal และผล "Ice Crystal Arrow +40–60%" ของ Leg Bone of the Wind จึงยังบอกไม่ได้ว่า Ice Crystal Arrow อ่อนกว่า Frost Storm จริงแค่ไหน</li>
+    <li>เงื่อนไข "ศัตรูติด Chill" นับว่าเกิดตลอดเพราะ Frost Storm ทำ Chill ให้ ส่วน Freeze, Elite และระยะ 600 ไม่นับ</li>
+  </ul>
+  <div class="swaps">
+    <div class="swap">
+      <h3>Silver Shadow's Footprints <span class="pill top">แนะนำ</span></h3>
+      <p>ให้คริเวท คริดาเมจ ขยายดาเมจ และสแตกความเร็วกับทั้งสองสกิล จึงดีกว่า Leg Bone ทั้งสองแถว และบิลด์คู่ยังต้องพึ่ง Frost Storm ตีบอส</p>
+    </div>
+    <div class="swap">
+      <h3>Leg Bone of the Wind</h3>
+      <p>Transcendent (Str 165 / Dex 165) ได้ Ice Crystal Arrow +40–60% และ Cold Crystal เต็มทันทีที่ยิงโดยไม่ต้องเดิน เหมาะเมื่อแทบไม่ใช้ Frost Storm แล้ว เพราะ Frost Storm จะอ่อนลงมาก</p>
+    </div>
+  </div>
+</section>
+
+<section id="awaken">
+  <div class="sec-head">
+    <span class="eyebrow">Awakening</span>
+    <h2>ปลุกพลังตัวไหนช่วยบิลด์คู่</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>สกิล / ระดับ</th><th>ได้อะไร</th><th>ช่วยอย่างไร</th></tr></thead>
+      <tbody>
+        <tr><td>Ice Crystal Arrow · Source <span class="pill top">เคลียร์แมพ</span></td><td>ดาเมจโปรเจกไทล์ +20–30%, สแตก Cold Crystal สูงสุด +4–9</td><td>สแตกสูงสุดเป็น 10–15 ได้ลูก +4 ถึง +6 และเด้งต่อเป้า +2 ถึง +3 ช่วยเคลียร์แมพมากที่สุด</td></tr>
+        <tr><td>Ice Crystal Arrow · Origin</td><td>ขยายดาเมจ 1.5–3% ต่อสแตก Cold Crystal</td><td>ยิ่งมีสแตกเยอะยิ่งแรง ใช้คู่กับ Source ได้ดี</td></tr>
+        <tr><td>Ice Crystal Arrow · Verity</td><td>ลูกแตกติดตามเป้า แต่ดาเมจลด 10–15% เมื่อโดนเป้าซ้ำ</td><td>ยิงโดนง่ายขึ้นตอนวิ่ง แต่ตีบอสได้น้อยลง</td></tr>
+        <tr><td>Frost Storm · Verity <span class="pill top">คู่กัน</span></td><td>ค่าทำ Freeze +20–30, ขยายดาเมจ 6–12% เมื่อศัตรูติดสถานะเย็น</td><td>เปิดโบนัส "ขยายดาเมจ 25% เมื่อศัตรูติด Freeze" ของ Ice Crystal Arrow เกรด Legendary</td></tr>
+        <tr><td>Frost Storm · Source</td><td>พื้นที่ +30–70% แต่ Projectile Creation Range −200</td><td>ระเบิดกว้างขึ้น ถ้าอยากให้ Frost Storm ช่วยเคลียร์ด้วย</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>ทุก 5 สแตก Cold Crystal ได้ลูก +2 และเด้ง +1 สแตก 10 จึงได้ +4 / +2 และสแตก 15 ได้ +6 / +3</li>
+    <li>ตัวจำลองยังไม่นับสแตก Cold Crystal ผลของการปลุก Ice Crystal Arrow ระดับ Source และ Origin จึงยังไม่อยู่ในตัวเลข DPS ของหน้านี้</li>
+  </ul>
+</section>
+
+<section id="play">
+  <div class="sec-head">
+    <span class="eyebrow">Playstyle</span>
+    <h2>วิธีเล่น</h2>
+  </div>
+  <ol class="steps">
+    <li><div><b>เดินไปยิงไป</b> สแตก Cold Crystal ได้จากการเดิน ยืนนิ่ง 5 วินาทีสแตกหายหมด อย่ายืนยิง Ice Crystal Arrow อยู่กับที่นาน</div></li>
+    <li><div><b>เจอมอนจับกลุ่มแน่นหรือ Elite</b> ยิง Frost Storm ใส่กลางกลุ่ม พื้นที่เย็นทำ Chill ให้ แล้วยิง Ice Crystal Arrow ต่อเพื่อรับโบนัส "เมื่อศัตรูติด Chill"</div></li>
+    <li><div><b>ตีบอส</b> ใช้ Frost Storm เป็นหลัก สลับยิง Ice Crystal Arrow ตอนต้องขยับหลบ จะได้ไม่เสียสแตก</div></li>
+    <li><div><b>Overheat เต็ม</b> สลับไปยิง Frost Storm ระหว่างรอ Overheat ลด (อนุมาน ยังไม่ได้ทดสอบในเกม)</div></li>
+    <li><div><b>ดูมานา</b> รวมรูนลิงก์แล้ว Ice Crystal Arrow ใช้มานาราว 39 และ Frost Storm ราว 52 ต่อครั้ง (จากตัวจำลอง) รูนลิงก์ทุกตัวเพิ่มค่ามานา 15–20% ถ้ามานาไม่พอ ถอดรูนลิงก์ตัวที่ได้ดาเมจน้อยสุดของ Ice Crystal Arrow ออกก่อน</div></li>
+  </ol>
+</section>
+
+<section id="order">
+  <div class="sec-head">
+    <span class="eyebrow">Priority</span>
+    <h2>ลำดับการอัป</h2>
+  </div>
+  <ol class="steps">
+    <li><div><b>ทำบิลด์ Frost Storm สายคริให้ค่าคริเวทถึงเป้าก่อน</b> ตาม<a href="frost-storm-crit-build.html#order">ลำดับการอัปของบิลด์หลัก</a> ค่าคริทุกตัวช่วยทั้งสองสกิล</div></li>
+    <li><div><b>หา Ice Crystal Arrow</b> (เกรด Rare ได้จาก Synthesis) วางห่าง Frost Storm 2 ช่องแบบเยื้อง ให้แชร์ Find Weakness กับ Attack DMG Increase</div></li>
+    <li><div><b>ใส่ Quick Attack กับ Additional Cold DMG</b> แล้วค่อยหา Mana Storm กับ Element DMG Amplification ชิ้นที่สอง ระหว่างนั้นใช้ Element Master, Lingering Chill หรือ Slaughter แทน</div></li>
+    <li><div><b>ปลุก Ice Crystal Arrow ระดับ Source</b> เพื่อเพิ่มสแตก Cold Crystal ได้ลูกและการเด้งเพิ่ม</div></li>
+    <li><div><b>ปลุก Frost Storm ระดับ Verity</b> เพื่อทำ Freeze ให้ Ice Crystal Arrow เกรด Legendary ได้ขยายดาเมจ 25%</div></li>
+    <li><div><b>Illusion Arrow เป็นทางเลือก</b> ในบิลด์หลักช่วยดาเมจแค่ราว 5% บิลด์คู่ใช้มานาเยอะอยู่แล้ว ใส่เมื่อมานาเหลือ</div></li>
+  </ol>
+</section>
+
+<section id="limits">
+  <div class="sec-head">
+    <span class="eyebrow">Limits</span>
+    <h2>ข้อจำกัดของการจำลอง</h2>
+  </div>
+  <ul class="notes">
+    <li>ตัวเลขทุกตัวเป็นดาเมจใส่เป้าเดียว ไม่ได้วัดความเร็วเคลียร์แมพ ข้อที่ว่า Ice Crystal Arrow เคลียร์ได้ดีกว่ามาจากกลไกของสกิลและการเล่นจริง</li>
+    <li>ตัวจำลองนับ Ice Crystal Arrow แค่ลูกหลัก ยังไม่นับลูกแตก +2 ลูก สแตก Cold Crystal และการเด้งต่อเป้า</li>
+    <li>ยังไม่นับธนูเงาที่ Shadow Archer เรียกออกมา ผลแปลงค่าของ Vertical Chill และ Abyss Stone</li>
+    <li>ไอเทมชุดเดียวกับบิลด์หลัก ค่าสุ่มออปชันตั้งไว้ครึ่งทาง รูนเลเวล 45 เกรด Legendary มอนเลเวล 150 ค่าต้านธาตุ 40%</li>
+  </ul>
+</section>
+
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">อ้างอิง</span>
+    <h2>แหล่งข้อมูล</h2>
+  </div>
+  <ul class="sources">
+    <li>ชีทข้อมูลรูนและยูนีคทางการ S12 (ข้อมูลเดียวกับเว็บ Undecember DB)<span>ก.ย. 2026</span></li>
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1788995577330018641">9/10 Update Notice (S12 The Farside)</a><span>10 ก.ย. 2026</span></li>
+    <li><a href="https://www.youtube.com/watch?v=FfMwBPXGL-8">YouTube: Frost Storm Is Much Stronger (S12)</a><span>ก.ย. 2026</span></li>
+    <li><a href="https://gall.dcinside.com/mgallery/board/view/?id=undecember&amp;no=303969">DC Inside: Frost Storm บัฟแล้วโกง</a><span>11 ก.ย. 2026</span></li>
+  </ul>
+</section>
+
+<footer>
+  <span>ดูเพิ่ม: <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> · <a href="skill-tier-list.html">Tier List สกิล S12</a> · <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></span>
+  <span>จัดทำจากข้อมูลสาธารณะและตัวจำลองของ Undecember DB ไม่ใช่ไกด์ทางการของ LINE Games</span>
+</footer>
+
+</div>
+</body>
+</html>
