@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lightning Rune Knight สายคริ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Taviraj:wght@500;700&display=swap">
+<style>
+/* Layout: build sheet in one reading column; rune board diagram beside its table on wide screens; tokens shared with Undecember DB */
+:root {
+  --bg: #0f0d14;
+  --raised: #17141f;
+  --sunken: #0b0a10;
+  --line: #2e2840;
+  --line-strong: #463d5e;
+  --text: #d9d4e4;
+  --dim: #a39bb6;
+  --faint: #756e8a;
+  --strong: #f6f2ff;
+  --accent: #d4a64a;
+  --accent-strong: #f0c46a;
+  --accent-bg: rgba(212, 166, 74, 0.12);
+  --cold: #5cc8ff;
+  --cold-bg: rgba(92, 200, 255, 0.1);
+  --warn: #f0b84a;
+  --warn-bg: rgba(240, 184, 74, 0.09);
+  --up: #4cc27a;
+  --rune-red: #e0533f;
+  --rune-green: #4cc27a;
+  --rune-blue: #4f8df0;
+  --display: 'Taviraj', 'IBM Plex Sans Thai', Georgia, serif;
+  --sans: 'IBM Plex Sans Thai', system-ui, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+    --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+    --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+    --cold: #1f8fc7; --cold-bg: rgba(31, 143, 199, 0.09);
+    --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c;
+    --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+  --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+  --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+  --cold: #1f8fc7; --cold-bg: rgba(31, 143, 199, 0.09);
+  --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c;
+  --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15.5px/1.7 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-strong); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 72px;
+  display: grid;
+  gap: 50px;
+}
+@media (max-width: 520px) { .page { padding-inline: 16px; padding-block: 28px 56px; gap: 42px; } }
+
+h1, h2, h3 { color: var(--strong); text-wrap: balance; margin: 0; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.15; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1.3; }
+h3 { font-size: 1rem; font-weight: 600; line-height: 1.4; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow {
+  font: 600 0.72rem/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.dim { color: var(--dim); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+header { display: grid; gap: 14px; }
+.lede { font-size: 1.06rem; color: var(--dim); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--faint); }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px; }
+nav.toc a {
+  font-size: 0.82rem;
+  color: var(--dim);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+nav.toc a:hover { color: var(--strong); border-color: var(--line-strong); }
+.caveat {
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+  background: var(--warn-bg);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  display: grid;
+  gap: 4px;
+}
+.caveat strong { color: var(--warn); font-weight: 600; }
+
+section { display: grid; gap: 18px; scroll-margin-top: 16px; }
+.sec-head { display: grid; gap: 6px; padding-top: 18px; border-top: 1px solid var(--line); }
+
+/* thesis */
+.thesis {
+  border-left: 3px solid var(--cold);
+  background: var(--cold-bg);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 18px;
+  display: grid;
+  gap: 6px;
+}
+.thesis b { color: var(--strong); font-size: 1.08rem; font-weight: 600; }
+.thesis span { color: var(--dim); font-size: 0.92rem; }
+
+/* rune board */
+.board-wrap { display: grid; gap: 20px; }
+.board-wrap svg { width: 100%; max-width: 480px; height: auto; display: block; margin: 0 auto; }
+.hx { stroke-width: 2; }
+.hx-red { fill: color-mix(in srgb, var(--rune-red) 16%, var(--raised)); stroke: var(--rune-red); }
+.hx-green { fill: color-mix(in srgb, var(--rune-green) 16%, var(--raised)); stroke: var(--rune-green); }
+.hx-blue { fill: color-mix(in srgb, var(--rune-blue) 16%, var(--raised)); stroke: var(--rune-blue); }
+.hx-skill { fill: color-mix(in srgb, var(--cold) 22%, var(--raised)); stroke: var(--cold); stroke-width: 3; }
+.hx-text { fill: var(--strong); font: 600 9px/1 var(--sans); text-anchor: middle; }
+.hx-skill-text { fill: var(--strong); font: 700 11px/1 var(--sans); text-anchor: middle; }
+.hx-shared { stroke: var(--accent); stroke-width: 3; stroke-dasharray: 6 3; }
+.hx-share { fill: var(--accent-strong); font: 600 9px/1 var(--sans); text-anchor: middle; }
+.slot-col, .board-wrap td:first-child { white-space: nowrap; width: 1%; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+th, td { text-align: left; padding: 9px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th {
+  font: 600 0.7rem/1.3 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  background: var(--sunken);
+  white-space: nowrap;
+}
+td:first-child { color: var(--strong); font-weight: 500; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td small { display: block; color: var(--faint); font-size: 0.8rem; font-weight: 400; }
+tr.best td { background: var(--accent-bg); }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; vertical-align: 0; }
+.dot.red { background: var(--rune-red); }
+.dot.green { background: var(--rune-green); }
+.dot.blue { background: var(--rune-blue); }
+.pill {
+  display: inline-block;
+  font: 600 0.66rem/1.5 var(--mono);
+  padding: 0 6px;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+  vertical-align: 1px;
+}
+.pill.top { color: var(--up); }
+.pill.cond { color: var(--warn); }
+.pill.shadow { color: var(--cold); }
+
+.swaps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+@media (max-width: 560px) { .swaps { grid-template-columns: 1fr; } }
+.swap { border-left: 2px solid var(--line-strong); padding: 2px 0 2px 14px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.swap p { font-size: 0.88rem; color: var(--dim); }
+
+/* multiplier tiles + crit math */
+.formula {
+  font: 600 1rem/1.5 var(--mono);
+  color: var(--strong);
+  background: var(--sunken);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.need { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 520px) { .need { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.need div { background: var(--raised); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; display: grid; gap: 2px; }
+.need span { font-size: 0.78rem; color: var(--faint); }
+.need b { font: 600 1.3rem/1.2 var(--mono); color: var(--accent-strong); font-variant-numeric: tabular-nums; }
+
+ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
+ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: baseline; }
+ol.steps > li::before { content: counter(s); font: 600 0.8rem/1 var(--mono); color: var(--accent); text-align: right; }
+ol.steps > li > div { min-width: 0; }
+ul.notes { margin: 0; padding-left: 1.1rem; display: grid; gap: 4px; color: var(--dim); font-size: 0.9rem; }
+
+ul.sources { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.88rem; }
+ul.sources li { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
+ul.sources li span { font: 0.74rem var(--mono); color: var(--faint); white-space: nowrap; }
+@media (max-width: 520px) { ul.sources li { grid-template-columns: 1fr; gap: 2px; } }
+
+footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="eyebrow">Undecember · S12 The Farside · Build</span>
+  <h1>มินเนียน Lightning Rune Knight สายคริ</h1>
+  <p class="lede">บิลด์อัญเชิญธาตุสายฟ้า ให้ Rune Knight ดูด Lightning Arrow Abyssling จนกลายเป็น Lightning Abyss Knight ซึ่งตีแรงกว่า Rune Knight ปกติหลายเท่า ใช้ Electric Sentry คอยทำช็อกให้ศัตรู แล้วใช้รูนลิงก์ที่เพิ่มคริใส่ศัตรูติดช็อก</p>
+  <div class="meta">
+    <span>อัปเดต 25 ต.ค. 2026</span>
+    <span>คำนวณจากชีทรูนและยูนีคทางการ S12 ด้วยสคริปต์เทียบตัวคูณ</span>
+  </div>
+  <nav class="toc" aria-label="สารบัญ">
+    <a href="#core">หัวใจของบิลด์</a>
+    <a href="#fusion">วงจร Fusion</a>
+    <a href="#sentry">Sentry ทำช็อก</a>
+    <a href="#crit">คริของมินเนียน</a>
+    <a href="#layers">ดาเมจมาจากไหน</a>
+    <a href="#board">กระดานรูน</a>
+    <a href="#farm">ฟาร์ม vs บอส</a>
+    <a href="#gear">ไอเทม</a>
+    <a href="#awaken">ปลุกพลัง</a>
+    <a href="#order">ลำดับการอัป</a>
+    <a href="#limits">ข้อจำกัด</a>
+  </nav>
+  <div class="caveat">
+    <strong>ตัวเลขในหน้านี้เป็นตัวคูณเทียบกันเอง ไม่ใช่ DPS จริง</strong>
+    <span>ตัวจำลองดาเมจของเว็บไม่คำนวณมินเนียน จึงเทียบรูนลิงก์ด้วยสคริปต์ที่คิดเอง ค่าคริพื้นฐานของมินเนียนไม่อยู่ในข้อมูลทางการ และกลไก Fusion อ่านจากคำอธิบายรูน ยังไม่ได้ทดสอบในเกม ควรลองวงจร Fusion กับหุ่นบอสก่อนลงทุนของแพง</span>
+  </div>
+</header>
+
+<section id="core">
+  <div class="sec-head">
+    <span class="eyebrow">Core idea</span>
+    <h2>หัวใจของบิลด์</h2>
+  </div>
+  <div class="thesis">
+    <b>ทุกอย่างต้องเป็นไลน์ Minion หรือ Rune Knight</b>
+    <span>ค่าโจมตีของตัวละคร (ดาเมจ คริ อัตราโจมตีโดน) ไม่ส่งผลกับมินเนียน ของสายธนูเดิมและ Seal of Critical Chance จึงใช้กับบิลด์นี้ไม่ได้ ไอเทมต้องมีไลน์ Minion DMG, Minion Critical Rate, Minion Critical DMG หรือไลน์ของ Rune Knight โดยตรง รูนลิงก์ที่เขียนว่า "Applies to Minions when linked to Summon Skill" จะส่งค่าของรูนให้มินเนียน</span>
+  </div>
+  <div class="swaps">
+    <div class="swap">
+      <h3>Summon Lightning Rune Knight: ตัวหลัก</h3>
+      <p>อัญเชิญได้ 1 ตัว คูลดาวน์ 40 วินาที รูนลิงก์ทั้งหมดของบิลด์ลงที่รูนนี้ เพราะ Abyss Knight รับค่าและเอฟเฟกต์ทั้งหมดของ Rune Knight ไปด้วย</p>
+    </div>
+    <div class="swap">
+      <h3>Summon Lightning Arrow Abyssling: เชื้อเพลิง Fusion</h3>
+      <p>ยิงลูกสายฟ้า 3 ลูกที่เด้งต่อ (Chain) คูลดาวน์ 3 วินาที อยู่ได้พร้อมกัน 2 ตัว เป็นตัวที่ Rune Knight ดูดเพื่อทำ Fusion ตอน High Tone จึงมักถูกดูดก่อนได้ยิง</p>
+    </div>
+    <div class="swap">
+      <h3>Electric Sentry: ทำช็อกให้บอส</h3>
+      <p>วางป้อมยิงลูกสายฟ้า 6 ลูกที่เด้งต่อ ค่าช็อก +45 อยู่ได้ 16 วินาที Rune Knight ดูดได้แค่ Abyssling จึงยิงได้ตลอด ทำให้รูนคริใส่ศัตรูติดช็อกทำงาน</p>
+    </div>
+    <div class="swap">
+      <h3>Hazy Melody: เปิด High Tone ค้าง</h3>
+      <p>High Tone: ขยายดาเมจ Rune Knight 57.7% Abyssling ดาเมจลด 15% และ Rune Knight ดูด Abyssling เป็นระยะ Low Tone: เพิ่มเอฟเฟกต์ Knight's Authority 239.2% กดสกิลซ้ำเพื่อสลับโทน</p>
+    </div>
+    <div class="swap">
+      <h3>Sacred Devotion: เปิดเป็นออร่า</h3>
+      <p>ขยายดาเมจมินเนียน 15.9% ต่อสแตก ปกติต้องร่ายค้าง แต่ถ้าใส่แหวน Vesper's Cloud จะได้สแตกเต็มทันทีและทำงานเป็นออร่า ไม่ต้องยืนร่าย</p>
+    </div>
+    <div class="swap">
+      <h3>Gather Minions: กดตอนตีบอส</h3>
+      <p>ดาเมจมินเนียน +286% นาน 3 วินาที คูลดาวน์ 10 วินาที เกรด Legendary เพิ่มระยะเวลา 150% เป็น 7.5 วินาที</p>
+    </div>
+    <div class="swap">
+      <h3>Mark of Focus: กดใส่บอส</h3>
+      <p>เป้าที่โดนมาร์กรับดาเมจจากมินเนียนเพิ่ม 40.6% นาน 3 วินาที และมินเนียนจะรุมเป้านั้น คูลดาวน์ 20 วินาที</p>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><b>ช่องเสริม: Unite Crowd (Enrage)</b> โหมด Enrage ให้มินเนียนได้ %คริ +71.8% และความเร็วโจมตีกับความเร็วร่าย +30.7% แต่เป็นสกิลเปิดค้างแบบเดียวกับ Hazy Melody ต้องลองในเกมว่าเปิดพร้อมกันได้ไหม</li>
+  </ul>
+</section>
+
+<section id="fusion">
+  <div class="sec-head">
+    <span class="eyebrow">Mechanic</span>
+    <h2>วงจร Fusion: จาก Rune Knight เป็น Abyss Knight</h2>
+  </div>
+  <ol class="steps">
+    <li><div><b>เปิด Hazy Melody ให้อยู่ใน High Tone</b> Rune Knight จะดูด Abyssling ที่อยู่ใกล้เป็นระยะ และได้ Fusion ทุกครั้งที่ดูด</div></li>
+    <li><div><b>อัญเชิญ Rune Knight แล้วตามด้วย Lightning Arrow Abyssling</b> ถ้าดูด Abyssling ธาตุเดียวกัน (สายฟ้า) จะได้ Fusion เพิ่มอีก</div></li>
+    <li><div><b>Fusion ครบ 3 ครั้ง</b> เกม summon Lightning Abyss Knight</div></li>
+    <li><div><b>อัญเชิญ Lightning Arrow Abyssling ต่อเรื่อยๆ</b> Abyss Knight ได้บัฟ Fusion ทุกครั้งที่ดูด Lightning Arrow Abyssling บัฟมี 3 เลเวล ขยายดาเมจ 75% และขยาย HP 5% / 10% / 20% อยู่ได้ 60 / 40 / 20 วินาที</div></li>
+  </ol>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>มินเนียน (Lv45)</th><th>ท่าโจมตี</th><th>ดาเมจต่อครั้ง</th></tr></thead>
+      <tbody>
+        <tr><td>Lightning Rune Knight</td><td>Basic Attack · Earth Blow · Electric Release</td><td class="num">182% · 352% · 471%</td></tr>
+        <tr class="best"><td>Lightning Abyss Knight <span class="pill top">ตัวทำดาเมจ</span></td><td>Basic Attack (กว้าง 1200) · Electric Area (ระเบิด 400) · Electric Judgment (ระเบิด 100) · ออร่า Electric Strength</td><td class="num">1712% · 1898% · 1898% · 229%<small>ออร่าเจาะสายฟ้า +20%</small></td></tr>
+        <tr><td>Lightning Arrow Abyssling</td><td>ลูกสายฟ้า 3 ลูก เด้งต่อ 4 ครั้ง (เกรด Legendary +2)</td><td class="num">317% ต่อลูก</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li><b>Hazy Melody ลดจำนวน Abyssling สูงสุดลง 1 ตัวต่อ Fusion 1 สแตก</b> ปกติมี Abyssling ได้ 2 ตัว ต้องเพิ่มจำนวนสูงสุดไว้ด้วยคทา Reign of Consecration (+1) และปลุก Hazy Melody ระดับ Origin (+1) ไม่อย่างนั้นอัญเชิญเชื้อเพลิงต่อไม่ได้</li>
+    <li><b>ถุงมือ Prele's Gauntlets ข้ามขั้นตอนนี้ได้</b> ถ้าสุ่มได้ออปชัน Lightning จะได้ Lightning Fusion Lv.3 ทันทีที่อัญเชิญ Rune Knight ระหว่าง High Tone และรับดาเมจลด 75% นาน 10 วินาที แลกกับคูลดาวน์ Rune Knight เพิ่มเป็นสองเท่า (40 เป็น 80 วินาที)</li>
+    <li>ยังไม่รู้ว่าสลับไป Low Tone แล้ว Abyss Knight ยังอยู่ไหม และ Abyss Knight อยู่ได้นานแค่ไหน แนะนำให้เปิด High Tone ค้างไว้ก่อน</li>
+    <li>เทียบ Lv1 กับ Lv45 แล้ว ดาเมจ % ของ Abyss Knight โตเร็วกว่า Rune Knight มาก (Basic Attack 62% → 1712%) จึงควรอัปเลเวลรูน Rune Knight ให้สูงที่สุด</li>
+  </ul>
+</section>
+
+<section id="sentry">
+  <div class="sec-head">
+    <span class="eyebrow">Shock support</span>
+    <h2>Electric Sentry: ตัวทำช็อกตอน High Tone</h2>
+  </div>
+  <div class="thesis">
+    <b>ให้ Sentry ทำช็อก แทน Abyssling ที่ถูกดูด</b>
+    <span>ตอน High Tone Rune Knight ดูด Abyssling เป็นระยะ และ Abyss Knight ก็ดูดเพื่อต่อบัฟ Fusion Abyssling จึงแทบไม่ได้ยิง ศัตรูก็ติดช็อกไม่บ่อย Conductor กับ Electric Shock บน Rune Knight ที่ให้คริเฉพาะตอนศัตรูติดช็อกจะทำงานน้อยลง Electric Sentry ไม่ใช่ Abyssling จึงไม่ถูกดูดและยิงได้ตลอด</span>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Electric Sentry (Lv45)</th><th>ค่า</th></tr></thead>
+      <tbody>
+        <tr><td>รูนสกิล</td><td>สีเขียว เกรด Normal ขึ้นไป หาได้จากดรอปและร้านค้า แท็ก Attack, Sentry ส่วนตัว Sentry มีแท็ก Strike, Lightning, Projectile ในข้อมูลไม่ได้กำหนดชนิดอาวุธ</td></tr>
+        <tr><td>การยิง</td><td>ลูกสายฟ้า 6 ลูกที่เด้งต่อ ดาเมจสายฟ้า 218% ยิงต่อเนื่อง</td></tr>
+        <tr><td>ช็อก</td><td class="num">ค่าช็อก +45</td></tr>
+        <tr><td>วาง</td><td>ทำงานทันที มานา 49 อยู่ได้ 16 วินาที วางพร้อมกันได้ 2 ตัว (เกรด Legendary +1) มีค่ารักษาสภาพตอนวาง</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>รูนลิงก์ของ Electric Sentry</th><th>ได้อะไร (Lv45 รวมเกรด Legendary)</th></tr></thead>
+      <tbody>
+        <tr><td><span class="dot blue"></span>Continuous Shock <span class="pill top">ต้องมี</span><small>วางให้ติด Abyssling ด้วย</small></td><td>ค่าช็อก +32, โอกาสช็อก +7.5%, เอฟเฟกต์ช็อก +27.9% และสแตกเพิ่มอีก 7% ต่อสแตก (สูงสุด 3), ระยะเวลาช็อก +25%</td></tr>
+        <tr><td><span class="dot blue"></span>Status Effect Enhancement</td><td>ค่าสถานะผิดปกติ +25, ระยะเวลาสถานะ +57.1%, เอฟเฟกต์ดีบัฟ +55.4%</td></tr>
+        <tr><td><span class="dot green"></span>Precise Sentry</td><td>อัตราโจมตีโดนของ Sentry +107% และค่าคริ Sentry +22 ยิงไม่โดนก็ทำช็อกไม่ได้</td></tr>
+        <tr><td><span class="dot green"></span>Multi-Sentry <span class="pill cond">ถ้ามี</span></td><td>วาง Sentry ได้เพิ่ม 1 ตัว ได้จาก Synthesis</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>รวมแล้ว Sentry มีค่าช็อกราว 102 ก่อนปลุกพลัง ปลุกระดับ Verity ได้เพิ่มอีก 20–40 ยังไม่รู้ว่าค่าช็อกแปลงเป็นโอกาสช็อกเท่าไรเมื่อตีบอส Lv150</li>
+    <li>Sentry ไม่ต้องแรง เพราะ Conductor และ Electric Shock เช็กแค่ว่าศัตรูติดช็อกอยู่ไหม จึงไม่ต้องใส่ไอเทมไลน์ Sentry DMG</li>
+    <li>Sentry ใช้ค่าสถานะของตัวเองเหมือนมินเนียน ค่าอัตราโจมตีโดนของตัวละครอาจไม่ช่วย Sentry ถ้าเห็นว่าลูกยิงพลาดบ่อย ให้ใส่ Precise Sentry ก่อน Status Effect Enhancement</li>
+    <li>ต้องวางใหม่ทุก 16 วินาที ใส่ช่องสกิลที่กดง่าย และวางใกล้บอสเพื่อให้ลูกเด้งไปโดนบอสหลายครั้ง</li>
+    <li>ถ้ายังไม่มี Electric Sentry: ปลุก Conductor ระดับ Origin ให้ Rune Knight กลับมาทำช็อกได้ แล้วปลุก Rune Knight ระดับ Verity ได้ค่าช็อก +41–51 แต่จะเสียระดับ Source ของ Rune Knight (ดาเมจ +50–80%) จึงควรใช้ Sentry มากกว่า</li>
+  </ul>
+</section>
+
+<section id="crit">
+  <div class="sec-head">
+    <span class="eyebrow">Critical</span>
+    <h2>คริของมินเนียน</h2>
+  </div>
+  <p>มินเนียนไม่ใช้ค่าคริของตัวละคร ต้องเติมจากไลน์ Minion Critical Rate และรูนลิงก์ที่ส่งค่าให้มินเนียน บิลด์นี้ได้คริส่วนใหญ่จากศัตรูที่ติดช็อก ซึ่ง <a href="#sentry">Electric Sentry</a> ทำให้</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>แหล่ง</th><th>%คริ (Critical Rate)</th><th>คริดาเมจ</th></tr></thead>
+      <tbody>
+        <tr><td>แหวน Transcendent Vesper's Cloud</td><td class="num">+129–153%<small>สองไลน์รวมกัน</small></td><td class="num">+47–88%</td></tr>
+        <tr><td>คทา Transcendent Reign of Consecration</td><td class="num">+120–135%</td><td class="num">+68–75%</td></tr>
+        <tr><td>ถุงมือ Transcendent Prele's Gauntlets</td><td class="num">+62–70%</td><td class="num">+31–35.5%</td></tr>
+        <tr><td>Unite Crowd (Enrage)<small>ช่องเสริม ดูหมายเหตุในหัวข้อแรก</small></td><td class="num">+71.8%</td><td class="num">–</td></tr>
+        <tr><td><span class="dot blue"></span>Conductor <span class="pill cond">ศัตรูติดช็อก</span></td><td class="num">+315.4%</td><td class="num">+10%</td></tr>
+        <tr><td><span class="dot blue"></span>Electric Shock <span class="pill cond">ศัตรูติดช็อก</span></td><td class="num">+171.6%</td><td class="num">+94%</td></tr>
+        <tr><td><span class="dot green"></span>Find Weakness</td><td class="num">+208.5%<small>และค่าคริ +4, โอกาสคริ +2%</small></td><td class="num">–</td></tr>
+        <tr><td><span class="dot green"></span>Slaughter</td><td class="num">–</td><td class="num">+146%<small>สแตกเพิ่มได้อีกถึง +50%</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="formula">คริ% = ค่าคริ × (1 + Σ%คริ) ÷ (1 + 0.04 × เลเวลศัตรู)</div>
+  <ul class="notes">
+    <li>สูตรนี้เป็นสูตรคริของตัวละครที่ใช้ใน<a href="frost-storm-crit-build.html#crit">บิลด์ Frost Storm</a> ยังไม่รู้ว่ามินเนียนใช้สูตรเดียวกันไหม และข้อมูลทางการไม่ได้บอกค่าคริพื้นฐานของ Rune Knight</li>
+    <li>ค่าของรูนลิงก์ในตารางคิดที่ Lv45 รวมเกรด Legendary แล้ว</li>
+    <li>ถ้าใช้สูตรเดียวกัน ของสามชิ้น Enrage และรูนลิงก์สองตัวที่ใช้กับศัตรูติดช็อก รวมได้ราว 900% ตีบอส Lv150 ต้องมีค่าคริพื้นฐานราว 70 ถึงจะคริ 100% ซึ่งน่าจะมากกว่าค่าที่มินเนียนมี คริจึงมักยังไม่เต็ม และรูนเพิ่ม %คริยังคุ้ม</li>
+    <li>Conductor ทำให้ Rune Knight ทำช็อกเองไม่ได้ ไม่เป็นไรเพราะ Electric Sentry ทำช็อกให้</li>
+    <li><b>ค่าคริในหน้าต่าง Stat Info › Skill ยังไม่รวมไลน์ที่มีเงื่อนไข</b> เช่น %คริใส่ศัตรูติดช็อกของ Conductor และ Electric Shock และคิดกับศัตรู Lv100 ถ้าหน้าต่างขึ้น 55% ตีบอส Lv150 ที่ไม่ติดช็อกจะเหลือราว 39% ถ้าบอสติดช็อกและลิงก์ทั้งสองตัวไว้ จะขึ้นเป็นราว 65–100% ขึ้นกับว่ามี %คริอยู่แล้วเท่าไร ยิ่งมีมาก สองรูนนี้ยิ่งเพิ่มได้น้อยลง</li>
+    <li>Abyssling ได้คริเพิ่มจาก Knight's Authority ของ Lightning Rune Knight (%คริ Abyssling +72% ที่ Lv45) ตอน Low Tone เอฟเฟกต์ Authority เพิ่มอีก 239.2% ไลน์นี้ช่วยเฉพาะ Abyssling ไม่ช่วย Abyss Knight</li>
+    <li>วิธีเช็กในเกม: ตีหุ่นบอสโดยถอดและใส่ Conductor แล้วดูว่าเลขคริขึ้นบ่อยขึ้นไหม ถ้าแทบทุกครั้งเป็นคริแล้ว ให้เปลี่ยน Conductor เป็น Slaughter</li>
+  </ul>
+</section>
+
+<section id="layers">
+  <div class="sec-head">
+    <span class="eyebrow">Multipliers</span>
+    <h2>ดาเมจมาจากไหน</h2>
+  </div>
+  <p>ห้าแถวแรกในตารางทำงานเกือบตลอดเวลา คูณกันแล้วได้ราว ×7.5 ก่อนนับรูนลิงก์ เพราะแต่ละตัวเป็นการขยายดาเมจแยกกัน ไม่ได้บวกรวมกัน</p>
+  <div class="need">
+    <div><span>Hazy Melody High Tone</span><b>×1.75</b></div>
+    <div><span>บัฟ Fusion</span><b>×1.75</b></div>
+    <div><span>Sacred Devotion (ออร่า)</span><b>×1.76</b></div>
+    <div><span>Legion Apothecary</span><b>×1.30</b></div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>แหล่ง</th><th>ค่า</th><th>ใช้อย่างไร</th></tr></thead>
+      <tbody>
+        <tr><td>Hazy Melody High Tone</td><td class="num">57.7% → 75%</td><td>ขยายดาเมจ Rune Knight เกรด Legendary เพิ่มเอฟเฟกต์ High Tone 30%</td></tr>
+        <tr><td>บัฟ Fusion ของ Abyss Knight</td><td class="num">75%</td><td>ได้จากการดูด Lightning Arrow Abyssling ยังไม่รู้ว่าเลเวล 2–3 ซ้อนกับเลเวล 1 หรือแทนที่</td></tr>
+        <tr><td>Sacred Devotion + Vesper's Cloud</td><td class="num">76% → 119%</td><td>เกรด Legendary 4 สแตก ปลุกระดับ Source ได้ 6 สแตก Vesper's Cloud เพิ่มระยะเวลา 150–200% แต่เพิ่มคูลดาวน์ 15 วินาที หมดแล้วต้องกดใหม่ ตัวละครเสียเกราะและค่าต้านธาตุตามจำนวนสแตก</td></tr>
+        <tr><td>เข็มขัด Ultimate Legion Apothecary</td><td class="num">25–35%</td><td>ขยายดาเมจมินเนียน</td></tr>
+        <tr><td>ถุงมือ Transcendent Prele's Gauntlets</td><td class="num">5–8%</td><td>ขยายดาเมจมินเนียน</td></tr>
+        <tr><td>Mark of Focus</td><td class="num">40.6% → 51.6%</td><td>เฉพาะตอนเป้าติดมาร์ก เกรด Legendary เพิ่มเอฟเฟกต์ 27% และระยะเวลา 50%</td></tr>
+        <tr><td>Gather Minions</td><td class="num">+286%</td><td>ดาเมจแบบบวก ไม่ใช่ขยาย กดก่อนบอสเปิดช่วงรับดาเมจ</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="board">
+  <div class="sec-head">
+    <span class="eyebrow">Link runes</span>
+    <h2>กระดานรูน: Rune Knight, Abyssling และ Sentry</h2>
+  </div>
+  <div class="board-wrap">
+    <svg viewBox="-128 -188 452 374" aria-label="Lightning Rune Knight และ Lightning Arrow Abyssling วางห่างกันสองช่องแบบเยื้อง มี Minion DMG และ Spell DMG Increase อยู่ติดทั้งสองสกิล ส่วน Electric Sentry วางเยื้องขึ้นไปทางขวาของ Abyssling มี Continuous Shock อยู่ติดทั้ง Abyssling และ Sentry">
+      <defs>
+        <polygon id="hex5" points="37.2,-21.5 37.2,21.5 0,43 -37.2,21.5 -37.2,-21.5 0,-43"/>
+      </defs>
+      <!-- Rune Knight only -->
+      <use href="#hex5" class="hx hx-red" x="-39.84" y="-69"/>
+      <text class="hx-text" x="-39.84" y="-72">Noble</text>
+      <text class="hx-text" x="-39.84" y="-61">Sacrifice</text>
+      <use href="#hex5" class="hx hx-blue" x="39.84" y="-69"/>
+      <text class="hx-text" x="39.84" y="-72">Electric</text>
+      <text class="hx-text" x="39.84" y="-61">Shock</text>
+      <use href="#hex5" class="hx hx-blue" x="-79.67" y="0"/>
+      <text class="hx-text" x="-79.67" y="3">Conductor</text>
+      <use href="#hex5" class="hx hx-red" x="-39.84" y="69"/>
+      <text class="hx-text" x="-39.84" y="66">Concentrated</text>
+      <text class="hx-text" x="-39.84" y="77">Area DMG</text>
+      <!-- Lightning Arrow Abyssling only -->
+      <use href="#hex5" class="hx hx-blue hx-shared" x="159.3" y="0"/>
+      <text class="hx-text" x="159.3" y="-6">Continuous</text>
+      <text class="hx-text" x="159.3" y="5">Shock</text>
+      <text class="hx-share" x="159.3" y="19">แชร์</text>
+      <!-- Electric Sentry only -->
+      <use href="#hex5" class="hx hx-blue" x="239" y="0"/>
+      <text class="hx-text" x="239" y="-3">Status Effect</text>
+      <text class="hx-text" x="239" y="8">Enhance.</text>
+      <use href="#hex5" class="hx hx-green" x="278.8" y="-69"/>
+      <text class="hx-text" x="278.8" y="-72">Precise</text>
+      <text class="hx-text" x="278.8" y="-61">Sentry</text>
+      <use href="#hex5" class="hx hx-green" x="239" y="-138"/>
+      <text class="hx-text" x="239" y="-141">Multi-</text>
+      <text class="hx-text" x="239" y="-130">Sentry</text>
+      <use href="#hex5" class="hx hx-green" x="199.2" y="69"/>
+      <text class="hx-text" x="199.2" y="66">Find</text>
+      <text class="hx-text" x="199.2" y="77">Weakness</text>
+      <use href="#hex5" class="hx hx-green" x="159.3" y="138"/>
+      <text class="hx-text" x="159.3" y="141">Slaughter</text>
+      <use href="#hex5" class="hx hx-blue" x="79.67" y="138"/>
+      <text class="hx-text" x="79.67" y="135">Minion</text>
+      <text class="hx-text" x="79.67" y="146">Speed</text>
+      <!-- shared -->
+      <use href="#hex5" class="hx hx-blue hx-shared" x="79.67" y="0"/>
+      <text class="hx-text" x="79.67" y="-6">Minion</text>
+      <text class="hx-text" x="79.67" y="5">DMG</text>
+      <text class="hx-share" x="79.67" y="19">แชร์</text>
+      <use href="#hex5" class="hx hx-blue hx-shared" x="39.84" y="69"/>
+      <text class="hx-text" x="39.84" y="63">Spell DMG</text>
+      <text class="hx-text" x="39.84" y="74">Increase</text>
+      <text class="hx-share" x="39.84" y="88">แชร์</text>
+      <!-- skills -->
+      <use href="#hex5" class="hx hx-skill" x="0" y="0"/>
+      <text class="hx-skill-text" x="0" y="-2">Lightning</text>
+      <text class="hx-skill-text" x="0" y="11">Rune Knight</text>
+      <use href="#hex5" class="hx hx-skill" x="119.5" y="69"/>
+      <text class="hx-skill-text" x="119.5" y="61">Lightning</text>
+      <text class="hx-skill-text" x="119.5" y="73">Arrow</text>
+      <text class="hx-skill-text" x="119.5" y="85">Abyssling</text>
+      <use href="#hex5" class="hx hx-skill" x="199.2" y="-69"/>
+      <text class="hx-skill-text" x="199.2" y="-71">Electric</text>
+      <text class="hx-skill-text" x="199.2" y="-58">Sentry</text>
+    </svg>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th class="slot-col">ช่อง</th><th>Rune Knight</th><th>Lightning Arrow Abyssling</th></tr></thead>
+        <tbody>
+          <tr><td>แชร์ 1</td><td colspan="2"><span class="dot blue"></span>Minion DMG (ลิงก์ให้ทั้งคู่) <span class="pill top">ต้องมี</span></td></tr>
+          <tr><td>แชร์ 2</td><td colspan="2"><span class="dot blue"></span>Spell DMG Increase (ลิงก์ให้ทั้งคู่) <span class="pill top">ต้องมี</span></td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot red"></span>Noble Sacrifice</td><td><span class="dot blue"></span>Continuous Shock<small>แชร์กับ Electric Sentry</small></td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot blue"></span>Electric Shock</td><td><span class="dot green"></span>Find Weakness</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot blue"></span>Conductor<small>คริเต็มแล้ว: Slaughter</small></td><td><span class="dot green"></span>Slaughter</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot red"></span>Concentrated Area DMG</td><td><span class="dot blue"></span>Minion Speed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>รูนลิงก์ 6 ตัวของ Rune Knight</th><th>คริยังไม่เต็ม</th><th>คริเต็มแล้ว</th></tr></thead>
+      <tbody>
+        <tr class="best"><td>ชุดแนะนำ<small>Minion DMG, Spell DMG Increase, Noble Sacrifice, Electric Shock, Conductor, Concentrated Area DMG</small></td><td class="num">1.00</td><td class="num">1.00</td></tr>
+        <tr><td>Conductor → Slaughter</td><td class="num">0.89</td><td class="num">1.19</td></tr>
+        <tr><td>Concentrated Area DMG → Endless Growth <span class="pill cond">ต้องเช็ก</span></td><td class="num">1.14</td><td class="num">1.14</td></tr>
+        <tr><td>Spell DMG Increase → Improved Technique<small>รูน Transcendent, คิดที่ Int 300</small></td><td class="num">1.10</td><td class="num">1.10</td></tr>
+        <tr><td>Electric Shock → Find Weakness</td><td class="num">0.85</td><td class="num">0.72</td></tr>
+        <tr><td>ชุดเริ่มต้น (หาได้จากดรอปและร้านค้า)<small>Spell DMG Increase, Conductor, Absorb Minion HP, Find Weakness, Slaughter, Overpower</small></td><td class="num">0.48</td><td class="num">0.44</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>ตัวเลขคือดาเมจของ Abyss Knight เทียบกับชุดแนะนำในแต่ละคอลัมน์ ตอนคิด ถ้าไม่ใส่รูนลิงก์มินเนียนมีดาเมจ +655% อยู่แล้ว (Rune Knight เกรด Legendary +150%, ปลุก Source +65%, คทา +225% และ Gather Minions เฉลี่ย 75% ของเวลา) คอลัมน์ "คริยังไม่เต็ม" สมมติว่าใส่แค่ไอเทมได้คริ 25% ดูหัวข้อข้อจำกัด</li>
+    <li><b>Minion DMG, Noble Sacrifice และ Electric Shock ได้จาก Synthesis เท่านั้น</b> สามตัวนี้ทำให้ชุดแนะนำแรงกว่าชุดเริ่มต้นราวสองเท่า ควรเริ่มหา Minion DMG ก่อน เพราะใส่ตัวเดียวได้ ×1.54</li>
+    <li><b>Spell DMG Increase ใช้กับมินเนียนได้</b> เพราะท่าโจมตีของ Lightning Rune Knight และ Abyss Knight เป็นแท็ก Spell ได้ดาเมจ +449% รวมเกรด Legendary</li>
+    <li><b>Endless Growth</b> ได้สแตก Growth ทุก 2 วินาทีหลังอัญเชิญ ครบ 15 สแตกได้ดาเมจราว +280% และความเร็ว +40% ยังไม่รู้ว่าสแตกส่งต่อให้ Abyss Knight ไหม หรือต้องเริ่มนับใหม่ตอน Abyss Knight ออกมา</li>
+    <li>Concentrated Area DMG ลดพื้นที่ 30% ตอนฟาร์มเปลี่ยนเป็น Mana Storm (ขยายดาเมจ Strike 32%) แรงลดลงราว 4% ดู<a href="#farm">ชุดฟาร์ม</a></li>
+    <li><b>Electric Sentry วางเยื้องขึ้นไปทางขวาของ Abyssling</b> ให้ Continuous Shock ติดทั้งสองตัว รูนลิงก์อีกสามช่องของ Sentry ไม่ติดสกิลอื่น รายละเอียดอยู่ใน<a href="#sentry">หัวข้อ Sentry</a></li>
+    <li>ตอน High Tone Abyssling ถูกดูดก่อนได้ยิง รูนลิงก์สามช่องของ Abyssling (Find Weakness, Slaughter, Minion Speed) จึงช่วยตอนฟาร์มด้วย Low Tone เป็นหลัก ซึ่ง Abyssling ได้คริจาก Knight's Authority เพิ่ม ถ้ารูนไม่พอ เว้นสามช่องนี้ไว้ก่อนได้</li>
+    <li>รูนความเร็ว (Quick Cast, Minion Speed) ไม่ได้อยู่ในชุดของ Rune Knight เพราะยังไม่รู้ว่าท่าของ Rune Knight ออกเร็วขึ้นตามความเร็วร่ายหรือตามรอบเวลาของท่า ถ้าออกเร็วขึ้นตามความเร็วร่าย Quick Cast ใช้แทน Concentrated Area DMG ได้</li>
+  </ul>
+</section>
+
+<section id="farm">
+  <div class="sec-head">
+    <span class="eyebrow">Farm vs boss</span>
+    <h2>ชุดฟาร์ม vs ชุดตีบอส</h2>
+  </div>
+  <div class="thesis">
+    <b>ใช้สกิลชุดเดิม เปลี่ยนแค่รูนลิงก์ของ Rune Knight 1–3 ช่อง</b>
+    <span>ทั้งสองแบบยังให้ Abyss Knight เป็นตัวทำดาเมจและเปิด High Tone ค้าง ตอนฟาร์มต่างกันสามเรื่อง: ต้องการพื้นที่เต็ม, มอนติดช็อกน้อยลงเพราะ Sentry อยู่กับที่ และ Rune Knight มีโอกาสตายมากกว่า</span>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>ส่วน</th><th>ตีบอส</th><th>ฟาร์ม</th></tr></thead>
+      <tbody>
+        <tr><td>Rune Knight ช่อง 4–5</td><td><span class="dot blue"></span>Electric Shock + <span class="dot blue"></span>Conductor</td><td><span class="dot green"></span>Find Weakness + <span class="dot green"></span>Slaughter<small>เมื่อมอนติดช็อกน้อยกว่าราวครึ่งหนึ่งของการโจมตี</small></td></tr>
+        <tr><td>Rune Knight ช่อง 6</td><td><span class="dot red"></span>Concentrated Area DMG</td><td><span class="dot blue"></span>Mana Storm<small>ดาเมจลดราว 4% ได้พื้นที่เต็ม</small></td></tr>
+        <tr><td>Electric Sentry</td><td>วางใกล้บอสทุก 16 วินาที</td><td>วางตอนเจอ Elite หรือกลุ่มใหญ่ ถ้าวิ่งเร็วจนทิ้งไว้ข้างหลัง ไม่ต้องใช้</td></tr>
+        <tr><td>Gather Minions</td><td>กดตอนบอสเปิดช่วงรับดาเมจ</td><td>กดดึงมินเนียนมาหาตัวหลังวิ่งนำ ได้ดาเมจ +286% ไปด้วย</td></tr>
+        <tr><td>Mark of Focus</td><td>ใส่บอส</td><td>ใส่ Elite</td></tr>
+        <tr><td>Hazy Melody</td><td>High Tone</td><td>High Tone<small>สลับไป Low Tone เฉพาะถ้าลองแล้ว Abyss Knight ยังอยู่</small></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>ช่อง 4–6 ของ Rune Knight</th><th>มอนติดช็อก 100%</th><th>50%</th><th>25%</th></tr></thead>
+      <tbody>
+        <tr><td>Electric Shock, Conductor, Mana Storm</td><td class="num">0.96</td><td class="num">0.69</td><td class="num">0.56</td></tr>
+        <tr class="best"><td>Find Weakness, Slaughter, Mana Storm <span class="pill top">ฟาร์ม</span></td><td class="num">0.73</td><td class="num">0.73</td><td class="num">0.73</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>ตัวเลขเทียบกับชุดตีบอสที่บอสติดช็อกตลอด (= 1.00) ช่อง 1–3 ใช้ Minion DMG, Spell DMG Increase และ Noble Sacrifice เหมือนกัน คิดด้วยค่าจากหน้าต่างสถานะของตัวละครตัวอย่าง (คริ 55% ที่ Lv100 คือราว 39% ใส่บอส Lv150 และคริดาเมจ 424%)</li>
+    <li><b>จุดคุ้มทุนอยู่ที่มอนติดช็อกราว 55–60% ของการโจมตี</b> ถ้าติดบ่อยกว่านี้ใช้ชุด Conductor ต่อ ถ้าน้อยกว่านี้ใช้ชุด Find Weakness กับ Slaughter ซึ่งหาได้จากดรอปและร้านค้าทั้งคู่ ไม่ต้องหา Electric Shock จาก Synthesis</li>
+    <li>ถ้ามีรูนจำกัด เปลี่ยนเฉพาะ Conductor เป็น Find Weakness ก็ได้ ชุดนี้อยู่กลางๆ (0.85 / 0.71 / 0.64)</li>
+  </ul>
+  <h3>ถ้า Rune Knight ตายบ่อยตอนฟาร์ม</h3>
+  <p class="dim">Minion DMG ทำให้มินเนียนรับดาเมจเพิ่ม 15.1% และ Noble Sacrifice ดูด HP ของมินเนียนเรื่อยๆ ถ้า Rune Knight ตาย ต้องรอคูลดาวน์ 40 วินาที (80 วินาทีถ้าใส่ Prele's Gauntlets) ให้ดู HP ของ Rune Knight ก่อน แล้วเลือกใส่แทน Mana Storm หรือ Concentrated Area DMG</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>ใส่แทนช่อง 6</th><th>เงื่อนไข</th><th>ดาเมจ</th><th>ความอึด</th></tr></thead>
+      <tbody>
+        <tr class="best"><td><span class="dot blue"></span>Minion Presence <span class="pill cond">Synthesis</span></td><td>HP Rune Knight 30,000 ขึ้นไป (24,000 ได้ราว 1.10)</td><td class="num">1.13</td><td>HP +35.4%</td></tr>
+        <tr><td><span class="dot blue"></span>Mana Storm</td><td>–</td><td class="num">0.96</td><td>–</td></tr>
+        <tr><td><span class="dot blue"></span>Minion HP</td><td>HP Rune Knight 20,000 ขึ้นไป</td><td class="num">0.89</td><td>ขยาย HP 35.4%</td></tr>
+        <tr><td><span class="dot blue"></span>Minion HP</td><td>HP Rune Knight ราว 10,000</td><td class="num">0.81</td><td>ขยาย HP 35.4%</td></tr>
+        <tr><td><span class="dot blue"></span>Minion Body Shield</td><td>–</td><td class="num">0.67</td><td>มินเนียนรับดาเมจลด 35.8%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>Minion Presence ได้ดาเมจมินเนียน +5% ต่อ HP 300 (สูงสุด 400%) และขยายดาเมจ 4% ต่อ HP 6,000 (สูงสุด 20%) Minion HP ได้ดาเมจมินเนียน +3% ต่อ HP 200 (สูงสุด 300%) สองตัวนี้ยิ่ง HP สูงยิ่งแรง และช่วยให้อึดด้วย ถ้า HP ถึงใส่ได้ทั้งตอนฟาร์มและตอนตีบอส</li>
+    <li>ดู HP ของ Rune Knight ได้จากหน้าต่าง Stat Info › Skill ตอนเลือกรูน Rune Knight ถ้าเกมแสดงค่า HP ไว้ ไม่อย่างนั้นต้องเทียบจากแถบ HP ของมินเนียน</li>
+    <li>ตัวช่วยอื่นที่มีอยู่แล้วในบิลด์: Vesper's Cloud ลดดาเมจที่มินเนียนรับ 5% ต่อสแตก Sacred Devotion, Legion Apothecary ขยาย HP มินเนียน 20% และบัฟ Fusion ลดดาเมจที่รับ 15%</li>
+  </ul>
+</section>
+
+<section id="gear">
+  <div class="sec-head">
+    <span class="eyebrow">Gear</span>
+    <h2>ไอเทม</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>ช่อง</th><th>ไอเทม</th><th>ทำไม</th></tr></thead>
+      <tbody>
+        <tr><td>คทา (มือเดียว) <span class="pill top">สำคัญสุด</span></td><td>Transcendent Reign of Consecration<small>ต้องมี Int 265 · ยังไม่มี: Reign of Consecration (Lv64)</small></td><td>ดาเมจมินเนียน +225%, %คริมินเนียน +120–135%, คริดาเมจมินเนียน +68–75%, พื้นที่มินเนียน +60–100% และ Abyssling สูงสุด +1 ตัว ซึ่งใช้เป็นเชื้อเพลิง Fusion</td></tr>
+        <tr><td>แหวน <span class="pill top">สำคัญสุด</span></td><td>Transcendent Vesper's Cloud</td><td>%คริมินเนียน +129–153%, คริดาเมจมินเนียน +47–88%, เลเวลรูนมินเนียน +5–8 และทำให้ Sacred Devotion ได้สแตกเต็มทันทีแบบออร่า มินเนียนรับดาเมจลด 5% ต่อสแตก</td></tr>
+        <tr><td>ถุงมือ</td><td>Transcendent Prele's Gauntlets<small>ต้องสุ่มได้ออปชัน Lightning (โอกาส 1 ใน 6) · ต้องมี Str 105 Int 105</small></td><td>อัญเชิญ Rune Knight ตอน High Tone แล้วได้ Fusion Lv.3 ทันที %คริมินเนียน +62–70%, คริดาเมจ +31–35.5%, ขยายดาเมจมินเนียน 5–8% และความเร็วโจมตีกับความเร็วร่ายมินเนียน +20–31%</td></tr>
+        <tr><td>เข็มขัด</td><td>Ultimate Legion Apothecary<small>หรือ Returnee's Waistband ที่สุ่มได้ไลน์ "ขยายดาเมจมินเนียน 3% ต่อเอฟเฟกต์ยาที่ทำงาน" (โอกาส 1 ใน 3)</small></td><td>ขยายดาเมจมินเนียน 25–35% และขยาย HP มินเนียน 20% มีโอกาส 50% ที่ไลน์สุ่มทำให้ High Elixir มีผลกับมินเนียนด้วย</td></tr>
+        <tr><td>แหวนวงที่ 2 สร้อย มือซ้าย</td><td>ของคราฟ</td><td>ไลน์ดาเมจมินเนียน คริมินเนียน และเลเวลรูนมินเนียน</td></tr>
+        <tr><td>หมวก ชุดเกราะ รองเท้า</td><td>ของคราฟ</td><td>HP ค่าต้านธาตุ และ Int ให้ตัวละคร เพราะ Sacred Devotion ลดเกราะและค่าต้านธาตุของตัวละครทุกสแตก</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>ในข้อมูลทางการ S12 มียูนีคไลน์มินเนียนแค่ 4 ตระกูลนี้ ช่องที่เหลือจึงต้องใช้ของคราฟ</li>
+    <li><b>ของสายธนูเดิมใช้ต่อไม่ได้เลย</b> ไลน์คริ คริดาเมจ และขยายดาเมจของ Frost Storm เป็นค่าของตัวละคร มินเนียนไม่ได้ใช้</li>
+    <li><b>เตรียมมานาและ Int</b> Rune Knight ใช้มานา 152, Abyssling 95 และ Electric Sentry 49 ต่อครั้งที่ Lv45 มีค่ารักษาสภาพตอนอัญเชิญ และรูนลิงก์แต่ละตัวเพิ่มทรัพยากรที่ใช้อีก 15–20% Hazy Melody ก็เพิ่มทรัพยากรที่ใช้อีก 15% คทาต้องมี Int 265 อยู่แล้ว ส่วน Improved Technique ยิ่ง Int สูงยิ่งแรง</li>
+    <li>Prele's Gauntlets มีออปชันสุ่ม 6 แบบตามชนิด Rune Knight ต้องได้แบบ Lightning เท่านั้น แบบอื่นใช้กับบิลด์นี้ไม่ได้</li>
+  </ul>
+</section>
+
+<section id="awaken">
+  <div class="sec-head">
+    <span class="eyebrow">Awakening</span>
+    <h2>ปลุกพลัง</h2>
+  </div>
+  <p class="dim">ปลุกพลังเลือกได้ 1 ออปชันต่อรูน ในเกมภาษาไทย: แหล่งกำเนิด = Source, บ่อเกิด = Origin, สัจธรรม = Verity</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>สกิล / ระดับ</th><th>ได้อะไร</th><th>ช่วยอย่างไร</th></tr></thead>
+      <tbody>
+        <tr><td>Lightning Rune Knight · Source <span class="pill top">เลือก</span></td><td>ดาเมจ Rune Knight +50–80%, พื้นที่มินเนียน +25–50%, Enlargement</td><td>Abyss Knight ได้ค่าทั้งหมดนี้ด้วย</td></tr>
+        <tr><td>Lightning Rune Knight · Origin</td><td>เอฟเฟกต์ Knight's Authority +30–50%</td><td>ช่วยเฉพาะ Abyssling</td></tr>
+        <tr><td>Lightning Rune Knight · Verity</td><td>ค่าช็อก +41–51, เอฟเฟกต์ช็อก +20.7–25%, Authority ได้ดาเมจมินเนียน +15–30% ใส่ศัตรูติดช็อก</td><td>ถ้าลิงก์ Conductor ไว้ Rune Knight จะทำช็อกไม่ได้อยู่แล้ว</td></tr>
+        <tr><td>Electric Sentry · Verity <span class="pill top">เลือก</span></td><td>ค่าช็อก Sentry +20–40, อัตราโจมตีโดน Sentry +32–40%, ค่าคริ Sentry +9–11</td><td>ยิงโดนบ่อยขึ้นและทำช็อกบ่อยขึ้น Conductor กับ Electric Shock ทำงานบ่อยขึ้น</td></tr>
+        <tr><td>Electric Sentry · Origin</td><td>วางพร้อมกันได้ +1–2 ตัว</td><td>ลูกยิงมากขึ้น เลือกแทนถ้า Sentry ยิงโดนอยู่แล้ว</td></tr>
+        <tr><td>Lightning Arrow Abyssling · Source <span class="pill top">High Tone</span></td><td>ความเร็วฟื้นคูลดาวน์ +30–50%, ขยาย HP มินเนียนสูงสุด 8–15%</td><td>อัญเชิญเชื้อเพลิงได้ถี่ขึ้น ช่วยถ้ากดแล้วติดคูลดาวน์บ่อย</td></tr>
+        <tr><td>Lightning Arrow Abyssling · Verity</td><td>ค่าช็อก Abyssling +30–40, ดาเมจ Abyssling +40–52% ใส่ศัตรูติดช็อก</td><td>ช่วยเฉพาะตอน Abyssling ได้ยิง เลือกถ้ายังไม่ใช้ Sentry</td></tr>
+        <tr><td>Lightning Arrow Abyssling · Origin</td><td>เด้งต่อ +1–2 ครั้ง, ความเร็วลูก +25–30%</td><td>เลือกแทนถ้าเน้นฟาร์มด้วย Low Tone</td></tr>
+        <tr><td>Hazy Melody · Origin <span class="pill top">เลือก</span></td><td>Abyssling สูงสุด +1 ตัวตอน High Tone, คูลดาวน์สกิลมินเนียนลด 10–25%</td><td>ชดเชยจำนวน Abyssling ที่ Fusion ลดลง และอัญเชิญ Rune Knight ได้ถี่ขึ้น</td></tr>
+        <tr><td>Sacred Devotion · Source <span class="pill top">เลือก</span></td><td>สแตกสูงสุด +2, เอฟเฟกต์ต่อมินเนียน +3–6%</td><td>ขยายดาเมจมินเนียนจาก 76% เป็นราว 119% แต่ตัวละครเสียเกราะและค่าต้านธาตุมากขึ้นตามสแตก</td></tr>
+        <tr><td>Gather Minions · Origin</td><td>ความเร็วมินเนียนในระยะ 600 +15–30% นาน 5 วินาที</td><td>ใช้คู่กับช่วงที่ดาเมจ +286% ทำงาน</td></tr>
+        <tr><td>Mark of Focus · Origin</td><td>ความเร็วฟื้นคูลดาวน์ +100%</td><td>คูลดาวน์ 20 เหลือ 10 วินาที ติดมาร์กได้เกือบครึ่งเวลา</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes">
+    <li>Mark of Focus ระดับ Source (ศัตรูในระยะ 500 จากตัวละครรับดาเมจมินเนียนเพิ่ม 25–35%) อาจคุ้มกว่า ถ้าไลน์นี้ทำงานตลอดเวลาที่ยืนใกล้บอส คำอธิบายไม่ได้บอกระยะเวลา ต้องลองในเกม</li>
+  </ul>
+</section>
+
+<section id="order">
+  <div class="sec-head">
+    <span class="eyebrow">Priority</span>
+    <h2>ลำดับการอัป</h2>
+  </div>
+  <ol class="steps">
+    <li><div><b>ลองวงจร Fusion ก่อน</b> ใส่ Lightning Rune Knight, Lightning Arrow Abyssling และ Hazy Melody แล้วเปิด High Tone ดูว่า Abyss Knight ออกมาหลังกี่วินาที และอยู่ได้นานแค่ไหน</div></li>
+    <li><div><b>ใส่ชุดเริ่มต้น</b> Spell DMG Increase แชร์ให้ทั้งสองสกิล แล้วเติม Conductor, Find Weakness, Slaughter และ Absorb Minion HP ที่หาได้จากดรอปและร้านค้า</div></li>
+    <li><div><b>เพิ่ม Electric Sentry กับ Continuous Shock</b> หาได้จากดรอปและร้านค้าทั้งคู่ วางใกล้บอสทุก 16 วินาที ให้บอสติดช็อกตลอดตอน High Tone</div></li>
+    <li><div><b>หาคทา Reign of Consecration</b> ใช้รุ่น Lv64 ไปก่อน แล้วลง Int 265 เพื่อใส่รุ่น Transcendent</div></li>
+    <li><div><b>ใส่แหวน Vesper's Cloud คู่ Sacred Devotion</b> ได้ทั้งคริมินเนียน เลเวลรูนมินเนียน และขยายดาเมจแบบออร่า</div></li>
+    <li><div><b>หารูนลิงก์จาก Synthesis</b> ตามลำดับ Minion DMG, Noble Sacrifice แล้ว Electric Shock</div></li>
+    <li><div><b>หาถุงมือ Prele's Gauntlets ออปชัน Lightning</b> ได้ Abyss Knight ทันทีที่อัญเชิญตอนตีบอส</div></li>
+    <li><div><b>ใส่เข็มขัด Ultimate Legion Apothecary</b> แล้วปลุกพลังตามตาราง เริ่มจาก Hazy Melody Origin และ Rune Knight Source</div></li>
+    <li><div><b>ถ้าคริเกือบทุกครั้งแล้ว</b> เปลี่ยน Conductor บน Rune Knight เป็น Slaughter</div></li>
+  </ol>
+</section>
+
+<section id="limits">
+  <div class="sec-head">
+    <span class="eyebrow">Limits</span>
+    <h2>ข้อจำกัดของการคำนวณ</h2>
+  </div>
+  <ul class="notes">
+    <li>ตัวจำลองของเว็บไม่คำนวณมินเนียน ตัวเลขทั้งหมดมาจากสคริปต์ที่คิดดาเมจ Abyss Knight แบบง่าย: ดาเมจแบบบวก × การขยายดาเมจแต่ละตัว × คริ × ค่าต้านธาตุ ไม่ได้คิดความเร็วเพราะยังไม่รู้ว่าท่าของมินเนียนเร็วขึ้นตามความเร็วร่ายไหม</li>
+    <li>ค่าที่ตั้งไว้: รูน Lv45 เกรด Legendary บอส Lv150 ค่าต้านธาตุ 40% ไอเทมรุ่น Transcendent ค่าสุ่มครึ่งทาง ดาเมจ +655% ก่อนใส่รูนลิงก์ และคริ 25% ก่อนใส่รูนลิงก์ (คอลัมน์คริยังไม่เต็ม)</li>
+    <li>สมมติว่าศัตรูติดช็อกตลอด ซึ่งต้องอาศัย Electric Sentry รูนที่ใช้กับศัตรูติดช็อกจึงได้ค่าเต็ม ถ้าในเกมติดช็อกไม่บ่อย Conductor กับ Electric Shock จะคุ้มน้อยลง ไม่ได้นับว่าช็อกเพิ่มดาเมจที่ศัตรูได้รับเท่าไร เพราะช่วยรูนทุกชุดเท่ากัน</li>
+    <li>ยังไม่รู้: ค่าคริพื้นฐานของมินเนียน, บัฟ Fusion แต่ละเลเวลซ้อนกันไหม, Abyss Knight อยู่ได้นานแค่ไหน, สแตก Endless Growth ส่งต่อให้ Abyss Knight ไหม และ Unite Crowd เปิดพร้อม Hazy Melody ได้ไหม</li>
+    <li>ไม่ได้คิดเลเวลรูนที่เพิ่มจาก Vesper's Cloud และ Improved Technique ไม่ได้คิด Zodiac และไม่ได้คำนวณมานา</li>
+    <li>ข้อมูลว่าค่าโจมตีของตัวละครไม่ส่งผลกับมินเนียนมาจากบทความปี 2022 ข้อมูลรูนและไอเทมในหน้านี้มีแยกไลน์มินเนียนตรงกับข้อนี้ แต่ยังไม่ได้ทดสอบในซีซันนี้</li>
+  </ul>
+</section>
+
+<section>
+  <div class="sec-head">
+    <span class="eyebrow">อ้างอิง</span>
+    <h2>แหล่งข้อมูล</h2>
+  </div>
+  <ul class="sources">
+    <li>ชีทข้อมูลรูนและยูนีคทางการ S12 (ข้อมูลเดียวกับเว็บ Undecember DB)<span>ก.ย. 2026</span></li>
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1690970187627011691">Director's Letter Vol. 6: Hazy Melody และ Abyss Knight</a><span>ส.ค. 2023</span></li>
+    <li><a href="https://m.gamechosun.co.kr/news/view.php?no=181874">Gamechosun: สรุปบิลด์มินเนียน (언디셈버 하수인 빌드 정리)</a><span>ก.พ. 2022</span></li>
+  </ul>
+</section>
+
+<footer>
+  <span>ดูเพิ่ม: <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> · <a href="frost-storm-ice-crystal-build.html">Frost Storm + Ice Crystal Arrow</a> · <a href="ogre-arrow-poison-build.html">Ogre Arrow สายพิษ</a> · <a href="skill-tier-list.html">Tier List สกิล S12</a></span>
+  <span>จัดทำจากข้อมูลสาธารณะของ LINE Games และการคำนวณเอง ไม่ใช่ไกด์ทางการของ LINE Games</span>
+</footer>
+
+</div>
+</body>
+</html>
