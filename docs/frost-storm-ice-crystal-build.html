@@ -248,7 +248,7 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
   <h1>Frost Storm + Ice Crystal Arrow</h1>
   <p class="lede">เดินยิง Ice Crystal Arrow เคลียร์แมพ แล้วใช้ Frost Storm ตีบอส Elite และมอนที่จับกลุ่มแน่น ไอเทมและรูนลิงก์เกือบทั้งหมดใช้ชุดเดียวกับ<a href="frost-storm-crit-build.html">บิลด์ Frost Storm สายคริ</a></p>
   <div class="meta">
-    <span>อัปเดต 22 ต.ค. 2026</span>
+    <span>อัปเดต 23 ต.ค. 2026</span>
     <span>ทดสอบด้วยตัวจำลองดาเมจ Undecember DB</span>
   </div>
   <nav class="toc" aria-label="สารบัญ">
@@ -256,6 +256,7 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
     <a href="#compare">เทียบสองสกิล</a>
     <a href="#synergy">ทำงานร่วมกัน</a>
     <a href="#board">กระดานรูน</a>
+    <a href="#capped">เมื่อคริเต็ม</a>
     <a href="#gear">ไอเทม</a>
     <a href="#awaken">ปลุกพลัง</a>
     <a href="#play">วิธีเล่น</a>
@@ -425,6 +426,88 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
   </ul>
 </section>
 
+<section id="capped">
+  <div class="sec-head">
+    <span class="eyebrow">Crit capped · Boss first</span>
+    <h2>เมื่อคริเต็มแล้ว: กระดานเน้น Frost Storm ตีบอส</h2>
+  </div>
+  <div class="thesis">
+    <b>ถ้าหน้าสถานะขึ้น "ค่าคริติคอลการโจมตี" 100% โดยไม่ต้องใช้ Find Weakness ให้แชร์ Quick Attack แทน</b>
+    <span>คริเวทที่เกิน 100% ไม่มีผล ช่องแชร์จึงควรเป็นรูนที่ช่วยทั้งสองสกิล Quick Attack เพิ่มความเร็วยิงให้ทั้งคู่ และกระดานนี้ใช้รูนอย่างละชิ้นเดียว ไม่ต้องหา Mana Storm หรือ Element DMG Amplification ชิ้นที่สอง</span>
+  </div>
+  <div class="board-wrap dual">
+    <svg viewBox="-128 -118 376 304" aria-label="กระดานแบบคริเต็ม: Quick Attack และ Attack DMG Increase อยู่ช่องที่ติดทั้งสองสกิล">
+      <defs>
+        <polygon id="hex4" points="37.2,-21.5 37.2,21.5 0,43 -37.2,21.5 -37.2,-21.5 0,-43"/>
+      </defs>
+      <!-- Frost Storm only -->
+      <use href="#hex4" class="hx hx-green" x="-39.84" y="-69"/>
+      <text class="hx-text hx-sm" x="-39.84" y="-72">Shadow</text>
+      <text class="hx-text hx-sm" x="-39.84" y="-61">Archer</text>
+      <use href="#hex4" class="hx hx-blue" x="39.84" y="-69"/>
+      <text class="hx-text hx-sm" x="39.84" y="-72">Mana</text>
+      <text class="hx-text hx-sm" x="39.84" y="-61">Storm</text>
+      <use href="#hex4" class="hx hx-blue" x="-79.67" y="0"/>
+      <text class="hx-text hx-sm" x="-79.67" y="-3">Element</text>
+      <text class="hx-text hx-sm" x="-79.67" y="8">DMG Amp.</text>
+      <use href="#hex4" class="hx hx-red" x="-39.84" y="69"/>
+      <text class="hx-text hx-sm" x="-39.84" y="66">Concentrated</text>
+      <text class="hx-text hx-sm" x="-39.84" y="77">Area DMG</text>
+      <!-- Ice Crystal Arrow only -->
+      <use href="#hex4" class="hx hx-green" x="159.3" y="0"/>
+      <text class="hx-text hx-sm" x="159.3" y="-3">Split</text>
+      <text class="hx-text hx-sm" x="159.3" y="8">Projectile</text>
+      <use href="#hex4" class="hx hx-blue" x="199.2" y="69"/>
+      <text class="hx-text hx-sm" x="199.2" y="66">Additional</text>
+      <text class="hx-text hx-sm" x="199.2" y="77">Cold DMG</text>
+      <use href="#hex4" class="hx hx-blue" x="159.3" y="138"/>
+      <text class="hx-text hx-sm" x="159.3" y="135">Cold</text>
+      <text class="hx-text hx-sm" x="159.3" y="146">Penetration</text>
+      <use href="#hex4" class="hx hx-green" x="79.67" y="138"/>
+      <text class="hx-text hx-sm" x="79.67" y="141">Slaughter</text>
+      <!-- shared -->
+      <use href="#hex4" class="hx hx-green hx-shared" x="79.67" y="0"/>
+      <text class="hx-text hx-sm" x="79.67" y="-6">Quick</text>
+      <text class="hx-text hx-sm" x="79.67" y="5">Attack</text>
+      <text class="hx-share" x="79.67" y="19">แชร์</text>
+      <use href="#hex4" class="hx hx-red hx-shared" x="39.84" y="69"/>
+      <text class="hx-text hx-sm" x="39.84" y="63">Attack DMG</text>
+      <text class="hx-text hx-sm" x="39.84" y="74">Increase</text>
+      <text class="hx-share" x="39.84" y="88">แชร์</text>
+      <!-- skills -->
+      <use href="#hex4" class="hx hx-skill" x="0" y="0"/>
+      <text class="hx-skill-text hx-skill-sm" x="0" y="-2">Frost</text>
+      <text class="hx-skill-text hx-skill-sm" x="0" y="11">Storm</text>
+      <use href="#hex4" class="hx hx-skill" x="119.5" y="69"/>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="61">Ice</text>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="73">Crystal</text>
+      <text class="hx-skill-text hx-skill-sm" x="119.5" y="85">Arrow</text>
+    </svg>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th class="slot-col">ช่อง</th><th>Frost Storm (ตีบอส)</th><th>Ice Crystal Arrow (เคลียร์)</th></tr></thead>
+        <tbody>
+          <tr><td>แชร์ 1</td><td colspan="2"><span class="dot green"></span>Quick Attack (ความเร็วโจมตี +44.5% ให้ทั้งคู่)</td></tr>
+          <tr><td>แชร์ 2</td><td colspan="2"><span class="dot red"></span>Attack DMG Increase (ปลุกบ่อเกิด)</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot green"></span>Shadow Archer</td><td><span class="dot green"></span>Split Projectile</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot blue"></span>Mana Storm</td><td><span class="dot green"></span>Slaughter</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot blue"></span>Element DMG Amplification (ปลุกแหล่งกำเนิด)</td><td><span class="dot blue"></span>Cold Penetration</td></tr>
+          <tr><td>ของตัวเอง</td><td><span class="dot red"></span>Concentrated Area DMG</td><td><span class="dot blue"></span>Additional Cold DMG</td></tr>
+          <tr><td>DPS จำลอง</td><td class="num">18.55 ล้าน<small>สูงสุดที่รูนชุดนี้ทำได้</small></td><td class="num">7.94 ล้าน<small>84% ของที่ทำได้สูงสุด นับแค่ลูกหลัก</small></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ul class="notes">
+    <li>ลองจัดรูน 11 ตัวลงช่องแชร์ 2 ช่องและช่องของแต่ละสกิลอย่างละ 4 ช่องครบทุกแบบ 15,750 แบบ แบบนี้ให้ Frost Storm ได้ดาเมจบอสสูงสุด</li>
+    <li><b>อยากให้ Ice Crystal Arrow แรงกว่า:</b> สลับรูน 4 ช่องของสองสกิลกันทั้งชุด Ice Crystal Arrow ได้ 9.45 ล้าน แต่ Frost Storm ลดเหลือ 15.65 ล้าน</li>
+    <li><b>Split Projectile อยู่ฝั่ง Ice Crystal Arrow</b> ลูกที่แยกออกไปโดนมอนตัวอื่น จึงช่วยเคลียร์แมพ ตัวจำลองวัดเป้าเดียวจึงยังไม่นับส่วนนี้ และในกระดานนี้ Quick Attack อยู่ช่องแชร์ Split Projectile จึงใส่ได้โดยไม่ต้องถอด Quick Attack</li>
+    <li><b>ก่อนเปลี่ยน</b> ลองถอด Find Weakness แล้วดูหน้าสถานะว่าค่าคริติคอลการโจมตียัง 100% ที่ตีมอนเลเวลที่คุณเล่นอยู่</li>
+    <li><b>ตีบอสหรือ Elite</b> ยิง Ice Crystal Arrow ก่อนสักชุดให้ศัตรูติด Chill แล้วยิง Frost Storm รัว</li>
+    <li>ตัวเลขชุดนี้ใช้เลเวลรูนและออปชันปลุกของรูนที่มีจริง (เช่น Split Projectile Lv49 ปลุกสัจธรรม, Shadow Archer ปลุกสัจธรรม) ไม่ใส่รองเท้ายูนีค และถือว่าคริเต็ม จึงอย่าเทียบตรง ๆ กับตารางรองเท้าด้านล่าง</li>
+  </ul>
+</section>
+
 <section id="gear">
   <div class="sec-head">
     <span class="eyebrow">Gear</span>
@@ -454,6 +537,14 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
       <h3>Leg Bone of the Wind</h3>
       <p>Transcendent (Str 165 / Dex 165) ได้ Ice Crystal Arrow +40–60% และ Cold Crystal เต็มทันทีที่ยิงโดยไม่ต้องเดิน เหมาะเมื่อแทบไม่ใช้ Frost Storm แล้ว เพราะ Frost Storm จะอ่อนลงมาก</p>
     </div>
+    <div class="swap">
+      <h3>ใส่ได้ทั้งสองคู่ด้วยลาคริมา <span class="pill cond">ยังไม่ได้ทดสอบ</span></h3>
+      <p>ถ้าลาคริมามีช่องรองเท้า ลง Silver Shadow's Footprints ในลาคริมา แล้วสวม Leg Bone of the Wind บนตัว จะได้คริให้ทั้งสองสกิลจาก Silver Shadow's และ Ice Crystal Arrow +40–60% จาก Leg Bone ออปชันแบบสแตกความเร็วของ Silver Shadow's อาจไม่ส่งต่อผ่านลาคริมา ดู<a href="frost-storm-crit-build.html#lacrima">หัวข้อลาคริมาในบิลด์หลัก</a></p>
+    </div>
+    <div class="swap">
+      <h3>ของแพตช์ 8 ต.ค.</h3>
+      <p>หมวก Crown of Integration ช่วยเฉพาะ Frost Storm (เลเวลรูนสกิล AoE +2 ขยายดาเมจพื้นที่ 40–80%) เหมาะกับหน้าที่ตีบอส แต่ไม่ช่วย Ice Crystal Arrow ส่วนแหวน Ring of Fate และธนู Foresight of the Conqueror ช่วยทั้งสองสกิล สแตก Elite ของ Foresight เป็นบัฟของตัวละคร ยิง Ice Crystal Arrow ใส่ Elite ให้สแตกขึ้นเร็วแล้ว Frost Storm ได้ผลไปด้วย (อนุมาน) ดู<a href="frost-storm-crit-build.html#oct8">หัวข้อของใหม่ 8 ต.ค.</a></p>
+    </div>
   </div>
 </section>
 
@@ -467,7 +558,7 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
       <thead><tr><th>สกิล / ระดับ</th><th>ได้อะไร</th><th>ช่วยอย่างไร</th></tr></thead>
       <tbody>
         <tr><td>Ice Crystal Arrow · Source <span class="pill top">เคลียร์แมพ</span></td><td>ดาเมจโปรเจกไทล์ +20–30%, สแตก Cold Crystal สูงสุด +4–9</td><td>สแตกสูงสุดเป็น 10–15 ได้ลูก +4 ถึง +6 และเด้งต่อเป้า +2 ถึง +3 ช่วยเคลียร์แมพมากที่สุด</td></tr>
-        <tr><td>Ice Crystal Arrow · Origin</td><td>ขยายดาเมจ 1.5–3% ต่อสแตก Cold Crystal</td><td>ยิ่งมีสแตกเยอะยิ่งแรง ใช้คู่กับ Source ได้ดี</td></tr>
+        <tr><td>Ice Crystal Arrow · Origin</td><td>ขยายดาเมจ 1.5–3% ต่อสแตก Cold Crystal</td><td>สแตก 6 ได้ขยายดาเมจ 9–18% ดีกว่า Source ถ้าใช้ Ice Crystal Arrow ตีเป้าเดียว แต่ไม่ได้ลูกหรือการเด้งเพิ่ม</td></tr>
         <tr><td>Ice Crystal Arrow · Verity</td><td>ลูกแตกติดตามเป้า แต่ดาเมจลด 10–15% เมื่อโดนเป้าซ้ำ</td><td>ยิงโดนง่ายขึ้นตอนวิ่ง แต่ตีบอสได้น้อยลง</td></tr>
         <tr><td>Frost Storm · Verity <span class="pill top">คู่กัน</span></td><td>ค่าทำ Freeze +20–30, ขยายดาเมจ 6–12% เมื่อศัตรูติดสถานะเย็น</td><td>เปิดโบนัส "ขยายดาเมจ 25% เมื่อศัตรูติด Freeze" ของ Ice Crystal Arrow เกรด Legendary</td></tr>
         <tr><td>Frost Storm · Source</td><td>พื้นที่ +30–70% แต่ Projectile Creation Range −200</td><td>ระเบิดกว้างขึ้น ถ้าอยากให้ Frost Storm ช่วยเคลียร์ด้วย</td></tr>
@@ -475,9 +566,21 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
     </table>
   </div>
   <ul class="notes">
+    <li><b>ปลุกพลังเลือกได้ 1 ออปชันต่อรูน</b> ไม่ได้ครบทั้งสามระดับ ชื่อในเกมภาษาไทย: แหล่งกำเนิด = Source, บ่อเกิด = Origin, สัจธรรม = Verity</li>
     <li>ทุก 5 สแตก Cold Crystal ได้ลูก +2 และเด้ง +1 สแตก 10 จึงได้ +4 / +2 และสแตก 15 ได้ +6 / +3</li>
     <li>ตัวจำลองยังไม่นับสแตก Cold Crystal ผลของการปลุก Ice Crystal Arrow ระดับ Source และ Origin จึงยังไม่อยู่ในตัวเลข DPS ของหน้านี้</li>
   </ul>
+  <h3>ปลุกพลังรูนลิงก์</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>รูนลิงก์</th><th>เลือก</th><th>ผลในการจำลอง</th></tr></thead>
+      <tbody>
+        <tr><td><span class="dot red"></span>Attack DMG Increase</td><td>บ่อเกิด: ดาเมจเมื่อโจมตี +55–80%</td><td>DPS +6% ทั้งสองสกิล แหล่งกำเนิด (ขยายดาเมจ 3.5–5%) ได้ +4% ส่วนสัจธรรมได้แค่ราว +1% เพราะต้องมีรูนลิงก์สีแดงหลายตัว</td></tr>
+        <tr><td><span class="dot blue"></span>Element DMG Amplification</td><td>แหล่งกำเนิด: ดาเมจธาตุ +45–65%</td><td>DPS ประมาณ +5% บ่อเกิดได้แค่ราว +1–2% (ขยาย 0.4–0.8% ต่อรูนสีน้ำเงิน) เลือกสัจธรรม (มานา −5–10%) เฉพาะเมื่อมานาไม่พอ</td></tr>
+        <tr><td><span class="dot red"></span>Strike</td><td>บ่อเกิด: ขยายความเร็วโจมตี 5.6–8%</td><td>DPS +7% ส่วนแหล่งกำเนิดทำให้ DPS ลดลง เพราะลดความเร็วโจมตี 5% กระดานนี้ไม่ได้ใช้ Strike อย่าเพิ่งปลุกถ้าจะเปลี่ยนเป็น Attack DMG Increase</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <section id="play">
@@ -501,7 +604,7 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
   </div>
   <ol class="steps">
     <li><div><b>ทำบิลด์ Frost Storm สายคริให้ค่าคริเวทถึงเป้าก่อน</b> ตาม<a href="frost-storm-crit-build.html#order">ลำดับการอัปของบิลด์หลัก</a> ค่าคริทุกตัวช่วยทั้งสองสกิล</div></li>
-    <li><div><b>หา Ice Crystal Arrow</b> (เกรด Rare ได้จาก Synthesis) วางห่าง Frost Storm 2 ช่องแบบเยื้อง ให้แชร์ Find Weakness กับ Attack DMG Increase</div></li>
+    <li><div><b>หา Ice Crystal Arrow</b> (เกรด Rare ได้จาก Synthesis) วางห่าง Frost Storm 2 ช่องแบบเยื้อง ให้แชร์ Find Weakness กับ Attack DMG Increase ถ้าคริเต็ม 100% อยู่แล้วโดยไม่มี Find Weakness ใช้<a href="#capped">กระดานแบบคริเต็ม</a>ที่แชร์ Quick Attack แทน</div></li>
     <li><div><b>ใส่ Quick Attack กับ Additional Cold DMG</b> แล้วค่อยหา Mana Storm กับ Element DMG Amplification ชิ้นที่สอง ระหว่างนั้นใช้ Element Master, Lingering Chill หรือ Slaughter แทน</div></li>
     <li><div><b>ปลุก Ice Crystal Arrow ระดับ Source</b> เพื่อเพิ่มสแตก Cold Crystal ได้ลูกและการเด้งเพิ่ม</div></li>
     <li><div><b>ปลุก Frost Storm ระดับ Verity</b> เพื่อทำ Freeze ให้ Ice Crystal Arrow เกรด Legendary ได้ขยายดาเมจ 25%</div></li>
@@ -519,6 +622,7 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
     <li>ตัวจำลองนับ Ice Crystal Arrow แค่ลูกหลัก ยังไม่นับลูกแตก +2 ลูก สแตก Cold Crystal และการเด้งต่อเป้า</li>
     <li>ยังไม่นับธนูเงาที่ Shadow Archer เรียกออกมา ผลแปลงค่าของ Vertical Chill และ Abyss Stone</li>
     <li>ไอเทมชุดเดียวกับบิลด์หลัก ค่าสุ่มออปชันตั้งไว้ครึ่งทาง รูนเลเวล 45 เกรด Legendary มอนเลเวล 150 ค่าต้านธาตุ 40%</li>
+    <li>หัวข้อ<a href="#capped">เมื่อคริเต็ม</a>: ใช้เลเวลรูนและออปชันปลุกของรูนที่มีจริง (Lv45–51 ปลุกได้ 1 ออปชันต่อรูน) ส่วนรูนที่ยังไม่มีใช้ Lv45 ไม่ปลุก ไม่ใส่รองเท้ายูนีค และใส่โอกาสคริ 100% ตรง ๆ แทนการคำนวณจากคริเวท</li>
   </ul>
 </section>
 
@@ -536,7 +640,7 @@ footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--lin
 </section>
 
 <footer>
-  <span>ดูเพิ่ม: <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> · <a href="ogre-arrow-poison-build.html">Ogre Arrow สายพิษ</a> · <a href="skill-tier-list.html">Tier List สกิล S12</a> · <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></span>
+  <span>ดูเพิ่ม: <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> · <a href="ogre-arrow-poison-build.html">Ogre Arrow สายพิษ</a> · <a href="lightning-rune-knight-minion-build.html">Lightning Rune Knight สายคริ</a> · <a href="skill-tier-list.html">Tier List สกิล S12</a> · <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></span>
   <span>จัดทำจากข้อมูลสาธารณะและตัวจำลองของ Undecember DB ไม่ใช่ไกด์ทางการของ LINE Games</span>
 </footer>
 
