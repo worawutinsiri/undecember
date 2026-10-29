@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>บิลด์ธนูสายคริ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Taviraj:wght@500;700&display=swap">
+<style>
+/* Layout: one page, two tabs (builds / equipment); each build is a rune board beside its link table; tokens shared with Undecember DB */
+:root {
+  --bg: #0f0d14;
+  --raised: #17141f;
+  --sunken: #0b0a10;
+  --line: #2e2840;
+  --line-strong: #463d5e;
+  --text: #d9d4e4;
+  --dim: #a39bb6;
+  --faint: #756e8a;
+  --strong: #f6f2ff;
+  --accent: #d4a64a;
+  --accent-strong: #f0c46a;
+  --accent-bg: rgba(212, 166, 74, 0.12);
+  --cold: #5cc8ff;
+  --bolt: #ffd84a;
+  --warn: #f0b84a;
+  --warn-bg: rgba(240, 184, 74, 0.09);
+  --up: #4cc27a;
+  --rune-red: #e0533f;
+  --rune-green: #4cc27a;
+  --rune-blue: #4f8df0;
+  --display: 'Taviraj', 'IBM Plex Sans Thai', Georgia, serif;
+  --sans: 'IBM Plex Sans Thai', system-ui, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+    --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+    --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+    --cold: #1f8fc7; --bolt: #9a7e00; --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c;
+    --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+  --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+  --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+  --cold: #1f8fc7; --bolt: #9a7e00; --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c;
+  --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15.5px/1.7 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-strong); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 72px;
+  display: grid;
+  gap: 32px;
+}
+@media (max-width: 520px) { .page { padding-inline: 16px; padding-block: 28px 56px; } }
+
+h1, h2, h3 { color: var(--strong); text-wrap: balance; margin: 0; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.15; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.45rem; line-height: 1.3; }
+h3 { font-size: 1rem; font-weight: 600; line-height: 1.4; }
+p { margin: 0; max-width: 70ch; }
+.eyebrow { font: 600 0.72rem/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+.dim { color: var(--dim); }
+
+header { display: grid; gap: 14px; }
+.lede { font-size: 1.05rem; color: var(--dim); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--faint); }
+.caveat {
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+  background: var(--warn-bg);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  display: grid;
+  gap: 4px;
+}
+.caveat strong { color: var(--warn); font-weight: 600; }
+
+/* tabs */
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  background: var(--bg);
+  z-index: 5;
+  overflow-x: auto;
+}
+.tab {
+  appearance: none;
+  border: 0;
+  background: none;
+  color: var(--dim);
+  font: 600 0.95rem/1 var(--sans);
+  padding: 14px 16px 12px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tab:hover { color: var(--strong); }
+.tab[aria-selected="true"] { color: var(--strong); border-bottom-color: var(--accent); }
+.tab small { font: 0.7rem var(--mono); color: var(--faint); margin-left: 6px; }
+.panel { display: grid; gap: 40px; }
+
+section { display: grid; gap: 16px; scroll-margin-top: 64px; }
+.sec-head { display: grid; gap: 6px; padding-top: 18px; border-top: 1px solid var(--line); }
+.skill-nav { display: flex; flex-wrap: wrap; gap: 6px; }
+.skill-nav a {
+  font-size: 0.82rem; color: var(--dim); text-decoration: none;
+  border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px;
+}
+.skill-nav a:hover { color: var(--strong); border-color: var(--line-strong); }
+
+/* overview cards */
+.overview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 720px) { .overview { grid-template-columns: 1fr; } }
+.ov {
+  --el: var(--cold);
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--el);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+.ov.bolt { --el: var(--bolt); }
+.ov .el { font: 600 0.7rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--el); }
+.ov .big { font: 600 1.35rem/1.2 var(--mono); color: var(--strong); font-variant-numeric: tabular-nums; }
+.ov .big small { font: 0.75rem var(--sans); color: var(--faint); margin-left: 4px; }
+.ov p { font-size: 0.86rem; color: var(--dim); }
+
+/* build blocks */
+.board-wrap { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 20px; align-items: center; }
+@media (max-width: 760px) { .board-wrap { grid-template-columns: 1fr; } .board-wrap svg { max-width: 300px; margin: 0 auto; } }
+.board-wrap svg { width: 100%; height: auto; display: block; }
+.hx { stroke-width: 2; }
+.hx-red { fill: color-mix(in srgb, var(--rune-red) 16%, var(--raised)); stroke: var(--rune-red); }
+.hx-green { fill: color-mix(in srgb, var(--rune-green) 16%, var(--raised)); stroke: var(--rune-green); }
+.hx-blue { fill: color-mix(in srgb, var(--rune-blue) 16%, var(--raised)); stroke: var(--rune-blue); }
+.hx-skill { fill: color-mix(in srgb, var(--el) 22%, var(--raised)); stroke: var(--el); stroke-width: 3; }
+.hx-text { fill: var(--strong); font: 600 9.5px/1 var(--sans); text-anchor: middle; }
+.hx-skill-text { fill: var(--strong); font: 700 12px/1 var(--sans); text-anchor: middle; }
+.board-cold { --el: var(--cold); }
+.board-bolt { --el: var(--bolt); }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+th, td { text-align: left; padding: 9px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { font: 600 0.7rem/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); background: var(--sunken); white-space: nowrap; }
+td:first-child { color: var(--strong); font-weight: 500; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.best { color: var(--up); font-weight: 600; }
+td small { display: block; color: var(--faint); font-size: 0.8rem; font-weight: 400; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+.dot.red { background: var(--rune-red); }
+.dot.green { background: var(--rune-green); }
+.dot.blue { background: var(--rune-blue); }
+.pill { display: inline-block; font: 600 0.66rem/1.5 var(--mono); padding: 0 6px; border-radius: 4px; border: 1px solid currentColor; white-space: nowrap; vertical-align: 1px; }
+.pill.top { color: var(--up); }
+.pill.cond { color: var(--warn); }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { font: 600 0.68rem/1.6 var(--mono); padding: 0 7px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--dim); white-space: nowrap; }
+.chip.fs { color: var(--cold); border-color: color-mix(in srgb, var(--cold) 50%, transparent); }
+.chip.cla, .chip.la { color: var(--bolt); border-color: color-mix(in srgb, var(--bolt) 50%, transparent); }
+
+.swaps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+@media (max-width: 560px) { .swaps { grid-template-columns: 1fr; } }
+.swap { border-left: 2px solid var(--line-strong); padding: 2px 0 2px 14px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.swap p { font-size: 0.88rem; color: var(--dim); }
+ul.notes { margin: 0; padding-left: 1.1rem; display: grid; gap: 4px; color: var(--dim); font-size: 0.9rem; }
+.formula { font: 600 0.95rem/1.5 var(--mono); color: var(--strong); background: var(--sunken); border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; overflow-x: auto; white-space: nowrap; }
+.caption { font-size: 0.8rem; color: var(--faint); }
+footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="eyebrow">Undecember · S12 The Farside · Bow crit</span>
+  <h1>บิลด์ธนูสายคริ</h1>
+  <p class="lede">สามสกิลธนูที่ใช้ของสายคริชุดเดียวกันได้ Frost Storm (ชุดฟาร์ม), Cross Lightning Arrow และ Lightning Arrow สลับกันเล่นได้โดยเปลี่ยนแค่ซองธนูกับรูนลิงก์</p>
+  <div class="meta">
+    <span>อัปเดต 29 ต.ค. 2026</span>
+    <span>ทดสอบด้วยตัวจำลองดาเมจ Undecember DB</span>
+  </div>
+  <div class="caveat">
+    <strong>ตัวเลข DPS มาจากการจำลอง</strong>
+    <span>รูนเลเวล 45 เกรด Legendary, มอนเลเวล 150 ค่าต้านธาตุ 40%, เปิด Seal of Critical Chance, คริจาก Zodiac/ของคราฟสมมติ +80 และ DPS คิดต่อมอน 1 ตัว ตัวจำลองยังไม่นับธนูเงาของ Shadow Archer, สแตก Lightning Energy และจำนวนมอนที่โดนระเบิด จึงใช้เทียบสัดส่วนมากกว่าดูค่าจริง</span>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="หมวดของบิลด์">
+  <button class="tab" role="tab" id="tab-build" aria-controls="panel-build" aria-selected="true">Build skill + Rune link</button>
+  <button class="tab" role="tab" id="tab-gear" aria-controls="panel-gear" aria-selected="false" tabindex="-1">Equipment Items</button>
+</nav>
+
+<!-- ============ TAB 1: builds ============ -->
+<div class="panel" role="tabpanel" id="panel-build" aria-labelledby="tab-build">
+
+  <section>
+    <div class="overview">
+      <div class="ov">
+        <span class="el">Cold · AoE</span>
+        <h3>Frost Storm (ชุดฟาร์ม)</h3>
+        <span class="big">15.5 ล้าน<small>ต่อมอน 1 ตัว</small></span>
+        <p>ระเบิดเป็นวง โดนทั้งฝูงในครั้งเดียว ตีบอส 19.7 ล้าน</p>
+      </div>
+      <div class="ov bolt">
+        <span class="el">Lightning · Pierce</span>
+        <h3>Cross Lightning Arrow</h3>
+        <span class="big">17.7 ล้าน<small>ตีบอส</small></span>
+        <p>ยิงทะลุทุกตัวแล้วระเบิดเป็นรูปกากบาท วง 320 ชุดฟาร์ม 14.2 ล้าน</p>
+      </div>
+      <div class="ov bolt">
+        <span class="el">Lightning · Multi-arrow</span>
+        <h3>Lightning Arrow</h3>
+        <span class="big">8.3 ล้าน<small>ต่อลูก ต่อมอน</small></span>
+        <p>ยิงทีละ 5 ลูก และเพิ่มได้อีกสูงสุด 6 ลูกจาก Lightning Energy เก่งเมื่อมอนเยอะ</p>
+      </div>
+    </div>
+    <div class="skill-nav">
+      <a href="#b-fs">Frost Storm</a>
+      <a href="#b-cla">Cross Lightning Arrow</a>
+      <a href="#b-la">Lightning Arrow</a>
+      <a href="#b-common">ใช้ร่วมกันทุกสกิล</a>
+    </div>
+  </section>
+
+  <section id="b-fs">
+    <div class="sec-head">
+      <span class="eyebrow">Build 1 · Cold</span>
+      <h2>Frost Storm (ชุดฟาร์ม)</h2>
+    </div>
+    <div class="board-wrap">
+      <svg class="board board-cold" data-skill="Frost|Storm" data-links="Find|Weakness:green; Attack DMG|Increase:red; Area|Effect:red; Mana|Storm:blue; Element|DMG Amp.:blue; Shadow|Archer:green" viewBox="-162 -154 324 308" aria-label="แผนผังรูนลิงก์ Frost Storm ชุดฟาร์ม"></svg>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+          <tbody>
+            <tr><td><span class="dot green"></span>Find Weakness</td><td>อัตราคริเวท +178.5%</td></tr>
+            <tr><td><span class="dot red"></span>Attack DMG Increase <span class="pill top">ผลสูงสุด</span></td><td>ดาเมจ +249% เมื่อใช้ Attack</td></tr>
+            <tr><td><span class="dot red"></span>Area Effect <span class="pill cond">ชุดฟาร์ม</span></td><td>พื้นที่ระเบิด +70.7% และดาเมจ +64.4%</td></tr>
+            <tr><td><span class="dot blue"></span>Mana Storm</td><td>ขยายดาเมจ Strike 24.2% (เกรด Rare)</td></tr>
+            <tr><td><span class="dot blue"></span>Element DMG Amplification</td><td>ขยายดาเมจธาตุ 19.3%</td></tr>
+            <tr><td><span class="dot green"></span>Shadow Archer</td><td>เรียกธนูเงาทุกครั้งที่ใช้สกิล ดาเมจโปรเจกไทล์ +31.2% (ใช้มานาเพิ่ม 50%)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="swaps">
+      <div class="swap">
+        <h3>ตีบอส</h3>
+        <p>เปลี่ยน Area Effect เป็น Concentrated Area DMG (ขยายดาเมจ 29.8% แต่พื้นที่ −30%) ได้ 19.7 ล้านต่อลูก ถ้าลูกธนูโดนบอสครบ 3 ลูกได้สูงสุดราว 54 ล้าน</p>
+      </div>
+      <div class="swap">
+        <h3>ฟาร์มแบบกระจาย</h3>
+        <p>ใช้ Multishot (ลูกธนู +2, Frost Storm ยิงได้สูงสุด 5 ลูก) แทน Area Effect ดาเมจต่อตัว 15.4 ล้าน พอ ๆ กัน แต่ครอบคลุมพื้นที่กว้างกว่า</p>
+      </div>
+    </div>
+    <ul class="notes">
+      <li>บิลด์ Frost Storm ฉบับเต็ม (ตีบอส ค่าคริ ลำดับการอัป และ Illusion Arrow) อยู่ในไฟล์ <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a></li>
+    </ul>
+  </section>
+
+  <section id="b-cla">
+    <div class="sec-head">
+      <span class="eyebrow">Build 2 · Lightning</span>
+      <h2>Cross Lightning Arrow</h2>
+    </div>
+    <div class="board-wrap">
+      <svg class="board board-bolt" data-skill="Cross|Lightning|Arrow" data-links="Quick|Attack:green; Attack DMG|Increase:red; Concentrated|Area DMG:red; Mana|Storm:blue; Element|DMG Amp.:blue; Additional|Lightning DMG:blue" viewBox="-162 -154 324 308" aria-label="แผนผังรูนลิงก์ Cross Lightning Arrow"></svg>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+          <tbody>
+            <tr><td><span class="dot red"></span>Attack DMG Increase <span class="pill top">ผลสูงสุด</span></td><td>ดาเมจ +249% เมื่อใช้ Attack</td></tr>
+            <tr><td><span class="dot blue"></span>Additional Lightning DMG</td><td>ดาเมจสายฟ้า +10–461 และ +83.2%</td></tr>
+            <tr><td><span class="dot green"></span>Quick Attack</td><td>ความเร็วโจมตี +44.5% รวมกับรองเท้า Silver Shadow's แล้วชนเพดาน 5 ครั้งต่อวินาทีพอดี</td></tr>
+            <tr><td><span class="dot red"></span>Concentrated Area DMG <span class="pill cond">ตีบอส</span></td><td>ขยายดาเมจ 29.8% แต่พื้นที่ระเบิดเล็กลง 30%</td></tr>
+            <tr><td><span class="dot blue"></span>Mana Storm</td><td>ขยายดาเมจ Strike 24.2% (เกรด Rare)</td></tr>
+            <tr><td><span class="dot blue"></span>Element DMG Amplification</td><td>ขยายดาเมจธาตุ 19.3%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="swaps">
+      <div class="swap">
+        <h3>ปลุก (Awaken) ระดับ Origin <span class="pill top">ต้องทำ</span></h3>
+        <p>ได้ผลของ Find Weakness ในตัว อัตราคริเวท +117–155% และคริ +6 จึงไม่ต้องใส่ Find Weakness ประหยัดไป 1 ช่อง ในการจำลอง ชุดที่ปลุกแล้วได้ 17.7 ล้าน เทียบกับ 12.6 ล้านเมื่อไม่ปลุกแต่ใส่ Find Weakness แทน</p>
+      </div>
+      <div class="swap">
+        <h3>ชุดฟาร์ม</h3>
+        <p>เปลี่ยน Concentrated Area DMG เป็น Area Effect ระเบิดกากบาทกว้างขึ้น 70.7% ดาเมจต่อตัวลดเหลือ 14.2 ล้าน แต่โดนมอนได้มากกว่า</p>
+      </div>
+      <div class="swap">
+        <h3>ตัวสำรอง</h3>
+        <p>Element Master (เจาะธาตุ +46.8%) แทน Element DMG Amplification ได้ 17.1 ล้าน หรือใส่ Shadow Archer แทน Element DMG Amplification ได้ 16.7 ล้าน (ตัวจำลองยังไม่นับธนูเงา)</p>
+      </div>
+      <div class="swap">
+        <h3>จุดเด่นของสกิล</h3>
+        <p>มีโอกาสคริ +15% ในตัว ยิง 3 ลูกทะลุทุกตัว และคริแล้วมีโอกาส 60% ปล่อยสายฟ้าเพิ่ม เกรด Legendary ได้อัตราคริ Attack +120% และคริดาเมจ Attack +100%</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="b-la">
+    <div class="sec-head">
+      <span class="eyebrow">Build 3 · Lightning</span>
+      <h2>Lightning Arrow</h2>
+    </div>
+    <div class="board-wrap">
+      <svg class="board board-bolt" data-skill="Lightning|Arrow" data-links="Quick|Attack:green; Attack DMG|Increase:red; Shadow|Archer:green; Mana|Storm:blue; Element|DMG Amp.:blue; Additional|Lightning DMG:blue" viewBox="-162 -154 324 308" aria-label="แผนผังรูนลิงก์ Lightning Arrow"></svg>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+          <tbody>
+            <tr><td><span class="dot blue"></span>Additional Lightning DMG <span class="pill top">ผลสูงสุด</span></td><td>ดาเมจสายฟ้า +10–461 และ +83.2%</td></tr>
+            <tr><td><span class="dot red"></span>Attack DMG Increase</td><td>ดาเมจ +249% เมื่อใช้ Attack</td></tr>
+            <tr><td><span class="dot green"></span>Quick Attack</td><td>ความเร็วโจมตี +44.5% ชนเพดาน 5 ครั้งต่อวินาที</td></tr>
+            <tr><td><span class="dot blue"></span>Mana Storm</td><td>ขยายดาเมจ Strike 24.2% (เกรด Rare)</td></tr>
+            <tr><td><span class="dot blue"></span>Element DMG Amplification</td><td>ขยายดาเมจธาตุ 19.3%</td></tr>
+            <tr><td><span class="dot green"></span>Shadow Archer</td><td>เรียกธนูเงาทุกครั้งที่ใช้สกิล ดาเมจโปรเจกไทล์ +31.2%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="swaps">
+      <div class="swap">
+        <h3>ไม่ต้องใส่รูนคริ</h3>
+        <p>ใช้ซองธนู Miraseti's Wave แล้ว Lightning Arrow คริได้ 92% อยู่แล้ว Find Weakness ได้ผลน้อยที่สุดในการจำลอง</p>
+      </div>
+      <div class="swap">
+        <h3>ตัวสำรอง</h3>
+        <p>Element Master แทน Shadow Archer ได้ 8.33 ล้าน เทียบกับ 8.25 ล้าน และประหยัดมานากว่า ถ้าไม่มี Mana Storm ใช้ Projectile Acceleration แทน ได้ 7.4 ล้าน</p>
+      </div>
+      <div class="swap">
+        <h3>ปลุก (Awaken) ระดับ Origin</h3>
+        <p>ลูกธนูโดนเป้าเดิมซ้ำได้ ลูกธนู +2 และมุมยิงแคบลง ลูกธนูจึงรวมไปที่เป้าเดียว เหมาะตีบอส แต่โดนดาเมจลด 5–10% เมื่อโดนเป้าเดิมซ้ำ</p>
+      </div>
+      <div class="swap">
+        <h3>จุดเด่นของสกิล</h3>
+        <p>ทุกครั้งที่ยิงโดนมีโอกาส 25% ได้ Lightning Energy 1 สแตก แต่ละสแตกขยายดาเมจ 4% และเพิ่มความเร็วโจมตี 4.2% ครบทุก 3 สแตกได้ลูกธนู +2 (สูงสุด +6) ตัวจำลองยังไม่นับส่วนนี้</p>
+      </div>
+    </div>
+    <ul class="notes">
+      <li>Heat Cycle ขึ้นอันดับ 1 ในการจำลอง (8.48 ล้าน) แต่ตัวจำลองนับผลตอน Overheat ต่ำและสูงพร้อมกัน ซึ่งในเกมเกิดได้ทีละอย่าง จึงไม่นำมาแนะนำ</li>
+    </ul>
+  </section>
+
+  <section id="b-common">
+    <div class="sec-head">
+      <span class="eyebrow">Shared</span>
+      <h2>ใช้ร่วมกันทุกสกิล</h2>
+    </div>
+    <ul class="notes">
+      <li><b>Seal of Critical Chance</b> เปิดค้างไว้ทุกบิลด์ ได้อัตราคริเวท +252.4% และโอกาสคริ +3%</li>
+      <li><b>สลับสกิลเปลี่ยนแค่ซองธนู:</b> Frost Storm ใช้ Vertical Chill ส่วนสองสกิลสายฟ้าใช้ Miraseti's Wave ไอเทมชิ้นอื่นใช้ชุดเดียวกัน (ดูแท็บ Equipment Items)</li>
+      <li><b>รูนที่ใช้ซ้ำได้หลายบิลด์:</b> Attack DMG Increase, Mana Storm, Element DMG Amplification และ Shadow Archer ใช้ได้กับทั้งสามสกิล ถ้าวางสกิลไว้บนกระดาน 44 ช่องพร้อมกัน วางรูนให้ติดสองสกิลเพื่อแชร์ได้</li>
+      <li><b>Overheat:</b> Lightning Arrow และ Cross Lightning Arrow สะสม Overheat 40 ต่อการยิง ส่วน Frost Storm ไม่สะสม</li>
+      <li><b>สีช่อง:</b> สีของรูนลิงก์ต้องตรงกับสีช่องบนสกิลของคุณ ช่องสีขาวใส่สีไหนก็ได้และได้เลเวลรูน +1 ตำแหน่งในแผนผังเป็นแค่ตัวอย่าง</li>
+    </ul>
+  </section>
+</div>
+
+<!-- ============ TAB 2: equipment ============ -->
+<div class="panel" role="tabpanel" id="panel-gear" aria-labelledby="tab-gear" hidden>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Gear by slot</span>
+      <h2>ไอเทมแต่ละช่อง</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ช่อง</th><th>ไอเทม</th><th>ค่าที่ได้</th><th>ใช้กับ</th></tr></thead>
+        <tbody>
+          <tr><td>อาวุธ</td><td>Transcendent Tipan's Long Bow<small>ช่วงเก็บเลเวล: Star Usurper's Bow (Lv1)</small></td><td>คริอุปกรณ์ +9, %คริอุปกรณ์ +46–57%, คริดาเมจ +52–61%</td><td><div class="chips"><span class="chip fs">FS</span><span class="chip cla">CLA</span><span class="chip la">LA</span></div></td></tr>
+          <tr><td>ซองธนู</td><td>Transcendent Vertical Chill<small>ยูนีคเฉพาะ Frost Storm</small></td><td>ดาเมจ Attack +40–100%, ความเร็วโจมตี 8–12% และขยายดาเมจ Frost Storm</td><td><div class="chips"><span class="chip fs">FS</span></div></td></tr>
+          <tr><td>ซองธนู</td><td>Transcendent Miraseti's Wave</td><td>ดาเมจ +70%, ความเร็วโจมตี 12–16%, อัตราคริ Attack +40–70%</td><td><div class="chips"><span class="chip cla">CLA</span><span class="chip la">LA</span></div></td></tr>
+          <tr><td>ถุงมือ</td><td>Transcendent Spica's Light</td><td>คริเวท +40–50%, คริดาเมจ +100–125%</td><td><div class="chips"><span class="chip fs">FS</span><span class="chip cla">CLA</span><span class="chip la">LA</span></div></td></tr>
+          <tr><td>สร้อย</td><td>Transcendent Hira's Charm<small>LA: ลอง Ultimate Resonance of All Colors</small></td><td>คริดาเมจ +29–34% และ +80–100%</td><td><div class="chips"><span class="chip fs">FS</span><span class="chip cla">CLA</span><span class="chip la">LA</span></div></td></tr>
+          <tr><td>แหวน 1</td><td>Transcendent Leo's Flow</td><td>คริเวท +44–53%, คริดาเมจ +25–28%</td><td><div class="chips"><span class="chip fs">FS</span><span class="chip cla">CLA</span><span class="chip la">LA</span></div></td></tr>
+          <tr><td>แหวน 2</td><td>Ultimate Ring of Amplified Power<small>หรือ Ultimate Approaching Omen</small></td><td>โอกาสคริ +25%, คริดาเมจ +110% และบัฟขยายดาเมจ</td><td><div class="chips"><span class="chip fs">FS</span><span class="chip cla">CLA</span><span class="chip la">LA</span></div></td></tr>
+          <tr><td>รองเท้า</td><td>Ultimate Silver Shadow's Footprints<small>ต้องใช้ Str 228 · ถ้าไม่ไหวใช้ Ultimate Stra's Boots (Dex 223)</small></td><td>คริเวท +86–110%, คริดาเมจ +46–105%, ขยายดาเมจ 17–32%, สแตกความเร็วโจมตีสูงสุด +30%</td><td><div class="chips"><span class="chip fs">FS</span><span class="chip cla">CLA</span><span class="chip la">LA</span></div></td></tr>
+          <tr><td>ชุดเกราะ</td><td>Ultimate Numbing Armor<small>ต้องใช้ Str 250 · ช่วงเก็บเลเวล Star Usurper's Armor</small></td><td>HP +85–110%, รับดาเมจลด 18–25%, อมตะ 3 วินาทีเมื่อ HP ต่ำกว่า 20%</td><td><div class="chips"><span class="chip fs">FS</span><span class="chip cla">CLA</span><span class="chip la">LA</span></div></td></tr>
+          <tr><td>หมวก บ่า เข็มขัด</td><td>ของคราฟ</td><td>เน้นคริแบบตัวเลข HP และค่าต้านธาตุ ดู <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></td><td><div class="chips"><span class="chip fs">FS</span><span class="chip cla">CLA</span><span class="chip la">LA</span></div></td></tr>
+          <tr><td>สกิลเสริม</td><td>Seal of Critical Chance<small>เปิดค้างไว้</small></td><td>คริเวท +252.4%, โอกาสคริ +3%</td><td><div class="chips"><span class="chip fs">FS</span><span class="chip cla">CLA</span><span class="chip la">LA</span></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>FS = Frost Storm, CLA = Cross Lightning Arrow, LA = Lightning Arrow</li>
+      <li>Silver Shadow's (Str 228) กับ Numbing Armor (Str 250) ใช้สถานะเดียวกัน ลง Str ทีเดียวใส่ได้ทั้งสองชิ้น</li>
+      <li>Ultimate Resonance of All Colors เป็นสร้อยที่สุ่มออปชันเกี่ยวกับ Lightning Energy (สแตกสูงสุด +7 หรือดาเมจสายฟ้าเพิ่มต่อสแตก) เหมาะกับ Lightning Arrow แต่ออปชันขึ้นแบบสุ่ม ต้องได้ตัวที่มีออปชันนั้น</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Quiver</span>
+      <h2>ซองธนู: ตัวเดียวที่ต้องสลับ</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ซองธนู</th><th>Cross Lightning Arrow</th><th>Lightning Arrow</th><th>Frost Storm</th></tr></thead>
+        <tbody>
+          <tr><td>Transcendent Miraseti's Wave</td><td class="num best">15.7 ล้าน</td><td class="num best">8.3 ล้าน</td><td>–</td></tr>
+          <tr><td>Ultimate Master of Trajectory</td><td class="num">15.5 ล้าน</td><td class="num">7.9 ล้าน</td><td>–</td></tr>
+          <tr><td>Transcendent Vertical Chill</td><td class="num">13.6 ล้าน</td><td class="num">6.6 ล้าน</td><td class="best">ใช้ตัวนี้<small>ผลพิเศษของ Frost Storm</small></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">เทียบด้วยรูนลิงก์ชุดเดียวกัน (Attack DMG Increase, Shadow Archer, Mana Storm, Element DMG Amplification, Additional Lightning DMG, Quick Attack)</p>
+    <ul class="notes">
+      <li><b>ถ้าเล่นคู่ Illusion Arrow</b> อย่าใช้ Miraseti's Wave เพราะลดลูกธนูของ Illusion Arrow 5 ลูกและลดดาเมจ 30–40% ให้ใช้ Ultimate Master of Trajectory แทน เสีย DPS ไม่ถึง 5%</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Critical Rate</span>
+      <h2>ค่าคริเวทที่ต้องการ</h2>
+    </div>
+    <div class="formula">คริเวทที่ต้องใช้ ≈ 100 × (1 + 0.04 × เลเวลมอน)  →  Lv150 = 700 · Lv160 = 740 · Lv170 = 780</div>
+    <ul class="notes">
+      <li>คริแบบตัวเลข (flat) สำคัญที่สุด เพราะ % ทุกตัวคูณกับฐานนี้ ธนูมีคริฐานแค่ประมาณ 9–11</li>
+      <li>Cross Lightning Arrow ได้เปรียบเรื่องคริที่สุด มีโอกาสคริ +15% ในตัว และได้ผล Find Weakness จากการปลุกระดับ Origin</li>
+      <li>Lightning Arrow ใช้ Miraseti's Wave แล้วคริ 92% ในการจำลอง ส่วน Frost Storm ต้องพึ่ง Find Weakness จึงจะถึง 100%</li>
+    </ul>
+  </section>
+</div>
+
+<footer>
+  <span>ดูเพิ่ม: <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> · <a href="skill-tier-list.html">Tier List สกิล S12</a> · <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></span>
+  <span>จัดทำจากชีทข้อมูลทางการ S12 และตัวจำลองของ Undecember DB ไม่ใช่ไกด์ทางการของ LINE Games</span>
+</footer>
+
+</div>
+
+<script>
+// Draw each rune board: skill in the centre, six links around it (pointy-top hexes).
+(function () {
+  const NS = 'http://www.w3.org/2000/svg'
+  const HEX = '50.2,-29 50.2,29 0,58 -50.2,29 -50.2,-29 0,-58'
+  // NE, E, SE, SW, W, NW
+  const POS = [[53.7, -93], [107.4, 0], [53.7, 93], [-53.7, 93], [-107.4, 0], [-53.7, -93]]
+  const el = (name, attrs, text) => {
+    const n = document.createElementNS(NS, name)
+    for (const k in attrs) n.setAttribute(k, attrs[k])
+    if (text) n.textContent = text
+    return n
+  }
+  const label = (svg, x, y, lines, cls, lh) => {
+    const top = y - ((lines.length - 1) * lh) / 2 + 3
+    lines.forEach((t, i) => svg.appendChild(el('text', { class: cls, x, y: top + i * lh }, t)))
+  }
+  document.querySelectorAll('svg.board').forEach((svg) => {
+    const links = svg.dataset.links.split(';').map((s) => s.trim()).filter(Boolean)
+    links.forEach((spec, i) => {
+      const [name, color] = spec.split(':')
+      const [x, y] = POS[i]
+      svg.appendChild(el('polygon', { points: HEX, class: 'hx hx-' + color, transform: `translate(${x} ${y})` }))
+      label(svg, x, y, name.split('|'), 'hx-text', 12)
+    })
+    svg.appendChild(el('polygon', { points: HEX, class: 'hx hx-skill' }))
+    label(svg, 0, 0, svg.dataset.skill.split('|'), 'hx-skill-text', 14)
+  })
+})()
+
+// Tabs: click, arrow keys, #hash deep link, remembered per viewer.
+;(function () {
+  const tabs = [...document.querySelectorAll('.tab')]
+  const show = (id, focus) => {
+    tabs.forEach((t) => {
+      const on = t.id === id
+      t.setAttribute('aria-selected', String(on))
+      t.tabIndex = on ? 0 : -1
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on
+      if (on && focus) t.focus()
+    })
+    try { localStorage.setItem('bow-crit-tab', id) } catch (e) {}
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => {
+      show(t.id)
+      // start the new tab at its top instead of mid-page
+      const top = document.querySelector('header').getBoundingClientRect().bottom + window.scrollY
+      if (window.scrollY > top) window.scrollTo({ top })
+    })
+    t.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return
+      const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]
+      show(next.id, true)
+    })
+  })
+  const fromHash = { '#gear': 'tab-gear', '#build': 'tab-build' }[location.hash]
+  let saved = null
+  try { saved = localStorage.getItem('bow-crit-tab') } catch (e) {}
+  show(fromHash || (saved && document.getElementById(saved) ? saved : 'tab-build'))
+})()
+</script>
+</body>
+</html>
