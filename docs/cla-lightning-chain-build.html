@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CLA + Lightning Chain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Taviraj:wght@500;700&display=swap">
+<style>
+/* Layout: one page, four tabs (skill + links / items / charm / lacrima); tokens shared with Undecember DB and bow-crit-builds.html */
+:root {
+  --bg: #0f0d14;
+  --raised: #17141f;
+  --sunken: #0b0a10;
+  --line: #2e2840;
+  --line-strong: #463d5e;
+  --text: #d9d4e4;
+  --dim: #a39bb6;
+  --faint: #756e8a;
+  --strong: #f6f2ff;
+  --accent: #d4a64a;
+  --accent-strong: #f0c46a;
+  --accent-bg: rgba(212, 166, 74, 0.12);
+  --bolt: #ffd84a;
+  --warn: #f0b84a;
+  --warn-bg: rgba(240, 184, 74, 0.09);
+  --up: #4cc27a;
+  --down: #e0705f;
+  --rune-red: #e0533f;
+  --rune-green: #4cc27a;
+  --rune-blue: #4f8df0;
+  --display: 'Taviraj', 'IBM Plex Sans Thai', Georgia, serif;
+  --sans: 'IBM Plex Sans Thai', system-ui, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+    --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+    --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+    --bolt: #9a7e00; --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c; --down: #b8412f;
+    --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+  --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+  --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+  --bolt: #9a7e00; --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c; --down: #b8412f;
+  --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15.5px/1.7 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-strong); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 72px;
+  display: grid;
+  gap: 32px;
+}
+@media (max-width: 520px) { .page { padding-inline: 16px; padding-block: 28px 56px; } }
+
+h1, h2, h3 { color: var(--strong); text-wrap: balance; margin: 0; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.15; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.45rem; line-height: 1.3; }
+h3 { font-size: 1rem; font-weight: 600; line-height: 1.4; }
+p { margin: 0; max-width: 70ch; }
+.eyebrow { font: 600 0.72rem/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+.dim { color: var(--dim); }
+
+header { display: grid; gap: 14px; }
+.lede { font-size: 1.05rem; color: var(--dim); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--faint); }
+.caveat {
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+  background: var(--warn-bg);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  display: grid;
+  gap: 8px;
+}
+.caveat div { display: grid; gap: 2px; }
+.caveat strong { color: var(--warn); font-weight: 600; }
+
+/* tabs */
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  background: var(--bg);
+  z-index: 5;
+  overflow-x: auto;
+}
+.tab {
+  appearance: none;
+  border: 0;
+  background: none;
+  color: var(--dim);
+  font: 600 0.95rem/1 var(--sans);
+  padding: 14px 16px 12px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tab:hover { color: var(--strong); }
+.tab[aria-selected="true"] { color: var(--strong); border-bottom-color: var(--accent); }
+.panel { display: grid; gap: 40px; }
+
+section { display: grid; gap: 16px; scroll-margin-top: 64px; }
+.sec-head { display: grid; gap: 6px; padding-top: 18px; border-top: 1px solid var(--line); }
+
+/* overview cards */
+.overview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 720px) { .overview { grid-template-columns: 1fr; } }
+.ov {
+  --el: var(--bolt);
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--el);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+.ov.total { --el: var(--accent); }
+.ov .el { font: 600 0.7rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--el); }
+.ov .big { font: 600 1.35rem/1.2 var(--mono); color: var(--strong); font-variant-numeric: tabular-nums; }
+.ov .big small { font: 0.75rem var(--sans); color: var(--faint); margin-left: 4px; }
+.ov p { font-size: 0.86rem; color: var(--dim); }
+
+/* how it works */
+.flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; list-style: none; margin: 0; padding: 0; counter-reset: step; }
+@media (max-width: 760px) { .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 440px) { .flow { grid-template-columns: 1fr; } }
+.flow li {
+  counter-increment: step;
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  font-size: 0.86rem;
+  color: var(--dim);
+}
+.flow li::before { content: counter(step); font: 600 0.72rem/1 var(--mono); color: var(--accent); }
+.flow b { color: var(--strong); font-weight: 600; font-size: 0.92rem; }
+
+/* rune board */
+.board-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); padding: 12px; }
+.board-scroll svg { min-width: 520px; width: 100%; height: auto; display: block; }
+.hx { stroke-width: 2; }
+.hx-red { fill: color-mix(in srgb, var(--rune-red) 16%, var(--raised)); stroke: var(--rune-red); }
+.hx-green { fill: color-mix(in srgb, var(--rune-green) 16%, var(--raised)); stroke: var(--rune-green); }
+.hx-blue { fill: color-mix(in srgb, var(--rune-blue) 16%, var(--raised)); stroke: var(--rune-blue); }
+.hx-trigger { stroke-dasharray: 6 4; stroke-width: 3; }
+.hx-skill { fill: color-mix(in srgb, var(--bolt) 22%, var(--raised)); stroke: var(--bolt); stroke-width: 3; }
+.hx-text { fill: var(--strong); font: 600 10.5px/1 var(--sans); text-anchor: middle; }
+.hx-skill-text { fill: var(--strong); font: 700 12.5px/1 var(--sans); text-anchor: middle; }
+.hx-arrow { fill: var(--strong); stroke: var(--strong); stroke-width: 2; }
+
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+@media (max-width: 760px) { .pair { grid-template-columns: 1fr; } }
+.pair > div { display: grid; gap: 8px; min-width: 0; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+th, td { text-align: left; padding: 9px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { font: 600 0.7rem/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); background: var(--sunken); white-space: nowrap; }
+td:first-child { color: var(--strong); font-weight: 500; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.best { color: var(--up); font-weight: 600; }
+td.worse { color: var(--down); }
+td small { display: block; color: var(--faint); font-size: 0.8rem; font-weight: 400; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+.dot.red { background: var(--rune-red); }
+.dot.green { background: var(--rune-green); }
+.dot.blue { background: var(--rune-blue); }
+.pill { display: inline-block; font: 600 0.66rem/1.5 var(--mono); padding: 0 6px; border-radius: 4px; border: 1px solid currentColor; white-space: nowrap; vertical-align: 1px; }
+.pill.top { color: var(--up); }
+.pill.cond { color: var(--warn); }
+.pill.trig { color: var(--accent-strong); }
+
+.swaps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+@media (max-width: 560px) { .swaps { grid-template-columns: 1fr; } }
+.swap { border-left: 2px solid var(--line-strong); padding: 2px 0 2px 14px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.swap p { font-size: 0.88rem; color: var(--dim); }
+ul.notes, ol.notes { margin: 0; padding-left: 1.1rem; display: grid; gap: 4px; color: var(--dim); font-size: 0.9rem; }
+ul.notes b, ol.notes b { color: var(--text); }
+.caption { font-size: 0.8rem; color: var(--faint); }
+footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="eyebrow">Undecember · S12 The Farside · Bow crit + Spell trigger</span>
+  <h1>Cross Lightning Arrow + Lightning Chain</h1>
+  <p class="lede">ยิง Cross Lightning Arrow (CLA) แล้วรูน Spell Activation on Attack Hit จะร่าย Lightning Chain ให้เองทุกครั้งที่ยิงโดน Lightning Chain ทำ Shock ให้ CLA ได้ดาเมจ +150% และได้ค่าคริของ Attack ไปใช้ด้วย</p>
+  <div class="meta">
+    <span>อัปเดต 2 พ.ย. 2026</span>
+    <span>ทดสอบด้วยตัวจำลองดาเมจ Undecember DB</span>
+    <span>ต่อจาก <a href="bow-crit-builds.html">บิลด์ธนูสายคริ</a></span>
+  </div>
+  <div class="caveat">
+    <div>
+      <strong>Spell Activation on Attack Hit ไม่อยู่ในชีททางการ S12 แต่ยังหาได้</strong>
+      <span>หน้ารูนบนเว็บฐานข้อมูล Undecember ระบุว่าดรอปได้และขายในร้านค้า Act 2, 6–10 และ 11–12 ค่าที่ใช้ในหน้านี้มาจากหน้านั้น: Lv45 เกรด Legendary ลดดาเมจ Lightning Chain 26.9% และอีก 5% จากไลน์เกรด ถ้าในเกมนับไลน์ลดดาเมจ 10% ของเกรด Normal ซ้อนด้วย DPS รวมจะลดจาก 22.2 ล้านเหลือ 21.2 ล้าน (ดูตารางเทียบในแท็บแรก)</span>
+    </div>
+    <div>
+      <strong>ตัวเลข DPS มาจากการจำลอง</strong>
+      <span>รูนเลเวล 45 เกรด Legendary, มอนเลเวล 150 ค่าต้านธาตุ 40%, เปิด Seal of Critical Chance, คริแบบตัวเลขจาก Charm/Zodiac/ของคราฟสมมติ +80 และค่าสุ่มออปชันไอเทมตั้งไว้ครึ่งทาง ตัวจำลองยังไม่รองรับรูนที่ร่ายสกิลให้ จึงคำนวณ Lightning Chain แยก แล้วคูณด้วยจำนวนครั้งที่ CLA ยิงต่อวินาที และสมมติว่าบอสติด Shock ตลอด ตั้งค่าสุ่มออปชันต่างจากหน้าบิลด์ธนูสายคริ ตัวเลขจึงใช้เทียบกันภายในหน้านี้เท่านั้น</span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="หมวดของบิลด์">
+  <button class="tab" role="tab" id="tab-build" aria-controls="panel-build" aria-selected="true">Skill + Rune link</button>
+  <button class="tab" role="tab" id="tab-gear" aria-controls="panel-gear" aria-selected="false" tabindex="-1">Item</button>
+  <button class="tab" role="tab" id="tab-charm" aria-controls="panel-charm" aria-selected="false" tabindex="-1">Charm</button>
+  <button class="tab" role="tab" id="tab-lacrima" aria-controls="panel-lacrima" aria-selected="false" tabindex="-1">Lacrima</button>
+</nav>
+
+<!-- ============ TAB 1: skill + rune link ============ -->
+<div class="panel" role="tabpanel" id="panel-build" aria-labelledby="tab-build">
+
+  <section>
+    <div class="overview">
+      <div class="ov">
+        <span class="el">Lightning · Attack</span>
+        <h3>Cross Lightning Arrow</h3>
+        <span class="big">12.0 ล้าน<small>ต่อวินาที</small></span>
+        <p>ยิง 5 ครั้งต่อวินาที (ชนเพดาน) คริ 100% ได้ดาเมจ +150% เมื่อบอสติด Shock</p>
+      </div>
+      <div class="ov">
+        <span class="el">Lightning · Spell</span>
+        <h3>Lightning Chain</h3>
+        <span class="big">10.2 ล้าน<small>ต่อวินาที</small></span>
+        <p>ครั้งละ 2.04 ล้าน ร่ายให้เอง 1 ครั้งต่อการยิง CLA 1 ครั้ง กระโดดได้ 11 ตัวตอนฟาร์ม</p>
+      </div>
+      <div class="ov total">
+        <span class="el">Boss · Total</span>
+        <h3>รวมตีบอส</h3>
+        <span class="big">22.2 ล้าน<small>ต่อวินาที</small></span>
+        <p>ราว 2 เท่าของ CLA ชุดเดิม 6 ลิงก์ที่ไม่มี Lightning Chain (10.8 ล้านเมื่อตั้งค่าเดียวกัน)</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>ทำงานยังไง</h2>
+    </div>
+    <ol class="flow">
+      <li><b>CLA ยิงโดน</b>ลูกธนู 3 ลูกเจาะทะลุทุกตัวแล้วระเบิดเป็นกากบาท</li>
+      <li><b>Spell Activation on Attack Hit</b>ร่าย Lightning Chain 1 ครั้งต่อการยิง 1 ครั้ง ไม่ว่าจะโดนกี่ลูก แต่ Lightning Chain ดาเมจลดราว 31%</li>
+      <li><b>Lightning Chain</b>ได้ค่า Attack DMG, อัตราคริ Attack และคริดาเมจ Attack ไปเป็นของ Spell</li>
+      <li><b>Shock 40%</b>บอสติด Shock แล้ว CLA ได้ดาเมจ +150% ส่วน Lightning Chain ได้ขยายดาเมจ 30% และคริดาเมจ Spell +50%</li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Rune board</span>
+      <h2>กระดานรูน</h2>
+    </div>
+    <div class="board-scroll">
+      <svg id="board" viewBox="-168 -162 552 324" role="img" aria-label="แผนผังกระดานรูน: CLA ทางซ้าย Lightning Chain ทางขวา Spell Activation on Attack Hit อยู่ตรงกลางระหว่างสองสกิล"></svg>
+    </div>
+    <p class="caption">Spell Activation on Attack Hit ต้องอยู่ระหว่างสองสกิล ลูกศรชี้จาก CLA ไป Lightning Chain รูนนี้สีแดง (Str) ช่องของทั้งสองสกิลด้านนั้นต้องเป็นสีแดงหรือสีขาว รูนลิงก์ตัวอื่นต้องตรงกับสีช่องบนรูนสกิลของคุณ ตำแหน่งในแผนผังเป็นแค่ตัวอย่าง</p>
+
+    <div class="pair">
+      <div>
+        <h3>รูนลิงก์ของ CLA</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+            <tbody>
+              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ตัวร่าย</span></td><td>ร่าย Lightning Chain เมื่อ CLA ยิงโดน ค่ามานาของ CLA +15%</td></tr>
+              <tr><td><span class="dot red"></span>Attack DMG Increase <span class="pill top">ผลสูงสุด</span></td><td>ดาเมจ +249% เมื่อใช้ Attack (Legendary +100%)</td></tr>
+              <tr><td><span class="dot blue"></span>Additional Lightning DMG</td><td>ดาเมจสายฟ้า +10–461 และ +83.2%</td></tr>
+              <tr><td><span class="dot green"></span>Quick Attack</td><td>ความเร็วโจมตี +44.5% ชนเพดาน 5 ครั้งต่อวินาที</td></tr>
+              <tr><td><span class="dot red"></span>Concentrated Area DMG <span class="pill cond">ตีบอส</span></td><td>ขยายดาเมจ 29.8% (Legendary +8%) แต่พื้นที่ระเบิด −30%</td></tr>
+              <tr><td><span class="dot blue"></span>Element DMG Amplification</td><td>ขยายดาเมจธาตุ 19.3% (Legendary +5% และดาเมจธาตุ +40%)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3>รูนลิงก์ของ Lightning Chain</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+            <tbody>
+              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ใช้ร่วม</span></td><td>ช่องเดียวกับฝั่ง CLA ลดดาเมจ Lightning Chain 26.9% และ 5% (เกรด Legendary) ลดค่ามานา 48%</td></tr>
+              <tr><td><span class="dot blue"></span>Spell DMG Increase <span class="pill top">ผลสูงสุด</span></td><td>ดาเมจ +249% เมื่อใช้ Spell (Legendary +200%)</td></tr>
+              <tr><td><span class="dot blue"></span>Additional Lightning DMG</td><td>ดาเมจสายฟ้า +10–461 และ +83.2% ช่วยมาก เพราะ Lightning Chain ไม่ได้ดาเมจตัวเลขจากธนู</td></tr>
+              <tr><td><span class="dot blue"></span>Element DMG Amplification</td><td>ขยายดาเมจธาตุ 19.3%</td></tr>
+              <tr><td><span class="dot blue"></span>Element Master</td><td>เจาะธาตุ +46.8% (Legendary +20%) และดาเมจธาตุ +98.8%</td></tr>
+              <tr><td><span class="dot blue"></span>Electric Shock</td><td>อัตราคริ +171.6% และคริดาเมจ +59% ใส่ศัตรูติด Shock และทำให้ศัตรูรับดาเมจสายฟ้าเพิ่ม 1.5% ต่อสแตก (3 สแตก) ซึ่ง CLA ได้ด้วย</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="swaps">
+      <div class="swap">
+        <h3>CLA ตัด Mana Storm ออก</h3>
+        <p>CLA ชุดเดิมมี 6 ลิงก์ ต้องตัด 1 ตัวเพื่อใส่ Spell Activation ในการจำลอง (CLA อย่างเดียว) ตัด Mana Storm เหลือ 9.93 ล้าน, ตัด Element DMG Amplification เหลือ 9.53 ล้าน, ตัด Concentrated Area DMG เหลือ 8.80 ล้าน และตัด Quick Attack เหลือ 7.99 ล้าน</p>
+      </div>
+      <div class="swap">
+        <h3>Lightning Chain ไม่ต้องใส่ Find Weakness</h3>
+        <p>เมื่อคริแบบตัวเลขถึง 80 Lightning Chain คริ 100% อยู่แล้ว ใส่ Find Weakness แทน Electric Shock ดาเมจต่อครั้งลดจาก 2.04 เหลือ 1.74 ล้าน ถ้าคริแบบตัวเลขยังไม่ถึง ดูตารางค่าคริในแท็บ Charm</p>
+      </div>
+      <div class="swap">
+        <h3>ห้ามใส่ Conductor</h3>
+        <p>Conductor ให้อัตราคริ +245% ใส่ศัตรูติด Shock แต่มีไลน์ "Cannot apply Shock" ทำให้ Lightning Chain ทำ Shock ไม่ได้ CLA จะเสียดาเมจ +150%</p>
+      </div>
+      <div class="swap">
+        <h3>Mana Storm แทน Element Master ได้</h3>
+        <p>ดาเมจเท่ากันในการจำลอง (22.2 ล้านทั้งคู่) แต่ Mana Storm เพิ่มค่ามานาของ Lightning Chain จาก 42.6 เป็น 46 ต่อครั้ง (ก่อนหักส่วนลดของ Spell Activation)</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Trigger rune</span>
+      <h2>On Attack Hit หรือ On Hit</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>Spell Activation on Attack Hit</th><th>Spell Activation on Hit</th></tr></thead>
+        <tbody>
+          <tr><td>สีรูน</td><td><span class="dot red"></span>แดง (Str)</td><td><span class="dot blue"></span>น้ำเงิน (Int)</td></tr>
+          <tr><td>สกิลตัวร่าย</td><td>ต้องเป็น Attack และ Strike</td><td>Strike</td></tr>
+          <tr><td>ลดดาเมจสกิลที่ถูกร่าย (Lv45 เกรด Legendary)</td><td class="num best">26.9% และ 5% เหลือ ×0.69</td><td class="num">33.8% และ 5% เหลือ ×0.63</td></tr>
+          <tr><td>ลดค่ามานาสกิลที่ถูกร่าย</td><td class="num best">48% (เกรด Legendary ลดค่ามานาอีก 20%)</td><td class="num">37% (เกรด Rare/Legendary ลดอีก 10%)</td></tr>
+          <tr><td>ค่ามานาของสกิลตัวร่าย</td><td class="num best">เพิ่ม 15%</td><td class="num">เพิ่ม 20%</td></tr>
+          <tr><td>หาได้จาก</td><td class="best">ดรอป, ร้านค้า Act 2, 6–10 และ 11–12 (เกรด Normal ขึ้นไป)</td><td>Synthesis (เกรด Rare ขึ้นไป)</td></tr>
+          <tr><td>DPS รวมตีบอส</td><td class="num best">22.2 ล้าน</td><td class="num">21.3 ล้าน</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>ทั้งสองตัวโอนค่า Attack DMG, อัตราคริ Attack และคริดาเมจ Attack 100% ไปให้ Spell และร่ายได้สูงสุด 1 ครั้งต่อการใช้สกิลตัวร่าย 1 ครั้ง</li>
+      <li>ดาเมจต่างกันแค่ราว 4% ข้อดีหลักของ On Attack Hit คือหาง่ายและใช้มานาน้อยกว่า ส่วนสีรูนต่างกัน (แดงกับน้ำเงิน) เลือกตามสีช่องบนรูนสกิลของคุณ</li>
+      <li><b>ไลน์ "10% DMG Dampening for Activated Skill":</b> On Attack Hit มีไลน์นี้ท้ายรายการค่าเลเวล โดยไม่มีป้ายเกรด ส่วนไลน์เกรดลดดาเมจเป็น Magic 8%, Rare 8% และ Legendary 5% หน้านี้ถือว่า 10% เป็นค่าของเกรด Normal ที่เกรดสูงกว่าแทนที่ ถ้าในเกมนับซ้อนกัน On Attack Hit จะเหลือ ×0.63 และ DPS รวม 21.2 ล้าน ดาเมจเท่ากับ On Hit เช็กได้โดยดูดาเมจของ Lightning Chain ในหน้าต่างสกิลเมื่อลิงก์รูนนี้</li>
+      <li>Spell Activation on Spell Hit ใช้กับบิลด์นี้ไม่ได้ เพราะต้องใช้สกิล Spell เป็นตัวร่าย และไม่โอนค่าคริของ Attack</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Awakening</span>
+      <h2>ปลุกพลัง</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>รูน · ระดับ</th><th>ได้อะไร</th><th>ผล</th></tr></thead>
+        <tbody>
+          <tr><td>CLA · Source <span class="pill top">ทำก่อน</span></td><td>ได้ผลของรูน Lightning Penetration เจาะสายฟ้า +17–20 และดาเมจสายฟ้า +40–52%</td><td>DPS รวม 20.9 → 22.2 ล้าน</td></tr>
+          <tr><td>CLA · Origin</td><td>ได้ผลของ Find Weakness อัตราคริ +117–155% และคริ +6</td><td>ไม่เพิ่ม DPS เมื่อคริแบบตัวเลขถึง 80 แต่ถ้ามีแค่ 40 คริของ CLA ที่มอน Lv170 จะเหลือ 89% (ปลุกแล้วยัง 100%)</td></tr>
+          <tr><td>CLA · Verity</td><td>คริแล้วมีโอกาส 70% ปล่อยสายฟ้า และโอกาส 20% ต่อครั้งที่โดนได้บัฟ Control Current 5 วินาที (คริดาเมจ +40% ใส่ศัตรูติดสถานะสายฟ้า)</td><td>ตัวจำลองไม่นับ น่าจะช่วย เพราะยิง 5 ครั้งต่อวินาทีบัฟจึงติดเกือบตลอด และบอสติด Shock</td></tr>
+          <tr><td>Lightning Chain · Verity <span class="pill cond">ตีบอส</span></td><td>ขยายดาเมจสายฟ้า 2–3% ต่อจำนวนกระโดดที่เหลือ (สูงสุด 15)</td><td>บอสตัวเดียวไม่มีตัวให้กระโดด จึงน่าจะได้ครบ 11 × 2–3% = 22–33% (คำนวณเอง ยังไม่ได้ทดสอบ)</td></tr>
+          <tr><td>Lightning Chain · Source</td><td>ขยายดาเมจ 5–10% ใส่ศัตรูติดสถานะสายฟ้า</td><td>ติดตลอดเมื่อบอสติด Shock ตัวจำลองไม่นับ</td></tr>
+          <tr><td>Lightning Chain · Origin <span class="pill cond">ฟาร์ม</span></td><td>ระยะกระโดด +25–50% และขยายดาเมจสายฟ้า 3% ต่อการกระโดด 1 ครั้ง (สูงสุด 15)</td><td>ได้เต็มเมื่อมีมอนให้กระโดด</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Variants &amp; rules</span>
+      <h2>ชุดอื่นและข้อควรรู้</h2>
+    </div>
+    <div class="swaps">
+      <div class="swap">
+        <h3>ชุดฟาร์ม</h3>
+        <p>CLA เปลี่ยน Concentrated Area DMG เป็น Area Effect ระเบิดกากบาทกว้างขึ้น 70.7% DPS บอสเหลือ 19.5 ล้าน ส่วน Lightning Chain กระโดด 11 ตัวช่วยเคลียร์มอนอยู่แล้ว</p>
+      </div>
+      <div class="swap">
+        <h3>ถ้าบอสไม่ค่อยติด Shock</h3>
+        <p>บอสไม่ติด Shock เลย DPS รวมลดราว 25% ลองเปลี่ยน Element Master เป็น Continuous Shock (Shock Rate +32, Shock Effect +27.9%, Legendary โอกาส Shock +7.5%) ถุงมือ Miraseti's Miracle ในแท็บ Item มีโอกาส Shock +8–13% อยู่แล้ว</p>
+      </div>
+      <div class="swap">
+        <h3>มานา</h3>
+        <p>CLA ใช้ราว 38 ต่อการยิง (รวมค่ามานา +15% จาก Spell Activation แล้ว) Lightning Chain ราว 22 หลังหักส่วนลด 48% ยิง 5 ครั้งต่อวินาทีรวมราว 300 มานาต่อวินาที ไลน์เกรด Legendary ลดค่ามานาอีก 20% แต่ไม่ได้ระบุว่าใช้กับสกิลไหน ต้องมีมานาต่อการโจมตี (ซองธนู +3–4 ต่อครั้งที่โดน) และฟื้นมานาจาก Charm หรือของคราฟ</p>
+      </div>
+      <div class="swap">
+        <h3>Shadow Archer ใช้ไม่ได้</h3>
+        <p>Shadow Archer ลิงก์กับรูนที่ร่ายสกิลให้ไม่ได้ (Cannot be linked with Trigger Link Runes) จึงไม่อยู่ในชุดนี้ ทั้งที่เป็นตัวสำรองของ CLA ในหน้าบิลด์ธนูสายคริ</p>
+      </div>
+    </div>
+    <ul class="notes">
+      <li><b>Lightning Chain ต้องอยู่ในช่องสกิล (Skill slot)</b> จึงจะถูกร่าย</li>
+      <li><b>Lightning Chain ต้องเป็นเกรด Legendary:</b> กระโดด +4, โอกาส Shock +20% (รวมเป็น 40%) และขยายดาเมจ 30% ใส่ศัตรูติด Shock</li>
+      <li><b>ตีบอสตัวเดียว</b> Lightning Chain โดนบอสครั้งเดียวต่อการร่าย การกระโดดจะไปโดนมอนตัวอื่น</li>
+      <li><b>Overheat:</b> CLA สะสม Overheat 40 ต่อการยิง Lightning Chain ไม่สะสม</li>
+      <li><b>Seal of Critical Chance</b> เปิดค้างไว้ อัตราคริ +252.4% และโอกาสคริ +3%</li>
+    </ul>
+  </section>
+</div>
+
+<!-- ============ TAB 2: items ============ -->
+<div class="panel" role="tabpanel" id="panel-gear" aria-labelledby="tab-gear" hidden>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Gear by slot</span>
+      <h2>ไอเทมแต่ละช่อง</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ช่อง</th><th>ไอเทม</th><th>ค่าที่ได้</th></tr></thead>
+        <tbody>
+          <tr><td>อาวุธ</td><td>Transcendent Tipan's Long Bow<small>Dex 266 · ช่วงเก็บเลเวล: Star Usurper's Bow (Lv1)</small></td><td>คริอุปกรณ์ +9, %คริอุปกรณ์ +46–57%, คริดาเมจ +52–61% และ Attack DMG +85–115% ที่ Spell Activation โอนให้ Lightning Chain ไลน์ของน้ำแข็งไม่ได้ใช้</td></tr>
+          <tr><td>ซองธนู</td><td>Transcendent Miraseti's Wave<small>Dex 270</small></td><td>ดาเมจ +70%, ความเร็วโจมตี 12–16%, อัตราคริ Attack +40–70% (โอนให้ Lightning Chain ด้วย), มานา +3–4 ต่อครั้งที่โดน</td></tr>
+          <tr><td>ถุงมือ <span class="pill top">เปลี่ยนใหม่</span></td><td>Transcendent Miraseti's Miracle<small>Dex 270 · แทน Spica's Light</small></td><td>คริดาเมจ +50–75%, ขยายดาเมจสายฟ้า 10–12%, ความเร็วโจมตี 8–10%, โอกาส Shock +8–13%</td></tr>
+          <tr><td>สร้อย</td><td>Transcendent Hira's Charm</td><td>คริดาเมจ +29–34% และ +80–100%, ขยายดาเมจ 8–13%, ความเร็วโจมตี +34–40%</td></tr>
+          <tr><td>แหวน 1</td><td>Transcendent Leo's Flow</td><td>อัตราคริ +44–53%, คริดาเมจ +25–28%, ขยายดาเมจสายฟ้า 7–9%, เจาะสายฟ้า +9.8–12.6%</td></tr>
+          <tr><td>แหวน 2</td><td>Ultimate Ring of Amplified Power<small>หรือ Ultimate Approaching Omen</small></td><td>โอกาสคริ +25%, คริดาเมจ +110% และบัฟขยายดาเมจ</td></tr>
+          <tr><td>รองเท้า</td><td>Ultimate Silver Shadow's Footprints<small>Str 228 · ถ้าย้ายไปลาคริมา สวม Ultimate Stra's Boots (Dex 223) แทน</small></td><td>อัตราคริ +86–110%, คริดาเมจ +46–105%, ขยายดาเมจ 17–32%, ความเร็วโจมตีสแตกได้ถึง +30%</td></tr>
+          <tr><td>ชุดเกราะ</td><td>Ultimate Numbing Armor<small>Str 250</small></td><td>HP +85–110%, รับดาเมจลด 18–25%, อมตะ 3 วินาทีเมื่อ HP ต่ำกว่า 20% (ใช้ Barrier ไม่ได้)</td></tr>
+          <tr><td>หมวก บ่า เข็มขัด</td><td>ของคราฟ</td><td>คริแบบตัวเลข, มานาและฟื้นมานา, HP และค่าต้านธาตุ ดู <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></td></tr>
+          <tr><td>สกิลเสริม</td><td>Seal of Critical Chance<small>เปิดค้างไว้</small></td><td>อัตราคริ +252.4%, โอกาสคริ +3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li><b>ทำไมเปลี่ยนถุงมือ:</b> Miraseti's Miracle ได้ DPS รวมมากกว่า Spica's Light ราว 9% ใช้ Dex 270 เท่ากับซองธนูจึงไม่ต้องลง Int 223 และโอกาส Shock ของถุงมือช่วยให้บอสติด Shock บ่อยขึ้น ไลน์ "ยิงสายฟ้าเพิ่ม" ของถุงมือใช้กับสกิล Unleash Lightning Shot เท่านั้น ไม่ใช่ CLA</li>
+      <li><b>สถานะที่ต้องลง:</b> Dex 270 (ซองธนู ถุงมือ และธนู 266) กับ Str 250 (ชุดเกราะ ซึ่งครอบคลุม Str 228 ของรองเท้าด้วย) ไม่ต้องลง Int</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Alternatives</span>
+      <h2>เทียบไอเทมทางเลือก</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>เปลี่ยนเป็น</th><th>DPS รวมตีบอส</th><th>หมายเหตุ</th></tr></thead>
+        <tbody>
+          <tr><td>ชุดในตารางด้านบน</td><td class="num">22.2 ล้าน</td><td>CLA 12.0 + Lightning Chain 10.2</td></tr>
+          <tr><td>ซองธนู Ultimate Master of Trajectory</td><td class="num best">23.0 ล้าน</td><td>ความเร็วโจมตีลดเหลือ 4.5 ครั้งต่อวินาที แต่ดาเมจ Attack and Spell แบบตัวเลขสูง ถ้าสุ่มได้ไลน์ "ขยายดาเมจ 3–4.5% ต่อจำนวนกระโดด" (โอกาส 25%) Lightning Chain ที่กระโดดได้ 11 ครั้งจะได้ขยายดาเมจราว 33–50% ถ้าไลน์นี้ใช้กับสกิลที่ถูกร่ายด้วย ตัวจำลองไม่นับไลน์นี้</td></tr>
+          <tr><td>ถุงมือ Transcendent Spica's Light (ชุดเดิม)</td><td class="num worse">20.4 ล้าน</td><td>ต้องลง Int 223 เพิ่ม</td></tr>
+          <tr><td>แหวน 2 Ultimate Approaching Omen</td><td class="num worse">15.9 ล้าน*</td><td>*ตัวจำลองไม่นับสแตก Reaper's Harvest (ขยายดาเมจ 0.9% ต่อสแตก สูงสุด 100 สแตก) ของจริงอาจสูงกว่านี้มาก ต้องลองในเกม</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">ไอเทมช่องอื่นเหมือนตารางด้านบน ถ้ามีธนู Foresight of the Conqueror ลองเทียบกับ Tipan's ในเกม หน้า <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> ได้ DPS ×1.45 แต่ยังไม่ได้จำลองกับบิลด์นี้</p>
+  </section>
+</div>
+
+<!-- ============ TAB 3: charm ============ -->
+<div class="panel" role="tabpanel" id="panel-charm" aria-labelledby="tab-charm" hidden>
+
+  <section>
+    <div class="caveat">
+      <div>
+        <strong>ยังไม่มีข้อมูลตัวเลขของ Charm ใน S12</strong>
+        <span>ชีททางการที่ใช้ทำหน้านี้ไม่มีรายการ Charm หัวข้อนี้จึงเป็นหลักการจากไกด์ทางการและไกด์ผู้เล่น (ส่วนใหญ่ปี 2022) บวกตัวเลขค่าคริจากตัวจำลอง เช็กคำอธิบาย Blessing ในเกมก่อนเลือก</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">System</span>
+      <h2>Charm ทำงานยังไง</h2>
+    </div>
+    <ul class="notes">
+      <li><b>ใส่ได้ 6 ชิ้น</b> เปิดหลังจบ Act 10 ช่องเปิดเพิ่มเมื่อเคลียร์แมพมากขึ้น</li>
+      <li><b>Blessing 140%:</b> Charm แต่ละชิ้นเป็นของเทพ 1 องค์ (มี 12 Blessing) และมีค่า % ของ Blessing นั้น รวม Blessing เดียวกันให้ถึง 140% ได้ขยายดาเมจ 30% ตามชนิดของ Blessing เช่น ไกด์ผู้เล่นบอกว่า Hamal's Blessing ให้ดาเมจกายภาพ</li>
+      <li><b>Chaos Star:</b> Charm 6 ชิ้นค่าเท่ากันรวมได้แค่ราว 84% ต้องหลอม Charm Blessing เดียวกัน 6 ชิ้นที่ Star Fuser เป็น Chaos Star (ค่าสุ่มใกล้ผลรวม ใช้ Chaos Orb มาก) แล้วเติมด้วย Charm Blessing เดียวกันจนถึง 140%</li>
+      <li><b>Charm Slot Upgrade</b> ที่ Star Fuser (หลังจบ Act 13) เพิ่มผลให้แต่ละช่อง ออปชันที่อัปเต็มแล้วใช้ได้กับทุกช่อง</li>
+      <li><b>ลาคริมาต้องใช้ค่า Charm Blessing</b> ในการลงทะเบียน วางแผน Blessing ให้พอสำหรับลาคริมาที่จะใช้ (แท็บ Lacrima)</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">What to roll</span>
+      <h2>เลือก Blessing และออปชัน</h2>
+    </div>
+    <p class="dim">เลือก Blessing ที่ผล 140% เพิ่มดาเมจสายฟ้า ดาเมจธาตุ หรือดาเมจทั้งหมด หน้านี้ยังไม่มีรายการผลของ Blessing ทั้ง 12 ตัว ให้ดูคำอธิบายในเกม แล้วหาออปชันบน Charm ตามลำดับนี้</p>
+    <ol class="notes">
+      <li><b>คริแบบตัวเลข (+Critical Rate)</b> สำคัญที่สุด เพราะ Lightning Chain คริยากกว่า CLA (ดูตารางด้านล่าง)</li>
+      <li><b>คริดาเมจ</b></li>
+      <li><b>ดาเมจสายฟ้า ดาเมจธาตุ หรือเจาะธาตุ</b></li>
+      <li><b>ดาเมจ Attack and Spell แบบตัวเลข</b> Lightning Chain ไม่ได้ดาเมจตัวเลขจากธนู ออปชันที่เป็น Attack and Spell ช่วยทั้งสองสกิล</li>
+      <li><b>มานาสูงสุด ฟื้นมานา หรือมานาต่อการโจมตี</b> บิลด์นี้ใช้มานาราว 300 ต่อวินาที</li>
+      <li><b>HP และค่าต้านธาตุ</b></li>
+    </ol>
+    <p class="caption">ความเร็วโจมตีไม่ต้องหาเพิ่ม ชุดนี้ชนเพดาน 5 ครั้งต่อวินาทีแล้ว</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Critical Rate</span>
+      <h2>คริแบบตัวเลขต้องมีเท่าไร</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>คริแบบตัวเลข</th><th>CLA มอน Lv150</th><th>CLA มอน Lv170</th><th>Lightning Chain Lv150</th><th>Lightning Chain Lv170</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td class="num worse">66%</td><td class="num worse">63%</td><td class="num worse">42%</td><td class="num worse">41%</td></tr>
+          <tr><td>40</td><td class="num best">100%</td><td class="num best">100%</td><td class="num worse">84%</td><td class="num worse">78%</td></tr>
+          <tr><td>80 <span class="pill top">เป้า</span></td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>คริแบบตัวเลข = รวมจาก Charm, Zodiac และของคราฟ ไม่รวมคริของธนู ตัวเลขในตารางใช้ชุดไอเทมในแท็บ Item และปลุก CLA ระดับ Origin แล้ว</li>
+      <li>Lightning Chain คริยากกว่า เพราะไม่ได้โอกาสคริ +15%, อัตราคริ Attack +120% (เกรด Legendary) และผล Find Weakness จากการปลุก Origin ซึ่งเป็นค่าเฉพาะของรูน CLA ค่าที่โอนผ่าน Spell Activation มีแค่ค่าจากไอเทมและตัวละคร</li>
+      <li>ถ้าคริแบบตัวเลขยังไม่ถึง 80 ใส่ Find Weakness ให้ Lightning Chain แทน Element Master ไปก่อน</li>
+    </ul>
+  </section>
+</div>
+
+<!-- ============ TAB 4: lacrima ============ -->
+<div class="panel" role="tabpanel" id="panel-lacrima" aria-labelledby="tab-lacrima" hidden>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Lacrima</span>
+      <h2>ลาคริมา</h2>
+    </div>
+    <p class="dim">ลาคริมาให้ออปชันของไอเทมที่ลงทะเบียนไว้โดยไม่ต้องสวม ช่องยูนีคมีเฉพาะในลาคริมาเกรด Legendary (1–3 ช่อง ชนิดของช่องสุ่ม) และดูดซับ 100% คงที่ หาได้จากดันเจียน Guide of Illusion – Time of Confrontation</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ช่องลาคริมา</th><th>ยูนีคที่ใส่</th><th>ได้อะไร</th><th>DPS รวมโดยประมาณ</th></tr></thead>
+        <tbody>
+          <tr><td>รองเท้า <span class="pill top">ทำก่อน</span></td><td>Ultimate Silver Shadow's Footprints<small>แล้วสวม Ultimate Stra's Boots (Dex 223) บนตัว ได้ทั้งสองคู่</small></td><td>อัตราคริ +86–110%, คริดาเมจ +46–105%, ขยายดาเมจ 17–32%</td><td class="num">22.2 ล้าน*</td></tr>
+          <tr><td>อาวุธสองมือ</td><td>Ultimate Casthor's Vision<small>ขวานสองมือ ไม่ต้องใช้ธนูในช่องนี้</small></td><td>คริดาเมจ +135–180%, Maximized DMG +75–110%</td><td class="num best">27.1 ล้าน</td></tr>
+          <tr><td>อาวุธมือเดียว<small>ถ้าลาคริมามีช่องนี้แทนสองมือ</small></td><td>Ultimate Token of Trust<small>Bowgun, Dex 270</small></td><td>ขยายดาเมจ 26–35%, คริดาเมจ +130–160%</td><td class="num best">34.9 ล้าน</td></tr>
+          <tr><td>ชุดเกราะ</td><td>Ultimate Numbing Armor<small>แล้วสวมชุดคราฟที่มี HP ค่าต้านธาตุ และมานาบนตัว</small></td><td>HP +85–110%, รับดาเมจลด 18–25%</td><td>ไม่เพิ่มดาเมจ</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>DPS ในตารางนับเฉพาะออปชันของยูนีค ไม่นับค่าพื้นฐานของอาวุธหรือชุดเกราะ เพราะน่าจะไม่ส่งต่อ (อนุมาน) และนับรวมกับชุดไอเทมในแท็บ Item แถวอาวุธนับแยกกันทีละแถว</li>
+      <li>*ตัวจำลองนับแถวรองเท้าได้เท่าเดิม เพราะไม่นับไลน์ของ Stra's Boots: ผล Sharpness (อัตราคริ +50% คริดาเมจ +25% และขยายผล +200–300%), คริดาเมจ +200–250% ใส่ Elite และ Perfect Dodge ของจริงจึงสูงกว่านี้</li>
+      <li><b>Ultimate Brilliance of Contrast</b> (ดาบสองมือ) น่าลองในช่องอาวุธสองมือ CLA มีแท็ก Shadow จึงได้ขยายดาเมจ 35% และคริดาเมจ +250% ขณะติด Shadow of Sephdar และอาจสุ่มได้ขยายดาเมจสายฟ้า 35–45% แต่ทั้งหมดเป็นผลแบบมีเงื่อนไขซึ่งอาจไม่ทำงานผ่านลาคริมา และส่วนเรียกเงาไม่ทำงานกับสกิลที่ลิงก์รูนร่ายสกิล ยังไม่ได้จำลอง</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Choosing</span>
+      <h2>เลือกลาคริมา</h2>
+    </div>
+    <ul class="notes">
+      <li><b>Item Level ของลาคริมาต้องไม่ต่ำกว่ายูนีค</b> ใส่ของที่เลเวลสูงกว่าลาคริมาไม่ได้ ยูนีคในตารางเป็น Tier 34–35 จึงต้องหาลาคริมา Item Level สูง</li>
+      <li><b>ค่า Charm Blessing</b> ลาคริมาแต่ละอันต้องใช้ Blessing ต่างชนิดและต่างจำนวน เช็กก่อนว่า Charm ที่ใส่อยู่ให้ค่าถึง</li>
+      <li><b>ช่อง Magic/Rare ที่เหลือ</b> ยิ่ง % ดูดซับสูงยิ่งดี ลาคริมา Legendary ช่อง Magic ได้ 110–130% ช่อง Rare ได้ 85–100% (แพตช์ ม.ค. 2025) ของคราฟ Magic ที่ออปชันดีจึงคุ้มที่สุดในช่องนี้ ลาคริมาที่ดรอปก่อนแพตช์นั้นยังเป็น 40–85% และลาคริมาจากกล่องอีเวนต์ไม่ได้โบนัส % ดูดซับ</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Before you register</span>
+      <h2>ควรรู้ก่อนลง</h2>
+    </div>
+    <ul class="notes">
+      <li><b>เปลี่ยนของในช่องแล้วของเดิมถูกทำลาย</b> ลงของต้องใช้ Link of Unity ถ้าเปลี่ยนของหรือเปลี่ยนตัวลาคริมา ของเดิมจะหายเว้นแต่จ่าย Ruby กู้คืน ใส่เฉพาะยูนีคตัวจบ</li>
+      <li><b>ไม่ใช่ทุกออปชันที่ส่งต่อ</b> ประกาศทางการยอมรับว่ามีออปชันที่ลาคริมาไม่ส่งผล แต่ไม่ได้บอกว่าตัวไหน ค่าพื้นฐานของอาวุธ (ดาเมจ ความเร็ว คริอุปกรณ์) และ %คริอุปกรณ์น่าจะไม่ส่งต่อ (อนุมาน)</li>
+      <li><b>ออปชันที่มีเงื่อนไขอาจไม่ทำงาน</b> เช่น สแตกความเร็วของ Silver Shadow และอมตะ 3 วินาทีของ Numbing Armor</li>
+      <li><b>ยังไม่รู้ว่าลาคริมาเช็กค่าสถานะหรือไม่</b> ถ้าไม่เช็ก ใส่ Silver Shadow ได้โดยไม่ต้องลง Str 228 ลองกดลงทะเบียนดูว่าเกมยอมไหม</li>
+      <li><b>ข้อเสียของ Numbing Armor อาจติดมาด้วย</b> คือใช้ Barrier ไม่ได้</li>
+      <li>ไม่ใส่ยูนีคซ้ำกับที่สวมอยู่ เพราะยังไม่รู้ว่ายูนีคชื่อเดียวกันซ้อนกันได้หรือไม่</li>
+    </ul>
+  </section>
+</div>
+
+<footer>
+  <span>ดูเพิ่ม: <a href="bow-crit-builds.html">บิลด์ธนูสายคริ</a> · <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> · <a href="ogre-arrow-poison-build.html">Ogre Arrow สายพิษ</a> · <a href="skill-tier-list.html">Tier List สกิล S12</a> · <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></span>
+  <span>แหล่งข้อมูล</span>
+  <ul>
+    <li><a href="https://guide.floor.line.games/UD/en_US/detail/1170004138902100096">Lacrima (ไกด์ทางการ)</a></li>
+    <li><a href="https://guide.floor.line.games/UD/en_US/detail/1170004014226900655">Charm Slot Upgrade (ไกด์ทางการ)</a></li>
+    <li><a href="https://gamesfuze.com/guides/undecember-ultimate-charm-guide-how-to-increase-damage/">Undecember: Ultimate Charm Guide (ไกด์ผู้เล่น ปี 2022)</a></li>
+  </ul>
+  <span>จัดทำจากชีทข้อมูลทางการ S12, หน้ารูน Spell Activation on Attack Hit บนเว็บฐานข้อมูล Undecember และตัวจำลองของ Undecember DB ไม่ใช่ไกด์ทางการของ LINE Games</span>
+</footer>
+
+</div>
+
+<script>
+// Draw the rune board: CLA (left) and Lightning Chain (right) in one row, the trigger rune between them (pointy-top hexes).
+(function () {
+  const NS = 'http://www.w3.org/2000/svg'
+  const HEX = '50.2,-29 50.2,29 0,58 -50.2,29 -50.2,-29 0,-58'
+  const DX = 107.4, HX = 53.7, HY = 93
+  const LC = 2 * DX
+  const cells = [
+    { x: 0, y: 0, cls: 'hx-skill', text: 'Cross|Lightning|Arrow', skill: true },
+    { x: LC, y: 0, cls: 'hx-skill', text: 'Lightning|Chain', skill: true },
+    { x: DX, y: 0, cls: 'hx-red hx-trigger', text: 'Spell Act.|on Attack|Hit', arrow: true },
+    // CLA links
+    { x: -HX, y: -HY, cls: 'hx-green', text: 'Quick|Attack' },
+    { x: HX, y: -HY, cls: 'hx-red', text: 'Attack DMG|Increase' },
+    { x: -DX, y: 0, cls: 'hx-blue', text: 'Additional|Lightning DMG' },
+    { x: -HX, y: HY, cls: 'hx-blue', text: 'Element|DMG Amp.' },
+    { x: HX, y: HY, cls: 'hx-red', text: 'Concentrated|Area DMG' },
+    // Lightning Chain links
+    { x: LC - HX, y: -HY, cls: 'hx-blue', text: 'Spell DMG|Increase' },
+    { x: LC + HX, y: -HY, cls: 'hx-blue', text: 'Additional|Lightning DMG' },
+    { x: LC + DX, y: 0, cls: 'hx-blue', text: 'Element|DMG Amp.' },
+    { x: LC + HX, y: HY, cls: 'hx-blue', text: 'Element|Master' },
+    { x: LC - HX, y: HY, cls: 'hx-blue', text: 'Electric|Shock' },
+  ]
+  const svg = document.getElementById('board')
+  const el = (name, attrs, text) => {
+    const n = document.createElementNS(NS, name)
+    for (const k in attrs) n.setAttribute(k, attrs[k])
+    if (text) n.textContent = text
+    return n
+  }
+  cells.forEach((c) => {
+    svg.appendChild(el('polygon', { points: HEX, class: 'hx ' + c.cls, transform: `translate(${c.x} ${c.y})` }))
+    const lines = c.text.split('|')
+    const lh = c.skill ? 14 : 12
+    const top = c.y - ((lines.length - 1) * lh) / 2 + 3 - (c.arrow ? 8 : 0)
+    lines.forEach((t, i) => svg.appendChild(el('text', { class: c.skill ? 'hx-skill-text' : 'hx-text', x: c.x, y: top + i * lh }, t)))
+    if (c.arrow) {
+      // arrow pointing from CLA towards Lightning Chain
+      svg.appendChild(el('line', { class: 'hx-arrow', x1: c.x - 22, y1: c.y + 32, x2: c.x + 14, y2: c.y + 32 }))
+      svg.appendChild(el('polygon', { class: 'hx-arrow', points: `${c.x + 12},${c.y + 26} ${c.x + 24},${c.y + 32} ${c.x + 12},${c.y + 38}` }))
+    }
+  })
+})()
+
+// Tabs: click, arrow keys, #hash deep link, remembered per viewer.
+;(function () {
+  const tabs = [...document.querySelectorAll('.tab')]
+  const show = (id, focus) => {
+    tabs.forEach((t) => {
+      const on = t.id === id
+      t.setAttribute('aria-selected', String(on))
+      t.tabIndex = on ? 0 : -1
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on
+      if (on && focus) t.focus()
+    })
+    try { localStorage.setItem('cla-lc-tab', id) } catch (e) {}
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => {
+      show(t.id)
+      // start the new tab at its top instead of mid-page
+      const top = document.querySelector('header').getBoundingClientRect().bottom + window.scrollY
+      if (window.scrollY > top) window.scrollTo({ top })
+    })
+    t.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return
+      const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]
+      show(next.id, true)
+    })
+  })
+  const fromHash = { '#build': 'tab-build', '#gear': 'tab-gear', '#charm': 'tab-charm', '#lacrima': 'tab-lacrima' }[location.hash]
+  let saved = null
+  try { saved = localStorage.getItem('cla-lc-tab') } catch (e) {}
+  show(fromHash || (saved && document.getElementById(saved) ? saved : 'tab-build'))
+})()
+</script>
+</body>
+</html>
