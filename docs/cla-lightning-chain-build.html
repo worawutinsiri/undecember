@@ -169,7 +169,7 @@ section { display: grid; gap: 16px; scroll-margin-top: 64px; }
 
 /* rune board */
 .board-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); padding: 12px; }
-.board-scroll svg { min-width: 520px; width: 100%; height: auto; display: block; }
+.board-scroll svg { min-width: 420px; max-width: 620px; width: 100%; height: auto; display: block; margin: 0 auto; }
 .hx { stroke-width: 2; }
 .hx-red { fill: color-mix(in srgb, var(--rune-red) 16%, var(--raised)); stroke: var(--rune-red); }
 .hx-green { fill: color-mix(in srgb, var(--rune-green) 16%, var(--raised)); stroke: var(--rune-green); }
@@ -179,6 +179,8 @@ section { display: grid; gap: 16px; scroll-margin-top: 64px; }
 .hx-text { fill: var(--strong); font: 600 10.5px/1 var(--sans); text-anchor: middle; }
 .hx-skill-text { fill: var(--strong); font: 700 12.5px/1 var(--sans); text-anchor: middle; }
 .hx-arrow { fill: var(--strong); stroke: var(--strong); stroke-width: 2; }
+.hx-arrow-line { fill: none; stroke: var(--strong); stroke-width: 2; stroke-linejoin: round; }
+.hx-shared { stroke-width: 4; }
 
 .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
 @media (max-width: 760px) { .pair { grid-template-columns: 1fr; } }
@@ -290,9 +292,9 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       <h2>กระดานรูน</h2>
     </div>
     <div class="board-scroll">
-      <svg id="board" viewBox="-168 -162 552 324" role="img" aria-label="แผนผังกระดานรูน: CLA ทางซ้าย Lightning Chain ทางขวา Spell Activation on Attack Hit อยู่ตรงกลางระหว่างสองสกิล"></svg>
+      <svg id="board" viewBox="-168 -162 497 416" role="img" aria-label="แผนผังกระดานรูน: CLA ซ้ายบน Lightning Chain ขวาล่าง Spell Activation on Attack Hit อยู่ระหว่างสองสกิลโดยลูกศรหักมุมลงขวา และ Additional Lightning DMG อยู่ช่องล่างที่ติดทั้งสองสกิล"></svg>
     </div>
-    <p class="caption">Spell Activation on Attack Hit ต้องอยู่ระหว่างสองสกิล ลูกศรชี้จาก CLA ไป Lightning Chain รูนนี้สีแดง (Str) ช่องของทั้งสองสกิลด้านนั้นต้องเป็นสีแดงหรือสีขาว รูนลิงก์ตัวอื่นต้องตรงกับสีช่องบนรูนสกิลของคุณ ตำแหน่งในแผนผังเป็นแค่ตัวอย่าง</p>
+    <p class="caption">ลูกศรของ Spell Activation หักมุมได้ จึงวาง Lightning Chain เยื้องลงขวาแทนการเรียงเป็นเส้นตรง สองสกิลจะมีช่องที่ติดกันทั้งคู่ 2 ช่อง ช่องหนึ่งเป็นรูนร่ายสกิล อีกช่องใส่รูนลิงก์ที่ใช้ร่วมกัน (เส้นขอบหนา) Spell Activation on Attack Hit สีแดง (Str) ช่องของทั้งสองสกิลด้านนั้นต้องเป็นสีแดงหรือสีขาว รูนลิงก์ตัวอื่นต้องตรงกับสีช่องบนรูนสกิลของคุณ ตำแหน่งในแผนผังเป็นแค่ตัวอย่าง</p>
 
     <div class="pair">
       <div>
@@ -303,7 +305,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
             <tbody>
               <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ตัวร่าย</span></td><td>ร่าย Lightning Chain เมื่อ CLA ยิงโดน ค่ามานาของ CLA +15%</td></tr>
               <tr><td><span class="dot red"></span>Attack DMG Increase <span class="pill top">ผลสูงสุด</span></td><td>ดาเมจ +249% เมื่อใช้ Attack (Legendary +100%)</td></tr>
-              <tr><td><span class="dot blue"></span>Additional Lightning DMG</td><td>ดาเมจสายฟ้า +10–461 และ +83.2%</td></tr>
+              <tr><td><span class="dot blue"></span>Additional Lightning DMG <span class="pill trig">ใช้ร่วม</span></td><td>ดาเมจสายฟ้า +10–461 และ +83.2% รูนเดียวกับฝั่ง Lightning Chain</td></tr>
               <tr><td><span class="dot green"></span>Quick Attack</td><td>ความเร็วโจมตี +44.5% ชนเพดาน 5 ครั้งต่อวินาที</td></tr>
               <tr><td><span class="dot red"></span>Concentrated Area DMG <span class="pill cond">ตีบอส</span></td><td>ขยายดาเมจ 29.8% (Legendary +8%) แต่พื้นที่ระเบิด −30%</td></tr>
               <tr><td><span class="dot blue"></span>Element DMG Amplification</td><td>ขยายดาเมจธาตุ 19.3% (Legendary +5% และดาเมจธาตุ +40%)</td></tr>
@@ -317,9 +319,9 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
           <table>
             <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
             <tbody>
-              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ใช้ร่วม</span></td><td>ช่องเดียวกับฝั่ง CLA ลดดาเมจ Lightning Chain 26.9% และ 5% (เกรด Legendary) ลดค่ามานา 48%</td></tr>
+              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ตัวร่าย</span></td><td>รูนเดียวกับฝั่ง CLA ลดดาเมจ Lightning Chain 26.9% และ 5% (เกรด Legendary) ลดค่ามานา 48%</td></tr>
               <tr><td><span class="dot blue"></span>Spell DMG Increase <span class="pill top">ผลสูงสุด</span></td><td>ดาเมจ +249% เมื่อใช้ Spell (Legendary +200%)</td></tr>
-              <tr><td><span class="dot blue"></span>Additional Lightning DMG</td><td>ดาเมจสายฟ้า +10–461 และ +83.2% ช่วยมาก เพราะ Lightning Chain ไม่ได้ดาเมจตัวเลขจากธนู</td></tr>
+              <tr><td><span class="dot blue"></span>Additional Lightning DMG <span class="pill trig">ใช้ร่วม</span></td><td>ดาเมจสายฟ้า +10–461 และ +83.2% ช่วยมาก เพราะ Lightning Chain ไม่ได้ดาเมจตัวเลขจากธนู รูนเดียวกับฝั่ง CLA</td></tr>
               <tr><td><span class="dot blue"></span>Element DMG Amplification</td><td>ขยายดาเมจธาตุ 19.3%</td></tr>
               <tr><td><span class="dot blue"></span>Element Master</td><td>เจาะธาตุ +46.8% (Legendary +20%) และดาเมจธาตุ +98.8%</td></tr>
               <tr><td><span class="dot blue"></span>Electric Shock</td><td>อัตราคริ +171.6% และคริดาเมจ +59% ใส่ศัตรูติด Shock และทำให้ศัตรูรับดาเมจสายฟ้าเพิ่ม 1.5% ต่อสแตก (3 สแตก) ซึ่ง CLA ได้ด้วย</td></tr>
@@ -330,6 +332,10 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
     </div>
 
     <div class="swaps">
+      <div class="swap">
+        <h3>วางหักมุม ใช้รูนลิงก์ร่วม 1 ตัว</h3>
+        <p>บนกระดานใช้รูนลิงก์ 10 ตัว (รวมรูนร่ายสกิล) แทน 11 ตัวเมื่อเรียงเป็นเส้นตรง ประหยัดรูน Lv45 Legendary 1 ตัวและช่องบนกระดาน 1 ช่อง DPS เท่าเดิม เพราะแต่ละสกิลยังมีลิงก์ครบ 6 ด้านเท่าเดิม ใช้ร่วมได้แค่ 1 ตัว เพราะช่องที่ติดทั้งสองสกิลมีแค่ 2 ช่อง จะใช้ Element DMG Amplification ร่วมแทนก็ได้ เลือกตัวที่สีตรงกับช่องด้านนั้นของรูนสกิลทั้งสองตัว</p>
+      </div>
       <div class="swap">
         <h3>CLA ตัด Mana Storm ออก</h3>
         <p>CLA ชุดเดิมมี 6 ลิงก์ ต้องตัด 1 ตัวเพื่อใส่ Spell Activation ในการจำลอง (CLA อย่างเดียว) ตัด Mana Storm เหลือ 9.93 ล้าน, ตัด Element DMG Amplification เหลือ 9.53 ล้าน, ตัด Concentrated Area DMG เหลือ 8.80 ล้าน และตัด Quick Attack เหลือ 7.99 ล้าน</p>
@@ -615,28 +621,28 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
 </div>
 
 <script>
-// Draw the rune board: CLA (left) and Lightning Chain (right) in one row, the trigger rune between them (pointy-top hexes).
+// Draw the rune board (pointy-top hexes): CLA at the origin, the trigger rune east of it, and Lightning Chain
+// south-east of the trigger (bent arrow). Both skills then touch two hexes: the trigger and one shared link rune.
 (function () {
   const NS = 'http://www.w3.org/2000/svg'
   const HEX = '50.2,-29 50.2,29 0,58 -50.2,29 -50.2,-29 0,-58'
   const DX = 107.4, HX = 53.7, HY = 93
-  const LC = 2 * DX
+  const LX = DX + HX, LY = HY
   const cells = [
     { x: 0, y: 0, cls: 'hx-skill', text: 'Cross|Lightning|Arrow', skill: true },
-    { x: LC, y: 0, cls: 'hx-skill', text: 'Lightning|Chain', skill: true },
+    { x: LX, y: LY, cls: 'hx-skill', text: 'Lightning|Chain', skill: true },
     { x: DX, y: 0, cls: 'hx-red hx-trigger', text: 'Spell Act.|on Attack|Hit', arrow: true },
+    { x: HX, y: HY, cls: 'hx-blue hx-shared', text: 'Additional|Lightning DMG|(shared)' },
     // CLA links
     { x: -HX, y: -HY, cls: 'hx-green', text: 'Quick|Attack' },
     { x: HX, y: -HY, cls: 'hx-red', text: 'Attack DMG|Increase' },
-    { x: -DX, y: 0, cls: 'hx-blue', text: 'Additional|Lightning DMG' },
+    { x: -DX, y: 0, cls: 'hx-red', text: 'Concentrated|Area DMG' },
     { x: -HX, y: HY, cls: 'hx-blue', text: 'Element|DMG Amp.' },
-    { x: HX, y: HY, cls: 'hx-red', text: 'Concentrated|Area DMG' },
     // Lightning Chain links
-    { x: LC - HX, y: -HY, cls: 'hx-blue', text: 'Spell DMG|Increase' },
-    { x: LC + HX, y: -HY, cls: 'hx-blue', text: 'Additional|Lightning DMG' },
-    { x: LC + DX, y: 0, cls: 'hx-blue', text: 'Element|DMG Amp.' },
-    { x: LC + HX, y: HY, cls: 'hx-blue', text: 'Element|Master' },
-    { x: LC - HX, y: HY, cls: 'hx-blue', text: 'Electric|Shock' },
+    { x: LX + HX, y: LY - HY, cls: 'hx-blue', text: 'Spell DMG|Increase' },
+    { x: LX + DX, y: LY, cls: 'hx-blue', text: 'Element|DMG Amp.' },
+    { x: LX + HX, y: LY + HY, cls: 'hx-blue', text: 'Element|Master' },
+    { x: LX - HX, y: LY + HY, cls: 'hx-blue', text: 'Electric|Shock' },
   ]
   const svg = document.getElementById('board')
   const el = (name, attrs, text) => {
@@ -652,9 +658,9 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
     const top = c.y - ((lines.length - 1) * lh) / 2 + 3 - (c.arrow ? 8 : 0)
     lines.forEach((t, i) => svg.appendChild(el('text', { class: c.skill ? 'hx-skill-text' : 'hx-text', x: c.x, y: top + i * lh }, t)))
     if (c.arrow) {
-      // arrow pointing from CLA towards Lightning Chain
-      svg.appendChild(el('line', { class: 'hx-arrow', x1: c.x - 22, y1: c.y + 32, x2: c.x + 14, y2: c.y + 32 }))
-      svg.appendChild(el('polygon', { class: 'hx-arrow', points: `${c.x + 12},${c.y + 26} ${c.x + 24},${c.y + 32} ${c.x + 12},${c.y + 38}` }))
+      // bent arrow: in from CLA (west), out towards Lightning Chain (south-east)
+      svg.appendChild(el('polyline', { class: 'hx-arrow-line', points: `${c.x - 26},${c.y + 20} ${c.x},${c.y + 20} ${c.x + 9},${c.y + 35.3}` }))
+      svg.appendChild(el('polygon', { class: 'hx-arrow', points: `${c.x + 3.8},${c.y + 38.3} ${c.x + 14},${c.y + 44} ${c.x + 14.2},${c.y + 32.3}` }))
     }
   })
 })()

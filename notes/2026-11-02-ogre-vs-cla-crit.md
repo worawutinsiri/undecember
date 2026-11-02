@@ -53,6 +53,7 @@
 - ถุงมือเปลี่ยนเป็น Transcendent Miraseti's Miracle (Dex 270) ดีกว่า Spica's Light ราว 8% และไม่ต้องลง Int
 - ตัวเลข: CLA 12.0 + Lightning Chain 10.2 = 22.2 ล้านต่อวินาที (ราว 2 เท่า) เทียบ CLA ชุดเดิม 6 ลิงก์ 10.8 ล้าน (ตั้งค่าเดียวกัน) บอสไม่ติด Shock ลดราว 25%
 - ทางเลือก: ซองธนู Master of Trajectory 23.0, ถุงมือ Spica's Light 20.4, แหวน Approaching Omen 15.9 (ไม่นับสแตก), ชุดฟาร์ม Area Effect 19.5, CLA ไม่ปลุก Source 20.9 ล้าน
+- กระดาน: ผู้ใช้บอกว่าลูกศรของ Spell Activation หักมุมได้ (`---\`) จึงวาง Lightning Chain เยื้องลงขวาของรูนร่ายสกิล (ห่างจาก CLA 2 ช่องแบบไม่เป็นเส้นตรง) ทั้งสองสกิลติดกัน 2 ช่อง: รูนร่ายสกิลกับรูนลิงก์ที่ใช้ร่วม 1 ตัว (ใส่ Additional Lightning DMG หรือ Element DMG Amplification) รวมแล้วใช้รูนลิงก์ 10 ตัวแทน 11 ตัว DPS เท่าเดิม เพราะแต่ละสกิลยังมีลิงก์ 6 ด้าน
 - คริ: Lightning Chain ต้องมีคริแบบตัวเลข 80 ถึงจะคริ 100% (40 → 84%) เพราะไม่ได้ค่าคริเฉพาะของรูน CLA
 - Shadow Archer ใช้ไม่ได้ (ลิงก์กับรูนร่ายสกิลไม่ได้)
 - ลาคริมา: Silver Shadow (สวม Stra's บนตัว), Casthor's Vision 27.1 ล้าน, Token of Trust 34.9 ล้าน (ประมาณ)
