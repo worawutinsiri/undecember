@@ -196,6 +196,9 @@ td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-spa
 td.best { color: var(--up); font-weight: 600; }
 td.worse { color: var(--down); }
 td small { display: block; color: var(--faint); font-size: 0.8rem; font-weight: 400; }
+.th { color: var(--faint); font-size: 0.82rem; font-weight: 400; }
+td .th { display: block; }
+.guess::after { content: '*'; color: var(--warn); }
 .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; }
 .dot.red { background: var(--rune-red); }
 .dot.green { background: var(--rune-green); }
@@ -255,12 +258,14 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       <div class="ov">
         <span class="el">Lightning · Attack</span>
         <h3>Cross Lightning Arrow</h3>
+        <span class="th guess">ศรสายฟ้าไขว้</span>
         <span class="big">12.0 ล้าน<small>ต่อวินาที</small></span>
         <p>ยิง 5 ครั้งต่อวินาที (ชนเพดาน) คริ 100% ได้ดาเมจ +150% เมื่อบอสติด Shock</p>
       </div>
       <div class="ov">
         <span class="el">Lightning · Spell</span>
         <h3>Lightning Chain</h3>
+        <span class="th guess">โซ่สายฟ้า</span>
         <span class="big">10.2 ล้าน<small>ต่อวินาที</small></span>
         <p>ครั้งละ 2.04 ล้าน ร่ายให้เอง 1 ครั้งต่อการยิง CLA 1 ครั้ง กระโดดได้ 11 ตัวตอนฟาร์ม</p>
       </div>
@@ -294,7 +299,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
     <div class="board-scroll">
       <svg id="board" viewBox="-168 -162 497 416" role="img" aria-label="แผนผังกระดานรูน: CLA ซ้ายบน Lightning Chain ขวาล่าง Spell Activation on Attack Hit อยู่ระหว่างสองสกิลโดยลูกศรหักมุมลงขวา และ Additional Lightning DMG อยู่ช่องล่างที่ติดทั้งสองสกิล"></svg>
     </div>
-    <p class="caption">ลูกศรของ Spell Activation หักมุมได้ จึงวาง Lightning Chain เยื้องลงขวาแทนการเรียงเป็นเส้นตรง สองสกิลจะมีช่องที่ติดกันทั้งคู่ 2 ช่อง ช่องหนึ่งเป็นรูนร่ายสกิล อีกช่องใส่รูนลิงก์ที่ใช้ร่วมกัน (เส้นขอบหนา) Spell Activation on Attack Hit สีแดง (Str) ช่องของทั้งสองสกิลด้านนั้นต้องเป็นสีแดงหรือสีขาว รูนลิงก์ตัวอื่นต้องตรงกับสีช่องบนรูนสกิลของคุณ ตำแหน่งในแผนผังเป็นแค่ตัวอย่าง</p>
+    <p class="caption">ลูกศรของ Spell Activation หักมุมได้ จึงวาง Lightning Chain เยื้องลงขวาแทนการเรียงเป็นเส้นตรง สองสกิลจะมีช่องที่ติดกันทั้งคู่ 2 ช่อง ช่องหนึ่งเป็นรูนร่ายสกิล อีกช่องใส่รูนลิงก์ที่ใช้ร่วมกัน (เส้นขอบหนา) Spell Activation on Attack Hit สีแดง (Str) ช่องของทั้งสองสกิลด้านนั้นต้องเป็นสีแดงหรือสีขาว รูนลิงก์ตัวอื่นต้องตรงกับสีช่องบนรูนสกิลของคุณ ตำแหน่งในแผนผังเป็นแค่ตัวอย่าง ชื่อไทยของทุกรูนอยู่ท้ายแท็บนี้ (<a href="#th-names">ชื่อรูนภาษาไทย</a>)</p>
 
     <div class="pair">
       <div>
@@ -303,12 +308,12 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
           <table>
             <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
             <tbody>
-              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ตัวร่าย</span></td><td>ร่าย Lightning Chain เมื่อ CLA ยิงโดน ค่ามานาของ CLA +15%</td></tr>
-              <tr><td><span class="dot red"></span>Attack DMG Increase <span class="pill top">ผลสูงสุด</span></td><td>ดาเมจ +249% เมื่อใช้ Attack (Legendary +100%)</td></tr>
-              <tr><td><span class="dot blue"></span>Additional Lightning DMG <span class="pill trig">ใช้ร่วม</span></td><td>ดาเมจสายฟ้า +10–461 และ +83.2% รูนเดียวกับฝั่ง Lightning Chain</td></tr>
-              <tr><td><span class="dot green"></span>Quick Attack</td><td>ความเร็วโจมตี +44.5% ชนเพดาน 5 ครั้งต่อวินาที</td></tr>
-              <tr><td><span class="dot red"></span>Concentrated Area DMG <span class="pill cond">ตีบอส</span></td><td>ขยายดาเมจ 29.8% (Legendary +8%) แต่พื้นที่ระเบิด −30%</td></tr>
-              <tr><td><span class="dot blue"></span>Element DMG Amplification</td><td>ขยายดาเมจธาตุ 19.3% (Legendary +5% และดาเมจธาตุ +40%)</td></tr>
+              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ตัวร่าย</span><span class="th">คาถาทำงานเมื่อโจมตีโดนเป้า</span></td><td>ร่าย Lightning Chain เมื่อ CLA ยิงโดน ค่ามานาของ CLA +15%</td></tr>
+              <tr><td><span class="dot red"></span>Attack DMG Increase <span class="pill top">ผลสูงสุด</span><span class="th">เพิ่มความเสียหายการโจมตี</span></td><td>ดาเมจ +249% เมื่อใช้ Attack (Legendary +100%)</td></tr>
+              <tr><td><span class="dot blue"></span>Additional Lightning DMG <span class="pill trig">ใช้ร่วม</span><span class="th guess">ความเสียหายสายฟ้าเพิ่มเติม</span></td><td>ดาเมจสายฟ้า +10–461 และ +83.2% รูนเดียวกับฝั่ง Lightning Chain</td></tr>
+              <tr><td><span class="dot green"></span>Quick Attack<span class="th guess">โจมตีเร็ว</span></td><td>ความเร็วโจมตี +44.5% ชนเพดาน 5 ครั้งต่อวินาที</td></tr>
+              <tr><td><span class="dot red"></span>Concentrated Area DMG <span class="pill cond">ตีบอส</span><span class="th">ความเสียหายจดจ่อกว้าง</span></td><td>ขยายดาเมจ 29.8% (Legendary +8%) แต่พื้นที่ระเบิด −30%</td></tr>
+              <tr><td><span class="dot blue"></span>Element DMG Amplification<span class="th">ขยายความเสียหายธาตุ</span></td><td>ขยายดาเมจธาตุ 19.3% (Legendary +5% และดาเมจธาตุ +40%)</td></tr>
             </tbody>
           </table>
         </div>
@@ -319,12 +324,12 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
           <table>
             <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
             <tbody>
-              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ตัวร่าย</span></td><td>รูนเดียวกับฝั่ง CLA ลดดาเมจ Lightning Chain 26.9% และ 5% (เกรด Legendary) ลดค่ามานา 48%</td></tr>
-              <tr><td><span class="dot blue"></span>Spell DMG Increase <span class="pill top">ผลสูงสุด</span></td><td>ดาเมจ +249% เมื่อใช้ Spell (Legendary +200%)</td></tr>
-              <tr><td><span class="dot blue"></span>Additional Lightning DMG <span class="pill trig">ใช้ร่วม</span></td><td>ดาเมจสายฟ้า +10–461 และ +83.2% ช่วยมาก เพราะ Lightning Chain ไม่ได้ดาเมจตัวเลขจากธนู รูนเดียวกับฝั่ง CLA</td></tr>
-              <tr><td><span class="dot blue"></span>Element DMG Amplification</td><td>ขยายดาเมจธาตุ 19.3%</td></tr>
-              <tr><td><span class="dot blue"></span>Element Master</td><td>เจาะธาตุ +46.8% (Legendary +20%) และดาเมจธาตุ +98.8%</td></tr>
-              <tr><td><span class="dot blue"></span>Electric Shock</td><td>อัตราคริ +171.6% และคริดาเมจ +59% ใส่ศัตรูติด Shock และทำให้ศัตรูรับดาเมจสายฟ้าเพิ่ม 1.5% ต่อสแตก (3 สแตก) ซึ่ง CLA ได้ด้วย</td></tr>
+              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ตัวร่าย</span><span class="th">คาถาทำงานเมื่อโจมตีโดนเป้า</span></td><td>รูนเดียวกับฝั่ง CLA ลดดาเมจ Lightning Chain 26.9% และ 5% (เกรด Legendary) ลดค่ามานา 48%</td></tr>
+              <tr><td><span class="dot blue"></span>Spell DMG Increase <span class="pill top">ผลสูงสุด</span><span class="th">เพิ่มความเสียหายของคาถา</span></td><td>ดาเมจ +249% เมื่อใช้ Spell (Legendary +200%)</td></tr>
+              <tr><td><span class="dot blue"></span>Additional Lightning DMG <span class="pill trig">ใช้ร่วม</span><span class="th guess">ความเสียหายสายฟ้าเพิ่มเติม</span></td><td>ดาเมจสายฟ้า +10–461 และ +83.2% ช่วยมาก เพราะ Lightning Chain ไม่ได้ดาเมจตัวเลขจากธนู รูนเดียวกับฝั่ง CLA</td></tr>
+              <tr><td><span class="dot blue"></span>Element DMG Amplification<span class="th">ขยายความเสียหายธาตุ</span></td><td>ขยายดาเมจธาตุ 19.3%</td></tr>
+              <tr><td><span class="dot blue"></span>Element Master<span class="th">ผู้ปกครองธาตุ</span></td><td>เจาะธาตุ +46.8% (Legendary +20%) และดาเมจธาตุ +98.8%</td></tr>
+              <tr><td><span class="dot blue"></span>Electric Shock<span class="th guess">ไฟฟ้าช็อต</span></td><td>อัตราคริ +171.6% และคริดาเมจ +59% ใส่ศัตรูติด Shock และทำให้ศัตรูรับดาเมจสายฟ้าเพิ่ม 1.5% ต่อสแตก (3 สแตก) ซึ่ง CLA ได้ด้วย</td></tr>
             </tbody>
           </table>
         </div>
@@ -364,6 +369,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       <table>
         <thead><tr><th></th><th>Spell Activation on Attack Hit</th><th>Spell Activation on Hit</th></tr></thead>
         <tbody>
+          <tr><td>ชื่อไทย</td><td>คาถาทำงานเมื่อโจมตีโดนเป้า</td><td><span class="guess">คาถาทำงานเมื่อโดนเป้า</span></td></tr>
           <tr><td>สีรูน</td><td><span class="dot red"></span>แดง (Str)</td><td><span class="dot blue"></span>น้ำเงิน (Int)</td></tr>
           <tr><td>สกิลตัวร่าย</td><td>ต้องเป็น Attack และ Strike</td><td>Strike</td></tr>
           <tr><td>ลดดาเมจสกิลที่ถูกร่าย (Lv45 เกรด Legendary)</td><td class="num best">26.9% และ 5% เหลือ ×0.69</td><td class="num">33.8% และ 5% เหลือ ×0.63</td></tr>
@@ -391,8 +397,8 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       <table>
         <thead><tr><th>รูน · ระดับ</th><th>ได้อะไร</th><th>ผล</th></tr></thead>
         <tbody>
-          <tr><td>CLA · Source <span class="pill top">ทำก่อน</span></td><td>ได้ผลของรูน Lightning Penetration เจาะสายฟ้า +17–20 และดาเมจสายฟ้า +40–52%</td><td>DPS รวม 20.9 → 22.2 ล้าน</td></tr>
-          <tr><td>CLA · Origin</td><td>ได้ผลของ Find Weakness อัตราคริ +117–155% และคริ +6</td><td>ไม่เพิ่ม DPS เมื่อคริแบบตัวเลขถึง 80 แต่ถ้ามีแค่ 40 คริของ CLA ที่มอน Lv170 จะเหลือ 89% (ปลุกแล้วยัง 100%)</td></tr>
+          <tr><td>CLA · Source <span class="pill top">ทำก่อน</span></td><td>ได้ผลของรูน Lightning Penetration (เจาะเกราะสายฟ้า) เจาะสายฟ้า +17–20 และดาเมจสายฟ้า +40–52%</td><td>DPS รวม 20.9 → 22.2 ล้าน</td></tr>
+          <tr><td>CLA · Origin</td><td>ได้ผลของ Find Weakness (<span class="guess">ค้นหาจุดอ่อน</span>) อัตราคริ +117–155% และคริ +6</td><td>ไม่เพิ่ม DPS เมื่อคริแบบตัวเลขถึง 80 แต่ถ้ามีแค่ 40 คริของ CLA ที่มอน Lv170 จะเหลือ 89% (ปลุกแล้วยัง 100%)</td></tr>
           <tr><td>CLA · Verity</td><td>คริแล้วมีโอกาส 70% ปล่อยสายฟ้า และโอกาส 20% ต่อครั้งที่โดนได้บัฟ Control Current 5 วินาที (คริดาเมจ +40% ใส่ศัตรูติดสถานะสายฟ้า)</td><td>ตัวจำลองไม่นับ น่าจะช่วย เพราะยิง 5 ครั้งต่อวินาทีบัฟจึงติดเกือบตลอด และบอสติด Shock</td></tr>
           <tr><td>Lightning Chain · Verity <span class="pill cond">ตีบอส</span></td><td>ขยายดาเมจสายฟ้า 2–3% ต่อจำนวนกระโดดที่เหลือ (สูงสุด 15)</td><td>บอสตัวเดียวไม่มีตัวให้กระโดด จึงน่าจะได้ครบ 11 × 2–3% = 22–33% (คำนวณเอง ยังไม่ได้ทดสอบ)</td></tr>
           <tr><td>Lightning Chain · Source</td><td>ขยายดาเมจ 5–10% ใส่ศัตรูติดสถานะสายฟ้า</td><td>ติดตลอดเมื่อบอสติด Shock ตัวจำลองไม่นับ</td></tr>
@@ -433,6 +439,47 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       <li><b>Seal of Critical Chance</b> เปิดค้างไว้ อัตราคริ +252.4% และโอกาสคริ +3%</li>
     </ul>
   </section>
+
+  <section id="th-names">
+    <div class="sec-head">
+      <span class="eyebrow">Thai names</span>
+      <h2>ชื่อรูนภาษาไทย</h2>
+    </div>
+    <p class="dim">ชื่อที่มี <span class="guess"></span> แปลเอง ยังไม่ได้เทียบกับชื่อในเกม ถ้าค้นในคลังรูนไม่เจอ ให้ค้นด้วยคำบางส่วน เช่น "สายฟ้า" หรือ "คริติคอล" ชื่อที่ไม่มีเครื่องหมายมาจากหน้าจอเกมหรือไกด์ภาษาไทย</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>รูน</th><th>ชื่อไทย</th><th>ที่มา</th></tr></thead>
+        <tbody>
+          <tr><td>Cross Lightning Arrow<small>รูนสกิล</small></td><td><span class="guess">ศรสายฟ้าไขว้</span></td><td>แปลเอง ใช้คำว่า "ศรสายฟ้า" ตามชื่อ Lightning Arrow Abyssling ในเกม</td></tr>
+          <tr><td>Lightning Chain<small>รูนสกิล</small></td><td><span class="guess">โซ่สายฟ้า</span></td><td>แปลเอง</td></tr>
+          <tr><td>Seal of Critical Chance<small>รูนสกิล</small></td><td><span class="guess">ตราโอกาสคริติคอล</span></td><td>แปลเอง</td></tr>
+          <tr><td>Unleash Lightning Shot<small>รูนสกิล</small></td><td><span class="guess">ยิงปลดปล่อยสายฟ้า</span></td><td>แปลเอง</td></tr>
+          <tr><td>Shadow Archer<small>รูนลิงก์</small></td><td>นักธนูเงา</td><td>หน้าจอเกม</td></tr>
+          <tr><td>Spell Activation on Attack Hit<small>รูนลิงก์</small></td><td>คาถาทำงานเมื่อโจมตีโดนเป้า</td><td>ไกด์ไทยปี 2022 ไกด์บอกว่ารูนนี้มีทั้งสีแดงและสีน้ำเงิน ชื่อนี้จึงอาจเป็นของ On Hit ด้วย</td></tr>
+          <tr><td>Spell Activation on Hit<small>รูนลิงก์</small></td><td><span class="guess">คาถาทำงานเมื่อโดนเป้า</span></td><td>แปลเอง</td></tr>
+          <tr><td>Spell Activation on Spell Hit<small>รูนลิงก์</small></td><td><span class="guess">คาถาทำงานเมื่อคาถาโดนเป้า</span></td><td>แปลเอง</td></tr>
+          <tr><td>Attack DMG Increase<small>รูนลิงก์</small></td><td>เพิ่มความเสียหายการโจมตี</td><td>หน้าจอเกม</td></tr>
+          <tr><td>Spell DMG Increase<small>รูนลิงก์</small></td><td>เพิ่มความเสียหายของคาถา</td><td>ไกด์ไทยปี 2022</td></tr>
+          <tr><td>Additional Lightning DMG<small>รูนลิงก์</small></td><td><span class="guess">ความเสียหายสายฟ้าเพิ่มเติม</span></td><td>เทียบจาก Additional Fire DMG ที่ไกด์ไทยปี 2022 ใช้ว่า "ความเสียหายเปลวเพลิงเพิ่มเติม"</td></tr>
+          <tr><td>Quick Attack<small>รูนลิงก์</small></td><td><span class="guess">โจมตีเร็ว</span></td><td>แปลเอง</td></tr>
+          <tr><td>Concentrated Area DMG<small>รูนลิงก์</small></td><td>ความเสียหายจดจ่อกว้าง</td><td>ไกด์ไทยปี 2022</td></tr>
+          <tr><td>Area Effect<small>รูนลิงก์</small></td><td>เอฟเฟกต์วงกว้าง</td><td>ไกด์ไทยปี 2022</td></tr>
+          <tr><td>Element DMG Amplification<small>รูนลิงก์</small></td><td>ขยายความเสียหายธาตุ</td><td>หน้าจอเกม</td></tr>
+          <tr><td>Element Master<small>รูนลิงก์</small></td><td>ผู้ปกครองธาตุ</td><td>หน้าจอเกม</td></tr>
+          <tr><td>Mana Storm<small>รูนลิงก์</small></td><td>มรสุมมนตรา</td><td>หน้าจอเกม</td></tr>
+          <tr><td>Lightning Penetration<small>รูนลิงก์</small></td><td>เจาะเกราะสายฟ้า</td><td>หน้าจอเกม</td></tr>
+          <tr><td>Electric Shock<small>รูนลิงก์</small></td><td><span class="guess">ไฟฟ้าช็อต</span></td><td>แปลเอง ในเกมเรียกสถานะ Shock ว่า "ไฟช็อต"</td></tr>
+          <tr><td>Continuous Shock<small>รูนลิงก์</small></td><td><span class="guess">ไฟช็อตต่อเนื่อง</span></td><td>แปลเอง</td></tr>
+          <tr><td>Conductor<small>รูนลิงก์</small></td><td><span class="guess">ตัวนำไฟฟ้า</span></td><td>แปลเอง</td></tr>
+          <tr><td>Find Weakness<small>รูนลิงก์</small></td><td><span class="guess">ค้นหาจุดอ่อน</span></td><td>แปลเอง</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>คำในหน้ารูนของเกมภาษาไทย: Shock = ไฟช็อต, Critical Rate = ค่าคริติคอล, Critical DMG = ความเสียหายคริติคอล, Spell = คาถา, Strike = จู่โจม, ปลุกพลัง Source / Origin / Verity = แหล่งกำเนิด / บ่อเกิด / สัจธรรม</li>
+      <li>ชื่อจากไกด์ไทยปี 2022 อาจเปลี่ยนแล้วในแพตช์หลังจากนั้น ถ้าส่งภาพหน้ารูนในเกมมา จะแก้ชื่อให้ตรง</li>
+    </ul>
+  </section>
 </div>
 
 <!-- ============ TAB 2: items ============ -->
@@ -456,7 +503,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
           <tr><td>รองเท้า</td><td>Ultimate Silver Shadow's Footprints<small>Str 228 · ถ้าย้ายไปลาคริมา สวม Ultimate Stra's Boots (Dex 223) แทน</small></td><td>อัตราคริ +86–110%, คริดาเมจ +46–105%, ขยายดาเมจ 17–32%, ความเร็วโจมตีสแตกได้ถึง +30%</td></tr>
           <tr><td>ชุดเกราะ</td><td>Ultimate Numbing Armor<small>Str 250</small></td><td>HP +85–110%, รับดาเมจลด 18–25%, อมตะ 3 วินาทีเมื่อ HP ต่ำกว่า 20% (ใช้ Barrier ไม่ได้)</td></tr>
           <tr><td>หมวก บ่า เข็มขัด</td><td>ของคราฟ</td><td>คริแบบตัวเลข, มานาและฟื้นมานา, HP และค่าต้านธาตุ ดู <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></td></tr>
-          <tr><td>สกิลเสริม</td><td>Seal of Critical Chance<small>เปิดค้างไว้</small></td><td>อัตราคริ +252.4%, โอกาสคริ +3%</td></tr>
+          <tr><td>สกิลเสริม</td><td>Seal of Critical Chance<span class="th guess">ตราโอกาสคริติคอล</span><small>เปิดค้างไว้</small></td><td>อัตราคริ +252.4%, โอกาสคริ +3%</td></tr>
         </tbody>
       </table>
     </div>
