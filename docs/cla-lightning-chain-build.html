@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CLA + Lightning Chain</title>
+<title>ธนูสายฟ้า + Lightning Chain</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Taviraj:wght@500;700&display=swap">
 <style>
-/* Layout: one page, four tabs (skill + links / items / charm / lacrima); tokens shared with Undecember DB and bow-crit-builds.html */
+/* Layout: one page, three builds, six tabs (CLA / Unleash / Lightning Arrow skill + links, then shared items / charm / lacrima); tokens shared with Undecember DB and bow-crit-builds.html */
 :root {
   --bg: #0f0d14;
   --raised: #17141f;
@@ -224,8 +224,8 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
 
 <header>
   <span class="eyebrow">Undecember · S12 The Farside · Bow crit + Spell trigger</span>
-  <h1>Cross Lightning Arrow + Lightning Chain</h1>
-  <p class="lede">ยิง Cross Lightning Arrow (CLA) แล้วรูน Spell Activation on Attack Hit จะร่าย Lightning Chain ให้เองทุกครั้งที่ยิงโดน แต่เป้าหมายต้องอยู่ในระยะ 850 Lightning Chain ทำ Shock ให้ CLA ได้ดาเมจ +150% และได้ค่าคริของ Attack ไปใช้ด้วย</p>
+  <h1>ธนูสายฟ้า + Lightning Chain</h1>
+  <p class="lede">สามบิลด์ที่รูน Spell Activation on Attack Hit ร่าย Lightning Chain ให้เองทุกครั้งที่ยิงโดน แต่เป้าหมายต้องอยู่ในระยะ 850 Cross Lightning Arrow (CLA) เจาะทุกตัวและมีระเบิด เหมาะกับการฟาร์ม Unleash Lightning Shot ทำ Shock เองได้ ส่วน Lightning Arrow ปลุก Origin แล้วลูกธนูโดนเป้าเดิมซ้ำได้ จึงคำนวณได้แรงสุดตอนตีบอสถ้าธนูโดนหลายลูก ทั้งสามบิลด์ใช้ไอเทม Charm และลาคริมาชุดเดียวกัน</p>
   <div class="meta">
     <span>อัปเดต 5 พ.ย. 2026</span>
     <span>ทดสอบด้วยตัวจำลองดาเมจ Undecember DB</span>
@@ -234,23 +234,25 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
   <div class="caveat">
     <div>
       <strong>Spell Activation on Attack Hit ไม่อยู่ในชีททางการ S12 แต่ยังหาได้</strong>
-      <span>หน้ารูนบนเว็บฐานข้อมูล Undecember ระบุว่าดรอปได้และขายในร้านค้า Act 2, 6–10 และ 11–12 ค่าที่ใช้ในหน้านี้มาจากหน้านั้น: Lv45 เกรด Legendary ลดดาเมจ Lightning Chain 26.9% และอีก 5% จากไลน์เกรด ถ้าในเกมนับไลน์ลดดาเมจ 10% ของเกรด Normal ซ้อนด้วย DPS รวมจะลดจาก 22.2 ล้านเหลือ 21.2 ล้าน (ดูตารางเทียบในแท็บแรก)</span>
+      <span>หน้ารูนบนเว็บฐานข้อมูล Undecember ระบุว่าดรอปได้และขายในร้านค้า Act 2, 6–10 และ 11–12 ค่าที่ใช้ในหน้านี้มาจากหน้านั้น: Lv45 เกรด Legendary ลดดาเมจ Lightning Chain 26.9% และอีก 5% จากไลน์เกรด ถ้าในเกมนับไลน์ลดดาเมจ 10% ของเกรด Normal ซ้อนด้วย DPS รวมของ CLA จะลดจาก 22.2 ล้านเหลือ 21.2 ล้าน (ดูตารางเทียบในแท็บแรก)</span>
     </div>
     <div>
       <strong>ตัวเลข DPS มาจากการจำลอง</strong>
-      <span>รูนเลเวล 45 เกรด Legendary, มอนเลเวล 150 ค่าต้านธาตุ 40%, เปิด Seal of Critical Chance, คริแบบตัวเลขจาก Charm/Zodiac/ของคราฟสมมติ +80 และค่าสุ่มออปชันไอเทมตั้งไว้ครึ่งทาง ตัวจำลองยังไม่รองรับรูนที่ร่ายสกิลให้ จึงคำนวณ Lightning Chain แยก แล้วคูณด้วยจำนวนครั้งที่ CLA ยิงต่อวินาที และสมมติว่ายืนในระยะของ Lightning Chain และบอสติด Shock ตลอด ตั้งค่าสุ่มออปชันต่างจากหน้าบิลด์ธนูสายคริ ตัวเลขจึงใช้เทียบกันภายในหน้านี้เท่านั้น</span>
+      <span>รูนเลเวล 45 เกรด Legendary, มอนเลเวล 150 ค่าต้านธาตุ 40%, เปิด Seal of Critical Chance, คริแบบตัวเลขจาก Charm/Zodiac/ของคราฟสมมติ +80 และค่าสุ่มออปชันไอเทมตั้งไว้ครึ่งทาง ตัวจำลองยังไม่รองรับรูนที่ร่ายสกิลให้ จึงคำนวณ Lightning Chain แยก แล้วคูณด้วยจำนวนครั้งที่ยิงต่อวินาที และสมมติว่ายืนในระยะของ Lightning Chain และบอสติด Shock ตลอด ตั้งค่าสุ่มออปชันต่างจากหน้าบิลด์ธนูสายคริ ตัวเลขจึงใช้เทียบกันภายในหน้านี้เท่านั้น</span>
     </div>
   </div>
 </header>
 
 <nav class="tabs" role="tablist" aria-label="หมวดของบิลด์">
-  <button class="tab" role="tab" id="tab-build" aria-controls="panel-build" aria-selected="true">Skill + Rune link</button>
+  <button class="tab" role="tab" id="tab-build" aria-controls="panel-build" aria-selected="true">CLA: Skill + Rune link</button>
+  <button class="tab" role="tab" id="tab-unleash" aria-controls="panel-unleash" aria-selected="false" tabindex="-1">Unleash: Skill + Rune link</button>
+  <button class="tab" role="tab" id="tab-arrow" aria-controls="panel-arrow" aria-selected="false" tabindex="-1">Lightning Arrow: Skill + Rune link</button>
   <button class="tab" role="tab" id="tab-gear" aria-controls="panel-gear" aria-selected="false" tabindex="-1">Item</button>
   <button class="tab" role="tab" id="tab-charm" aria-controls="panel-charm" aria-selected="false" tabindex="-1">Charm</button>
   <button class="tab" role="tab" id="tab-lacrima" aria-controls="panel-lacrima" aria-selected="false" tabindex="-1">Lacrima</button>
 </nav>
 
-<!-- ============ TAB 1: skill + rune link ============ -->
+<!-- ============ TAB 1: CLA skill + rune link ============ -->
 <div class="panel" role="tabpanel" id="panel-build" aria-labelledby="tab-build">
 
   <section>
@@ -480,7 +482,8 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
           <tr><td>Cross Lightning Arrow<small>รูนสกิล</small></td><td><span class="guess">ศรสายฟ้าไขว้</span></td><td>แปลเอง ใช้คำว่า "ศรสายฟ้า" ตามชื่อ Lightning Arrow Abyssling ในเกม</td></tr>
           <tr><td>Lightning Chain<small>รูนสกิล</small></td><td><span class="guess">โซ่สายฟ้า</span></td><td>แปลเอง</td></tr>
           <tr><td>Seal of Critical Chance<small>รูนสกิล</small></td><td><span class="guess">ตราโอกาสคริติคอล</span></td><td>แปลเอง</td></tr>
-          <tr><td>Unleash Lightning Shot<small>รูนสกิล</small></td><td><span class="guess">ยิงปลดปล่อยสายฟ้า</span></td><td>แปลเอง</td></tr>
+          <tr><td>Unleash Lightning Shot<small>รูนสกิล</small></td><td><span class="guess">ยิงประทุสายฟ้า</span></td><td>ชื่อที่ผู้เล่นเรียก ยังไม่ได้เทียบกับหน้าจอเกม</td></tr>
+          <tr><td>Lightning Arrow<small>รูนสกิล</small></td><td><span class="guess">ศรสายฟ้า</span></td><td>แปลเอง ใช้คำเดียวกับชื่อ Lightning Arrow Abyssling ในเกม</td></tr>
           <tr><td>Shadow Archer<small>รูนลิงก์</small></td><td>นักธนูเงา</td><td>หน้าจอเกม</td></tr>
           <tr><td>Spell Activation on Attack Hit<small>รูนลิงก์</small></td><td>คาถาทำงานเมื่อโจมตีโดนเป้า</td><td>ไกด์ไทยปี 2022 ไกด์บอกว่ารูนนี้มีทั้งสีแดงและสีน้ำเงิน ชื่อนี้จึงอาจเป็นของ On Hit ด้วย</td></tr>
           <tr><td>Spell Activation on Hit<small>รูนลิงก์</small></td><td><span class="guess">คาถาทำงานเมื่อโดนเป้า</span></td><td>แปลเอง</td></tr>
@@ -499,6 +502,8 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
           <tr><td>Continuous Shock<small>รูนลิงก์</small></td><td><span class="guess">ไฟช็อตต่อเนื่อง</span></td><td>แปลเอง</td></tr>
           <tr><td>Conductor<small>รูนลิงก์</small></td><td><span class="guess">ตัวนำไฟฟ้า</span></td><td>แปลเอง</td></tr>
           <tr><td>Find Weakness<small>รูนลิงก์</small></td><td><span class="guess">ค้นหาจุดอ่อน</span></td><td>แปลเอง</td></tr>
+          <tr><td>Multishot<small>รูนลิงก์</small></td><td>ยิงหลายนัด</td><td>ไกด์ไทยปี 2022</td></tr>
+          <tr><td>Extract Lightning Energy<small>รูนลิงก์</small></td><td><span class="guess">สกัดพลังงานสายฟ้า</span></td><td>แปลเอง</td></tr>
         </tbody>
       </table>
     </div>
@@ -509,7 +514,477 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
   </section>
 </div>
 
-<!-- ============ TAB 2: items ============ -->
+<!-- ============ TAB 2: Unleash Lightning Shot skill + rune link ============ -->
+<div class="panel" role="tabpanel" id="panel-unleash" aria-labelledby="tab-unleash" hidden>
+
+  <section>
+    <div class="overview">
+      <div class="ov">
+        <span class="el">Lightning · Attack</span>
+        <h3>Unleash Lightning Shot</h3>
+        <span class="th guess">ยิงประทุสายฟ้า</span>
+        <span class="big">11.2 ล้าน<small>ต่อวินาที</small></span>
+        <p>นับลูกธนูอย่างเดียว ยิง 5 ครั้งต่อวินาที (ชนเพดาน) คริ 100% Lightning Particle ที่โดนบอสเพิ่มอีก 5.7 ล้านต่อวินาที ต่อการโดน 1 ครั้งต่อลูก</p>
+      </div>
+      <div class="ov">
+        <span class="el">Lightning · Spell</span>
+        <h3>Lightning Chain</h3>
+        <span class="th guess">โซ่สายฟ้า</span>
+        <span class="big">10.2 ล้าน<small>ต่อวินาที</small></span>
+        <p>ชุดเดียวกับแท็บ CLA ครั้งละ 2.04 ล้าน ร่ายให้เอง 1 ครั้งต่อการยิง 1 ครั้ง</p>
+      </div>
+      <div class="ov total">
+        <span class="el">Boss · Total</span>
+        <h3>รวมตีบอส</h3>
+        <span class="big">21.4–38.6 ล้าน<small>ต่อวินาที</small></span>
+        <p>ค่าต่ำคือ Particle ไม่โดนบอสเลย ค่าสูงคือโดน 3 ครั้งต่อธนู 1 ลูก ยังไม่ได้วัดในเกมว่าโดนจริงกี่ครั้ง</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Versus CLA</span>
+      <h2>เทียบกับ CLA</h2>
+    </div>
+    <p>ฟาร์มใช้ CLA ดีกว่า ส่วนตีบอส Unleash แรงกว่าเมื่อ Particle โดนบอสอย่างน้อย 2 ครั้งต่อธนู 1 ลูก สองบิลด์นี้ใช้ไอเทมและชุด Lightning Chain เดียวกัน ต่างกันแค่รูนสกิลกับรูนลิงก์ 1 ตัว (Concentrated Area DMG เปลี่ยนเป็น Mana Storm)</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ตัวยิง · นับอะไร</th><th>DPS รวมตีบอส</th><th>เทียบกับ CLA ลูกธนู + ระเบิด</th></tr></thead>
+        <tbody>
+          <tr><td>CLA · ระเบิดอย่างเดียว<small>ตัวเลขในแท็บ CLA</small></td><td class="num">22.2 ล้าน</td><td class="num">−29%</td></tr>
+          <tr><td>CLA · ลูกธนู + ระเบิด</td><td class="num">31.5 ล้าน</td><td>ค่าที่ใช้เทียบ</td></tr>
+          <tr><td>Unleash · ลูกธนูอย่างเดียว</td><td class="num">21.4 ล้าน</td><td class="num worse">−32%</td></tr>
+          <tr><td>Unleash · Particle โดน 1 ครั้ง</td><td class="num">27.2 ล้าน</td><td class="num worse">−14%</td></tr>
+          <tr><td>Unleash · Particle โดน 2 ครั้ง</td><td class="num">32.9 ล้าน</td><td class="num best">+5%</td></tr>
+          <tr><td>Unleash · Particle โดน 3 ครั้ง</td><td class="num">38.6 ล้าน</td><td class="num best">+23%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">นับต่อธนู 1 ลูก ยืนในระยะ 850 บอสติด Shock ตลอด รวม Lightning Chain 10.2 ล้าน ปลุก Unleash ระดับ Source และ Origin และใช้ Mana Storm เกรด Legendary ตั้งค่าอื่นเหมือนแท็บ CLA จุดเท่ากันอยู่ที่ Particle โดน 1.75 ครั้งต่อลูก</p>
+    <ul class="notes">
+      <li><b>ทำไมเลขของ CLA ต่างจากแท็บแรก:</b> 22.2 ล้านนับแค่ระเบิด ตารางนี้นับลูกธนูด้วยเพื่อให้เทียบกับ Unleash ได้ ยังไม่ได้ยืนยันในเกมว่าโดนบอสตัวเดียวทั้งสองส่วน</li>
+      <li><b>ตัวจำลองไม่นับ:</b> จำนวน Particle ที่โดนจริง, Particle +5 จากการปลุก Source และการโจมตีเพิ่มจากถุงมือ Miraseti's Miracle ฝั่ง CLA ก็ไม่นับสายฟ้าที่ปล่อยเมื่อคริ</li>
+    </ul>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>CLA</th><th>Unleash Lightning Shot</th></tr></thead>
+        <tbody>
+          <tr><td>การเจาะ</td><td class="best">เจาะทุกตัว</td><td>ไม่เจาะ (ปลุก Origin +2)</td></tr>
+          <tr><td>ระเบิด</td><td class="best">รัศมี 320 ใส่ Area Effect เพิ่มได้</td><td>Particle รัศมี 150 ใส่ Area Effect ไม่ได้</td></tr>
+          <tr><td>ความเร็วลูกธนู</td><td class="num best">4500</td><td class="num">3000</td></tr>
+          <tr><td>โอกาส Shock ของตัวยิงเอง</td><td>ถุงมือ 8–13%</td><td class="best">20% รวมปลุก Source, Origin และถุงมือราว 51%</td></tr>
+          <tr><td>บอสไม่ติด Shock เลย</td><td>24.9 ล้าน (−21%)</td><td>15.5–29.8 ล้าน (−23 ถึง −28%)</td></tr>
+          <tr><td>ตัวคูณคริ</td><td class="num best">×7.04</td><td class="num">×6.04</td></tr>
+          <tr><td>คริแบบตัวเลขที่ต้องมี</td><td>80 (CLA เอง 40 แต่ Lightning Chain ต้อง 80)</td><td>80 (มอน Lv170 ต้อง 100)</td></tr>
+          <tr><td>มานาต่อวินาที</td><td class="num best">ราว 300</td><td class="num">ราว 350–400</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>ทำงานยังไง</h2>
+    </div>
+    <ol class="flow">
+      <li><b>Unleash ยิงโดน</b>ลูกธนู 3 ลูกไม่เจาะ เมื่อโดนจะปล่อย Lightning Particle 3 ตัว (ปลุก Source เป็น 8 ตัว) ระเบิดรัศมี 150</li>
+      <li><b>Spell Activation on Attack Hit</b>ร่าย Lightning Chain 1 ครั้งต่อการยิง 1 ครั้ง ไม่ว่าจะโดนกี่ลูก และ Lightning Chain ดาเมจลดราว 31%</li>
+      <li><b>Miraseti's Miracle</b>Unleash โดนศัตรูแล้วโจมตีสายฟ้าเพิ่ม ดาเมจเท่า Particle ไลน์นี้ใช้ได้เฉพาะ Unleash</li>
+      <li><b>Shock</b>Unleash ทำ Shock เองได้ บอสติด Shock แล้ว Unleash ได้ขยายดาเมจ 20% ส่วน Lightning Chain ได้ขยายดาเมจ 30% และคริดาเมจ Spell +50%</li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Distance</span>
+      <h2>ระยะยืน</h2>
+    </div>
+    <p class="dim">Lightning Chain ยังมีระยะร่าย 850 เท่าเดิม แต่ Unleash ยังทำ Shock เองได้เมื่อยืนไกลกว่านั้น จึงไม่เสียดาเมจจาก Shock มากเท่า CLA</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ระยะจากเป้าหมาย</th><th>ชุดในแท็บนี้</th><th>เปลี่ยนเป็น Precise Shot</th><th>CLA ลูกธนู + ระเบิด</th></tr></thead>
+        <tbody>
+          <tr><td>ใกล้กว่า 600</td><td class="num">21.4–38.6 ล้าน</td><td class="num">19.5–33.7 ล้าน</td><td class="num">31.5 ล้าน</td></tr>
+          <tr><td>600–850</td><td class="num">21.4–38.6 ล้าน</td><td class="num">24.8–47.2 ล้าน</td><td class="num">31.5 ล้าน</td></tr>
+          <tr><td>ไกลกว่า 850</td><td class="num">11.2–28.4 ล้าน</td><td class="num">14.6–37.0 ล้าน</td><td class="num">18.8–21.2 ล้าน</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li><b>อ่านค่าเป็นช่วง:</b> ช่องของ Unleash ค่าต่ำคือลูกธนูอย่างเดียว ค่าสูงคือ Particle โดน 3 ครั้งต่อลูก บอสติด Shock ส่วนช่อง CLA แถวสุดท้าย ค่าต่ำคือไม่ติด Shock ค่าสูงคือติดตลอด ถ้า Unleash ยืนไกลกว่า 850 และบอสไม่ติด Shock เลย จะเหลือ 9.3–23.7 ล้าน</li>
+      <li><b>Precise Shot</b> ใส่แทน Element DMG Amplification ตัวเลขตั้งแต่ระยะ 600 ขึ้นไปนับ 6 สแตกเอง ถ้าไม่นับสแตก ช่วง 600–850 ได้ 21.3–38.2 ล้าน ยังไม่รู้ว่าไลน์นี้มีผลกับ Particle ด้วยหรือไม่ ถ้าไม่มีผล ค่าสูงจะต่ำกว่านี้</li>
+      <li><b>Close Range Shot</b> ใส่แทนตัวเดียวกัน ได้ 20.8–37.0 ล้านที่ระยะ 600, 22.2–40.6 ล้านที่ระยะ 400 และ 23.6–44.2 ล้านที่ระยะ 200 (บวกผล Close Range Shot เอง)</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Rune board</span>
+      <h2>กระดานรูน</h2>
+    </div>
+    <div class="board-scroll">
+      <svg id="board-unleash" viewBox="-168 -162 497 416" role="img" aria-label="แผนผังกระดานรูน: Unleash Lightning Shot ซ้ายบน Lightning Chain ขวาล่าง Spell Activation on Attack Hit อยู่ระหว่างสองสกิลโดยลูกศรหักมุมลงขวา และ Additional Lightning DMG อยู่ช่องล่างที่ติดทั้งสองสกิล"></svg>
+    </div>
+    <p class="caption">วางแบบเดียวกับแท็บ CLA ใช้รูนลิงก์ 10 ตัว และ Additional Lightning DMG เป็นตัวที่ใช้ร่วมกัน (เส้นขอบหนา) สีของรูนลิงก์ต้องตรงกับสีช่องบนรูนสกิลของคุณ ตำแหน่งในแผนผังเป็นแค่ตัวอย่าง ชื่อไทยของทุกรูนอยู่ท้ายแท็บ CLA</p>
+
+    <div class="pair">
+      <div>
+        <h3>รูนลิงก์ของ Unleash Lightning Shot</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+            <tbody>
+              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ตัวร่าย</span><span class="th">คาถาทำงานเมื่อโจมตีโดนเป้า</span></td><td>ร่าย Lightning Chain เมื่อ Unleash ยิงโดน ค่ามานาของ Unleash +15%</td></tr>
+              <tr><td><span class="dot red"></span>Attack DMG Increase<span class="th">เพิ่มความเสียหายการโจมตี</span></td><td>ดาเมจ +249% เมื่อใช้ Attack (Legendary +100%)</td></tr>
+              <tr><td><span class="dot blue"></span>Additional Lightning DMG <span class="pill trig">ใช้ร่วม</span><span class="th guess">ความเสียหายสายฟ้าเพิ่มเติม</span></td><td>ดาเมจสายฟ้า +10–461 และ +83.2% รูนเดียวกับฝั่ง Lightning Chain</td></tr>
+              <tr><td><span class="dot green"></span>Quick Attack<span class="th guess">โจมตีเร็ว</span></td><td>ความเร็วโจมตี +44.5% ชนเพดาน 5 ครั้งต่อวินาที ถ้าตัดออกเหลือ 3.3 ครั้ง</td></tr>
+              <tr><td><span class="dot blue"></span>Element DMG Amplification<span class="th">ขยายความเสียหายธาตุ</span></td><td>ขยายดาเมจธาตุ 19.3% (Legendary +5% และดาเมจธาตุ +40%)</td></tr>
+              <tr><td><span class="dot blue"></span>Mana Storm <span class="pill cond">ใช้มานามาก</span><span class="th">มรสุมมนตรา</span></td><td>ขยายดาเมจ Strike 24.2% (Legendary +8%) ค่ามานา +30% และ +8</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3>รูนลิงก์ของ Lightning Chain</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+            <tbody>
+              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ตัวร่าย</span><span class="th">คาถาทำงานเมื่อโจมตีโดนเป้า</span></td><td>รูนเดียวกับฝั่ง Unleash ลดดาเมจ Lightning Chain 26.9% และ 5% (เกรด Legendary) ลดค่ามานา 48%</td></tr>
+              <tr><td><span class="dot blue"></span>Spell DMG Increase<span class="th">เพิ่มความเสียหายของคาถา</span></td><td>ดาเมจ +249% เมื่อใช้ Spell (Legendary +200%)</td></tr>
+              <tr><td><span class="dot blue"></span>Additional Lightning DMG <span class="pill trig">ใช้ร่วม</span><span class="th guess">ความเสียหายสายฟ้าเพิ่มเติม</span></td><td>รูนเดียวกับฝั่ง Unleash</td></tr>
+              <tr><td><span class="dot blue"></span>Element DMG Amplification<span class="th">ขยายความเสียหายธาตุ</span></td><td>ขยายดาเมจธาตุ 19.3%</td></tr>
+              <tr><td><span class="dot blue"></span>Element Master<span class="th">ผู้ปกครองธาตุ</span></td><td>เจาะธาตุ +46.8% (Legendary +20%) และดาเมจธาตุ +98.8%</td></tr>
+              <tr><td><span class="dot blue"></span>Electric Shock<span class="th guess">ไฟฟ้าช็อต</span></td><td>อัตราคริ +171.6% และคริดาเมจ +59% ใส่ศัตรูติด Shock และทำให้ศัตรูรับดาเมจสายฟ้าเพิ่ม 1.5% ต่อสแตก (3 สแตก)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="swaps">
+      <div class="swap">
+        <h3>ใส่ Concentrated Area DMG ไม่ได้</h3>
+        <p>Unleash ไม่มีแท็ก Area of Effect จึงลิงก์ Concentrated Area DMG และ Area Effect ไม่ได้ และมีไลน์ Cannot Chain จึงลิงก์ Chain ไม่ได้ Mana Storm ให้ดาเมจสูงสุดในการจำลอง ถ้าใช้เกรด Rare ดาเมจรวมเหลือ 20.6–36.5 ล้าน</p>
+      </div>
+      <div class="swap">
+        <h3>มานาไม่พอ ใช้ Element Master แทน Mana Storm</h3>
+        <p>Unleash ใช้มานาราว 47–60 ต่อการยิง รวม Lightning Chain ราว 350–400 ต่อวินาที เปลี่ยนเป็น Element Master แล้วเหลือราว 300 เท่า CLA ดาเมจรวม 20.5–36.3 ล้าน ตัวจำลองไม่นับค่ามานา +8 ของ Mana Storm จึงคำนวณเอง ค่าต่ำคือบวกหลังคูณเปอร์เซ็นต์ ค่าสูงคือบวกก่อนคูณ</p>
+      </div>
+      <div class="swap">
+        <h3>ไม่ต้องใส่ Find Weakness</h3>
+        <p>แม้คริแบบตัวเลขยังน้อย ใส่แล้วดาเมจก็ลดลง เช่น คริแบบตัวเลข 40 มอน Lv150 ลูกธนูได้ 8.45 ล้าน (คริ 71%) ใส่แทน Element DMG Amplification ได้คริ 93% แต่ดาเมจเหลือ 8.15 ล้าน ให้เก็บคริจาก Charm และของคราฟแทน ตารางค่าคริอยู่ในแท็บ Charm</p>
+      </div>
+      <div class="swap">
+        <h3>ชุดฟาร์ม</h3>
+        <p>ใส่ Multishot แทน Mana Storm ลูกธนูเพิ่มจาก 3 เป็น 7 ลูก ดาเมจรวม (นับธนู 1 ลูก) เหลือ 19.3–33.2 ล้าน การปลุก Origin เพิ่มการเจาะ 2 ครั้ง และ Verity เพิ่มการกระโดด 2 ครั้ง แต่ค่าของรูนยังกวาดมอนได้น้อยกว่า CLA ที่เจาะทุกตัวและระเบิดรัศมี 320</p>
+      </div>
+      <div class="swap">
+        <h3>ถุงมือ Miraseti's Miracle ห้ามเปลี่ยน</h3>
+        <p>ไลน์โจมตีสายฟ้าเพิ่มทำงานเฉพาะกับ Unleash ถ้าการโจมตีนี้โดนบอส จะมีค่าเท่า Particle โดนเพิ่ม แต่ข้อมูลไม่ได้บอกว่าเพิ่มกี่ครั้ง ถุงมือ Spica's Light ได้ 19.8–35.9 ล้าน และเสียไลน์นี้ไปด้วย</p>
+      </div>
+      <div class="swap">
+        <h3>ห้ามใส่ Conductor และ Shadow Archer</h3>
+        <p>Conductor มีไลน์ "Cannot apply Shock" จึงทำ Shock ไม่ได้ทั้ง Unleash และ Lightning Chain ส่วน Shadow Archer ลิงก์กับรูนร่ายสกิลไม่ได้</p>
+      </div>
+    </div>
+    <ul class="notes">
+      <li><b>กฎเดียวกับแท็บ CLA:</b> Lightning Chain ต้องอยู่ในช่องสกิลและเป็นเกรด Legendary, เปิด Seal of Critical Chance ค้างไว้ และสะสม Overheat 40 ต่อการยิงเท่ากัน</li>
+      <li><b>รูนร่ายสกิล:</b> Unleash เป็น Attack และ Strike จึงใช้ได้ทั้ง On Attack Hit และ On Hit ตารางเทียบอยู่ในแท็บ CLA</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Awakening</span>
+      <h2>ปลุกพลัง</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ระดับ</th><th>ได้อะไร</th><th>DPS รวม (Particle โดน 3 ครั้ง)</th></tr></thead>
+        <tbody>
+          <tr><td>ยังไม่ปลุก</td><td>ไม่มี</td><td class="num">34.6 ล้าน</td></tr>
+          <tr><td>Source <span class="pill top">ทำก่อน</span></td><td>ขยายดาเมจสายฟ้า 5–10%, โอกาส Shock +5–15%, Particle +5</td><td class="num">36.5 ล้าน</td></tr>
+          <tr><td>Origin</td><td>ขยายดาเมจสายฟ้า 5–10%, โอกาส Shock +5–15%, ลูกธนูเจาะ +2</td><td class="num">38.6 ล้าน</td></tr>
+          <tr><td>Verity</td><td>ขยายดาเมจสายฟ้า 5–10%, โอกาส Shock +5–15%, ลูกธนูกระโดด +2</td><td class="num">40.9 ล้าน</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>DPS ในตารางนับสะสมทีละระดับ และยังไม่นับ Particle +5 Source จึงน่าจะได้มากกว่าตัวเลขนี้ถ้า Particle ที่เพิ่มโดนบอส (อนุมาน)</li>
+      <li>การปลุก Lightning Chain เหมือนแท็บ CLA</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Test in game</span>
+      <h2>ต้องลองในเกม</h2>
+    </div>
+    <ol class="notes">
+      <li><b>Particle โดนบอสกี่ครั้งต่อลูก:</b> ยิงบอสหรือหุ่นที่ไม่มีมอนตัวอื่นอยู่ใกล้ แล้วนับตัวเลขดาเมจที่ใหญ่ราวครึ่งหนึ่งของลูกธนู ในการจำลองลูกธนูเฉลี่ย 2.24 ล้านต่อครั้ง และ Particle 1.15 ล้านต่อครั้ง ถ้าเฉลี่ยได้ 2 ครั้งขึ้นไปต่อลูก Unleash จะแรงกว่า CLA การโจมตีเพิ่มจากถุงมือมีดาเมจเท่า Particle จึงนับรวมกันได้เลย</li>
+      <li><b>CLA โดนบอสทั้งลูกธนูและระเบิดหรือไม่:</b> ถ้าโดนแค่ระเบิด CLA รวมเหลือ 22.2 ล้าน Unleash จะแรงกว่าแม้ Particle โดนเฉลี่ยไม่ถึง 1 ครั้งต่อลูก</li>
+      <li><b>การเจาะและกระโดด:</b> รูนมีไลน์ Cannot Pierce และ Cannot Chain แต่การปลุกเขียนว่าลูกธนูเจาะ +2 และกระโดด +2 ต้องดูว่าทำงานจริงหรือไม่</li>
+    </ol>
+  </section>
+</div>
+
+<!-- ============ TAB 3: Lightning Arrow skill + rune link ============ -->
+<div class="panel" role="tabpanel" id="panel-arrow" aria-labelledby="tab-arrow" hidden>
+
+  <section>
+    <div class="overview">
+      <div class="ov">
+        <span class="el">Lightning · Attack</span>
+        <h3>Lightning Arrow</h3>
+        <span class="th guess">ศรสายฟ้า</span>
+        <span class="big">10.1 ล้าน<small>ต่อลูก ต่อวินาที</small></span>
+        <p>ยิง 5 ครั้งต่อวินาที (ชนเพดาน) คริ 100% ปลุก Origin แล้วลูกธนู 7 ลูกโดนเป้าเดิมซ้ำได้ ลูกที่โดนซ้ำดาเมจลด 8%</p>
+      </div>
+      <div class="ov">
+        <span class="el">Lightning · Spell</span>
+        <h3>Lightning Chain</h3>
+        <span class="th guess">โซ่สายฟ้า</span>
+        <span class="big">10.2 ล้าน<small>ต่อวินาที</small></span>
+        <p>ชุดเดียวกับแท็บ CLA ครั้งละ 2.04 ล้าน ร่ายให้เอง 1 ครั้งต่อการยิง 1 ครั้ง ไม่ว่าจะโดนกี่ลูก</p>
+      </div>
+      <div class="ov total">
+        <span class="el">Boss · Total</span>
+        <h3>รวมตีบอส</h3>
+        <span class="big">20.4–76.3 ล้าน<small>ต่อวินาที</small></span>
+        <p>ค่าต่ำคือธนูโดนบอส 1 ลูก ค่าสูงคือโดนครบ 7 ลูก ยังไม่นับสแตก Lightning Energy และยังไม่ได้วัดในเกมว่าโดนจริงกี่ลูก</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Versus CLA and Unleash</span>
+      <h2>เทียบกับ CLA และ Unleash</h2>
+    </div>
+    <p>ตีบอสตัวเดียว Lightning Arrow คำนวณได้แรงสุดเมื่อธนูโดนตั้งแต่ 3 ลูกต่อการยิง แต่ถ้าโดนลูกเดียวจะอ่อนสุด ส่วนการฟาร์มยังคำนวณตรงๆ ไม่ได้ รูนลิงก์เหมือนแท็บ Unleash ไอเทมและชุด Lightning Chain ใช้ร่วมกันทั้งสามบิลด์</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ตัวยิง · นับอะไร</th><th>DPS รวมตีบอส</th><th>เทียบกับ CLA ลูกธนู + ระเบิด</th></tr></thead>
+        <tbody>
+          <tr><td>Lightning Arrow · โดน 1 ลูก</td><td class="num">20.4 ล้าน</td><td class="num worse">−35%</td></tr>
+          <tr><td>Lightning Arrow · โดน 3 ลูก</td><td class="num">39.0 ล้าน</td><td class="num best">+24%</td></tr>
+          <tr><td>Lightning Arrow · โดน 5 ลูก</td><td class="num">57.7 ล้าน</td><td class="num best">+83%</td></tr>
+          <tr><td>Lightning Arrow · โดนครบ 7 ลูก</td><td class="num">76.3 ล้าน</td><td class="num best">+143%</td></tr>
+          <tr><td>CLA · ลูกธนู + ระเบิด</td><td class="num">31.5 ล้าน</td><td>ค่าที่ใช้เทียบ</td></tr>
+          <tr><td>CLA · ระเบิดอย่างเดียว<small>ตัวเลขในแท็บ CLA</small></td><td class="num">22.2 ล้าน</td><td class="num">−29%</td></tr>
+          <tr><td>Unleash · ลูกธนูอย่างเดียว</td><td class="num">21.4 ล้าน</td><td class="num">−32%</td></tr>
+          <tr><td>Unleash · Particle โดน 3 ครั้ง</td><td class="num">38.6 ล้าน</td><td class="num">+23%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">ยืนในระยะ 850 บอสติด Shock ตลอด รวม Lightning Chain 10.2 ล้าน ปลุก Lightning Arrow ระดับ Origin อย่างเดียว ใช้ Mana Storm เกรด Legendary และยังไม่นับสแตก ตัวจำลองคิดดาเมจต่อลูก ส่วนการโดนซ้ำคำนวณเอง: ลูกแรกเต็ม ลูกต่อไป ×0.92 จุดเท่ากับ CLA อยู่ที่ราว 2.2 ลูกต่อการยิง</p>
+    <ul class="notes">
+      <li><b>ทำไมนับ CLA และ Unleash ลูกเดียว:</b> สองสกิลนี้ไม่มีไลน์ "Projectile Repeat DMG enabled" แบบ Origin ของ Lightning Arrow จึงอนุมานว่าลูกชุดเดียวกันโดนเป้าเดิมซ้ำไม่ได้ ถ้าระเบิดทั้ง 3 ลูกของ CLA โดนบอสได้จริง CLA จะเป็น 55.5 ล้าน</li>
+      <li><b>ต่างจากหน้า <a href="bow-crit-builds.html">บิลด์ธนูสายคริ</a>:</b> ตัวเลข 8.3 ล้านต่อลูกในหน้านั้นไม่นับการโดนซ้ำ และใช้ไอเทมกับค่าตั้งต้นต่างกัน</li>
+    </ul>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>CLA</th><th>Unleash</th><th>Lightning Arrow</th></tr></thead>
+        <tbody>
+          <tr><td>ลูกธนูต่อการยิง</td><td class="num">3</td><td class="num">3</td><td class="best">7 (สแตกเพิ่มได้ถึง 13)</td></tr>
+          <tr><td>โดนเป้าเดิมซ้ำ</td><td>ไม่มีไลน์นี้</td><td>ไม่มีไลน์นี้</td><td class="best">ได้ ลูกซ้ำดาเมจลด 5–10%</td></tr>
+          <tr><td>การเจาะ</td><td class="best">เจาะทุกตัว</td><td>ไม่เจาะ (ปลุก Origin +2)</td><td>ไม่เจาะ</td></tr>
+          <tr><td>ระเบิด</td><td class="best">รัศมี 320 ใส่ Area Effect เพิ่มได้</td><td>Particle รัศมี 150</td><td>ไม่มี</td></tr>
+          <tr><td>ความเร็วลูกธนู</td><td class="num best">4500</td><td class="num">3000</td><td class="num">3000</td></tr>
+          <tr><td>โอกาส Shock ของตัวยิงเอง</td><td>ถุงมือ 8–13%</td><td class="best">ราว 51% (รวมปลุกพลังและถุงมือ)</td><td>ราว 21% (รวมถุงมือ)</td></tr>
+          <tr><td>บอสไม่ติด Shock เลย</td><td>24.9 ล้าน (−21%)</td><td>15.5–29.8 ล้าน (−23 ถึง −28%)</td><td>15.0–63.7 ล้าน (−17 ถึง −26%)</td></tr>
+          <tr><td>ต่อมอน 1 ตัว ไม่นับการโดนซ้ำและ Lightning Chain</td><td class="num best">21.2 ล้าน</td><td class="num">11.2 ล้าน</td><td class="num">10.1 ล้าน</td></tr>
+          <tr><td>ตัวคูณคริ</td><td class="num best">×7.04</td><td class="num">×6.04</td><td class="num">×6.04</td></tr>
+          <tr><td>คริแบบตัวเลขที่ต้องมี</td><td>80 (CLA เอง 40 แต่ Lightning Chain ต้อง 80)</td><td>80 (มอน Lv170 ต้อง 100)</td><td>80 (มอน Lv170 ต้อง 100)</td></tr>
+          <tr><td>มานาต่อวินาที</td><td class="num best">ราว 300</td><td class="num">ราว 350–400</td><td class="num">ราว 340–400</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>ทำงานยังไง</h2>
+    </div>
+    <ol class="flow">
+      <li><b>Lightning Arrow ยิงโดน</b>ยิง 7 ลูก (ฐาน 3, Legendary +2, Origin +2) ไม่เจาะ แต่โดนเป้าเดิมซ้ำได้ และมุมยิงแคบลง ลูกจึงรวมไปที่เป้าเดียวมากขึ้น</li>
+      <li><b>Spell Activation on Attack Hit</b>ร่าย Lightning Chain 1 ครั้งต่อการยิง 1 ครั้ง ไม่ว่าจะโดนกี่ลูก และ Lightning Chain ดาเมจลดราว 31%</li>
+      <li><b>Lightning Energy</b>โอกาส 25% ต่อครั้งที่โดน แต่ละสแตกขยายดาเมจ 4% และความเร็วโจมตี +4.2% ครบทุก 3 สแตกได้ลูก +2 (สูงสุด +6)</li>
+      <li><b>Shock</b>บอสติด Shock แล้ว Lightning Arrow ได้ขยายดาเมจ 15% ส่วน Lightning Chain ได้ขยายดาเมจ 30% และคริดาเมจ Spell +50%</li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Lightning Energy</span>
+      <h2>สแตกกับจำนวนลูกที่โดน</h2>
+    </div>
+    <p class="dim">ตัวจำลองไม่นับสแตก ตารางนี้จึงคำนวณเองจากค่าในชีท S12 ตั้งแต่ 4 สแตกขึ้นไป รูนลิงก์ Extract Lightning Energy แรงกว่า Mana Storm</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>รูนลิงก์ · สแตก</th><th>ลูกทั้งหมด</th><th>โดน 1 ลูก</th><th>โดน 3 ลูก</th><th>โดน 7 ลูก</th><th>โดนครบ</th></tr></thead>
+        <tbody>
+          <tr><td>Mana Storm · 0 สแตก</td><td class="num">7</td><td class="num">20.4 ล้าน</td><td class="num">39.0 ล้าน</td><td class="num">76.3 ล้าน</td><td class="num">76.3 ล้าน</td></tr>
+          <tr><td>Mana Storm · 3 สแตก</td><td class="num">9</td><td class="num">21.6 ล้าน</td><td class="num">42.5 ล้าน</td><td class="num">84.3 ล้าน</td><td class="num">105.2 ล้าน</td></tr>
+          <tr><td>Mana Storm · 6 สแตก</td><td class="num">11</td><td class="num">22.8 ล้าน</td><td class="num">45.9 ล้าน</td><td class="num">92.2 ล้าน</td><td class="num">138.5 ล้าน</td></tr>
+          <tr><td>Mana Storm · 9 สแตก</td><td class="num">13</td><td class="num">24.0 ล้าน</td><td class="num">49.4 ล้าน</td><td class="num">100.1 ล้าน</td><td class="num">176.2 ล้าน</td></tr>
+          <tr><td>Extract · 0 สแตก</td><td class="num">7</td><td class="num worse">18.1 ล้าน</td><td class="num worse">32.6 ล้าน</td><td class="num worse">61.6 ล้าน</td><td class="num worse">61.6 ล้าน</td></tr>
+          <tr><td>Extract · 3 สแตก</td><td class="num">9</td><td class="num worse">21.3 ล้าน</td><td class="num worse">41.7 ล้าน</td><td class="num worse">82.4 ล้าน</td><td class="num worse">102.8 ล้าน</td></tr>
+          <tr><td>Extract · 6 สแตก</td><td class="num">11</td><td class="num best">25.3 ล้าน</td><td class="num best">52.9 ล้าน</td><td class="num best">108.2 ล้าน</td><td class="num best">163.6 ล้าน</td></tr>
+          <tr><td>Extract · 9 สแตก</td><td class="num">13</td><td class="num best">30.1 ล้าน</td><td class="num best">66.6 ล้าน</td><td class="num best">139.6 ล้าน</td><td class="num best">249.1 ล้าน</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li><b>ยังไม่รู้ว่าสแตกสูงสุดกี่สแตก:</b> ข้อมูลไม่ได้ระบุ แต่ไลน์ "ลูก +2 ต่อ 3 สแตก สูงสุด +6" แปลว่าน่าจะถึง 9 ได้ (อนุมาน) รูนยังมีไลน์ลดผลเสียของ Lightning Energy 50% แต่ข้อมูลไม่ได้บอกว่าผลเสียคืออะไร</li>
+      <li><b>สีเขียวและแดงในแถว Extract:</b> เทียบกับแถว Mana Storm ที่จำนวนสแตกเท่ากัน</li>
+      <li><b>Extract ลิงก์กับสกิลอื่นได้ด้วย:</b> ที่ 9 สแตก CLA ได้ 41.5 ล้าน (ลูกธนู + ระเบิด ใส่แทน Element DMG Amplification) และ Unleash ได้ 26.0–50.2 ล้าน (ใส่แทน Mana Storm) แต่สองสกิลนี้ได้สแตกจากรูนนี้ทางเดียว สแตกจึงน่าจะขึ้นช้ากว่า (อนุมาน)</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Distance</span>
+      <h2>ระยะยืน</h2>
+    </div>
+    <p class="dim">Lightning Chain ยังมีระยะร่าย 850 เท่าเดิม ลูกธนูที่ยิงเป็นมุมจะกระจายออกเมื่อยิงไกล ยืนใกล้จึงน่าจะโดนบอสหลายลูกกว่า (อนุมาน)</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ระยะจากเป้าหมาย</th><th>ชุดในแท็บนี้</th><th>เปลี่ยนเป็น Precise Shot</th><th>CLA ลูกธนู + ระเบิด</th></tr></thead>
+        <tbody>
+          <tr><td>ใกล้กว่า 600</td><td class="num">20.4–76.3 ล้าน</td><td class="num">18.6–64.7 ล้าน</td><td class="num">31.5 ล้าน</td></tr>
+          <tr><td>600–850</td><td class="num">20.4–76.3 ล้าน</td><td class="num">23.6–97.5 ล้าน</td><td class="num">31.5 ล้าน</td></tr>
+          <tr><td>ไกลกว่า 850</td><td class="num">10.1–66.1 ล้าน</td><td class="num">13.4–87.2 ล้าน</td><td class="num">18.8–21.2 ล้าน</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li><b>อ่านค่าเป็นช่วง:</b> ช่องของ Lightning Arrow ค่าต่ำคือโดน 1 ลูก ค่าสูงคือโดนครบ 7 ลูก บอสติด Shock ไม่นับสแตก ช่อง CLA แถวสุดท้าย ค่าต่ำคือไม่ติด Shock ค่าสูงคือติดตลอด ถ้า Lightning Arrow ยืนไกลกว่า 850 และบอสไม่ติด Shock เลย จะเหลือ 8.8–57.5 ล้าน</li>
+      <li><b>Close Range Shot</b> ใส่แทน Element DMG Amplification ได้ 19.9–73.3 ล้านที่ระยะ 600, 21.2–81.9 ล้านที่ระยะ 400 และ 22.5–90.4 ล้านที่ระยะ 200 (บวกผล Close Range Shot เอง)</li>
+      <li><b>Precise Shot</b> ใส่แทนตัวเดียวกัน ตัวเลขตั้งแต่ระยะ 600 ขึ้นไปนับ 6 สแตกเอง ถ้าไม่นับสแตก ช่วง 600–850 ได้ 20.3–76.2 ล้าน</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Rune board</span>
+      <h2>กระดานรูน</h2>
+    </div>
+    <div class="board-scroll">
+      <svg id="board-arrow" viewBox="-168 -162 497 416" role="img" aria-label="แผนผังกระดานรูน: Lightning Arrow ซ้ายบน Lightning Chain ขวาล่าง Spell Activation on Attack Hit อยู่ระหว่างสองสกิลโดยลูกศรหักมุมลงขวา และ Additional Lightning DMG อยู่ช่องล่างที่ติดทั้งสองสกิล"></svg>
+    </div>
+    <p class="caption">วางแบบเดียวกับแท็บ CLA ใช้รูนลิงก์ 10 ตัว และ Additional Lightning DMG เป็นตัวที่ใช้ร่วมกัน (เส้นขอบหนา) สีของรูนลิงก์ต้องตรงกับสีช่องบนรูนสกิลของคุณ ตำแหน่งในแผนผังเป็นแค่ตัวอย่าง ชื่อไทยของทุกรูนอยู่ท้ายแท็บ CLA</p>
+
+    <div class="pair">
+      <div>
+        <h3>รูนลิงก์ของ Lightning Arrow</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+            <tbody>
+              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ตัวร่าย</span><span class="th">คาถาทำงานเมื่อโจมตีโดนเป้า</span></td><td>ร่าย Lightning Chain เมื่อ Lightning Arrow ยิงโดน ค่ามานาของ Lightning Arrow +15%</td></tr>
+              <tr><td><span class="dot red"></span>Attack DMG Increase<span class="th">เพิ่มความเสียหายการโจมตี</span></td><td>ดาเมจ +249% เมื่อใช้ Attack (Legendary +100%)</td></tr>
+              <tr><td><span class="dot blue"></span>Additional Lightning DMG <span class="pill trig">ใช้ร่วม</span><span class="th guess">ความเสียหายสายฟ้าเพิ่มเติม</span></td><td>ดาเมจสายฟ้า +10–461 และ +83.2% รูนเดียวกับฝั่ง Lightning Chain</td></tr>
+              <tr><td><span class="dot green"></span>Quick Attack<span class="th guess">โจมตีเร็ว</span></td><td>ความเร็วโจมตี +44.5% ชนเพดาน 5 ครั้งต่อวินาที ถ้าตัดออกเหลือ 3.3 ครั้ง (9 สแตกได้ 4.3 ครั้ง)</td></tr>
+              <tr><td><span class="dot blue"></span>Element DMG Amplification<span class="th">ขยายความเสียหายธาตุ</span></td><td>ขยายดาเมจธาตุ 19.3% (Legendary +5% และดาเมจธาตุ +40%)</td></tr>
+              <tr><td><span class="dot blue"></span>Mana Storm <span class="pill cond">ใช้มานามาก</span><span class="th">มรสุมมนตรา</span></td><td>ขยายดาเมจ Strike 24.2% (Legendary +8%) ค่ามานา +30% และ +8</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3>รูนลิงก์ของ Lightning Chain</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+            <tbody>
+              <tr><td><span class="dot red"></span>Spell Activation on Attack Hit <span class="pill trig">ตัวร่าย</span><span class="th">คาถาทำงานเมื่อโจมตีโดนเป้า</span></td><td>รูนเดียวกับฝั่ง Lightning Arrow ลดดาเมจ Lightning Chain 26.9% และ 5% (เกรด Legendary) ลดค่ามานา 48%</td></tr>
+              <tr><td><span class="dot blue"></span>Spell DMG Increase<span class="th">เพิ่มความเสียหายของคาถา</span></td><td>ดาเมจ +249% เมื่อใช้ Spell (Legendary +200%)</td></tr>
+              <tr><td><span class="dot blue"></span>Additional Lightning DMG <span class="pill trig">ใช้ร่วม</span><span class="th guess">ความเสียหายสายฟ้าเพิ่มเติม</span></td><td>รูนเดียวกับฝั่ง Lightning Arrow</td></tr>
+              <tr><td><span class="dot blue"></span>Element DMG Amplification<span class="th">ขยายความเสียหายธาตุ</span></td><td>ขยายดาเมจธาตุ 19.3%</td></tr>
+              <tr><td><span class="dot blue"></span>Element Master<span class="th">ผู้ปกครองธาตุ</span></td><td>เจาะธาตุ +46.8% (Legendary +20%) และดาเมจธาตุ +98.8%</td></tr>
+              <tr><td><span class="dot blue"></span>Electric Shock<span class="th guess">ไฟฟ้าช็อต</span></td><td>อัตราคริ +171.6% และคริดาเมจ +59% ใส่ศัตรูติด Shock และทำให้ศัตรูรับดาเมจสายฟ้าเพิ่ม 1.5% ต่อสแตก (3 สแตก)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="swaps">
+      <div class="swap">
+        <h3>สแตกถึง 4 ขึ้นไป ใช้ Extract แทน Mana Storm</h3>
+        <p>Extract Lightning Energy ให้ดาเมจสายฟ้า +50% และขยายดาเมจสายฟ้า 4% ต่อสแตก (Legendary ดาเมจสายฟ้า +50%) และเพิ่มโอกาสได้สแตก 23.2% ต่อครั้งที่โดน ดรอปหรือซื้อจากร้านค้าได้ สีน้ำเงินเหมือน Mana Storm และลดมานาเหลือราว 300 ต่อวินาที ถ้าสแตกต่ำกว่า 4 Mana Storm แรงกว่า</p>
+      </div>
+      <div class="swap">
+        <h3>Multishot คุ้มเมื่อโดนเกิน 8 ลูก</h3>
+        <p>ใส่แทน Element DMG Amplification ลูกธนูเป็น 11 ลูก แต่ดาเมจต่อลูกลดจาก 10.1 เหลือ 8.6 ล้าน โดน 7 ลูกได้ 65.9 ล้าน และโดนครบ 11 ลูกได้ 97.4 ล้าน (ไม่นับสแตก)</p>
+      </div>
+      <div class="swap">
+        <h3>มานาไม่พอ ใช้ Element Master แทน Mana Storm</h3>
+        <p>ชุดหลักใช้มานาราว 46–59 ต่อการยิง รวม Lightning Chain ราว 340–400 ต่อวินาที เปลี่ยนเป็น Element Master แล้วเหลือราว 290 ดาเมจรวม 19.6–71.4 ล้าน ตัวจำลองไม่นับค่ามานา +8 ของ Mana Storm จึงคำนวณเอง ถ้าใช้ Mana Storm เกรด Rare ดาเมจรวมก็ได้ 19.6–71.4 ล้านเช่นกัน</p>
+      </div>
+      <div class="swap">
+        <h3>ไม่ต้องใส่ Find Weakness</h3>
+        <p>แม้คริแบบตัวเลขยังน้อย ใส่แล้วดาเมจก็ลดลง เช่น คริแบบตัวเลข 40 มอน Lv150 ได้ลูกละ 7.64 ล้าน (คริ 71%) ใส่แทน Element DMG Amplification ได้คริ 93% แต่ดาเมจเหลือ 7.36 ล้าน ตารางค่าคริอยู่ในแท็บ Charm</p>
+      </div>
+      <div class="swap">
+        <h3>ชุดฟาร์ม</h3>
+        <p>ใส่ Multishot เพิ่มจำนวนลูกตามหัวข้อด้านบน ปลุก Source ได้ลูกธนูกระโดด +1 แต่ดาเมจโปรเจกไทล์ลด 15–20% ส่วน Origin ทำให้มุมยิงแคบลง จึงอาจกวาดมอนได้แคบกว่าเดิม (อนุมาน) ตัวเลขฟาร์มของแท็บนี้ยังเทียบกับ CLA ตรงๆ ไม่ได้ เพราะขึ้นกับจำนวนมอนที่โดน</p>
+      </div>
+      <div class="swap">
+        <h3>รูนที่ใส่ไม่ได้หรือห้ามใส่</h3>
+        <p>Lightning Arrow ไม่มีแท็ก Area of Effect จึงลิงก์ Concentrated Area DMG และ Area Effect ไม่ได้ และลิงก์ Chain ไม่ได้ Conductor มีไลน์ "Cannot apply Shock" จึงทำ Shock ไม่ได้ ส่วน Shadow Archer ลิงก์กับรูนร่ายสกิลไม่ได้</p>
+      </div>
+    </div>
+    <ul class="notes">
+      <li><b>กฎเดียวกับแท็บ CLA:</b> Lightning Chain ต้องอยู่ในช่องสกิลและเป็นเกรด Legendary, เปิด Seal of Critical Chance ค้างไว้ และสะสม Overheat 40 ต่อการยิงเท่ากัน</li>
+      <li><b>รูนร่ายสกิล:</b> Lightning Arrow เป็น Attack และ Strike จึงใช้ได้ทั้ง On Attack Hit และ On Hit ตารางเทียบอยู่ในแท็บ CLA</li>
+      <li><b>แหวน:</b> ใช้ Transcendent Leo's Flow ตามแท็บ Item อย่าใช้ Leo's Flow ตัวธรรมดา เพราะมีไลน์ล็อก Lightning Energy สูงสุดที่ 5</li>
+      <li><b>สร้อยที่น่าลอง:</b> Ultimate Resonance of All Colors ถ้าสุ่มได้ไลน์ดาเมจสายฟ้าเพิ่ม 8–11% ต่อสแตก (โอกาส 20%) ที่ 9 สแตกจะได้ราว 18.4 ล้านต่อลูก เทียบกับ Hira's Charm 13.8 ล้าน (คำนวณเอง)</li>
+      <li><b>Lightning Chain ใส่ Extract ได้ด้วย:</b> ถ้าสแตกใช้ร่วมกันระหว่างสกิล (ยังไม่ได้ยืนยัน) ใส่แทน Element Master แล้ว Lightning Chain จะได้ 15.9 ล้านต่อวินาทีที่ 9 สแตก จาก 10.2 ล้าน แต่ที่ 0 สแตกเหลือ 8.6 ล้าน</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Awakening</span>
+      <h2>ปลุกพลัง</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ระดับ</th><th>ได้อะไร</th><th>ผล</th></tr></thead>
+        <tbody>
+          <tr><td>Origin <span class="pill top">ทำก่อน</span></td><td>โดนเป้าเดิมซ้ำได้, มุมยิง −70, ลูกธนู +2, ลูกที่โดนซ้ำดาเมจลด 5–10%</td><td>จากนับได้ลูกเดียว 20.4 ล้าน เป็นสูงสุด 76.3 ล้าน</td></tr>
+          <tr><td>Source <span class="pill cond">ฟาร์ม</span></td><td>ลูกธนูกระโดด +1 แต่ดาเมจโปรเจกไทล์ลด 15–20%</td><td>ตีบอสเสียดาเมจ โดนครบ 7 ลูกเหลือ 64.4 ล้าน</td></tr>
+          <tr><td>Verity</td><td>ได้ Lightning Barrier 10 วินาทีเมื่อใช้สกิล, ถูกโจมตีระหว่างนั้นมีโอกาส 60% ได้สแตก, รับดาเมจลด 1.5–4% ต่อสแตก (สูงสุด 25%)</td><td>ไม่เพิ่มดาเมจโดยตรง ชุดเกราะ Numbing Armor มีไลน์ Barrier Disabled จึงอาจไม่ทำงาน</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>ยังไม่รู้ว่าต้องปลุก Source ก่อน Origin หรือไม่ ถ้าต้องปลุก ตัวเลขชุดหลักที่โดนครบ 7 ลูกจะเป็น 64.4 ล้าน</li>
+      <li>การปลุก Lightning Chain เหมือนแท็บ CLA</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Test in game</span>
+      <h2>ต้องลองในเกม</h2>
+    </div>
+    <ol class="notes">
+      <li><b>ธนูโดนบอสกี่ลูกต่อการยิง:</b> ยืนใกล้บอสหรือหุ่นที่ไม่มีมอนตัวอื่น แล้วนับตัวเลขดาเมจจากการยิง 1 ครั้ง ลองทั้งระยะใกล้และระยะ 600 ขึ้นไป ถ้าโดนตั้งแต่ 3 ลูกขึ้นไป Lightning Arrow จะแรงกว่า CLA ลูกธนู + ระเบิด</li>
+      <li><b>สแตก Lightning Energy:</b> ดูไอคอนบัฟว่าสูงสุดกี่สแตก ค้างนานแค่ไหน และมีผลเสียอะไร ถ้าสแตกค้างที่ 4 ขึ้นไปได้ ให้เปลี่ยน Mana Storm เป็น Extract Lightning Energy</li>
+      <li><b>ค่าลดดาเมจเมื่อโดนซ้ำ:</b> ตารางคิดว่าลูกซ้ำทุกลูก ×0.92 ถ้าทบกันทุกลูก โดนครบ 7 ลูกจะเหลือ 66.3 ล้าน</li>
+      <li><b>ลำดับการปลุก:</b> ดูในเกมว่าปลุก Origin ได้เลยหรือต้องผ่าน Source ก่อน</li>
+    </ol>
+  </section>
+</div>
+
+<!-- ============ TAB 4: items ============ -->
 <div class="panel" role="tabpanel" id="panel-gear" aria-labelledby="tab-gear" hidden>
 
   <section>
@@ -517,13 +992,14 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       <span class="eyebrow">Gear by slot</span>
       <h2>ไอเทมแต่ละช่อง</h2>
     </div>
+    <p class="dim">ทั้งสามบิลด์ใช้ไอเทมชุดเดียวกัน</p>
     <div class="table-wrap">
       <table>
         <thead><tr><th>ช่อง</th><th>ไอเทม</th><th>ค่าที่ได้</th></tr></thead>
         <tbody>
           <tr><td>อาวุธ</td><td>Transcendent Tipan's Long Bow<small>Dex 266 · ช่วงเก็บเลเวล: Star Usurper's Bow (Lv1)</small></td><td>คริอุปกรณ์ +9, %คริอุปกรณ์ +46–57%, คริดาเมจ +52–61% และ Attack DMG +85–115% ที่ Spell Activation โอนให้ Lightning Chain ไลน์ของน้ำแข็งไม่ได้ใช้</td></tr>
           <tr><td>ซองธนู</td><td>Transcendent Miraseti's Wave<small>Dex 270</small></td><td>ดาเมจ +70%, ความเร็วโจมตี 12–16%, อัตราคริ Attack +40–70% (โอนให้ Lightning Chain ด้วย), มานา +3–4 ต่อครั้งที่โดน</td></tr>
-          <tr><td>ถุงมือ <span class="pill top">เปลี่ยนใหม่</span></td><td>Transcendent Miraseti's Miracle<small>Dex 270 · แทน Spica's Light</small></td><td>คริดาเมจ +50–75%, ขยายดาเมจสายฟ้า 10–12%, ความเร็วโจมตี 8–10%, โอกาส Shock +8–13%</td></tr>
+          <tr><td>ถุงมือ <span class="pill top">เปลี่ยนใหม่</span></td><td>Transcendent Miraseti's Miracle<small>Dex 270 · แทน Spica's Light</small></td><td>คริดาเมจ +50–75%, ขยายดาเมจสายฟ้า 10–12%, ความเร็วโจมตี 8–10%, โอกาส Shock +8–13% บิลด์ Unleash ได้โจมตีสายฟ้าเพิ่ม ดาเมจเท่า Lightning Particle ด้วย</td></tr>
           <tr><td>สร้อย</td><td>Transcendent Hira's Charm</td><td>คริดาเมจ +29–34% และ +80–100%, ขยายดาเมจ 8–13%, ความเร็วโจมตี +34–40%</td></tr>
           <tr><td>แหวน 1</td><td>Transcendent Leo's Flow</td><td>อัตราคริ +44–53%, คริดาเมจ +25–28%, ขยายดาเมจสายฟ้า 7–9%, เจาะสายฟ้า +9.8–12.6%</td></tr>
           <tr><td>แหวน 2</td><td>Ultimate Ring of Amplified Power<small>หรือ Ultimate Approaching Omen</small></td><td>โอกาสคริ +25%, คริดาเมจ +110% และบัฟขยายดาเมจ</td></tr>
@@ -535,7 +1011,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       </table>
     </div>
     <ul class="notes">
-      <li><b>ทำไมเปลี่ยนถุงมือ:</b> Miraseti's Miracle ได้ DPS รวมมากกว่า Spica's Light ราว 9% ใช้ Dex 270 เท่ากับซองธนูจึงไม่ต้องลง Int 223 และโอกาส Shock ของถุงมือช่วยให้บอสติด Shock บ่อยขึ้น ไลน์ "ยิงสายฟ้าเพิ่ม" ของถุงมือใช้กับสกิล Unleash Lightning Shot เท่านั้น ไม่ใช่ CLA</li>
+      <li><b>ทำไมเปลี่ยนถุงมือ:</b> Miraseti's Miracle ได้ DPS รวมมากกว่า Spica's Light ราว 9% ใช้ Dex 270 เท่ากับซองธนูจึงไม่ต้องลง Int 223 และโอกาส Shock ของถุงมือช่วยให้บอสติด Shock บ่อยขึ้น ไลน์ "ยิงสายฟ้าเพิ่ม" ของถุงมือใช้กับ Unleash Lightning Shot เท่านั้น ไม่ใช่ CLA และตัวจำลองไม่นับไลน์นี้</li>
       <li><b>สถานะที่ต้องลง:</b> Dex 270 (ซองธนู ถุงมือ และธนู 266) กับ Str 250 (ชุดเกราะ ซึ่งครอบคลุม Str 228 ของรองเท้าด้วย) ไม่ต้องลง Int</li>
     </ul>
   </section>
@@ -547,20 +1023,21 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
     </div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>เปลี่ยนเป็น</th><th>DPS รวมตีบอส</th><th>หมายเหตุ</th></tr></thead>
+        <thead><tr><th>เปลี่ยนเป็น</th><th>CLA</th><th>Unleash</th><th>Lightning Arrow</th><th>หมายเหตุ</th></tr></thead>
         <tbody>
-          <tr><td>ชุดในตารางด้านบน</td><td class="num">22.2 ล้าน</td><td>CLA 12.0 + Lightning Chain 10.2</td></tr>
-          <tr><td>ซองธนู Ultimate Master of Trajectory</td><td class="num best">23.0 ล้าน</td><td>ความเร็วโจมตีลดเหลือ 4.5 ครั้งต่อวินาที แต่ดาเมจ Attack and Spell แบบตัวเลขสูง ถ้าสุ่มได้ไลน์ "ขยายดาเมจ 3–4.5% ต่อจำนวนกระโดด" (โอกาส 25%) Lightning Chain ที่กระโดดได้ 11 ครั้งจะได้ขยายดาเมจราว 33–50% ถ้าไลน์นี้ใช้กับสกิลที่ถูกร่ายด้วย ตัวจำลองไม่นับไลน์นี้</td></tr>
-          <tr><td>ถุงมือ Transcendent Spica's Light (ชุดเดิม)</td><td class="num worse">20.4 ล้าน</td><td>ต้องลง Int 223 เพิ่ม</td></tr>
-          <tr><td>แหวน 2 Ultimate Approaching Omen</td><td class="num worse">15.9 ล้าน*</td><td>*ตัวจำลองไม่นับสแตก Reaper's Harvest (ขยายดาเมจ 0.9% ต่อสแตก สูงสุด 100 สแตก) ของจริงอาจสูงกว่านี้มาก ต้องลองในเกม</td></tr>
+          <tr><td>ชุดในตารางด้านบน</td><td class="num">22.2 ล้าน</td><td class="num">21.4–38.6 ล้าน</td><td class="num">20.4–76.3 ล้าน</td><td>CLA 12.0 + Lightning Chain 10.2</td></tr>
+          <tr><td>ซองธนู Ultimate Master of Trajectory</td><td class="num best">23.0 ล้าน</td><td class="num best">22.3–40.1 ล้าน</td><td class="num best">21.0–78.1 ล้าน</td><td>ความเร็วโจมตีลดเหลือ 4.5 ครั้งต่อวินาที แต่ดาเมจ Attack and Spell แบบตัวเลขสูง Unleash และ Lightning Arrow คริเหลือ 95% ที่คริแบบตัวเลข 80 ถ้าสุ่มได้ไลน์ "ขยายดาเมจ 3–4.5% ต่อจำนวนกระโดด" (โอกาส 25%) Lightning Chain ที่กระโดดได้ 11 ครั้งจะได้ขยายดาเมจราว 33–50% ถ้าไลน์นี้ใช้กับสกิลที่ถูกร่ายด้วย ตัวจำลองไม่นับไลน์นี้</td></tr>
+          <tr><td>ถุงมือ Transcendent Spica's Light (ชุดเดิม)</td><td class="num worse">20.4 ล้าน</td><td class="num worse">19.8–35.9 ล้าน</td><td class="num worse">18.8–71.2 ล้าน</td><td>ต้องลง Int 223 เพิ่ม Unleash เสียไลน์โจมตีสายฟ้าเพิ่มด้วย</td></tr>
+          <tr><td>แหวน 2 Ultimate Approaching Omen</td><td class="num worse">15.9 ล้าน*</td><td class="num worse">14.2–24.6 ล้าน*</td><td class="num worse">13.3–46.4 ล้าน*</td><td>*ตัวจำลองไม่นับสแตก Reaper's Harvest (ขยายดาเมจ 0.9% ต่อสแตก สูงสุด 100 สแตก) ของจริงอาจสูงกว่านี้มาก ต้องลองในเกม</td></tr>
+          <tr><td>ธนู Star Usurper's Bow</td><td class="num best">22.7 ล้าน</td><td class="num">21.8–38.1 ล้าน</td><td class="num best">20.8–92.6 ล้าน</td><td>ลูกธนู +2 ทำให้ Lightning Arrow มี 9 ลูก ตัวจำลองไม่อ่านไลน์ขยายดาเมจ 3% ต่อเลเวลตัวละคร (สูงสุด 300%) ถ้าทำงานจริงจะแรงกว่านี้มาก ต้องลองในเกม</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="caption">ไอเทมช่องอื่นเหมือนตารางด้านบน ถ้ามีธนู Foresight of the Conqueror ลองเทียบกับ Tipan's ในเกม หน้า <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> ได้ DPS ×1.45 แต่ยังไม่ได้จำลองกับบิลด์นี้</p>
+    <p class="caption">ตัวเลขคือ DPS รวมตีบอส ช่อง CLA นับแค่ระเบิด ช่อง Unleash ค่าต่ำคือลูกธนูอย่างเดียว ค่าสูงคือ Particle โดน 3 ครั้งต่อลูก ช่อง Lightning Arrow ค่าต่ำคือโดน 1 ลูก ค่าสูงคือโดนครบทุกลูก ไม่นับสแตก ไอเทมช่องอื่นเหมือนตารางด้านบน ถ้ามีธนู Foresight of the Conqueror ลองเทียบกับ Tipan's ในเกม หน้า <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> ได้ DPS ×1.45 แต่ยังไม่ได้จำลองกับบิลด์นี้</p>
   </section>
 </div>
 
-<!-- ============ TAB 3: charm ============ -->
+<!-- ============ TAB 5: charm ============ -->
 <div class="panel" role="tabpanel" id="panel-charm" aria-labelledby="tab-charm" hidden>
 
   <section>
@@ -593,14 +1070,14 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
     </div>
     <p class="dim">เลือก Blessing ที่ผล 140% เพิ่มดาเมจสายฟ้า ดาเมจธาตุ หรือดาเมจทั้งหมด หน้านี้ยังไม่มีรายการผลของ Blessing ทั้ง 12 ตัว ให้ดูคำอธิบายในเกม แล้วหาออปชันบน Charm ตามลำดับนี้</p>
     <ol class="notes">
-      <li><b>คริแบบตัวเลข (+Critical Rate)</b> สำคัญที่สุด เพราะ Lightning Chain คริยากกว่า CLA (ดูตารางด้านล่าง)</li>
+      <li><b>คริแบบตัวเลข (+Critical Rate)</b> สำคัญที่สุด เพราะ Lightning Chain, Unleash และ Lightning Arrow คริยากกว่า CLA (ดูตารางด้านล่าง)</li>
       <li><b>คริดาเมจ</b></li>
       <li><b>ดาเมจสายฟ้า ดาเมจธาตุ หรือเจาะธาตุ</b></li>
       <li><b>ดาเมจ Attack and Spell แบบตัวเลข</b> Lightning Chain ไม่ได้ดาเมจตัวเลขจากธนู ออปชันที่เป็น Attack and Spell ช่วยทั้งสองสกิล</li>
-      <li><b>มานาสูงสุด ฟื้นมานา หรือมานาต่อการโจมตี</b> บิลด์นี้ใช้มานาราว 300 ต่อวินาที</li>
+      <li><b>มานาสูงสุด ฟื้นมานา หรือมานาต่อการโจมตี</b> CLA ใช้มานาราว 300 ต่อวินาที Unleash ราว 350–400 และ Lightning Arrow ราว 340–400</li>
       <li><b>HP และค่าต้านธาตุ</b></li>
     </ol>
-    <p class="caption">ความเร็วโจมตีไม่ต้องหาเพิ่ม ชุดนี้ชนเพดาน 5 ครั้งต่อวินาทีแล้ว</p>
+    <p class="caption">ความเร็วโจมตีไม่ต้องหาเพิ่ม ทั้งสามบิลด์ชนเพดาน 5 ครั้งต่อวินาทีแล้ว</p>
   </section>
 
   <section>
@@ -610,23 +1087,25 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
     </div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>คริแบบตัวเลข</th><th>CLA มอน Lv150</th><th>CLA มอน Lv170</th><th>Lightning Chain Lv150</th><th>Lightning Chain Lv170</th></tr></thead>
+        <thead><tr><th>คริแบบตัวเลข</th><th>CLA Lv150</th><th>CLA Lv170</th><th>Unleash Lv150</th><th>Unleash Lv170</th><th>Lightning Chain Lv150</th><th>Lightning Chain Lv170</th></tr></thead>
         <tbody>
-          <tr><td>0</td><td class="num worse">66%</td><td class="num worse">63%</td><td class="num worse">42%</td><td class="num worse">41%</td></tr>
-          <tr><td>40</td><td class="num best">100%</td><td class="num best">100%</td><td class="num worse">84%</td><td class="num worse">78%</td></tr>
-          <tr><td>80 <span class="pill top">เป้า</span></td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td></tr>
+          <tr><td>0</td><td class="num worse">66%</td><td class="num worse">63%</td><td class="num worse">39%</td><td class="num worse">38%</td><td class="num worse">42%</td><td class="num worse">41%</td></tr>
+          <tr><td>40</td><td class="num best">100%</td><td class="num best">100%</td><td class="num worse">71%</td><td class="num worse">66%</td><td class="num worse">84%</td><td class="num worse">78%</td></tr>
+          <tr><td>80 <span class="pill top">เป้า</span></td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td><td class="num worse">95%</td><td class="num best">100%</td><td class="num best">100%</td></tr>
+          <tr><td>100</td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td></tr>
         </tbody>
       </table>
     </div>
     <ul class="notes">
       <li>คริแบบตัวเลข = รวมจาก Charm, Zodiac และของคราฟ ไม่รวมคริของธนู ตัวเลขในตารางใช้ชุดไอเทมในแท็บ Item และปลุก CLA ระดับ Origin แล้ว</li>
       <li>Lightning Chain คริยากกว่า เพราะไม่ได้โอกาสคริ +15%, อัตราคริ Attack +120% (เกรด Legendary) และผล Find Weakness จากการปลุก Origin ซึ่งเป็นค่าเฉพาะของรูน CLA ค่าที่โอนผ่าน Spell Activation มีแค่ค่าจากไอเทมและตัวละคร</li>
+      <li>Unleash และ Lightning Arrow ก็ไม่มีค่าคริเฉพาะของรูนเช่นกัน Lightning Arrow ได้ค่าเท่าช่อง Unleash ทุกแถว ถ้าตีมอน Lv170 ต้องมีคริแบบตัวเลข 100 และไม่คุ้มที่จะใส่ Find Weakness (ดูแท็บของแต่ละบิลด์)</li>
       <li>ถ้าคริแบบตัวเลขยังไม่ถึง 80 ใส่ Find Weakness ให้ Lightning Chain แทน Element Master ไปก่อน</li>
     </ul>
   </section>
 </div>
 
-<!-- ============ TAB 4: lacrima ============ -->
+<!-- ============ TAB 6: lacrima ============ -->
 <div class="panel" role="tabpanel" id="panel-lacrima" aria-labelledby="tab-lacrima" hidden>
 
   <section>
@@ -637,19 +1116,19 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
     <p class="dim">ลาคริมาให้ออปชันของไอเทมที่ลงทะเบียนไว้โดยไม่ต้องสวม ช่องยูนีคมีเฉพาะในลาคริมาเกรด Legendary (1–3 ช่อง ชนิดของช่องสุ่ม) และดูดซับ 100% คงที่ หาได้จากดันเจียน Guide of Illusion – Time of Confrontation</p>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>ช่องลาคริมา</th><th>ยูนีคที่ใส่</th><th>ได้อะไร</th><th>DPS รวมโดยประมาณ</th></tr></thead>
+        <thead><tr><th>ช่องลาคริมา</th><th>ยูนีคที่ใส่</th><th>ได้อะไร</th><th>CLA</th><th>Unleash</th><th>Lightning Arrow</th></tr></thead>
         <tbody>
-          <tr><td>รองเท้า <span class="pill top">ทำก่อน</span></td><td>Ultimate Silver Shadow's Footprints<small>แล้วสวม Ultimate Stra's Boots (Dex 223) บนตัว ได้ทั้งสองคู่</small></td><td>อัตราคริ +86–110%, คริดาเมจ +46–105%, ขยายดาเมจ 17–32%</td><td class="num">22.2 ล้าน*</td></tr>
-          <tr><td>อาวุธสองมือ</td><td>Ultimate Casthor's Vision<small>ขวานสองมือ ไม่ต้องใช้ธนูในช่องนี้</small></td><td>คริดาเมจ +135–180%, Maximized DMG +75–110%</td><td class="num best">27.1 ล้าน</td></tr>
-          <tr><td>อาวุธมือเดียว<small>ถ้าลาคริมามีช่องนี้แทนสองมือ</small></td><td>Ultimate Token of Trust<small>Bowgun, Dex 270</small></td><td>ขยายดาเมจ 26–35%, คริดาเมจ +130–160%</td><td class="num best">34.9 ล้าน</td></tr>
-          <tr><td>ชุดเกราะ</td><td>Ultimate Numbing Armor<small>แล้วสวมชุดคราฟที่มี HP ค่าต้านธาตุ และมานาบนตัว</small></td><td>HP +85–110%, รับดาเมจลด 18–25%</td><td>ไม่เพิ่มดาเมจ</td></tr>
+          <tr><td>รองเท้า <span class="pill top">ทำก่อน</span></td><td>Ultimate Silver Shadow's Footprints<small>แล้วสวม Ultimate Stra's Boots (Dex 223) บนตัว ได้ทั้งสองคู่</small></td><td>อัตราคริ +86–110%, คริดาเมจ +46–105%, ขยายดาเมจ 17–32%</td><td class="num">22.2 ล้าน*</td><td class="num">21.4–38.6 ล้าน*</td><td class="num">20.4–76.3 ล้าน*</td></tr>
+          <tr><td>อาวุธสองมือ</td><td>Ultimate Casthor's Vision<small>ขวานสองมือ ไม่ต้องใช้ธนูในช่องนี้</small></td><td>คริดาเมจ +135–180%, Maximized DMG +75–110%</td><td class="num best">27.1 ล้าน</td><td class="num best">26.5–48.2 ล้าน</td><td class="num best">25.2–95.8 ล้าน</td></tr>
+          <tr><td>อาวุธมือเดียว<small>ถ้าลาคริมามีช่องนี้แทนสองมือ</small></td><td>Ultimate Token of Trust<small>Bowgun, Dex 270</small></td><td>ขยายดาเมจ 26–35%, คริดาเมจ +130–160%</td><td class="num best">34.9 ล้าน</td><td class="num best">34.2–62.1 ล้าน</td><td class="num best">32.5–123.4 ล้าน</td></tr>
+          <tr><td>ชุดเกราะ</td><td>Ultimate Numbing Armor<small>แล้วสวมชุดคราฟที่มี HP ค่าต้านธาตุ และมานาบนตัว</small></td><td>HP +85–110%, รับดาเมจลด 18–25%</td><td>ไม่เพิ่มดาเมจ</td><td>ไม่เพิ่มดาเมจ</td><td>ไม่เพิ่มดาเมจ</td></tr>
         </tbody>
       </table>
     </div>
     <ul class="notes">
-      <li>DPS ในตารางนับเฉพาะออปชันของยูนีค ไม่นับค่าพื้นฐานของอาวุธหรือชุดเกราะ เพราะน่าจะไม่ส่งต่อ (อนุมาน) และนับรวมกับชุดไอเทมในแท็บ Item แถวอาวุธนับแยกกันทีละแถว</li>
+      <li>DPS รวมโดยประมาณ นับเฉพาะออปชันของยูนีค ไม่นับค่าพื้นฐานของอาวุธหรือชุดเกราะ เพราะน่าจะไม่ส่งต่อ (อนุมาน) และนับรวมกับชุดไอเทมในแท็บ Item แถวอาวุธนับแยกกันทีละแถว ช่อง CLA นับแค่ระเบิด ช่อง Unleash ค่าต่ำคือลูกธนูอย่างเดียว ค่าสูงคือ Particle โดน 3 ครั้งต่อลูก ช่อง Lightning Arrow ค่าต่ำคือโดน 1 ลูก ค่าสูงคือโดนครบ 7 ลูก ไม่นับสแตก</li>
       <li>*ตัวจำลองนับแถวรองเท้าได้เท่าเดิม เพราะไม่นับไลน์ของ Stra's Boots: ผล Sharpness (อัตราคริ +50% คริดาเมจ +25% และขยายผล +200–300%), คริดาเมจ +200–250% ใส่ Elite และ Perfect Dodge ของจริงจึงสูงกว่านี้</li>
-      <li><b>Ultimate Brilliance of Contrast</b> (ดาบสองมือ) น่าลองในช่องอาวุธสองมือ CLA มีแท็ก Shadow จึงได้ขยายดาเมจ 35% และคริดาเมจ +250% ขณะติด Shadow of Sephdar และอาจสุ่มได้ขยายดาเมจสายฟ้า 35–45% แต่ทั้งหมดเป็นผลแบบมีเงื่อนไขซึ่งอาจไม่ทำงานผ่านลาคริมา และส่วนเรียกเงาไม่ทำงานกับสกิลที่ลิงก์รูนร่ายสกิล ยังไม่ได้จำลอง</li>
+      <li><b>Ultimate Brilliance of Contrast</b> (ดาบสองมือ) น่าลองในช่องอาวุธสองมือ ทั้งสามสกิลมีแท็ก Shadow จึงได้ขยายดาเมจ 35% และคริดาเมจ +250% ขณะติด Shadow of Sephdar และอาจสุ่มได้ขยายดาเมจสายฟ้า 35–45% แต่ทั้งหมดเป็นผลแบบมีเงื่อนไขซึ่งอาจไม่ทำงานผ่านลาคริมา และส่วนเรียกเงาไม่ทำงานกับสกิลที่ลิงก์รูนร่ายสกิล ยังไม่ได้จำลอง</li>
     </ul>
   </section>
 
@@ -695,22 +1174,23 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
 </div>
 
 <script>
-// Draw the rune board (pointy-top hexes): CLA at the origin, the trigger rune east of it, and Lightning Chain
+// Draw the rune boards (pointy-top hexes): the shooter at the origin, the trigger rune east of it, and Lightning Chain
 // south-east of the trigger (bent arrow). Both skills then touch two hexes: the trigger and one shared link rune.
+// The builds differ only in the shooter and one link hex.
 (function () {
   const NS = 'http://www.w3.org/2000/svg'
   const HEX = '50.2,-29 50.2,29 0,58 -50.2,29 -50.2,-29 0,-58'
   const DX = 107.4, HX = 53.7, HY = 93
   const LX = DX + HX, LY = HY
-  const cells = [
-    { x: 0, y: 0, cls: 'hx-skill', text: 'Cross|Lightning|Arrow', skill: true },
+  const cells = (shooter, west) => [
+    { x: 0, y: 0, cls: 'hx-skill', text: shooter, skill: true },
     { x: LX, y: LY, cls: 'hx-skill', text: 'Lightning|Chain', skill: true },
     { x: DX, y: 0, cls: 'hx-red hx-trigger', text: 'Spell Act.|on Attack|Hit', arrow: true },
     { x: HX, y: HY, cls: 'hx-blue hx-shared', text: 'Additional|Lightning DMG|(shared)' },
-    // CLA links
+    // shooter links
     { x: -HX, y: -HY, cls: 'hx-green', text: 'Quick|Attack' },
     { x: HX, y: -HY, cls: 'hx-red', text: 'Attack DMG|Increase' },
-    { x: -DX, y: 0, cls: 'hx-red', text: 'Concentrated|Area DMG' },
+    { x: -DX, y: 0, ...west },
     { x: -HX, y: HY, cls: 'hx-blue', text: 'Element|DMG Amp.' },
     // Lightning Chain links
     { x: LX + HX, y: LY - HY, cls: 'hx-blue', text: 'Spell DMG|Increase' },
@@ -718,25 +1198,30 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
     { x: LX + HX, y: LY + HY, cls: 'hx-blue', text: 'Element|Master' },
     { x: LX - HX, y: LY + HY, cls: 'hx-blue', text: 'Electric|Shock' },
   ]
-  const svg = document.getElementById('board')
   const el = (name, attrs, text) => {
     const n = document.createElementNS(NS, name)
     for (const k in attrs) n.setAttribute(k, attrs[k])
     if (text) n.textContent = text
     return n
   }
-  cells.forEach((c) => {
-    svg.appendChild(el('polygon', { points: HEX, class: 'hx ' + c.cls, transform: `translate(${c.x} ${c.y})` }))
-    const lines = c.text.split('|')
-    const lh = c.skill ? 14 : 12
-    const top = c.y - ((lines.length - 1) * lh) / 2 + 3 - (c.arrow ? 8 : 0)
-    lines.forEach((t, i) => svg.appendChild(el('text', { class: c.skill ? 'hx-skill-text' : 'hx-text', x: c.x, y: top + i * lh }, t)))
-    if (c.arrow) {
-      // bent arrow: in from CLA (west), out towards Lightning Chain (south-east)
-      svg.appendChild(el('polyline', { class: 'hx-arrow-line', points: `${c.x - 26},${c.y + 20} ${c.x},${c.y + 20} ${c.x + 9},${c.y + 35.3}` }))
-      svg.appendChild(el('polygon', { class: 'hx-arrow', points: `${c.x + 3.8},${c.y + 38.3} ${c.x + 14},${c.y + 44} ${c.x + 14.2},${c.y + 32.3}` }))
-    }
-  })
+  const draw = (id, list) => {
+    const svg = document.getElementById(id)
+    list.forEach((c) => {
+      svg.appendChild(el('polygon', { points: HEX, class: 'hx ' + c.cls, transform: `translate(${c.x} ${c.y})` }))
+      const lines = c.text.split('|')
+      const lh = c.skill ? 14 : 12
+      const top = c.y - ((lines.length - 1) * lh) / 2 + 3 - (c.arrow ? 8 : 0)
+      lines.forEach((t, i) => svg.appendChild(el('text', { class: c.skill ? 'hx-skill-text' : 'hx-text', x: c.x, y: top + i * lh }, t)))
+      if (c.arrow) {
+        // bent arrow: in from the shooter (west), out towards Lightning Chain (south-east)
+        svg.appendChild(el('polyline', { class: 'hx-arrow-line', points: `${c.x - 26},${c.y + 20} ${c.x},${c.y + 20} ${c.x + 9},${c.y + 35.3}` }))
+        svg.appendChild(el('polygon', { class: 'hx-arrow', points: `${c.x + 3.8},${c.y + 38.3} ${c.x + 14},${c.y + 44} ${c.x + 14.2},${c.y + 32.3}` }))
+      }
+    })
+  }
+  draw('board', cells('Cross|Lightning|Arrow', { cls: 'hx-red', text: 'Concentrated|Area DMG' }))
+  draw('board-unleash', cells('Unleash|Lightning|Shot', { cls: 'hx-blue', text: 'Mana|Storm' }))
+  draw('board-arrow', cells('Lightning|Arrow', { cls: 'hx-blue', text: 'Mana|Storm' }))
 })()
 
 // Tabs: click, arrow keys, #hash deep link, remembered per viewer.
@@ -765,7 +1250,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       show(next.id, true)
     })
   })
-  const fromHash = { '#build': 'tab-build', '#gear': 'tab-gear', '#charm': 'tab-charm', '#lacrima': 'tab-lacrima' }[location.hash]
+  const fromHash = { '#build': 'tab-build', '#unleash': 'tab-unleash', '#arrow': 'tab-arrow', '#gear': 'tab-gear', '#charm': 'tab-charm', '#lacrima': 'tab-lacrima' }[location.hash]
   let saved = null
   try { saved = localStorage.getItem('cla-lc-tab') } catch (e) {}
   show(fromHash || (saved && document.getElementById(saved) ? saved : 'tab-build'))

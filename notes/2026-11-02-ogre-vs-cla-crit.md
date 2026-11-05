@@ -37,7 +37,7 @@
 เมื่อมีธนู Star Usurper's Bow แล้ว และยิงหุ่นบอสแล้วเห็นว่าลูก Ogre Arrow วนกลับมาโดนซ้ำจริง ชุดนี้ตีบอสได้สูงกว่า แต่ฟาร์มอ่อนและไม่ได้ใช้คริเต็มที่เท่าชุด 2
 
 ## หน้า HTML ชุด CLA + Lightning Chain (ทำแล้ว 2 พ.ย. 2026)
-ผู้ใช้ขอใช้ **Spell Activation on Attack Hit** (ไม่ใช่ On Hit) หน้าอยู่ที่ `docs/cla-lightning-chain-build.html` มี 4 แท็บ: Skill + Rune link, Item, Charm, Lacrima
+ผู้ใช้ขอใช้ **Spell Activation on Attack Hit** (ไม่ใช่ On Hit) หน้าอยู่ที่ `docs/cla-lightning-chain-build.html` ตอนนี้มี 6 แท็บ: CLA, Unleash และ Lightning Arrow แบบ Skill + Rune link แล้วตามด้วย Item, Charm, Lacrima (3 แท็บหลังใช้ร่วมกัน) Lightning Arrow ดู `notes/2026-11-05-lightning-bow-skills.md`
 
 ผลจากตัวจำลอง (`src/lib/damage.ts`, ค่าสุ่มออปชัน 50%, คริแบบตัวเลข +80, มอน Lv150 ต้าน 40%, สมมติบอสติด Shock ตลอด):
 - **On Attack Hit (แก้ 2 พ.ย. 2026 จากภาพหน้ารูนบนเว็บฐานข้อมูลเกมที่ผู้ใช้ส่งมา):** ไม่อยู่ในชีท S12 แต่ยังหาได้ (ดรอป, ร้านค้า Act 2, 6–10, 11–12, เกรด Normal ขึ้นไป) สีแดง (Str) แท็ก Attack, Strike
@@ -61,16 +61,40 @@
 - ทางเลือก: ซองธนู Master of Trajectory 23.0, ถุงมือ Spica's Light 20.4, แหวน Approaching Omen 15.9 (ไม่นับสแตก), ชุดฟาร์ม Area Effect 19.5, CLA ไม่ปลุก Source 20.9 ล้าน
 - กระดาน: ผู้ใช้บอกว่าลูกศรของ Spell Activation หักมุมได้ (`---\`) จึงวาง Lightning Chain เยื้องลงขวาของรูนร่ายสกิล (ห่างจาก CLA 2 ช่องแบบไม่เป็นเส้นตรง) ทั้งสองสกิลติดกัน 2 ช่อง: รูนร่ายสกิลกับรูนลิงก์ที่ใช้ร่วม 1 ตัว (ใส่ Additional Lightning DMG หรือ Element DMG Amplification) รวมแล้วใช้รูนลิงก์ 10 ตัวแทน 11 ตัว DPS เท่าเดิม เพราะแต่ละสกิลยังมีลิงก์ 6 ด้าน
 - คริ: Lightning Chain ต้องมีคริแบบตัวเลข 80 ถึงจะคริ 100% (40 → 84%) เพราะไม่ได้ค่าคริเฉพาะของรูน CLA
-- Shadow Archer ใช้ไม่ได้ (ลิงก์กับรูนร่ายสกิลไม่ได้)
+- Shadow Archer ใช้ร่วมกับชุดนี้ไม่ได้ (ลิงก์กับรูนร่ายสกิลไม่ได้) ต้องเลือกอย่างใดอย่างหนึ่ง
+- **Shadow Archer แรงกว่าเพราะอะไร (ผู้ใช้ถาม 5 พ.ย. 2026):** ไลน์ของรูนให้ ×1.23 (ขยายดาเมจโปรเจกไทล์ 15% ×1.15, เจาะดาเมจ +30% ×1.04, ดาเมจโปรเจกไทล์ +31.2% ×1.03) ใกล้ Mana Storm ×1.24 ส่วนที่เหนือกว่าน่าจะเป็นธนูเงา ซึ่งตัวจำลองไม่นับ และไม่มีตัวเลขดาเมจในข้อมูลหรือบนเว็บ
+  - CLA 6 ลิงก์ใส่ Shadow Archer ได้ 13.0–14.7 ล้าน ก่อนนับธนูเงา ธนูเงาต้องทำดาเมจ 51–70% ของตัวละครจึงเท่าชุด Lightning Chain 22.2 ล้าน ข้อสรุป "แรงกว่า 1.5–1.7 เท่า" จึงเทียบกับชุด Mana Storm เท่านั้น
+  - ข้อดีอื่น: ไม่ติดระยะ 850, มานาราว 211 ต่อวินาที (ชุด Lightning Chain ราว 300) ข้อเสีย: ไม่มี Lightning Chain ช่วยฟาร์มและทำ Shock เหลือแค่โอกาส Shock +8–13% จากถุงมือ
 - ลาคริมา: Silver Shadow (สวม Stra's บนตัว), Casthor's Vision 27.1 ล้าน, Token of Trust 34.9 ล้าน (ประมาณ)
 - มานา: CLA ราว 38 ต่อการยิง (รวม +15%) + Lightning Chain ราว 22 = ราว 300 ต่อวินาที
 
+## เทียบ Unleash Lightning Shot แทน CLA (5 พ.ย. 2026)
+ผู้ใช้เรียกว่า "ยิงประทุสายฟ้า" ผมตีความว่าคือ Unleash Lightning Shot จากคำอธิบายรูน ผู้ใช้ไม่ได้แย้ง แต่ยังไม่ได้ยืนยันจากภาพในเกม ผู้ใช้ขอให้เพิ่มเป็นอีกบิลด์ในหน้าเดียวกัน จึงอยู่ในแท็บ `Unleash: Skill + Rune link` ของ `docs/cla-lightning-chain-build.html`
+
+**ข้อสรุป: ฟาร์ม CLA ดีกว่า ผู้ใช้เน้นฟาร์มจึงคง CLA ไว้ ตีบอสขึ้นกับว่า Lightning Particle โดนบอสกี่ครั้ง** สองบิลด์ใช้ไอเทมและชุด Lightning Chain เดียวกัน ต่างกันแค่รูนสกิลและ Concentrated Area DMG เป็น Mana Storm
+- ใส่ Concentrated Area DMG กับ Area Effect ไม่ได้ เพราะไม่มีแท็ก Area of Effect ชุดลิงก์ที่ดีสุดคือ Attack DMG Increase, Additional Lightning DMG, Quick Attack, Element DMG Amplification, Mana Storm (บวก Spell Activation)
+- **เกรด Mana Storm:** แท็บ Unleash ใช้ Legendary (ขยายดาเมจ 24.2% และ 8%) ให้ตรงกับรูนตัวอื่น รอบเทียบครั้งแรกใช้ Rare ได้ 20.6–36.5 ล้าน ส่วนแท็บ CLA และ `bow-crit-builds.html` ยังใช้ CLA 6 ลิงก์ที่ Mana Storm เกรด Rare (13.2–14.9 ล้าน)
+- DPS ต่อธนู 1 ลูก ติด Shock รวม Lightning Chain 10.2 ล้าน ปลุก Source + Origin:
+  - CLA ลูกธนู + ระเบิด 21.2 + 10.2 = 31.5 ล้าน (ตัวเลข 22.2 ล้านในแท็บ CLA นับแค่ระเบิด)
+  - Unleash ลูกธนูอย่างเดียว 21.4, บวก Particle 1 ครั้ง 27.2, 2 ครั้ง 32.9, 3 ครั้ง 38.6 ล้าน จุดเท่ากันคือ Particle โดน 1.75 ครั้งต่อลูก ต่อครั้ง ลูกธนูเฉลี่ย 2.24 ล้าน Particle 1.15 ล้าน จึงนับ Particle ในเกมจากตัวเลขที่ใหญ่ราวครึ่งหนึ่งของลูกธนูได้
+- ตัวจำลองไม่นับจำนวน Particle, การปลุก Source (Particle +5) และไลน์ถุงมือ Miraseti's Miracle ที่เพิ่มการโจมตีสายฟ้าเท่าดาเมจ Particle
+- ฟาร์ม: CLA เจาะทุกตัว ระเบิด 320 ใส่ Area Effect ได้ ลูกธนูเร็ว 4500 ส่วน Unleash ไม่เจาะ (ปลุก Origin +2) ระเบิด 150 ลูกธนูเร็ว 3000 ชุดฟาร์มใช้ Multishot แทน Mana Storm ได้ 19.3–33.2 ล้าน
+- Shock: Unleash ทำเองได้ 20% รวมปลุก Source, Origin และถุงมือราว 51% ยืนเกินระยะ 850 จึงยังติด Shock ได้ 11.2–28.4 ล้าน (ไม่ติดเลย 9.3–23.7) CLA ได้ 18.8–21.2 ล้าน
+- คริ: Unleash ต้องมีคริแบบตัวเลข 80 (มอน Lv170 ได้ 95% ต้อง 100) ตัวคูณคริ ×6.04 เทียบกับ CLA ×7.04 Find Weakness ไม่คุ้มทุกระดับคริแบบตัวเลข ใส่แล้วดาเมจลดเสมอ
+- มานา: ตัวจำลองไม่นับ `+6 Resource Cost` ของ Mana Storm และ `+2` ของเกรด Legendary คำนวณเองได้ราว 47–60 ต่อการยิง รวม Lightning Chain ราว 350–400 ต่อวินาที (ตัวจำลองให้ 318 ซึ่งต่ำไป) ถ้าเปลี่ยน Mana Storm เป็น Element Master เหลือราว 300 และดาเมจ 20.5–36.3 ล้าน
+- ปลุกพลัง (Particle โดน 3 ครั้ง): ไม่ปลุก 34.6, Source 36.5, + Origin 38.6, + Verity 40.9 ล้าน
+- ไอเทมทางเลือก (ลูกธนูอย่างเดียว ถึง Particle 3 ครั้ง): Master of Trajectory 22.3–40.1, Spica's Light 19.8–35.9, Approaching Omen 14.2–24.6 (ไม่นับสแตก), ลาคริมา Casthor's Vision 26.5–48.2, Token of Trust 34.2–62.1 ล้าน
+- Precise Shot แทน Element DMG Amplification: ใกล้กว่า 600 ได้ 19.5–33.7, 600–850 ได้ 24.8–47.2 (นับ 6 สแตกเอง), ไกลกว่า 850 ได้ 14.6–37.0 ล้าน ยังไม่รู้ว่ามีผลกับ Particle หรือไม่ Close Range Shot แทนตัวเดียวกัน: ระยะ 600 ได้ 20.8–37.0, 400 ได้ 22.2–40.6, 200 ได้ 23.6–44.2 ล้าน
+
 ## ยังไม่ได้ทำ
 - ข้อมูล Charm ของ S12 ยังไม่มี (ชื่อ/ผลของ Blessing ทั้ง 12) แท็บ Charm จึงเป็นหลักการ ถ้าผู้ใช้ส่งรายการ Charm มา ให้ปรับแท็บนั้น
+- ยังไม่ได้วัดในเกมว่าธนูเงาของ Shadow Archer ทำดาเมจกี่ % ของตัวละคร ไม่ต้องตามเรื่องนี้ต่อ นอกจากผู้ใช้จะถามอีก: ผู้ใช้เลือกเล่นชุด CLA + Spell Activation + Lightning Chain ต่อ เพราะฟาร์มเร็วกว่า (5 พ.ย. 2026)
 - ยังไม่ได้เช็กในเกมว่า Cast Distance นับจากตัวละครหรือไม่ และถ้าเกินระยะแล้วรูนยังหักมานาของ Lightning Chain หรือเปล่า
 - ยังไม่ได้เช็กในเกมว่าไลน์ลดดาเมจ 10% ของ On Attack Hit ซ้อนกับไลน์เกรด Legendary 5% หรือไม่ (ดูจากดาเมจ Lightning Chain ในหน้าต่างสกิลตอนลิงก์รูน)
+- ยังไม่ได้เช็กในเกมว่า Particle ของ Unleash โดนบอสกี่ครั้งต่อลูก, ไลน์ถุงมือ Miraseti's Miracle เพิ่มการโจมตีกี่ครั้ง, CLA โดนบอสทั้งลูกธนูและระเบิดหรือไม่ และการปลุก Unleash เจาะ +2 / กระโดด +2 ทำงานจริงหรือไม่ เพราะรูนมีไลน์ Cannot Pierce และ Cannot Chain
+- แท็บ CLA ยังใช้ Mana Storm เกรด Rare ในตัวเลข CLA 6 ลิงก์ (13.2–14.9 ล้าน และ "แรงกว่า 1.5–1.7 เท่า") ถ้าเป็น Legendary จะเป็น 14.3–16.1 ล้าน และ "แรงกว่า 1.4–1.6 เท่า" เลขมานา "42.6 เป็น 46" ของ Mana Storm ฝั่ง Lightning Chain ก็ยังไม่นับ `+6 Resource Cost` ทั้งสองจุดยังไม่ได้แก้ รอผู้ใช้ตัดสินใจ
 
 ## หน้าที่เกี่ยวข้อง
-- `docs/cla-lightning-chain-build.html`: ชุด CLA + Spell Activation on Attack Hit + Lightning Chain
+- `docs/cla-lightning-chain-build.html`: ชุด CLA และ Unleash Lightning Shot + Spell Activation on Attack Hit + Lightning Chain
 - `docs/bow-crit-builds.html`: CLA รูนลิงก์ ไอเทม และตัวเลขจำลอง
 - `docs/ogre-arrow-poison-build.html`: Ogre Arrow และการคำนวณการเจาะ

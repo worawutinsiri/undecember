@@ -45,7 +45,7 @@
 Shock = ไฟช็อต, Critical Rate = ค่าคริติคอล, Critical DMG = ความเสียหายคริติคอล, Spell = คาถา, Attack = โจมตี, Strike (แท็ก) = จู่โจม, ธาตุ = เปลวเพลิง / ไอเย็น / สายฟ้า / พิษ, Minion = สมุน, ปลุกพลัง Source / Origin / Verity = แหล่งกำเนิด / บ่อเกิด / สัจธรรม
 
 ## ชื่อที่แปลเอง (ติด * ในหน้า HTML)
-Cross Lightning Arrow = ศรสายฟ้าไขว้, Lightning Chain = โซ่สายฟ้า, Seal of Critical Chance = ตราโอกาสคริติคอล, Unleash Lightning Shot = ยิงปลดปล่อยสายฟ้า, Spell Activation on Hit = คาถาทำงานเมื่อโดนเป้า, Spell Activation on Spell Hit = คาถาทำงานเมื่อคาถาโดนเป้า, Additional Lightning DMG = ความเสียหายสายฟ้าเพิ่มเติม (เทียบจาก Additional Fire DMG), Quick Attack = โจมตีเร็ว, Electric Shock = ไฟฟ้าช็อต, Continuous Shock = ไฟช็อตต่อเนื่อง, Conductor = ตัวนำไฟฟ้า, Find Weakness = ค้นหาจุดอ่อน
+Cross Lightning Arrow = ศรสายฟ้าไขว้, Lightning Chain = โซ่สายฟ้า, Seal of Critical Chance = ตราโอกาสคริติคอล, Unleash Lightning Shot = ยิงประทุสายฟ้า (ผู้ใช้เรียกชื่อนี้ 5 พ.ย. 2026 แทนคำที่แปลเองเดิม "ยิงปลดปล่อยสายฟ้า" ยังไม่ได้เทียบกับหน้าจอเกม), Lightning Arrow = ศรสายฟ้า (ใช้คำจาก Summon Lightning Arrow Abyssling), Extract Lightning Energy = สกัดพลังงานสายฟ้า, Spell Activation on Hit = คาถาทำงานเมื่อโดนเป้า, Spell Activation on Spell Hit = คาถาทำงานเมื่อคาถาโดนเป้า, Additional Lightning DMG = ความเสียหายสายฟ้าเพิ่มเติม (เทียบจาก Additional Fire DMG), Quick Attack = โจมตีเร็ว, Electric Shock = ไฟฟ้าช็อต, Continuous Shock = ไฟช็อตต่อเนื่อง, Conductor = ตัวนำไฟฟ้า, Find Weakness = ค้นหาจุดอ่อน
 
 ถ้าผู้ใช้ส่งภาพหน้ารูนมา ให้ย้ายชื่อจากกลุ่มแปลเองไปกลุ่มหน้าจอเกม แล้วเอา * ออกในหน้า HTML
 
