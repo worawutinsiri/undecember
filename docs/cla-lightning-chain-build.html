@@ -225,9 +225,9 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
 <header>
   <span class="eyebrow">Undecember · S12 The Farside · Bow crit + Spell trigger</span>
   <h1>Cross Lightning Arrow + Lightning Chain</h1>
-  <p class="lede">ยิง Cross Lightning Arrow (CLA) แล้วรูน Spell Activation on Attack Hit จะร่าย Lightning Chain ให้เองทุกครั้งที่ยิงโดน Lightning Chain ทำ Shock ให้ CLA ได้ดาเมจ +150% และได้ค่าคริของ Attack ไปใช้ด้วย</p>
+  <p class="lede">ยิง Cross Lightning Arrow (CLA) แล้วรูน Spell Activation on Attack Hit จะร่าย Lightning Chain ให้เองทุกครั้งที่ยิงโดน แต่เป้าหมายต้องอยู่ในระยะ 850 Lightning Chain ทำ Shock ให้ CLA ได้ดาเมจ +150% และได้ค่าคริของ Attack ไปใช้ด้วย</p>
   <div class="meta">
-    <span>อัปเดต 2 พ.ย. 2026</span>
+    <span>อัปเดต 5 พ.ย. 2026</span>
     <span>ทดสอบด้วยตัวจำลองดาเมจ Undecember DB</span>
     <span>ต่อจาก <a href="bow-crit-builds.html">บิลด์ธนูสายคริ</a></span>
   </div>
@@ -238,7 +238,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
     </div>
     <div>
       <strong>ตัวเลข DPS มาจากการจำลอง</strong>
-      <span>รูนเลเวล 45 เกรด Legendary, มอนเลเวล 150 ค่าต้านธาตุ 40%, เปิด Seal of Critical Chance, คริแบบตัวเลขจาก Charm/Zodiac/ของคราฟสมมติ +80 และค่าสุ่มออปชันไอเทมตั้งไว้ครึ่งทาง ตัวจำลองยังไม่รองรับรูนที่ร่ายสกิลให้ จึงคำนวณ Lightning Chain แยก แล้วคูณด้วยจำนวนครั้งที่ CLA ยิงต่อวินาที และสมมติว่าบอสติด Shock ตลอด ตั้งค่าสุ่มออปชันต่างจากหน้าบิลด์ธนูสายคริ ตัวเลขจึงใช้เทียบกันภายในหน้านี้เท่านั้น</span>
+      <span>รูนเลเวล 45 เกรด Legendary, มอนเลเวล 150 ค่าต้านธาตุ 40%, เปิด Seal of Critical Chance, คริแบบตัวเลขจาก Charm/Zodiac/ของคราฟสมมติ +80 และค่าสุ่มออปชันไอเทมตั้งไว้ครึ่งทาง ตัวจำลองยังไม่รองรับรูนที่ร่ายสกิลให้ จึงคำนวณ Lightning Chain แยก แล้วคูณด้วยจำนวนครั้งที่ CLA ยิงต่อวินาที และสมมติว่ายืนในระยะของ Lightning Chain และบอสติด Shock ตลอด ตั้งค่าสุ่มออปชันต่างจากหน้าบิลด์ธนูสายคริ ตัวเลขจึงใช้เทียบกันภายในหน้านี้เท่านั้น</span>
     </div>
   </div>
 </header>
@@ -273,7 +273,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
         <span class="el">Boss · Total</span>
         <h3>รวมตีบอส</h3>
         <span class="big">22.2 ล้าน<small>ต่อวินาที</small></span>
-        <p>ราว 2 เท่าของ CLA ชุดเดิม 6 ลิงก์ที่ไม่มี Lightning Chain (10.8 ล้านเมื่อตั้งค่าเดียวกัน)</p>
+        <p>ราว 1.5–1.7 เท่าของ CLA 6 ลิงก์ที่ไม่มี Lightning Chain (13.2–14.9 ล้าน เมื่อใช้ไอเทมและปลุกพลังเดียวกัน) เมื่อยืนในระยะ 850</p>
       </div>
     </div>
   </section>
@@ -289,6 +289,33 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       <li><b>Lightning Chain</b>ได้ค่า Attack DMG, อัตราคริ Attack และคริดาเมจ Attack ไปเป็นของ Spell</li>
       <li><b>Shock 40%</b>บอสติด Shock แล้ว CLA ได้ดาเมจ +150% ส่วน Lightning Chain ได้ขยายดาเมจ 30% และคริดาเมจ Spell +50%</li>
     </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Distance</span>
+      <h2>ระยะยืน</h2>
+    </div>
+    <p class="dim">Lightning Chain มีระยะร่าย (Cast Distance) 650 บวกเกรด Legendary อีก 200 รวม 850 ถ้าเป้าหมายอยู่ไกลกว่านี้ Lightning Chain จะไม่โดน และไม่ทำ Shock ให้ CLA แม้ลูกธนูของ CLA ยังยิงถึง ตารางนี้คือ DPS รวมตีบอสตามระยะ</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ระยะจากเป้าหมาย</th><th>ชุดในหน้านี้</th><th>เปลี่ยนเป็น Precise Shot</th><th>CLA 6 ลิงก์ ไม่มี Lightning Chain</th></tr></thead>
+        <tbody>
+          <tr><td>ใกล้กว่า 600</td><td class="num best">22.2 ล้าน</td><td class="num">20.1 ล้าน</td><td class="num">13.2–14.9 ล้าน</td></tr>
+          <tr><td>600–850</td><td class="num">22.2 ล้าน</td><td class="num best">25.5 ล้าน</td><td class="num">13.2–14.9 ล้าน</td></tr>
+          <tr><td>ไกลกว่า 850</td><td class="num worse">10.6–12.0 ล้าน</td><td class="num">13.8–15.3 ล้าน</td><td class="num">13.2–14.9 ล้าน</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li><b>ช่องค่าเป็นช่วง:</b> ค่าต่ำคือบอสไม่ติด Shock ค่าสูงคือติดตลอด เมื่อไม่มี Lightning Chain จะเหลือแค่โอกาส Shock +8–13% จากถุงมือ Miraseti's Miracle</li>
+      <li><b>ยืนเกินระยะแล้วแรงน้อยกว่า CLA ปกติ</b> เพราะเสียช่อง Mana Storm (ขยายดาเมจ 24.2%) ให้รูนร่ายสกิลไปแล้ว ถ้าบอสตัวไหนต้องยืนไกลเกือบตลอด ใช้ Mana Storm แทนรูนร่ายสกิลจะดีกว่า</li>
+      <li><b>เพิ่มระยะร่ายไม่ได้:</b> ในข้อมูล S12 ไม่มีรูนลิงก์หรือยูนีคที่เพิ่ม Cast Distance มีแค่เกรดของรูน (Magic 750, Rare 800, Legendary 850) เลเวลรูนไม่เพิ่มระยะ รูน Chain และการปลุก Origin/Verity เพิ่มเฉพาะระยะกระโดด (Chain Range)</li>
+      <li><b>ตอนฟาร์ม</b> Lightning Chain ต้องเริ่มจากมอนที่อยู่ในระยะ 850 จากนั้นกระโดดต่อได้ครั้งละ 500 จึงไปถึงมอนที่ไกลกว่านั้นได้</li>
+      <li><b>Precise Shot</b> (สีเขียว) ใส่แทน Element DMG Amplification ฝั่ง CLA ถ้าคุมระยะ 600 ขึ้นไปได้ ดาเมจ +247% (รวมเกรด Legendary) มีผลกับ CLA เท่านั้น ไม่มีผลกับ Lightning Chain ตัวเลข 25.5 ล้านนับ 6 สแตกเอง (คริดาเมจ +124.8% และขยายดาเมจ 9.6%) เพราะตัวจำลองไม่นับสแตก ถ้าไม่นับสแตกได้ 22.05 ล้าน ใกล้กว่า 600 ไลน์นี้จะหยุดทำงาน</li>
+      <li><b>Close Range Shot</b> เหมาะกับการยืนใกล้มาก ใส่แทนตัวเดียวกัน ได้ราว 21.5 ล้านที่ระยะ 600, 23.1 ล้านที่ระยะ 400 และ 24.6 ล้านที่ระยะ 200 (บวกผล Close Range Shot เองที่ระยะ 400 และ 200)</li>
+      <li><b>ยังไม่ได้เช็กในเกม:</b> ระยะนับจากตัวละครหรือไม่ (อนุมานจากชื่อ Cast Distance) และถ้าเกินระยะแล้วรูนยังหักมานาของ Lightning Chain หรือเปล่า</li>
+    </ul>
   </section>
 
   <section>
@@ -343,7 +370,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       </div>
       <div class="swap">
         <h3>CLA ตัด Mana Storm ออก</h3>
-        <p>CLA ชุดเดิมมี 6 ลิงก์ ต้องตัด 1 ตัวเพื่อใส่ Spell Activation ในการจำลอง (CLA อย่างเดียว) ตัด Mana Storm เหลือ 9.93 ล้าน, ตัด Element DMG Amplification เหลือ 9.53 ล้าน, ตัด Concentrated Area DMG เหลือ 8.80 ล้าน และตัด Quick Attack เหลือ 7.99 ล้าน</p>
+        <p>CLA ชุดเดิมมี 6 ลิงก์ ต้องตัด 1 ตัวเพื่อใส่ Spell Activation ในการจำลอง (CLA อย่างเดียว ติด Shock) จาก 14.9 ล้าน ตัด Mana Storm เหลือ 12.0 ล้าน, ตัด Element DMG Amplification เหลือ 11.5 ล้าน, ตัด Attack DMG Increase เหลือ 10.9 ล้าน, ตัด Concentrated Area DMG เหลือ 10.6 ล้าน, ตัด Quick Attack เหลือ 9.9 ล้าน และตัด Additional Lightning DMG เหลือ 9.4 ล้าน</p>
       </div>
       <div class="swap">
         <h3>Lightning Chain ไม่ต้องใส่ Find Weakness</h3>
@@ -433,7 +460,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
     </div>
     <ul class="notes">
       <li><b>Lightning Chain ต้องอยู่ในช่องสกิล (Skill slot)</b> จึงจะถูกร่าย</li>
-      <li><b>Lightning Chain ต้องเป็นเกรด Legendary:</b> กระโดด +4, โอกาส Shock +20% (รวมเป็น 40%) และขยายดาเมจ 30% ใส่ศัตรูติด Shock</li>
+      <li><b>Lightning Chain ต้องเป็นเกรด Legendary:</b> กระโดด +4, โอกาส Shock +20% (รวมเป็น 40%), ขยายดาเมจ 30% ใส่ศัตรูติด Shock และระยะร่าย +200</li>
       <li><b>ตีบอสตัวเดียว</b> Lightning Chain โดนบอสครั้งเดียวต่อการร่าย การกระโดดจะไปโดนมอนตัวอื่น</li>
       <li><b>Overheat:</b> CLA สะสม Overheat 40 ต่อการยิง Lightning Chain ไม่สะสม</li>
       <li><b>Seal of Critical Chance</b> เปิดค้างไว้ อัตราคริ +252.4% และโอกาสคริ +3%</li>

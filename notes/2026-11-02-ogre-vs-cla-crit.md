@@ -51,7 +51,13 @@
 - CLA 5 ลิงก์: Attack DMG Increase, Additional Lightning DMG, Quick Attack, Concentrated Area DMG, Element DMG Amplification (ตัด Mana Storm เสียน้อยสุด)
 - Lightning Chain 5 ลิงก์: Spell DMG Increase, Additional Lightning DMG, Element DMG Amplification, Element Master, Electric Shock ไม่ต้องใส่ Find Weakness เพราะคริ 100% แล้ว (เมื่อคริแบบตัวเลข 80) ห้าม Conductor (ทำ Shock ไม่ได้)
 - ถุงมือเปลี่ยนเป็น Transcendent Miraseti's Miracle (Dex 270) ดีกว่า Spica's Light ราว 8% และไม่ต้องลง Int
-- ตัวเลข: CLA 12.0 + Lightning Chain 10.2 = 22.2 ล้านต่อวินาที (ราว 2 เท่า) เทียบ CLA ชุดเดิม 6 ลิงก์ 10.8 ล้าน (ตั้งค่าเดียวกัน) บอสไม่ติด Shock ลดราว 25%
+- ตัวเลข: CLA 12.0 + Lightning Chain 10.2 = 22.2 ล้านต่อวินาที บอสไม่ติด Shock ลดราว 25%
+- เทียบ CLA 6 ลิงก์ (ใส่ Mana Storm แทนรูนร่ายสกิล) ไอเทมและปลุกพลังเดียวกัน: 13.2 ล้าน (ไม่ติด Shock) ถึง 14.9 ล้าน (ติดตลอด) ชุดนี้จึงแรงกว่าราว 1.5–1.7 เท่า เลข 10.8 ล้านที่เคยเขียนว่า "ราว 2 เท่า" ผิด เพราะใช้ถุงมือ Spica's และยังไม่ปลุก Source
+- **ระยะ (ผู้ใช้บอกว่ายิงไกลเกินแล้ว Lightning Chain ไม่โดน แก้ 5 พ.ย. 2026):** Cast Distance 650 เกรด Magic/Rare/Legendary +100/+150/+200 รวม 850 ที่ Legendary เลเวลรูนไม่เพิ่ม ไม่มีรูนลิงก์หรือยูนีคใน S12 ที่เพิ่ม Cast Distance ส่วน Chain และการปลุก Origin/Verity เพิ่มแค่ Chain Range
+- DPS รวมตามระยะ:
+  - ชุดในหน้า: ใกล้กว่า 850 ได้ 22.2 ล้าน, ไกลกว่า 850 เหลือ CLA 10.6–12.0 ล้าน (แย่กว่า CLA 6 ลิงก์ เพราะเสีย Mana Storm ไปแล้ว)
+  - Precise Shot แทน Element DMG Amplification ฝั่ง CLA: ใกล้กว่า 600 ได้ 20.1, ช่วง 600–850 ได้ 25.5 (นับ 6 สแตกเอง ถ้าไม่นับ 22.05), ไกลกว่า 850 ได้ 13.8–15.3 ล้าน
+  - Close Range Shot แทนตัวเดียวกัน: ระยะ 600 ได้ 21.5, ระยะ 400 ได้ 23.1, ระยะ 200 ได้ 24.6 ล้าน (ผลบัฟคำนวณเอง)
 - ทางเลือก: ซองธนู Master of Trajectory 23.0, ถุงมือ Spica's Light 20.4, แหวน Approaching Omen 15.9 (ไม่นับสแตก), ชุดฟาร์ม Area Effect 19.5, CLA ไม่ปลุก Source 20.9 ล้าน
 - กระดาน: ผู้ใช้บอกว่าลูกศรของ Spell Activation หักมุมได้ (`---\`) จึงวาง Lightning Chain เยื้องลงขวาของรูนร่ายสกิล (ห่างจาก CLA 2 ช่องแบบไม่เป็นเส้นตรง) ทั้งสองสกิลติดกัน 2 ช่อง: รูนร่ายสกิลกับรูนลิงก์ที่ใช้ร่วม 1 ตัว (ใส่ Additional Lightning DMG หรือ Element DMG Amplification) รวมแล้วใช้รูนลิงก์ 10 ตัวแทน 11 ตัว DPS เท่าเดิม เพราะแต่ละสกิลยังมีลิงก์ 6 ด้าน
 - คริ: Lightning Chain ต้องมีคริแบบตัวเลข 80 ถึงจะคริ 100% (40 → 84%) เพราะไม่ได้ค่าคริเฉพาะของรูน CLA
@@ -61,6 +67,7 @@
 
 ## ยังไม่ได้ทำ
 - ข้อมูล Charm ของ S12 ยังไม่มี (ชื่อ/ผลของ Blessing ทั้ง 12) แท็บ Charm จึงเป็นหลักการ ถ้าผู้ใช้ส่งรายการ Charm มา ให้ปรับแท็บนั้น
+- ยังไม่ได้เช็กในเกมว่า Cast Distance นับจากตัวละครหรือไม่ และถ้าเกินระยะแล้วรูนยังหักมานาของ Lightning Chain หรือเปล่า
 - ยังไม่ได้เช็กในเกมว่าไลน์ลดดาเมจ 10% ของ On Attack Hit ซ้อนกับไลน์เกรด Legendary 5% หรือไม่ (ดูจากดาเมจ Lightning Chain ในหน้าต่างสกิลตอนลิงก์รูน)
 
 ## หน้าที่เกี่ยวข้อง
