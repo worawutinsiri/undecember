@@ -26,6 +26,7 @@
 | Electric Sentry | หน้าไม้ฉับพลัน |
 | Summon Lightning Arrow Abyssling | อัญเชิญร่างห้วงลึกศรสายฟ้า |
 | Lightning Abyss Knight | อัศวินแห่งห้วงลึกฉับพลัน |
+| Chain | ลูกโซ่ |
 
 ## ชื่อจากไกด์ไทยปี 2022 (อาจเปลี่ยนแล้ว)
 | รูน | ชื่อไทย |
@@ -42,7 +43,7 @@
 | Spell Activation on Attack Hit | คาถาทำงานเมื่อโจมตีโดนเป้า (ไกด์บอกว่ามีทั้งสีแดงและน้ำเงิน อาจเป็นชื่อของ On Hit ด้วย) |
 
 ## คำในหน้ารูนของเกม
-Shock = ไฟช็อต, Critical Rate = ค่าคริติคอล, Critical DMG = ความเสียหายคริติคอล, Spell = คาถา, Attack = โจมตี, Strike (แท็ก) = จู่โจม, ธาตุ = เปลวเพลิง / ไอเย็น / สายฟ้า / พิษ, Minion = สมุน, ปลุกพลัง Source / Origin / Verity = แหล่งกำเนิด / บ่อเกิด / สัจธรรม
+Shock = ไฟช็อต, Critical Rate = ค่าคริติคอล, Critical DMG = ความเสียหายคริติคอล, Spell = คาถา, Attack = โจมตี, Strike (แท็ก) = จู่โจม, ธาตุ = เปลวเพลิง / ไอเย็น / สายฟ้า / พิษ, Minion = สมุน, ปลุกพลัง Source / Origin / Verity = แหล่งกำเนิด / บ่อเกิด / สัจธรรม, Chain Count = จำนวนครั้งลูกโซ่, Chain Range = ขอบเขตลูกโซ่, DMG Amplification = ขยายความเสียหาย, Resource Cost Increase = เพิ่มการใช้ทรัพยากร, Totem / Movement = โทเทม / เคลื่อนย้าย, Projectile DMG = ความเสียหายโปรเจคไทล์, Projectile DMG Amplification = ขยายความเสียหายโปรเจคไทล์, DMG Penetration = เจาะเกราะความเสียหาย, Shadow Archer Effect = เอฟเฟกต์นักธนูเงา, Trigger Link Rune = รูนลิงก์ทริกเกอร์, แท็ก Shadow / Projectile / Melee / Trap = เงา / โปรเจคไทล์ / ระยะใกล้ / กับดัก
 
 ## ชื่อที่แปลเอง (ติด * ในหน้า HTML)
 Cross Lightning Arrow = ศรสายฟ้าไขว้, Lightning Chain = โซ่สายฟ้า, Seal of Critical Chance = ตราโอกาสคริติคอล, Unleash Lightning Shot = ยิงประทุสายฟ้า (ผู้ใช้เรียกชื่อนี้ 5 พ.ย. 2026 แทนคำที่แปลเองเดิม "ยิงปลดปล่อยสายฟ้า" ยังไม่ได้เทียบกับหน้าจอเกม), Lightning Arrow = ศรสายฟ้า (ใช้คำจาก Summon Lightning Arrow Abyssling), Extract Lightning Energy = สกัดพลังงานสายฟ้า, Spell Activation on Hit = คาถาทำงานเมื่อโดนเป้า, Spell Activation on Spell Hit = คาถาทำงานเมื่อคาถาโดนเป้า, Additional Lightning DMG = ความเสียหายสายฟ้าเพิ่มเติม (เทียบจาก Additional Fire DMG), Quick Attack = โจมตีเร็ว, Electric Shock = ไฟฟ้าช็อต, Continuous Shock = ไฟช็อตต่อเนื่อง, Conductor = ตัวนำไฟฟ้า, Find Weakness = ค้นหาจุดอ่อน
