@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unleash + Shadow Archer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Taviraj:wght@500;700&display=swap">
+<style>
+/* Layout: one page, four tabs (skill + links / items / charm / lacrima); tokens shared with Undecember DB and cla-lightning-chain-build.html */
+:root {
+  --bg: #0f0d14;
+  --raised: #17141f;
+  --sunken: #0b0a10;
+  --line: #2e2840;
+  --line-strong: #463d5e;
+  --text: #d9d4e4;
+  --dim: #a39bb6;
+  --faint: #756e8a;
+  --strong: #f6f2ff;
+  --accent: #d4a64a;
+  --accent-strong: #f0c46a;
+  --accent-bg: rgba(212, 166, 74, 0.12);
+  --bolt: #ffd84a;
+  --warn: #f0b84a;
+  --warn-bg: rgba(240, 184, 74, 0.09);
+  --up: #4cc27a;
+  --down: #e0705f;
+  --rune-red: #e0533f;
+  --rune-green: #4cc27a;
+  --rune-blue: #4f8df0;
+  --display: 'Taviraj', 'IBM Plex Sans Thai', Georgia, serif;
+  --sans: 'IBM Plex Sans Thai', system-ui, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+    --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+    --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+    --bolt: #9a7e00; --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c; --down: #b8412f;
+    --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f6f4f9; --raised: #ffffff; --sunken: #ece9f2; --line: #dcd6e6; --line-strong: #b9b0c9;
+  --text: #2c2638; --dim: #5a536b; --faint: #857d96; --strong: #120e1a;
+  --accent: #9a6f14; --accent-strong: #7f5a0c; --accent-bg: rgba(168, 122, 28, 0.1);
+  --bolt: #9a7e00; --warn: #9a6a00; --warn-bg: rgba(200, 140, 20, 0.1); --up: #1f8a4c; --down: #b8412f;
+  --rune-red: #c43d2b; --rune-green: #1f8a4c; --rune-blue: #2f6fd6;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15.5px/1.7 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-strong); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 72px;
+  display: grid;
+  gap: 32px;
+}
+@media (max-width: 520px) { .page { padding-inline: 16px; padding-block: 28px 56px; } }
+
+h1, h2, h3 { color: var(--strong); text-wrap: balance; margin: 0; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.15; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.45rem; line-height: 1.3; }
+h3 { font-size: 1rem; font-weight: 600; line-height: 1.4; }
+p { margin: 0; max-width: 70ch; }
+.eyebrow { font: 600 0.72rem/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+.dim { color: var(--dim); }
+
+header { display: grid; gap: 14px; }
+.lede { font-size: 1.05rem; color: var(--dim); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--faint); }
+.caveat {
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+  background: var(--warn-bg);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  display: grid;
+  gap: 8px;
+}
+.caveat div { display: grid; gap: 2px; }
+.caveat strong { color: var(--warn); font-weight: 600; }
+
+/* tabs */
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  background: var(--bg);
+  z-index: 5;
+  overflow-x: auto;
+}
+.tab {
+  appearance: none;
+  border: 0;
+  background: none;
+  color: var(--dim);
+  font: 600 0.95rem/1 var(--sans);
+  padding: 14px 16px 12px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tab:hover { color: var(--strong); }
+.tab[aria-selected="true"] { color: var(--strong); border-bottom-color: var(--accent); }
+.panel { display: grid; gap: 40px; }
+
+section { display: grid; gap: 16px; scroll-margin-top: 64px; }
+.sec-head { display: grid; gap: 6px; padding-top: 18px; border-top: 1px solid var(--line); }
+
+/* overview cards */
+.overview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 720px) { .overview { grid-template-columns: 1fr; } }
+.ov {
+  --el: var(--bolt);
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--el);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+.ov.total { --el: var(--accent); }
+.ov .el { font: 600 0.7rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--el); }
+.ov .big { font: 600 1.35rem/1.2 var(--mono); color: var(--strong); font-variant-numeric: tabular-nums; }
+.ov .big small { font: 0.75rem var(--sans); color: var(--faint); margin-left: 4px; }
+.ov p { font-size: 0.86rem; color: var(--dim); }
+
+/* how it works */
+.flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; list-style: none; margin: 0; padding: 0; counter-reset: step; }
+@media (max-width: 760px) { .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 440px) { .flow { grid-template-columns: 1fr; } }
+.flow li {
+  counter-increment: step;
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  font-size: 0.86rem;
+  color: var(--dim);
+}
+.flow li::before { content: counter(step); font: 600 0.72rem/1 var(--mono); color: var(--accent); }
+.flow b { color: var(--strong); font-weight: 600; font-size: 0.92rem; }
+
+/* rune board: skill in the centre, six links around it */
+.board-wrap { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 20px; align-items: center; }
+@media (max-width: 760px) { .board-wrap { grid-template-columns: 1fr; } .board-wrap svg { max-width: 300px; margin: 0 auto; } }
+.board-wrap svg { width: 100%; height: auto; display: block; }
+.hx { stroke-width: 2; }
+.hx-red { fill: color-mix(in srgb, var(--rune-red) 16%, var(--raised)); stroke: var(--rune-red); }
+.hx-green { fill: color-mix(in srgb, var(--rune-green) 16%, var(--raised)); stroke: var(--rune-green); }
+.hx-blue { fill: color-mix(in srgb, var(--rune-blue) 16%, var(--raised)); stroke: var(--rune-blue); }
+.hx-core { stroke-width: 4; }
+.hx-skill { fill: color-mix(in srgb, var(--bolt) 22%, var(--raised)); stroke: var(--bolt); stroke-width: 3; }
+.hx-text { fill: var(--strong); font: 600 10.5px/1 var(--sans); text-anchor: middle; }
+.hx-skill-text { fill: var(--strong); font: 700 12.5px/1 var(--sans); text-anchor: middle; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+th, td { text-align: left; padding: 9px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { font: 600 0.7rem/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); background: var(--sunken); white-space: nowrap; }
+td:first-child { color: var(--strong); font-weight: 500; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.best { color: var(--up); font-weight: 600; }
+td.worse { color: var(--down); }
+td small { display: block; color: var(--faint); font-size: 0.8rem; font-weight: 400; }
+.th { color: var(--faint); font-size: 0.82rem; font-weight: 400; }
+td .th { display: block; }
+.guess::after { content: '*'; color: var(--warn); }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+.dot.red { background: var(--rune-red); }
+.dot.green { background: var(--rune-green); }
+.dot.blue { background: var(--rune-blue); }
+.pill { display: inline-block; font: 600 0.66rem/1.5 var(--mono); padding: 0 6px; border-radius: 4px; border: 1px solid currentColor; white-space: nowrap; vertical-align: 1px; }
+.pill.top { color: var(--up); }
+.pill.cond { color: var(--warn); }
+.pill.core { color: var(--accent-strong); }
+
+.swaps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+@media (max-width: 560px) { .swaps { grid-template-columns: 1fr; } }
+.swap { border-left: 2px solid var(--line-strong); padding: 2px 0 2px 14px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.swap p { font-size: 0.88rem; color: var(--dim); }
+ul.notes, ol.notes { margin: 0; padding-left: 1.1rem; display: grid; gap: 4px; color: var(--dim); font-size: 0.9rem; }
+ul.notes b, ol.notes b { color: var(--text); }
+.caption { font-size: 0.8rem; color: var(--faint); }
+footer { font-size: 0.8rem; color: var(--faint); border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="eyebrow">Undecember · S12 The Farside · Bow crit + Shadow Archer</span>
+  <h1>Unleash Lightning Shot + Shadow Archer</h1>
+  <p class="lede">สายคริที่ใช้ Shadow Archer แทนรูนร่ายสกิล ผู้เล่นทดสอบในเกมแล้วแรงกว่า Spell Activation on Hit + Lightning Chain มาก ชุดนี้ใช้สกิลเดียว ไม่ติดระยะร่าย และใช้มานาน้อยกว่า ถ้ามีธนู Foresight of the Conqueror ดาเมจจะเพิ่มเกิน 2 เท่า</p>
+  <div class="meta">
+    <span>อัปเดต 6 พ.ย. 2026</span>
+    <span>ทดสอบด้วยตัวจำลองดาเมจ Undecember DB</span>
+    <span>ต่อจาก <a href="cla-lightning-chain-build.html#unleash">Unleash + Lightning Chain</a></span>
+  </div>
+  <div class="caveat">
+    <div>
+      <strong>ตัวเลขในหน้านี้ยังไม่นับธนูเงา</strong>
+      <span>ตัวจำลองไม่นับดาเมจของธนูเงา ข้อมูลในชีทก็ไม่มีตัวเลขนี้ DPS ทุกตัวจึงเป็นค่าต่ำกว่าของจริง ใช้เทียบไอเทมและรูนลิงก์ในชุดนี้ได้ แต่ถ้าเทียบกับชุดอื่น ให้ถือผลทดสอบในเกมเป็นหลัก</span>
+    </div>
+    <div>
+      <strong>ตั้งค่าการจำลอง</strong>
+      <span>รูนเลเวล 45 เกรด Legendary, มอนเลเวล 150 ค่าต้านธาตุ 40%, เปิด Seal of Critical Chance, คริแบบตัวเลขจาก Charm/Zodiac/ของคราฟสมมติ +80, ค่าสุ่มออปชันไอเทมครึ่งทาง, ปลุก Unleash ระดับ Source และ Origin, บอสติด Shock ตลอด ค่าที่แสดงเป็นช่วงคือ ลูกธนูอย่างเดียว ถึง Lightning Particle โดน 3 ครั้งต่อลูก</span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="หมวดของบิลด์">
+  <button class="tab" role="tab" id="tab-build" aria-controls="panel-build" aria-selected="true">Skill + Rune link</button>
+  <button class="tab" role="tab" id="tab-gear" aria-controls="panel-gear" aria-selected="false" tabindex="-1">Item</button>
+  <button class="tab" role="tab" id="tab-charm" aria-controls="panel-charm" aria-selected="false" tabindex="-1">Charm</button>
+  <button class="tab" role="tab" id="tab-lacrima" aria-controls="panel-lacrima" aria-selected="false" tabindex="-1">Lacrima</button>
+</nav>
+
+<!-- ============ TAB 1: skill + rune link ============ -->
+<div class="panel" role="tabpanel" id="panel-build" aria-labelledby="tab-build">
+
+  <section>
+    <div class="overview">
+      <div class="ov">
+        <span class="el">Base · Tipan's</span>
+        <h3>ชุดฐาน</h3>
+        <span class="big">13.8–34.9 ล้าน<small>ต่อวินาที</small></span>
+        <p>ยิง 5 ครั้งต่อวินาที (ชนเพดาน) คริ 100% ตัวคูณคริ ×6.04 ต้องมีคริแบบตัวเลข 78</p>
+      </div>
+      <div class="ov">
+        <span class="el">Upgrade · Foresight</span>
+        <h3>เปลี่ยนเป็น Foresight of the Conqueror</h3>
+        <span class="big">29.2–74.1 ล้าน<small>×2.12</small></span>
+        <p>ตัวที่ควรหาก่อนอย่างอื่น รูน Unleash มีดาเมจตัวเลขแค่ +200 จึงได้ประโยชน์จากดาเมจฐานของธนูเต็มที่</p>
+      </div>
+      <div class="ov total">
+        <span class="el">Full · Crit set</span>
+        <h3>ชุดเต็มสายคริ</h3>
+        <span class="big">41.9–106.2 ล้าน<small>×3.04</small></span>
+        <p>Foresight, Transcendent Ring of Fate และปลุก Shadow Archer ระดับ Origin ทุกค่ายังไม่นับธนูเงา</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Versus Spell Activation</span>
+      <h2>ทำไมแรงกว่า Spell Activation on Hit</h2>
+    </div>
+    <p>ผู้เล่นทดสอบในเกมแล้วชุดนี้แรงกว่ามาก แต่ตัวเลขจำลองของชุดนี้ยังต่ำกว่า เพราะนับ Lightning Chain ครบ แต่ไม่นับธนูเงาเลย ตารางนี้จึงบอกว่าธนูเงาต้องทำดาเมจเท่าไรถึงจะแซง</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ชุด</th><th>ลูกธนูอย่างเดียว</th><th>Particle โดน 3 ครั้งต่อลูก</th></tr></thead>
+        <tbody>
+          <tr><td>Shadow Archer · ไม่นับธนูเงา</td><td class="num">13.8 ล้าน</td><td class="num">34.9 ล้าน</td></tr>
+          <tr><td>Spell Activation on Hit + Lightning Chain</td><td class="num">20.5 ล้าน</td><td class="num">37.7 ล้าน</td></tr>
+          <tr><td>Spell Activation on Attack Hit + Lightning Chain</td><td class="num">21.4 ล้าน</td><td class="num">38.6 ล้าน</td></tr>
+          <tr><td>Shadow Archer · ธนูเงาทำดาเมจ 25% ของตัวละคร</td><td class="num worse">17.2 ล้าน</td><td class="num best">43.7 ล้าน</td></tr>
+          <tr><td>Shadow Archer · ธนูเงาทำดาเมจ 50%</td><td class="num best">20.7 ล้าน</td><td class="num best">52.4 ล้าน</td></tr>
+          <tr><td>Shadow Archer · ธนูเงาทำดาเมจ 100%</td><td class="num best">27.6 ล้าน</td><td class="num best">69.9 ล้าน</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">ไอเทมชุดฐานเหมือนกันทุกแถว สีเขียวและแดงเทียบกับแถว On Hit ส่วนแถวธนูเงา 25–100% เป็นการคำนวณสมมติ ไม่ใช่ค่าที่วัดได้ จุดเท่ากับ On Hit คือธนูเงาทำดาเมจ 48% (ลูกธนูอย่างเดียว) หรือ 8% (Particle โดน 3 ครั้ง) ผลทดสอบในเกมจึงแปลว่าธนูเงาน่าจะทำดาเมจเกินจุดนี้</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>Shadow Archer</th><th>On Hit + Lightning Chain</th></tr></thead>
+        <tbody>
+          <tr><td>ไลน์ของรูนลิงก์ต่อ Unleash</td><td class="best">แรงขึ้น ×1.23 (ขยายดาเมจ ×1.15, เจาะดาเมจ ×1.04, ดาเมจโปรเจกไทล์ ×1.02)</td><td>ไม่เพิ่มดาเมจ Unleash</td></tr>
+          <tr><td>ดาเมจที่เพิ่มเข้ามา</td><td>ธนูเงา 1 ตัวทุกครั้งที่ใช้สกิล</td><td>Lightning Chain ดาเมจ ×0.63 ได้ 9.3 ล้านต่อวินาที</td></tr>
+          <tr><td>ระยะ</td><td class="best">ไม่มีไลน์จำกัดระยะ</td><td>เป้าหมายต้องอยู่ในระยะ 850</td></tr>
+          <tr><td>การทำ Shock</td><td>Unleash ทำเองราว 51%</td><td class="best">Unleash ราว 51% และ Lightning Chain 40%</td></tr>
+          <tr><td>บอสไม่ติด Shock เลย</td><td>ดาเมจลด 17%</td><td>ดาเมจลด 22–27%</td></tr>
+          <tr><td>มานาต่อวินาที</td><td class="num best">ราว 265–325</td><td class="num">ราว 360–430</td></tr>
+          <tr><td>รูนที่ต้องหา</td><td class="best">สกิล 1 ตัว รูนลิงก์ 6 ตัว</td><td>สกิล 2 ตัว รูนลิงก์ 10 ตัว</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">เทียบกับชุด Lightning Chain ใน<a href="cla-lightning-chain-build.html#unleash">แท็บ Unleash ของหน้าธนูสายฟ้า</a> ตัวเลขมานาของ Mana Storm คำนวณเอง เพราะตัวจำลองไม่นับค่ามานา +8</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>ทำงานยังไง</h2>
+    </div>
+    <ol class="flow">
+      <li><b>Unleash ยิงโดน</b>ลูกธนู 3 ลูกไม่เจาะ เมื่อโดนจะปล่อย Lightning Particle 3 ตัว (ปลุก Source เป็น 8 ตัว) ระเบิดรัศมี 150</li>
+      <li><b>Shadow Archer</b>เรียกธนูเงา 1 ตัวทุกครั้งที่ใช้สกิล ลิงก์ได้เพราะ Unleash มีแท็ก Attack, Shadow, Strike และ Projectile ครบ</li>
+      <li><b>Miraseti's Miracle</b>Unleash โดนศัตรูแล้วโจมตีสายฟ้าเพิ่ม ดาเมจเท่า Particle ไลน์นี้ใช้ได้เฉพาะ Unleash และตัวจำลองไม่นับ</li>
+      <li><b>Shock</b>Unleash ทำ Shock เองได้ บอสติด Shock แล้วได้ขยายดาเมจ 20% เกรด Legendary ไม่ต้องพึ่งสกิลอื่น</li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Rune board</span>
+      <h2>กระดานรูน</h2>
+    </div>
+    <div class="board-wrap">
+      <svg class="board" data-skill="Unleash|Lightning|Shot" data-links="Quick|Attack:green; Attack DMG|Increase:red; Shadow|Archer:green core; Mana|Storm:blue; Element|DMG Amp.:blue; Additional|Lightning DMG:blue" viewBox="-162 -154 324 308" role="img" aria-label="แผนผังกระดานรูน: Unleash Lightning Shot อยู่ตรงกลาง รอบด้วย Quick Attack, Attack DMG Increase, Shadow Archer, Mana Storm, Element DMG Amplification และ Additional Lightning DMG"></svg>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+          <tbody>
+            <tr><td><span class="dot green"></span>Shadow Archer <span class="pill core">หัวใจ</span><span class="th">นักธนูเงา</span></td><td>เรียกธนูเงา 1 ตัวทุกครั้งที่ใช้สกิล ดาเมจโปรเจกไทล์ +31.2% (Legendary ขยายดาเมจโปรเจกไทล์ 15% และเจาะดาเมจ +30%) ค่ามานา +50%</td></tr>
+            <tr><td><span class="dot red"></span>Attack DMG Increase<span class="th">เพิ่มความเสียหายการโจมตี</span></td><td>ดาเมจ +249% เมื่อใช้ Attack (Legendary +100%)</td></tr>
+            <tr><td><span class="dot blue"></span>Additional Lightning DMG<span class="th guess">ความเสียหายสายฟ้าเพิ่มเติม</span></td><td>ดาเมจสายฟ้า +10–461 และ +83.2% (Legendary +10–140 และขยายดาเมจสายฟ้า 5%)</td></tr>
+            <tr><td><span class="dot green"></span>Quick Attack<span class="th guess">โจมตีเร็ว</span></td><td>ความเร็วโจมตี +44.5% ชนเพดาน 5 ครั้งต่อวินาที ถ้าตัดออกเหลือ 3.3 ครั้ง (Foresight 3.8 ครั้ง)</td></tr>
+            <tr><td><span class="dot blue"></span>Element DMG Amplification<span class="th">ขยายความเสียหายธาตุ</span></td><td>ขยายดาเมจธาตุ 19.3% (Legendary +5% และดาเมจธาตุ +40%)</td></tr>
+            <tr><td><span class="dot blue"></span>Mana Storm <span class="pill cond">ใช้มานามาก</span><span class="th">มรสุมมนตรา</span></td><td>ขยายดาเมจ Strike 24.2% (Legendary +8%) ค่ามานา +30% และ +8</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="caption">เป็นชุดที่ดีที่สุดจากการจำลองทุกชุด 5 ตัวร่วมกับ Shadow Archer สีของรูนลิงก์ต้องตรงกับสีช่องบนรูนสกิลของคุณ ตำแหน่งในแผนผังเป็นแค่ตัวอย่าง Unleash Lightning Shot ชื่อไทย <span class="guess">ยิงประทุสายฟ้า</span> ชื่อที่มี * ยังไม่ได้เทียบกับหน้าจอเกม</p>
+
+    <div class="swaps">
+      <div class="swap">
+        <h3>คริแบบตัวเลขต่ำกว่าราว 70 ใช้ Electric Shock</h3>
+        <p>ใส่แทน Element DMG Amplification ได้อัตราคริ +171.6% และคริดาเมจ +94% ใส่ศัตรูติด Shock ที่คริแบบตัวเลข 40 ลูกธนูได้ 11.4 ล้าน (คริ 84%) เทียบกับชุดหลัก 10.4 ล้าน (คริ 71%) พอถึง 80 ชุดหลักแรงกว่าเล็กน้อย (13.8 เทียบกับ 13.3 ล้าน) แต่มอน Lv170 ยังใกล้เคียงกัน รวมสแตก Electric Shock ที่คำนวณเองแล้ว</p>
+      </div>
+      <div class="swap">
+        <h3>ไม่ต้องใส่ Find Weakness หรือ Sharpness</h3>
+        <p>ที่คริแบบตัวเลข 40 Find Weakness ได้ 10.0 ล้าน (คริ 93%) และ Sharpness ได้ 10.9 ล้าน รวมผลบัฟ Sharpness แล้ว ทั้งคู่ต่ำกว่า Electric Shock ทุกระดับคริแบบตัวเลขที่ทดสอบ</p>
+      </div>
+      <div class="swap">
+        <h3>มานาไม่พอ ใช้ Element Master แทน Mana Storm</h3>
+        <p>มานาลดจากราว 265–325 เหลือราว 210 ต่อวินาที ดาเมจเหลือ 12.1–30.7 ล้าน ถ้ามี Mana Storm แค่เกรด Rare ได้ 12.8–32.3 ล้าน ส่วน Shadow Archer เกรด Rare ได้ 12.9–32.7 ล้าน</p>
+      </div>
+      <div class="swap">
+        <h3>น่าลอง: Extract Lightning Energy</h3>
+        <p>ใส่แทน Element DMG Amplification ได้ดาเมจสายฟ้า +50% และขยายดาเมจสายฟ้า 4% ต่อสแตก 0 สแตกได้ 11.1–28.1 ล้าน 3 สแตกเท่าชุดหลัก และ 9 สแตกได้ 20.2–51.1 ล้าน มีโอกาสได้สแตก 23.2% ต่อครั้งที่โดน ยังไม่รู้จำนวนสแตกสูงสุด ตัวเลขนี้คำนวณเอง</p>
+      </div>
+      <div class="swap">
+        <h3>ชุดฟาร์ม</h3>
+        <p>ใส่ Multishot แทน Element DMG Amplification ลูกธนูเพิ่มจาก 3 เป็น 7 ลูก ดาเมจ (นับธนู 1 ลูก) เหลือ 11.6–29.4 ล้าน ปลุก Unleash ระดับ Origin ได้ลูกธนูเจาะ +2 และ Verity ได้กระโดด +2 ยังไม่ได้เทียบความเร็วฟาร์มกับ CLA</p>
+      </div>
+      <div class="swap">
+        <h3>รูนที่ใส่ไม่ได้หรือห้ามใส่</h3>
+        <p>Shadow Archer ลิงก์กับรูนร่ายสกิลไม่ได้ จึงใช้คู่ Lightning Chain ในรูนสกิลเดียวกันไม่ได้ Unleash ไม่มีแท็ก Area of Effect จึงลิงก์ Concentrated Area DMG และ Area Effect ไม่ได้ และลิงก์ Chain ไม่ได้ Conductor มีไลน์ "Cannot apply Shock" จึงทำ Shock ไม่ได้</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Awakening</span>
+      <h2>ปลุกพลัง</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>รูน · ระดับ</th><th>ได้อะไร</th><th>DPS (ไม่นับธนูเงา)</th></tr></thead>
+        <tbody>
+          <tr><td>Unleash · ยังไม่ปลุก</td><td>ไม่มี</td><td class="num">11.8–29.9 ล้าน</td></tr>
+          <tr><td>Unleash · Source <span class="pill top">ทำก่อน</span></td><td>ขยายดาเมจสายฟ้า 5–10%, โอกาส Shock +5–15%, Particle +5</td><td class="num">12.8–32.3 ล้าน</td></tr>
+          <tr><td>Unleash · Origin</td><td>ขยายดาเมจสายฟ้า 5–10%, โอกาส Shock +5–15%, ลูกธนูเจาะ +2</td><td class="num">13.8–34.9 ล้าน</td></tr>
+          <tr><td>Unleash · Verity</td><td>ขยายดาเมจสายฟ้า 5–10%, โอกาส Shock +5–15%, ลูกธนูกระโดด +2</td><td class="num">14.9–37.7 ล้าน</td></tr>
+          <tr><td>Shadow Archer · Origin <span class="pill top">สายคริ</span></td><td>คริดาเมจ Attack +45–60%, ดาเมจโปรเจกไทล์ +45–60% และมีไลน์เรียกธนูเงาคู่ คูลดาวน์ 1 วินาที</td><td class="num best">15.6–39.5 ล้าน (×1.13)</td></tr>
+          <tr><td>Shadow Archer · Verity</td><td>ขยายดาเมจ 7.5–15%, ลูกธนู +2</td><td class="num">15.3–38.9 ล้าน (×1.11)</td></tr>
+          <tr><td>Shadow Archer · Source</td><td>โอกาส 10% เรียกธนูเงาคู่เมื่อโจมตีโดน, ความเร็วโจมตี +20–35%</td><td>ไม่เพิ่มในการจำลอง เพราะความเร็วชนเพดานแล้ว แต่ได้ธนูเงาเพิ่ม</td></tr>
+          <tr><td>รูนลิงก์อื่น</td><td>Additional Lightning DMG · Source, Attack DMG Increase · Origin, Attack DMG Increase · Source, Element DMG Amplification · Source, Mana Storm · Source</td><td class="num">×1.08, ×1.05, ×1.04, ×1.04, ×1.03</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>แถว Unleash นับสะสมจากบนลงล่าง ส่วนแถว Shadow Archer และรูนลิงก์นับแยกทีละตัวจากชุดฐาน ถ้าปลุก Shadow Archer ทั้ง Origin และ Verity ได้ 17.4–44.0 ล้าน</li>
+      <li>Particle +5 จากการปลุก Source ตัวจำลองไม่นับ จึงน่าจะได้มากกว่าตัวเลขนี้ถ้า Particle ที่เพิ่มโดนบอส (อนุมาน)</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Distance</span>
+      <h2>ระยะยืน</h2>
+    </div>
+    <p class="dim">ชุดนี้ไม่มี Lightning Chain จึงไม่ติดระยะร่าย 850 ถ้าคุมระยะได้ ใส่รูนลิงก์ตามระยะแทน Element DMG Amplification ได้</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>รูนลิงก์</th><th>เงื่อนไข</th><th>DPS</th></tr></thead>
+        <tbody>
+          <tr><td>ชุดหลัก</td><td>ทุกระยะ</td><td class="num">13.8–34.9 ล้าน</td></tr>
+          <tr><td>Precise Shot</td><td>ยืนห่าง 600 ขึ้นไป นับ 6 สแตกเอง<small>ไม่นับสแตก 13.5–34.3 ล้าน</small></td><td class="num best">17.9–45.4 ล้าน</td></tr>
+          <tr><td>Precise Shot</td><td>ยืนใกล้กว่า 600</td><td class="num worse">11.4–28.8 ล้าน</td></tr>
+          <tr><td>Close Range Shot</td><td>ระยะ 600</td><td class="num worse">13.0–32.8 ล้าน</td></tr>
+          <tr><td>Close Range Shot</td><td>ระยะ 400</td><td class="num best">14.7–37.2 ล้าน</td></tr>
+          <tr><td>Close Range Shot</td><td>ระยะ 200</td><td class="num best">16.4–41.7 ล้าน</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">ยังไม่รู้ว่าไลน์ตามระยะมีผลกับ Particle และธนูเงาด้วยหรือไม่ ตัวเลข Close Range Shot บวกผลบัฟของรูนเอง</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Test in game</span>
+      <h2>ต้องลองในเกม</h2>
+    </div>
+    <ol class="notes">
+      <li><b>ธนูเงาทำดาเมจกี่ % ของตัวละคร:</b> ยิงหุ่นด้วยชุดนี้ แล้วเปรียบเทียบตัวเลขดาเมจของธนูเงากับของตัวละครจากการยิง 1 ครั้ง ค่านี้จะบอกว่า DPS จริงสูงกว่าตัวเลขในหน้านี้เท่าไร</li>
+      <li><b>ธนูเงาได้อะไรบ้าง:</b> ดูว่าธนูเงาปล่อย Lightning Particle ทำ Shock และติดไลน์โจมตีเพิ่มของถุงมือ Miraseti's Miracle หรือไม่</li>
+      <li><b>Particle โดนบอสกี่ครั้งต่อลูก:</b> นับตัวเลขที่ใหญ่ราวครึ่งหนึ่งของลูกธนู ในการจำลองลูกธนูเฉลี่ย 2.76 ล้าน และ Particle 1.41 ล้านต่อครั้ง</li>
+      <li><b>ปลุก Shadow Archer ระดับ Origin:</b> ดูว่าคริดาเมจ +45–60% เป็นค่าถาวร หรือมีผลเฉพาะตอนธนูเงาคู่ทำงาน ในหน้านี้คิดเป็นค่าถาวร</li>
+    </ol>
+  </section>
+</div>
+
+<!-- ============ TAB 2: items ============ -->
+<div class="panel" role="tabpanel" id="panel-gear" aria-labelledby="tab-gear" hidden>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Gear by slot</span>
+      <h2>ไอเทมแต่ละช่อง</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ช่อง</th><th>ไอเทม</th><th>ค่าที่ได้</th></tr></thead>
+        <tbody>
+          <tr><td>อาวุธ <span class="pill top">สำคัญสุด</span></td><td>Foresight of the Conqueror<small>Dex 270 · ยังไม่มี: Transcendent Tipan's Long Bow (Dex 266) · ช่วงเก็บเลเวล: Star Usurper's Bow (Lv1)</small></td><td>ดาเมจฐาน +364–456 ถึง 546–685 (Tipan's +190–232 ถึง 304–365), Attack DMG +40% และ +90–110%, ความเร็ว +32–36%, %คริอุปกรณ์ +170–180%, ขยายดาเมจ 13–16%, คริดาเมจ +100–110%, Maximized DMG +50–60%</td></tr>
+          <tr><td>ซองธนู</td><td>Transcendent Miraseti's Wave<small>Dex 270</small></td><td>ดาเมจ +70%, ความเร็วโจมตี 12–16%, อัตราคริ Attack +40–70%, มานา +3–4 ต่อครั้งที่โดน</td></tr>
+          <tr><td>ถุงมือ <span class="pill core">ห้ามเปลี่ยน</span></td><td>Transcendent Miraseti's Miracle<small>Dex 270</small></td><td>คริดาเมจ +50–75%, ขยายดาเมจสายฟ้า 10–12%, ความเร็วโจมตี 8–10%, โอกาส Shock +8–13% และ Unleash โดนศัตรูแล้วโจมตีสายฟ้าเพิ่ม ดาเมจเท่า Particle</td></tr>
+          <tr><td>สร้อย</td><td>Transcendent Hira's Charm</td><td>คริดาเมจ +29–34% และ +80–100%, ขยายดาเมจ 8–13%, ความเร็วโจมตี +34–40%</td></tr>
+          <tr><td>แหวน 1</td><td>Transcendent Ring of Fate<small>ยังไม่มี: Transcendent Leo's Flow</small></td><td>คริดาเมจ +40–45% และ +35% ต่อสแตกนาน 8 วินาที เมื่อคริระหว่างเปิด Seal of Critical Chance (สูงสุด 12 สแตก)<small>Leo's Flow: อัตราคริ +44–53%, คริดาเมจ +25–28%, ขยายดาเมจสายฟ้า 7–9%, เจาะสายฟ้า +9.8–12.6%</small></td></tr>
+          <tr><td>แหวน 2</td><td>Ultimate Ring of Amplified Power</td><td>ความเร็วโจมตี 15–30% และบัฟหมุนเวียน นาน 15 วินาที: ตีพลาดได้ดาเมจ +350%, โดนได้โอกาสคริ +25%, คริได้คริดาเมจ +110% ครบแล้วใช้สกิลได้ Amplified Power ค่าเพิ่ม 100% นาน 10 วินาที แต่ค่า Hit Rate ลด 3500–4500<small>ตัวจำลองนับ 3 บัฟว่าติดตลอด และไม่นับ Amplified Power ตัวอื่นในช่องนี้ทำดาเมจลด 33–44%</small></td></tr>
+          <tr><td>รองเท้า</td><td>Ultimate Silver Shadow's Footprints<small>Str 228 · ถ้าย้ายไปลาคริมา สวม Ultimate Stra's Boots (Dex 223) แทน</small></td><td>อัตราคริ +86–110%, คริดาเมจ +46–105%, ขยายดาเมจ 17–32%, ความเร็วโจมตีสแตกได้ถึง +30%</td></tr>
+          <tr><td>ชุดเกราะ</td><td>Ultimate Numbing Armor<small>Str 250</small></td><td>HP +85–110%, รับดาเมจลด 18–25%, อมตะ 3 วินาทีเมื่อ HP ต่ำกว่า 20% (ใช้ Barrier ไม่ได้)</td></tr>
+          <tr><td>หมวก บ่า เข็มขัด</td><td>ของคราฟ</td><td>คริแบบตัวเลข, มานาและฟื้นมานา, HP และค่าต้านธาตุ ดู <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></td></tr>
+          <tr><td>สกิลเสริม</td><td>Seal of Critical Chance<span class="th guess">ตราโอกาสคริติคอล</span><small>เปิดค้างไว้</small></td><td>อัตราคริ +252.4%, โอกาสคริ +3% และเป็นเงื่อนไขของ Ring of Fate</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li><b>สถานะที่ต้องลง:</b> Dex 270 (ธนู ซองธนู และถุงมือ) กับ Str 250 (ชุดเกราะ ซึ่งครอบคลุม Str 228 ของรองเท้าด้วย) ไม่ต้องลง Int</li>
+      <li><b>Foresight และ Ring of Fate ไม่อยู่ในฐานข้อมูลของตัวจำลอง:</b> Foresight ใส่ค่ากลางจากประกาศแพตช์ 8 ต.ค. ซึ่งระบุว่าค่าอาจเปลี่ยนตอนลงจริง และไม่นับ Maximized DMG กับสแตกที่ได้จากการตี Elite ส่วน Ring of Fate ใช้ค่าจากหน้า <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> ควรเช็ก tooltip ในเกมก่อนซื้อ</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Upgrade order</span>
+      <h2>ลำดับการอัปเกรด</h2>
+    </div>
+    <ol class="notes">
+      <li><b>ธนู Foresight of the Conqueror ×2.12</b> (Ultimate ×2.72) แรงขึ้นมากที่สุด และลดคริแบบตัวเลขที่ต้องมีจาก 78 เหลือ 67</li>
+      <li><b>คริแบบตัวเลขให้ถึงเป้า</b> ดูตารางในแท็บ Charm เพราะคริไม่ถึงเสียดาเมจมาก</li>
+      <li><b>Transcendent Ring of Fate ×1.28</b> เมื่อเฉลี่ย 7.5 สแตก (12 สแตกตลอด ×1.51) ถ้าเปลี่ยนจาก Leo's Flow ต้องเพิ่มคริแบบตัวเลข 8–10</li>
+      <li><b>ปลุก Shadow Archer ระดับ Origin ×1.13</b> ตามด้วยปลุก Unleash ระดับ Verity ×1.08</li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Alternatives</span>
+      <h2>เทียบไอเทมทางเลือก</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>เปลี่ยนเป็น</th><th>DPS</th><th>เทียบชุดฐาน</th><th>หมายเหตุ</th></tr></thead>
+        <tbody>
+          <tr><td>ชุดฐาน (Tipan's + Leo's Flow)</td><td class="num">13.8–34.9 ล้าน</td><td class="num">×1.00</td><td>ไม่นับธนูเงาทุกแถว</td></tr>
+          <tr><td>ธนู Foresight of the Conqueror</td><td class="num best">29.2–74.1 ล้าน</td><td class="num best">×2.12</td><td>ตีมอน Lv170 ก็คริ 100% ที่คริแบบตัวเลข 80</td></tr>
+          <tr><td>ธนู Ultimate Foresight of the Conqueror</td><td class="num best">37.5–95.0 ล้าน</td><td class="num best">×2.72</td><td>ค่ากลางจากประกาศแพตช์</td></tr>
+          <tr><td>ชุดเต็ม: Foresight + Ring of Fate + ปลุก Shadow Archer Origin</td><td class="num best">41.9–106.2 ล้าน</td><td class="num best">×3.04</td><td>Ultimate Foresight 53.0–134.3 ล้าน (×3.85) มอน Lv170 คริ 96% ที่คริแบบตัวเลข 80</td></tr>
+          <tr><td>ธนู Star Usurper's Bow</td><td class="num">13.1–33.3 ล้าน</td><td class="num worse">×0.95</td><td>ลูกธนู +2 ใส่ได้ตั้งแต่ Lv1 ตัวจำลองไม่อ่านไลน์ขยายดาเมจ 3% ต่อเลเวลตัวละคร (สูงสุด 300%) ถ้าทำงานจริงจะแรงกว่านี้มาก</td></tr>
+          <tr><td>แหวน 1 Transcendent Ring of Fate</td><td class="num best">17.7–44.9 ล้าน</td><td class="num best">×1.28</td><td>เฉลี่ย 7.5 สแตก คริลดเหลือ 96% ที่คริแบบตัวเลข 80 (มอน Lv170 เหลือ 89%)</td></tr>
+          <tr><td>แหวน 1 Star Usurper's Ring</td><td class="num">15.0–37.9 ล้าน</td><td class="num best">×1.09</td><td>คริแบบตัวเลข +10 คริดาเมจ +75% ขยายดาเมจ 10%</td></tr>
+          <tr><td>แหวน 1 Ultimate Approaching Omen</td><td class="num">14.6–37.0 ล้าน*</td><td class="num best">×1.06*</td><td>*ตัวจำลองไม่นับสแตก Reaper's Harvest ของจริงอาจสูงกว่านี้ คริเหลือ 96%</td></tr>
+          <tr><td>ซองธนู Ultimate Master of Trajectory</td><td class="num">14.4–36.5 ล้าน</td><td class="num best">×1.04</td><td>ความเร็วโจมตีลดเหลือ 4.5 ครั้งต่อวินาที และคริลดเหลือ 95%</td></tr>
+          <tr><td>ถุงมือ Transcendent Spica's Light</td><td class="num">12.8–32.5 ล้าน</td><td class="num worse">×0.93</td><td>ต้องลง Int 223 ความเร็วเหลือ 4.7 ครั้ง และเสียไลน์โจมตีเพิ่มของ Unleash</td></tr>
+          <tr><td>สร้อย Sephdar's Halter</td><td class="num worse">8.3–21.0 ล้าน</td><td class="num worse">×0.60</td><td>มีโอกาสเรียกเงาเพิ่มให้สกิลแท็ก Shadow ตัวเลขนี้ไม่นับเงา คุ้มเฉพาะเมื่อเงาแรงมาก ควรวัดในเกมก่อน</td></tr>
+          <tr><td>ชุดเกราะ Transcendent The First Returnee</td><td class="num">15.2–38.4 ล้าน</td><td class="num best">×1.10</td><td>Str 260 แต่เสียรับดาเมจลดและอมตะ 3 วินาทีของ Numbing Armor</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">ยูนีคในช่องของคราฟจะเสียคริแบบตัวเลขที่ของคราฟเคยให้ ตารางถัดไปคิดทั้งกรณีที่หาคริมาชดเชยได้ และกรณีคริแบบตัวเลขลดลง 20</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ช่องของคราฟ</th><th>หาคริมาชดเชยได้</th><th>คริแบบตัวเลขลด 20</th><th>ต้องการสถานะ</th></tr></thead>
+        <tbody>
+          <tr><td>หมวก Ultimate Stellar Counterattack</td><td class="num best">17.2–43.7 ล้าน (×1.25)</td><td class="num">15.3–38.7 ล้าน (×1.11)</td><td>Str 228</td></tr>
+          <tr><td>บ่า Ultimate Bellatus's Spaulders</td><td class="num best">16.5–41.7 ล้าน (×1.19)</td><td class="num">14.5–36.8 ล้าน (×1.05)</td><td>Int 228</td></tr>
+          <tr><td>เข็มขัด Transcendent Acuben's Crystal</td><td class="num">15.3–38.8 ล้าน (×1.11)</td><td class="num worse">13.6–34.4 ล้าน (×0.98)</td><td>ไม่มี</td></tr>
+          <tr><td>บ่า Transcendent Decomposer's Contradiction</td><td class="num">15.1–38.3 ล้าน (×1.10)</td><td class="num">13.8–34.9 ล้าน (×1.00)</td><td>Str 105, Dex 105</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">Bellatus's Spaulders ไม่นับไลน์ที่ทำงานเฉพาะตอน Channeling เพราะ Unleash ไม่ใช่สกิล Channeling</p>
+  </section>
+</div>
+
+<!-- ============ TAB 3: charm ============ -->
+<div class="panel" role="tabpanel" id="panel-charm" aria-labelledby="tab-charm" hidden>
+
+  <section>
+    <div class="caveat">
+      <div>
+        <strong>ยังไม่มีข้อมูลตัวเลขของ Charm ใน S12</strong>
+        <span>ชีททางการที่ใช้ทำหน้านี้ไม่มีรายการ Charm หัวข้อนี้จึงเป็นหลักการจากไกด์ทางการและไกด์ผู้เล่น (ส่วนใหญ่ปี 2022) บวกตัวเลขค่าคริจากตัวจำลอง เช็กคำอธิบาย Blessing ในเกมก่อนเลือก</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">System</span>
+      <h2>Charm ทำงานยังไง</h2>
+    </div>
+    <ul class="notes">
+      <li><b>ใส่ได้ 6 ชิ้น</b> เปิดหลังจบ Act 10 ช่องเปิดเพิ่มเมื่อเคลียร์แมพมากขึ้น</li>
+      <li><b>Blessing 140%:</b> Charm แต่ละชิ้นเป็นของเทพ 1 องค์ (มี 12 Blessing) และมีค่า % ของ Blessing นั้น รวม Blessing เดียวกันให้ถึง 140% ได้ขยายดาเมจ 30% ตามชนิดของ Blessing</li>
+      <li><b>Chaos Star:</b> Charm 6 ชิ้นค่าเท่ากันรวมได้แค่ราว 84% ต้องหลอม Charm Blessing เดียวกัน 6 ชิ้นที่ Star Fuser เป็น Chaos Star (ค่าสุ่มใกล้ผลรวม ใช้ Chaos Orb มาก) แล้วเติมด้วย Charm Blessing เดียวกันจนถึง 140%</li>
+      <li><b>Charm Slot Upgrade</b> ที่ Star Fuser (หลังจบ Act 13) เพิ่มผลให้แต่ละช่อง ออปชันที่อัปเต็มแล้วใช้ได้กับทุกช่อง</li>
+      <li><b>ลาคริมาต้องใช้ค่า Charm Blessing</b> ในการลงทะเบียน วางแผน Blessing ให้พอสำหรับลาคริมาที่จะใช้ (แท็บ Lacrima)</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">What to roll</span>
+      <h2>เลือก Blessing และออปชัน</h2>
+    </div>
+    <p class="dim">เลือก Blessing ที่ผล 140% เพิ่มดาเมจสายฟ้า ดาเมจธาตุ หรือดาเมจทั้งหมด หน้านี้ยังไม่มีรายการผลของ Blessing ทั้ง 12 ตัว ให้ดูคำอธิบายในเกม แล้วหาออปชันบน Charm ตามลำดับนี้</p>
+    <ol class="notes">
+      <li><b>คริแบบตัวเลข (+Critical Rate)</b> สำคัญที่สุดจนกว่าจะถึงเป้าในตารางด้านล่าง Unleash ไม่มีค่าคริเฉพาะของรูนเหมือน CLA</li>
+      <li><b>คริดาเมจ</b> พอคริถึง 100% แล้ว ตัวนี้คุ้มที่สุดสำหรับสายคริ ตัวคูณคริชุดฐานอยู่ที่ ×6.04</li>
+      <li><b>ดาเมจสายฟ้า ดาเมจธาตุ หรือเจาะธาตุ</b></li>
+      <li><b>ดาเมจ Attack แบบตัวเลข</b> ใช้กับสกิลนี้ได้โดยตรง เพราะดาเมจตัวเลขของรูนมีแค่ +200</li>
+      <li><b>มานาสูงสุด ฟื้นมานา หรือมานาต่อการโจมตี</b> ชุดนี้ใช้มานาราว 265–325 ต่อวินาที</li>
+      <li><b>HP และค่าต้านธาตุ</b></li>
+    </ol>
+    <p class="caption">ความเร็วโจมตีไม่ต้องหาเพิ่ม ชุดนี้ชนเพดาน 5 ครั้งต่อวินาทีแล้ว</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Critical Rate</span>
+      <h2>คริแบบตัวเลขต้องมีเท่าไร</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>คริแบบตัวเลข</th><th>Tipan's Lv150</th><th>Tipan's Lv170</th><th>Foresight Lv150</th><th>Foresight Lv170</th><th>+ Fate Lv150</th><th>+ Fate Lv170</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td class="num worse">39%</td><td class="num worse">38%</td><td class="num worse">48%</td><td class="num worse">46%</td><td class="num worse">46%</td><td class="num worse">44%</td></tr>
+          <tr><td>20</td><td class="num worse">55%</td><td class="num worse">52%</td><td class="num worse">63%</td><td class="num worse">60%</td><td class="num worse">60%</td><td class="num worse">57%</td></tr>
+          <tr><td>40</td><td class="num worse">71%</td><td class="num worse">66%</td><td class="num worse">79%</td><td class="num worse">74%</td><td class="num worse">75%</td><td class="num worse">70%</td></tr>
+          <tr><td>60</td><td class="num worse">86%</td><td class="num worse">80%</td><td class="num worse">95%</td><td class="num worse">88%</td><td class="num worse">89%</td><td class="num worse">83%</td></tr>
+          <tr><td>80</td><td class="num best">100%</td><td class="num worse">95%</td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td><td class="num worse">96%</td></tr>
+          <tr><td>100</td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td><td class="num best">100%</td></tr>
+          <tr><td>เป้าที่คริ 100% <span class="pill top">เป้า</span></td><td class="num">78</td><td class="num">88</td><td class="num">67</td><td class="num">77</td><td class="num">75</td><td class="num">87</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>คริแบบตัวเลข = รวมจาก Charm, Zodiac และของคราฟ ไม่รวมคริของธนู ตัวเลขใช้ชุดไอเทมในแท็บ Item ช่อง "+ Fate" คือ Foresight คู่ Ring of Fate ส่วนช่องอื่นใช้ Leo's Flow</li>
+      <li>เปลี่ยน Leo's Flow เป็น Ring of Fate ทำให้ต้องการคริแบบตัวเลขเพิ่ม 8–10 เพราะเสียอัตราคริ +44–53%</li>
+      <li>ถ้ายังไม่ถึงราว 70 ใส่ Electric Shock แทน Element DMG Amplification ไปก่อน ดูแท็บ Skill + Rune link ที่ 60 ชุดฐานคริได้ 100% เมื่อใส่รูนนี้ และบอสต้องติด Shock</li>
+    </ul>
+  </section>
+</div>
+
+<!-- ============ TAB 4: lacrima ============ -->
+<div class="panel" role="tabpanel" id="panel-lacrima" aria-labelledby="tab-lacrima" hidden>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Lacrima</span>
+      <h2>ลาคริมา</h2>
+    </div>
+    <p class="dim">ลาคริมาให้ออปชันของไอเทมที่ลงทะเบียนไว้โดยไม่ต้องสวม ช่องยูนีคมีเฉพาะในลาคริมาเกรด Legendary (1–3 ช่อง ชนิดของช่องสุ่ม) และดูดซับ 100% คงที่ หาได้จากดันเจียน Guide of Illusion – Time of Confrontation</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ช่องลาคริมา</th><th>ยูนีคที่ใส่</th><th>ได้อะไร</th><th>DPS โดยประมาณ</th></tr></thead>
+        <tbody>
+          <tr><td>รองเท้า <span class="pill top">ทำก่อน</span></td><td>Ultimate Silver Shadow's Footprints<small>แล้วสวม Ultimate Stra's Boots (Dex 223) บนตัว ได้ทั้งสองคู่</small></td><td>อัตราคริ +86–110%, คริดาเมจ +46–105%, ขยายดาเมจ 17–32%</td><td class="num">13.8–34.9 ล้าน*</td></tr>
+          <tr><td>อาวุธสองมือ <span class="pill core">เข้ากับสายเงา</span></td><td>Ultimate Brilliance of Contrast<small>ดาบสองมือ ไม่ต้องใช้ธนูในช่องนี้</small></td><td>ขยายดาเมจ 35% และคริดาเมจ +250% ขณะติด Shadow of Sephdar และเรียกเงาเพิ่มให้สกิลแท็ก Shadow</td><td class="num best">26.3–66.7 ล้าน**</td></tr>
+          <tr><td>อาวุธสองมือ</td><td>Ultimate Casthor's Vision<small>ขวานสองมือ ไม่ต้องใช้ธนูในช่องนี้</small></td><td>คริดาเมจ +135–180%, Maximized DMG +75–110%</td><td class="num">17.4–44.1 ล้าน</td></tr>
+          <tr><td>อาวุธมือเดียว<small>ถ้าลาคริมามีช่องนี้แทนสองมือ</small></td><td>Ultimate Token of Trust<small>Bowgun, Dex 270</small></td><td>ขยายดาเมจ 26–35%, คริดาเมจ +130–160%</td><td class="num best">22.4–56.7 ล้าน</td></tr>
+          <tr><td>ชุดเกราะ</td><td>Ultimate Numbing Armor<small>แล้วสวมชุดคราฟที่มี HP ค่าต้านธาตุ และมานาบนตัว</small></td><td>HP +85–110%, รับดาเมจลด 18–25%</td><td>ไม่เพิ่มดาเมจ</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="notes">
+      <li>DPS นับเฉพาะออปชันของยูนีค ไม่นับค่าพื้นฐานของอาวุธหรือชุดเกราะ เพราะน่าจะไม่ส่งต่อ (อนุมาน) นับกับชุดฐานในแท็บ Item และแถวอาวุธนับแยกกันทีละแถว</li>
+      <li>*ตัวจำลองนับแถวรองเท้าได้เท่าเดิม เพราะไม่นับไลน์ของ Stra's Boots: ผล Sharpness (อัตราคริ +50% คริดาเมจ +25% และขยายผล +200–300%), คริดาเมจ +200–250% ใส่ Elite และ Perfect Dodge ของจริงจึงสูงกว่านี้</li>
+      <li>**<b>Brilliance of Contrast เป็นตัวเลขกรณีดีที่สุด:</b> ตัวจำลองนับผลของ Shadow of Sephdar ว่าทำงานตลอด ของจริงมีโอกาสติด 50% ต่อครั้งที่โดน นาน 3 วินาที ยิง 5 ครั้งต่อวินาทีจึงน่าจะติดเกือบตลอด แต่ผลแบบมีเงื่อนไขอาจไม่ทำงานผ่านลาคริมา ยูนีคนี้เข้ากับชุดนี้เพราะส่วนเรียกเงาใช้กับสกิลที่ลิงก์รูนร่ายสกิลไม่ได้ และชุดนี้ไม่มีรูนร่ายสกิล</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Choosing</span>
+      <h2>เลือกลาคริมา</h2>
+    </div>
+    <ul class="notes">
+      <li><b>Item Level ของลาคริมาต้องไม่ต่ำกว่ายูนีค</b> ใส่ของที่เลเวลสูงกว่าลาคริมาไม่ได้ ยูนีคในตารางเป็น Tier 34–35 จึงต้องหาลาคริมา Item Level สูง</li>
+      <li><b>ค่า Charm Blessing</b> ลาคริมาแต่ละอันต้องใช้ Blessing ต่างชนิดและต่างจำนวน เช็กก่อนว่า Charm ที่ใส่อยู่ให้ค่าถึง</li>
+      <li><b>ช่อง Magic/Rare ที่เหลือ</b> ยิ่ง % ดูดซับสูงยิ่งดี ลาคริมา Legendary ช่อง Magic ได้ 110–130% ช่อง Rare ได้ 85–100% (แพตช์ ม.ค. 2025) ของคราฟ Magic ที่ออปชันดีจึงคุ้มที่สุดในช่องนี้ ลาคริมาที่ดรอปก่อนแพตช์นั้นยังเป็น 40–85% และลาคริมาจากกล่องอีเวนต์ไม่ได้โบนัส % ดูดซับ</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Before you register</span>
+      <h2>ควรรู้ก่อนลง</h2>
+    </div>
+    <ul class="notes">
+      <li><b>เปลี่ยนของในช่องแล้วของเดิมถูกทำลาย</b> ลงของต้องใช้ Link of Unity ถ้าเปลี่ยนของหรือเปลี่ยนตัวลาคริมา ของเดิมจะหายเว้นแต่จ่าย Ruby กู้คืน ใส่เฉพาะยูนีคตัวจบ</li>
+      <li><b>ไม่ใช่ทุกออปชันที่ส่งต่อ</b> ประกาศทางการยอมรับว่ามีออปชันที่ลาคริมาไม่ส่งผล แต่ไม่ได้บอกว่าตัวไหน ค่าพื้นฐานของอาวุธ (ดาเมจ ความเร็ว คริอุปกรณ์) และ %คริอุปกรณ์น่าจะไม่ส่งต่อ (อนุมาน)</li>
+      <li><b>ออปชันที่มีเงื่อนไขอาจไม่ทำงาน</b> เช่น สแตกความเร็วของ Silver Shadow, อมตะ 3 วินาทีของ Numbing Armor และผล Shadow of Sephdar</li>
+      <li><b>ยังไม่รู้ว่าลาคริมาเช็กค่าสถานะหรือไม่</b> ถ้าไม่เช็ก ใส่ Silver Shadow ได้โดยไม่ต้องลง Str 228 ลองกดลงทะเบียนดูว่าเกมยอมไหม</li>
+      <li><b>ข้อเสียของ Numbing Armor อาจติดมาด้วย</b> คือใช้ Barrier ไม่ได้</li>
+      <li>ไม่ใส่ยูนีคซ้ำกับที่สวมอยู่ เพราะยังไม่รู้ว่ายูนีคชื่อเดียวกันซ้อนกันได้หรือไม่</li>
+    </ul>
+  </section>
+</div>
+
+<footer>
+  <span>ดูเพิ่ม: <a href="cla-lightning-chain-build.html">ธนูสายฟ้า + Lightning Chain</a> · <a href="bow-crit-builds.html">บิลด์ธนูสายคริ</a> · <a href="frost-storm-crit-build.html">Frost Storm สายคริ</a> · <a href="skill-tier-list.html">Tier List สกิล S12</a> · <a href="weapon-craft-guide.html">คู่มือคราฟอาวุธ</a></span>
+  <span>แหล่งข้อมูล</span>
+  <ul>
+    <li><a href="https://ud.floor.line.games/us/bbsCmn/detail/1791362347478022365">Oct 8 Update Notice: Foresight of the Conqueror, Ring of Fate (ประกาศทางการ)</a></li>
+    <li><a href="https://guide.floor.line.games/UD/en_US/detail/1170004138902100096">Lacrima (ไกด์ทางการ)</a></li>
+    <li><a href="https://guide.floor.line.games/UD/en_US/detail/1170004014226900655">Charm Slot Upgrade (ไกด์ทางการ)</a></li>
+    <li><a href="https://gamesfuze.com/guides/undecember-ultimate-charm-guide-how-to-increase-damage/">Undecember: Ultimate Charm Guide (ไกด์ผู้เล่น ปี 2022)</a></li>
+  </ul>
+  <span>จัดทำจากชีทข้อมูลทางการ S12, ประกาศแพตช์ 8 ต.ค., ผลทดสอบในเกมของผู้เล่น และตัวจำลองของ Undecember DB ไม่ใช่ไกด์ทางการของ LINE Games</span>
+</footer>
+
+</div>
+
+<script>
+// Draw the rune board (pointy-top hexes): the skill in the centre, six links around it.
+(function () {
+  const NS = 'http://www.w3.org/2000/svg'
+  const HEX = '50.2,-29 50.2,29 0,58 -50.2,29 -50.2,-29 0,-58'
+  // NE, E, SE, SW, W, NW
+  const POS = [[53.7, -93], [107.4, 0], [53.7, 93], [-53.7, 93], [-107.4, 0], [-53.7, -93]]
+  const el = (name, attrs, text) => {
+    const n = document.createElementNS(NS, name)
+    for (const k in attrs) n.setAttribute(k, attrs[k])
+    if (text) n.textContent = text
+    return n
+  }
+  const label = (svg, x, y, lines, cls, lh) => {
+    const top = y - ((lines.length - 1) * lh) / 2 + 3
+    lines.forEach((t, i) => svg.appendChild(el('text', { class: cls, x, y: top + i * lh }, t)))
+  }
+  document.querySelectorAll('svg.board').forEach((svg) => {
+    svg.dataset.links.split(';').map((s) => s.trim()).filter(Boolean).forEach((spec, i) => {
+      const [name, style] = spec.split(':')
+      const [color, core] = style.split(' ')
+      const [x, y] = POS[i]
+      svg.appendChild(el('polygon', { points: HEX, class: `hx hx-${color}${core ? ' hx-core' : ''}`, transform: `translate(${x} ${y})` }))
+      label(svg, x, y, name.split('|'), 'hx-text', 12)
+    })
+    svg.appendChild(el('polygon', { points: HEX, class: 'hx hx-skill' }))
+    label(svg, 0, 0, svg.dataset.skill.split('|'), 'hx-skill-text', 14)
+  })
+})()
+
+// Tabs: click, arrow keys, #hash deep link, remembered per viewer.
+;(function () {
+  const tabs = [...document.querySelectorAll('.tab')]
+  const show = (id, focus) => {
+    tabs.forEach((t) => {
+      const on = t.id === id
+      t.setAttribute('aria-selected', String(on))
+      t.tabIndex = on ? 0 : -1
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on
+      if (on && focus) t.focus()
+    })
+    try { localStorage.setItem('uls-sa-tab', id) } catch (e) {}
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => {
+      show(t.id)
+      // start the new tab at its top instead of mid-page
+      const top = document.querySelector('header').getBoundingClientRect().bottom + window.scrollY
+      if (window.scrollY > top) window.scrollTo({ top })
+    })
+    t.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return
+      const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]
+      show(next.id, true)
+    })
+  })
+  const fromHash = { '#build': 'tab-build', '#gear': 'tab-gear', '#charm': 'tab-charm', '#lacrima': 'tab-lacrima' }[location.hash]
+  let saved = null
+  try { saved = localStorage.getItem('uls-sa-tab') } catch (e) {}
+  show(fromHash || (saved && document.getElementById(saved) ? saved : 'tab-build'))
+})()
+</script>
+</body>
+</html>

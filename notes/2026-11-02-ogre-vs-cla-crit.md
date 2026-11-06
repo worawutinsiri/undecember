@@ -69,7 +69,7 @@
 - มานา: CLA ราว 38 ต่อการยิง (รวม +15%) + Lightning Chain ราว 22 = ราว 300 ต่อวินาที
 
 ## เทียบ Unleash Lightning Shot แทน CLA (5 พ.ย. 2026)
-ผู้ใช้เรียกว่า "ยิงประทุสายฟ้า" ผมตีความว่าคือ Unleash Lightning Shot จากคำอธิบายรูน ผู้ใช้ไม่ได้แย้ง แต่ยังไม่ได้ยืนยันจากภาพในเกม ผู้ใช้ขอให้เพิ่มเป็นอีกบิลด์ในหน้าเดียวกัน จึงอยู่ในแท็บ `Unleash: Skill + Rune link` ของ `docs/cla-lightning-chain-build.html`
+ผู้ใช้เรียกว่า "ยิงประทุสายฟ้า" ผมตีความว่าคือ Unleash Lightning Shot จากคำอธิบายรูน ผู้ใช้ไม่ได้แย้ง แต่ยังไม่ได้ยืนยันจากภาพในเกม ผู้ใช้ขอให้เพิ่มเป็นอีกบิลด์ในหน้าเดียวกัน จึงอยู่ในแท็บ `Unleash: Skill + Rune link` ของ `docs/cla-lightning-chain-build.html` ต่อมาผู้ใช้ทดสอบในเกมว่า Unleash + Shadow Archer แรงกว่า On Hit มาก ดู `notes/2026-11-06-unleash-shadow-archer.md`
 
 **ข้อสรุป: ฟาร์ม CLA ดีกว่า ผู้ใช้เน้นฟาร์มจึงคง CLA ไว้ ตีบอสขึ้นกับว่า Lightning Particle โดนบอสกี่ครั้ง** สองบิลด์ใช้ไอเทมและชุด Lightning Chain เดียวกัน ต่างกันแค่รูนสกิลและ Concentrated Area DMG เป็น Mana Storm
 - ใส่ Concentrated Area DMG กับ Area Effect ไม่ได้ เพราะไม่มีแท็ก Area of Effect ชุดลิงก์ที่ดีสุดคือ Attack DMG Increase, Additional Lightning DMG, Quick Attack, Element DMG Amplification, Mana Storm (บวก Spell Activation)
