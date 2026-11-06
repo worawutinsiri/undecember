@@ -1,4 +1,20 @@
 {
+ "Attack DMG Increase": "เพิ่มความเสียหายการโจมตี",
+ "Chain": "ลูกโซ่",
  "Charged Shot": "ชาร์จยิง",
- "Divine Punishment": "การลงโทษสวรรค์"
+ "Cold Penetration": "เจาะเกราะไอเย็น",
+ "Divine Punishment": "การลงโทษสวรรค์",
+ "Electric Sentry": "หน้าไม้ฉับพลัน",
+ "Element DMG Amplification": "ขยายความเสียหายธาตุ",
+ "Element Master": "ผู้ปกครองธาตุ",
+ "Gather Minions": "ระดมสมุน",
+ "Lightning Abyss Knight": "อัศวินแห่งห้วงลึกฉับพลัน",
+ "Lightning Penetration": "เจาะเกราะสายฟ้า",
+ "Mana Storm": "มรสุมมนตรา",
+ "Minion Presence": "การมีอยู่ของสมุน",
+ "Shadow Archer": "นักธนูเงา",
+ "Slaughter": "สังหารหมู่",
+ "Split Projectile": "แบ่งแยกโปรเจคไทล์",
+ "Strike": "ไม่ตาย",
+ "Summon Lightning Arrow Abyssling": "อัญเชิญร่างห้วงลึกศรสายฟ้า"
 }

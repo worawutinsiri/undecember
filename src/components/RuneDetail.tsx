@@ -36,9 +36,12 @@ export function RuneDetail({ rune, showEnglish = false }: { rune: Rune; showEngl
             {rune.status === 'new' && <span className="chip badge-new">ใหม่ S12</span>}
             {rune.change === 'major' && <span className="chip badge-changed">เปลี่ยนสำคัญใน S12</span>}
             {rune.change === 'minor' && <span className="chip">S12 ปรับตัวเลขเล็กน้อย</span>}
+            {rune.status === 'legacy' && <span className="chip">ข้อมูลเก่า</span>}
           </div>
         </div>
       </header>
+
+      {rune.status === 'legacy' && <p className="faint rd-get">รูนนี้ไม่อยู่ในชีท S12 ค่ามาจาก BuildDecember จึงอาจเก่าหรือขาดไลน์ เช่น ค่าทรัพยากรและเอฟเฟกต์เกรด ควรเทียบกับหน้ารูนในเกม</p>}
 
       <p className="rd-desc">
         {thDescription(rune.description)

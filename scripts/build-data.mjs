@@ -144,9 +144,12 @@ function changeSize(before, after) {
 
 const MAIN_STAT_COLOR ={ Strength: 'red', Agility: 'green', Intellect: 'blue' }
 
+// BuildDecember's name → the sheet's name, for runes renamed since (the awakening lines match exactly).
+const BUILD_DECEMBER_RENAMES = { 'Increased Trap Install Distance': 'Increase Trap Install Distance' }
+
 function loadBuildDecember() {
   const list = JSON.parse(fs.readFileSync(path.join(RAW, 'buildDecember', 'RuneList.json'), 'utf8'))
-  return new Map(list.map((r) => [r.title.trim().toLowerCase(), r]))
+  return new Map(list.map((r) => [(BUILD_DECEMBER_RENAMES[r.title.trim()] ?? r.title).trim().toLowerCase(), r]))
 }
 
 function buildRunes(file, kind, extra, warnings) {
@@ -207,6 +210,90 @@ function buildRunes(file, kind, extra, warnings) {
       return out
     })
     .sort((a, b) => a.name.localeCompare(b.name))
+}
+
+// ---------------------------------------------------------------- link runes the season sheet leaves out
+
+// The sheet lists only the runes a season touched, so unchanged ones exist only in BuildDecember.
+// That file keeps one value per line name, omits Resource Cost Increase and grade lines, and has
+// some garbled text and stripped units. These are marked status "legacy" so the site can say so.
+const LEGACY_TEXT_FIXES = [
+  [/At stack/g, 'Attack'],
+  [/Manapent/g, 'Mana spent'],
+  [/Max S stacks/g, 'Max Stacks'],
+  [/^Duration (\S+)$/, 'Duration $1 s'],
+  [/^Trigger Cooldown (\S+)$/, 'Trigger Cooldown $1 s'],
+  [/ for ([\d.]+) (on|upon) /, ' for $1 s $2 '],
+  [/Cooldown: ([\d.]+)\)/, 'Cooldown: $1 s)'],
+]
+
+const SPELL_ACTIVATION_ON_ATTACK_HIT_COMMON = [
+  '48% Resource Cost Dampening for Activated Skill',
+  'Adds 100% of Attack DMG increase to Spell DMG',
+  'Add 100% of Attack Critical Rate Increase/Critical DMG to Spell Critical Rate Increase/Critical DMG',
+  'Trigger Chance 100%',
+  'Activates max 1 time on hit whenever Activation Skill is used',
+]
+
+// Read from the in-game rune page on 2 Nov 2026 (see notes/2026-11-02-ogre-vs-cla-crit.md).
+const LEGACY_OVERRIDES = {
+  'Spell Activation on Attack Hit': {
+    lv1: ['Resource Cost Increase 15%', '55% DMG Dampening for Activated Skill', ...SPELL_ACTIVATION_ON_ATTACK_HIT_COMMON, '10% DMG Dampening for Activated Skill'],
+    lv45: ['Resource Cost Increase 15%', '26.9% DMG Dampening for Activated Skill', ...SPELL_ACTIVATION_ON_ATTACK_HIT_COMMON, '10% DMG Dampening for Activated Skill'],
+    grades: {
+      magic: ['8% DMG Dampening for Activated Skill'],
+      rare: ['10% Resource Cost Dampening', '8% DMG Dampening for Activated Skill'],
+      legendary: ['20% Resource Cost Dampening', '+20% Skill Rune Cooldown Recovery Speed', '5% DMG Dampening for Activated Skill'],
+    },
+  },
+}
+
+/** "#% DMG": [10] → "10% DMG"; "[#-#]": [1, 4] → "[1-4]"; a non-array value is a heading with no numbers. */
+function legacyLines(stats) {
+  return Object.entries(stats ?? {}).map(([key, values]) => {
+    let i = 0
+    const line = Array.isArray(values) ? key.replace(/\[#-#\]|#/g, (m) => (m === '#' ? values[i++] : `[${values[i++]}-${values[i++]}]`)) : key
+    return LEGACY_TEXT_FIXES.reduce((text, [pattern, to]) => text.replace(pattern, to), line)
+  })
+}
+
+/** Puts the description in the sheet's format: one rule per line, same wording. */
+function legacyDescription(text) {
+  return text
+    .trim()
+    .replace(/Rune cannot be awakening/g, 'Rune cannot be awakened.')
+    .replace(/Rune cannot be enhanced/g, 'Rune cannot be enhanced.')
+    .replace(/(Activation|Target) \(/g, '$1(')
+    .replace(/a Target ([A-Z][^(.]*?) Skill in/, 'a Target($1) Skill in')
+    .replace(/that satisfy (?!any one)/g, 'that are ')
+    .replace(/\s+(?=(?:Can be linked|Cannot be linked|Must link|Target Skill|Rune cannot|Applies to) )/g, '\n')
+}
+
+function buildLegacyLinkRunes(extra, known) {
+  return [...extra.entries()]
+    .filter(([key, r]) => r.type === 'link' && !known.has(key))
+    .map(([, r]) => {
+      const name = r.title.trim()
+      const conditions = r.conditions ?? {}
+      return {
+        id: slug(name),
+        name,
+        kind: 'link',
+        status: 'legacy',
+        color: MAIN_STAT_COLOR[r.mainStat] ?? null,
+        minRarity: r.minRarity?.toLowerCase() ?? null,
+        howToGet: r.howToGet ?? [],
+        description: legacyDescription(r.description),
+        tags: r.tags ?? [],
+        restrictions: [],
+        lv1: legacyLines(r.stats?.level1),
+        lv45: legacyLines(r.stats?.level45),
+        grades: {},
+        awakening: { source: legacyLines(r.awakenings?.source), origin: legacyLines(r.awakenings?.origin), verity: legacyLines(r.awakenings?.verity) },
+        linkRules: { groups: conditions.any ? [{ mode: 'any', tags: conditions.any }] : [], exclude: conditions.cannot ?? [], minions: !!conditions.minions },
+        ...LEGACY_OVERRIDES[name],
+      }
+    })
 }
 
 // ---------------------------------------------------------------- uniques
@@ -288,6 +375,10 @@ const warnings = []
 const extra = loadBuildDecember()
 const skill = buildRunes('season-skill-rune-list-the-farside.csv', 'skill', extra, warnings)
 const link = buildRunes('season-link-rune-list-the-farside.csv', 'link', extra, warnings)
+const known = new Set([...skill, ...link].map((r) => r.name.toLowerCase()))
+const legacy = buildLegacyLinkRunes(extra, known)
+link.push(...legacy)
+link.sort((a, b) => a.name.localeCompare(b.name))
 const uniques = buildUniques(warnings)
 
 fs.mkdirSync(OUT, { recursive: true })
@@ -296,5 +387,5 @@ write('skill-runes.json', skill)
 write('link-runes.json', link)
 write('uniques.json', uniques)
 
-console.log(`skill runes: ${skill.length}, link runes: ${link.length}, uniques: ${uniques.length}`)
+console.log(`skill runes: ${skill.length}, link runes: ${link.length} (${legacy.length} legacy), uniques: ${uniques.length}`)
 if (warnings.length) console.log(`\n${warnings.length} warnings:\n  ` + warnings.join('\n  '))

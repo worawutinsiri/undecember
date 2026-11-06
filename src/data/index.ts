@@ -15,7 +15,7 @@ export const DATA_META = {
   updated: '5 ต.ค. 2026',
   sources: [
     { label: 'LINE Games — Season Mode Changes (ชีททางการ)', url: 'https://ud.floor.line.games/us/bbs/guide/stat' },
-    { label: 'nestula/BuildDecember (MIT) — สีรูน / วิธีได้รับ', url: 'https://github.com/nestula/BuildDecember' },
+    { label: 'nestula/BuildDecember (MIT) — สีรูน / วิธีได้รับ / รูนลิงก์ที่ไม่อยู่ในชีท S12', url: 'https://github.com/nestula/BuildDecember' },
   ],
 }
 

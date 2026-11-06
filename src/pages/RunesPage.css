@@ -94,6 +94,9 @@
 .mini.changed {
   color: var(--warn);
 }
+.mini.legacy {
+  color: var(--text-faint);
+}
 
 .rune-detail-pane {
   position: sticky;

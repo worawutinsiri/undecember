@@ -1454,6 +1454,47 @@
   "change": "minor"
  },
  {
+  "id": "buff-activation-when-hit",
+  "name": "Buff Activation when Hit",
+  "kind": "link",
+  "status": "legacy",
+  "color": "red",
+  "minRarity": "magic",
+  "howToGet": [
+   "Synthesis"
+  ],
+  "description": "Must link a Target(Shout, Attack Enhance, Defense Enhance) Skill in the arrow's direction.\nTarget Skill cannot be linked if any of the Channeling, Totem, Sentry, Minion, Movement, Toggle, Trap tags exist.\nTarget Skill must be registered in a Skill slot to activate.\nRune cannot be awakened.",
+  "tags": [
+   "Shout",
+   "Attack Enhance",
+   "Defense Enhance"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "30% Effect Dampening for Activated Skill",
+   "+5% Skill Rune Cooldown Recovery Speed",
+   "Trigger Chance 100%",
+   "Trigger Cooldown 1 s"
+  ],
+  "lv45": [
+   "30% Effect Dampening for Activated Skill",
+   "+35.6% Skill Rune Cooldown Recovery Speed",
+   "Trigger Chance 100%",
+   "Trigger Cooldown 1 s"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [],
+   "exclude": [],
+   "minions": false
+  }
+ },
+ {
   "id": "burning-flame",
   "name": "Burning Flame",
   "kind": "link",
@@ -3031,6 +3072,55 @@
    "Cut ( 10% Movement Speed Dampening, 12% DMG Taken Amplification while Bleeding )"
   ],
   "change": "minor"
+ },
+ {
+  "id": "dampen-resource-cost",
+  "name": "Dampen Resource Cost",
+  "kind": "link",
+  "status": "legacy",
+  "color": "blue",
+  "minRarity": "magic",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that satisfy any one of Attack, Spell",
+  "tags": [
+   "Attack",
+   "Spell"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "Resource Cost Increase -5%"
+  ],
+  "lv45": [
+   "Resource Cost Increase -22%"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [
+    "-[10-5]% Resource Cost"
+   ],
+   "origin": [
+    "Decrease DMG Taken by [1-4]% of Mana spent for 1 s upon using Skill (Max: 5%, Cooldown: 5 s)"
+   ],
+   "verity": [
+    "-[5-3]% Resource Cost",
+    "-1 Resource Cost if linked Skill Rune has 1 Blue Link Rune"
+   ]
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Attack",
+      "Spell"
+     ]
+    }
+   ],
+   "exclude": [],
+   "minions": false
+  }
  },
  {
   "id": "deadly-poison",
@@ -6883,6 +6973,150 @@
   "change": "minor"
  },
  {
+  "id": "improved-technique",
+  "name": "Improved Technique",
+  "kind": "link",
+  "status": "legacy",
+  "color": "red",
+  "minRarity": "rare",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that satisfy any one of Attack, Spell\nRune cannot be awakened.",
+  "tags": [
+   "Attack",
+   "Spell"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "+1 Rune Level",
+   "+1% Minion DMG per 4 Intelligence (Max: 320%)",
+   "+1% Sentry DMG per 4 Dexterity (Max: 320%)"
+  ],
+  "lv45": [
+   "+3 Rune Level",
+   "+4% Minion DMG per 4 Intelligence (Max: 320%)",
+   "+4% Sentry DMG per 4 Dexterity (Max: 320%)"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Attack",
+      "Spell"
+     ]
+    }
+   ],
+   "exclude": [],
+   "minions": false
+  }
+ },
+ {
+  "id": "increase-alchemy-ingredient-drop-chance",
+  "name": "Increase Alchemy Ingredient Drop Chance",
+  "kind": "link",
+  "status": "legacy",
+  "color": "blue",
+  "minRarity": "magic",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that are Strike\nCannot be linked with Skills that are Totem, Sentry, Minion, Movement\nRune cannot be enhanced.\nRune cannot be awakened.",
+  "tags": [
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "100% chance to increase Alchemy Ingredient Drop Chance on hit",
+   "Duration 5 s",
+   "+7.5% Alchemy Ingredient Drop Chance"
+  ],
+  "lv45": [
+   "100% chance to increase Alchemy Ingredient Drop Chance on hit",
+   "Duration 5 s",
+   "+7.5% Alchemy Ingredient Drop Chance"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Strike"
+     ]
+    }
+   ],
+   "exclude": [
+    "Totem",
+    "Sentry",
+    "Minion",
+    "Movement"
+   ],
+   "minions": false
+  }
+ },
+ {
+  "id": "increase-charm-drop-chance",
+  "name": "Increase Charm Drop Chance",
+  "kind": "link",
+  "status": "legacy",
+  "color": "blue",
+  "minRarity": "magic",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that are Strike\nCannot be linked with Skills that are Totem, Sentry, Minion, Movement\nRune cannot be enhanced.\nRune cannot be awakened.",
+  "tags": [
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "100% chance to increase Charm Drop Chance on hit",
+   "Duration 5 s",
+   "+7.5% Charm Drop Chance"
+  ],
+  "lv45": [
+   "100% chance to increase Charm Drop Chance on hit",
+   "Duration 5 s",
+   "+7.5% Charm Drop Chance"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Strike"
+     ]
+    }
+   ],
+   "exclude": [
+    "Totem",
+    "Sentry",
+    "Minion",
+    "Movement"
+   ],
+   "minions": false
+  }
+ },
+ {
   "id": "increase-duration",
   "name": "Increase Duration",
   "kind": "link",
@@ -6952,6 +7186,351 @@
   "change": "minor"
  },
  {
+  "id": "increase-element-drop-chance",
+  "name": "Increase Element Drop Chance",
+  "kind": "link",
+  "status": "legacy",
+  "color": "blue",
+  "minRarity": "magic",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that are Strike\nCannot be linked with Skills that are Totem, Sentry, Minion, Movement\nRune cannot be enhanced.\nRune cannot be awakened.",
+  "tags": [
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "100% chance to increase Element Drop Chance on hit",
+   "Duration 5 s",
+   "+5% Rune Growth Material Drop Chance"
+  ],
+  "lv45": [
+   "100% chance to increase Element Drop Chance on hit",
+   "Duration 5 s",
+   "+5% Rune Growth Material Drop Chance"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Strike"
+     ]
+    }
+   ],
+   "exclude": [
+    "Totem",
+    "Sentry",
+    "Minion",
+    "Movement"
+   ],
+   "minions": false
+  }
+ },
+ {
+  "id": "increase-essence-drop-chance",
+  "name": "Increase Essence Drop Chance",
+  "kind": "link",
+  "status": "legacy",
+  "color": "blue",
+  "minRarity": "magic",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that are Strike\nCannot be linked with Skills that are Totem, Sentry, Minion, Movement\nRune cannot be enhanced.\nRune cannot be awakened.",
+  "tags": [
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "100% chance to increase Essence Drop Chance on hit",
+   "Duration 5 s",
+   "+5% Essence Drop Chance"
+  ],
+  "lv45": [
+   "100% chance to increase Essence Drop Chance on hit",
+   "Duration 5 s",
+   "+5% Essence Drop Chance"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Strike"
+     ]
+    }
+   ],
+   "exclude": [
+    "Totem",
+    "Sentry",
+    "Minion",
+    "Movement"
+   ],
+   "minions": false
+  }
+ },
+ {
+  "id": "increase-gold-gain-amount",
+  "name": "Increase Gold Gain Amount",
+  "kind": "link",
+  "status": "legacy",
+  "color": "red",
+  "minRarity": "magic",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that are Strike\nCannot be linked with Skills that are Totem, Sentry, Minion, Movement\nRune cannot be enhanced.\nRune cannot be awakened.",
+  "tags": [
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "100% chance to increase Gold Gain Amount on hit",
+   "Duration 5 s",
+   "+5% Gold Gain Amount"
+  ],
+  "lv45": [
+   "100% chance to increase Gold Gain Amount on hit",
+   "Duration 5 s",
+   "+5% Gold Gain Amount"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Strike"
+     ]
+    }
+   ],
+   "exclude": [
+    "Totem",
+    "Sentry",
+    "Minion",
+    "Movement"
+   ],
+   "minions": false
+  }
+ },
+ {
+  "id": "increase-gold-gain-chance",
+  "name": "Increase Gold Gain Chance",
+  "kind": "link",
+  "status": "legacy",
+  "color": "red",
+  "minRarity": "magic",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that are Strike\nCannot be linked with Skills that are Totem, Sentry, Minion, Movement\nRune cannot be enhanced.\nRune cannot be awakened.",
+  "tags": [
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "100% chance to increase Gold Gain Chance on hit",
+   "Duration 5 s",
+   "+5% Gold Gain Chance"
+  ],
+  "lv45": [
+   "100% chance to increase Gold Gain Chance on hit",
+   "Duration 5 s",
+   "+5% Gold Gain Chance"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Strike"
+     ]
+    }
+   ],
+   "exclude": [
+    "Totem",
+    "Sentry",
+    "Minion",
+    "Movement"
+   ],
+   "minions": false
+  }
+ },
+ {
+  "id": "increase-item-drop-rarity",
+  "name": "Increase Item Drop Rarity",
+  "kind": "link",
+  "status": "legacy",
+  "color": "green",
+  "minRarity": "magic",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that are Strike\nCannot be linked with Skills that are Totem, Sentry, Minion, Movement\nRune cannot be enhanced.\nRune cannot be awakened.",
+  "tags": [
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "100% chance to increase Item Drop Rarity on hit",
+   "Duration 5 s",
+   "+10% Item Drop Rarity"
+  ],
+  "lv45": [
+   "100% chance to increase Item Drop Rarity on hit",
+   "Duration 5 s",
+   "+10% Item Drop Rarity"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Strike"
+     ]
+    }
+   ],
+   "exclude": [
+    "Totem",
+    "Sentry",
+    "Minion",
+    "Movement"
+   ],
+   "minions": false
+  }
+ },
+ {
+  "id": "increase-kill-exp",
+  "name": "Increase Kill EXP",
+  "kind": "link",
+  "status": "legacy",
+  "color": "red",
+  "minRarity": "magic",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that are Strike\nCannot be linked with Skills that are Totem, Sentry, Minion, Movement\nRune cannot be enhanced.\nRune cannot be awakened.",
+  "tags": [
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "100% chance to increase Kill EXP on hit",
+   "Duration 5 s",
+   "+4% Character EXP on Kill",
+   "+4% Rune Master EXP on Kill"
+  ],
+  "lv45": [
+   "100% chance to increase Kill EXP on hit",
+   "Duration 5 s",
+   "+4% Character EXP on Kill",
+   "+4% Rune Master EXP on Kill"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Strike"
+     ]
+    }
+   ],
+   "exclude": [
+    "Totem",
+    "Sentry",
+    "Minion",
+    "Movement"
+   ],
+   "minions": false
+  }
+ },
+ {
+  "id": "increase-link-rune-drop-chance",
+  "name": "Increase Link Rune Drop Chance",
+  "kind": "link",
+  "status": "legacy",
+  "color": "green",
+  "minRarity": "magic",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that are Strike\nCannot be linked with Skills that are Totem, Sentry, Minion, Movement\nRune cannot be enhanced.\nRune cannot be awakened.",
+  "tags": [
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "100% chance to increase Link Rune Drop Chance on hit",
+   "Duration 5 s",
+   "+5% Link Rune Drop Chance"
+  ],
+  "lv45": [
+   "100% chance to increase Link Rune Drop Chance on hit",
+   "Duration 5 s",
+   "+5% Link Rune Drop Chance"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Strike"
+     ]
+    }
+   ],
+   "exclude": [
+    "Totem",
+    "Sentry",
+    "Minion",
+    "Movement"
+   ],
+   "minions": false
+  }
+ },
+ {
   "id": "increase-maximized-dmg-chance",
   "name": "Increase Maximized DMG Chance",
   "kind": "link",
@@ -7018,13 +7597,64 @@
   "change": "minor"
  },
  {
+  "id": "increase-skill-rune-drop-chance",
+  "name": "Increase Skill Rune Drop Chance",
+  "kind": "link",
+  "status": "legacy",
+  "color": "green",
+  "minRarity": "magic",
+  "howToGet": [
+   "Guild"
+  ],
+  "description": "Can be linked with Skills that are Strike\nCannot be linked with Skills that are Totem, Sentry, Minion, Movement\nRune cannot be enhanced.\nRune cannot be awakened.",
+  "tags": [
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "100% chance to increase Skill Rune Drop Chance on hit",
+   "Duration 5 s",
+   "+5% Skill Rune Drop Chance"
+  ],
+  "lv45": [
+   "100% chance to increase Skill Rune Drop Chance on hit",
+   "Duration 5 s",
+   "+5% Skill Rune Drop Chance"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Strike"
+     ]
+    }
+   ],
+   "exclude": [
+    "Totem",
+    "Sentry",
+    "Minion",
+    "Movement"
+   ],
+   "minions": false
+  }
+ },
+ {
   "id": "increase-trap-install-distance",
   "name": "Increase Trap Install Distance",
   "kind": "link",
   "status": "changed",
-  "color": null,
-  "minRarity": null,
-  "howToGet": [],
+  "color": "green",
+  "minRarity": "normal",
+  "howToGet": [
+   "Synthesis"
+  ],
   "description": "Can be linked with Skills that are Trap",
   "tags": [
    "Trap"
@@ -12307,6 +12937,68 @@
   "change": "minor"
  },
  {
+  "id": "spell-activation-on-attack-hit",
+  "name": "Spell Activation on Attack Hit",
+  "kind": "link",
+  "status": "legacy",
+  "color": "red",
+  "minRarity": "normal",
+  "howToGet": [
+   "Drop",
+   "Shop"
+  ],
+  "description": "Must link an Activation(Attack, Strike) Skill and a Target(Spell) Skill in the arrow's direction.\nTarget Skill cannot be linked if any of the Attack, Channeling, Totem, Sentry, Minion, Movement, Toggle, Trap tags exist.\nTarget Skill must be registered in a Skill slot to activate.\nRune cannot be awakened.",
+  "tags": [
+   "Attack",
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "Resource Cost Increase 15%",
+   "55% DMG Dampening for Activated Skill",
+   "48% Resource Cost Dampening for Activated Skill",
+   "Adds 100% of Attack DMG increase to Spell DMG",
+   "Add 100% of Attack Critical Rate Increase/Critical DMG to Spell Critical Rate Increase/Critical DMG",
+   "Trigger Chance 100%",
+   "Activates max 1 time on hit whenever Activation Skill is used",
+   "10% DMG Dampening for Activated Skill"
+  ],
+  "lv45": [
+   "Resource Cost Increase 15%",
+   "26.9% DMG Dampening for Activated Skill",
+   "48% Resource Cost Dampening for Activated Skill",
+   "Adds 100% of Attack DMG increase to Spell DMG",
+   "Add 100% of Attack Critical Rate Increase/Critical DMG to Spell Critical Rate Increase/Critical DMG",
+   "Trigger Chance 100%",
+   "Activates max 1 time on hit whenever Activation Skill is used",
+   "10% DMG Dampening for Activated Skill"
+  ],
+  "grades": {
+   "magic": [
+    "8% DMG Dampening for Activated Skill"
+   ],
+   "rare": [
+    "10% Resource Cost Dampening",
+    "8% DMG Dampening for Activated Skill"
+   ],
+   "legendary": [
+    "20% Resource Cost Dampening",
+    "+20% Skill Rune Cooldown Recovery Speed",
+    "5% DMG Dampening for Activated Skill"
+   ]
+  },
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [],
+   "exclude": [],
+   "minions": false
+  }
+ },
+ {
   "id": "spell-activation-on-hit",
   "name": "Spell Activation on Hit",
   "kind": "link",
@@ -12371,6 +13063,90 @@
    "Activates max 1 time on hit whenever Activation Skill is used"
   ],
   "change": "minor"
+ },
+ {
+  "id": "spell-activation-on-spell-hit",
+  "name": "Spell Activation on Spell Hit",
+  "kind": "link",
+  "status": "legacy",
+  "color": "blue",
+  "minRarity": "normal",
+  "howToGet": [
+   "Drop",
+   "Shop"
+  ],
+  "description": "Must link an Activation(Spell, Strike) Skill and a Target(Spell) Skill in the arrow's direction.\nTarget Skill cannot be linked if any of the Attack, Channeling, Totem, Sentry, Minion, Movement, Toggle, Trap tags exist.\nTarget Skill must be registered in a Skill slot to activate.\nRune cannot be awakened.",
+  "tags": [
+   "Spell",
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "10% DMG Dampening for Activated Skill",
+   "36% Resource Cost Dampening for Activated Skill",
+   "Trigger Chance 100%",
+   "Activates max 1 time on hit whenever Activation Skill is used"
+  ],
+  "lv45": [
+   "10% DMG Dampening for Activated Skill",
+   "36% Resource Cost Dampening for Activated Skill",
+   "Trigger Chance 100%",
+   "Activates max 1 time on hit whenever Activation Skill is used"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [],
+   "exclude": [],
+   "minions": false
+  }
+ },
+ {
+  "id": "spell-activation-upon-enemy-kill",
+  "name": "Spell Activation upon Enemy Kill",
+  "kind": "link",
+  "status": "legacy",
+  "color": "green",
+  "minRarity": "magic",
+  "howToGet": [
+   "Synthesis"
+  ],
+  "description": "Must link an Activation(Strike) Skill and a Target(Spell) Skill in the arrow's direction.\nTarget Skill cannot be linked if any of the Attack, Channeling, Totem, Sentry, Minion, Movement, Toggle, Trap tags exist.\nTarget Skill must be registered in a Skill slot to activate.\nRune cannot be awakened.",
+  "tags": [
+   "Strike"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "+10% Activated Skill DMG",
+   "40% Resource Cost Dampening for Activated Skill",
+   "Adds 100% of Attack DMG increase to Spell DMG",
+   "Add 100% of Attack Critical Rate Increase/Critical DMG to Spell Critical Rate Increase/Critical DMG",
+   "Trigger Chance 100%",
+   "Activates max 1 time on kill whenever Activation Skill is used"
+  ],
+  "lv45": [
+   "+50% Activated Skill DMG",
+   "40% Resource Cost Dampening for Activated Skill",
+   "Adds 100% of Attack DMG increase to Spell DMG",
+   "Add 100% of Attack Critical Rate Increase/Critical DMG to Spell Critical Rate Increase/Critical DMG",
+   "Trigger Chance 100%",
+   "Activates max 1 time on kill whenever Activation Skill is used"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [],
+   "exclude": [],
+   "minions": false
+  }
  },
  {
   "id": "spell-activation-while-channeling",
@@ -13486,6 +14262,53 @@
   "change": "minor"
  },
  {
+  "id": "trap-master",
+  "name": "Trap Master",
+  "kind": "link",
+  "status": "legacy",
+  "color": "red",
+  "minRarity": "normal",
+  "howToGet": [
+   "Drop",
+   "Shop"
+  ],
+  "description": "Can be linked with Skills that are Trap\nRune cannot be awakened.",
+  "tags": [
+   "Trap"
+  ],
+  "restrictions": [],
+  "lv1": [
+   "+20% Trap DMG",
+   "100% chance to gain Realization for 3 s on Trap activation",
+   "Realization Effect",
+   "( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )"
+  ],
+  "lv45": [
+   "+117.5% Trap DMG",
+   "100% chance to gain Realization for 3 s on Trap activation",
+   "Realization Effect",
+   "( 1% Max Barrier Regen/Sec, Barrier Charge Recovery Speed +10% )"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [],
+   "origin": [],
+   "verity": []
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Trap"
+     ]
+    }
+   ],
+   "exclude": [],
+   "minions": false
+  }
+ },
+ {
   "id": "trap-projectile-multishot",
   "name": "Trap Projectile Multishot",
   "kind": "link",
@@ -13703,6 +14526,59 @@
    "3.5% DMG Taken by Minion Dampening per summoned Abyssling"
   ],
   "change": "minor"
+ },
+ {
+  "id": "use-count",
+  "name": "Use Count",
+  "kind": "link",
+  "status": "legacy",
+  "color": "blue",
+  "minRarity": "normal",
+  "howToGet": [
+   "Drop",
+   "Shop"
+  ],
+  "description": "Can be linked with Skills that are Use Count Skills",
+  "tags": [],
+  "restrictions": [],
+  "lv1": [
+   "+1 Max Use Count",
+   "25% Skill Rune Cooldown Amplification"
+  ],
+  "lv45": [
+   "+1 Max Use Count",
+   "+5% Skill Rune Cooldown Recovery Speed"
+  ],
+  "grades": {},
+  "awakening": {
+   "source": [
+    "+[7-12]% Skill Rune Cooldown Recovery Speed"
+   ],
+   "origin": [
+    "-[10-5]% Resource Cost"
+   ],
+   "verity": [
+    "+1 Max Use Count",
+    "[3-5]% Skill Rune Cooldown Amplification"
+   ]
+  },
+  "linkRules": {
+   "groups": [
+    {
+     "mode": "any",
+     "tags": [
+      "Attack",
+      "Defence",
+      "Magic",
+      "Spell",
+      "Duration",
+      "Movement"
+     ]
+    }
+   ],
+   "exclude": [],
+   "minions": false
+  }
  },
  {
   "id": "versatility",

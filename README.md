@@ -3,7 +3,8 @@
 เว็บดูข้อมูล Undecember ภาษาไทย อ้างอิง **Season 12: The Farside**
 
 - **ไอเทม**: Unique 197 ชิ้น (ที่เพิ่ม/ปรับใน S11–S12) แยกเป็น 5 หมวด กรองตามชนิดอุปกรณ์ได้ และค้นหาได้ทั้งชื่อและออปชัน (ไทย/อังกฤษ)
-- **รูน**: รูนสกิล 187 ตัวและรูนลิงก์ 182 ตัว ปรับเลเวลได้ 1–50 ดูเกรด การปลุกพลัง และสิ่งที่เปลี่ยนใน S12
+- **รูน**: รูนสกิล 187 ตัวและรูนลิงก์ 200 ตัว ปรับเลเวลได้ 1–50 ดูเกรด การปลุกพลัง และสิ่งที่เปลี่ยนใน S12 รูนลิงก์ 18 ตัวไม่อยู่ในชีท S12 จึงมีป้าย "ข้อมูลเก่า"
+- **ตัวช่วยจัดรูน** (หน้าแรก): เลือกรูนสกิลแล้วดูรูนลิงก์ที่ใส่ได้ เหตุผลของตัวที่ใส่ไม่ได้ กติกาดาเมจ 3 แบบ และชุดที่คำนวณไว้แล้ว
 - **จำลองดาเมจ**: มีกระดาน 2 แบบ
   - **1 สกิล**: รูนสกิลอยู่ตรงกลาง มีช่องรูนลิงก์ 6 ช่องรอบ ๆ
   - **กระดานเต็ม 44 ช่องแบบในเกม**: แถว 5-6-7-8-7-6-5 และ 14 ช่องขอบเป็นช่องขยาย
@@ -44,6 +45,8 @@ src/data/th/             คำแปลไทย (lines.json = บรรทั�
 src/lib/statParser.ts    แปลงบรรทัดค่าสถานะ → modifier
 src/lib/damage.ts        สูตรคำนวณดาเมจ
 src/lib/runeLevel.ts     ค่ารูนตามเลเวล / ค่าสุ่มของไอเทม
+src/lib/runeGuide.ts     กติกาการลิงก์ของตัวช่วยจัดรูน (อ่านข้อจำกัดของสกิลและเงื่อนไขในคำอธิบายรูนด้วย)
+src/data/runeGuide.ts    คำแนะนำที่เขียนเอง: กติกาดาเมจและชุดรูน เทสต์จะเช็กว่าชุดรูนลิงก์ได้จริง
 src/pages/               หน้าแรก, ไอเทม, รูน, จำลองดาเมจ
 docs/thai-glossary.md    อภิธานศัพท์สำหรับแปล
 ```
@@ -119,6 +122,8 @@ DPS    = hit × ศัตรู × คริ × ครั้งต่อวิ�
 
 - ข้อมูลเกม © LINE Games / Needs Games: ชีท [Season Mode Changes](https://ud.floor.line.games/us/bbs/guide/stat)
 - ชื่อรูนภาษาไทย (`src/data/th/rune-names.json`): ใส่เฉพาะชื่อทางการที่ยืนยันได้เท่านั้น ห้ามใช้คำแปลเอง
-  - ตอนนี้มี 2 ชื่อ คือ Charged Shot และ Divine Punishment จาก[หน้า Google Play ภาษาไทยของ LINE Games](https://play.google.com/store/apps/details?id=com.linegames.udg&hl=th&gl=TH)
+  - Charged Shot และ Divine Punishment มาจาก[หน้า Google Play ภาษาไทยของ LINE Games](https://play.google.com/store/apps/details?id=com.linegames.udg&hl=th&gl=TH)
+  - อีก 16 ชื่อมาจากภาพหน้าจอเกม ดูรายการใน `notes/2026-11-02-thai-rune-names.md`
   - เว็บ คู่มือ และชีททางการไม่มีฉบับภาษาไทย ชื่อไทยครบทุกตัวมีอยู่ในตัวเกมเท่านั้น
-- สีรูน, เกรดต่ำสุด และวิธีได้รับ: [nestula/BuildDecember](https://github.com/nestula/BuildDecember) (MIT, ไฟล์ LICENSE อยู่ใน `data-raw/buildDecember/`)
+- สีรูน, เกรดต่ำสุด, วิธีได้รับ และรูนลิงก์ 18 ตัวที่ไม่อยู่ในชีท S12: [nestula/BuildDecember](https://github.com/nestula/BuildDecember) (MIT, ไฟล์ LICENSE อยู่ใน `data-raw/buildDecember/`)
+  - รูน 18 ตัวนี้มี `status: "legacy"` ค่าอาจเก่าหรือขาดไลน์ ยกเว้น Spell Activation on Attack Hit ที่แก้ตามหน้ารูนในเกม

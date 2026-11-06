@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
+import { RuneGuide } from '../components/RuneGuide'
 import { DATA_META, LINK_RUNES, SKILL_RUNES, UNIQUES } from '../data'
 import './HomePage.css'
 
 const ALL_RUNES = [...SKILL_RUNES, ...LINK_RUNES]
+const legacyRunes = ALL_RUNES.filter((r) => r.status === 'legacy').length
 const newRunes = ALL_RUNES.filter((r) => r.status === 'new').length
 const majorRunes = ALL_RUNES.filter((r) => r.change === 'major').length
 const minorRunes = ALL_RUNES.filter((r) => r.change === 'minor').length
@@ -36,6 +38,8 @@ export function HomePage() {
         </Link>
       </section>
 
+      <RuneGuide />
+
       <section className="card home-notes">
         <h3>ซีซันนี้มีอะไรเปลี่ยน</h3>
         <p>
@@ -47,6 +51,7 @@ export function HomePage() {
           <li>เกมเปิดเผยค่าเฉพาะเลเวล 1 และ 45 — เลเวลอื่นเป็นค่าประมาณแบบเส้นตรง (มีป้าย “ประมาณ”)</li>
           <li>ตัวจำลองใช้สูตรตามคู่มือทางการ ร่วมกับโมเดลคริติคอล/ค่าต้านทานที่ชุมชนทดสอบ ผลลัพธ์จึงเป็นค่าประมาณ ใช้เปรียบเทียบบิลด์ได้ แต่อาจไม่ตรงกับตัวเลขในเกม 100%</li>
           <li>ข้อมูลไอเทมตอนนี้มีเฉพาะ Unique ที่เพิ่ม/ปรับใน S11–S12 จากชีททางการ</li>
+          <li>รูนลิงก์ {legacyRunes} ตัวไม่อยู่ในชีท S12 ค่ามาจาก BuildDecember (มีป้าย “ข้อมูลเก่า”) จึงอาจเก่าหรือขาดไลน์ ควรเทียบกับหน้ารูนในเกม</li>
         </ul>
         <h3>แหล่งข้อมูล</h3>
         <ul className="dim">

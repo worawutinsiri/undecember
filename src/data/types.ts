@@ -18,8 +18,8 @@ export interface Rune {
   id: string
   name: string
   kind: RuneKind
-  /** changed = balance-changed this season, new = added this season */
-  status: 'changed' | 'new'
+  /** changed = balance-changed this season, new = added this season, legacy = not in the season sheet, older third-party data */
+  status: 'changed' | 'new' | 'legacy'
   color: RuneColor | null
   minRarity: string | null
   howToGet: string[]

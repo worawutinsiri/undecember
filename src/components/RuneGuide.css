@@ -1,0 +1,292 @@
+.rune-guide {
+  min-width: 0;
+  display: grid;
+  gap: 1rem;
+}
+.rune-guide > * {
+  min-width: 0;
+}
+.rune-guide h2,
+.rune-guide > p {
+  margin: 0;
+}
+.rune-guide h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+}
+.rune-guide .small {
+  font-size: 0.82rem;
+}
+.rune-guide p {
+  margin: 0;
+}
+.rune-guide details > summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.rg-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 0.7rem;
+  margin-top: 0.7rem;
+}
+.rg-type,
+.rg-set {
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  min-width: 0;
+}
+.rg-type h4,
+.rg-set h4 {
+  margin: 0;
+}
+.rg-type dl {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.1rem 0.6rem;
+  margin: 0;
+  font-size: 0.86rem;
+}
+.rg-type dt {
+  color: var(--text-faint);
+}
+.rg-type dd {
+  margin: 0;
+}
+.rg-sources {
+  margin-top: 0.5rem !important;
+}
+
+.rg-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.rg-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.1rem 0.5rem 0.1rem 0.2rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+.rg-chip:hover {
+  border-color: var(--accent);
+  color: var(--text-strong);
+}
+
+.rg-picker {
+  display: grid;
+  gap: 0.5rem;
+}
+.rg-picker input[type='search'] {
+  width: 100%;
+}
+.rg-results {
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem;
+  display: grid;
+  gap: 0.15rem;
+  max-height: 20rem;
+  overflow-y: auto;
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.rg-results button {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 0.5rem;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.4rem;
+  cursor: pointer;
+}
+.rg-results button:hover,
+.rg-results button:focus-visible {
+  background: var(--surface-hover);
+}
+.rg-quick {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.rg-panel {
+  display: grid;
+  gap: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.rg-panel > * {
+  min-width: 0;
+}
+.rg-skill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: flex-start;
+}
+.rg-skill-text {
+  flex: 1 1 220px;
+  min-width: 0;
+  display: grid;
+  gap: 0.3rem;
+}
+.rg-skill h3 {
+  margin: 0;
+}
+.rg-kind {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-strong);
+}
+.rg-kind.k-dot,
+.rg-kind.k-mixed {
+  color: var(--accent-strong);
+}
+.rg-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.rg-restriction {
+  color: var(--accent-strong);
+}
+.rg-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.rg-actions .btn {
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.rg-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+.rg-notes {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.rg-sets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.rg-trigger-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.3rem;
+}
+.rg-trigger-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 0.5rem;
+}
+
+.rg-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0.5rem 0 0.7rem;
+}
+.rg-filters input[type='search'] {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+
+.rg-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 0.45rem;
+}
+.rg-link {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.6rem;
+  align-items: start;
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.65rem;
+}
+.rg-link:hover {
+  border-color: var(--border-strong);
+}
+.rg-link-body {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+.rg-link-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 0.4rem;
+  font-weight: 600;
+}
+.rg-link-head a {
+  color: var(--text-strong);
+  min-width: 0;
+}
+.rg-lines {
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
+}
+
+.rg-more {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.rg-link .warn-text {
+  color: var(--accent-strong);
+}
+
+.rg-blocked dl {
+  margin: 0.6rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.rg-blocked dt {
+  font-weight: 500;
+  font-size: 0.88rem;
+}
+.rg-blocked dd {
+  margin: 0;
+}

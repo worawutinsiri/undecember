@@ -130,6 +130,7 @@ export function RunesPage() {
                         <RuneName name={r.name} />
                         {r.status === 'new' && <span className="mini new">ใหม่</span>}
                         {r.change === 'major' && <span className="mini changed">เปลี่ยน</span>}
+                        {r.status === 'legacy' && <span className="mini legacy">ข้อมูลเก่า</span>}
                       </span>
                       <span className="rune-row-desc dim">{thDescription(r.description).split('\n')[0]}</span>
                       <span className="rune-row-tags faint">{r.tags.join(' · ')}</span>
