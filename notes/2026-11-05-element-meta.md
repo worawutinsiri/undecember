@@ -20,7 +20,7 @@
 ## ตัวเลขจากการคำนวณ
 ไอเทมกลางชุดเดียวกันที่ไม่มีไลน์ธาตุ: Hira's Charm, Ultimate Ring of Amplified Power, Silver Shadow's Footprints, Numbing Armor, Spica's Light, Seal รูน Lv45 Legendary, คริแบบตัวเลข 80, มอน Lv150 ต้าน 40%, ศัตรูติดสถานะของธาตุตัวเองตลอด, รูนลิงก์ 6 ตัวจากชุดที่ทำงานตลอด, ไม่ใช้อาวุธ Ultimate เพราะธนูในฐานข้อมูลไม่มีเกรดนี้ ค่าแสดงเป็นโดน 1 ครั้ง ถึงโดนครบ นับโดนซ้ำเฉพาะสกิลที่ไลน์ของตัวเองอนุญาต
 - สายฟ้า: Lightning Strike 34.8–128.9 (ดาบ, 4 ลูก), Lightning Slash 94.7 (ดาบ), Lightning Arrow 10.4–87.3 (Star Usurper's, 9 ลูก ไม่นับสแตก), Divine Punishment 21.7 (คทา ไม่นับสกิลคู่และการยิงซ้ำ 40%)
-- ไฟ: Fire Ball 27.7–121.8 (Capri's Ember, 5 ลูก ลูกซ้ำ −15% ถ้าไม่ติด Burn 18.8–82.9), Axe Throw 40.2–112.6 (ดาบมือเดียว 3 ลูก)
+- ไฟ: Fire Ball 23.4–103.1 (Capri's Ember, 5 ลูก ลูกซ้ำ −15%, ปลุก Source + Quick Cast ถ้าไม่ติด Burn 15.9–70.2), Axe Throw 40.2–112.6 (ดาบมือเดียว 3 ลูก) แก้ 6 พ.ย. 2026: ตัวเลขเดิม 27.7–121.8 ใส่ Quick Cast คู่ปลุก Verity ซึ่งเกมห้าม รายละเอียดดู `notes/2026-11-06-fire-skills.md`
 - น้ำแข็ง: Frost Storm 39.4–111.8 (Tipan's, 3 ลูก ไม่มีซองธนู 77.3), Frost Wave 85.2 (ดาบ)
 - พิษ: Deadly Poison Claw 59.5 (ดาบ), Toxic Mist 11.8–31.1 (คทา), Poison Rain of Arrows 4.9–32.0
 
@@ -31,6 +31,7 @@
 
 ## ข้อควรระวังของการคำนวณ
 - **รอบแรกใช้ไม่ได้ อย่าใช้ซ้ำ:** ค้นไอเทมและรูนลิงก์อัตโนมัติแล้วได้ Axe Throw 11,953 ล้าน เพราะตัวจำลองนับไลน์มีเงื่อนไขเป็นทำงานตลอด (Mana Outburst, Killing Machine, Harmony สองสถานะพร้อมกัน, Bulwark of Balance, Commander's Shout) บวก 3 ค่าของ Axe Throw ที่ใช้กับอาวุธคนละแบบ และนับ Multishot ว่าโดนเป้าเดียวทุกลูก ถ้าจะค้นอัตโนมัติอีก ต้องกันรายการเหล่านี้ก่อน
+- **ตัวจำลองไม่บังคับ "Cannot link X" ในไลน์ปลุกพลัง และไม่นับ "Gain X Link Rune Effect":** ถ้าค้นรูนลิงก์อัตโนมัติ ต้องกันคู่ที่เกมห้ามเอง เช่น Fire Ball Verity กับ Quick Cast, Flames of Death Source กับ Concentrated Area DMG
 - **`uniques.json` มีเฉพาะยูนีคใหม่หรือถูกแก้ใน S12 (197 ตัว):** ไม่มีธนู Miraseti (미라세티) และ Foresight of the Conqueror จึงเทียบธนูไม่ครบ หน้า `docs/frost-storm-crit-build.html` บันทึกว่า Foresight แรงกว่า Tipan's ×1.45 (Ultimate ×1.78) ในชุด Frost Storm ถ้าใช้สัดส่วนเดียวกัน Frost Storm จะได้ราว 162 ล้าน (Ultimate ราว 199 ล้าน) ตัวเลขนี้ประมาณเอง
 - **ดาบชนะเพราะ Resolution of Four Paths ตัวเดียว:** มีไลน์ดาเมจเพิ่ม 20% ของ 4 ธาตุ รวม +80% และตัวจำลองไม่หักค่าต้านธาตุจากไลน์นี้ ดาบตัวอื่นต่ำกว่ามาก
 - **ธนูได้เปรียบเรื่องมือซ้าย:** คิดซองธนู Miraseti's Wave ให้ธนู แต่ไม่ได้คิดมือซ้ายให้อาวุธอื่น และชุดไอเทมกลางค่อนไปทางสาย Attack การเทียบข้ามเวทกับ Attack จึงไม่แม่นเท่าการเทียบในสายเดียวกัน

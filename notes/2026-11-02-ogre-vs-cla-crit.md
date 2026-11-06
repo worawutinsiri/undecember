@@ -18,6 +18,7 @@
 
 ### ชุด 1: ถ้าเล่น Ogre Arrow ให้ใช้ Plague Spike
 - Toxic Flame เป็น DoT ล้วน ไม่มีแท็ก Strike DoT ไม่ติดคริ ไม่ได้ผลจาก Projectile DMG และยูนีคที่ทำให้แรง (Vanishing Night) เป็นไม้เท้า ใส่กับธนูไม่ได้
+- Toxic Flame สาย Maximized DMG หรือสายคริ (6 พ.ย. 2026): ไม่แนะนำทั้งคู่ แท็กคือ Spell, DoT, Poison, Projectile ไม่มี Strike รูนหลักทั้งสองสาย (Find Weakness, Slaughter, Sharpness, Maximized DMG Increase, Increase Maximized DMG Chance, Persistence, Smash, Extract Poison Energy) จึงลิงก์ไม่ได้ ควรไปทาง DoT ชุดรูนและหลักฐานดู `notes/2026-11-06-dot-runes.md` ชีทไม่มีข้อความตรงว่า DoT คริไม่ได้ แต่โพสต์ผู้เล่นปี 2025 บอกว่าคริกับ Maximized 2–3 เท่าไม่ทำงานกับ Toxic Flame ตัวจำลองไม่มีทั้ง DoT และ Maximized ตัวเลขจึงคำนวณเอง
 - Plague Spike เป็น Strike คริได้ มีโอกาส 25% ทำ Plague 4 วินาที ลดค่าต้านธาตุ 10% และศัตรูรับดาเมจพิษเพิ่ม 10% ช่วยให้ Ogre Arrow แรงขึ้น
 
 ### ชุด 2: ถ้าเล่น CLA ให้ใช้ Lightning Chain
