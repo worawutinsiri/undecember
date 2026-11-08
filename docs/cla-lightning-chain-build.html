@@ -170,6 +170,7 @@ section { display: grid; gap: 16px; scroll-margin-top: 64px; }
 /* rune board */
 .board-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); padding: 12px; }
 .board-scroll svg { min-width: 420px; max-width: 620px; width: 100%; height: auto; display: block; margin: 0 auto; }
+.board-scroll svg.solo { min-width: 300px; max-width: 400px; }
 .hx { stroke-width: 2; }
 .hx-red { fill: color-mix(in srgb, var(--rune-red) 16%, var(--raised)); stroke: var(--rune-red); }
 .hx-green { fill: color-mix(in srgb, var(--rune-green) 16%, var(--raised)); stroke: var(--rune-green); }
@@ -225,13 +226,17 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
 <header>
   <span class="eyebrow">Undecember · S12 The Farside · Bow crit + Spell trigger</span>
   <h1>ธนูสายฟ้า + Lightning Chain</h1>
-  <p class="lede">สามบิลด์ที่รูน Spell Activation on Attack Hit ร่าย Lightning Chain ให้เองทุกครั้งที่ยิงโดน แต่เป้าหมายต้องอยู่ในระยะ 850 Cross Lightning Arrow (CLA) เจาะทุกตัวและมีระเบิด เหมาะกับการฟาร์ม Unleash Lightning Shot ทำ Shock เองได้ ส่วน Lightning Arrow ปลุก Origin แล้วลูกธนูโดนเป้าเดิมซ้ำได้ จึงคำนวณได้แรงสุดตอนตีบอสถ้าธนูโดนหลายลูก ทั้งสามบิลด์ใช้ไอเทม Charm และลาคริมาชุดเดียวกัน</p>
+  <p class="lede">สามบิลด์ที่รูน Spell Activation on Attack Hit ร่าย Lightning Chain ให้เองทุกครั้งที่ยิงโดน แต่เป้าหมายต้องอยู่ในระยะ 850 Cross Lightning Arrow (CLA) เจาะทุกตัวและมีระเบิด เหมาะกับการฟาร์ม Unleash Lightning Shot ทำ Shock เองได้ ส่วน Lightning Arrow ปลุก Origin แล้วลูกธนูโดนเป้าเดิมซ้ำได้ จึงคำนวณได้แรงสุดตอนตีบอสถ้าธนูโดนหลายลูก ทั้งสามบิลด์ใช้ไอเทม Charm และลาคริมาชุดเดียวกัน ถ้าเล่น Unleash ผลยิงหุ่นในเกมบอกว่าใส่ Shadow Archer แทน Lightning Chain แรงกว่าราว 2 เท่า</p>
   <div class="meta">
     <span>อัปเดต 5 พ.ย. 2026</span>
     <span>ทดสอบด้วยตัวจำลองดาเมจ Undecember DB</span>
     <span>ต่อจาก <a href="bow-crit-builds.html">บิลด์ธนูสายคริ</a></span>
   </div>
   <div class="caveat">
+    <div>
+      <strong>Unleash: ผลยิงหุ่นในเกมต่างจากตัวเลขจำลอง</strong>
+      <span>ชุด Unleash + Shadow Archer แรงกว่า Unleash + Lightning Chain ราว 2 เท่า เพราะตัวจำลองไม่นับธนูเงา รายละเอียดอยู่ต้นแท็บ Unleash ส่วน CLA และ Lightning Arrow ยังไม่ได้ยิงหุ่นเทียบ</span>
+    </div>
     <div>
       <strong>Spell Activation on Attack Hit ไม่อยู่ในชีททางการ S12 แต่ยังหาได้</strong>
       <span>หน้ารูนบนเว็บฐานข้อมูล Undecember ระบุว่าดรอปได้และขายในร้านค้า Act 2, 6–10 และ 11–12 ค่าที่ใช้ในหน้านี้มาจากหน้านั้น: Lv45 เกรด Legendary ลดดาเมจ Lightning Chain 26.9% และอีก 5% จากไลน์เกรด ถ้าในเกมนับไลน์ลดดาเมจ 10% ของเกรด Normal ซ้อนด้วย DPS รวมของ CLA จะลดจาก 22.2 ล้านเหลือ 21.2 ล้าน (ดูตารางเทียบในแท็บแรก)</span>
@@ -456,8 +461,8 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
         <p>CLA ใช้ราว 38 ต่อการยิง (รวมค่ามานา +15% จาก Spell Activation แล้ว) Lightning Chain ราว 22 หลังหักส่วนลด 48% ยิง 5 ครั้งต่อวินาทีรวมราว 300 มานาต่อวินาที ไลน์เกรด Legendary ลดค่ามานาอีก 20% แต่ไม่ได้ระบุว่าใช้กับสกิลไหน ต้องมีมานาต่อการโจมตี (ซองธนู +3–4 ต่อครั้งที่โดน) และฟื้นมานาจาก Charm หรือของคราฟ</p>
       </div>
       <div class="swap">
-        <h3>Shadow Archer ใช้ไม่ได้</h3>
-        <p>Shadow Archer ลิงก์กับรูนที่ร่ายสกิลให้ไม่ได้ (Cannot be linked with Trigger Link Runes) จึงไม่อยู่ในชุดนี้ ทั้งที่เป็นตัวสำรองของ CLA ในหน้าบิลด์ธนูสายคริ</p>
+        <h3>Shadow Archer ใช้คู่กับ Lightning Chain ไม่ได้</h3>
+        <p>Shadow Archer ลิงก์กับรูนที่ร่ายสกิลให้ไม่ได้ (Cannot be linked with Trigger Link Runes) จึงต้องเลือกอย่างใดอย่างหนึ่ง CLA 6 ลิงก์ใส่ Shadow Archer ได้ 13.0–14.7 ล้านก่อนนับธนูเงา ธนูเงาต้องทำดาเมจ 51–70% ของตัวละครจึงจะเท่าชุดนี้ ผลยิงหุ่นของ Unleash ประมาณได้อย่างน้อยราว 70% (ดูแท็บ Unleash) CLA จึงน่าจะแรงขึ้นเหมือนกัน แต่ CLA ทำ Shock เองไม่ได้และยังไม่ได้ยิงหุ่น ต้องยิงหุ่นเทียบก่อนเปลี่ยน</p>
       </div>
     </div>
     <ul class="notes">
@@ -485,6 +490,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
           <tr><td>Unleash Lightning Shot<small>รูนสกิล</small></td><td><span class="guess">ยิงประทุสายฟ้า</span></td><td>ชื่อที่ผู้เล่นเรียก ยังไม่ได้เทียบกับหน้าจอเกม</td></tr>
           <tr><td>Lightning Arrow<small>รูนสกิล</small></td><td><span class="guess">ศรสายฟ้า</span></td><td>แปลเอง ใช้คำเดียวกับชื่อ Lightning Arrow Abyssling ในเกม</td></tr>
           <tr><td>Shadow Archer<small>รูนลิงก์</small></td><td>นักธนูเงา</td><td>หน้าจอเกม</td></tr>
+          <tr><td>Electric Sentry<small>รูนสกิล</small></td><td>หน้าไม้ฉับพลัน</td><td>หน้าจอเกม</td></tr>
           <tr><td>Spell Activation on Attack Hit<small>รูนลิงก์</small></td><td>คาถาทำงานเมื่อโจมตีโดนเป้า</td><td>ไกด์ไทยปี 2022 ไกด์บอกว่ารูนนี้มีทั้งสีแดงและสีน้ำเงิน ชื่อนี้จึงอาจเป็นของ On Hit ด้วย</td></tr>
           <tr><td>Spell Activation on Hit<small>รูนลิงก์</small></td><td><span class="guess">คาถาทำงานเมื่อโดนเป้า</span></td><td>แปลเอง</td></tr>
           <tr><td>Spell Activation on Spell Hit<small>รูนลิงก์</small></td><td><span class="guess">คาถาทำงานเมื่อคาถาโดนเป้า</span></td><td>แปลเอง</td></tr>
@@ -518,6 +524,117 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
 <div class="panel" role="tabpanel" id="panel-unleash" aria-labelledby="tab-unleash" hidden>
 
   <section>
+    <div class="sec-head">
+      <span class="eyebrow">Tested in game · Main set</span>
+      <h2>ชุดหลัก: Unleash + Shadow Archer</h2>
+    </div>
+    <p>ยิงหุ่นในเกมแล้ว ชุดนี้แรงกว่าชุด Lightning Chain ราว 2 เท่า ทั้งหุ่นตัวเดียวและหลายตัว ตัวจำลองไม่นับธนูเงา ตัวเลขจำลองที่เหลือในแท็บนี้จึงเป็นของชุด Lightning Chain ใช้เทียบกันเองในชุดนั้นเท่านั้น</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ยิงหุ่น Lv100</th><th>+ Lightning Chain</th><th>+ Shadow Archer</th><th>ต่างกัน</th></tr></thead>
+        <tbody>
+          <tr><td>หุ่น 1 ตัว</td><td class="num">33 ล้าน</td><td class="num best">69 ล้าน</td><td class="num">×2.09</td></tr>
+          <tr><td>หุ่น 9 ตัว</td><td class="num">274 ล้าน</td><td class="num best">606 ล้าน</td><td class="num">×2.21</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">ผู้เล่นวัดเองในเกมเมื่อ 5 พ.ย. 2026 ด้วยไอเทมและรูนจริง ซึ่งไม่ใช่ชุดในหน้านี้ จึงใช้ดูสัดส่วนระหว่างสองชุด อย่าเทียบตรง ๆ กับตัวเลขจำลองที่คิดกับมอน Lv150 ต้าน 40%</p>
+    <ul class="notes">
+      <li><b>ธนูเงา:</b> คำอธิบายในเกมบอกว่าเงา "ใช้การโจมตีแบบเดียวกับผู้อัญเชิญ" แต่ไม่ได้บอกค่าดาเมจ ประมาณจากผลยิงหุ่นได้ว่าทำดาเมจอย่างน้อยราว 70% ของตัวละคร ค่าต่ำสุดนี้สมมติว่ารูนตัวอื่นเหมือนกัน ไลน์บนรูน Shadow Archer ให้ ×1.23 และ Lightning Chain ไม่มีส่วนใน 33 ล้านเลย</li>
+      <li><b>Unleash ทำ Shock เองได้:</b> ถอด Lightning Chain แล้วบอสยังติด Shock ได้ ส่วน CLA ทำเองไม่ได้ ผล 2 เท่านี้จึงใช้กับ CLA ตรง ๆ ไม่ได้</li>
+      <li><b>ถ้าตอนวัดชุดแรกยืนเกินระยะ 850:</b> Lightning Chain จะไม่ถูกร่าย เลข 33 ล้านจะต่ำไป แต่ถ้าบวกดาเมจ Lightning Chain ตามสัดส่วนในการจำลอง (36–48% ของ Unleash) ก็ได้แค่ราว 45–49 ล้าน ยังต่ำกว่า 69 ล้าน</li>
+      <li><b>มอนเลเวลสูง:</b> หุ่น Lv100 คริง่ายกว่ามอน Lv150 ขึ้นไป ดาเมจจริงจะต่ำกว่านี้ทั้งสองชุด ยังต้องมีคริแบบตัวเลข 80 ตามตารางในแท็บ Charm</li>
+    </ul>
+
+    <div class="board-scroll">
+      <svg id="board-unleash-shadow" class="solo" viewBox="-162 -154 324 308" role="img" aria-label="แผนผังกระดานรูน: Unleash Lightning Shot อยู่ตรงกลาง ล้อมด้วยรูนลิงก์ 6 ตัว ได้แก่ Quick Attack, Attack DMG Increase, Shadow Archer, Additional Lightning DMG, Element DMG Amplification และ Mana Storm"></svg>
+    </div>
+    <p class="caption">รูน 5 ตัวที่ไม่ใช่ Shadow Archer ยกมาจากชุดเดิมในแท็บนี้ ยังไม่ได้ยืนยันว่าตรงกับชุดตอนยิงหุ่น สีของรูนลิงก์ต้องตรงกับสีช่องบนรูนสกิลของคุณ ตำแหน่งในแผนผังเป็นแค่ตัวอย่าง ถอด Lightning Chain แล้วรูนว่างลง 5 ตัว (Spell Activation, Spell DMG Increase, Element DMG Amplification ตัวที่สอง, Element Master, Electric Shock)</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>รูนลิงก์</th><th>ทำอะไร (Lv45)</th></tr></thead>
+        <tbody>
+          <tr><td><span class="dot green"></span>Shadow Archer <span class="pill top">ตัวที่เปลี่ยน</span><span class="th">นักธนูเงา</span></td><td>เรียกธนูเงา 1 ตัวเมื่อใช้สกิล ดาเมจโปรเจกไทล์ +31.2% (Legendary ขยายดาเมจโปรเจกไทล์ 15% และเจาะดาเมจ +30%) ค่ามานา +50%</td></tr>
+          <tr><td><span class="dot red"></span>Attack DMG Increase<span class="th">เพิ่มความเสียหายการโจมตี</span></td><td>ดาเมจ +249% เมื่อใช้ Attack (Legendary +100%)</td></tr>
+          <tr><td><span class="dot blue"></span>Additional Lightning DMG<span class="th guess">ความเสียหายสายฟ้าเพิ่มเติม</span></td><td>ดาเมจสายฟ้า +10–461 และ +83.2%</td></tr>
+          <tr><td><span class="dot green"></span>Quick Attack<span class="th guess">โจมตีเร็ว</span></td><td>ความเร็วโจมตี +44.5% ชนเพดาน 5 ครั้งต่อวินาที ถ้าตัดออกเหลือ 3.3 ครั้ง</td></tr>
+          <tr><td><span class="dot blue"></span>Element DMG Amplification<span class="th">ขยายความเสียหายธาตุ</span></td><td>ขยายดาเมจธาตุ 19.3% (Legendary +5% และดาเมจธาตุ +40%)</td></tr>
+          <tr><td><span class="dot blue"></span>Mana Storm <span class="pill cond">ใช้มานามาก</span><span class="th">มรสุมมนตรา</span></td><td>ขยายดาเมจ Strike 24.2% (Legendary +8%) ค่ามานา +30% และ +8</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swaps">
+      <div class="swap">
+        <h3>มานา</h3>
+        <p>คำนวณเองได้ราว 53–65 ต่อการยิง หรือราว 265–325 ต่อวินาที น้อยกว่าชุด Lightning Chain ที่ใช้ราว 350–400 เพราะไม่ต้องจ่ายค่า Lightning Chain ถ้ายังไม่พอ เปลี่ยน Mana Storm เป็น Element Master เหลือราว 210 ต่อวินาที ในชุด Lightning Chain การเปลี่ยนนี้ทำให้ดาเมจรวมลดราว 4–6% ยังไม่รู้ว่าธนูเงาหักมานาเพิ่มหรือไม่</p>
+      </div>
+      <div class="swap">
+        <h3>ชุดฟาร์ม</h3>
+        <p>ใส่ Multishot แทน Mana Storm ได้เหมือนชุดเดิม ลูกธนูเพิ่มจาก 3 เป็น 7 ลูกและใช้มานาน้อยลง ยังไม่ได้ยิงหุ่นชุดนี้</p>
+      </div>
+      <div class="swap">
+        <h3>ห้ามใส่รูนร่ายสกิลและ Conductor</h3>
+        <p>หน้ารูนในเกมเขียนว่าเชื่อมต่อร่วมกับรูนลิงก์ทริกเกอร์ไม่ได้ จึงใช้คู่กับ Spell Activation ไม่ได้ ส่วน Conductor มีไลน์ "Cannot apply Shock" ทำให้ Unleash เสียตัวทำ Shock ของตัวเอง</p>
+      </div>
+      <div class="swap">
+        <h3>ถุงมือยังเป็น Miraseti's Miracle</h3>
+        <p>ได้โอกาส Shock +8–13% และการโจมตีสายฟ้าเพิ่มที่ใช้ได้เฉพาะ Unleash ยังไม่รู้ว่าธนูเงาเปิดไลน์นี้ด้วยหรือไม่</p>
+      </div>
+    </div>
+
+    <h3>ปลุก Shadow Archer</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ระดับ</th><th>ได้อะไร</th><th>ความเห็น</th></tr></thead>
+        <tbody>
+          <tr><td>Origin <span class="pill top">แนะนำ</span></td><td>เรียกธนูเงาคู่เพิ่ม 1 ตัว คูลดาวน์ 1 วินาที, คริดาเมจ Attack +45–60%, ดาเมจโปรเจกไทล์ +45–60%</td><td>ได้ทั้งธนูเงาเพิ่มและค่าดาเมจ ใช้ได้ทั้งตีบอสและฟาร์ม</td></tr>
+          <tr><td>Verity</td><td>ขยายดาเมจ 7.5–15%, ลูกธนู +2</td><td>ลูกธนูช่วยตอนฟาร์ม ส่วนบอสตัวเดียวอนุมานว่าลูกชุดเดียวกันโดนเป้าเดิมซ้ำไม่ได้ จึงน่าจะได้แค่ขยายดาเมจ</td></tr>
+          <tr><td>Source</td><td>โอกาส 10% เรียกธนูเงาคู่เมื่อโจมตีโดน, ความเร็วโจมตี +20–35%</td><td>ความเร็วชนเพดาน 5 ครั้งต่อวินาทีอยู่แล้ว จึงได้ผลแค่ไลน์ธนูเงาคู่ ยังไม่รู้ว่าไลน์นั้นมีคูลดาวน์หรือไม่</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">ลำดับนี้ประเมินจากค่าบนรูน ยังไม่ได้คำนวณเป็นตัวเลขหรือยิงหุ่นเทียบ และยังไม่รู้ว่าต้องปลุกตามลำดับระดับหรือไม่</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Shock without Lightning Chain</span>
+      <h2>Shock เมื่อไม่มี Lightning Chain</h2>
+    </div>
+    <p>Unleash ทำ Shock เองอยู่แล้ว จึงไม่ต้องหาสกิลมาแทน Lightning Chain โอกาสรวมราว 51% ต่อการโดน เมื่อปลุก Source, Origin และใส่ถุงมือ และยิง 5 ครั้งต่อวินาที จึงน่าจะติดแทบตลอด แต่ข้อมูลไม่ได้บอกระยะเวลา Shock และบอสอาจติดยากกว่าหุ่น ให้ดูไอคอนสถานะบนบอสก่อน ถ้าบอสไม่ติด Shock เลย Unleash จะเสียขยายดาเมจ 20% ของเกรด Legendary</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ตัวช่วย Shock</th><th>ได้อะไร</th><th>ใช้เมื่อไร</th></tr></thead>
+        <tbody>
+          <tr><td>Unleash Lightning Shot</td><td>โอกาส Shock +20%</td><td>มีอยู่แล้ว</td></tr>
+          <tr><td>ถุงมือ Miraseti's Miracle</td><td>โอกาส Shock +8–13%</td><td>อยู่ในแท็บ Item แล้ว</td></tr>
+          <tr><td>ปลุก Unleash <span class="pill top">ทำก่อน</span></td><td>ระดับละโอกาส Shock +5–15% และขยายดาเมจสายฟ้า 5–10%</td><td>ได้ทั้ง Shock และดาเมจ</td></tr>
+          <tr><td>Continuous Shock<span class="th guess">ไฟช็อตต่อเนื่อง</span></td><td>Shock Rate +32, Shock Effect +27.9%, Legendary โอกาส Shock +7.5% และระยะเวลา Shock +25%</td><td>ถ้าเห็น Shock หลุดบ่อย ใส่แทนรูนลิงก์ตัวที่อ่อนสุด ต้องเสียดาเมจจากรูนตัวนั้น</td></tr>
+          <tr><td>Electric Sentry<span class="th">หน้าไม้ฉับพลัน</span></td><td>Shock Rate +45 ยิงลูกสายฟ้า 6 ลูก อยู่ได้ 16 วินาที มานา 49 ต่อการวาง</td><td>ทางเลือกสุดท้าย ต้องกดวางเอง และยังไม่รู้ว่า Shock Rate แปลงเป็นโอกาสติดเท่าไร</td></tr>
+          <tr><td>Illusion Arrow</td><td>ไม่มีไลน์ Shock</td><td class="worse">ใช้แทนไม่ได้</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>ทำไม Illusion Arrow แทน Lightning Chain ไม่ได้</h3>
+    <ul class="notes">
+      <li><b>เป็นธาตุ Physical:</b> รูนไม่มีไลน์ Shock และไม่มีแท็ก Lightning จึงลิงก์ Continuous Shock ไม่ได้</li>
+      <li><b>Convert Lightning DMG ไม่พอ:</b> ลิงก์ได้เพราะเป็น Physical และ Strike แต่แปลงดาเมจแค่ 50% และไม่เพิ่มโอกาส Shock จะเหลือแค่ +8–13% จากถุงมือ ถ้าไลน์นั้นมีผลกับสกิลนี้</li>
+      <li><b>ยิงน้อยกว่ามาก:</b> คูลดาวน์ 3 วินาที ส่วน Unleash ยิงได้ 15 ครั้งในเวลาเดียวกัน</li>
+      <li><b>ขัดกับซองธนูในแท็บ Item:</b> Miraseti's Wave ลดลูก Illusion Arrow 5 ลูก (Legendary เหลือ 3 จาก 8) และลดดาเมจ 30–40%</li>
+      <li><b>ธนูเงาไม่ช่วย:</b> Illusion Arrow ไม่มีแท็ก Shadow จึงลิงก์ Shadow Archer ไม่ได้ และรูนยังเพิ่มค่าทรัพยากร 15%</li>
+      <li><b>ถ้าใส่เพื่อดาเมจ:</b> ในบิลด์ Frost Storm ช่วยแค่ราว 5% ใส่เมื่อมานาเหลือเท่านั้น และควรเปลี่ยนซองธนูก่อน</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Lightning Chain set · Simulated</span>
+      <h2>ชุด Lightning Chain (ตัวเลขจำลอง)</h2>
+    </div>
+    <p class="dim">จากตรงนี้ลงไปเป็นชุดเดิมที่ยิงหุ่นแล้วอ่อนกว่า เก็บไว้เทียบ ถ้าฟาร์มในแมปจริงแล้วพบว่า Lightning Chain ช่วยเก็บมอนที่กระจายได้ดีกว่าก็ยังใช้ชุดนี้ได้</p>
+  </section>
+
+  <section>
     <div class="overview">
       <div class="ov">
         <span class="el">Lightning · Attack</span>
@@ -547,7 +664,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       <span class="eyebrow">Versus CLA</span>
       <h2>เทียบกับ CLA</h2>
     </div>
-    <p>ฟาร์มใช้ CLA ดีกว่า ส่วนตีบอส Unleash แรงกว่าเมื่อ Particle โดนบอสอย่างน้อย 2 ครั้งต่อธนู 1 ลูก สองบิลด์นี้ใช้ไอเทมและชุด Lightning Chain เดียวกัน ต่างกันแค่รูนสกิลกับรูนลิงก์ 1 ตัว (Concentrated Area DMG เปลี่ยนเป็น Mana Storm)</p>
+    <p>ส่วนนี้เทียบแบบใช้ชุด Lightning Chain ทั้งคู่ ตามการจำลอง ฟาร์มใช้ CLA ดีกว่า ส่วนตีบอส Unleash แรงกว่าเมื่อ Particle โดนบอสอย่างน้อย 2 ครั้งต่อธนู 1 ลูก สองบิลด์นี้ใช้ไอเทมและชุด Lightning Chain เดียวกัน ต่างกันแค่รูนสกิลกับรูนลิงก์ 1 ตัว (Concentrated Area DMG เปลี่ยนเป็น Mana Storm)</p>
     <div class="table-wrap">
       <table>
         <thead><tr><th>ตัวยิง · นับอะไร</th><th>DPS รวมตีบอส</th><th>เทียบกับ CLA ลูกธนู + ระเบิด</th></tr></thead>
@@ -622,7 +739,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
   <section>
     <div class="sec-head">
       <span class="eyebrow">Rune board</span>
-      <h2>กระดานรูน</h2>
+      <h2>กระดานรูน ชุด Lightning Chain</h2>
     </div>
     <div class="board-scroll">
       <svg id="board-unleash" viewBox="-168 -162 497 416" role="img" aria-label="แผนผังกระดานรูน: Unleash Lightning Shot ซ้ายบน Lightning Chain ขวาล่าง Spell Activation on Attack Hit อยู่ระหว่างสองสกิลโดยลูกศรหักมุมลงขวา และ Additional Lightning DMG อยู่ช่องล่างที่ติดทั้งสองสกิล"></svg>
@@ -686,8 +803,8 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
         <p>ไลน์โจมตีสายฟ้าเพิ่มทำงานเฉพาะกับ Unleash ถ้าการโจมตีนี้โดนบอส จะมีค่าเท่า Particle โดนเพิ่ม แต่ข้อมูลไม่ได้บอกว่าเพิ่มกี่ครั้ง ถุงมือ Spica's Light ได้ 19.8–35.9 ล้าน และเสียไลน์นี้ไปด้วย</p>
       </div>
       <div class="swap">
-        <h3>ห้ามใส่ Conductor และ Shadow Archer</h3>
-        <p>Conductor มีไลน์ "Cannot apply Shock" จึงทำ Shock ไม่ได้ทั้ง Unleash และ Lightning Chain ส่วน Shadow Archer ลิงก์กับรูนร่ายสกิลไม่ได้ ถ้าอยากใช้ Shadow Archer ดูหน้า <a href="unleash-shadow-archer-crit-build.html">Unleash + Shadow Archer</a> ซึ่งผู้เล่นทดสอบในเกมแล้วแรงกว่าชุด On Hit มาก</p>
+        <h3>ห้ามใส่ Conductor และ Shadow Archer ในชุดนี้</h3>
+        <p>Conductor มีไลน์ "Cannot apply Shock" จึงทำ Shock ไม่ได้ทั้ง Unleash และ Lightning Chain ส่วน Shadow Archer ลิงก์กับรูนร่ายสกิลไม่ได้ ถ้าจะใช้ Shadow Archer ต้องถอด Lightning Chain ออกทั้งชุด ตามชุดหลักต้นแท็บ หรือดูหน้า <a href="unleash-shadow-archer-crit-build.html">Unleash + Shadow Archer</a> ซึ่งผู้เล่นทดสอบในเกมแล้วแรงกว่าชุด On Hit มาก</p>
       </div>
     </div>
     <ul class="notes">
@@ -715,6 +832,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
     <ul class="notes">
       <li>DPS ในตารางนับสะสมทีละระดับ และยังไม่นับ Particle +5 Source จึงน่าจะได้มากกว่าตัวเลขนี้ถ้า Particle ที่เพิ่มโดนบอส (อนุมาน)</li>
       <li>การปลุก Lightning Chain เหมือนแท็บ CLA</li>
+      <li>ตัวเลข DPS เป็นของชุด Lightning Chain แต่การปลุก Unleash ใช้เหมือนกันทั้งสองชุด</li>
     </ul>
   </section>
 
@@ -724,6 +842,9 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       <h2>ต้องลองในเกม</h2>
     </div>
     <ol class="notes">
+      <li><b>ฟาร์มในแมปจริง:</b> หุ่น 9 ตัวยืนใกล้กัน ทั้งสองชุดจึงโดนเกือบครบ (8.3 และ 8.8 เท่าของหุ่นตัวเดียว) ยังไม่ได้วัดตอนมอนกระจาย ซึ่ง Lightning Chain กระโดดไปโดนได้ไกลกว่า ส่วนต่าง 2 เท่าน่าจะยังชนะ แต่ควรลองสักรอบ</li>
+      <li><b>Shock ติดตลอดไหมเมื่อไม่มี Lightning Chain:</b> ดูไอคอนสถานะบนบอส ถ้าหลุดบ่อยให้ใช้ตารางตัวช่วย Shock ด้านบน</li>
+      <li><b>ธนูเงาทำดาเมจกี่ %:</b> ยิงหุ่นเพิ่มอีกชุดที่ไม่มีทั้ง Lightning Chain และ Shadow Archer (เช่น ใส่ Element Master) แล้วเทียบกับ 69 ล้าน</li>
       <li><b>Particle โดนบอสกี่ครั้งต่อลูก:</b> ยิงบอสหรือหุ่นที่ไม่มีมอนตัวอื่นอยู่ใกล้ แล้วนับตัวเลขดาเมจที่ใหญ่ราวครึ่งหนึ่งของลูกธนู ในการจำลองลูกธนูเฉลี่ย 2.24 ล้านต่อครั้ง และ Particle 1.15 ล้านต่อครั้ง ถ้าเฉลี่ยได้ 2 ครั้งขึ้นไปต่อลูก Unleash จะแรงกว่า CLA การโจมตีเพิ่มจากถุงมือมีดาเมจเท่า Particle จึงนับรวมกันได้เลย</li>
       <li><b>CLA โดนบอสทั้งลูกธนูและระเบิดหรือไม่:</b> ถ้าโดนแค่ระเบิด CLA รวมเหลือ 22.2 ล้าน Unleash จะแรงกว่าแม้ Particle โดนเฉลี่ยไม่ถึง 1 ครั้งต่อลูก</li>
       <li><b>การเจาะและกระโดด:</b> รูนมีไลน์ Cannot Pierce และ Cannot Chain แต่การปลุกเขียนว่าลูกธนูเจาะ +2 และกระโดด +2 ต้องดูว่าทำงานจริงหรือไม่</li>
@@ -1074,7 +1195,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
       <li><b>คริดาเมจ</b></li>
       <li><b>ดาเมจสายฟ้า ดาเมจธาตุ หรือเจาะธาตุ</b></li>
       <li><b>ดาเมจ Attack and Spell แบบตัวเลข</b> Lightning Chain ไม่ได้ดาเมจตัวเลขจากธนู ออปชันที่เป็น Attack and Spell ช่วยทั้งสองสกิล</li>
-      <li><b>มานาสูงสุด ฟื้นมานา หรือมานาต่อการโจมตี</b> CLA ใช้มานาราว 300 ต่อวินาที Unleash ราว 350–400 และ Lightning Arrow ราว 340–400</li>
+      <li><b>มานาสูงสุด ฟื้นมานา หรือมานาต่อการโจมตี</b> CLA ใช้มานาราว 300 ต่อวินาที Unleash ราว 350–400 (ชุด Shadow Archer ราว 265–325) และ Lightning Arrow ราว 340–400</li>
       <li><b>HP และค่าต้านธาตุ</b></li>
     </ol>
     <p class="caption">ความเร็วโจมตีไม่ต้องหาเพิ่ม ทั้งสามบิลด์ชนเพดาน 5 ครั้งต่อวินาทีแล้ว</p>
@@ -1176,7 +1297,7 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
 <script>
 // Draw the rune boards (pointy-top hexes): the shooter at the origin, the trigger rune east of it, and Lightning Chain
 // south-east of the trigger (bent arrow). Both skills then touch two hexes: the trigger and one shared link rune.
-// The builds differ only in the shooter and one link hex.
+// The builds differ only in the shooter and one link hex. Unleash's Shadow Archer set has no Lightning Chain: one skill, six links.
 (function () {
   const NS = 'http://www.w3.org/2000/svg'
   const HEX = '50.2,-29 50.2,29 0,58 -50.2,29 -50.2,-29 0,-58'
@@ -1221,6 +1342,15 @@ footer ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 2px; }
   }
   draw('board', cells('Cross|Lightning|Arrow', { cls: 'hx-red', text: 'Concentrated|Area DMG' }))
   draw('board-unleash', cells('Unleash|Lightning|Shot', { cls: 'hx-blue', text: 'Mana|Storm' }))
+  draw('board-unleash-shadow', [
+    { x: 0, y: 0, cls: 'hx-skill', text: 'Unleash|Lightning|Shot', skill: true },
+    { x: -HX, y: -HY, cls: 'hx-green', text: 'Quick|Attack' },
+    { x: HX, y: -HY, cls: 'hx-red', text: 'Attack DMG|Increase' },
+    { x: DX, y: 0, cls: 'hx-green', text: 'Shadow|Archer' },
+    { x: HX, y: HY, cls: 'hx-blue', text: 'Additional|Lightning DMG' },
+    { x: -HX, y: HY, cls: 'hx-blue', text: 'Element|DMG Amp.' },
+    { x: -DX, y: 0, cls: 'hx-blue', text: 'Mana|Storm' },
+  ])
   draw('board-arrow', cells('Lightning|Arrow', { cls: 'hx-blue', text: 'Mana|Storm' }))
 })()
 
